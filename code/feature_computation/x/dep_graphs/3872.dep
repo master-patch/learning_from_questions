@@ -1,0 +1,3 @@
+0:mushrooms 1:could 2:be 3:placed 4:on 5:any 6:solid 7:, 8:non-transparent 9:, 10:square 11:including 12:pumpkins 13:, 14:workbenches 15:, 16:furnaces 17:, 18:and 19:chests 20:. 21:#/#
+gold: 0-3 1-3 2-3 5-10 6-10 8-6 10-3 12-19 14-10 14-19 16-10 16-19 19-10
+pred: 0-3 1-3 2-3 5-10 6-10 8-6 10-3 12-19 14-10 14-19 16-10 16-19 19-10

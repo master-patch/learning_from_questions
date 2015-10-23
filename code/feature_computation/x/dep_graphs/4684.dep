@@ -1,0 +1,3 @@
+0:if 1:large 2:quantities 3:of 4:sand 5:and 6:sandstone 7:are 8:needed 9:, 10:the 11:ocean 12:floor 13:is 14:a 15:great 16:source 17:of 18:both 19:of 20:these 21:. 22:#/#
+gold: 0-8 1-2 2-8 4-2 6-2 6-4 7-8 8-16 10-12 11-12 12-16 13-16 14-16 15-16 18-16 20-18
+pred: 0-8 1-2 2-8 4-2 6-2 6-4 7-8 8-16 10-12 11-12 12-16 13-16 14-16 15-16 18-16 20-18

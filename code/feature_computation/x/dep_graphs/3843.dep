@@ -1,0 +1,3 @@
+0:brown 1:mushroom 2:-lrb- 3:table 4:not 5:shown 6:-rrb- 7:red 8:mushroom 9:mushrooms 10:are 11:plants 12:that 13:can 14:grow 15:in 16:dark 17:caves 18:and 19:shady 20:areas 21:. 22:#/#
+gold: 0-3 1-3 2-3 3-11 4-3 5-3 6-9 7-9 8-9 9-5 10-11 11-14 13-14 14-11 16-17 17-14 19-20 20-14 20-17
+pred: 0-3 1-3 2-3 3-11 4-3 5-3 6-9 7-9 8-9 9-5 10-11 11-14 13-14 14-11 16-17 17-14 19-20 20-14 20-17

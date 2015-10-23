@@ -1,0 +1,403 @@
+>> stone			1
+	: wood-pickaxe	1
+
+
+>> ironore			1
+	: wood-pickaxe	1
+
+
+>> coal				1
+	: wood-pickaxe	1
+
+
+>> seeds			2
+	: shears		1
+
+
+>> wheat			1
+	: seeds			1
+
+
+>> sand				1
+	: wood-shovel	1
+
+
+>> clay				1
+	: wood-shovel	1
+
+
+>> cut-sugarcane	1
+	: wood-axe		1
+
+
+>> string			2
+	: shears		1
+
+
+>> fish				1
+	: fishingrod	1	
+
+
+>> wool				4
+	: shears		1
+
+
+>> milk				1
+	: bucket		1
+
+
+>> plank			4
+	: wood			1
+	PLACE WOOD G22
+	CRAFT-WOOD-PLANK
+
+
+>> stick			4
+	: plank			1
+	PLACE WOOD G22
+	CRAFT-WOOD-PLANK
+	PLACE PLANK G22
+	CRAFT-WOOD-STICK
+
+
+>> torch			4
+	: coal			1
+	PLACE STICK G12
+	PLACE COAL G22
+	CRAFT-TORCH
+
+
+>> furnace			1
+	: stone			1
+	PLACE STONE G11
+	CRAFT-FURNACE
+
+
+>> wood-pickaxe		1
+	: stick			2
+	PLACE STICK G12
+	PLACE STICK G22
+	PLACE PLANK G31
+	PLACE PLANK G32
+	PLACE PLANK G33
+	CRAFT-WOOD-PICKAXE
+
+
+>> stone-pickaxe	1
+	: stick			2
+	: stone			3
+	PLACE STICK G12
+	PLACE STICK G22
+	PLACE STONE G31
+	PLACE STONE G32
+	PLACE STONE G33
+	CRAFT-STONE-PICKAXE
+
+
+>> iron-pickaxe		1
+	: stick			2
+	: iron			3
+
+
+>> wood-axe			1
+	: stick			2
+	PLACE STICK G12
+	PLACE PLANK G21
+	PLACE STICK G22
+	PLACE PLANK G31
+	PLACE PLANK G32
+	CRAFT-WOOD-AXE
+
+
+>> stone-axe		1
+	: stick			2
+	: stone			3
+	PLACE STICK G12
+	PLACE STONE G21
+	PLACE STICK G22
+	PLACE STONE G31
+	PLACE STONE G32
+	CRAFT-STONE-AXE
+
+
+>> iron-axe			1
+	: stick			2
+	: iron			3
+
+
+>> wood-shovel		1
+	: stick			2
+	PLACE STICK G12
+	PLACE STICK G22
+	PLACE PLANK G32
+	CRAFT-WOOD-SHOVEL
+
+
+>> stone-shovel		1
+	: stick			2
+	: stone			1
+	PLACE STICK G12
+	PLACE STICK G22
+	PLACE STONE G32
+	CRAFT-STONE-SHOVEL
+
+
+>> iron-shovel		1
+	: stick			2
+	: iron			1
+
+
+>> wood-hoe			1
+	: stick			2
+	PLACE STICK G12
+	PLACE STICK G22
+	PLACE PLANK G31
+	PLACE PLANK G32
+	CRAFT-WOOD-HOE
+
+
+>> stone-hoe		1
+	: stick			2
+	: stone			2
+	PLACE STICK G12
+	PLACE STICK G22
+	PLACE STONE G31
+	PLACE STONE G32
+	CRAFT-STONE-HOE
+
+
+>> iron-hoe			1
+	: stick			2
+	: iron			2
+
+
+>> sandstone		1
+	: wood-pickaxe	1
+
+
+>> clayblock		1
+	: clay			4
+
+
+>> brick			1
+	: claybrick		4
+	PLACE CLAYBRICK G21
+	PLACE CLAYBRICK G22
+	PLACE CLAYBRICK G31
+	PLACE CLAYBRICK G32
+	CRAFT-BRICK
+
+
+>> sugar			1
+	: cut-sugarcane	1
+	PLACE CUT-SUGARCANE G22
+	MAKE-SUGAR
+
+
+>> paper			1
+	: cut-sugarcane	3
+	PLACE CUT-SUGARCANE G31
+	PLACE CUT-SUGARCANE G32
+	PLACE CUT-SUGARCANE G33
+	MAKE-PAPER
+
+
+>> bed				1
+	: wool			3
+	PLACE WOOL G21
+	PLACE WOOL G22
+	PLACE WOOL G23
+	PLACE PLANK G31
+	PLACE PLANK G32
+	PLACE PLANK G33
+	CRAFT-BED
+
+
+>> chest			1
+	: plank			8
+
+
+>> wood-door		1
+	: plank			8
+	PLACE PLANK G11
+	PLACE PLANK G12
+	PLACE PLANK G21
+	PLACE PLANK G22
+	PLACE PLANK G31
+	PLACE PLANK G32
+	CRAFT-WOOD-DOOR
+
+
+>> iron-door		1
+	: iron			6
+	PLACE IRON G11
+	PLACE IRON G12
+	PLACE IRON G21
+	PLACE IRON G22
+	PLACE IRON G31
+	PLACE IRON G32
+	CRAFT-IRON-DOOR
+
+
+>> ladder			2
+	: stick			7
+	PLACE STICK G11
+	PLACE STICK G13
+	PLACE STICK G21
+	PLACE STICK G22
+	PLACE STICK G23
+	PLACE STICK G31
+	PLACE STICK G33
+	CRAFT-LADDER
+
+
+>> fence			2
+	: stick			6
+	PLACE STICK G21
+	PLACE STICK G22
+	PLACE STICK G23
+	PLACE STICK G31
+	PLACE STICK G32
+	PLACE STICK G33
+	CRAFT-FENCE
+
+
+>> stonebrick		4
+	: stone			4
+	PLACE STONE G21
+	PLACE STONE G22
+	PLACE STONE G31
+	PLACE STONE G32
+	CRAFT-STONE-BRICK
+
+
+>> ironbar			16
+	: iron			6
+	PLACE IRON G21
+	PLACE IRON G22
+	PLACE IRON G23
+	PLACE IRON G31
+	PLACE IRON G32
+	PLACE IRON G33
+	CRAFT-IRONBAR
+
+
+>> glasspane		16
+	: glass			6
+	PLACE GLASS G33
+	PLACE GLASS G21
+	PLACE GLASS G22
+	PLACE GLASS G23
+	PLACE GLASS G31
+	PLACE GLASS G32
+	CRAFT-GLASSPANE
+
+
+>> bread			2
+	: wheat			3
+	PLACE WHEAT G31
+	PLACE WHEAT G32
+	PLACE WHEAT G33
+	MAKE-BREAD
+
+
+>> shears			2
+	: iron			2
+	PLACE IRON G22
+	PLACE IRON G31
+	CRAFT-SHEARS
+
+
+>> bowl				2
+	: plank			3
+	PLACE PLANK G12
+	PLACE PLANK G21
+	PLACE PLANK G23
+	CRAFT-BOWL
+
+
+>> bucket			2
+	: iron			3
+	PLACE IRON G12
+	PLACE IRON G21
+	PLACE IRON G23
+	CRAFT-BUCKET
+
+
+>> fishingrod		2
+	: string		2
+	PLACE STICK G11
+	PLACE STRING G13
+	PLACE STICK G22
+	PLACE STRING G23
+	PLACE STICK G33
+	CRAFT-FISHINGROD
+
+
+>> bonemeal			1
+	: bone			1
+	PLACE BONE G12
+	CRAFT-BONEMEAL
+
+
+>> wood-stairs		4
+	: plank			6
+	PLACE PLANK G11
+	PLACE PLANK G12
+	PLACE PLANK G13
+	PLACE PLANK G21
+	PLACE PLANK G22
+	PLACE PLANK G31
+	CRAFT-WOOD-STAIRS
+
+
+>> stone-stairs		4
+	: stone			6
+	PLACE STONE G11
+	PLACE STONE G12
+	PLACE STONE G13
+	PLACE STONE G21
+	PLACE STONE G22
+	PLACE STONE G31
+	CRAFT-STONE-STAIRS
+
+
+>> brick-stairs		4
+	: brick			6
+
+
+>> stonebrick-stairs	4
+	: stonebrick		6
+
+
+>> mushroomstew			4
+	: bowl				1
+	PLACE BROWN-MUSHROOM G12
+	PLACE RED-MUSHROOM G22
+	PLACE BOWL G32
+	MAKE-MUSHROOMSTEW-2
+
+
+>> furnace-fuel		16
+	: furnace		1
+	: coal			1
+	ADD-FURNACE-FUEL-COAL
+
+
+>> cookedfish		1
+	: fish			1
+	FURNACE-COOK-FISH
+
+
+>> claybrick		1
+	: clay			1
+
+
+>> iron				1
+	: ironore		1
+	FURNACE-SMELT-IRON
+
+
+>> glass			1
+	: sand			1
+	FURNACE-MAKE-GLASS

@@ -1,0 +1,184 @@
+all assignerss applied yet goal not fulfilled
+all increasers applied yet goal not fulfilled
+best first search space empty! problem proven unsolvable.
+can't be handled by this version.
+
+too many axioms! look into memory.c, line 157
+
+***** ERROR ****
+Error: state stack now
+exit. (mneed computation not possible, RPG termination unclear)
+
+ff: division by zero in goal. no plan will solve it.
+ff: found legal plan as follows
+ff: goal accesses a fluent that will never have a defined value. Problem unsolvable.
+ff: goal can be simplified to FALSE. No plan will solve it
+ff: goal can be simplified to TRUE. The empty plan solves it
+ff: this is not an ADL problem!
+ff: unknown option: %c entered", option 
+
+forbidden connective %d in Pl Wff. must be a bug somewhere...
+function %s declared twice!", f->item->item
+function %s is declared to use unknown or empty type %s", 
+prec of addressed ef does not care about fl!
+predicate %s declared twice!", f->item->item
+predicate %s is declared to use unknown or empty type %s", 
+prev in AND not correctly set!
+print Parseexpnode: wrong specifier %d
+print_plnode: %d > Wrong Node specifier", plnode->connective
+replace var with const in expnode: wrong specifier %d
+stdout, "\aNO MEMORY in file %s:%d", __FILE__, __LINE__); \
+stdout, "ff: two input files needed
+This is not a linear task!
+tmp, "ff: can't find fact file: %s", filename 
+tmp, "ff: can't find operator file: %s", filename 
+translate divisions: wrong specifier %d
+trying to enforce an undefined value.
+trying to enforce non-artificial goal
+type mismatch in initial state! %s as arg 0 of %s
+type of var %s does not match type of arg %d of function %s
+type of var %s does not match type of arg %d of predicate %s
+undeclared function %s used in domain definition
+undeclared predicate %s used in domain definition
+
+
+
+[increase MAX_]
+increase MAX_ARITY
+increase MAX_LNF_COMPS! currently %d", MAX_LNF_COMPS
+increase MAX_LNF_COMPS! currently %d", MAX_LNF_COMPS
+increase MAX_LNF_COMPS! currently %d", MAX_LNF_COMPS
+increase MAX_LNF_COMPS! currently %d", MAX_LNF_COMPS
+increase MAX_LNF_COMPS! currently %d", MAX_LNF_COMPS
+increase MAX_LNF_COMPS! currently %d", MAX_LNF_COMPS
+increase MAX_LNF_EFFS! currently %d", MAX_LNF_EFFS
+increase MAX_LNF_EFFS! currently %d", MAX_LNF_EFFS
+increase MAX_LNF_EFFS! currently %d", MAX_LNF_EFFS
+increase MAX_LNF_F! currently %d", MAX_LNF_F
+increase MAX_LNF_F! currently %d", MAX_LNF_F
+increase MAX_LNF_F! currently %d", MAX_LNF_F
+increase MAX_LNF_F! currently %d", MAX_LNF_F
+increase MAX_LNF_F! currently %d", MAX_LNF_F
+increase MAX_LNF_F! currently %d", MAX_LNF_F
+increase MAX_LNF_F! currently %d", MAX_LNF_F
+increase MAX_LNF_F! currently %d", MAX_LNF_F
+increase MAX_LNF_F! currently %d", MAX_LNF_F
+increase MAX_LNF_F! currently %d", MAX_LNF_F
+increase MAX_PLAN_LENGTH! currently %d
+increase MAX_PLAN_LENGTH! currently %d
+increase MAX_PLAN_LENGTH! currently %d
+increase MAX_RELEVANT_FACTS! (current value: %d)
+increase MAX_RELEVANT_FACTS! (current value: %d)
+increase MAX_TYPE_INTERSECTIONS (currently %d)
+increase MAX_TYPE_INTERSECTIONS (currently %d)
+too many constants! increase MAX_CONSTANTS (currently %d)
+too many consts in intersected type! increase MAX_TYPE (currently %d)
+too many consts in type %s! increase MAX_TYPE (currently %d)
+too many consts in type %s! increase MAX_TYPE (currently %d)
+too many functions! increase MAX_FUNCTIONS (currently %d)
+too many (inferred and intersected) types! increase MAX_TYPES (currently %d)
+too many (inferred) types! increase MAX_TYPES (currently %d)
+too many operators! increase MAX_OPERATORS (currently %d)
+too many parameters! increase MAX_VARS (currently %d)
+too many predicates! increase MAX_PREDICATES (currently %d)
+too many predicates in translation! increase MAX_PREDICATES (currently %d)
+too many relevant facts! increase MAX_RELEVANT_FACTS (currently %d)
+too many relevant fluents! increase MAX_RELEVANT_FLUENTS (currently %d)
+too many relevant fluents! increase MAX_RELEVANT_FLUENTS (currently %d)
+too many relevant fluents! increase MAX_RELEVANT_FLUENTS (currently %d)
+too many relevant fluents! increase MAX_RELEVANT_FLUENTS (currently %d)
+too many types! increase MAX_TYPES (currently %d)
+
+
+[debug me]
+current start state marked removed from plan! debug me!
+current start state not hashed! debug me!
+non AND %d in front of literal effect list. debug me
+non-instantiated fluent in final actiona! debug me!!
+non WHEN %d at end of effect parameters. debug me
+reencountering a state that is already in plan! debug me
+replacing p with NOT-p in quantified formula! debug me
+translating NOT in quantified formula! debug me
+trying to put nots down in quantified formula! debug me
+trying to put quantified formula into DNF! (ands down) debug me
+uninstantiated affected fluent in final actions! debug me.
+uninstantiated param in template! debug me, please
+won't get here: non OR, AND, ATOM, TRUE, FALSE in dnf. debug me
+
+
+[check input files]
+defined twice in initial state! check input files
+equality in effect! check input files!
+equality in initial state! check input files.
+function %s is declared to have %d (not %d) arguments. check input files
+illegal (empty) atom used in domain. check input files
+predicate %s is declared to have %d (not %d) arguments. check input files
+quantifier without argument !! check input files.
+type mismatch: constant %s as arg %d of %s. check input files
+undeclared variable %s in function %s. check input files
+undeclared variable %s in literal %s. check input files
+unknown constant %s in function %s. check input files
+unknown constant %s in literal %s. check input files
+unknown optimization method %s. check input files", 
+
+
+[illegal]
+illegal comparator %d in number comp holds", c
+illegal comparator not EQ %d in nots down", 
+illegal comp in parse tree!
+illegal connective %d in instantiate formula
+illegal connective %d in parsing DNF condition.
+illegal connective %d in parsing DNF precond.
+ILLEGAL DNF %s AFTER INSTANTIATION", a->operator->name
+illegal goal formula
+illegal initial state
+op %s has illegal effects", i->name
+op %s has illegal precondition", i->name
+print effect: illegal neft %d", ne->neft
+print effect: illegal neft %d", ne->neft
+
+
+
+
+[warning]
+warning: division by zero in effect cond of 
+warning: division by zero in effect rh of 
+warning: division by zero in metric. replaced with plan length.
+warning: division by zero in precond of 
+warning: effect parameter %s has unknown or empty type %s. skipping effect.", 
+warning: empty con/disjunction in domain definition. simplifying.
+warning: operator %s parameter %s overwrites previous declaration
+warning: parameter %s of op %s has unknown or empty type %s. skipping op
+warning: quantified var %s has unknown or empty type %s. simplifying.
+
+
+[won't get here]
+won't get here: ands down, non logical %d
+won't get here: check dnf, conn %d
+won't get here: copy, non logical %d
+won't get here: decrement, non logical %d
+won't get here: expansion, non logical %d
+won't get here: merge, non logical %d
+won't get here: non ATOM,OR,AND in goal set relevants
+won't get here: non COMP,ATOM,AND,OR in fully simplified goal
+won't get here: nots down, non logical %d
+won't get here: remove var, non logical %d
+won't get here: replace p with NOT-p, non logical %d
+won't get here: simplify, non logical %d
+won't get here: tautologies, non logical %d
+won't get here: translate one neg cond, non logical %d
+won't get here: var used ?, non logical %d
+
+
+[wrong comparator]
+wrong comparator in gnumeric_goal %d", gnumeric_goal_comp[i]
+wrong comparator of Expnodes in actionpre %d", 
+wrong comparator of Expnodes in lnf actionpre %d", 
+wrong comparator of Expnodes in lnf normeff %d", 
+wrong comparator of Expnodes in mixedpre %d", 
+wrong comparator of Expnodes in mixedpre %d", 
+wrong comparator of Expnodes in normeff %d", 
+wrong comparator of Expnodes in normeff %d", 
+wrong comparator of Expnodes in normeff %d", 
+wrong comparator of Expnodes in normpre %d", 
+wrong comparator of Expnodes in WFF %d", n->comp

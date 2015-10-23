@@ -1,0 +1,3 @@
+0:they 1:can 2:harvest 3:red 4:mushrooms 5:from 6:a 7:mooshroom 8:and 9:turn 10:it 11:back 12:into 13:a 14:normal 15:cow 16:. 17:#/#
+gold: 0-2 0-9 1-2 3-4 4-2 6-7 7-2 9-2 10-9 11-9 13-15 14-15 15-9
+pred: 0-2 0-9 1-2 3-4 4-2 6-7 7-2 9-2 10-9 11-9 13-15 14-15 15-9

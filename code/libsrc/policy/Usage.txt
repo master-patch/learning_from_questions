@@ -1,0 +1,40 @@
+//------------------------------
+// Init
+//------------------------------
+Random::Init ();
+FeatureSpace.SetBagOfWordsOffset (int _iOffset);
+Features.SetSize ();
+
+
+//------------------------------
+// action selection
+//------------------------------
+	LogProbability oLogProb (iActionCount);
+	for (int a = 0; a < iActionCount; ++ a)
+		oLogProb [a] = Policy.ComputeLogProb (Feature&);
+
+	// now sample actions from oLogProb as needed ...
+
+
+//------------------------------
+// parameter updates
+//------------------------------
+    Features_vec_t vecFeatureVectors;
+	double_Vec_t vecTrace;
+	int iFeatureCount = 1 + Features::MaxIndex ();
+	Policy.InitializeFeatureExpectationVector (vecTrace, iFeatureCount);
+	Policy.ComputeNegativeFeatureExpectation (oLogProb, vecFeatureVectors, vecTrace);
+
+	// Iterate over all N selected actions:
+	Features* = pFeaturesOfSelectedAction = vecFeatureVectors [iSelectedAction];
+	for (int i = 0; i < pFeaturesOfSelectedAction->Size (); ++ i)
+		vecTrace [pFeaturesOfSelectedAction->Index (i)]
+			+= pFeaturesOfSelectedAction->Feature (i);
+
+	Policy.UpdateWeights (dReward, vecTrace);
+
+
+//------------------------------
+// At exit,
+//------------------------------
+Random::Destroy ();

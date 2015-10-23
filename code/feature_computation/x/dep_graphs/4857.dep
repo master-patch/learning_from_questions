@@ -1,0 +1,3 @@
+0:sheep 1:can 2:be 3:painted 4:with 5:dye 6:before 7:shearing 8:to 9:efficiently 10:produce 11:colored 12:wool 13:. 14:#/#
+gold: 0-3 1-3 2-3 5-3 7-3 8-10 9-10 10-7 11-12 12-10
+pred: 0-3 1-3 2-3 5-3 7-3 8-10 9-10 10-7 11-12 12-10

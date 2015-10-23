@@ -1,0 +1,3 @@
+0:a 1:cofferdam 2:with 3:all 4:sand 5:and 6:sandstone 7:removed 8:. 9:#/#
+gold: 0-1 1-7 3-4 4-1 6-1 6-4
+pred: 0-1 1-7 3-4 4-1 6-1 6-4

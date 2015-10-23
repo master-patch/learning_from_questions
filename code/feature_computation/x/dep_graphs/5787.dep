@@ -1,0 +1,3 @@
+0:the 1:permanent 2:torch 3:will 4:be 5:replaced 6:with 7:lanterns 8:, 9:and 10:all 11:torches 12:that 13:exist 14:already 15:in 16:saved 17:games 18:whether 19:placed 20:, 21:stored 22:or 23:in 24:inventory 25:will 26:become 27:lanterns 28:. 29:#/#
+gold: 0-2 1-2 2-5 3-5 4-5 7-5 10-11 11-5 12-13 13-11 14-13 16-17 17-13 18-27 19-27 21-19 21-27 23-19 23-27 24-19 25-27 26-27 27-13
+pred: 0-2 1-2 2-5 3-5 4-5 7-5 10-11 11-5 12-13 13-11 14-13 16-17 17-13 18-27 19-27 21-19 21-27 23-19 23-27 24-19 25-27 26-27 27-13

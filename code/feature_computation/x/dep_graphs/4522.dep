@@ -1,0 +1,3 @@
+0:\* 1:gathering 2:fish 3:can 4:be 5:initially 6:faster 7:than 8:waiting 9:for 10:wheat 11:to 12:grow 13:or 14:finding 15:animals 16:to 17:kill 18:. 19:#/#
+gold: 0-2 1-2 3-4 4-2 5-4 6-5 7-5 8-7 10-8 11-12 12-8 14-7 14-8 15-14 16-17 17-14
+pred: 0-2 1-2 3-4 4-2 5-4 6-5 7-5 8-7 10-8 11-12 12-8 14-7 14-8 15-14 16-17 17-14

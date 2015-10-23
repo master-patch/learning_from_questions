@@ -1,0 +1,3 @@
+0:red 1:and 2:brown 3:mushrooms 4:found 5:growing 6:at 7:dawn 8:. 9:#/#
+gold: 0-3 2-0 2-3 3-4 5-4 7-5
+pred: 0-3 2-0 2-3 3-4 5-4 7-5

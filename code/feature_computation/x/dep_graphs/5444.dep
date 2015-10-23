@@ -1,0 +1,3 @@
+0:sugar 1:cane 2:is 3:rarely 4:found 5:in 6:the 7:tundra 8:biome 9:due 10:to 11:the 12:low 13:occurrence 14:rate 15:of 16:open 17:, 18:unfrozen 19:water 20:-lrb- 21:since 22:most 23:open 24:sources 25:of 26:water 27:freeze 28:over 29:into 30:ice 31:, 32:causing 33:preexisting 34:sugar 35:cane 36:to 37:drop 38:as 39:resources 40:and 41:despawn 42:-rrb- 43:. 44:#/#
+gold: 0-1 1-4 2-4 3-4 6-8 7-8 8-4 11-14 12-14 13-14 14-4 16-20 18-20 19-20 20-14 21-27 22-23 23-24 24-27 26-24 27-4 28-27 30-27 32-27 33-35 34-35 35-32 36-37 37-32 39-37 41-42 42-37 42-39
+pred: 0-1 1-4 2-4 3-4 6-8 7-8 8-4 11-14 12-14 13-14 14-4 16-20 18-20 19-20 20-14 21-27 22-23 23-24 24-27 26-24 27-4 28-27 30-27 32-27 33-35 34-35 35-32 36-37 37-32 39-37 41-42 42-37 42-39

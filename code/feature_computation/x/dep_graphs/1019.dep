@@ -1,0 +1,3 @@
+0:water 1:and 2:lava 3:buckets 4:can 5:only 6:be 7:obtained 8:by 9:using 10:the 11:bucket 12:on 13:a 14:source 15:block 16:; 17:shallow 18:, 19:running 20:fluids 21:can 22:not 23:be 24:collected 25:. 26:#/#
+gold: 0-3 2-0 2-3 3-7 4-7 5-7 6-7 9-7 10-11 11-9 13-15 14-15 15-9 17-20 19-20 20-24 21-24 22-24 23-24 24-7
+pred: 0-3 2-0 2-3 3-7 4-7 5-7 6-7 9-7 10-11 11-9 13-15 14-15 15-9 17-20 19-20 20-24 21-24 22-24 23-24 24-7

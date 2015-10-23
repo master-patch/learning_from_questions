@@ -1,0 +1,84 @@
+	brown mushroom:brown-mushroom
+	red mushroom:red-mushroom
+	egg
+	fish
+    raw fish:fish
+	cooked fish:cookedfish
+	cookedfish
+	wool
+	string
+	seeds
+	wheat
+	wood
+	sand
+	cobblestone:stone
+    stone block:stone
+    stone:stone
+	sandstone
+    wooden plank:plank
+    wooden pickaxe:wood-pickaxe
+	stick
+	coal
+	iron ore:ironore
+	iron
+    iron ingot:iron
+	bone
+    bonemeal:bonemeal
+    bone meal:bonemeal
+	wood door:wood-door
+	wood stairs:wood-stairs
+	stone stairs:stone-stairs
+	iron door:iron-door
+	stone brick:stonebrick
+	stonebrick
+	glass
+	glass pane:glasspane
+	glasspane
+	ladder
+	fence
+	sugar
+	paper
+	bed
+	bread
+	mushroom stew:mushroomstew
+	milk
+	iron bar:ironbar
+	cut sugarcane:cut-sugarcane
+	cutsugarcane
+    sugar cane:cut-sugarcane
+	furnace
+	torch
+	chest
+	bowl
+	bucket
+	fishing rod:fishingrod
+	shears
+	wood pickaxe:wood-pickaxe
+	woodpickaxe:wood-pickaxe
+	wood axe:wood-axe
+	woodaxe:wood-axe
+	wood hoe:wood-hoe
+	wood shovel:wood-shovel
+    clay block:clayblock
+    brick:claybrick
+    brick block:brick
+    clay ball:clay
+    clay
+    clayblock 
+    iron pickaxe:NULL
+    stone pickaxe:NULL
+    gold pickaxe:NULL
+    diamond pickaxe:NULL
+    iron shovel:NULL
+    stone shovel:NULL
+    gold shovel:NULL
+    iron axe:NULL
+    stone axe:NULL
+    gold axe:NULL
+    iron hoe:NULL
+    stone hoe:NULL
+    gold hoe:NULL
+    gold ore:NULL
+    gold ingot:NULL
+    coal ore:NULL
+    gold ore:NULL

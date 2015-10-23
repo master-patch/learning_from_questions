@@ -1,0 +1,4925 @@
+Adding Pred: 0 (> (thing-available string) 0)
+Adding Pred: 1 (> (thing-available iron) 1)
+Adding Pred: 2 (> (thing-available plank) 0)
+Adding Pred: 3 (> (thing-available stone) 6)
+Adding Pred: 4 (> (thing-available clay) 2)
+Adding Pred: 5 (> (thing-available stick) 6)
+Adding Pred: 6 (> (thing-available mushroomstew) 0)
+Adding Pred: 7 (> (thing-available wheat) 0)
+Adding Pred: 8 (> (thing-available torch) 0)
+Adding Pred: 9 (> (thing-available coal) 0)
+Adding Pred: 10 (> (thing-available stone) 1)
+Adding Pred: 11 (> (thing-available wood-shovel) 0)
+Adding Pred: 12 (> (thing-available claybrick) 3)
+Adding Pred: 13 (> (thing-available ironore) 0)
+Adding Pred: 14 (> (thing-available stick) 5)
+Adding Pred: 15 (> (thing-available red-mushroom) 0)
+Adding Pred: 16 (> (thing-available wood-door) 0)
+Adding Pred: 17 (> (thing-available iron) 2)
+Adding Pred: 18 (> (thing-available clay) 1)
+Adding Pred: 19 (> (thing-available bread) 0)
+Adding Pred: 20 (> (thing-available iron) 4)
+Adding Pred: 21 (> (thing-available wood-hoe) 0)
+Adding Pred: 22 (> (thing-available sand) 0)
+Adding Pred: 23 (> (thing-available stone-hoe) 0)
+Adding Pred: 24 (> (thing-available stick) 2)
+Adding Pred: 25 (> (thing-available plank) 7)
+Adding Pred: 26 (> (thing-available plank) 1)
+Adding Pred: 27 (> (thing-available sandstone) 0)
+Adding Pred: 28 (> (thing-available claybrick) 0)
+Adding Pred: 29 (> (thing-available stone) 5)
+Adding Pred: 30 (> (thing-available furnace) 0)
+Adding Pred: 31 (> (thing-available wood-stairs) 0)
+Adding Pred: 32 (> (thing-available cut-sugarcane) 1)
+Adding Pred: 33 (> (thing-available iron) 3)
+Adding Pred: 34 (> (thing-available iron) 0)
+Adding Pred: 35 (> (thing-available wool) 2)
+Adding Pred: 36 (> (thing-available stone) 0)
+Adding Pred: 37 (> (thing-available fence) 0)
+Adding Pred: 38 (> (thing-available cookedfish) 0)
+Adding Pred: 39 (> (thing-available stone-stairs) 0)
+Adding Pred: 40 (> (thing-available plank) 2)
+Adding Pred: 41 (> (thing-available bone) 0)
+Adding Pred: 42 (> (thing-available glasspane) 0)
+Adding Pred: 43 (> (thing-available stone) 4)
+Adding Pred: 44 (> (thing-available claybrick) 2)
+Adding Pred: 45 (> (thing-available stone) 3)
+Adding Pred: 46 (> (thing-available stone-pickaxe) 0)
+Adding Pred: 47 (> (thing-available seeds) 0)
+Adding Pred: 48 (> (thing-available string) 1)
+Adding Pred: 49 (> (thing-available glass) 2)
+Adding Pred: 50 (> (thing-available bucket) 0)
+Adding Pred: 51 (> (thing-available cut-sugarcane) 2)
+Adding Pred: 52 (> (thing-available ladder) 0)
+Adding Pred: 53 (> (thing-available clay) 0)
+Adding Pred: 54 (> (thing-available glass) 1)
+Adding Pred: 55 (> (thing-available plank) 3)
+Adding Pred: 56 (> (thing-available wheat) 2)
+Adding Pred: 57 (> (thing-available egg) 0)
+Adding Pred: 58 (> (thing-available stick) 1)
+Adding Pred: 59 (> (thing-available claybrick) 1)
+Adding Pred: 60 (> (thing-available stone-shovel) 0)
+Adding Pred: 61 (> (thing-available wood-pickaxe) 0)
+Adding Pred: 62 (> (thing-available glass) 0)
+Adding Pred: 63 (> (thing-available stone) 7)
+Adding Pred: 64 (> (thing-available shears) 0)
+Adding Pred: 65 (> (thing-available wood) 0)
+Adding Pred: 66 (> (thing-available bowl) 0)
+Adding Pred: 67 (> (thing-available iron) 5)
+Adding Pred: 68 (> (thing-available bonemeal) 0)
+Adding Pred: 69 (> (thing-available stone) 2)
+Adding Pred: 70 (> (thing-available fish) 0)
+Adding Pred: 71 (> (thing-available stonebrick) 0)
+Adding Pred: 72 (> (thing-available stick) 0)
+Adding Pred: 73 (> (thing-available clay) 3)
+Adding Pred: 74 (> (thing-available glass) 5)
+Adding Pred: 75 (> (furnace-fuel) 1)
+Adding Pred: 76 (> (thing-available iron-door) 0)
+Adding Pred: 77 (> (thing-available cut-sugarcane) 0)
+Adding Pred: 78 (> (thing-available brown-mushroom) 0)
+Adding Pred: 79 (> (thing-available stick) 3)
+Adding Pred: 80 (> (thing-available wheat) 1)
+Adding Pred: 81 (> (thing-available stone-axe) 0)
+Adding Pred: 82 (> (thing-available milk) 0)
+Adding Pred: 83 (> (thing-available fishingrod) 0)
+Adding Pred: 84 (> (thing-available bed) 0)
+Adding Pred: 85 (> (thing-available clayblock) 0)
+Adding Pred: 86 (> (thing-available wood-axe) 0)
+Adding Pred: 87 (> (thing-available paper) 0)
+Adding Pred: 88 (> (thing-available sugar) 0)
+Adding Pred: 89 (> (thing-available wool) 0)
+Adding Pred: 90 (> (thing-available glass) 3)
+Adding Pred: 91 (> (thing-available plank) 5)
+Adding Pred: 92 (> (thing-available glass) 4)
+Adding Pred: 93 (> (thing-available brick) 0)
+Init Connection: 3 46 (> (thing-available stone) 6) (> (thing-available stone-pickaxe) 0)
+Init Connection: 10 46 (> (thing-available stone) 1) (> (thing-available stone-pickaxe) 0)
+Init Connection: 29 46 (> (thing-available stone) 5) (> (thing-available stone-pickaxe) 0)
+Init Connection: 36 46 (> (thing-available stone) 0) (> (thing-available stone-pickaxe) 0)
+Init Connection: 43 46 (> (thing-available stone) 4) (> (thing-available stone-pickaxe) 0)
+Init Connection: 45 46 (> (thing-available stone) 3) (> (thing-available stone-pickaxe) 0)
+Init Connection: 63 46 (> (thing-available stone) 7) (> (thing-available stone-pickaxe) 0)
+Init Connection: 69 46 (> (thing-available stone) 2) (> (thing-available stone-pickaxe) 0)
+Init Connection: 5 46 (> (thing-available stick) 6) (> (thing-available stone-pickaxe) 0)
+Init Connection: 14 46 (> (thing-available stick) 5) (> (thing-available stone-pickaxe) 0)
+Init Connection: 24 46 (> (thing-available stick) 2) (> (thing-available stone-pickaxe) 0)
+Init Connection: 58 46 (> (thing-available stick) 1) (> (thing-available stone-pickaxe) 0)
+Init Connection: 72 46 (> (thing-available stick) 0) (> (thing-available stone-pickaxe) 0)
+Init Connection: 79 46 (> (thing-available stick) 3) (> (thing-available stone-pickaxe) 0)
+Init Connection: 1 64 (> (thing-available iron) 1) (> (thing-available shears) 0)
+Init Connection: 17 64 (> (thing-available iron) 2) (> (thing-available shears) 0)
+Init Connection: 20 64 (> (thing-available iron) 4) (> (thing-available shears) 0)
+Init Connection: 33 64 (> (thing-available iron) 3) (> (thing-available shears) 0)
+Init Connection: 34 64 (> (thing-available iron) 0) (> (thing-available shears) 0)
+Init Connection: 67 64 (> (thing-available iron) 5) (> (thing-available shears) 0)
+Init Connection: 5 37 (> (thing-available stick) 6) (> (thing-available fence) 0)
+Init Connection: 14 37 (> (thing-available stick) 5) (> (thing-available fence) 0)
+Init Connection: 24 37 (> (thing-available stick) 2) (> (thing-available fence) 0)
+Init Connection: 58 37 (> (thing-available stick) 1) (> (thing-available fence) 0)
+Init Connection: 72 37 (> (thing-available stick) 0) (> (thing-available fence) 0)
+Init Connection: 79 37 (> (thing-available stick) 3) (> (thing-available fence) 0)
+Init Connection: 3 23 (> (thing-available stone) 6) (> (thing-available stone-hoe) 0)
+Init Connection: 10 23 (> (thing-available stone) 1) (> (thing-available stone-hoe) 0)
+Init Connection: 29 23 (> (thing-available stone) 5) (> (thing-available stone-hoe) 0)
+Init Connection: 36 23 (> (thing-available stone) 0) (> (thing-available stone-hoe) 0)
+Init Connection: 43 23 (> (thing-available stone) 4) (> (thing-available stone-hoe) 0)
+Init Connection: 45 23 (> (thing-available stone) 3) (> (thing-available stone-hoe) 0)
+Init Connection: 63 23 (> (thing-available stone) 7) (> (thing-available stone-hoe) 0)
+Init Connection: 69 23 (> (thing-available stone) 2) (> (thing-available stone-hoe) 0)
+Init Connection: 5 23 (> (thing-available stick) 6) (> (thing-available stone-hoe) 0)
+Init Connection: 14 23 (> (thing-available stick) 5) (> (thing-available stone-hoe) 0)
+Init Connection: 24 23 (> (thing-available stick) 2) (> (thing-available stone-hoe) 0)
+Init Connection: 58 23 (> (thing-available stick) 1) (> (thing-available stone-hoe) 0)
+Init Connection: 72 23 (> (thing-available stick) 0) (> (thing-available stone-hoe) 0)
+Init Connection: 79 23 (> (thing-available stick) 3) (> (thing-available stone-hoe) 0)
+Init Connection: 2 66 (> (thing-available plank) 0) (> (thing-available bowl) 0)
+Init Connection: 25 66 (> (thing-available plank) 7) (> (thing-available bowl) 0)
+Init Connection: 26 66 (> (thing-available plank) 1) (> (thing-available bowl) 0)
+Init Connection: 40 66 (> (thing-available plank) 2) (> (thing-available bowl) 0)
+Init Connection: 55 66 (> (thing-available plank) 3) (> (thing-available bowl) 0)
+Init Connection: 91 66 (> (thing-available plank) 5) (> (thing-available bowl) 0)
+Init Connection: 83 70 (> (thing-available fishingrod) 0) (> (thing-available fish) 0)
+Init Connection: 41 68 (> (thing-available bone) 0) (> (thing-available bonemeal) 0)
+Init Connection: 49 42 (> (thing-available glass) 2) (> (thing-available glasspane) 0)
+Init Connection: 54 42 (> (thing-available glass) 1) (> (thing-available glasspane) 0)
+Init Connection: 62 42 (> (thing-available glass) 0) (> (thing-available glasspane) 0)
+Init Connection: 74 42 (> (thing-available glass) 5) (> (thing-available glasspane) 0)
+Init Connection: 90 42 (> (thing-available glass) 3) (> (thing-available glasspane) 0)
+Init Connection: 92 42 (> (thing-available glass) 4) (> (thing-available glasspane) 0)
+Init Connection: 32 87 (> (thing-available cut-sugarcane) 1) (> (thing-available paper) 0)
+Init Connection: 51 87 (> (thing-available cut-sugarcane) 2) (> (thing-available paper) 0)
+Init Connection: 77 87 (> (thing-available cut-sugarcane) 0) (> (thing-available paper) 0)
+Init Connection: 5 86 (> (thing-available stick) 6) (> (thing-available wood-axe) 0)
+Init Connection: 14 86 (> (thing-available stick) 5) (> (thing-available wood-axe) 0)
+Init Connection: 24 86 (> (thing-available stick) 2) (> (thing-available wood-axe) 0)
+Init Connection: 58 86 (> (thing-available stick) 1) (> (thing-available wood-axe) 0)
+Init Connection: 72 86 (> (thing-available stick) 0) (> (thing-available wood-axe) 0)
+Init Connection: 79 86 (> (thing-available stick) 3) (> (thing-available wood-axe) 0)
+Init Connection: 2 86 (> (thing-available plank) 0) (> (thing-available wood-axe) 0)
+Init Connection: 25 86 (> (thing-available plank) 7) (> (thing-available wood-axe) 0)
+Init Connection: 26 86 (> (thing-available plank) 1) (> (thing-available wood-axe) 0)
+Init Connection: 40 86 (> (thing-available plank) 2) (> (thing-available wood-axe) 0)
+Init Connection: 55 86 (> (thing-available plank) 3) (> (thing-available wood-axe) 0)
+Init Connection: 91 86 (> (thing-available plank) 5) (> (thing-available wood-axe) 0)
+Init Connection: 4 85 (> (thing-available clay) 2) (> (thing-available clayblock) 0)
+Init Connection: 18 85 (> (thing-available clay) 1) (> (thing-available clayblock) 0)
+Init Connection: 53 85 (> (thing-available clay) 0) (> (thing-available clayblock) 0)
+Init Connection: 73 85 (> (thing-available clay) 3) (> (thing-available clayblock) 0)
+Init Connection: 50 82 (> (thing-available bucket) 0) (> (thing-available milk) 0)
+Init Connection: 3 60 (> (thing-available stone) 6) (> (thing-available stone-shovel) 0)
+Init Connection: 10 60 (> (thing-available stone) 1) (> (thing-available stone-shovel) 0)
+Init Connection: 29 60 (> (thing-available stone) 5) (> (thing-available stone-shovel) 0)
+Init Connection: 36 60 (> (thing-available stone) 0) (> (thing-available stone-shovel) 0)
+Init Connection: 43 60 (> (thing-available stone) 4) (> (thing-available stone-shovel) 0)
+Init Connection: 45 60 (> (thing-available stone) 3) (> (thing-available stone-shovel) 0)
+Init Connection: 63 60 (> (thing-available stone) 7) (> (thing-available stone-shovel) 0)
+Init Connection: 69 60 (> (thing-available stone) 2) (> (thing-available stone-shovel) 0)
+Init Connection: 5 60 (> (thing-available stick) 6) (> (thing-available stone-shovel) 0)
+Init Connection: 14 60 (> (thing-available stick) 5) (> (thing-available stone-shovel) 0)
+Init Connection: 24 60 (> (thing-available stick) 2) (> (thing-available stone-shovel) 0)
+Init Connection: 58 60 (> (thing-available stick) 1) (> (thing-available stone-shovel) 0)
+Init Connection: 72 60 (> (thing-available stick) 0) (> (thing-available stone-shovel) 0)
+Init Connection: 79 60 (> (thing-available stick) 3) (> (thing-available stone-shovel) 0)
+Init Connection: 3 81 (> (thing-available stone) 6) (> (thing-available stone-axe) 0)
+Init Connection: 10 81 (> (thing-available stone) 1) (> (thing-available stone-axe) 0)
+Init Connection: 29 81 (> (thing-available stone) 5) (> (thing-available stone-axe) 0)
+Init Connection: 36 81 (> (thing-available stone) 0) (> (thing-available stone-axe) 0)
+Init Connection: 43 81 (> (thing-available stone) 4) (> (thing-available stone-axe) 0)
+Init Connection: 45 81 (> (thing-available stone) 3) (> (thing-available stone-axe) 0)
+Init Connection: 63 81 (> (thing-available stone) 7) (> (thing-available stone-axe) 0)
+Init Connection: 69 81 (> (thing-available stone) 2) (> (thing-available stone-axe) 0)
+Init Connection: 5 81 (> (thing-available stick) 6) (> (thing-available stone-axe) 0)
+Init Connection: 14 81 (> (thing-available stick) 5) (> (thing-available stone-axe) 0)
+Init Connection: 24 81 (> (thing-available stick) 2) (> (thing-available stone-axe) 0)
+Init Connection: 58 81 (> (thing-available stick) 1) (> (thing-available stone-axe) 0)
+Init Connection: 72 81 (> (thing-available stick) 0) (> (thing-available stone-axe) 0)
+Init Connection: 79 81 (> (thing-available stick) 3) (> (thing-available stone-axe) 0)
+Init Connection: 61 27 (> (thing-available wood-pickaxe) 0) (> (thing-available sandstone) 0)
+Init Connection: 3 39 (> (thing-available stone) 6) (> (thing-available stone-stairs) 0)
+Init Connection: 10 39 (> (thing-available stone) 1) (> (thing-available stone-stairs) 0)
+Init Connection: 29 39 (> (thing-available stone) 5) (> (thing-available stone-stairs) 0)
+Init Connection: 36 39 (> (thing-available stone) 0) (> (thing-available stone-stairs) 0)
+Init Connection: 43 39 (> (thing-available stone) 4) (> (thing-available stone-stairs) 0)
+Init Connection: 45 39 (> (thing-available stone) 3) (> (thing-available stone-stairs) 0)
+Init Connection: 63 39 (> (thing-available stone) 7) (> (thing-available stone-stairs) 0)
+Init Connection: 69 39 (> (thing-available stone) 2) (> (thing-available stone-stairs) 0)
+Init Connection: 32 88 (> (thing-available cut-sugarcane) 1) (> (thing-available sugar) 0)
+Init Connection: 51 88 (> (thing-available cut-sugarcane) 2) (> (thing-available sugar) 0)
+Init Connection: 77 88 (> (thing-available cut-sugarcane) 0) (> (thing-available sugar) 0)
+Init Connection: 64 47 (> (thing-available shears) 0) (> (thing-available seeds) 0)
+Init Connection: 68 47 (> (thing-available bonemeal) 0) (> (thing-available seeds) 0)
+Init Connection: 3 71 (> (thing-available stone) 6) (> (thing-available stonebrick) 0)
+Init Connection: 10 71 (> (thing-available stone) 1) (> (thing-available stonebrick) 0)
+Init Connection: 29 71 (> (thing-available stone) 5) (> (thing-available stonebrick) 0)
+Init Connection: 36 71 (> (thing-available stone) 0) (> (thing-available stonebrick) 0)
+Init Connection: 43 71 (> (thing-available stone) 4) (> (thing-available stonebrick) 0)
+Init Connection: 45 71 (> (thing-available stone) 3) (> (thing-available stonebrick) 0)
+Init Connection: 63 71 (> (thing-available stone) 7) (> (thing-available stonebrick) 0)
+Init Connection: 69 71 (> (thing-available stone) 2) (> (thing-available stonebrick) 0)
+Init Connection: 9 75 (> (thing-available coal) 0) (> (furnace-fuel) 1)
+Init Connection: 30 75 (> (thing-available furnace) 0) (> (furnace-fuel) 1)
+Init Connection: 12 93 (> (thing-available claybrick) 3) (> (thing-available brick) 0)
+Init Connection: 28 93 (> (thing-available claybrick) 0) (> (thing-available brick) 0)
+Init Connection: 44 93 (> (thing-available claybrick) 2) (> (thing-available brick) 0)
+Init Connection: 59 93 (> (thing-available claybrick) 1) (> (thing-available brick) 0)
+Init Connection: 3 30 (> (thing-available stone) 6) (> (thing-available furnace) 0)
+Init Connection: 10 30 (> (thing-available stone) 1) (> (thing-available furnace) 0)
+Init Connection: 29 30 (> (thing-available stone) 5) (> (thing-available furnace) 0)
+Init Connection: 36 30 (> (thing-available stone) 0) (> (thing-available furnace) 0)
+Init Connection: 43 30 (> (thing-available stone) 4) (> (thing-available furnace) 0)
+Init Connection: 45 30 (> (thing-available stone) 3) (> (thing-available furnace) 0)
+Init Connection: 63 30 (> (thing-available stone) 7) (> (thing-available furnace) 0)
+Init Connection: 69 30 (> (thing-available stone) 2) (> (thing-available furnace) 0)
+Init Connection: 2 16 (> (thing-available plank) 0) (> (thing-available wood-door) 0)
+Init Connection: 25 16 (> (thing-available plank) 7) (> (thing-available wood-door) 0)
+Init Connection: 26 16 (> (thing-available plank) 1) (> (thing-available wood-door) 0)
+Init Connection: 40 16 (> (thing-available plank) 2) (> (thing-available wood-door) 0)
+Init Connection: 55 16 (> (thing-available plank) 3) (> (thing-available wood-door) 0)
+Init Connection: 91 16 (> (thing-available plank) 5) (> (thing-available wood-door) 0)
+Init Connection: 9 8 (> (thing-available coal) 0) (> (thing-available torch) 0)
+Init Connection: 5 8 (> (thing-available stick) 6) (> (thing-available torch) 0)
+Init Connection: 14 8 (> (thing-available stick) 5) (> (thing-available torch) 0)
+Init Connection: 24 8 (> (thing-available stick) 2) (> (thing-available torch) 0)
+Init Connection: 58 8 (> (thing-available stick) 1) (> (thing-available torch) 0)
+Init Connection: 72 8 (> (thing-available stick) 0) (> (thing-available torch) 0)
+Init Connection: 79 8 (> (thing-available stick) 3) (> (thing-available torch) 0)
+Init Connection: 21 7 (> (thing-available wood-hoe) 0) (> (thing-available wheat) 0)
+Init Connection: 21 56 (> (thing-available wood-hoe) 0) (> (thing-available wheat) 2)
+Init Connection: 21 80 (> (thing-available wood-hoe) 0) (> (thing-available wheat) 1)
+Init Connection: 64 7 (> (thing-available shears) 0) (> (thing-available wheat) 0)
+Init Connection: 64 56 (> (thing-available shears) 0) (> (thing-available wheat) 2)
+Init Connection: 64 80 (> (thing-available shears) 0) (> (thing-available wheat) 1)
+Init Connection: 47 7 (> (thing-available seeds) 0) (> (thing-available wheat) 0)
+Init Connection: 47 56 (> (thing-available seeds) 0) (> (thing-available wheat) 2)
+Init Connection: 47 80 (> (thing-available seeds) 0) (> (thing-available wheat) 1)
+Init Connection: 64 0 (> (thing-available shears) 0) (> (thing-available string) 0)
+Init Connection: 64 48 (> (thing-available shears) 0) (> (thing-available string) 1)
+Init Connection: 5 83 (> (thing-available stick) 6) (> (thing-available fishingrod) 0)
+Init Connection: 14 83 (> (thing-available stick) 5) (> (thing-available fishingrod) 0)
+Init Connection: 24 83 (> (thing-available stick) 2) (> (thing-available fishingrod) 0)
+Init Connection: 58 83 (> (thing-available stick) 1) (> (thing-available fishingrod) 0)
+Init Connection: 72 83 (> (thing-available stick) 0) (> (thing-available fishingrod) 0)
+Init Connection: 79 83 (> (thing-available stick) 3) (> (thing-available fishingrod) 0)
+Init Connection: 0 83 (> (thing-available string) 0) (> (thing-available fishingrod) 0)
+Init Connection: 48 83 (> (thing-available string) 1) (> (thing-available fishingrod) 0)
+Init Connection: 5 52 (> (thing-available stick) 6) (> (thing-available ladder) 0)
+Init Connection: 14 52 (> (thing-available stick) 5) (> (thing-available ladder) 0)
+Init Connection: 24 52 (> (thing-available stick) 2) (> (thing-available ladder) 0)
+Init Connection: 58 52 (> (thing-available stick) 1) (> (thing-available ladder) 0)
+Init Connection: 72 52 (> (thing-available stick) 0) (> (thing-available ladder) 0)
+Init Connection: 79 52 (> (thing-available stick) 3) (> (thing-available ladder) 0)
+Init Connection: 5 21 (> (thing-available stick) 6) (> (thing-available wood-hoe) 0)
+Init Connection: 14 21 (> (thing-available stick) 5) (> (thing-available wood-hoe) 0)
+Init Connection: 24 21 (> (thing-available stick) 2) (> (thing-available wood-hoe) 0)
+Init Connection: 58 21 (> (thing-available stick) 1) (> (thing-available wood-hoe) 0)
+Init Connection: 72 21 (> (thing-available stick) 0) (> (thing-available wood-hoe) 0)
+Init Connection: 79 21 (> (thing-available stick) 3) (> (thing-available wood-hoe) 0)
+Init Connection: 2 21 (> (thing-available plank) 0) (> (thing-available wood-hoe) 0)
+Init Connection: 25 21 (> (thing-available plank) 7) (> (thing-available wood-hoe) 0)
+Init Connection: 26 21 (> (thing-available plank) 1) (> (thing-available wood-hoe) 0)
+Init Connection: 40 21 (> (thing-available plank) 2) (> (thing-available wood-hoe) 0)
+Init Connection: 55 21 (> (thing-available plank) 3) (> (thing-available wood-hoe) 0)
+Init Connection: 91 21 (> (thing-available plank) 5) (> (thing-available wood-hoe) 0)
+Init Connection: 5 61 (> (thing-available stick) 6) (> (thing-available wood-pickaxe) 0)
+Init Connection: 14 61 (> (thing-available stick) 5) (> (thing-available wood-pickaxe) 0)
+Init Connection: 24 61 (> (thing-available stick) 2) (> (thing-available wood-pickaxe) 0)
+Init Connection: 58 61 (> (thing-available stick) 1) (> (thing-available wood-pickaxe) 0)
+Init Connection: 72 61 (> (thing-available stick) 0) (> (thing-available wood-pickaxe) 0)
+Init Connection: 79 61 (> (thing-available stick) 3) (> (thing-available wood-pickaxe) 0)
+Init Connection: 2 61 (> (thing-available plank) 0) (> (thing-available wood-pickaxe) 0)
+Init Connection: 25 61 (> (thing-available plank) 7) (> (thing-available wood-pickaxe) 0)
+Init Connection: 26 61 (> (thing-available plank) 1) (> (thing-available wood-pickaxe) 0)
+Init Connection: 40 61 (> (thing-available plank) 2) (> (thing-available wood-pickaxe) 0)
+Init Connection: 55 61 (> (thing-available plank) 3) (> (thing-available wood-pickaxe) 0)
+Init Connection: 91 61 (> (thing-available plank) 5) (> (thing-available wood-pickaxe) 0)
+Init Connection: 86 32 (> (thing-available wood-axe) 0) (> (thing-available cut-sugarcane) 1)
+Init Connection: 86 51 (> (thing-available wood-axe) 0) (> (thing-available cut-sugarcane) 2)
+Init Connection: 86 77 (> (thing-available wood-axe) 0) (> (thing-available cut-sugarcane) 0)
+Init Connection: 2 5 (> (thing-available plank) 0) (> (thing-available stick) 6)
+Init Connection: 25 5 (> (thing-available plank) 7) (> (thing-available stick) 6)
+Init Connection: 26 5 (> (thing-available plank) 1) (> (thing-available stick) 6)
+Init Connection: 40 5 (> (thing-available plank) 2) (> (thing-available stick) 6)
+Init Connection: 55 5 (> (thing-available plank) 3) (> (thing-available stick) 6)
+Init Connection: 91 5 (> (thing-available plank) 5) (> (thing-available stick) 6)
+Init Connection: 2 14 (> (thing-available plank) 0) (> (thing-available stick) 5)
+Init Connection: 25 14 (> (thing-available plank) 7) (> (thing-available stick) 5)
+Init Connection: 26 14 (> (thing-available plank) 1) (> (thing-available stick) 5)
+Init Connection: 40 14 (> (thing-available plank) 2) (> (thing-available stick) 5)
+Init Connection: 55 14 (> (thing-available plank) 3) (> (thing-available stick) 5)
+Init Connection: 91 14 (> (thing-available plank) 5) (> (thing-available stick) 5)
+Init Connection: 2 24 (> (thing-available plank) 0) (> (thing-available stick) 2)
+Init Connection: 25 24 (> (thing-available plank) 7) (> (thing-available stick) 2)
+Init Connection: 26 24 (> (thing-available plank) 1) (> (thing-available stick) 2)
+Init Connection: 40 24 (> (thing-available plank) 2) (> (thing-available stick) 2)
+Init Connection: 55 24 (> (thing-available plank) 3) (> (thing-available stick) 2)
+Init Connection: 91 24 (> (thing-available plank) 5) (> (thing-available stick) 2)
+Init Connection: 2 58 (> (thing-available plank) 0) (> (thing-available stick) 1)
+Init Connection: 25 58 (> (thing-available plank) 7) (> (thing-available stick) 1)
+Init Connection: 26 58 (> (thing-available plank) 1) (> (thing-available stick) 1)
+Init Connection: 40 58 (> (thing-available plank) 2) (> (thing-available stick) 1)
+Init Connection: 55 58 (> (thing-available plank) 3) (> (thing-available stick) 1)
+Init Connection: 91 58 (> (thing-available plank) 5) (> (thing-available stick) 1)
+Init Connection: 2 72 (> (thing-available plank) 0) (> (thing-available stick) 0)
+Init Connection: 25 72 (> (thing-available plank) 7) (> (thing-available stick) 0)
+Init Connection: 26 72 (> (thing-available plank) 1) (> (thing-available stick) 0)
+Init Connection: 40 72 (> (thing-available plank) 2) (> (thing-available stick) 0)
+Init Connection: 55 72 (> (thing-available plank) 3) (> (thing-available stick) 0)
+Init Connection: 91 72 (> (thing-available plank) 5) (> (thing-available stick) 0)
+Init Connection: 2 79 (> (thing-available plank) 0) (> (thing-available stick) 3)
+Init Connection: 25 79 (> (thing-available plank) 7) (> (thing-available stick) 3)
+Init Connection: 26 79 (> (thing-available plank) 1) (> (thing-available stick) 3)
+Init Connection: 40 79 (> (thing-available plank) 2) (> (thing-available stick) 3)
+Init Connection: 55 79 (> (thing-available plank) 3) (> (thing-available stick) 3)
+Init Connection: 91 79 (> (thing-available plank) 5) (> (thing-available stick) 3)
+Init Connection: 5 11 (> (thing-available stick) 6) (> (thing-available wood-shovel) 0)
+Init Connection: 14 11 (> (thing-available stick) 5) (> (thing-available wood-shovel) 0)
+Init Connection: 24 11 (> (thing-available stick) 2) (> (thing-available wood-shovel) 0)
+Init Connection: 58 11 (> (thing-available stick) 1) (> (thing-available wood-shovel) 0)
+Init Connection: 72 11 (> (thing-available stick) 0) (> (thing-available wood-shovel) 0)
+Init Connection: 79 11 (> (thing-available stick) 3) (> (thing-available wood-shovel) 0)
+Init Connection: 2 11 (> (thing-available plank) 0) (> (thing-available wood-shovel) 0)
+Init Connection: 25 11 (> (thing-available plank) 7) (> (thing-available wood-shovel) 0)
+Init Connection: 26 11 (> (thing-available plank) 1) (> (thing-available wood-shovel) 0)
+Init Connection: 40 11 (> (thing-available plank) 2) (> (thing-available wood-shovel) 0)
+Init Connection: 55 11 (> (thing-available plank) 3) (> (thing-available wood-shovel) 0)
+Init Connection: 91 11 (> (thing-available plank) 5) (> (thing-available wood-shovel) 0)
+Init Connection: 2 31 (> (thing-available plank) 0) (> (thing-available wood-stairs) 0)
+Init Connection: 25 31 (> (thing-available plank) 7) (> (thing-available wood-stairs) 0)
+Init Connection: 26 31 (> (thing-available plank) 1) (> (thing-available wood-stairs) 0)
+Init Connection: 40 31 (> (thing-available plank) 2) (> (thing-available wood-stairs) 0)
+Init Connection: 55 31 (> (thing-available plank) 3) (> (thing-available wood-stairs) 0)
+Init Connection: 91 31 (> (thing-available plank) 5) (> (thing-available wood-stairs) 0)
+Init Connection: 75 38 (> (furnace-fuel) 1) (> (thing-available cookedfish) 0)
+Init Connection: 70 38 (> (thing-available fish) 0) (> (thing-available cookedfish) 0)
+Init Connection: 30 38 (> (thing-available furnace) 0) (> (thing-available cookedfish) 0)
+Init Connection: 65 2 (> (thing-available wood) 0) (> (thing-available plank) 0)
+Init Connection: 65 25 (> (thing-available wood) 0) (> (thing-available plank) 7)
+Init Connection: 65 26 (> (thing-available wood) 0) (> (thing-available plank) 1)
+Init Connection: 65 40 (> (thing-available wood) 0) (> (thing-available plank) 2)
+Init Connection: 65 55 (> (thing-available wood) 0) (> (thing-available plank) 3)
+Init Connection: 65 91 (> (thing-available wood) 0) (> (thing-available plank) 5)
+Init Connection: 7 19 (> (thing-available wheat) 0) (> (thing-available bread) 0)
+Init Connection: 56 19 (> (thing-available wheat) 2) (> (thing-available bread) 0)
+Init Connection: 80 19 (> (thing-available wheat) 1) (> (thing-available bread) 0)
+Init Connection: 61 3 (> (thing-available wood-pickaxe) 0) (> (thing-available stone) 6)
+Init Connection: 61 10 (> (thing-available wood-pickaxe) 0) (> (thing-available stone) 1)
+Init Connection: 61 29 (> (thing-available wood-pickaxe) 0) (> (thing-available stone) 5)
+Init Connection: 61 36 (> (thing-available wood-pickaxe) 0) (> (thing-available stone) 0)
+Init Connection: 61 43 (> (thing-available wood-pickaxe) 0) (> (thing-available stone) 4)
+Init Connection: 61 45 (> (thing-available wood-pickaxe) 0) (> (thing-available stone) 3)
+Init Connection: 61 63 (> (thing-available wood-pickaxe) 0) (> (thing-available stone) 7)
+Init Connection: 61 69 (> (thing-available wood-pickaxe) 0) (> (thing-available stone) 2)
+Init Connection: 64 35 (> (thing-available shears) 0) (> (thing-available wool) 2)
+Init Connection: 64 89 (> (thing-available shears) 0) (> (thing-available wool) 0)
+Init Connection: 1 76 (> (thing-available iron) 1) (> (thing-available iron-door) 0)
+Init Connection: 17 76 (> (thing-available iron) 2) (> (thing-available iron-door) 0)
+Init Connection: 20 76 (> (thing-available iron) 4) (> (thing-available iron-door) 0)
+Init Connection: 33 76 (> (thing-available iron) 3) (> (thing-available iron-door) 0)
+Init Connection: 34 76 (> (thing-available iron) 0) (> (thing-available iron-door) 0)
+Init Connection: 67 76 (> (thing-available iron) 5) (> (thing-available iron-door) 0)
+Init Connection: 75 49 (> (furnace-fuel) 1) (> (thing-available glass) 2)
+Init Connection: 75 54 (> (furnace-fuel) 1) (> (thing-available glass) 1)
+Init Connection: 75 62 (> (furnace-fuel) 1) (> (thing-available glass) 0)
+Init Connection: 75 74 (> (furnace-fuel) 1) (> (thing-available glass) 5)
+Init Connection: 75 90 (> (furnace-fuel) 1) (> (thing-available glass) 3)
+Init Connection: 75 92 (> (furnace-fuel) 1) (> (thing-available glass) 4)
+Init Connection: 22 49 (> (thing-available sand) 0) (> (thing-available glass) 2)
+Init Connection: 22 54 (> (thing-available sand) 0) (> (thing-available glass) 1)
+Init Connection: 22 62 (> (thing-available sand) 0) (> (thing-available glass) 0)
+Init Connection: 22 74 (> (thing-available sand) 0) (> (thing-available glass) 5)
+Init Connection: 22 90 (> (thing-available sand) 0) (> (thing-available glass) 3)
+Init Connection: 22 92 (> (thing-available sand) 0) (> (thing-available glass) 4)
+Init Connection: 30 49 (> (thing-available furnace) 0) (> (thing-available glass) 2)
+Init Connection: 30 54 (> (thing-available furnace) 0) (> (thing-available glass) 1)
+Init Connection: 30 62 (> (thing-available furnace) 0) (> (thing-available glass) 0)
+Init Connection: 30 74 (> (thing-available furnace) 0) (> (thing-available glass) 5)
+Init Connection: 30 90 (> (thing-available furnace) 0) (> (thing-available glass) 3)
+Init Connection: 30 92 (> (thing-available furnace) 0) (> (thing-available glass) 4)
+Init Connection: 61 13 (> (thing-available wood-pickaxe) 0) (> (thing-available ironore) 0)
+Init Connection: 75 12 (> (furnace-fuel) 1) (> (thing-available claybrick) 3)
+Init Connection: 75 28 (> (furnace-fuel) 1) (> (thing-available claybrick) 0)
+Init Connection: 75 44 (> (furnace-fuel) 1) (> (thing-available claybrick) 2)
+Init Connection: 75 59 (> (furnace-fuel) 1) (> (thing-available claybrick) 1)
+Init Connection: 30 12 (> (thing-available furnace) 0) (> (thing-available claybrick) 3)
+Init Connection: 30 28 (> (thing-available furnace) 0) (> (thing-available claybrick) 0)
+Init Connection: 30 44 (> (thing-available furnace) 0) (> (thing-available claybrick) 2)
+Init Connection: 30 59 (> (thing-available furnace) 0) (> (thing-available claybrick) 1)
+Init Connection: 4 12 (> (thing-available clay) 2) (> (thing-available claybrick) 3)
+Init Connection: 18 12 (> (thing-available clay) 1) (> (thing-available claybrick) 3)
+Init Connection: 53 12 (> (thing-available clay) 0) (> (thing-available claybrick) 3)
+Init Connection: 73 12 (> (thing-available clay) 3) (> (thing-available claybrick) 3)
+Init Connection: 4 28 (> (thing-available clay) 2) (> (thing-available claybrick) 0)
+Init Connection: 18 28 (> (thing-available clay) 1) (> (thing-available claybrick) 0)
+Init Connection: 53 28 (> (thing-available clay) 0) (> (thing-available claybrick) 0)
+Init Connection: 73 28 (> (thing-available clay) 3) (> (thing-available claybrick) 0)
+Init Connection: 4 44 (> (thing-available clay) 2) (> (thing-available claybrick) 2)
+Init Connection: 18 44 (> (thing-available clay) 1) (> (thing-available claybrick) 2)
+Init Connection: 53 44 (> (thing-available clay) 0) (> (thing-available claybrick) 2)
+Init Connection: 73 44 (> (thing-available clay) 3) (> (thing-available claybrick) 2)
+Init Connection: 4 59 (> (thing-available clay) 2) (> (thing-available claybrick) 1)
+Init Connection: 18 59 (> (thing-available clay) 1) (> (thing-available claybrick) 1)
+Init Connection: 53 59 (> (thing-available clay) 0) (> (thing-available claybrick) 1)
+Init Connection: 73 59 (> (thing-available clay) 3) (> (thing-available claybrick) 1)
+Init Connection: 1 50 (> (thing-available iron) 1) (> (thing-available bucket) 0)
+Init Connection: 17 50 (> (thing-available iron) 2) (> (thing-available bucket) 0)
+Init Connection: 20 50 (> (thing-available iron) 4) (> (thing-available bucket) 0)
+Init Connection: 33 50 (> (thing-available iron) 3) (> (thing-available bucket) 0)
+Init Connection: 34 50 (> (thing-available iron) 0) (> (thing-available bucket) 0)
+Init Connection: 67 50 (> (thing-available iron) 5) (> (thing-available bucket) 0)
+Init Connection: 35 84 (> (thing-available wool) 2) (> (thing-available bed) 0)
+Init Connection: 89 84 (> (thing-available wool) 0) (> (thing-available bed) 0)
+Init Connection: 2 84 (> (thing-available plank) 0) (> (thing-available bed) 0)
+Init Connection: 25 84 (> (thing-available plank) 7) (> (thing-available bed) 0)
+Init Connection: 26 84 (> (thing-available plank) 1) (> (thing-available bed) 0)
+Init Connection: 40 84 (> (thing-available plank) 2) (> (thing-available bed) 0)
+Init Connection: 55 84 (> (thing-available plank) 3) (> (thing-available bed) 0)
+Init Connection: 91 84 (> (thing-available plank) 5) (> (thing-available bed) 0)
+Init Connection: 61 9 (> (thing-available wood-pickaxe) 0) (> (thing-available coal) 0)
+Init Connection: 11 22 (> (thing-available wood-shovel) 0) (> (thing-available sand) 0)
+Init Connection: 78 6 (> (thing-available brown-mushroom) 0) (> (thing-available mushroomstew) 0)
+Init Connection: 15 6 (> (thing-available red-mushroom) 0) (> (thing-available mushroomstew) 0)
+Init Connection: 66 6 (> (thing-available bowl) 0) (> (thing-available mushroomstew) 0)
+Init Connection: 75 1 (> (furnace-fuel) 1) (> (thing-available iron) 1)
+Init Connection: 75 17 (> (furnace-fuel) 1) (> (thing-available iron) 2)
+Init Connection: 75 20 (> (furnace-fuel) 1) (> (thing-available iron) 4)
+Init Connection: 75 33 (> (furnace-fuel) 1) (> (thing-available iron) 3)
+Init Connection: 75 34 (> (furnace-fuel) 1) (> (thing-available iron) 0)
+Init Connection: 75 67 (> (furnace-fuel) 1) (> (thing-available iron) 5)
+Init Connection: 30 1 (> (thing-available furnace) 0) (> (thing-available iron) 1)
+Init Connection: 30 17 (> (thing-available furnace) 0) (> (thing-available iron) 2)
+Init Connection: 30 20 (> (thing-available furnace) 0) (> (thing-available iron) 4)
+Init Connection: 30 33 (> (thing-available furnace) 0) (> (thing-available iron) 3)
+Init Connection: 30 34 (> (thing-available furnace) 0) (> (thing-available iron) 0)
+Init Connection: 30 67 (> (thing-available furnace) 0) (> (thing-available iron) 5)
+Init Connection: 13 1 (> (thing-available ironore) 0) (> (thing-available iron) 1)
+Init Connection: 13 17 (> (thing-available ironore) 0) (> (thing-available iron) 2)
+Init Connection: 13 20 (> (thing-available ironore) 0) (> (thing-available iron) 4)
+Init Connection: 13 33 (> (thing-available ironore) 0) (> (thing-available iron) 3)
+Init Connection: 13 34 (> (thing-available ironore) 0) (> (thing-available iron) 0)
+Init Connection: 13 67 (> (thing-available ironore) 0) (> (thing-available iron) 5)
+Init Connection: 11 4 (> (thing-available wood-shovel) 0) (> (thing-available clay) 2)
+Init Connection: 11 18 (> (thing-available wood-shovel) 0) (> (thing-available clay) 1)
+Init Connection: 11 53 (> (thing-available wood-shovel) 0) (> (thing-available clay) 0)
+Init Connection: 11 73 (> (thing-available wood-shovel) 0) (> (thing-available clay) 3)
+Running on:
+{
+    "index": 0, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }
+    ], 
+    "thing": "wood", 
+    "num": 1, 
+    "file": "wood.36.pddl"
+}
+Skipping: wood.36.pddl because no subgoals
+Running on:
+{
+    "index": 1, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available ironore) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "ironore": 1
+        }
+    ], 
+    "thing": "ironore", 
+    "num": 1, 
+    "file": "ironore.42.pddl"
+}
+GoldPreds: 4
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+Running on:
+{
+    "index": 2, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 0)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 1)", 
+        "(> (thing-available shears) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 1
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 2
+        }, 
+        {
+            "shears": 1
+        }
+    ], 
+    "thing": "shears", 
+    "num": 1, 
+    "file": "shears.35.pddl"
+}
+GoldPreds: 19
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+Running on:
+{
+    "index": 3, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-shovel) 0)", 
+        "(> (thing-available clay) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-shovel": -1
+        }, 
+        {
+            "clay": 1
+        }
+    ], 
+    "thing": "clay", 
+    "num": 1, 
+    "file": "clay.23.pddl"
+}
+GoldPreds: 4
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+Running on:
+{
+    "index": 4, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone-pickaxe) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone-pickaxe": 1
+        }
+    ], 
+    "thing": "stone-pickaxe", 
+    "num": 1, 
+    "file": "stone-pickaxe.44.pddl"
+}
+GoldPreds: 7
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+Running on:
+{
+    "index": 5, 
+    "subgoals-formatted": [
+        "(> (thing-available egg) 0)"
+    ], 
+    "subgoals": [
+        {
+            "egg": 1
+        }
+    ], 
+    "thing": "egg", 
+    "num": 1, 
+    "file": "egg.40.pddl"
+}
+Skipping: egg.40.pddl because no subgoals
+Running on:
+{
+    "index": 6, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 0)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 2)", 
+        "(> (thing-available bucket) 0)", 
+        "(> (thing-available milk) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 1
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 3
+        }, 
+        {
+            "bucket": -1
+        }, 
+        {
+            "milk": 1
+        }
+    ], 
+    "thing": "milk", 
+    "num": 1, 
+    "file": "milk.19.pddl"
+}
+GoldPreds: 22
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+GenSubgoal: 19
+GenSubgoal: 20
+GenSubgoal: 21
+Running on:
+{
+    "index": 7, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 3)", 
+        "(> (thing-available stick) 5)", 
+        "(> (thing-available fence) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 4
+        }, 
+        {
+            "stick": 6
+        }, 
+        {
+            "fence": 1
+        }
+    ], 
+    "thing": "fence", 
+    "num": 1, 
+    "file": "fence.13.pddl"
+}
+GoldPreds: 4
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+Running on:
+{
+    "index": 8, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-shovel) 0)", 
+        "(> (thing-available clay) 0)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available claybrick) 0)", 
+        "(> (thing-available clay) 0)", 
+        "(> (thing-available claybrick) 1)", 
+        "(> (thing-available clay) 0)", 
+        "(> (thing-available claybrick) 2)", 
+        "(> (thing-available clay) 0)", 
+        "(> (thing-available claybrick) 3)", 
+        "(> (thing-available brick) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-shovel": -1
+        }, 
+        {
+            "clay": 1
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "claybrick": 1
+        }, 
+        {
+            "clay": 1
+        }, 
+        {
+            "claybrick": 2
+        }, 
+        {
+            "clay": 1
+        }, 
+        {
+            "claybrick": 3
+        }, 
+        {
+            "clay": 1
+        }, 
+        {
+            "claybrick": 4
+        }, 
+        {
+            "brick": 1
+        }
+    ], 
+    "thing": "brick", 
+    "num": 1, 
+    "file": "brick.34.pddl"
+}
+GoldPreds: 26
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+GenSubgoal: 19
+GenSubgoal: 20
+GenSubgoal: 21
+GenSubgoal: 22
+GenSubgoal: 23
+GenSubgoal: 24
+GenSubgoal: 25
+Running on:
+{
+    "index": 9, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 3)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 7)", 
+        "(> (thing-available wood-door) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 4
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 8
+        }, 
+        {
+            "wood-door": 1
+        }
+    ], 
+    "thing": "wood-door", 
+    "num": 1, 
+    "file": "wood-door.45.pddl"
+}
+GoldPreds: 4
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+Running on:
+{
+    "index": 10, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-shovel) 0)", 
+        "(> (thing-available clay) 0)", 
+        "(> (thing-available clay) 1)", 
+        "(> (thing-available clay) 2)", 
+        "(> (thing-available clay) 3)", 
+        "(> (thing-available clayblock) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-shovel": -1
+        }, 
+        {
+            "clay": 1
+        }, 
+        {
+            "clay": 2
+        }, 
+        {
+            "clay": 3
+        }, 
+        {
+            "clay": 4
+        }, 
+        {
+            "clayblock": 1
+        }
+    ], 
+    "thing": "clayblock", 
+    "num": 1, 
+    "file": "clayblock.5.pddl"
+}
+GoldPreds: 8
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+Running on:
+{
+    "index": 11, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 2)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 0)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 1)", 
+        "(> (thing-available shears) 0)", 
+        "(> (thing-available string) 1)", 
+        "(> (thing-available fishingrod) 0)", 
+        "(> (thing-available fish) 0)", 
+        "(> (thing-available cookedfish) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 3
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 1
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 2
+        }, 
+        {
+            "shears": -1
+        }, 
+        {
+            "string": 2
+        }, 
+        {
+            "fishingrod": -1
+        }, 
+        {
+            "fish": 1
+        }, 
+        {
+            "cookedfish": 1
+        }
+    ], 
+    "thing": "cookedfish", 
+    "num": 1, 
+    "file": "cookedfish.4.pddl"
+}
+GoldPreds: 26
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+GenSubgoal: 19
+GenSubgoal: 20
+GenSubgoal: 21
+GenSubgoal: 22
+GenSubgoal: 23
+GenSubgoal: 24
+GenSubgoal: 25
+Running on:
+{
+    "index": 12, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 1
+        }
+    ], 
+    "thing": "stick", 
+    "num": 1, 
+    "file": "stick.31.pddl"
+}
+GoldPreds: 2
+GenSubgoal: 0
+GenSubgoal: 1
+Running on:
+{
+    "index": 13, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available wood-shovel) 0)", 
+        "(> (thing-available sand) 0)", 
+        "(> (thing-available glass) 0)", 
+        "(> (thing-available sand) 0)", 
+        "(> (thing-available glass) 1)", 
+        "(> (thing-available sand) 0)", 
+        "(> (thing-available glass) 2)", 
+        "(> (thing-available sand) 0)", 
+        "(> (thing-available glass) 3)", 
+        "(> (thing-available sand) 0)", 
+        "(> (thing-available glass) 4)", 
+        "(> (thing-available sand) 0)", 
+        "(> (thing-available glass) 5)", 
+        "(> (thing-available glasspane) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "wood-shovel": -1
+        }, 
+        {
+            "sand": 1
+        }, 
+        {
+            "glass": 1
+        }, 
+        {
+            "sand": 1
+        }, 
+        {
+            "glass": 2
+        }, 
+        {
+            "sand": 1
+        }, 
+        {
+            "glass": 3
+        }, 
+        {
+            "sand": 1
+        }, 
+        {
+            "glass": 4
+        }, 
+        {
+            "sand": 1
+        }, 
+        {
+            "glass": 5
+        }, 
+        {
+            "sand": 1
+        }, 
+        {
+            "glass": 6
+        }, 
+        {
+            "glasspane": 1
+        }
+    ], 
+    "thing": "glasspane", 
+    "num": 1, 
+    "file": "glasspane.15.pddl"
+}
+GoldPreds: 30
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+GenSubgoal: 19
+GenSubgoal: 20
+GenSubgoal: 21
+GenSubgoal: 22
+GenSubgoal: 23
+GenSubgoal: 24
+GenSubgoal: 25
+GenSubgoal: 26
+GenSubgoal: 27
+GenSubgoal: 28
+GenSubgoal: 29
+Running on:
+{
+    "index": 14, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 0)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 1)", 
+        "(> (thing-available shears) 0)", 
+        "(> (thing-available string) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 1
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 2
+        }, 
+        {
+            "shears": -1
+        }, 
+        {
+            "string": 1
+        }
+    ], 
+    "thing": "string", 
+    "num": 1, 
+    "file": "string.38.pddl"
+}
+GoldPreds: 20
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+GenSubgoal: 19
+Running on:
+{
+    "index": 15, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 2)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 0)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 1)", 
+        "(> (thing-available shears) 0)", 
+        "(> (thing-available string) 1)", 
+        "(> (thing-available fishingrod) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 3
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 1
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 2
+        }, 
+        {
+            "shears": -1
+        }, 
+        {
+            "string": 2
+        }, 
+        {
+            "fishingrod": 1
+        }
+    ], 
+    "thing": "fishingrod", 
+    "num": 1, 
+    "file": "fishingrod.28.pddl"
+}
+GoldPreds: 24
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+GenSubgoal: 19
+GenSubgoal: 20
+GenSubgoal: 21
+GenSubgoal: 22
+GenSubgoal: 23
+Running on:
+{
+    "index": 16, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone-axe) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone-axe": 1
+        }
+    ], 
+    "thing": "stone-axe", 
+    "num": 1, 
+    "file": "stone-axe.10.pddl"
+}
+GoldPreds: 7
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+Running on:
+{
+    "index": 17, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }
+    ], 
+    "thing": "stone", 
+    "num": 1, 
+    "file": "stone.2.pddl"
+}
+GoldPreds: 4
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+Running on:
+{
+    "index": 18, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 1
+        }
+    ], 
+    "thing": "iron", 
+    "num": 1, 
+    "file": "iron.30.pddl"
+}
+GoldPreds: 16
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+Running on:
+{
+    "index": 19, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 2)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 0)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 1)", 
+        "(> (thing-available shears) 0)", 
+        "(> (thing-available string) 1)", 
+        "(> (thing-available fishingrod) 0)", 
+        "(> (thing-available fish) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 3
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 1
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 2
+        }, 
+        {
+            "shears": -1
+        }, 
+        {
+            "string": 2
+        }, 
+        {
+            "fishingrod": -1
+        }, 
+        {
+            "fish": 1
+        }
+    ], 
+    "thing": "fish", 
+    "num": 1, 
+    "file": "fish.18.pddl"
+}
+GoldPreds: 25
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+GenSubgoal: 19
+GenSubgoal: 20
+GenSubgoal: 21
+GenSubgoal: 22
+GenSubgoal: 23
+GenSubgoal: 24
+Running on:
+{
+    "index": 20, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 0)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 2)", 
+        "(> (thing-available bucket) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 1
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 3
+        }, 
+        {
+            "bucket": 1
+        }
+    ], 
+    "thing": "bucket", 
+    "num": 1, 
+    "file": "bucket.37.pddl"
+}
+GoldPreds: 21
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+GenSubgoal: 19
+GenSubgoal: 20
+Running on:
+{
+    "index": 21, 
+    "subgoals-formatted": [
+        "(> (thing-available bone) 0)", 
+        "(> (thing-available bonemeal) 0)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 0)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 1)", 
+        "(> (thing-available shears) 0)", 
+        "(> (thing-available seeds) 0)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 1)", 
+        "(> (thing-available wood-hoe) 0)", 
+        "(> (thing-available wheat) 0)"
+    ], 
+    "subgoals": [
+        {
+            "bone": 1
+        }, 
+        {
+            "bonemeal": 1
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 1
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 2
+        }, 
+        {
+            "shears": -1
+        }, 
+        {
+            "seeds": 1
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 2
+        }, 
+        {
+            "wood-hoe": -1
+        }, 
+        {
+            "wheat": 1
+        }
+    ], 
+    "thing": "wheat", 
+    "num": 1, 
+    "file": "wheat.46.pddl"
+}
+GoldPreds: 26
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+GenSubgoal: 19
+GenSubgoal: 20
+GenSubgoal: 21
+GenSubgoal: 22
+GenSubgoal: 23
+GenSubgoal: 24
+GenSubgoal: 25
+Running on:
+{
+    "index": 22, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-axe) 0)", 
+        "(> (thing-available cut-sugarcane) 0)", 
+        "(> (thing-available cut-sugarcane) 1)", 
+        "(> (thing-available cut-sugarcane) 2)", 
+        "(> (thing-available paper) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-axe": -1
+        }, 
+        {
+            "cut-sugarcane": 1
+        }, 
+        {
+            "cut-sugarcane": 2
+        }, 
+        {
+            "cut-sugarcane": 3
+        }, 
+        {
+            "paper": 1
+        }
+    ], 
+    "thing": "paper", 
+    "num": 1, 
+    "file": "paper.21.pddl"
+}
+GoldPreds: 7
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+Running on:
+{
+    "index": 23, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 0)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 1)", 
+        "(> (thing-available shears) 0)", 
+        "(> (thing-available wool) 2)", 
+        "(> (thing-available bed) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 1
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 2
+        }, 
+        {
+            "shears": -1
+        }, 
+        {
+            "wool": 3
+        }, 
+        {
+            "bed": 1
+        }
+    ], 
+    "thing": "bed", 
+    "num": 1, 
+    "file": "bed.8.pddl"
+}
+GoldPreds: 23
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+GenSubgoal: 19
+GenSubgoal: 20
+GenSubgoal: 21
+GenSubgoal: 22
+Running on:
+{
+    "index": 24, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available coal) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "coal": 1
+        }
+    ], 
+    "thing": "coal", 
+    "num": 1, 
+    "file": "coal.14.pddl"
+}
+GoldPreds: 4
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+Running on:
+{
+    "index": 25, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-shovel) 0)", 
+        "(> (thing-available sand) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-shovel": -1
+        }, 
+        {
+            "sand": 1
+        }
+    ], 
+    "thing": "sand", 
+    "num": 1, 
+    "file": "sand.3.pddl"
+}
+GoldPreds: 4
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+Running on:
+{
+    "index": 26, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone-stairs) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone-stairs": 1
+        }
+    ], 
+    "thing": "stone-stairs", 
+    "num": 1, 
+    "file": "stone-stairs.50.pddl"
+}
+GoldPreds: 10
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+Running on:
+{
+    "index": 27, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 1)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-hoe) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 2
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-hoe": 1
+        }
+    ], 
+    "thing": "wood-hoe", 
+    "num": 1, 
+    "file": "wood-hoe.1.pddl"
+}
+GoldPreds: 3
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+Running on:
+{
+    "index": 28, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available bowl) 0)", 
+        "(> (thing-available brown-mushroom) 0)", 
+        "(> (thing-available red-mushroom) 0)", 
+        "(> (thing-available mushroomstew) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "bowl": 1
+        }, 
+        {
+            "brown-mushroom": 1
+        }, 
+        {
+            "red-mushroom": 1
+        }, 
+        {
+            "mushroomstew": 1
+        }
+    ], 
+    "thing": "mushroomstew", 
+    "num": 1, 
+    "file": "mushroomstew.52.pddl"
+}
+GoldPreds: 5
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+Running on:
+{
+    "index": 29, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-axe) 0)", 
+        "(> (thing-available cut-sugarcane) 0)", 
+        "(> (thing-available sugar) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-axe": -1
+        }, 
+        {
+            "cut-sugarcane": 1
+        }, 
+        {
+            "sugar": 1
+        }
+    ], 
+    "thing": "sugar", 
+    "num": 1, 
+    "file": "sugar.16.pddl"
+}
+GoldPreds: 5
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+Running on:
+{
+    "index": 30, 
+    "subgoals-formatted": [
+        "(> (thing-available bone) 0)", 
+        "(> (thing-available bonemeal) 0)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 0)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 1)", 
+        "(> (thing-available shears) 0)", 
+        "(> (thing-available seeds) 0)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 1)", 
+        "(> (thing-available wood-hoe) 0)", 
+        "(> (thing-available wheat) 0)", 
+        "(> (thing-available wheat) 1)", 
+        "(> (thing-available bone) 0)", 
+        "(> (thing-available bonemeal) 0)", 
+        "(> (thing-available seeds) 0)", 
+        "(> (thing-available wheat) 2)", 
+        "(> (thing-available bread) 0)"
+    ], 
+    "subgoals": [
+        {
+            "bone": 1
+        }, 
+        {
+            "bonemeal": 1
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 1
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 2
+        }, 
+        {
+            "shears": -1
+        }, 
+        {
+            "seeds": 1
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 2
+        }, 
+        {
+            "wood-hoe": -1
+        }, 
+        {
+            "wheat": 1
+        }, 
+        {
+            "wheat": 2
+        }, 
+        {
+            "bone": 1
+        }, 
+        {
+            "bonemeal": 1
+        }, 
+        {
+            "seeds": 1
+        }, 
+        {
+            "wheat": 3
+        }, 
+        {
+            "bread": 1
+        }
+    ], 
+    "thing": "bread", 
+    "num": 1, 
+    "file": "bread.33.pddl"
+}
+GoldPreds: 32
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+GenSubgoal: 19
+GenSubgoal: 20
+GenSubgoal: 21
+GenSubgoal: 22
+GenSubgoal: 23
+GenSubgoal: 24
+GenSubgoal: 25
+GenSubgoal: 26
+GenSubgoal: 27
+GenSubgoal: 28
+GenSubgoal: 29
+GenSubgoal: 30
+GenSubgoal: 31
+Running on:
+{
+    "index": 31, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": 1
+        }
+    ], 
+    "thing": "wood-pickaxe", 
+    "num": 1, 
+    "file": "wood-pickaxe.48.pddl"
+}
+GoldPreds: 3
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+Running on:
+{
+    "index": 32, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (thing-available torch) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "torch": 1
+        }
+    ], 
+    "thing": "torch", 
+    "num": 1, 
+    "file": "torch.24.pddl"
+}
+GoldPreds: 5
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+Running on:
+{
+    "index": 33, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone-shovel) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone-shovel": 1
+        }
+    ], 
+    "thing": "stone-shovel", 
+    "num": 1, 
+    "file": "stone-shovel.49.pddl"
+}
+GoldPreds: 5
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+Running on:
+{
+    "index": 34, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available sandstone) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": 1
+        }, 
+        {
+            "sandstone": 1
+        }
+    ], 
+    "thing": "sandstone", 
+    "num": 1, 
+    "file": "sandstone.22.pddl"
+}
+GoldPreds: 4
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+Running on:
+{
+    "index": 35, 
+    "subgoals-formatted": [
+        "(> (thing-available red-mushroom) 0)"
+    ], 
+    "subgoals": [
+        {
+            "red-mushroom": 1
+        }
+    ], 
+    "thing": "red-mushroom", 
+    "num": 1, 
+    "file": "red-mushroom.43.pddl"
+}
+Skipping: red-mushroom.43.pddl because no subgoals
+Running on:
+{
+    "index": 36, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-shovel) 0)", 
+        "(> (thing-available clay) 0)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available claybrick) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-shovel": -1
+        }, 
+        {
+            "clay": 1
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "claybrick": 1
+        }
+    ], 
+    "thing": "claybrick", 
+    "num": 1, 
+    "file": "claybrick.9.pddl"
+}
+GoldPreds: 19
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+Running on:
+{
+    "index": 37, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available wood-shovel) 0)", 
+        "(> (thing-available sand) 0)", 
+        "(> (thing-available glass) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "wood-shovel": -1
+        }, 
+        {
+            "sand": 1
+        }, 
+        {
+            "glass": 1
+        }
+    ], 
+    "thing": "glass", 
+    "num": 1, 
+    "file": "glass.27.pddl"
+}
+GoldPreds: 19
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+Running on:
+{
+    "index": 38, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone-hoe) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone-hoe": 1
+        }
+    ], 
+    "thing": "stone-hoe", 
+    "num": 1, 
+    "file": "stone-hoe.41.pddl"
+}
+GoldPreds: 6
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+Running on:
+{
+    "index": 39, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }
+    ], 
+    "thing": "plank", 
+    "num": 1, 
+    "file": "plank.25.pddl"
+}
+GoldPreds: 1
+GenSubgoal: 0
+Running on:
+{
+    "index": 40, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-axe) 0)", 
+        "(> (thing-available cut-sugarcane) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-axe": -1
+        }, 
+        {
+            "cut-sugarcane": 1
+        }
+    ], 
+    "thing": "cut-sugarcane", 
+    "num": 1, 
+    "file": "cutsugarcane.51.pddl"
+}
+GoldPreds: 4
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+Running on:
+{
+    "index": 41, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 3)", 
+        "(> (thing-available stick) 6)", 
+        "(> (thing-available ladder) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 4
+        }, 
+        {
+            "stick": 7
+        }, 
+        {
+            "ladder": 1
+        }
+    ], 
+    "thing": "ladder", 
+    "num": 1, 
+    "file": "ladder.20.pddl"
+}
+GoldPreds: 4
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+Running on:
+{
+    "index": 42, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 3)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 5)", 
+        "(> (thing-available wood-stairs) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 4
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 6
+        }, 
+        {
+            "wood-stairs": 1
+        }
+    ], 
+    "thing": "wood-stairs", 
+    "num": 1, 
+    "file": "wood-stairs.7.pddl"
+}
+GoldPreds: 4
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+Running on:
+{
+    "index": 43, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 0)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-shovel) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 1
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-shovel": 1
+        }
+    ], 
+    "thing": "wood-shovel", 
+    "num": 1, 
+    "file": "wood-shovel.6.pddl"
+}
+GoldPreds: 3
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+Running on:
+{
+    "index": 44, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 0)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 1)", 
+        "(> (thing-available shears) 0)", 
+        "(> (thing-available wool) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 1
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 2
+        }, 
+        {
+            "shears": -1
+        }, 
+        {
+            "wool": 1
+        }
+    ], 
+    "thing": "wool", 
+    "num": 1, 
+    "file": "wool.11.pddl"
+}
+GoldPreds: 20
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+GenSubgoal: 19
+Running on:
+{
+    "index": 45, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stonebrick) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stonebrick": 1
+        }
+    ], 
+    "thing": "stonebrick", 
+    "num": 1, 
+    "file": "stonebrick.39.pddl"
+}
+GoldPreds: 8
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+Running on:
+{
+    "index": 46, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available bowl) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "bowl": 1
+        }
+    ], 
+    "thing": "bowl", 
+    "num": 1, 
+    "file": "bowl.26.pddl"
+}
+GoldPreds: 2
+GenSubgoal: 0
+GenSubgoal: 1
+Running on:
+{
+    "index": 47, 
+    "subgoals-formatted": [
+        "(> (thing-available bone) 0)", 
+        "(> (thing-available bonemeal) 0)", 
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 0)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 1)", 
+        "(> (thing-available shears) 0)", 
+        "(> (thing-available seeds) 0)"
+    ], 
+    "subgoals": [
+        {
+            "bone": 1
+        }, 
+        {
+            "bonemeal": 1
+        }, 
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 1
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 2
+        }, 
+        {
+            "shears": -1
+        }, 
+        {
+            "seeds": 1
+        }
+    ], 
+    "thing": "seeds", 
+    "num": 1, 
+    "file": "seeds.32.pddl"
+}
+GoldPreds: 22
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+GenSubgoal: 19
+GenSubgoal: 20
+GenSubgoal: 21
+Running on:
+{
+    "index": 48, 
+    "subgoals-formatted": [
+        "(> (thing-available bone) 0)"
+    ], 
+    "subgoals": [
+        {
+            "bone": 1
+        }
+    ], 
+    "thing": "bone", 
+    "num": 1, 
+    "file": "bone.12.pddl"
+}
+Skipping: bone.12.pddl because no subgoals
+Running on:
+{
+    "index": 49, 
+    "subgoals-formatted": [
+        "(> (thing-available brown-mushroom) 0)"
+    ], 
+    "subgoals": [
+        {
+            "brown-mushroom": 1
+        }
+    ], 
+    "thing": "brown-mushroom", 
+    "num": 1, 
+    "file": "brown-mushroom.47.pddl"
+}
+Skipping: brown-mushroom.47.pddl because no subgoals
+Running on:
+{
+    "index": 50, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": 1
+        }
+    ], 
+    "thing": "furnace", 
+    "num": 1, 
+    "file": "furnace.29.pddl"
+}
+GoldPreds: 12
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+Running on:
+{
+    "index": 51, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-axe) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-axe": 1
+        }
+    ], 
+    "thing": "wood-axe", 
+    "num": 1, 
+    "file": "wood-axe.0.pddl"
+}
+GoldPreds: 3
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+Running on:
+{
+    "index": 52, 
+    "subgoals-formatted": [
+        "(> (thing-available wood) 0)", 
+        "(> (thing-available plank) 2)", 
+        "(> (thing-available stick) 1)", 
+        "(> (thing-available wood-pickaxe) 0)", 
+        "(> (thing-available stone) 0)", 
+        "(> (thing-available stone) 1)", 
+        "(> (thing-available stone) 2)", 
+        "(> (thing-available stone) 3)", 
+        "(> (thing-available stone) 4)", 
+        "(> (thing-available stone) 5)", 
+        "(> (thing-available stone) 6)", 
+        "(> (thing-available stone) 7)", 
+        "(> (thing-available furnace) 0)", 
+        "(> (thing-available coal) 0)", 
+        "(> (furnace-fuel) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 0)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 1)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 2)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 3)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 4)", 
+        "(> (thing-available ironore) 0)", 
+        "(> (thing-available iron) 5)", 
+        "(> (thing-available iron-door) 0)"
+    ], 
+    "subgoals": [
+        {
+            "wood": 1
+        }, 
+        {
+            "plank": 3
+        }, 
+        {
+            "stick": 2
+        }, 
+        {
+            "wood-pickaxe": -1
+        }, 
+        {
+            "stone": 1
+        }, 
+        {
+            "stone": 2
+        }, 
+        {
+            "stone": 3
+        }, 
+        {
+            "stone": 4
+        }, 
+        {
+            "stone": 5
+        }, 
+        {
+            "stone": 6
+        }, 
+        {
+            "stone": 7
+        }, 
+        {
+            "stone": 8
+        }, 
+        {
+            "furnace": -1
+        }, 
+        {
+            "coal": 1
+        }, 
+        {
+            "furnace-fuel": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 1
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 2
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 3
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 4
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 5
+        }, 
+        {
+            "ironore": 1
+        }, 
+        {
+            "iron": 6
+        }, 
+        {
+            "iron-door": 1
+        }
+    ], 
+    "thing": "iron-door", 
+    "num": 1, 
+    "file": "irondoor.17.pddl"
+}
+Reading training examples...done
+Training set properties: 199 features, 52922 examples (563 pos / 52359 neg)
+Iter 1: .*(NumConst=1, SV=1, CEps=100.0000, QPEps=0.0000)
+Iter 2: .*(NumConst=2, SV=2, CEps=101.0802, QPEps=0.0047)
+Iter 3: .*(NumConst=3, SV=2, CEps=3011.0175, QPEps=0.0149)
+Iter 4: .*(NumConst=4, SV=3, CEps=3100.4832, QPEps=0.0021)
+Iter 5: .*(NumConst=5, SV=3, CEps=2252.8961, QPEps=49.5151)
+Iter 6: .*(NumConst=6, SV=4, CEps=1161.1966, QPEps=0.0322)
+Iter 7: .*(NumConst=7, SV=4, CEps=587.2368, QPEps=0.0492)
+Iter 8: .*(NumConst=8, SV=5, CEps=769.4012, QPEps=49.7920)
+Iter 9: .*(NumConst=9, SV=6, CEps=351.7020, QPEps=49.2750)
+Iter 10: .*(NumConst=10, SV=6, CEps=320.0881, QPEps=43.3089)
+Iter 11: .*(NumConst=11, SV=7, CEps=281.9760, QPEps=0.0017)
+Iter 12: .*(NumConst=12, SV=6, CEps=256.3230, QPEps=0.0019)
+Iter 13: .*(NumConst=13, SV=7, CEps=320.8567, QPEps=0.0012)
+Iter 14: .*(NumConst=14, SV=7, CEps=122.1121, QPEps=2.0303)
+Iter 15: .*(NumConst=15, SV=8, CEps=188.9563, QPEps=0.0010)
+Iter 16: .*(NumConst=16, SV=9, CEps=101.8010, QPEps=0.0008)
+Iter 17: .*(NumConst=17, SV=8, CEps=87.8935, QPEps=0.0010)
+Iter 18: .*(NumConst=18, SV=10, CEps=60.7632, QPEps=1.6477)
+Iter 19: .*(NumConst=19, SV=11, CEps=59.4590, QPEps=0.0004)
+Iter 20: .*(NumConst=20, SV=11, CEps=47.5360, QPEps=0.0001)
+Iter 21: .*(NumConst=21, SV=12, CEps=34.3617, QPEps=11.3734)
+Iter 22: .*(NumConst=22, SV=13, CEps=21.5207, QPEps=5.4232)
+Iter 23: .*(NumConst=23, SV=13, CEps=32.3972, QPEps=9.7055)
+Iter 24: .*(NumConst=24, SV=14, CEps=21.4979, QPEps=4.2334)
+Iter 25: .*(NumConst=25, SV=16, CEps=12.2363, QPEps=5.5493)
+Iter 26: .*(NumConst=26, SV=13, CEps=32.9451, QPEps=4.0737)
+Iter 27: .*(NumConst=27, SV=13, CEps=28.0462, QPEps=1.9084)
+Iter 28: .*(NumConst=28, SV=15, CEps=29.2192, QPEps=6.0628)
+Iter 29: .*(NumConst=29, SV=15, CEps=23.4926, QPEps=4.1714)
+Iter 30: .*(NumConst=30, SV=16, CEps=23.3738, QPEps=4.8452)
+Iter 31: .*(NumConst=31, SV=15, CEps=25.5333, QPEps=5.9286)
+Iter 32: .*(NumConst=32, SV=13, CEps=17.4987, QPEps=3.1787)
+Iter 33: .*(NumConst=33, SV=14, CEps=12.6583, QPEps=2.1136)
+Iter 34: .*(NumConst=34, SV=15, CEps=12.4796, QPEps=6.0821)
+Iter 35: .*(NumConst=35, SV=17, CEps=16.4243, QPEps=3.9217)
+Iter 36: .*(NumConst=36, SV=16, CEps=15.8553, QPEps=5.9893)
+Iter 37: .*(NumConst=37, SV=17, CEps=7.6901, QPEps=3.4746)
+Iter 38: .*(NumConst=38, SV=18, CEps=11.4722, QPEps=3.6836)
+Iter 39: .*(NumConst=39, SV=20, CEps=8.2939, QPEps=2.4347)
+Iter 40: .*(NumConst=40, SV=19, CEps=9.4426, QPEps=3.2877)
+Iter 41: .*(NumConst=41, SV=20, CEps=7.7314, QPEps=2.9885)
+Iter 42: .*(NumConst=42, SV=20, CEps=9.1002, QPEps=2.0994)
+Iter 43: .*(NumConst=43, SV=20, CEps=5.5545, QPEps=2.7225)
+Iter 44: .*(NumConst=44, SV=19, CEps=5.4306, QPEps=2.6794)
+Iter 45: .*(NumConst=45, SV=18, CEps=5.7637, QPEps=2.0822)
+Iter 46: .*(NumConst=46, SV=19, CEps=4.4394, QPEps=1.1796)
+Iter 47: .*(NumConst=47, SV=19, CEps=4.6043, QPEps=1.4199)
+Iter 48: .*(NumConst=48, SV=22, CEps=4.8033, QPEps=2.1530)
+Iter 49: .*(NumConst=49, SV=21, CEps=4.4596, QPEps=2.2120)
+Iter 50: .*(NumConst=50, SV=22, CEps=4.3379, QPEps=1.7163)
+Iter 51: .*(NumConst=51, SV=21, CEps=5.2900, QPEps=1.6274)
+Iter 52: .*(NumConst=51, SV=21, CEps=4.3631, QPEps=1.6438)
+Iter 53: .*(NumConst=52, SV=22, CEps=4.8695, QPEps=1.4243)
+Iter 54: .*(NumConst=52, SV=26, CEps=3.7095, QPEps=1.8341)
+Iter 55: .*(NumConst=53, SV=27, CEps=5.0796, QPEps=1.8482)
+Iter 56: .*(NumConst=53, SV=25, CEps=5.0907, QPEps=1.6790)
+Iter 57: .*(NumConst=54, SV=24, CEps=4.2730, QPEps=1.6357)
+Iter 58: .*(NumConst=55, SV=24, CEps=3.6510, QPEps=1.1681)
+Iter 59: .*(NumConst=55, SV=23, CEps=3.9855, QPEps=1.6476)
+Iter 60: .*(NumConst=56, SV=26, CEps=3.0554, QPEps=1.4352)
+Iter 61: .*(NumConst=57, SV=26, CEps=4.7997, QPEps=1.4670)
+Iter 62: .*(NumConst=58, SV=26, CEps=3.2694, QPEps=1.2718)
+Iter 63: .*(NumConst=59, SV=22, CEps=3.2419, QPEps=1.0384)
+Iter 64: .*(NumConst=60, SV=23, CEps=3.8398, QPEps=1.4786)
+Iter 65: .*(NumConst=60, SV=27, CEps=2.8244, QPEps=1.2445)
+Iter 66: .*(NumConst=60, SV=25, CEps=3.3492, QPEps=1.2939)
+Iter 67: .*(NumConst=60, SV=25, CEps=2.4367, QPEps=1.1889)
+Iter 68: .*(NumConst=61, SV=26, CEps=2.7150, QPEps=0.8675)
+Iter 69: .*(NumConst=61, SV=26, CEps=2.8103, QPEps=1.0927)
+Iter 70: .*(NumConst=62, SV=27, CEps=3.2412, QPEps=1.1229)
+Iter 71: .*(NumConst=63, SV=29, CEps=2.4161, QPEps=1.1916)
+Iter 72: .*(NumConst=64, SV=27, CEps=2.5829, QPEps=0.8960)
+Iter 73: .*(NumConst=65, SV=26, CEps=2.9018, QPEps=1.0310)
+Iter 74: .*(NumConst=66, SV=29, CEps=2.0518, QPEps=0.9935)
+Iter 75: .*(NumConst=64, SV=27, CEps=2.3001, QPEps=0.8030)
+Iter 76: .*(NumConst=65, SV=27, CEps=1.7808, QPEps=0.8731)
+Iter 77: .*(NumConst=66, SV=27, CEps=2.1153, QPEps=0.8613)
+Iter 78: .*(NumConst=66, SV=30, CEps=1.6056, QPEps=0.7213)
+Iter 79: .*(NumConst=66, SV=30, CEps=2.2373, QPEps=0.7942)
+Iter 80: .*(NumConst=65, SV=30, CEps=1.9796, QPEps=0.7581)
+Iter 81: .*(NumConst=64, SV=33, CEps=1.4626, QPEps=0.7295)
+Iter 82: .*(NumConst=65, SV=32, CEps=2.5378, QPEps=0.7245)
+Iter 83: .*(NumConst=66, SV=30, CEps=1.6858, QPEps=0.6665)
+Iter 84: .*(NumConst=67, SV=30, CEps=1.7648, QPEps=0.7150)
+Iter 85: .*(NumConst=66, SV=30, CEps=1.5845, QPEps=0.5278)
+Iter 86: .*(NumConst=67, SV=30, CEps=1.6442, QPEps=0.7142)
+Iter 87: .*(NumConst=68, SV=30, CEps=1.6387, QPEps=0.7133)
+Iter 88: .*(NumConst=69, SV=29, CEps=1.1361, QPEps=0.5280)
+Iter 89: .*(NumConst=70, SV=30, CEps=1.7493, QPEps=0.5511)
+Iter 90: .*(NumConst=70, SV=29, CEps=1.3095, QPEps=0.5566)
+Iter 91: .*(NumConst=69, SV=27, CEps=1.6467, QPEps=0.5463)
+Iter 92: .*(NumConst=70, SV=26, CEps=1.4724, QPEps=0.5616)
+Iter 93: .*(NumConst=71, SV=27, CEps=1.2971, QPEps=0.5676)
+Iter 94: .*(NumConst=71, SV=29, CEps=1.6773, QPEps=0.5606)
+Iter 95: .*(NumConst=72, SV=30, CEps=1.6206, QPEps=0.5535)
+Iter 96: .*(NumConst=73, SV=29, CEps=2.2354, QPEps=0.5539)
+Iter 97: .*(NumConst=74, SV=27, CEps=1.8334, QPEps=0.5659)
+Iter 98: .*(NumConst=75, SV=28, CEps=1.2181, QPEps=0.5408)
+Iter 99: .*(NumConst=75, SV=27, CEps=1.2360, QPEps=0.5476)
+Iter 100: .*(NumConst=76, SV=29, CEps=1.6340, QPEps=0.5444)
+Iter 101: .*(NumConst=77, SV=29, CEps=1.1574, QPEps=0.5305)
+Iter 102: .*(NumConst=78, SV=32, CEps=1.3230, QPEps=0.5679)
+Iter 103: .*(NumConst=78, SV=33, CEps=1.2566, QPEps=0.4892)
+Iter 104: .*(NumConst=79, SV=31, CEps=1.5995, QPEps=0.5422)
+Iter 105: .*(NumConst=79, SV=29, CEps=1.3339, QPEps=0.4238)
+Iter 106: .*(NumConst=78, SV=33, CEps=1.2898, QPEps=0.4747)
+Iter 107: .*(NumConst=77, SV=32, CEps=1.0888, QPEps=0.5429)
+Iter 108: .*(NumConst=78, SV=38, CEps=1.1032, QPEps=0.5345)
+Iter 109: .*(NumConst=79, SV=33, CEps=3.7549, QPEps=0.4978)
+Iter 110: .*(NumConst=80, SV=33, CEps=3.1193, QPEps=0.5376)
+Iter 111: .*(NumConst=79, SV=30, CEps=2.5292, QPEps=0.4977)
+Iter 112: .*(NumConst=79, SV=30, CEps=3.0624, QPEps=0.5154)
+Iter 113: .*(NumConst=80, SV=32, CEps=3.1893, QPEps=0.5242)
+Iter 114: .*(NumConst=81, SV=29, CEps=3.4484, QPEps=0.5350)
+Iter 115: .*(NumConst=80, SV=27, CEps=2.9997, QPEps=0.5392)
+Iter 116: .*(NumConst=80, SV=27, CEps=2.8102, QPEps=0.5185)
+Iter 117: .*(NumConst=79, SV=31, CEps=1.9806, QPEps=0.5255)
+Iter 118: .*(NumConst=79, SV=30, CEps=2.4400, QPEps=0.5016)
+Iter 119: .*(NumConst=80, SV=29, CEps=2.8779, QPEps=0.4908)
+Iter 120: .*(NumConst=81, SV=27, CEps=2.4478, QPEps=0.5179)
+Iter 121: .*(NumConst=81, SV=33, CEps=2.0538, QPEps=0.4782)
+Iter 122: .*(NumConst=82, SV=34, CEps=3.3296, QPEps=0.5176)
+Iter 123: .*(NumConst=82, SV=31, CEps=1.7473, QPEps=0.5434)
+Iter 124: .*(NumConst=83, SV=30, CEps=1.5890, QPEps=0.4932)
+Iter 125: .*(NumConst=84, SV=31, CEps=1.9405, QPEps=0.5306)
+Iter 126: .*(NumConst=85, SV=33, CEps=1.4591, QPEps=0.5229)
+Iter 127: .*(NumConst=86, SV=33, CEps=2.0853, QPEps=0.3894)
+Iter 128: .*(NumConst=87, SV=35, CEps=1.4764, QPEps=0.5087)
+Iter 129: .*(NumConst=88, SV=37, CEps=1.3619, QPEps=0.5318)
+Iter 130: .*(NumConst=88, SV=37, CEps=1.6798, QPEps=0.4968)
+Iter 131: .*(NumConst=89, SV=37, CEps=1.3449, QPEps=0.4924)
+Iter 132: .*(NumConst=88, SV=34, CEps=1.1243, QPEps=0.4756)
+Iter 133: .*(NumConst=88, SV=34, CEps=1.2998, QPEps=0.5080)
+Iter 134: .*(NumConst=88, SV=37, CEps=1.7754, QPEps=0.4018)
+Iter 135: .*(NumConst=87, SV=35, CEps=1.5083, QPEps=0.5348)
+Iter 136: .*(NumConst=86, SV=40, CEps=1.2071, QPEps=0.5345)
+Iter 137: .*(NumConst=86, SV=34, CEps=1.1197, QPEps=0.5381)
+Iter 138: .*(NumConst=87, SV=37, CEps=1.3135, QPEps=0.5426)
+Iter 139: .*(NumConst=87, SV=36, CEps=1.3534, QPEps=0.4650)
+Iter 140: .*(NumConst=86, SV=41, CEps=1.0028, QPEps=0.4979)
+Iter 141: .*(NumConst=87, SV=37, CEps=2.3482, QPEps=0.4611)
+Iter 142: .*(NumConst=87, SV=35, CEps=2.2169, QPEps=0.4416)
+Iter 143: .*(NumConst=88, SV=33, CEps=2.0592, QPEps=0.4287)
+Iter 144: .*(NumConst=89, SV=32, CEps=2.3665, QPEps=0.3609)
+Iter 145: .*(NumConst=89, SV=31, CEps=1.8309, QPEps=0.5012)
+Iter 146: .*(NumConst=90, SV=35, CEps=2.0535, QPEps=0.4677)
+Iter 147: .*(NumConst=91, SV=36, CEps=1.5976, QPEps=0.4775)
+Iter 148: .*(NumConst=92, SV=36, CEps=1.9187, QPEps=0.5005)
+Iter 149: .*(NumConst=93, SV=33, CEps=1.7011, QPEps=0.4874)
+Iter 150: .*(NumConst=94, SV=35, CEps=1.5215, QPEps=0.4985)
+Iter 151: .*(NumConst=95, SV=35, CEps=1.6482, QPEps=0.5011)
+Iter 152: .*(NumConst=95, SV=34, CEps=1.8027, QPEps=0.4583)
+Iter 153: .*(NumConst=96, SV=35, CEps=1.7291, QPEps=0.5014)
+Iter 154: .*(NumConst=97, SV=33, CEps=1.3741, QPEps=0.4538)
+Iter 155: .*(NumConst=98, SV=41, CEps=1.2394, QPEps=0.4985)
+Iter 156: .*(NumConst=96, SV=36, CEps=2.4776, QPEps=0.4456)
+Iter 157: .*(NumConst=96, SV=35, CEps=1.7710, QPEps=0.4669)
+Iter 158: .*(NumConst=95, SV=32, CEps=1.8512, QPEps=0.4207)
+Iter 159: .*(NumConst=96, SV=34, CEps=1.5326, QPEps=0.4555)
+Iter 160: .*(NumConst=96, SV=34, CEps=1.2954, QPEps=0.4513)
+Iter 161: .*(NumConst=96, SV=34, CEps=1.3718, QPEps=0.4953)
+Iter 162: .*(NumConst=97, SV=33, CEps=1.3851, QPEps=0.4758)
+Iter 163: .*(NumConst=97, SV=35, CEps=1.3531, QPEps=0.3905)
+Iter 164: .*(NumConst=96, SV=34, CEps=1.6098, QPEps=0.4994)
+Iter 165: .*(NumConst=97, SV=35, CEps=1.1086, QPEps=0.4717)
+Iter 166: .*(NumConst=97, SV=37, CEps=1.1891, QPEps=0.4408)
+Iter 167: .*(NumConst=98, SV=38, CEps=1.3336, QPEps=0.4373)
+Iter 168: .*(NumConst=96, SV=37, CEps=1.0864, QPEps=0.4922)
+Iter 169: .*(NumConst=96, SV=39, CEps=0.9783, QPEps=0.4598)
+Iter 170: .*(NumConst=97, SV=40, CEps=0.8479, QPEps=0.3906)
+Iter 171: .*(NumConst=97, SV=37, CEps=7.5009, QPEps=0.4231)
+Iter 172: .*(NumConst=95, SV=39, CEps=5.0309, QPEps=0.4036)
+Iter 173: .*(NumConst=96, SV=39, CEps=3.4221, QPEps=0.3843)
+Iter 174: .*(NumConst=97, SV=37, CEps=2.1384, QPEps=0.4180)
+Iter 175: .*(NumConst=98, SV=43, CEps=1.5959, QPEps=0.4178)
+Iter 176: .*(NumConst=99, SV=40, CEps=0.9135, QPEps=0.3611)
+Iter 177: .*(NumConst=100, SV=41, CEps=0.8004, QPEps=0.3846)
+Iter 178: .*(NumConst=101, SV=39, CEps=0.7680, QPEps=0.3781)
+Iter 179: .*(NumConst=102, SV=40, CEps=0.6123, QPEps=0.3047)
+Iter 180: .*(NumConst=103, SV=38, CEps=0.6145, QPEps=0.2521)
+Iter 181: .*(NumConst=104, SV=41, CEps=0.7408, QPEps=0.2531)
+Iter 182: .*(NumConst=104, SV=39, CEps=0.5380, QPEps=0.2584)
+Iter 183: .*(NumConst=105, SV=39, CEps=0.4344, QPEps=0.2131)
+Iter 184: .*(NumConst=106, SV=51, CEps=0.3118, QPEps=0.1459)
+Iter 185: .*(NumConst=107, SV=47, CEps=0.2979, QPEps=0.1380)
+Iter 186: .*(NumConst=108, SV=51, CEps=0.2478, QPEps=0.1234)
+Iter 187: .*(NumConst=109, SV=48, CEps=0.2700, QPEps=0.1191)
+Iter 188: .*(NumConst=110, SV=50, CEps=0.1834, QPEps=0.0897)
+Iter 189: .*(NumConst=110, SV=46, CEps=0.2227, QPEps=0.0855)
+Iter 190: .*(NumConst=110, SV=49, CEps=0.2303, QPEps=0.0876)
+Iter 191: .*(NumConst=111, SV=44, CEps=0.3129, QPEps=0.0913)
+Iter 192: .*(NumConst=111, SV=50, CEps=0.2265, QPEps=0.0903)
+Iter 193: .*(NumConst=112, SV=51, CEps=0.2312, QPEps=0.0852)
+Iter 194: .*(NumConst=111, SV=48, CEps=0.1569, QPEps=0.0742)
+Iter 195: .*(NumConst=112, SV=55, CEps=0.1739, QPEps=0.0750)
+Iter 196: .*(NumConst=112, SV=50, CEps=0.1572, QPEps=0.0696)
+Iter 197: .*(NumConst=113, SV=47, CEps=0.1537, QPEps=0.0759)
+Iter 198: .*(NumConst=114, SV=45, CEps=0.1433, QPEps=0.0571)
+Iter 199: .*(NumConst=115, SV=46, CEps=0.1187, QPEps=0.0587)
+Iter 200: .(NumConst=115, SV=46, CEps=0.0917, QPEps=0.0587)
+Final epsilon on KKT-Conditions: 0.09166
+Upper bound on duality gap: 119.13898
+Dual objective value: dval=97856.33629
+Primal objective value: pval=97975.47526
+Total number of constraints in final working set: 115 (of 199)
+Number of iterations: 200
+Number of calls to 'find_most_violated_constraint': 200
+Number of SV: 46 
+Norm of weight vector: |w|=57.80468
+Value of slack variable (on working set): xi=96.21608
+Value of slack variable (global): xi=96.30478
+Norm of longest difference vector: ||Psi(x,y)-Psi(x,ybar)||=54.42358
+Runtime in cpu-seconds: 189.17
+Compacting linear model...done
+Writing learned model...done
+Reading model...done.
+Reading test examples...done.
+Classifying test examples...done
+Runtime (without IO) in cpu-seconds: 0.01
+Average loss on test set: 0.9901
+Zero/one-error on test set: 100.00% (0 correct, 1 incorrect, 1 total)
+NOTE: The loss reported above is the percentage of errors. The zero/one-error
+      is the multivariate zero/one-error regarding the whole prediction vector!
+Accuracy : 99.01
+Precision: 70.10
+Recall   : 12.08
+F1       : 20.61
+PRBEP    : 13.50
+ROCArea  : 87.48
+AvgPrec  : 14.91
+GoldPreds: 27
+GenSubgoal: 0
+GenSubgoal: 1
+GenSubgoal: 2
+GenSubgoal: 3
+GenSubgoal: 4
+GenSubgoal: 5
+GenSubgoal: 6
+GenSubgoal: 7
+GenSubgoal: 8
+GenSubgoal: 9
+GenSubgoal: 10
+GenSubgoal: 11
+GenSubgoal: 12
+GenSubgoal: 13
+GenSubgoal: 14
+GenSubgoal: 15
+GenSubgoal: 16
+GenSubgoal: 17
+GenSubgoal: 18
+GenSubgoal: 19
+GenSubgoal: 20
+GenSubgoal: 21
+GenSubgoal: 22
+GenSubgoal: 23
+GenSubgoal: 24
+GenSubgoal: 25
+GenSubgoal: 26
+Running: ../../bin/svm_perf_learn -c 1000 -w 3 -l 1 -b 0 train.svm model.svm
+RetVal is: 0
+Running: ../../bin/svm_perf_classify train.svm model.svm pred.svm
+Rank: 0 Ties: 0 Num: 93 Id: ironore.42.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: ironore.42.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: ironore.42.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: ironore.42.pddl3 Score: -0.34605128 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 0 Ties: 0 Num: 93 Id: shears.35.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: shears.35.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: shears.35.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: shears.35.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: shears.35.pddl4 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: shears.35.pddl5 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: shears.35.pddl6 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: shears.35.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: shears.35.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: shears.35.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: shears.35.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: shears.35.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 28 Ties: 0 Num: 93 Id: shears.35.pddl12 Score: -0.37591284 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: shears.35.pddl13 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: shears.35.pddl14 Score: 0.36497998 Pred: (> (furnace-fuel) 1)
+Rank: 10 Ties: 0 Num: 93 Id: shears.35.pddl15 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 39 Ties: 5 Num: 93 Id: shears.35.pddl16 Score: -0.38034336 Pred: (> (thing-available iron) 0)
+Rank: 12 Ties: 0 Num: 93 Id: shears.35.pddl17 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 41 Ties: 5 Num: 93 Id: shears.35.pddl18 Score: -0.38034336 Pred: (> (thing-available iron) 1)
+Rank: 0 Ties: 0 Num: 93 Id: clay.23.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: clay.23.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: clay.23.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 16 Ties: 0 Num: 93 Id: clay.23.pddl3 Score: -0.37075824 Pred: (> (thing-available wood-shovel) 0)
+Rank: 0 Ties: 0 Num: 93 Id: stone-pickaxe.44.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: stone-pickaxe.44.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: stone-pickaxe.44.pddl2 Score: -0.36545653 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: stone-pickaxe.44.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 9 Ties: 7 Num: 93 Id: stone-pickaxe.44.pddl4 Score: -0.35471875 Pred: (> (thing-available stone) 0)
+Rank: 9 Ties: 7 Num: 93 Id: stone-pickaxe.44.pddl5 Score: -0.35471875 Pred: (> (thing-available stone) 1)
+Rank: 9 Ties: 7 Num: 93 Id: stone-pickaxe.44.pddl6 Score: -0.35471875 Pred: (> (thing-available stone) 2)
+Rank: 0 Ties: 0 Num: 93 Id: milk.19.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: milk.19.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: milk.19.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: milk.19.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: milk.19.pddl4 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: milk.19.pddl5 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: milk.19.pddl6 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: milk.19.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: milk.19.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: milk.19.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: milk.19.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: milk.19.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 28 Ties: 0 Num: 93 Id: milk.19.pddl12 Score: -0.37591284 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: milk.19.pddl13 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: milk.19.pddl14 Score: 0.36497998 Pred: (> (furnace-fuel) 1)
+Rank: 10 Ties: 0 Num: 93 Id: milk.19.pddl15 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 38 Ties: 5 Num: 93 Id: milk.19.pddl16 Score: -0.37596026 Pred: (> (thing-available iron) 0)
+Rank: 12 Ties: 0 Num: 93 Id: milk.19.pddl17 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 40 Ties: 5 Num: 93 Id: milk.19.pddl18 Score: -0.37596026 Pred: (> (thing-available iron) 1)
+Rank: 12 Ties: 0 Num: 93 Id: milk.19.pddl19 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 40 Ties: 5 Num: 93 Id: milk.19.pddl20 Score: -0.37596026 Pred: (> (thing-available iron) 2)
+Rank: 11 Ties: 0 Num: 93 Id: milk.19.pddl21 Score: -0.35513056 Pred: (> (thing-available bucket) 0)
+Rank: 0 Ties: 0 Num: 93 Id: fence.13.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: fence.13.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: fence.13.pddl2 Score: -0.36545653 Pred: (> (thing-available stick) 3)
+Rank: 8 Ties: 5 Num: 93 Id: fence.13.pddl3 Score: -0.36545653 Pred: (> (thing-available stick) 5)
+Rank: 0 Ties: 0 Num: 93 Id: brick.34.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: brick.34.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: brick.34.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 14 Ties: 0 Num: 93 Id: brick.34.pddl3 Score: -0.36637514 Pred: (> (thing-available wood-shovel) 0)
+Rank: 19 Ties: 3 Num: 93 Id: brick.34.pddl4 Score: -0.37717797 Pred: (> (thing-available clay) 0)
+Rank: 20 Ties: 0 Num: 93 Id: brick.34.pddl5 Score: -0.36949687 Pred: (> (thing-available wood) 0)
+Rank: 3 Ties: 5 Num: 93 Id: brick.34.pddl6 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 1 Ties: 0 Num: 93 Id: brick.34.pddl7 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 3 Ties: 7 Num: 93 Id: brick.34.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 3 Ties: 7 Num: 93 Id: brick.34.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 3 Ties: 7 Num: 93 Id: brick.34.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 3 Ties: 7 Num: 93 Id: brick.34.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 3 Ties: 7 Num: 93 Id: brick.34.pddl12 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 3 Ties: 7 Num: 93 Id: brick.34.pddl13 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 3 Ties: 7 Num: 93 Id: brick.34.pddl14 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 3 Ties: 7 Num: 93 Id: brick.34.pddl15 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 33 Ties: 0 Num: 93 Id: brick.34.pddl16 Score: -0.37591284 Pred: (> (thing-available furnace) 0)
+Rank: 19 Ties: 0 Num: 93 Id: brick.34.pddl17 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: brick.34.pddl18 Score: 0.36497998 Pred: (> (furnace-fuel) 1)
+Rank: 19 Ties: 3 Num: 93 Id: brick.34.pddl19 Score: -0.36368207 Pred: (> (thing-available claybrick) 0)
+Rank: 46 Ties: 3 Num: 93 Id: brick.34.pddl20 Score: -0.38030698 Pred: (> (thing-available clay) 0)
+Rank: 19 Ties: 3 Num: 93 Id: brick.34.pddl21 Score: -0.36368207 Pred: (> (thing-available claybrick) 1)
+Rank: 46 Ties: 3 Num: 93 Id: brick.34.pddl22 Score: -0.38030698 Pred: (> (thing-available clay) 0)
+Rank: 19 Ties: 3 Num: 93 Id: brick.34.pddl23 Score: -0.36368207 Pred: (> (thing-available claybrick) 2)
+Rank: 46 Ties: 3 Num: 93 Id: brick.34.pddl24 Score: -0.38030698 Pred: (> (thing-available clay) 0)
+Rank: 19 Ties: 3 Num: 93 Id: brick.34.pddl25 Score: -0.36368207 Pred: (> (thing-available claybrick) 3)
+Rank: 0 Ties: 0 Num: 93 Id: wood-door.45.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: wood-door.45.pddl1 Score: -0.35818539 Pred: (> (thing-available plank) 3)
+Rank: 15 Ties: 0 Num: 93 Id: wood-door.45.pddl2 Score: -0.36949687 Pred: (> (thing-available wood) 0)
+Rank: 2 Ties: 5 Num: 93 Id: wood-door.45.pddl3 Score: -0.35818539 Pred: (> (thing-available plank) 7)
+Rank: 0 Ties: 0 Num: 93 Id: clayblock.5.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: clayblock.5.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: clayblock.5.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 14 Ties: 0 Num: 93 Id: clayblock.5.pddl3 Score: -0.36637514 Pred: (> (thing-available wood-shovel) 0)
+Rank: 19 Ties: 3 Num: 93 Id: clayblock.5.pddl4 Score: -0.38156108 Pred: (> (thing-available clay) 0)
+Rank: 23 Ties: 3 Num: 93 Id: clayblock.5.pddl5 Score: -0.38156108 Pred: (> (thing-available clay) 1)
+Rank: 23 Ties: 3 Num: 93 Id: clayblock.5.pddl6 Score: -0.38156108 Pred: (> (thing-available clay) 2)
+Rank: 23 Ties: 3 Num: 93 Id: clayblock.5.pddl7 Score: -0.38156108 Pred: (> (thing-available clay) 3)
+Rank: 0 Ties: 0 Num: 93 Id: cookedfish.4.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: cookedfish.4.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: cookedfish.4.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 2)
+Rank: 15 Ties: 0 Num: 93 Id: cookedfish.4.pddl3 Score: -0.36949687 Pred: (> (thing-available wood) 0)
+Rank: 2 Ties: 5 Num: 93 Id: cookedfish.4.pddl4 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: cookedfish.4.pddl5 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: cookedfish.4.pddl6 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: cookedfish.4.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: cookedfish.4.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: cookedfish.4.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: cookedfish.4.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: cookedfish.4.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: cookedfish.4.pddl12 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: cookedfish.4.pddl13 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: cookedfish.4.pddl14 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 28 Ties: 0 Num: 93 Id: cookedfish.4.pddl15 Score: -0.38029594 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: cookedfish.4.pddl16 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: cookedfish.4.pddl17 Score: 0.36059688 Pred: (> (furnace-fuel) 1)
+Rank: 10 Ties: 0 Num: 93 Id: cookedfish.4.pddl18 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 38 Ties: 5 Num: 93 Id: cookedfish.4.pddl19 Score: -0.37596026 Pred: (> (thing-available iron) 0)
+Rank: 12 Ties: 0 Num: 93 Id: cookedfish.4.pddl20 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 40 Ties: 5 Num: 93 Id: cookedfish.4.pddl21 Score: -0.37596026 Pred: (> (thing-available iron) 1)
+Rank: 3 Ties: 0 Num: 93 Id: cookedfish.4.pddl22 Score: -0.35327202 Pred: (> (thing-available shears) 0)
+Rank: 54 Ties: 1 Num: 93 Id: cookedfish.4.pddl23 Score: -0.46764078 Pred: (> (thing-available string) 1)
+Rank: 52 Ties: 0 Num: 93 Id: cookedfish.4.pddl24 Score: -0.38565811 Pred: (> (thing-available fishingrod) 0)
+Rank: 0 Ties: 0 Num: 93 Id: cookedfish.4.pddl25 Score: 0.78325408 Pred: (> (thing-available fish) 0)
+Rank: 0 Ties: 0 Num: 93 Id: stick.31.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: stick.31.pddl1 Score: -0.35818539 Pred: (> (thing-available plank) 0)
+Rank: 0 Ties: 0 Num: 93 Id: glasspane.15.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: glasspane.15.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: glasspane.15.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: glasspane.15.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: glasspane.15.pddl4 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: glasspane.15.pddl5 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: glasspane.15.pddl6 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: glasspane.15.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: glasspane.15.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: glasspane.15.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: glasspane.15.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: glasspane.15.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 28 Ties: 0 Num: 93 Id: glasspane.15.pddl12 Score: -0.37591284 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: glasspane.15.pddl13 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: glasspane.15.pddl14 Score: 0.36497998 Pred: (> (furnace-fuel) 1)
+Rank: 29 Ties: 0 Num: 93 Id: glasspane.15.pddl15 Score: -0.37262588 Pred: (> (thing-available wood) 0)
+Rank: 11 Ties: 5 Num: 93 Id: glasspane.15.pddl16 Score: -0.35693129 Pred: (> (thing-available plank) 0)
+Rank: 28 Ties: 0 Num: 93 Id: glasspane.15.pddl17 Score: -0.36950415 Pred: (> (thing-available wood-shovel) 0)
+Rank: 0 Ties: 0 Num: 93 Id: glasspane.15.pddl18 Score: -0.10809379 Pred: (> (thing-available sand) 0)
+Rank: 32 Ties: 5 Num: 93 Id: glasspane.15.pddl19 Score: -0.37338937 Pred: (> (thing-available glass) 0)
+Rank: 0 Ties: 0 Num: 93 Id: glasspane.15.pddl20 Score: -0.10809379 Pred: (> (thing-available sand) 0)
+Rank: 32 Ties: 5 Num: 93 Id: glasspane.15.pddl21 Score: -0.37338937 Pred: (> (thing-available glass) 1)
+Rank: 0 Ties: 0 Num: 93 Id: glasspane.15.pddl22 Score: -0.10809379 Pred: (> (thing-available sand) 0)
+Rank: 32 Ties: 5 Num: 93 Id: glasspane.15.pddl23 Score: -0.37338937 Pred: (> (thing-available glass) 2)
+Rank: 0 Ties: 0 Num: 93 Id: glasspane.15.pddl24 Score: -0.10809379 Pred: (> (thing-available sand) 0)
+Rank: 32 Ties: 5 Num: 93 Id: glasspane.15.pddl25 Score: -0.37338937 Pred: (> (thing-available glass) 3)
+Rank: 0 Ties: 0 Num: 93 Id: glasspane.15.pddl26 Score: -0.10809379 Pred: (> (thing-available sand) 0)
+Rank: 32 Ties: 5 Num: 93 Id: glasspane.15.pddl27 Score: -0.37338937 Pred: (> (thing-available glass) 4)
+Rank: 0 Ties: 0 Num: 93 Id: glasspane.15.pddl28 Score: -0.10809379 Pred: (> (thing-available sand) 0)
+Rank: 32 Ties: 5 Num: 93 Id: glasspane.15.pddl29 Score: -0.37338937 Pred: (> (thing-available glass) 5)
+Rank: 0 Ties: 0 Num: 93 Id: string.38.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: string.38.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: string.38.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: string.38.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: string.38.pddl4 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: string.38.pddl5 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: string.38.pddl6 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: string.38.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: string.38.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: string.38.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: string.38.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: string.38.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 28 Ties: 0 Num: 93 Id: string.38.pddl12 Score: -0.37591284 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: string.38.pddl13 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: string.38.pddl14 Score: 0.36497998 Pred: (> (furnace-fuel) 1)
+Rank: 10 Ties: 0 Num: 93 Id: string.38.pddl15 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 38 Ties: 5 Num: 93 Id: string.38.pddl16 Score: -0.37596026 Pred: (> (thing-available iron) 0)
+Rank: 11 Ties: 0 Num: 93 Id: string.38.pddl17 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 40 Ties: 5 Num: 93 Id: string.38.pddl18 Score: -0.37596026 Pred: (> (thing-available iron) 1)
+Rank: 18 Ties: 0 Num: 93 Id: string.38.pddl19 Score: -0.35765512 Pred: (> (thing-available shears) 0)
+Rank: 0 Ties: 0 Num: 93 Id: fishingrod.28.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: fishingrod.28.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: fishingrod.28.pddl2 Score: -0.36545653 Pred: (> (thing-available stick) 2)
+Rank: 15 Ties: 0 Num: 93 Id: fishingrod.28.pddl3 Score: -0.36949687 Pred: (> (thing-available wood) 0)
+Rank: 2 Ties: 5 Num: 93 Id: fishingrod.28.pddl4 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: fishingrod.28.pddl5 Score: -0.36545653 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: fishingrod.28.pddl6 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: fishingrod.28.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: fishingrod.28.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: fishingrod.28.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: fishingrod.28.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: fishingrod.28.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: fishingrod.28.pddl12 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: fishingrod.28.pddl13 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: fishingrod.28.pddl14 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 28 Ties: 0 Num: 93 Id: fishingrod.28.pddl15 Score: -0.37591284 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: fishingrod.28.pddl16 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: fishingrod.28.pddl17 Score: 0.36497998 Pred: (> (furnace-fuel) 1)
+Rank: 10 Ties: 0 Num: 93 Id: fishingrod.28.pddl18 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 38 Ties: 5 Num: 93 Id: fishingrod.28.pddl19 Score: -0.37596026 Pred: (> (thing-available iron) 0)
+Rank: 12 Ties: 0 Num: 93 Id: fishingrod.28.pddl20 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 40 Ties: 5 Num: 93 Id: fishingrod.28.pddl21 Score: -0.37596026 Pred: (> (thing-available iron) 1)
+Rank: 3 Ties: 0 Num: 93 Id: fishingrod.28.pddl22 Score: -0.35327202 Pred: (> (thing-available shears) 0)
+Rank: 54 Ties: 1 Num: 93 Id: fishingrod.28.pddl23 Score: -0.47202389 Pred: (> (thing-available string) 1)
+Rank: 0 Ties: 0 Num: 93 Id: stone-axe.10.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: stone-axe.10.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: stone-axe.10.pddl2 Score: -0.36545653 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: stone-axe.10.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 9 Ties: 7 Num: 93 Id: stone-axe.10.pddl4 Score: -0.35471875 Pred: (> (thing-available stone) 0)
+Rank: 9 Ties: 7 Num: 93 Id: stone-axe.10.pddl5 Score: -0.35471875 Pred: (> (thing-available stone) 1)
+Rank: 9 Ties: 7 Num: 93 Id: stone-axe.10.pddl6 Score: -0.35471875 Pred: (> (thing-available stone) 2)
+Rank: 0 Ties: 0 Num: 93 Id: stone.2.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: stone.2.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: stone.2.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: stone.2.pddl3 Score: -0.34605128 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 0 Ties: 0 Num: 93 Id: iron.30.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: iron.30.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: iron.30.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: iron.30.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: iron.30.pddl4 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: iron.30.pddl5 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: iron.30.pddl6 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: iron.30.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: iron.30.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: iron.30.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: iron.30.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: iron.30.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 28 Ties: 0 Num: 93 Id: iron.30.pddl12 Score: -0.38029594 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: iron.30.pddl13 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: iron.30.pddl14 Score: 0.36059688 Pred: (> (furnace-fuel) 1)
+Rank: 20 Ties: 0 Num: 93 Id: iron.30.pddl15 Score: -0.35991038 Pred: (> (thing-available ironore) 0)
+Rank: 0 Ties: 0 Num: 93 Id: fish.18.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: fish.18.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: fish.18.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 2)
+Rank: 15 Ties: 0 Num: 93 Id: fish.18.pddl3 Score: -0.36949687 Pred: (> (thing-available wood) 0)
+Rank: 2 Ties: 5 Num: 93 Id: fish.18.pddl4 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: fish.18.pddl5 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: fish.18.pddl6 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: fish.18.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: fish.18.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: fish.18.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: fish.18.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: fish.18.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: fish.18.pddl12 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: fish.18.pddl13 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: fish.18.pddl14 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 28 Ties: 0 Num: 93 Id: fish.18.pddl15 Score: -0.37591284 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: fish.18.pddl16 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: fish.18.pddl17 Score: 0.36497998 Pred: (> (furnace-fuel) 1)
+Rank: 10 Ties: 0 Num: 93 Id: fish.18.pddl18 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 38 Ties: 5 Num: 93 Id: fish.18.pddl19 Score: -0.37596026 Pred: (> (thing-available iron) 0)
+Rank: 12 Ties: 0 Num: 93 Id: fish.18.pddl20 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 40 Ties: 5 Num: 93 Id: fish.18.pddl21 Score: -0.37596026 Pred: (> (thing-available iron) 1)
+Rank: 3 Ties: 0 Num: 93 Id: fish.18.pddl22 Score: -0.35327202 Pred: (> (thing-available shears) 0)
+Rank: 54 Ties: 1 Num: 93 Id: fish.18.pddl23 Score: -0.46764078 Pred: (> (thing-available string) 1)
+Rank: 53 Ties: 0 Num: 93 Id: fish.18.pddl24 Score: -0.39004121 Pred: (> (thing-available fishingrod) 0)
+Rank: 0 Ties: 0 Num: 93 Id: bucket.37.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: bucket.37.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: bucket.37.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: bucket.37.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: bucket.37.pddl4 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: bucket.37.pddl5 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: bucket.37.pddl6 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: bucket.37.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: bucket.37.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: bucket.37.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: bucket.37.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: bucket.37.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 28 Ties: 0 Num: 93 Id: bucket.37.pddl12 Score: -0.37591284 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: bucket.37.pddl13 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: bucket.37.pddl14 Score: 0.36497998 Pred: (> (furnace-fuel) 1)
+Rank: 10 Ties: 0 Num: 93 Id: bucket.37.pddl15 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 39 Ties: 5 Num: 93 Id: bucket.37.pddl16 Score: -0.38034336 Pred: (> (thing-available iron) 0)
+Rank: 12 Ties: 0 Num: 93 Id: bucket.37.pddl17 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 41 Ties: 5 Num: 93 Id: bucket.37.pddl18 Score: -0.38034336 Pred: (> (thing-available iron) 1)
+Rank: 12 Ties: 0 Num: 93 Id: bucket.37.pddl19 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 41 Ties: 5 Num: 93 Id: bucket.37.pddl20 Score: -0.38034336 Pred: (> (thing-available iron) 2)
+Rank: 8 Ties: 0 Num: 93 Id: wheat.46.pddl0 Score: -0.35665964 Pred: (> (thing-available bone) 0)
+Rank: 0 Ties: 0 Num: 93 Id: wheat.46.pddl1 Score: -0.36769902 Pred: (> (thing-available bonemeal) 0)
+Rank: 1 Ties: 0 Num: 93 Id: wheat.46.pddl2 Score: -0.36949687 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: wheat.46.pddl3 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: wheat.46.pddl4 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: wheat.46.pddl5 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: wheat.46.pddl6 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: wheat.46.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: wheat.46.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: wheat.46.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: wheat.46.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: wheat.46.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: wheat.46.pddl12 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: wheat.46.pddl13 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 29 Ties: 0 Num: 93 Id: wheat.46.pddl14 Score: -0.37591284 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: wheat.46.pddl15 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: wheat.46.pddl16 Score: 0.36497998 Pred: (> (furnace-fuel) 1)
+Rank: 10 Ties: 0 Num: 93 Id: wheat.46.pddl17 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 38 Ties: 5 Num: 93 Id: wheat.46.pddl18 Score: -0.37596026 Pred: (> (thing-available iron) 0)
+Rank: 11 Ties: 0 Num: 93 Id: wheat.46.pddl19 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 40 Ties: 5 Num: 93 Id: wheat.46.pddl20 Score: -0.37596026 Pred: (> (thing-available iron) 1)
+Rank: 18 Ties: 0 Num: 93 Id: wheat.46.pddl21 Score: -0.35765512 Pred: (> (thing-available shears) 0)
+Rank: 54 Ties: 0 Num: 93 Id: wheat.46.pddl22 Score: -0.39374832 Pred: (> (thing-available seeds) 0)
+Rank: 43 Ties: 0 Num: 93 Id: wheat.46.pddl23 Score: -0.37262588 Pred: (> (thing-available wood) 0)
+Rank: 17 Ties: 5 Num: 93 Id: wheat.46.pddl24 Score: -0.35693129 Pred: (> (thing-available plank) 1)
+Rank: 51 Ties: 0 Num: 93 Id: wheat.46.pddl25 Score: -0.37834794 Pred: (> (thing-available wood-hoe) 0)
+Rank: 0 Ties: 0 Num: 93 Id: paper.21.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: paper.21.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: paper.21.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 1 Ties: 0 Num: 93 Id: paper.21.pddl3 Score: -0.34983449 Pred: (> (thing-available wood-axe) 0)
+Rank: 0 Ties: 2 Num: 93 Id: paper.21.pddl4 Score: 2.61537885 Pred: (> (thing-available cut-sugarcane) 0)
+Rank: 0 Ties: 2 Num: 93 Id: paper.21.pddl5 Score: 2.61537885 Pred: (> (thing-available cut-sugarcane) 1)
+Rank: 0 Ties: 2 Num: 93 Id: paper.21.pddl6 Score: 2.61537885 Pred: (> (thing-available cut-sugarcane) 2)
+Rank: 0 Ties: 0 Num: 93 Id: bed.8.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: bed.8.pddl1 Score: -0.35818539 Pred: (> (thing-available plank) 2)
+Rank: 15 Ties: 0 Num: 93 Id: bed.8.pddl2 Score: -0.36949687 Pred: (> (thing-available wood) 0)
+Rank: 2 Ties: 5 Num: 93 Id: bed.8.pddl3 Score: -0.35818539 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: bed.8.pddl4 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: bed.8.pddl5 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: bed.8.pddl6 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: bed.8.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: bed.8.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: bed.8.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: bed.8.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: bed.8.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: bed.8.pddl12 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: bed.8.pddl13 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 28 Ties: 0 Num: 93 Id: bed.8.pddl14 Score: -0.37591284 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: bed.8.pddl15 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: bed.8.pddl16 Score: 0.36497998 Pred: (> (furnace-fuel) 1)
+Rank: 10 Ties: 0 Num: 93 Id: bed.8.pddl17 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 38 Ties: 5 Num: 93 Id: bed.8.pddl18 Score: -0.37596026 Pred: (> (thing-available iron) 0)
+Rank: 12 Ties: 0 Num: 93 Id: bed.8.pddl19 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 40 Ties: 5 Num: 93 Id: bed.8.pddl20 Score: -0.37596026 Pred: (> (thing-available iron) 1)
+Rank: 3 Ties: 0 Num: 93 Id: bed.8.pddl21 Score: -0.35327202 Pred: (> (thing-available shears) 0)
+Rank: 0 Ties: 1 Num: 93 Id: bed.8.pddl22 Score: -0.29726751 Pred: (> (thing-available wool) 2)
+Rank: 0 Ties: 0 Num: 93 Id: coal.14.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: coal.14.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: coal.14.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: coal.14.pddl3 Score: -0.34605128 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 0 Ties: 0 Num: 93 Id: sand.3.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: sand.3.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: sand.3.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 16 Ties: 0 Num: 93 Id: sand.3.pddl3 Score: -0.37075824 Pred: (> (thing-available wood-shovel) 0)
+Rank: 0 Ties: 0 Num: 93 Id: stone-stairs.50.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: stone-stairs.50.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: stone-stairs.50.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: stone-stairs.50.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 9 Ties: 7 Num: 93 Id: stone-stairs.50.pddl4 Score: -0.35471875 Pred: (> (thing-available stone) 0)
+Rank: 9 Ties: 7 Num: 93 Id: stone-stairs.50.pddl5 Score: -0.35471875 Pred: (> (thing-available stone) 1)
+Rank: 9 Ties: 7 Num: 93 Id: stone-stairs.50.pddl6 Score: -0.35471875 Pred: (> (thing-available stone) 2)
+Rank: 9 Ties: 7 Num: 93 Id: stone-stairs.50.pddl7 Score: -0.35471875 Pred: (> (thing-available stone) 3)
+Rank: 9 Ties: 7 Num: 93 Id: stone-stairs.50.pddl8 Score: -0.35471875 Pred: (> (thing-available stone) 4)
+Rank: 9 Ties: 7 Num: 93 Id: stone-stairs.50.pddl9 Score: -0.35471875 Pred: (> (thing-available stone) 5)
+Rank: 0 Ties: 0 Num: 93 Id: wood-hoe.1.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: wood-hoe.1.pddl1 Score: -0.35818539 Pred: (> (thing-available plank) 1)
+Rank: 8 Ties: 5 Num: 93 Id: wood-hoe.1.pddl2 Score: -0.36545653 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: mushroomstew.52.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: mushroomstew.52.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 17 Ties: 0 Num: 93 Id: mushroomstew.52.pddl2 Score: -0.37453143 Pred: (> (thing-available bowl) 0)
+Rank: 26 Ties: 1 Num: 93 Id: mushroomstew.52.pddl3 Score: -14.24312956 Pred: (> (thing-available brown-mushroom) 0)
+Rank: 26 Ties: 1 Num: 93 Id: mushroomstew.52.pddl4 Score: -14.24312956 Pred: (> (thing-available red-mushroom) 0)
+Rank: 0 Ties: 0 Num: 93 Id: sugar.16.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: sugar.16.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: sugar.16.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 1 Ties: 0 Num: 93 Id: sugar.16.pddl3 Score: -0.34983449 Pred: (> (thing-available wood-axe) 0)
+Rank: 0 Ties: 2 Num: 93 Id: sugar.16.pddl4 Score: 2.61537885 Pred: (> (thing-available cut-sugarcane) 0)
+Rank: 9 Ties: 0 Num: 93 Id: bread.33.pddl0 Score: -0.35665964 Pred: (> (thing-available bone) 0)
+Rank: 0 Ties: 0 Num: 93 Id: bread.33.pddl1 Score: -0.36769902 Pred: (> (thing-available bonemeal) 0)
+Rank: 1 Ties: 0 Num: 93 Id: bread.33.pddl2 Score: -0.36949687 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: bread.33.pddl3 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: bread.33.pddl4 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: bread.33.pddl5 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: bread.33.pddl6 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: bread.33.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: bread.33.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: bread.33.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: bread.33.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: bread.33.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: bread.33.pddl12 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: bread.33.pddl13 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 29 Ties: 0 Num: 93 Id: bread.33.pddl14 Score: -0.37591284 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: bread.33.pddl15 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: bread.33.pddl16 Score: 0.36497998 Pred: (> (furnace-fuel) 1)
+Rank: 10 Ties: 0 Num: 93 Id: bread.33.pddl17 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 39 Ties: 5 Num: 93 Id: bread.33.pddl18 Score: -0.37596026 Pred: (> (thing-available iron) 0)
+Rank: 12 Ties: 0 Num: 93 Id: bread.33.pddl19 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 41 Ties: 5 Num: 93 Id: bread.33.pddl20 Score: -0.37596026 Pred: (> (thing-available iron) 1)
+Rank: 3 Ties: 0 Num: 93 Id: bread.33.pddl21 Score: -0.35327202 Pred: (> (thing-available shears) 0)
+Rank: 54 Ties: 0 Num: 93 Id: bread.33.pddl22 Score: -0.38936522 Pred: (> (thing-available seeds) 0)
+Rank: 43 Ties: 0 Num: 93 Id: bread.33.pddl23 Score: -0.37262588 Pred: (> (thing-available wood) 0)
+Rank: 18 Ties: 5 Num: 93 Id: bread.33.pddl24 Score: -0.35693129 Pred: (> (thing-available plank) 1)
+Rank: 45 Ties: 0 Num: 93 Id: bread.33.pddl25 Score: -0.37396484 Pred: (> (thing-available wood-hoe) 0)
+Rank: 3 Ties: 2 Num: 93 Id: bread.33.pddl26 Score: -0.34655971 Pred: (> (thing-available wheat) 0)
+Rank: 3 Ties: 2 Num: 93 Id: bread.33.pddl27 Score: -0.34655971 Pred: (> (thing-available wheat) 1)
+Rank: 77 Ties: 0 Num: 93 Id: bread.33.pddl28 Score: -14.2010343 Pred: (> (thing-available bone) 0)
+Rank: 42 Ties: 0 Num: 93 Id: bread.33.pddl29 Score: -0.37082803 Pred: (> (thing-available bonemeal) 0)
+Rank: 54 Ties: 0 Num: 93 Id: bread.33.pddl30 Score: -0.38936522 Pred: (> (thing-available seeds) 0)
+Rank: 3 Ties: 2 Num: 93 Id: bread.33.pddl31 Score: -0.34655971 Pred: (> (thing-available wheat) 2)
+Rank: 0 Ties: 0 Num: 93 Id: wood-pickaxe.48.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: wood-pickaxe.48.pddl1 Score: -0.35818539 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: wood-pickaxe.48.pddl2 Score: -0.36545653 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: torch.24.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: torch.24.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: torch.24.pddl2 Score: -0.36545653 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: torch.24.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 17 Ties: 0 Num: 93 Id: torch.24.pddl4 Score: -0.36420874 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: stone-shovel.49.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: stone-shovel.49.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: stone-shovel.49.pddl2 Score: -0.36545653 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: stone-shovel.49.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 9 Ties: 7 Num: 93 Id: stone-shovel.49.pddl4 Score: -0.35471875 Pred: (> (thing-available stone) 0)
+Rank: 0 Ties: 0 Num: 93 Id: sandstone.22.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: sandstone.22.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: sandstone.22.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: sandstone.22.pddl3 Score: -0.34605128 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 0 Ties: 0 Num: 93 Id: claybrick.9.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: claybrick.9.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: claybrick.9.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 14 Ties: 0 Num: 93 Id: claybrick.9.pddl3 Score: -0.36637514 Pred: (> (thing-available wood-shovel) 0)
+Rank: 19 Ties: 3 Num: 93 Id: claybrick.9.pddl4 Score: -0.38156108 Pred: (> (thing-available clay) 0)
+Rank: 20 Ties: 0 Num: 93 Id: claybrick.9.pddl5 Score: -0.36949687 Pred: (> (thing-available wood) 0)
+Rank: 3 Ties: 5 Num: 93 Id: claybrick.9.pddl6 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 1 Ties: 0 Num: 93 Id: claybrick.9.pddl7 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 3 Ties: 7 Num: 93 Id: claybrick.9.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 3 Ties: 7 Num: 93 Id: claybrick.9.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 3 Ties: 7 Num: 93 Id: claybrick.9.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 3 Ties: 7 Num: 93 Id: claybrick.9.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 3 Ties: 7 Num: 93 Id: claybrick.9.pddl12 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 3 Ties: 7 Num: 93 Id: claybrick.9.pddl13 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 3 Ties: 7 Num: 93 Id: claybrick.9.pddl14 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 3 Ties: 7 Num: 93 Id: claybrick.9.pddl15 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 33 Ties: 0 Num: 93 Id: claybrick.9.pddl16 Score: -0.38029594 Pred: (> (thing-available furnace) 0)
+Rank: 23 Ties: 0 Num: 93 Id: claybrick.9.pddl17 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: claybrick.9.pddl18 Score: 0.36059688 Pred: (> (furnace-fuel) 1)
+Rank: 0 Ties: 0 Num: 93 Id: glass.27.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: glass.27.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: glass.27.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: glass.27.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: glass.27.pddl4 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: glass.27.pddl5 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: glass.27.pddl6 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: glass.27.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: glass.27.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: glass.27.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: glass.27.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: glass.27.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 28 Ties: 0 Num: 93 Id: glass.27.pddl12 Score: -0.38029594 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: glass.27.pddl13 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: glass.27.pddl14 Score: 0.36059688 Pred: (> (furnace-fuel) 1)
+Rank: 35 Ties: 0 Num: 93 Id: glass.27.pddl15 Score: -0.37262588 Pred: (> (thing-available wood) 0)
+Rank: 11 Ties: 5 Num: 93 Id: glass.27.pddl16 Score: -0.35693129 Pred: (> (thing-available plank) 0)
+Rank: 34 Ties: 0 Num: 93 Id: glass.27.pddl17 Score: -0.36950415 Pred: (> (thing-available wood-shovel) 0)
+Rank: 0 Ties: 0 Num: 93 Id: glass.27.pddl18 Score: -0.1124769 Pred: (> (thing-available sand) 0)
+Rank: 0 Ties: 0 Num: 93 Id: stone-hoe.41.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: stone-hoe.41.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: stone-hoe.41.pddl2 Score: -0.36545653 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: stone-hoe.41.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 9 Ties: 7 Num: 93 Id: stone-hoe.41.pddl4 Score: -0.35471875 Pred: (> (thing-available stone) 0)
+Rank: 9 Ties: 7 Num: 93 Id: stone-hoe.41.pddl5 Score: -0.35471875 Pred: (> (thing-available stone) 1)
+Rank: 0 Ties: 0 Num: 93 Id: plank.25.pddl0 Score: 52.97547477 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 0 Num: 93 Id: cutsugarcane.51.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: cutsugarcane.51.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: cutsugarcane.51.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 7 Ties: 0 Num: 93 Id: cutsugarcane.51.pddl3 Score: -0.3542176 Pred: (> (thing-available wood-axe) 0)
+Rank: 0 Ties: 0 Num: 93 Id: ladder.20.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: ladder.20.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: ladder.20.pddl2 Score: -0.36545653 Pred: (> (thing-available stick) 3)
+Rank: 8 Ties: 5 Num: 93 Id: ladder.20.pddl3 Score: -0.36545653 Pred: (> (thing-available stick) 6)
+Rank: 0 Ties: 0 Num: 93 Id: wood-stairs.7.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: wood-stairs.7.pddl1 Score: -0.35818539 Pred: (> (thing-available plank) 3)
+Rank: 15 Ties: 0 Num: 93 Id: wood-stairs.7.pddl2 Score: -0.36949687 Pred: (> (thing-available wood) 0)
+Rank: 2 Ties: 5 Num: 93 Id: wood-stairs.7.pddl3 Score: -0.35818539 Pred: (> (thing-available plank) 5)
+Rank: 0 Ties: 0 Num: 93 Id: wood-shovel.6.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: wood-shovel.6.pddl1 Score: -0.35818539 Pred: (> (thing-available plank) 0)
+Rank: 8 Ties: 5 Num: 93 Id: wood-shovel.6.pddl2 Score: -0.36545653 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: wool.11.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: wool.11.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: wool.11.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: wool.11.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: wool.11.pddl4 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: wool.11.pddl5 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: wool.11.pddl6 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: wool.11.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: wool.11.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: wool.11.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: wool.11.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: wool.11.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 28 Ties: 0 Num: 93 Id: wool.11.pddl12 Score: -0.37591284 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: wool.11.pddl13 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: wool.11.pddl14 Score: 0.36497998 Pred: (> (furnace-fuel) 1)
+Rank: 10 Ties: 0 Num: 93 Id: wool.11.pddl15 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 38 Ties: 5 Num: 93 Id: wool.11.pddl16 Score: -0.37596026 Pred: (> (thing-available iron) 0)
+Rank: 11 Ties: 0 Num: 93 Id: wool.11.pddl17 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 40 Ties: 5 Num: 93 Id: wool.11.pddl18 Score: -0.37596026 Pred: (> (thing-available iron) 1)
+Rank: 18 Ties: 0 Num: 93 Id: wool.11.pddl19 Score: -0.35765512 Pred: (> (thing-available shears) 0)
+Rank: 0 Ties: 0 Num: 93 Id: stonebrick.39.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: stonebrick.39.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: stonebrick.39.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: stonebrick.39.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 9 Ties: 7 Num: 93 Id: stonebrick.39.pddl4 Score: -0.35471875 Pred: (> (thing-available stone) 0)
+Rank: 9 Ties: 7 Num: 93 Id: stonebrick.39.pddl5 Score: -0.35471875 Pred: (> (thing-available stone) 1)
+Rank: 9 Ties: 7 Num: 93 Id: stonebrick.39.pddl6 Score: -0.35471875 Pred: (> (thing-available stone) 2)
+Rank: 9 Ties: 7 Num: 93 Id: stonebrick.39.pddl7 Score: -0.35471875 Pred: (> (thing-available stone) 3)
+Rank: 0 Ties: 0 Num: 93 Id: bowl.26.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: bowl.26.pddl1 Score: -0.35818539 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 0 Num: 93 Id: seeds.32.pddl0 Score: -0.35665964 Pred: (> (thing-available bone) 0)
+Rank: 1 Ties: 0 Num: 93 Id: seeds.32.pddl1 Score: -0.37208212 Pred: (> (thing-available bonemeal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: seeds.32.pddl2 Score: -0.36949687 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: seeds.32.pddl3 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: seeds.32.pddl4 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: seeds.32.pddl5 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: seeds.32.pddl6 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: seeds.32.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: seeds.32.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: seeds.32.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: seeds.32.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: seeds.32.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: seeds.32.pddl12 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: seeds.32.pddl13 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 29 Ties: 0 Num: 93 Id: seeds.32.pddl14 Score: -0.37591284 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: seeds.32.pddl15 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: seeds.32.pddl16 Score: 0.36497998 Pred: (> (furnace-fuel) 1)
+Rank: 10 Ties: 0 Num: 93 Id: seeds.32.pddl17 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 39 Ties: 5 Num: 93 Id: seeds.32.pddl18 Score: -0.37596026 Pred: (> (thing-available iron) 0)
+Rank: 11 Ties: 0 Num: 93 Id: seeds.32.pddl19 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 41 Ties: 5 Num: 93 Id: seeds.32.pddl20 Score: -0.37596026 Pred: (> (thing-available iron) 1)
+Rank: 18 Ties: 0 Num: 93 Id: seeds.32.pddl21 Score: -0.35765512 Pred: (> (thing-available shears) 0)
+Rank: 0 Ties: 0 Num: 93 Id: furnace.29.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: furnace.29.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: furnace.29.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: furnace.29.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 9 Ties: 7 Num: 93 Id: furnace.29.pddl4 Score: -0.35471875 Pred: (> (thing-available stone) 0)
+Rank: 9 Ties: 7 Num: 93 Id: furnace.29.pddl5 Score: -0.35471875 Pred: (> (thing-available stone) 1)
+Rank: 9 Ties: 7 Num: 93 Id: furnace.29.pddl6 Score: -0.35471875 Pred: (> (thing-available stone) 2)
+Rank: 9 Ties: 7 Num: 93 Id: furnace.29.pddl7 Score: -0.35471875 Pred: (> (thing-available stone) 3)
+Rank: 9 Ties: 7 Num: 93 Id: furnace.29.pddl8 Score: -0.35471875 Pred: (> (thing-available stone) 4)
+Rank: 9 Ties: 7 Num: 93 Id: furnace.29.pddl9 Score: -0.35471875 Pred: (> (thing-available stone) 5)
+Rank: 9 Ties: 7 Num: 93 Id: furnace.29.pddl10 Score: -0.35471875 Pred: (> (thing-available stone) 6)
+Rank: 9 Ties: 7 Num: 93 Id: furnace.29.pddl11 Score: -0.35471875 Pred: (> (thing-available stone) 7)
+Rank: 0 Ties: 0 Num: 93 Id: wood-axe.0.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: wood-axe.0.pddl1 Score: -0.35818539 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: wood-axe.0.pddl2 Score: -0.36545653 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: irondoor.17.pddl0 Score: 52.97985787 Pred: (> (thing-available wood) 0)
+Rank: 0 Ties: 5 Num: 93 Id: irondoor.17.pddl1 Score: -0.35380228 Pred: (> (thing-available plank) 2)
+Rank: 8 Ties: 5 Num: 93 Id: irondoor.17.pddl2 Score: -0.36107343 Pred: (> (thing-available stick) 1)
+Rank: 0 Ties: 0 Num: 93 Id: irondoor.17.pddl3 Score: -0.34166818 Pred: (> (thing-available wood-pickaxe) 0)
+Rank: 2 Ties: 7 Num: 93 Id: irondoor.17.pddl4 Score: -0.35033565 Pred: (> (thing-available stone) 0)
+Rank: 2 Ties: 7 Num: 93 Id: irondoor.17.pddl5 Score: -0.35033565 Pred: (> (thing-available stone) 1)
+Rank: 2 Ties: 7 Num: 93 Id: irondoor.17.pddl6 Score: -0.35033565 Pred: (> (thing-available stone) 2)
+Rank: 2 Ties: 7 Num: 93 Id: irondoor.17.pddl7 Score: -0.35033565 Pred: (> (thing-available stone) 3)
+Rank: 2 Ties: 7 Num: 93 Id: irondoor.17.pddl8 Score: -0.35033565 Pred: (> (thing-available stone) 4)
+Rank: 2 Ties: 7 Num: 93 Id: irondoor.17.pddl9 Score: -0.35033565 Pred: (> (thing-available stone) 5)
+Rank: 2 Ties: 7 Num: 93 Id: irondoor.17.pddl10 Score: -0.35033565 Pred: (> (thing-available stone) 6)
+Rank: 2 Ties: 7 Num: 93 Id: irondoor.17.pddl11 Score: -0.35033565 Pred: (> (thing-available stone) 7)
+Rank: 28 Ties: 0 Num: 93 Id: irondoor.17.pddl12 Score: -0.37591284 Pred: (> (thing-available furnace) 0)
+Rank: 22 Ties: 0 Num: 93 Id: irondoor.17.pddl13 Score: -0.35982563 Pred: (> (thing-available coal) 0)
+Rank: 0 Ties: 0 Num: 93 Id: irondoor.17.pddl14 Score: 0.36497998 Pred: (> (furnace-fuel) 1)
+Rank: 10 Ties: 0 Num: 93 Id: irondoor.17.pddl15 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 39 Ties: 5 Num: 93 Id: irondoor.17.pddl16 Score: -0.38034336 Pred: (> (thing-available iron) 0)
+Rank: 12 Ties: 0 Num: 93 Id: irondoor.17.pddl17 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 41 Ties: 5 Num: 93 Id: irondoor.17.pddl18 Score: -0.38034336 Pred: (> (thing-available iron) 1)
+Rank: 12 Ties: 0 Num: 93 Id: irondoor.17.pddl19 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 41 Ties: 5 Num: 93 Id: irondoor.17.pddl20 Score: -0.38034336 Pred: (> (thing-available iron) 2)
+Rank: 12 Ties: 0 Num: 93 Id: irondoor.17.pddl21 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 41 Ties: 5 Num: 93 Id: irondoor.17.pddl22 Score: -0.38034336 Pred: (> (thing-available iron) 3)
+Rank: 12 Ties: 0 Num: 93 Id: irondoor.17.pddl23 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Rank: 41 Ties: 5 Num: 93 Id: irondoor.17.pddl24 Score: -0.38034336 Pred: (> (thing-available iron) 4)
+Rank: 12 Ties: 0 Num: 93 Id: irondoor.17.pddl25 Score: -0.35552728 Pred: (> (thing-available ironore) 0)
+Avg Rank: 9.49288256228 Ties: 3.50711743772
+Precision: 0.701030927835 Recall: 0.120781527531 Nums: tp: 68 fp: 29 tn: 52330 fn: 495

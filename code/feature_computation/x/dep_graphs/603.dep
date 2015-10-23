@@ -1,0 +1,3 @@
+0:the 1:bowl 2:is 3:used 4:to 5:hold 6:mushroom 7:stew 8:. 9:#/#
+gold: 0-1 1-3 1-5 2-3 4-5 5-3 6-7 7-5
+pred: 0-1 1-3 1-5 2-3 4-5 5-3 6-7 7-5

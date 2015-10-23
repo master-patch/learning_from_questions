@@ -1,0 +1,3 @@
+0:from 1:minecraft 2:wiki 3:jump 4:to 5:: 6:navigation 7:, 8:searchsand 9:sand 10:is 11:a 12:block 13:naturally 14:found 15:on 16:coasts 17:and 18:desert 19:biomes 20:mostly 21:going 22:4 23:blocks 24:deep 25:until 26:it 27:transitions 28:into 29:sandstone 30:. 31:#/#
+gold: 1-3 2-3 3-0 4-3 6-0 8-6 9-12 10-12 11-12 12-8 13-14 14-12 16-21 18-19 19-16 19-21 20-21 21-14 22-23 23-24 24-21 25-27 26-27 27-21 29-27
+pred: 1-3 2-3 3-0 4-3 6-0 8-6 9-12 10-12 11-12 12-8 13-14 14-12 16-21 18-19 19-16 19-21 20-21 21-14 22-23 23-24 24-21 25-27 26-27 27-21 29-27

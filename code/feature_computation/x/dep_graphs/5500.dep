@@ -1,0 +1,3 @@
+0:sugar 1:cane 2:that 3:naturally 4:generated 5:through 6:a 7:tree 8:. 9:#/#
+gold: 0-1 1-4 3-4 4-1 6-7 7-4
+pred: 0-1 1-4 3-4 4-1 6-7 7-4

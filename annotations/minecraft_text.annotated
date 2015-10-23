@@ -1,0 +1,1210 @@
+No.0
+ [transfered]
+ Connections: +axes:0|woods:10 +axes:0|planks:12 +axes:0|chests:14 woods:10|axes:0 woods:10|planks:12 woods:10|chests:14 planks:12|axes:0 planks:12|woods:10 planks:12|chests:14 chests:14|axes:0 chests:14|woods:10 chests:14|planks:12
+ Text: axes are tools used to ease the process of collecting woods , planks , chests and bookcases , but are not required to gather them .
+
+No.4
+ [transfered]
+ Connections: +axe:1|wood:6 wood:6|axe:1
+ Text: the axe is used to break wood and wooden items faster .
+
+No.10
+ [transfered]
+ Connections: wood:10|axes:17 axes:17|wood:10
+ Text: however , given most players expend fairly large quantities of wood through gameplay and the use of axes for logging and renovation will save a great deal of time in the long run .
+
+No.26
+ [transfered]
+ Connections: axes:0|sticks:5 +sticks:5|axes:0
+ Text: axes are crafted using 2 sticks and 3 units of a tool material : .
+
+No.30
+ [transfered]
+ Connections: beds:0|bed:11 bed:11|beds:0
+ Text: beds also set your spawn point to the location of the bed .
+
+No.46
+ [transfered]
+ Connections: wool:7|bed:11 bed:11|wool:7
+ Text: you can even use multiple colors of wool , but the bed will remain red .
+
+No.58
+ [transfered]
+ Connections: beds:5|glass:13 glass:13|beds:5
+ Text: like certain other blocks , beds can not be placed on snow or glass .
+
+No.64
+ [transfered]
+ Connections: beds:5|fences:14 fences:14|beds:5 fences:14|beds:18 beds:18|fences:14
+ Text: the floating bed method allows beds to be placed over each other like with fences , or for beds to be placed on blocks that they can not be directly placed upon .
+
+No.80
+ [transfered]
+ Connections: beds:0|bed:7 bed:7|beds:0
+ Text: beds are used by right clicking the bed during the night .
+
+No.118
+ [transfered]
+ Connections: woods:7|bed:19 bed:19|woods:7
+ Text: if you ever get lost in the woods when it turns dark , you can safely sleep in a bed without building a shelter first .
+
+No.122
+ [not transfered]
+ Connections: bed:9|wool:16 bed:9|planks:20 wool:16|bed:9 wool:16|planks:20 planks:20|bed:9 planks:20|wool:16
+ Text: you will need at least 5 dirt , 1 bed ; or as described earlier 3 wool and 3 wooden planks and 1 crafting table .
+
+No.132
+ [not transfered]
+ Connections: iron:2|ingots:8 ingots:8|iron:2
+ Text: blocks of iron are blocks for storing iron ingots that do not appear in normally generated maps anywhere .
+
+No.136
+ [transfered]
+ Connections: iron:0|ingots:9 *ingots:9|iron:0
+ Text: iron blocks can be made by placing 9 iron ingots in a crafting bench .
+
+No.142
+ [transfered]
+ Connections: iron:0|stone:7 iron:0|pickaxe:13 +stone:7|iron:0 stone:7|iron:9 stone:7|pickaxe:13 iron:9|stone:7 iron:9|pickaxe:13 +pickaxe:13|iron:0 pickaxe:13|stone:7 pickaxe:13|iron:9
+ Text: iron blocks can be mined with a stone , iron , or diamond pickaxe , taking about 2 seconds to destroy .
+
+No.144
+ [transfered]
+ Connections: iron:2|ingots:18 ingots:18|iron:2
+ Text: if an iron block is broken without such a tool , it drops nothing , wasting all 9 ingots .
+
+No.146
+ [transfered]
+ Connections: meal:1|bone:7 meal:1|wool:13 +bone:7|meal:1 bone:7|wool:13 wool:13|meal:1 wool:13|bone:7
+ Text: bone meal is crafted out of skeleton bone and is used for dying wool and as a fertilizer .
+
+No.152
+ [transfered]
+ Connections: wheat:4|meal:12 meal:12|wheat:4 +meal:12|wheat:17 wheat:17|meal:12
+ Text: when applied to planted wheat or saplings , one unit of bone meal is consumed and the wheat or sapling will grow to their full size instantly .
+
+No.156
+ [transfered]
+ Connections: bowls:0|planks:6 +bowls:0|stew:17 +planks:6|bowls:0 planks:6|stew:17 stew:17|bowls:0 stew:17|planks:6
+ Text: bowls are containers made from wooden planks whose only use , currently , is to hold mushroom stew .
+
+No.158
+ [transfered]
+ Connections: bowl:1|stew:6 bowl:1|stew:11 stew:6|bowl:1 stew:11|bowl:1
+ Text: the bowl that contains the mushroom stew is returned when the stew is consumed , and 3 planks craft 4 bowls ; therefore , they can be crafted in small quantities and reused .
+
+No.162
+ [not transfered]
+ Connections: bowls:7|mushrooms:9 bowls:7|mushrooms:14 bowls:7|stew:23 mushrooms:9|bowls:7 mushrooms:9|bowls:16 mushrooms:9|stew:23 mushrooms:14|bowls:7 mushrooms:14|bowls:16 mushrooms:14|stew:23 bowls:16|mushrooms:9 bowls:16|mushrooms:14 bowls:16|stew:23 stew:23|bowls:7 stew:23|mushrooms:9 stew:23|mushrooms:14 stew:23|bowls:16
+ Text: it is recommended to take stacks of bowls and mushrooms with a workbench as mushrooms and bowls can be stacked , but mushroom stew can not .
+
+No.164
+ [transfered]
+ Connections: +bowl:1|stew:7 stew:7|bowl:1
+ Text: the bowl is used to hold mushroom stew .
+
+No.168
+ [transfered]
+ Connections: bowls:0|buckets:6 buckets:6|bowls:0
+ Text: bowls can not be used as buckets to pick up , place , or hold water and lava .
+
+No.170
+ [transfered]
+ Connections: bowl:14|stew:17 stew:17|bowl:14
+ Text: however , the player is allowed to `` milk '' mooshrooms and fill the bowl with mushroom stew .
+
+No.178
+ [transfered]
+ Connections: bread:0|furnace:8 bread:0|coal:33 furnace:8|bread:0 furnace:8|coal:33 coal:33|bread:0 coal:33|furnace:8
+ Text: bread has the advantage of not requiring a furnace or fuel , although lighting the farm up to the required light level of 9 for constant crop growth will consume some amount of coal or charcoal .
+
+No.182
+ [not transfered]
+ Connections: +bonemeal:4|wheat:9 bonemeal:4|mushroom:23 wheat:9|bonemeal:4 wheat:9|bonemeal:20 wheat:9|mushroom:23 bonemeal:20|wheat:9 bonemeal:20|mushroom:23 mushroom:23|bonemeal:4 mushroom:23|wheat:9 mushroom:23|bonemeal:20
+ Text: a single application of bonemeal produces only a single wheat - several tens of times less efficient than using that bonemeal on a mushroom .
+
+No.196
+ [transfered]
+ Connections: *bricks:0|brick:6 brick:6|bricks:0
+ Text: bricks are items used to craft brick blocks .
+
+No.202
+ [not transfered]
+ Connections: bricks:0|balls:21 balls:21|bricks:0
+ Text: bricks were added into the game in alpha 1.0.11 on july 23 , 2010 , along with clay blocks and clay balls .
+
+No.206
+ [not transfered]
+ Connections: bricks:0|balls:8 +balls:8|bricks:0
+ Text: bricks are created from smelting pieces of clay balls .
+
+No.208
+ [transfered]
+ Connections: +bricks:1|brick:7 brick:7|bricks:1
+ Text: four bricks are required to make one brick block .
+
+No.214
+ [transfered]
+ Connections: milk:0|bucket:6 +bucket:6|milk:0
+ Text: milk is obtained by using a bucket on a cow .
+
+No.216
+ [transfered]
+ Connections: +buckets:0|milk:10 milk:10|buckets:0
+ Text: buckets are tools used for carrying water , lava or milk .
+
+No.218
+ [transfered]
+ Connections: buckets:3|bucket:11 *bucket:11|buckets:3
+ Text: water and lava buckets can only be obtained by using the bucket on a source block ; shallow , running fluids can not be collected .
+
+No.220
+ [transfered]
+ Connections: buckets:1|bucket:7 +bucket:7|buckets:1
+ Text: milk buckets are collected by using the bucket on a cow .
+
+No.228
+ [transfered]
+ Connections: buckets:0|iron:5 +iron:5|buckets:0
+ Text: buckets can be crafted from iron , or found in dungeons .
+
+No.230
+ [transfered]
+ Connections: bucket:9|chest:13 chest:13|bucket:9
+ Text: there is an 80 % chance of finding one bucket in a dungeon chest block .
+
+No.232
+ [transfered]
+ Connections: +bucket:2|milk:17 milk:17|bucket:2
+ Text: a `` bucket '' is a tool that can be used for transporting or storing water , milk , or lava .
+
+No.244
+ [not transfered]
+ Connections: chest:2|chests:15 chest:10|chests:15 chests:15|chest:2 chests:15|chest:10
+ Text: a large chest is created by placement of two adjacent chest blocks , however large chests can not be created directly beside each other .
+
+No.246
+ [transfered]
+ Connections: chests:1|chest:11 chest:11|chests:1
+ Text: large chests have 54 storage slots and open as a single chest with six rows of slots .
+
+No.264
+ [not transfered]
+ Connections: chests:3|seeds:26 chests:3|seeds:29 seeds:26|chests:3 seeds:29|chests:3
+ Text: these naturally occurring chests are currently the only way to find the rare items saddles , cocoa beans , red apples , golden apples , melon seeds and pumpkin seeds .
+
+No.272
+ [transfered]
+ Connections: chests:2|chest:23 chest:23|chests:2
+ Text: even though chests often change in appearance when surrounding blocks are added or modified , this does not affect the use of the chest .
+
+No.278
+ [transfered]
+ Connections: chest:1|planks:7 +planks:7|chest:1
+ Text: a chest is crafted from eight wooden planks , as shown below : .
+
+No.282
+ [transfered]
+ Connections: clay:0|sand:15 sand:15|clay:0
+ Text: clay can be found on the surface in groups of varying number usually surrounded by sand .
+
+No.284
+ [transfered]
+ Connections: clay:4|sand:13 clay:4|sand:18 sand:13|clay:4 sand:18|clay:4
+ Text: previous to 1.8 , clay 's spawning was not tied to water and sand , but just to sand , and could spawn in the middle of deserts .
+
+No.296
+ [not transfered]
+ Connections: *clay:1|balls:6 clay:1|brick:23 balls:6|clay:1 balls:6|clay:8 balls:6|brick:23 clay:8|balls:6 clay:8|brick:23 brick:23|clay:1 brick:23|balls:6 brick:23|clay:8
+ Text: destroying clay blocks will yield 4 balls of clay each , which can be crafted back into a clay block or smelted into brick .
+
+No.304
+ [not transfered]
+ Connections: clay:10|stone:12 clay:10|stone:20 stone:12|clay:10 stone:20|clay:10
+ Text: if you are having trouble seeing if a block is clay or stone , check for the characteristic lines of stone .
+
+No.306
+ [transfered]
+ Connections: clay:0|stone:7 stone:7|clay:0
+ Text: clay is usually a lighter color than stone and the texture is not linear .
+
+No.316
+ [transfered]
+ Connections: ore:7|pickaxe:18 +pickaxe:18|ore:7
+ Text: coal lumps are harvested directly from coal ore blocks , which must be destroyed using any level of pickaxe .
+
+No.320
+ [not transfered]
+ Connections: furnaces:10|ore:19 furnaces:10|coal:23 ore:19|furnaces:10 ore:19|coal:23 coal:23|furnaces:10 coal:23|ore:19
+ Text: they are quite efficient as a source of fuel for furnaces , being able to smelt eight units of ore per lump of coal .
+
+No.324
+ [not transfered]
+ Connections: +coal:5|torches:14 torches:14|coal:5
+ Text: the only purpose for which coal could be considered required is the creation of torches , which are essential for prolonged underground exploration - although there are other permanent light sources , none come close in terms of convenience and availability .
+
+No.328
+ [not transfered]
+ Connections: coal:0|iron:11 iron:11|coal:0
+ Text: coal can be found anywhere in the map , similar to iron ore. .
+
+No.334
+ [transfered]
+ Connections: wood:1|furnace:4 wood:1|coal:13 wood:1|torches:20 furnace:4|wood:1 furnace:4|coal:13 furnace:4|torches:20 coal:13|wood:1 coal:13|furnace:4 coal:13|torches:20 torches:20|wood:1 torches:20|furnace:4 torches:20|coal:13
+ Text: smelting wood in a furnace creates charcoal , which can be substituted for coal in all uses , including making torches , powering minecarts , and smelting objects .
+
+No.336
+ [transfered]
+ Connections: torches:18|coal:25 coal:25|torches:18 coal:25|torches:34 torches:34|coal:25
+ Text: this will undoubtedly make it easier to survive your first night as it allows the player to make torches much more easily , as no coal needs to be mined in order to craft torches any more .
+
+No.342
+ [not transfered]
+ Connections: wood:21|torches:40 torches:40|wood:21
+ Text: also if you are playing on survival then you can just make 1 lump of charcoal then use that on 8 wood block to turn 1 lump into 8 again making it easier to survive by multiplying the amount of torches that can be made and\ amount of items you can smelt .
+
+No.346
+ [transfered]
+ Connections: wood:3|planks:11 wood:3|planks:19 wood:3|plank:24 planks:11|wood:3 planks:11|wood:14 planks:11|plank:24 wood:14|planks:11 wood:14|planks:19 wood:14|plank:24 planks:19|wood:3 planks:19|wood:14 planks:19|plank:24 plank:24|wood:3 plank:24|planks:11 plank:24|wood:14 plank:24|planks:19
+ Text: ordinarily , a wood block smelts six items if broken into planks : each wood block makes four wooden planks , and each wooden plank smelts 1.5 items .
+
+No.348
+ [transfered]
+ Connections: wood:3|coal:24 coal:24|wood:3
+ Text: however , one wood block can be smelted into one charcoal block , and each piece of charcoal smelts eight items , just like coal .
+
+No.350
+ [transfered]
+ Connections: wood:9|planks:17 wood:9|planks:23 wood:14|planks:17 wood:14|planks:23 planks:17|wood:9 planks:17|wood:14 planks:17|wood:30 planks:23|wood:9 planks:23|wood:14 planks:23|wood:30 wood:30|planks:17 wood:30|planks:23
+ Text: therefore , it is more efficient to take seven wood blocks , turn one wood block into planks , and use those four planks to smelt the other six unbroken wood blocks into charcoal .
+
+No.354
+ [transfered]
+ Connections: wood:3|planks:17 wood:13|planks:17 planks:17|wood:3 planks:17|wood:13
+ Text: ordinarily , seven wood blocks would only smelt 42 items , since seven wood blocks makes 28 planks .
+
+No.360
+ [transfered]
+ Connections: coal:8|wood:17 coal:8|wood:44 coal:8|wood:57 wood:17|coal:8 wood:44|coal:8 wood:57|coal:8
+ Text: moreover , if you begin with a single coal or charcoal , then you can smelt 8 wood blocks and make 8 charcoal , replace your starting charcoal and keep the other 7 , making for a total of 56 smelts from those 8 wood blocks , though there is even more time required for smelting the wood .
+
+No.362
+ [not transfered]
+ Connections: wood:2|planks:6 wood:2|sticks:17 planks:6|wood:2 planks:6|sticks:17 planks:6|wood:23 sticks:17|wood:2 sticks:17|planks:6 sticks:17|wood:23 wood:23|planks:6 wood:23|sticks:17
+ Text: use one wood block - -rrb- planks - -rrb- 1 set of sticks use 2 of the sticks to smelt your remaining raw wood , this will give you one piece of charcoal , and you can use that to smelt .
+
+No.374
+ [transfered]
+ Connections: cobblestone:0|stone:5 *stone:5|cobblestone:0
+ Text: cobblestone is obtained by mining stone .
+
+No.376
+ [transfered]
+ Connections: cobblestone:0|stone:8 cobblestone:0|stone:22 stone:8|cobblestone:0 stone:22|cobblestone:0
+ Text: cobblestone is slightly harder to mine than normal stone , and there is an alternative version of the block known as moss stone , which can only be obtained from dungeons .
+
+No.378
+ [transfered]
+ Connections: +cobblestone:0|furnaces:5 +cobblestone:0|stairs:11 furnaces:5|cobblestone:0 furnaces:5|stairs:11 stairs:11|cobblestone:0 stairs:11|furnaces:5
+ Text: cobblestone is required to craft furnaces , cobblestone slabs , stone stairs , stone tools and weapons , levers , pistons , dispensers and brewing stands .
+
+No.380
+ [transfered]
+ Connections: stone:5|cobblestone:7 cobblestone:7|stone:5
+ Text: because of the abundance of stone , cobblestone is a commonly-used building material .
+
+No.382
+ [transfered]
+ Connections: *cobblestone:0|stone:7 cobblestone:0|furnace:10 stone:7|cobblestone:0 stone:7|furnace:10 furnace:10|cobblestone:0 furnace:10|stone:7
+ Text: cobblestone can be smelted back into smooth stone in a furnace .
+
+No.408
+ [transfered]
+ Connections: +shears:5|string:19 string:19|shears:5
+ Text: when cobweb is destroyed by shears , pistons , running water , or a sword , it drops 1 string .
+
+No.414
+ [transfered]
+ Connections: fish:1|furnace:20 fish:15|furnace:20 +furnace:20|fish:1 furnace:20|fish:15
+ Text: cooked fish is a type of food available in beta that is obtained when raw fish is cooked in a furnace .
+
+No.416
+ [transfered]
+ Connections: fish:1|rod:9 +rod:9|fish:1
+ Text: raw fish must first be caught with a fishing rod .
+
+No.432
+ [transfered]
+ Connections: doors:0|planks:10 doors:0|ingots:18 doors:7|planks:10 doors:7|ingots:18 planks:10|doors:0 +planks:10|doors:7 planks:10|doors:14 planks:10|ingots:18 doors:14|planks:10 doors:14|ingots:18 ingots:18|doors:0 ingots:18|doors:7 ingots:18|planks:10 +ingots:18|doors:14
+ Text: doors come in two varieties : wooden doors made from planks , and iron doors made from iron ingots .
+
+No.450
+ [transfered]
+ Connections: doors:6|torch:24 doors:6|door:29 torch:24|doors:6 torch:24|door:29 door:29|doors:6 door:29|torch:24
+ Text: this creates the possibility to make doors that are only controllable from remote locations using a switch and redstone ; otherwise putting a redstone torch in front of the door will open it .
+
+No.452
+ [transfered]
+ Connections: doors:1|pickaxe:14 *pickaxe:14|doors:1
+ Text: iron doors can take quite a bit of time to destroy even with a pickaxe .
+
+No.466
+ [transfered]
+ Connections: doors:2|door:21 door:21|doors:2
+ Text: if two doors are placed adjacent to each other , they will orient with their handles inward , creating a double door .
+
+No.480
+ [not transfered]
+ Connections: door:2|doors:20 door:10|doors:20 doors:20|door:2 doors:20|door:10
+ Text: if one door is `` on '' , the other door must be `` off '' in order for both doors to be open\ .
+
+No.482
+ [transfered]
+ Connections: door:24|torch:29 torch:29|door:24 torch:29|door:36 torch:29|door:41 door:36|torch:29 door:41|torch:29
+ Text: a reliable redstone mechanism for accomplishing this involves redstone wire on a block underneath the pressure plated block in front of the right hand door , and a redstone torch hanging off a block under that door underneath the left hand door block .
+
+No.484
+ [not transfered]
+ Connections: doors:9|door:18 door:18|doors:9
+ Text: if this does n't work initially , re-place the doors from the `` outside '' starting with the door adjascent the pressure plates .
+
+No.486
+ [transfered]
+ Connections: torch:1|door:5 door:5|torch:1 door:5|torch:22 torch:22|door:5
+ Text: the torch keeps the opposite door `` open '' until the plate is triggered powering the underlying redstone wire and turning the torch off .
+
+No.488
+ [transfered]
+ Connections: bed:6|door:19 door:19|bed:6
+ Text: when trying to sleep in a bed at night , a monster may enter through the outside right hinged door and disturb the player .
+
+No.492
+ [not transfered]
+ Connections: doors:15|door:50 doors:15|door:72 doors:28|door:50 doors:28|door:72 door:50|doors:15 door:50|doors:28 door:72|doors:15 door:72|doors:28
+ Text: a new feature unique to the second release-candidate is that if you have two wooden doors in a double door configuration and you click on one of the doors twice both will open , if you do it again both will close , for example : click on the left door twice both left and right will be open , do it again , click twice either on the left or right door and both will close .
+
+No.510
+ [transfered]
+ Connections: door:9|doors:15 doors:15|door:9
+ Text: put the switches on the same sides of the door so that when pushed both doors will open ; you should have just enough time to get across .
+
+No.546
+ [transfered]
+ Connections: eggs:0|egg:9 egg:9|eggs:0
+ Text: eggs are a component of cake - a single egg is required to craft each one .
+
+No.560
+ [transfered]
+ Connections: eggs:23|egg:45 eggs:30|egg:45 egg:45|eggs:23 egg:45|eggs:30
+ Text: while a virtually limitless number of chickens can be forced anywhere , the benefit of relatively quick production of a large number of eggs is offset by the number of eggs required to prime such a system due to the low probability of a thrown egg spawning a chicken .
+
+No.566
+ [not transfered]
+ Connections: shears:5|ingots:9 +ingots:9|shears:5
+ Text: all you need to craft shears are two iron ingots .
+
+No.1086
+ [transfered]
+ Connections: +shears:5|wool:8 wool:8|shears:5
+ Text: minecraft beta 1.7 has added shears for cutting wool from sheep .
+
+No.612
+ [not transfered]
+ Connections: torches:8|wheat:23 wheat:23|torches:8
+ Text: nonetheless , if there is grass near the torches , this could also allow passive mobs to spawn which could then destroy the wheat by walking on it .
+
+No.662
+ [transfered]
+ Connections: fences:0|axe:8 *axe:8|fences:0
+ Text: fences are broken most quickly with with an axe .
+
+No.664
+ [transfered]
+ Connections: fences:0|wool:32 wool:32|fences:0
+ Text: fences can be found mainly in npc villages where they act as small enclosures around some of the houses , on roofs of some houses , lampposts with a block of black wool placed on it or in houses with a wooden pressure plate placed on top of it , forming a table-like structure .
+
+No.684
+ [transfered]
+ Connections: fences:1|fence:25 fence:25|fences:1
+ Text: since fences can not be jumped over , this keeps players and mobs from falling off while still allowing them to easily see past the fence .
+
+No.698
+ [transfered]
+ Connections: fences:0|furnace:8 fences:0|planks:24 fences:0|fence:29 furnace:8|fences:0 furnace:8|planks:24 furnace:8|fence:29 planks:24|fences:0 planks:24|furnace:8 planks:24|fence:29 fence:29|fences:0 fence:29|furnace:8 fence:29|planks:24
+ Text: fences can also be used to fuel a furnace , although the player would be better off using the one and a half wooden planks used to create each fence for fueling instead .
+
+No.714
+ [transfered]
+ Connections: +rods:1|fish:7 fish:7|rods:1
+ Text: fishing rods allow you to catch raw fish .
+
+No.724
+ [transfered]
+ Connections: +rods:1|fish:9 fish:9|rods:1
+ Text: fishing rods are tools that are used for obtaining fish .
+
+No.728
+ [transfered]
+ Connections: +rods:9|fish:17 fish:17|rods:9
+ Text: in alpha 1.2.0 , the halloween update , fishing rods were updated to be able to catch fish from any body of water .
+
+No.730
+ [transfered]
+ Connections: rod:2|sticks:8 rod:2|string:13 +sticks:8|rod:2 sticks:8|string:13 +string:13|rod:2 string:13|sticks:8
+ Text: a fishing rod can be crafted from three sticks and two pieces of string .
+
+No.790
+ [transfered]
+ Connections: panes:1|glass:13 glass:13|panes:1
+ Text: glass panes are transparent blocks which can be used as an alternative to glass blocks .
+
+No.792
+ [transfered]
+ Connections: panes:4|bars:11 panes:4|fences:14 bars:11|panes:4 bars:11|fences:14 fences:14|panes:4 fences:14|bars:11
+ Text: they connect to adjacent panes , much like redstone , iron bars , and fences .
+
+No.800
+ [transfered]
+ Connections: panes:1|glass:11 panes:1|glass:17 +glass:11|panes:1 glass:11|panes:25 glass:17|panes:1 glass:17|panes:25 panes:25|glass:11 panes:25|glass:17
+ Text: glass panes can make windows of 166 % more area than glass blocks , because only 6 glass blocks are required to make 16 glass panes .
+
+No.806
+ [transfered]
+ Connections: panes:1|glass:8 +glass:8|panes:1
+ Text: glass panes can be crafted by placing 6 glass blocks in a 2x3 horizontal rectangle .
+
+No.818
+ [not transfered]
+ Connections: torches:0|doors:9 torches:0|beds:14 torches:0|ladders:16 torches:0|glass:22 doors:9|torches:0 doors:9|beds:14 doors:9|ladders:16 doors:9|glass:22 beds:14|torches:0 beds:14|doors:9 beds:14|ladders:16 beds:14|glass:22 ladders:16|torches:0 ladders:16|doors:9 ladders:16|beds:14 ladders:16|glass:22 glass:22|torches:0 glass:22|doors:9 glass:22|beds:14 glass:22|ladders:16
+ Text: torches , redstone , jack-o-lanterns , minecart tracks , doors , pressure plates , beds and ladders can not be placed on glass .
+
+No.820
+ [transfered]
+ Connections: glass:0|sand:9 +sand:9|glass:0
+ Text: glass blocks are crafted by smelting a block of sand .
+
+No.822
+ [transfered]
+ Connections: +hoes:0|wheat:19 wheat:19|hoes:0
+ Text: hoes are tools used to till dirt and grass blocks into farmland blocks , the first step in farming wheat , melons or pumpkins .
+
+No.826
+ [transfered]
+ Connections: +hoe:1|wheat:14 wheat:14|hoe:1
+ Text: the hoe is used to turn dirt and grass blocks into farmland for producing wheat , melons or pumpkins .
+
+No.830
+ [transfered]
+ Connections: hoe:8|hoes:32 hoe:18|hoes:32 hoes:32|hoe:8 hoes:32|hoe:18
+ Text: the material used in the construction of the hoe has almost no effect on the utility of the hoe - the process of tilling is effectively instantaneous regardless of material and all hoes deal the same damage as fists if used in combat .
+
+No.834
+ [transfered]
+ Connections: hoes:0|sticks:5 +sticks:5|hoes:0
+ Text: hoes are crafted using 2 sticks and 2 units of a tool material : .
+
+No.866
+ [transfered]
+ Connections: +wood:18|planks:21 planks:21|wood:18
+ Text: once you have identified a suitable location for your night-one shelter , it 's time to convert your wood into wooden planks .
+
+No.870
+ [transfered]
+ Connections: wood:3|planks:19 +wood:12|planks:19 planks:19|wood:3 planks:19|wood:12
+ Text: when you place wood into the crafting squares , each piece of wood can be turned into 4 wooden planks .
+
+No.872
+ [transfered]
+ Connections: +wood:2|planks:10 planks:10|wood:2
+ Text: use the wood blocks you gathered to create 24 wooden planks .
+
+No.880
+ [transfered]
+ Connections: sticks:0|planks:11 planks:11|sticks:0
+ Text: sticks are required to build tools , so place two wooden planks in the crafting grid , one on top of the other .
+
+No.884
+ [transfered]
+ Connections: planks:2|sticks:4 sticks:4|planks:2
+ Text: with wooden planks and sticks in your inventory , you are ready to build you first set of wooden tools with your crafting table .
+
+No.886
+ [transfered]
+ Connections: pickaxe:8|axe:11 pickaxe:8|shovel:14 axe:11|pickaxe:8 axe:11|shovel:14 shovel:14|pickaxe:8 shovel:14|axe:11
+ Text: the first tools you should create are a pickaxe , an axe , a shovel and a sword .
+
+No.894
+ [transfered]
+ Connections: shovel:3|pickaxe:27 pickaxe:27|shovel:3
+ Text: using your wood shovel will be the quickest way to gather dirt for quick walls , however if you have stone available you can use your wood pickaxe to gather it for a more durable barrier .
+
+No.898
+ [transfered]
+ Connections: cobblestone:15|furnace:18 furnace:18|cobblestone:15
+ Text: the last and final step to a safe and sound first night , is finding cobblestone for a furnace .
+
+No.900
+ [transfered]
+ Connections: stone:7|shovel:12 shovel:12|stone:7
+ Text: if you ca n't find any visible stone , use your wood shovel to dig through a few layers of dirt or grass until you start to see some .
+
+No.902
+ [transfered]
+ Connections: stone:3|pickaxe:8 pickaxe:8|stone:3
+ Text: once you find stone , use your wood pickaxe to gather 20 cobblestone blocks .
+
+No.906
+ [transfered]
+ Connections: cobblestone:7|furnace:13 furnace:13|cobblestone:7
+ Text: return to your crafting table with your cobblestone blocks to start building your furnace .
+
+No.908
+ [transfered]
+ Connections: furnace:3|cobblestone:9 +cobblestone:9|furnace:3
+ Text: to craft the furnace , place one block of cobblestone in each of the outer crafting squares , leaving only the center-middle square empty .
+
+No.912
+ [transfered]
+ Connections: furnace:5|torches:10 torches:10|furnace:5
+ Text: now that you have a furnace , you can craft torches for a light source at night .
+
+No.914
+ [transfered]
+ Connections: furnace:2|plank:8 furnace:2|wood:16 plank:8|furnace:2 plank:8|wood:16 wood:16|furnace:2 wood:16|plank:8
+ Text: open the furnace , and place a wooden plank in the bottom square and a few wood blocks in the top square to make charcoal .
+
+No.916
+ [transfered]
+ Connections: furnace:11|wood:18 wood:18|furnace:11
+ Text: your first piece of charcoal can be used to keep the furnace lit while you continue to convert wood blocks into charcoal .
+
+No.920
+ [transfered]
+ Connections: +sticks:3|torches:13 torches:13|sticks:3
+ Text: with your remaining sticks and newly converted charcoal , you can now make torches .
+
+No.922
+ [transfered]
+ Connections: +sticks:15|torches:18 torches:18|sticks:15
+ Text: open your inventory crafting space or the crafting table and stack charcoal on top of sticks to make torches .
+
+No.924
+ [transfered]
+ Connections: +stick:1|torches:10 torches:10|stick:1
+ Text: one stick and one piece of charcoal will make 4 torches .
+
+No.930
+ [transfered]
+ Connections: torches:17|furnace:20 furnace:20|torches:17
+ Text: your night-one shelter is finished , and you should have a set of wooden tools , some torches , a furnace and a crafting table .
+
+No.944
+ [transfered]
+ Connections: bars:2|fences:12 bars:2|pane:16 fences:12|bars:2 fences:12|pane:16 pane:16|bars:2 pane:16|fences:12
+ Text: the iron bars can be placed in much the same way as fences or a glass pane .
+
+No.946
+ [transfered]
+ Connections: ore:5|iron:11 ore:5|chests:19 iron:11|ore:5 iron:11|chests:19 chests:19|ore:5 chests:19|iron:11
+ Text: obtained : smelting of iron ore , crafting of blocks of iron , and found in dungeon and stronghold chests .
+
+No.948
+ [transfered]
+ Connections: iron:10|doors:20 iron:10|bars:26 doors:20|iron:10 doors:20|bars:26 bars:26|iron:10 bars:26|doors:20
+ Text: creates : sword , armor , tools , blocks of iron , compass , rails , flint and steel , doors , minecart , and iron bars .
+
+No.950
+ [transfered]
+ Connections: +ingots:1|buckets:22 buckets:22|ingots:1
+ Text: iron ingots are used to make a wide variety of useful objects including minecarts , minecart tracks , compasses , armor , buckets , and tools capable of mining anything but obsidian and bedrock .
+
+No.964
+ [transfered]
+ Connections: torches:1|ladder:4 torches:1|glass:22 ladder:4|torches:1 ladder:4|glass:22 glass:22|torches:1 glass:22|ladder:4
+ Text: like torches , a ladder occupies one block from the side on which it is placed and can not be placed on glass .
+
+No.1006
+ [transfered]
+ Connections: milk:0|bucket:17 +bucket:17|milk:0
+ Text: milk is an item obtained from cows and mooshrooms by right-clicking on their udders with an empty bucket .
+
+No.1010
+ [transfered]
+ Connections: buckets:1|milk:16 milk:16|buckets:1
+ Text: milk buckets can be emptied by right-clicking on a block , which will pour out the milk .
+
+No.1014
+ [transfered]
+ Connections: bucket:5|milk:7 milk:7|bucket:5
+ Text: right clicking with a full bucket of milk will start the eating animation .
+
+No.1034
+ [transfered]
+ Connections: seeds:10|wheat:13 wheat:13|seeds:10
+ Text: farming gives players a way to till soil , plant seeds and grow wheat .
+
+No.1066
+ [transfered]
+ Connections: seeds:10|wheat:13 wheat:13|seeds:10
+ Text: once harvested , they will drop between 0 and 3 seeds and 1 wheat .
+
+No.1072
+ [transfered]
+ Connections: fence:14|cobblestone:23 cobblestone:23|fence:14
+ Text: lit , grassy areas will attract critters , so make sure you put a fence around your crops and replace the grass with cobblestone to keep your crops safe .
+
+No.1086
+ [transfered]
+ Connections: +shears:5|wool:8 wool:8|shears:5
+ Text: minecraft beta 1.7 has added shears for cutting wool from sheep .
+
+No.1092
+ [transfered]
+ Connections: cane:1|sand:8 sand:8|cane:1
+ Text: sugar cane can be found on grass , sand , or dirt blocks that are close to water .
+
+No.1104
+ [transfered]
+ Connections: +cane:1|paper:7 +cane:1|sugar:9 paper:7|cane:1 paper:7|sugar:9 sugar:9|cane:1 sugar:9|paper:7
+ Text: sugar cane can be used to make paper and sugar .
+
+No.1106
+ [transfered]
+ Connections: stew:1|bowl:12 stew:1|mushroom:19 +bowl:12|stew:1 bowl:12|mushroom:19 +mushroom:19|stew:1 mushroom:19|bowl:12
+ Text: mushroom stew is a food that can be crafted by combining a bowl with one of each type of mushroom .
+
+No.1110
+ [transfered]
+ Connections: stew:1|bowl:9 +bowl:9|stew:1
+ Text: mushroom stew can also be collected by using a bowl on a mooshroom .
+
+No.1114
+ [not transfered]
+ Connections: mushrooms:8|bonemeal:20 mushrooms:18|bonemeal:20 bonemeal:20|mushrooms:8 bonemeal:20|mushrooms:18 bonemeal:20|mushrooms:25 mushrooms:25|bonemeal:20
+ Text: even if the player has only a few mushrooms , they can be planted and grown into huge mushrooms with bonemeal , yielding more individual mushrooms .
+
+No.1116
+ [not transfered]
+ Connections: stew:1|furnace:26 stew:1|cook:33 furnace:26|stew:1 furnace:26|cook:33 cook:33|stew:1 cook:33|furnace:26
+ Text: mushroom stew restores the same amount of food points as steak and cooked porkchops while not being dependent on the presence of animals or requiring a furnace , fuel , and time to cook .
+
+No.1118
+ [not transfered]
+ Connections: bowl:1|stew:10 stew:10|bowl:1
+ Text: the bowl is returned to the player empty after the stew has been eaten , and can be re-used to craft more .
+
+No.1122
+ [not transfered]
+ Connections: bowls:4|stew:10 bowls:8|stew:10 stew:10|bowls:4 stew:10|bowls:8
+ Text: while the ingredients and bowls stack , the bowls of stew do not stack in the inventory .
+
+No.1132
+ [transfered]
+ Connections: mushrooms:1|meal:9 mushrooms:6|meal:9 meal:9|mushrooms:1 *meal:9|mushrooms:6
+ Text: planted mushrooms will grow into huge mushrooms when bone meal is used on them , and will pop out of the ground if the light level goes above 12 , water flows over them , or when pushed by a piston .
+
+No.1138
+ [not transfered]
+ Connections: mushrooms:12|stew:15 stew:15|mushrooms:12
+ Text: mooshrooms are a unique mob that serve as a source for red mushrooms and mushroom stew .
+
+No.1140
+ [transfered]
+ Connections: paper:0|cane:7 +cane:7|paper:0
+ Text: paper is an item crafted from sugar cane .
+
+No.1144
+ [transfered]
+ Connections: paper:0|chests:5 chests:5|paper:0
+ Text: paper can naturally occur in chests , inside strongholds .
+
+No.1148
+ [transfered]
+ Connections: +pickaxes:0|ores:18 ores:18|pickaxes:0
+ Text: pickaxes are one of the most commonly used tools in the game , being required to mine all ores and many other types of blocks .
+
+No.1150
+ [transfered]
+ Connections: +pickaxe:3|ores:10 ores:10|pickaxe:3
+ Text: different qualities of pickaxe are required to successfully harvest certain ores and blocks .
+
+No.1152
+ [not transfered]
+ Connections: ore:5|pickaxe:11 ore:5|pickaxe:21 +pickaxe:11|ore:5 pickaxe:11|ore:14 ore:14|pickaxe:11 ore:14|pickaxe:21 pickaxe:21|ore:5 +pickaxe:21|ore:14
+ Text: for example , while coal ore can be mined with any pickaxe , gold ore must be mined with an iron pickaxe or better , or else the player will harvest no ore. .
+
+No.1162
+ [transfered]
+ Connections: pickaxe:1|axe:10 axe:10|pickaxe:1
+ Text: the pickaxe does less damage to mobs compared to an axe or a sword .
+
+No.1164
+ [transfered]
+ Connections: pickaxes:0|sticks:5 +sticks:5|pickaxes:0
+ Text: pickaxes are crafted using 2 sticks and 3 units of a tool material : .
+
+No.1180
+ [transfered]
+ Connections: sticks:12|bars:15 bars:15|sticks:12
+ Text: they can be found in abandoned mine shafts , or crafted from sticks and iron bars .
+
+No.1188
+ [transfered]
+ Connections: ingots:9|stick:12 stick:12|ingots:9
+ Text: 16 track pieces can be crafted from 6 iron ingots and 1 stick , in the pattern below : .
+
+No.1254
+ [transfered]
+ Connections: fish:1|fishing:5 fish:1|rod:14 fishing:5|fish:1 fishing:5|rod:14 +rod:14|fish:1 rod:14|fishing:5
+ Text: raw fish are acquired by fishing in a body of water with a fishing rod .
+
+No.1260
+ [transfered]
+ Connections: fish:1|fishing:11 fish:1|rod:15 fishing:11|fish:1 fishing:11|rod:15 +rod:15|fish:1 rod:15|fishing:11
+ Text: raw fish is a food item that can be obtained by fishing with a fishing rod in any body of water .
+
+No.1266
+ [transfered]
+ Connections: +string:2|rod:9 rod:9|string:2
+ Text: however , string is required to craft a fishing rod and early on in the game it may be difficult to acquire .
+
+No.1270
+ [not transfered]
+ Connections: fish:4|furnace:10 furnace:10|fish:4 +furnace:10|fish:14 fish:14|furnace:10
+ Text: like pork , raw fish can be placed in a furnace to produce cooked fish , for 2 additional hunger points .
+
+No.1272
+ [transfered]
+ Connections: fish:10|stick:18 stick:18|fish:10 +stick:18|fish:25 fish:25|stick:18
+ Text: also like pork , the most efficient way to cook fish without wasting supplies is to use a stick as your fuel source when cooking fish .
+
+No.1286
+ [not transfered]
+ Connections: fish:1|wheat:9 wheat:9|fish:1
+ Text: gathering fish can be initially faster than waiting for wheat to grow or finding animals to kill .
+
+No.1288
+ [not transfered]
+ Connections: rod:2|string:4 +string:4|rod:2
+ Text: a fishing rod requires string to make , which can be difficult to obtain early on .
+
+No.1294
+ [not transfered]
+ Connections: wheat:10|fish:18 fish:18|wheat:10
+ Text: once a wheat farm is fully established , it produces wheat almost as quickly as you can obtain fish .
+
+No.1298
+ [transfered]
+ Connections: sand:0|sandstone:20 sandstone:20|sand:0
+ Text: sand is a block naturally found on coasts and desert biomes mostly going 4 blocks deep until it transitions into sandstone .
+
+No.1300
+ [transfered]
+ Connections: sand:0|shovel:11 +shovel:11|sand:0
+ Text: sand can be mined easily by hand , although using a shovel is faster , and gives resources regardless of the tool used .
+
+No.1322
+ [transfered]
+ Connections: sand:0|torches:17 torches:17|sand:0
+ Text: sand blocks can be suspended in indefinite defiance of gravity in this way , most famously using torches .
+
+No.1334
+ [transfered]
+ Connections: +sand:3|glass:10 glass:10|sand:3
+ Text: in addition , sand is used in the production of glass via smelting and with gunpowder in tnt .
+
+No.1336
+ [not transfered]
+ Connections: sand:6|stone:16 stone:16|sand:6
+ Text: when mining a large column\ of sand , a good method is to dig under the stone or dirt that it is resting on .
+
+No.1340
+ [transfered]
+ Connections: stone:4|sand:17 sand:17|stone:4
+ Text: mine the dirt or stone and the column falls into the placed object , quickly destroying the sand .
+
+No.1344
+ [transfered]
+ Connections: sand:4|sandstone:6 sandstone:6|sand:4
+ Text: a cofferdam with all sand and sandstone removed .
+
+No.1346
+ [transfered]
+ Connections: sand:4|sandstone:6 sandstone:6|sand:4
+ Text: if large quantities of sand and sandstone are needed , the ocean floor is a great source of both of these .
+
+No.1352
+ [transfered]
+ Connections: chest:8|sand:13 sand:13|chest:8
+ Text: with a large enough pit , a large chest can be filled with sand and sandstone fairly easily .
+
+No.1356
+ [transfered]
+ Connections: +seeds:0|wheat:5 seeds:0|wheat:17 wheat:5|seeds:0 +wheat:17|seeds:0
+ Text: seeds are used to grow wheat , and can be found by tilling grass or harvesting fully-grown wheat .
+
+No.1360
+ [transfered]
+ Connections: meal:1|seeds:8 +meal:1|wheat:10 seeds:8|meal:1 +seeds:8|wheat:10 wheat:10|meal:1 wheat:10|seeds:8
+ Text: bone meal can be used to instantly mature seeds into wheat .
+
+No.1364
+ [transfered]
+ Connections: +shears:0|wool:6 shears:0|wool:17 wool:6|shears:0 wool:17|shears:0
+ Text: shears can be used to obtain wool from sheep , leaves from trees and for quickly destroying wool blocks .
+
+No.1368
+ [not transfered]
+ Connections: wool:13|shearing:16 shearing:16|wool:13
+ Text: if a sheep is killed , it will only drop 1 block of wool , so shearing is definitely the way to go .
+
+No.1370
+ [transfered]
+ Connections: +shears:0|string:11 string:11|shears:0
+ Text: shears can also be used to destroy webs , which yields string .
+
+No.1372
+ [not transfered]
+ Connections: +shears:0|wool:7 *shears:0|mushrooms:13 +shears:0|string:18 shears:0|wool:23 wool:7|shears:0 wool:7|mushrooms:13 wool:7|string:18 mushrooms:13|shears:0 mushrooms:13|wool:7 mushrooms:13|string:18 mushrooms:13|wool:23 string:18|shears:0 string:18|wool:7 string:18|mushrooms:13 string:18|wool:23 wool:23|shears:0 wool:23|mushrooms:13 wool:23|string:18
+ Text: shears are a tool used to obtain wool from sheep , collect red mushrooms from mooshrooms , getting string from cobweb , destroying wool blocks more efficiently , and harvesting placeable leaf , vine , and tall grass blocks .
+
+No.1374
+ [not transfered]
+ Connections: +shears:0|wool:8 wool:8|shears:0
+ Text: shears are the most efficient way to acquire wool from sheep .
+
+No.1386
+ [transfered]
+ Connections: string:17|wool:27 wool:27|string:17
+ Text: they can also be used to destroy cobwebs in half a second to yield a piece of string , and serve as a faster way to collect wool .
+
+No.1392
+ [not transfered]
+ Connections: wool:6|shearing:12 +shearing:12|wool:6
+ Text: killing a sheep will drop 0-1 wool when killed , where as shearing yields 2-4 .
+
+No.1394
+ [not transfered]
+ Connections: wool:0|shears:17 +shears:17|wool:0
+ Text: wool is easiest to obtain from sheep , as it can be obtained by shearing them with shears or killing them .
+
+No.1404
+ [not transfered]
+ Connections: wool:0|string:9 +string:9|wool:0
+ Text: wool can also be crafted using 4 pieces of string , but it is much less dangerous for the player to shear sheep rather than hunt down spiders constantly .
+
+No.1410
+ [not transfered]
+ Connections: +shovels:0|sand:13 +shovels:0|clay:17 sand:13|shovels:0 sand:13|clay:17 clay:17|shovels:0 clay:17|sand:13
+ Text: shovels are auxiliary tools used to ease the process of collecting dirt , sand , gravel , clay and snow .
+
+No.1418
+ [transfered]
+ Connections: shovels:0|sticks:5 +sticks:5|shovels:0
+ Text: shovels are crafted using 2 sticks and 1 unit of a tool material : .
+
+No.1422
+ [not transfered]
+ Connections: red:6|shovel:23 shovel:23|red:6
+ Text: values marked with and highlighted in red indicate that no resource will be dropped when the block is destroyed by that quality of shovel .
+
+No.1426
+ [transfered]
+ Connections: shovels:0|sand:7 sand:7|shovels:0
+ Text: shovels are not effective at destroying soul sand and mycelium .
+
+No.1436
+ [transfered]
+ Connections: stairs:1|doors:6 doors:6|stairs:1
+ Text: cobblestone stairs occur in front of doors and inside churches .
+
+No.1442
+ [transfered]
+ Connections: stairs:0|planks:9 stairs:0|cobblestone:11 stairs:0|bricks:13 stairs:0|bricks:16 stairs:0|bricks:20 +planks:9|stairs:0 planks:9|cobblestone:11 planks:9|bricks:13 planks:9|bricks:16 planks:9|bricks:20 planks:9|stairs:24 +cobblestone:11|stairs:0 cobblestone:11|planks:9 cobblestone:11|bricks:13 cobblestone:11|bricks:16 cobblestone:11|bricks:20 cobblestone:11|stairs:24 +bricks:13|stairs:0 bricks:13|planks:9 bricks:13|cobblestone:11 bricks:13|stairs:24 +bricks:16|stairs:0 bricks:16|planks:9 bricks:16|cobblestone:11 bricks:16|stairs:24 +bricks:20|stairs:0 bricks:20|planks:9 bricks:20|cobblestone:11 bricks:20|stairs:24 stairs:24|planks:9 stairs:24|cobblestone:11 stairs:24|bricks:13 stairs:24|bricks:16 stairs:24|bricks:20
+ Text: stairs can be made using six of either wooden planks , cobblestone , bricks , stone bricks , or nether bricks , producing four stairs per craft .
+
+No.1460
+ [transfered]
+ Connections: torch:6|stair:11 stair:11|torch:6 stair:11|torch:15 torch:15|stair:11
+ Text: if one attempts to place a torch on top of a stair block , the torch will be placed instead on the closest available non-stair block .
+
+No.1462
+ [transfered]
+ Connections: sticks:0|planks:7 +planks:7|sticks:0
+ Text: sticks are created by placing two wooden planks in a crafting square , one above the other .
+
+No.1464
+ [transfered]
+ Connections: planks:2|wood:5 +planks:2|sticks:13 wood:5|planks:2 +wood:5|sticks:13 sticks:13|planks:2 sticks:13|wood:5
+ Text: 32 wooden planks or 8 wood blocks will create a full stack of sticks .
+
+No.1466
+ [transfered]
+ Connections: +sticks:0|torches:10 torches:10|sticks:0
+ Text: sticks are used primarily as the handles for tools , torches , and weapons .
+
+No.1470
+ [transfered]
+ Connections: +sticks:0|fence:10 +sticks:0|ladder:12 fence:10|sticks:0 fence:10|ladder:12 ladder:12|sticks:0 ladder:12|fence:10
+ Text: sticks are the only building material required to craft a fence or ladder .
+
+No.1472
+ [transfered]
+ Connections: sticks:0|furnaces:10 furnaces:10|sticks:0
+ Text: sticks can also be used as a fuel source for furnaces .
+
+No.1474
+ [transfered]
+ Connections: sticks:5|planks:13 planks:13|sticks:5
+ Text: though they are renewable , sticks are a less efficient fuel than wooden planks , and require 2 sticks to be burned per furnace operation .
+
+No.1480
+ [not transfered]
+ Connections: planks:17|sticks:28 sticks:28|planks:17
+ Text: it is not recommended to smelt sticks if they have just been crafted , since the two planks used can burn for 30 seconds , while the four sticks created burn for 20 seconds .
+
+No.1486
+ [not transfered]
+ Connections: stone:8|brick:29 stone:8|brick:33 brick:29|stone:8 brick:33|stone:8
+ Text: in the beta stages of the game , stone brick that the player crafts appeared to have a very small chance of having the object change to cracked stone brick or mossy stone brick when harvested .
+
+No.1492
+ [transfered]
+ Connections: bricks:1|stone:8 +stone:8|bricks:1
+ Text: stone bricks can be crafted by placing 4 stone blocks in a square , meaning they can be crafted without a crafting table .
+
+No.1498
+ [not transfered]
+ Connections: string:0|chest:10 chest:10|string:0
+ Text: string has a 4⁄5 chance of spawning in a dungeon chest , where it will appear in stacks of 1 - 4 units .
+
+No.1502
+ [transfered]
+ Connections: shears:21|string:24 string:24|shears:21
+ Text: in abandoned mine shafts and some room of strongholds one might find cobwebs which can be slashed with a sword or shears to get string .
+
+No.1506
+ [transfered]
+ Connections: +string:0|rod:14 rod:14|string:0
+ Text: string is a vital component to two recipes , the bow and the fishing rod .
+
+No.1508
+ [transfered]
+ Connections: +string:0|wool:7 string:0|wool:15 wool:7|string:0 wool:15|string:0
+ Text: string can also be used to make wool , but this is rather wasteful as wool can be obtained from sheep .
+
+No.1510
+ [transfered]
+ Connections: +string:8|rods:13 rods:13|string:8
+ Text: it is more economical that you save your string for making more fishing rods or more bows that can be used to make dispensers .
+
+No.1512
+ [transfered]
+ Connections: cane:1|sand:11 sand:11|cane:1
+ Text: sugar cane can be found on grass , dirt , and sand as long as it is adjacent to water on at least one side .
+
+No.1520
+ [transfered]
+ Connections: +cane:1|sugar:7 +cane:1|paper:9 sugar:7|cane:1 sugar:7|paper:9 paper:9|cane:1 paper:9|sugar:7
+ Text: sugar cane is the only source of sugar and paper .
+
+No.1522
+ [transfered]
+ Connections: sugar:0|paper:13 paper:13|sugar:0
+ Text: sugar is a key component of cake and is used in brewing ; paper is required to craft books and maps .
+
+No.1524
+ [not transfered]
+ Connections: cane:1|meal:42 meal:42|cane:1
+ Text: sugar cane has the same properties as the cactus : planting it does not require the land to be tilled beforehand , removing a lower portion of the plant causes all the sections above it to drop resources , and using bone meal on the plant does not cause it to grow instantly .
+
+No.1540
+ [not transfered]
+ Connections: cane:1|sand:11 sand:11|cane:1
+ Text: sugar cane must be planted on a grass , dirt or sand block directly adjacent to water .
+
+No.1560
+ [transfered]
+ Connections: cane:1|wheat:6 wheat:6|cane:1
+ Text: sugar cane , like saplings , wheat , and cacti , will only grow if the chunk they are on is loaded into memory , so the player should not venture too far from the field .
+
+No.1568
+ [transfered]
+ Connections: sand:11|cane:25 cane:25|sand:11
+ Text: each unit of the farm has 4 water blocks and 12 sand , allowing 75 % of the area to be dedicated to the sugar cane .
+
+No.1574
+ [not transfered]
+ Connections: canes:14|cane:27 canes:14|cane:37 cane:27|canes:14 cane:37|canes:14
+ Text: with the use of pistons it becomes possible to automate a harvest of sugar canes : a piston is placed to extend into the middle of a cane , which will cause the upper segments of the cane to become items when the piston is triggered .
+
+No.1584
+ [transfered]
+ Connections: sugar:0|cane:8 +cane:8|sugar:0
+ Text: sugar is a food item derived from sugar cane .
+
+No.1592
+ [transfered]
+ Connections: sugar:1|cane:4 cane:4|sugar:1
+ Text: neither sugar nor sugar cane can be eaten by themselves .
+
+No.1598
+ [transfered]
+ Connections: cane:22|wheat:27 wheat:27|cane:22
+ Text: tall grass is not a solid block , but rather an aesthetic plant that does not obstruct movement , similar to sugar cane , dead bush and wheat .
+
+No.1606
+ [transfered]
+ Connections: seeds:7|hoe:12 hoe:12|seeds:7 hoe:12|seeds:18 seeds:18|hoe:12
+ Text: all three variants will occasionally drop wheat seeds when broken ; a hoe is not required to produce seeds from this block .
+
+No.1614
+ [transfered]
+ Connections: sand:23|seeds:28 seeds:28|sand:23
+ Text: the tall grass variant is not naturally-occurring and even though it looks like a dead shrub , it can not be placed on sand , and will drop seeds like the other variants of tall grass .
+
+No.1618
+ [transfered]
+ Connections: seeds:10|wheat:19 +wheat:19|seeds:10
+ Text: harvesting tall grass is the primary way of obtaining wheat seeds , the secondary way being harvesting fully grown wheat .
+
+No.1620
+ [transfered]
+ Connections: +wheat:1|seeds:5 seeds:5|wheat:1
+ Text: because wheat drops many more seeds , tall grass is only useful in the start of the game .
+
+No.1630
+ [transfered]
+ Connections: +coal:8|torches:12 torches:12|coal:8
+ Text: from just one log and eight pieces of coal or charcoal 32 torches can be made , making them an easily obtainable item .
+
+No.1648
+ [transfered]
+ Connections: brick:3|sand:8 brick:3|torch:19 sand:8|brick:3 sand:8|torch:19 torch:19|brick:3 torch:19|sand:8
+ Text: being a solid brick , this even prevents sand and gravel from falling down past a square with a torch on it .
+
+No.1650
+ [transfered]
+ Connections: sand:0|torch:9 sand:0|torch:17 torch:9|sand:0 torch:17|sand:0
+ Text: sand or gravel break when they fall on a torch if they are placed directly above a torch they act as if they were on any other solid material , allowing them to be used as environmental triggers , such as airlocks .
+
+No.1652
+ [transfered]
+ Connections: torches:4|torch:9 torch:9|torches:4
+ Text: players can pass through torches , and therefore a torch can be placed directly under the player without the player needing to move or jump .
+
+No.1664
+ [not transfered]
+ Connections: torches:0|chests:12 torches:0|torch:19 torches:0|torch:31 torches:0|torch:41 chests:12|torches:0 chests:12|torch:19 chests:12|torch:31 chests:12|torch:41 torch:19|torches:0 torch:19|chests:12 torch:31|torches:0 torch:31|chests:12 torch:41|torches:0 torch:41|chests:12
+ Text: torches may be placed on the sides of openable blocks such as chests by having another block which a torch can not be placed on also facing the cube where the torch should be placed , and attempting to place a torch on it .
+
+No.1668
+ [transfered]
+ Connections: torch:1|chest:12 torch:1|torches:17 torch:1|fences:22 chest:12|torch:1 chest:12|torches:17 chest:12|fences:22 torches:17|torch:1 torches:17|chest:12 torches:17|fences:22 fences:22|torch:1 fences:22|chest:12 fences:22|torches:17
+ Text: the torch will instead attach to an acceptable block such as the chest ; since beta 1.7 torches can be placed on fences .
+
+No.1678
+ [transfered]
+ Connections: +seeds:5|wheat:13 wheat:13|seeds:5
+ Text: when left alone , wheat seeds planted in farmland will grow to become wheat which can be harvested .
+
+No.1690
+ [transfered]
+ Connections: meal:1|seeds:8 seeds:8|meal:1
+ Text: bone meal can be used on the planted seeds to instantly mature the plants to the last stage of growth .
+
+No.1692
+ [transfered]
+ Connections: seeds:11|wheat:13 wheat:13|seeds:11
+ Text: the image below shows the stages of growth from newly planted seeds to wheat that is ready for harvesting .
+
+No.1704
+ [transfered]
+ Connections: *wheat:9|seeds:14 seeds:14|wheat:9
+ Text: when fully grown , wheat crops will drop 1 wheat as well as 0-3 seeds .
+
+No.1706
+ [transfered]
+ Connections: seeds:9|wheat:12 wheat:12|seeds:9
+ Text: if they are harvested early , they will drop seeds but no wheat .
+
+No.1714
+ [transfered]
+ Connections: +seeds:0|wheat:3 seeds:0|chests:17 wheat:3|seeds:0 wheat:3|chests:17 chests:17|seeds:0 chests:17|wheat:3
+ Text: seeds for growing wheat can be obtained by breaking tall grass or from inside a dungeon 's chests .
+
+No.1716
+ [not transfered]
+ Connections: +wheat:0|bread:5 bread:5|wheat:0
+ Text: wheat can be crafted into bread , cake , or cookies .
+
+No.1718
+ [transfered]
+ Connections: +wheat:1|seeds:6 seeds:6|wheat:1
+ Text: harvesting wheat generates 0 to 3 seeds that can be replanted to produce more crops .
+
+No.1728
+ [transfered]
+ Connections: seeds:13|seed:22 seed:22|seeds:13
+ Text: as of beta 1.8 , fully grown crops will drop up to 3 seeds , but immature crops will only drop 0-1 seed .
+
+No.1734
+ [not transfered]
+ Connections: wheat:1|bread:13 +wheat:10|bread:13 bread:13|wheat:1 bread:13|wheat:10
+ Text: using wheat to make cookies is more efficient than using wheat to make bread , but the resources to make cookies can only be found in dungeons .
+
+No.1736
+ [not transfered]
+ Connections: wheat:0|seeds:13 wheat:0|seeds:22 seeds:13|wheat:0 seeds:13|wheat:16 wheat:16|seeds:13 wheat:16|seeds:22 seeds:22|wheat:0 seeds:22|wheat:16
+ Text: wheat does not appear in the statistics page , as it appears as seeds due to wheat being a re-textured version of seeds when planted .
+
+No.1738
+ [not transfered]
+ Connections: wheat:1|chests:7 chests:7|wheat:1
+ Text: 1-4 wheat can be found in reward chests in dungeons .
+
+No.1742
+ [transfered]
+ Connections: planks:1|wood:12 +wood:12|planks:1
+ Text: wooden planks are a block that is crafted by the player from wood .
+
+No.1764
+ [transfered]
+ Connections: +planks:1|axe:10 +planks:1|pickaxe:12 +planks:1|shovel:16 +planks:1|hoe:19 +planks:1|chest:27 +planks:1|bowl:29 +planks:1|door:33 +planks:1|stick:37 +planks:1|stairs:39 +planks:1|fence:41 +planks:1|bed:50 axe:10|planks:1 axe:10|pickaxe:12 axe:10|shovel:16 axe:10|hoe:19 axe:10|chest:27 axe:10|bowl:29 axe:10|door:33 axe:10|stick:37 axe:10|stairs:39 axe:10|fence:41 axe:10|bed:50 pickaxe:12|planks:1 pickaxe:12|axe:10 pickaxe:12|shovel:16 pickaxe:12|hoe:19 pickaxe:12|chest:27 pickaxe:12|bowl:29 pickaxe:12|door:33 pickaxe:12|stick:37 pickaxe:12|stairs:39 pickaxe:12|fence:41 pickaxe:12|bed:50 shovel:16|planks:1 shovel:16|axe:10 shovel:16|pickaxe:12 shovel:16|hoe:19 shovel:16|chest:27 shovel:16|bowl:29 shovel:16|door:33 shovel:16|stick:37 shovel:16|stairs:39 shovel:16|fence:41 shovel:16|bed:50 hoe:19|planks:1 hoe:19|axe:10 hoe:19|pickaxe:12 hoe:19|shovel:16 hoe:19|chest:27 hoe:19|bowl:29 hoe:19|door:33 hoe:19|stick:37 hoe:19|stairs:39 hoe:19|fence:41 hoe:19|bed:50 chest:27|planks:1 chest:27|axe:10 chest:27|pickaxe:12 chest:27|shovel:16 chest:27|hoe:19 chest:27|bowl:29 chest:27|door:33 chest:27|stick:37 chest:27|stairs:39 chest:27|fence:41 chest:27|bed:50 bowl:29|planks:1 bowl:29|axe:10 bowl:29|pickaxe:12 bowl:29|shovel:16 bowl:29|hoe:19 bowl:29|chest:27 bowl:29|door:33 bowl:29|stick:37 bowl:29|stairs:39 bowl:29|fence:41 bowl:29|bed:50 door:33|planks:1 door:33|axe:10 door:33|pickaxe:12 door:33|shovel:16 door:33|hoe:19 door:33|chest:27 door:33|bowl:29 door:33|stick:37 door:33|stairs:39 door:33|fence:41 door:33|bed:50 stick:37|planks:1 stick:37|axe:10 stick:37|pickaxe:12 stick:37|shovel:16 stick:37|hoe:19 stick:37|chest:27 stick:37|bowl:29 stick:37|door:33 stick:37|stairs:39 stick:37|fence:41 stick:37|bed:50 stairs:39|planks:1 stairs:39|axe:10 stairs:39|pickaxe:12 stairs:39|shovel:16 stairs:39|hoe:19 stairs:39|chest:27 stairs:39|bowl:29 stairs:39|door:33 stairs:39|stick:37 stairs:39|fence:41 stairs:39|bed:50 fence:41|planks:1 fence:41|axe:10 fence:41|pickaxe:12 fence:41|shovel:16 fence:41|hoe:19 fence:41|chest:27 fence:41|bowl:29 fence:41|door:33 fence:41|stick:37 fence:41|stairs:39 fence:41|bed:50 bed:50|planks:1 bed:50|axe:10 bed:50|pickaxe:12 bed:50|shovel:16 bed:50|hoe:19 bed:50|chest:27 bed:50|bowl:29 bed:50|door:33 bed:50|stick:37 bed:50|stairs:39 bed:50|fence:41
+ Text: wooden planks are used in many crafting recipes : wooden axe , pickaxe , sword , shovel , and hoe ; pressure plate , crafting table , chest , bowl , sign , door , boat , stick , stairs , fence , jukebox , bookshelf , note block , bed , and slab .
+
+No.1766
+ [not transfered]
+ Connections: planks:0|furnace:6 planks:0|wood:28 planks:0|furnace:37 furnace:6|planks:0 furnace:6|wood:28 wood:28|planks:0 wood:28|furnace:6 wood:28|furnace:37 furnace:37|planks:0 furnace:37|wood:28
+ Text: planks can be used in a furnace to achieve burning for 15 seconds , which can smelt 1 1\ items , although it is more efficient to turn the wood blocks into charcoal by cooking them in the furnace .
+
+No.1776
+ [not transfered]
+ Connections: wool:0|shears:8 +shears:8|wool:0
+ Text: wool is harvested by right-clicking a sheep with shears or killing it .
+
+No.1782
+ [transfered]
+ Connections: +wool:0|beds:6 wool:0|sand:32 beds:6|wool:0 beds:6|wool:15 beds:6|sand:32 wool:15|beds:6 wool:15|sand:32 sand:32|wool:0 sand:32|beds:6 sand:32|wool:15
+ Text: wool is a key component of beds and paintings and suitable for docks , as wool blocks will stop boats and absorb some impact from collisions in a manner similar to soul sand .
+
+No.1784
+ [transfered]
+ Connections: +wool:0|beds:14 beds:14|wool:0
+ Text: wool is commonly used as decoration , as carpeting in houses or large ` beds ' .
+
+No.1794
+ [transfered]
+ Connections: wool:5|torches:28 torches:28|wool:5
+ Text: aside the sheep , black wool blocks can also be found naturally in npc villages where they lie on top of a fence post , surrounded by 4 torches .
+
+No.1796
+ [transfered]
+ Connections: wool:0|string:5 +string:5|wool:0
+ Text: wool can be crafted from string if required .
+
+No.1800
+ [not transfered]
+ Connections: string:6|beds:15 beds:15|string:6
+ Text: but with the adventure update , string can be collected very easily for bows and beds for use underground .
+

@@ -1,0 +1,660 @@
+0:AJ/ADJ 1:VN/NOUN 2:PR/ADP 3:NN/NOUN 4:#/# 
+gold: 1-0 4-1 1-2 2-3 
+pred: 4-1 1-0 1-2 2-3 
+
+0:PR/ADP 1:NN/NOUN 2:VV/VERB 3:AJ/ADJ 4:VN/NOUN 5:IR/. 6:VN/NOUN 7:IR/. 8:PR/ADP 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 2-0 0-1 11-2 4-3 2-4 4-5 4-6 4-7 4-8 8-9 2-10 
+pred: 11-2 2-0 0-1 2-6 2-5 2-4 4-3 6-8 6-7 8-9 9-10 
+
+0:PO/PRON 1:BV/VERB 2:AJ/ADJ 3:PR/ADP 4:PO/PRON 5:NN/NOUN 6:PR/ADP 7:NN/NOUN 8:IP/. 9:#/# 
+gold: 1-0 9-1 1-2 1-3 5-4 3-5 1-6 6-7 1-8 
+pred: 9-1 1-0 1-6 1-3 1-2 3-5 5-4 6-7 7-8 
+
+0:PO/PRON 1:VV/VERB 2:AB/ADV 3:PR/ADP 4:AJ/ADJ 5:NN/NOUN 6:++/CONJ 7:VN/NOUN 8:IP/. 9:#/# 
+gold: 1-0 9-1 1-2 1-3 5-4 3-5 7-6 5-7 1-8 
+pred: 9-1 1-0 1-8 1-3 1-2 3-7 3-5 5-4 7-6 
+
+0:PO/PRON 1:NN/NOUN 2:PO/PRON 3:PR/ADP 4:PO/PRON 5:NN/NOUN 6:VV/VERB 7:AJ/ADJ 8:VV/VERB 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 1-0 8-1 6-2 6-3 5-4 3-5 1-6 6-7 11-8 8-9 8-10 
+pred: 11-6 6-1 6-2 2-3 3-5 5-4 1-0 6-10 6-9 9-7 9-8 
+
+0:NN/NOUN 1:PO/PRON 2:NN/NOUN 3:AV/VERB 4:NN/NOUN 5:++/CONJ 6:SV/VERB 7:UK/CONJ 8:AJ/ADJ 9:VV/VERB 10:IP/. 11:#/# 
+gold: 2-0 2-1 3-2 11-3 3-4 6-5 3-6 8-7 6-8 6-9 3-10 
+pred: 11-3 3-0 3-2 2-1 3-5 3-4 5-9 5-6 6-8 6-7 9-10 
+
+0:NN/NOUN 1:VV/VERB 2:#/# 
+gold: 1-0 2-1 
+pred: 2-1 1-0 
+
+0:NN/NOUN 1:VV/VERB 2:#/# 
+gold: 1-0 2-1 
+pred: 2-1 1-0 
+
+0:PO/PRON 1:NN/NOUN 2:VV/VERB 3:PR/ADP 4:NN/NOUN 5:VV/VERB 6:PR/ADP 7:PO/PRON 8:NN/NOUN 9:IP/. 10:#/# 
+gold: 1-0 2-1 10-2 2-3 3-4 4-5 5-6 8-7 6-8 2-9 
+pred: 10-2 2-1 1-0 2-5 2-3 3-4 5-9 5-6 6-8 8-7 
+
+0:NN/NOUN 1:NN/NOUN 2:VV/VERB 3:PR/ADP 4:VN/NOUN 5:PO/ADP 6:RO/NUM 7:NN/NOUN 8:PR/ADP 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 1-0 2-1 11-2 2-3 3-4 7-5 7-6 4-7 7-8 8-9 2-10 
+pred: 11-2 2-1 1-0 2-10 2-8 2-3 3-4 4-5 5-7 7-6 8-9 
+
+0:TP/PRON 1:NN/NOUN 2:PR/ADP 3:NN/NOUN 4:PR/ADP 5:AB/ADV 6:AJ/ADJ 7:NN/NOUN 8:#/# 
+gold: 1-0 8-1 1-2 2-3 3-4 7-5 7-6 4-7 
+pred: 8-1 1-0 1-2 2-3 3-4 4-7 7-6 6-5 
+
+0:AB/ADV 1:VV/VERB 2:NN/NOUN 3:PR/ADP 4:RO/NUM 5:NN/NOUN 6:IP/. 7:#/# 
+gold: 1-0 7-1 1-2 1-3 5-4 3-5 1-6 
+pred: 7-1 1-0 1-6 1-2 2-3 3-5 5-4 
+
+0:NN/NOUN 1:PR/ADP 2:VN/NOUN 3:HV/VERB 4:VV/VERB 5:IP/. 6:#/# 
+gold: 3-0 0-1 1-2 6-3 3-4 3-5 
+pred: 6-3 3-0 0-1 1-2 3-4 4-5 
+
+0:NN/NOUN 1:VV/VERB 2:PR/ADP 3:NN/NOUN 4:IP/. 5:#/# 
+gold: 1-0 5-1 1-2 2-3 1-4 
+pred: 5-1 1-0 1-4 1-2 2-3 
+
+0:NN/NOUN 1:VV/VERB 2:AB/ADV 3:PR/ADP 4:EN/DET 5:TP/PRON 6:NN/NOUN 7:PR/ADP 8:RO/NUM 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 1-0 11-1 1-2 1-3 6-4 6-5 3-6 6-7 9-8 7-9 1-10 
+pred: 11-1 1-0 1-10 1-3 1-2 3-6 6-4 6-5 6-7 7-9 9-8 
+
+0:NN/NOUN 1:IQ/. 2:#/# 
+gold: 2-0 0-1 
+pred: 2-0 0-1 
+
+0:AJ/ADJ 1:TP/PRON 2:NN/NOUN 3:VV/VERB 4:PR/ADP 5:RO/NUM 6:NN/NOUN 7:IP/. 8:#/# 
+gold: 1-0 2-1 3-2 8-3 3-4 6-5 4-6 3-7 
+pred: 8-3 3-2 2-0 2-1 3-7 3-4 4-6 6-5 
+
+0:NN/NOUN 1:PR/ADP 2:NN/NOUN 3:#/# 
+gold: 3-0 0-1 1-2 
+pred: 3-0 0-1 1-2 
+
+0:AJ/ADJ 1:VV/VERB 2:PO/PRON 3:PR/ADP 4:EN/DET 5:AJ/ADJ 6:NN/NOUN 7:PR/ADP 8:NN/NOUN 9:IP/. 10:#/# 
+gold: 1-0 10-1 1-2 1-3 6-4 6-5 3-6 6-7 7-8 1-9 
+pred: 10-1 1-0 1-7 1-3 1-2 3-6 6-4 6-5 7-8 8-9 
+
+0:PR/ADP 1:AJ/ADJ 2:PR/ADP 3:NN/NOUN 4:#/# 
+gold: 4-0 0-1 0-2 2-3 
+pred: 4-0 0-1 1-2 2-3 
+
+0:VV/VERB 1:PO/PRON 2:++/CONJ 3:VV/VERB 4:PO/PRON 5:PR/ADP 6:NN/NOUN 7:IP/. 8:#/# 
+gold: 8-0 0-1 3-2 0-3 3-4 3-5 5-6 0-7 
+pred: 8-0 0-2 0-1 2-7 2-3 3-5 3-4 5-6 
+
+0:VN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:EN/DET 1:AJ/ADJ 2:++/CONJ 3:AJ/ADJ 4:NN/NOUN 5:VV/VERB 6:IP/. 7:#/# 
+gold: 4-0 4-1 3-2 1-3 5-4 7-5 5-6 
+pred: 7-5 5-4 4-0 4-1 4-2 4-3 5-6 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:NN/NOUN 1:AV/VERB 2:AJ/ADJ 3:++/CONJ 4:AJ/ADJ 5:IP/. 6:#/# 
+gold: 1-0 6-1 1-2 4-3 2-4 1-5 
+pred: 6-1 1-0 1-5 1-3 3-2 3-4 
+
+0:PO/PRON 1:AJ/ADJ 2:AN/NOUN 3:HV/VERB 4:NN/NOUN 5:UK/CONJ 6:NN/NOUN 7:IP/. 8:#/# 
+gold: 2-0 2-1 3-2 8-3 3-4 6-5 3-6 3-7 
+pred: 8-3 3-2 2-0 2-1 3-7 3-6 3-4 6-5 
+
+0:PO/PRON 1:AJ/ADJ 2:NN/NOUN 3:VV/VERB 4:AB/ADV 5:AB/ADV 6:PR/ADP 7:PO/PRON 8:AJ/ADJ 9:IP/. 10:#/# 
+gold: 2-0 2-1 3-2 10-3 3-4 3-5 3-6 8-7 6-8 3-9 
+pred: 10-3 3-2 2-0 2-1 3-9 3-8 8-4 8-5 8-6 6-7 
+
+0:++/CONJ 1:VV/VERB 2:AB/ADV 3:PO/PRON 4:SV/VERB 5:VV/VERB 6:PR/ADP 7:PO/PRON 8:PO/PRON 9:AN/NOUN 10:IU/. 11:#/# 
+gold: 1-0 11-1 1-2 4-3 1-4 4-5 5-6 9-7 9-8 5-9 1-10 
+pred: 11-5 5-0 0-4 0-1 1-2 4-3 5-10 5-6 6-9 9-7 9-8 
+
+0:PR/ADP 1:NN/NOUN 2:VV/VERB 3:PO/PRON 4:AN/NOUN 5:PR/ADP 6:IC/. 7:AJ/ADJ 8:NN/NOUN 9:IC/. 10:IP/. 11:#/# 
+gold: 2-0 0-1 11-2 4-3 2-4 2-5 8-6 8-7 5-8 8-9 2-10 
+pred: 11-2 2-0 0-1 2-10 2-9 2-4 4-3 4-5 5-8 8-7 7-6 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:PO/PRON 1:KV/VERB 2:IM/NOUN 3:VV/VERB 4:AB/ADV 5:PR/ADP 6:RO/NUM 7:PR/ADP 8:RO/NUM 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 1-0 11-1 3-2 1-3 3-4 3-5 9-6 9-7 7-8 5-9 1-10 
+pred: 11-3 3-2 2-0 2-1 3-10 3-7 3-4 4-5 5-6 7-9 9-8 
+
+0:PO/PRON 1:VV/VERB 2:PO/PRON 3:PR/ADP 4:PO/PRON 5:PO/PRON 6:IP/. 7:#/# 
+gold: 1-0 7-1 1-2 1-3 3-4 4-5 1-6 
+pred: 7-1 1-0 1-5 1-3 1-2 3-4 5-6 
+
+0:AJ/ADJ 1:NN/NOUN 2:IK/. 3:AN/NOUN 4:++/CONJ 5:AN/NOUN 6:VV/VERB 7:AJ/ADJ 8:NN/NOUN 9:IP/. 10:#/# 
+gold: 1-0 6-1 3-2 1-3 5-4 3-5 10-6 8-7 6-8 6-9 
+pred: 10-6 6-3 6-5 5-4 3-0 3-1 1-2 6-9 6-8 8-7 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:PO/PRON 1:NN/NOUN 2:AV/VERB 3:AB/ADV 4:PO/PRON 5:IP/. 6:#/# 
+gold: 1-0 2-1 6-2 2-3 2-4 2-5 
+pred: 6-2 2-1 1-0 2-5 2-4 2-3 
+
+0:VV/VERB 1:AB/ADV 2:PO/PRON 3:AJ/ADJ 4:NN/NOUN 5:IP/. 6:#/# 
+gold: 6-0 0-1 4-2 4-3 0-4 0-5 
+pred: 6-0 0-5 0-4 0-1 4-2 4-3 
+
+0:PO/PRON 1:AV/VERB 2:AB/ADV 3:NN/NOUN 4:IT/. 5:PO/PRON 6:AV/VERB 7:PO/PRON 8:AN/NOUN 9:IP/. 10:#/# 
+gold: 1-0 10-1 1-2 1-3 1-4 6-5 1-6 8-7 6-8 1-9 
+pred: 10-1 1-0 1-6 1-2 6-3 6-5 3-4 6-9 6-8 8-7 
+
+0:NN/NOUN 1:AV/VERB 2:AB/ADV 3:PR/ADP 4:NN/NOUN 5:TP/PRON 6:++/CONJ 7:AB/ADV 8:AJ/ADJ 9:IP/. 10:#/# 
+gold: 1-0 10-1 1-2 5-3 3-4 1-5 8-6 8-7 1-8 1-9 
+pred: 10-1 1-0 1-6 1-5 1-2 2-3 3-4 6-9 6-8 8-7 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:PO/PRON 1:FV/VERB 2:AB/ADP 3:PO/PRON 4:NN/NOUN 5:NN/NOUN 6:PR/ADP 7:EN/DET 8:NN/NOUN 9:VN/NOUN 10:IP/. 11:#/# 
+gold: 1-0 11-1 1-2 4-3 1-4 1-5 1-6 8-7 9-8 6-9 1-10 
+pred: 11-1 1-0 1-10 1-9 1-2 2-4 4-3 9-5 5-6 6-8 8-7 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:EN/DET 1:NN/NOUN 2:IT/. 3:EN/DET 4:NN/NOUN 5:#/# 
+gold: 1-0 5-1 1-2 4-3 1-4 
+pred: 5-4 4-1 4-3 1-0 1-2 
+
+0:NN/NOUN 1:PR/ADP 2:PO/PRON 3:NN/NOUN 4:AV/VERB 5:AB/ADV 6:AJ/ADJ 7:IP/. 8:#/# 
+gold: 4-0 0-1 3-2 1-3 8-4 6-5 4-6 4-7 
+pred: 8-4 4-0 0-1 1-3 3-2 4-7 4-6 6-5 
+
+0:VV/VERB 1:PR/ADP 2:PO/PRON 3:#/# 
+gold: 3-0 0-1 0-2 
+pred: 3-0 0-1 1-2 
+
+0:PO/PRON 1:VV/VERB 2:PO/PRON 3:PR/ADP 4:VN/NOUN 5:PR/ADP 6:NN/NOUN 7:#/# 
+gold: 1-0 7-1 1-2 1-3 3-4 4-5 5-6 
+pred: 7-1 1-0 1-3 1-2 3-4 4-5 5-6 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:NN/NOUN 1:IK/. 2:AB/ADV 3:ID/VERB 4:NN/NOUN 5:IK/. 6:NN/NOUN 7:IK/. 8:NN/NOUN 9:#/# 
+gold: 9-0 0-1 4-2 2-3 0-4 6-5 4-6 8-7 6-8 
+pred: 9-3 3-0 3-2 0-1 3-8 3-4 4-5 8-6 6-7 
+
+0:NN/NOUN 1:IK/. 2:PR/ADP 3:PO/PRON 4:++/CONJ 5:PO/PRON 6:VN/NOUN 7:#/# 
+gold: 7-0 0-1 0-2 6-3 5-4 3-5 2-6 
+pred: 7-0 0-2 0-1 2-6 6-3 6-4 6-5 
+
+0:NN/NOUN 1:AV/VERB 2:PO/PRON 3:NN/NOUN 4:#/# 
+gold: 1-0 4-1 3-2 1-3 
+pred: 4-1 1-0 1-3 3-2 
+
+0:EN/DET 1:AJ/ADJ 2:NN/NOUN 3:#/# 
+gold: 2-0 2-1 3-2 
+pred: 3-2 2-0 2-1 
+
+0:AB/ADV 1:ID/X 2:VV/VERB 3:PO/PRON 4:NN/NOUN 5:RO/NUM 6:PR/ADP 7:NN/NOUN 8:IP/. 9:#/# 
+gold: 2-0 0-1 9-2 2-3 5-4 2-5 5-6 6-7 2-8 
+pred: 9-2 2-0 2-1 2-8 2-4 4-3 8-5 8-6 6-7 
+
+0:PO/PRON 1:PO/PRON 2:VN/NOUN 3:PR/ADP 4:VN/NOUN 5:VV/VERB 6:AB/ADV 7:ID/X 8:NN/NOUN 9:RO/NUM 10:IP/. 11:#/# 
+gold: 2-0 2-1 5-2 2-3 3-4 11-5 5-6 6-7 9-8 5-9 5-10 
+pred: 11-5 5-0 5-2 2-1 2-3 3-4 5-7 5-6 7-10 10-8 10-9 
+
+0:AB/ADV 1:FV/VERB 2:PO/ADP 3:EN/DET 4:AJ/ADJ 5:NN/NOUN 6:NN/NOUN 7:IP/. 8:#/# 
+gold: 1-0 8-1 1-2 5-3 5-4 6-5 1-6 1-7 
+pred: 8-1 1-0 1-7 1-6 6-2 6-5 5-3 5-4 
+
+0:AB/ADV 1:VV/VERB 2:NN/NOUN 3:VN/NOUN 4:IK/. 5:PO/PRON 6:AB/ADV 7:VV/VERB 8:PR/ADP 9:NN/NOUN 10:RO/NUM 11:IP/. 12:#/# 
+gold: 1-0 12-1 3-2 1-3 3-4 7-5 7-6 3-7 7-8 10-9 8-10 1-11 
+pred: 12-1 1-0 1-11 1-4 1-3 3-2 11-7 11-10 7-5 7-6 7-8 8-9 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:PO/PRON 1:AJ/ADJ 2:HV/VERB 3:AB/ADV 4:AB/ADV 5:AJ/ADJ 6:NN/NOUN 7:IP/. 8:#/# 
+gold: 1-0 2-1 8-2 2-3 5-4 6-5 2-6 2-7 
+pred: 8-2 2-0 2-1 2-7 2-6 6-5 5-3 5-4 
+
+0:RO/NUM 1:NN/NOUN 2:PR/ADP 3:NN/NOUN 4:PR/ADP 5:NN/NOUN 6:AV/VERB 7:AJ/ADJ 8:++/CONJ 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 1-0 6-1 1-2 2-3 3-4 4-5 11-6 6-7 9-8 7-9 6-10 
+pred: 11-6 6-1 1-0 1-2 2-3 3-4 4-5 6-10 6-9 9-7 9-8 
+
+0:PO/PRON 1:VN/NOUN 2:VV/VERB 3:RO/NUM 4:NN/NOUN 5:IP/. 6:#/# 
+gold: 1-0 2-1 6-2 4-3 2-4 2-5 
+pred: 6-2 2-1 1-0 2-5 2-4 4-3 
+
+0:PO/PRON 1:PO/PRON 2:VV/VERB 3:AB/ADV 4:PR/ADP 5:VN/NOUN 6:VV/VERB 7:PR/ADP 8:NN/NOUN 9:IP/. 10:#/# 
+gold: 6-0 2-1 0-2 2-3 2-4 4-5 10-6 6-7 7-8 6-9 
+pred: 10-2 2-0 2-1 2-6 6-3 3-4 4-5 6-9 6-7 7-8 
+
+0:PO/PRON 1:VN/NOUN 2:VV/VERB 3:RO/NUM 4:NN/NOUN 5:IP/. 6:#/# 
+gold: 1-0 2-1 6-2 4-3 2-4 2-5 
+pred: 6-2 2-1 1-0 2-5 2-4 4-3 
+
+0:AB/ADV 1:PR/ADP 2:AJ/ADJ 3:AV/VERB 4:NN/NOUN 5:AB/ADV 6:AJ/ADJ 7:IP/. 8:#/# 
+gold: 1-0 3-1 1-2 8-3 3-4 6-5 3-6 3-7 
+pred: 8-3 3-0 0-1 1-2 3-7 3-6 3-4 6-5 
+
+0:AJ/ADJ 1:SV/NOUN 2:AB/ADV 3:ID/X 4:VV/VERB 5:PO/PRON 6:VV/VERB 7:PR/ADP 8:NN/NOUN 9:IP/. 10:#/# 
+gold: 1-0 10-1 1-2 2-3 1-4 4-5 4-6 6-7 7-8 1-9 
+pred: 10-4 4-1 4-2 4-3 1-0 4-6 6-5 6-9 6-7 7-8 
+
+0:PO/PRON 1:VV/VERB 2:AB/ADV 3:PR/ADP 4:PO/PRON 5:NN/NOUN 6:UK/CONJ 7:NN/NOUN 8:IP/. 9:#/# 
+gold: 1-0 9-1 1-2 1-3 5-4 3-5 7-6 5-7 1-8 
+pred: 9-1 1-0 1-8 1-3 1-2 3-7 3-5 5-4 7-6 
+
+0:VV/VERB 1:UK/CONJ 2:PO/PRON 3:QV/VERB 4:VV/VERB 5:PO/PRON 6:PO/PRON 7:VV/VERB 8:PR/ADP 9:PO/PRON 10:IU/. 11:#/# 
+gold: 11-0 3-1 3-2 0-3 3-4 4-5 7-6 5-7 7-8 8-9 0-10 
+pred: 11-0 0-10 0-1 1-4 1-3 3-2 4-8 4-7 7-5 7-6 8-9 
+
+0:PR/ADP 1:PO/PRON 2:QV/VERB 3:PO/PRON 4:VV/VERB 5:PR/ADP 6:NN/NOUN 7:IC/. 8:MN/CONJ 9:ID/X 10:IC/. 11:IP/. 12:#/# 
+gold: 2-0 0-1 12-2 2-3 2-4 4-5 8-6 8-7 5-8 8-9 9-10 2-11 
+pred: 12-2 2-0 0-1 2-11 2-10 2-4 4-3 4-9 4-7 4-5 5-6 9-8 
+
+0:PR/ADP 1:NN/NOUN 2:VV/VERB 3:PO/PRON 4:NN/NOUN 5:PR/ADP 6:PO/PRON 7:AJ/ADJ 8:VN/NOUN 9:#/# 
+gold: 2-0 0-1 9-2 4-3 2-4 2-5 8-6 8-7 5-8 
+pred: 9-2 2-0 0-1 2-5 2-4 4-3 5-8 8-6 8-7 
+
+0:AJ/ADJ 1:NN/NOUN 2:PR/ADP 3:NN/NOUN 4:IP/. 5:#/# 
+gold: 1-0 2-1 5-2 2-3 2-4 
+pred: 5-1 1-0 1-2 2-3 3-4 
+
+0:TP/PRON 1:NN/NOUN 2:PR/ADP 3:PO/PRON 4:ID/VERB 5:AJ/ADJ 6:NN/NOUN 7:IP/. 8:#/# 
+gold: 1-0 2-1 8-2 6-3 3-4 6-5 2-6 2-7 
+pred: 8-4 4-1 1-0 1-2 2-3 4-7 4-6 6-5 
+
+0:AJ/ADJ 1:VN/NOUN 2:PR/ADP 3:NN/NOUN 4:PR/ADP 5:NN/NOUN 6:PR/ADP 7:NN/NOUN 8:IP/. 9:#/# 
+gold: 1-0 9-1 1-2 2-3 3-4 4-5 5-6 6-7 1-8 
+pred: 9-1 1-0 1-2 2-3 3-4 4-5 5-6 6-7 7-8 
+
+0:AJ/ADJ 1:NN/NOUN 2:PR/ADP 3:VN/NOUN 4:PR/ADP 5:NN/NOUN 6:PR/ADP 7:NN/NOUN 8:#/# 
+gold: 1-0 8-1 1-2 2-3 3-4 4-5 5-6 6-7 
+pred: 8-1 1-0 1-2 2-3 3-4 4-5 5-6 6-7 
+
+0:AJ/ADJ 1:NN/NOUN 2:#/# 
+gold: 1-0 2-1 
+pred: 2-1 1-0 
+
+0:PR/ADP 1:VN/NOUN 2:VV/VERB 3:NN/NOUN 4:RO/NUM 5:NN/NOUN 6:PR/ADP 7:NN/NOUN 8:IP/. 9:#/# 
+gold: 2-0 0-1 9-2 2-3 5-4 2-5 2-6 6-7 2-8 
+pred: 9-2 2-0 0-1 2-6 2-5 2-3 5-4 6-7 7-8 
+
+0:PO/PRON 1:VV/VERB 2:AB/ADV 3:AB/ADV 4:VV/VERB 5:AB/ADV 6:PR/ADP 7:PO/PRON 8:NN/NOUN 9:IP/. 10:#/# 
+gold: 1-0 10-1 1-2 1-3 1-4 4-5 4-6 8-7 6-8 1-9 
+pred: 10-1 1-0 1-4 1-3 1-2 4-9 4-6 4-5 6-8 8-7 
+
+0:AB/ADV 1:AB/ADV 2:VV/VERB 3:PR/ADP 4:NN/NOUN 5:PR/ADP 6:IM/NOUN 7:FV/ADP 8:AB/ADV 9:VN/NOUN 10:IP/. 11:#/# 
+gold: 2-0 2-1 11-2 2-3 3-4 2-5 7-6 5-7 7-8 7-9 2-10 
+pred: 11-2 2-0 2-1 2-10 2-3 3-4 4-5 5-6 6-7 7-9 9-8 
+
+0:PR/ADP 1:NN/NOUN 2:VV/VERB 3:VN/NOUN 4:++/CONJ 5:VN/NOUN 6:#/# 
+gold: 2-0 0-1 6-2 2-3 5-4 3-5 
+pred: 6-2 2-0 0-1 2-5 2-3 5-4 
+
+0:AB/ADV 1:VV/VERB 2:NN/NOUN 3:IK/. 4:NN/NOUN 5:++/ADP 6:NN/NOUN 7:PR/ADP 8:NN/NOUN 9:IP/. 10:#/# 
+gold: 1-0 10-1 1-2 4-3 2-4 6-5 4-6 6-7 7-8 1-9 
+pred: 10-1 1-0 1-9 1-4 1-2 2-3 4-5 5-6 6-7 7-8 
+
+0:NN/NOUN 1:PR/ADP 2:NN/NOUN 3:VV/VERB 4:UK/CONJ 5:AJ/ADJ 6:NN/NOUN 7:IP/. 8:#/# 
+gold: 3-0 0-1 1-2 8-3 6-4 6-5 3-6 3-7 
+pred: 8-3 3-0 0-1 1-2 3-7 3-6 6-4 6-5 
+
+0:NN/NOUN 1:VV/VERB 2:UK/CONJ 3:AB/ADV 4:#/# 
+gold: 1-0 4-1 3-2 1-3 
+pred: 4-1 1-0 1-3 1-2 
+
+0:UK/CONJ 1:PO/PRON 2:VV/VERB 3:AJ/ADJ 4:NN/NOUN 5:VV/VERB 6:PO/PRON 7:AJ/ADJ 8:NN/NOUN 9:#/# 
+gold: 2-0 2-1 5-2 4-3 2-4 9-5 8-6 8-7 5-8 
+pred: 9-0 0-5 0-2 2-1 2-4 4-3 5-8 5-6 8-7 
+
+0:PO/PRON 1:AJ/ADJ 2:NN/NOUN 3:VV/VERB 4:PO/ADP 5:AJ/ADJ 6:AJ/ADJ 7:NN/NOUN 8:IP/. 9:#/# 
+gold: 2-0 2-1 3-2 9-3 7-4 7-5 7-6 3-7 3-8 
+pred: 9-3 3-2 2-0 2-1 3-8 3-7 7-4 7-5 7-6 
+
+0:AB/ADV 1:FV/VERB 2:PO/PRON 3:UK/ADP 4:AJ/ADJ 5:EN/DET 6:PO/PRON 7:VN/NOUN 8:PR/ADP 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 1-0 11-1 1-2 4-3 1-4 7-5 7-6 1-7 1-8 8-9 1-10 
+pred: 11-1 1-0 1-8 1-3 1-2 3-7 7-4 7-5 7-6 8-9 9-10 
+
+0:AJ/ADJ 1:NN/NOUN 2:PR/ADP 3:NN/NOUN 4:#/# 
+gold: 1-0 2-1 4-2 2-3 
+pred: 4-1 1-0 1-2 2-3 
+
+0:NN/NOUN 1:FV/VERB 2:AB/ADV 3:NN/NOUN 4:PR/ADP 5:AJ/ADJ 6:NN/NOUN 7:PR/ADP 8:RO/NUM 9:NN/NOUN 10:#/# 
+gold: 1-0 10-1 1-2 1-3 1-4 6-5 4-6 6-7 9-8 7-9 
+pred: 10-1 1-0 1-7 1-3 1-2 3-4 4-6 6-5 7-9 9-8 
+
+0:PR/ADP 1:NN/NOUN 2:VV/VERB 3:PO/PRON 4:AJ/ADJ 5:NN/NOUN 6:PR/ADP 7:AB/ADV 8:RO/NUM 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 2-0 0-1 11-2 5-3 5-4 2-5 2-6 8-7 9-8 6-9 2-10 
+pred: 11-2 2-0 0-1 2-10 2-6 2-5 5-3 5-4 6-9 9-8 8-7 
+
+0:TP/PRON 1:NN/NOUN 2:HV/VERB 3:AB/ADV 4:NN/NOUN 5:PR/ADP 6:NN/NOUN 7:#/# 
+gold: 1-0 2-1 7-2 2-3 2-4 2-5 5-6 
+pred: 7-2 2-1 1-0 2-4 2-3 4-5 5-6 
+
+0:TP/PRON 1:NN/NOUN 2:PR/ADP 3:PO/PRON 4:ID/X 5:AJ/ADJ 6:NN/NOUN 7:#/# 
+gold: 1-0 2-1 7-2 6-3 3-4 6-5 2-6 
+pred: 7-1 1-0 1-2 2-6 6-3 6-4 6-5 
+
+0:NN/NOUN 1:PR/ADP 2:NN/NOUN 3:VV/VERB 4:UK/CONJ 5:IC/. 6:NN/NOUN 7:IC/. 8:IP/. 9:#/# 
+gold: 3-0 0-1 1-2 9-3 6-4 6-5 3-6 6-7 3-8 
+pred: 9-3 3-0 0-1 1-2 3-8 3-7 3-4 4-6 4-5 
+
+0:AJ/ADJ 1:VN/NOUN 2:PR/ADP 3:NN/NOUN 4:PR/ADP 5:NN/NOUN 6:PR/ADP 7:NN/NOUN 8:#/# 
+gold: 1-0 8-1 1-2 2-3 3-4 4-5 5-6 6-7 
+pred: 8-1 1-0 1-2 2-3 3-4 4-5 5-6 6-7 
+
+0:NN/NOUN 1:VV/VERB 2:RO/NUM 3:NN/NOUN 4:PR/ADP 5:NN/NOUN 6:#/# 
+gold: 1-0 6-1 3-2 1-3 3-4 4-5 
+pred: 6-1 1-0 1-4 1-3 3-2 4-5 
+
+0:NN/NOUN 1:PR/ADP 2:VN/NOUN 3:VV/VERB 4:PR/ADP 5:RO/NUM 6:NN/NOUN 7:NN/NOUN 8:PR/ADP 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 3-0 0-1 1-2 11-3 3-4 6-5 7-6 4-7 7-8 8-9 3-10 
+pred: 11-3 3-0 0-1 1-2 3-10 3-7 3-4 4-6 6-5 7-8 8-9 
+
+0:NN/NOUN 1:VV/VERB 2:PR/ADP 3:AJ/ADJ 4:NN/NOUN 5:++/CONJ 6:NN/NOUN 7:IP/. 8:#/# 
+gold: 1-0 8-1 1-2 4-3 2-4 6-5 4-6 1-7 
+pred: 8-1 1-0 1-7 1-6 1-2 2-4 4-3 6-5 
+
+0:PO/PRON 1:TP/PRON 2:PO/PRON 3:NN/NOUN 4:VV/VERB 5:AB/ADV 6:AB/ADV 7:IP/. 8:#/# 
+gold: 1-0 3-1 3-2 4-3 8-4 4-5 4-6 4-7 
+pred: 8-4 4-0 4-3 3-1 3-2 4-7 4-6 6-5 
+
+0:NN/NOUN 1:QV/VERB 2:AB/ADV 3:VV/ADP 4:PO/PRON 5:AJ/ADJ 6:NN/NOUN 7:#/# 
+gold: 1-0 7-1 1-2 1-3 3-4 6-5 3-6 
+pred: 7-1 1-0 1-3 1-2 3-6 6-4 6-5 
+
+0:++/CONJ 1:VV/VERB 2:AB/ADV 3:UK/CONJ 4:PO/PRON 5:AV/VERB 6:AJ/ADJ 7:IP/. 8:#/# 
+gold: 1-0 8-1 1-2 5-3 5-4 1-5 5-6 1-7 
+pred: 8-0 0-5 0-1 1-3 1-2 5-4 5-7 5-6 
+
+0:VV/VERB 1:AB/ADV 2:IP/. 3:#/# 
+gold: 3-0 0-1 0-2 
+pred: 3-0 0-2 0-1 
+
+0:++/CONJ 1:VV/VERB 2:AB/ADV 3:PR/ADP 4:PO/PRON 5:PR/ADP 6:NN/NOUN 7:IP/. 8:#/# 
+gold: 1-0 8-1 1-2 1-3 3-4 4-5 5-6 1-7 
+pred: 8-0 0-7 0-1 1-5 1-3 1-2 3-4 5-6 
+
+0:AB/ADV 1:PO/PRON 2:NN/NOUN 3:VV/VERB 4:PO/PRON 5:PR/ADP 6:PN/NOUN 7:I?/. 8:#/# 
+gold: 1-0 2-1 3-2 8-3 3-4 3-5 5-6 3-7 
+pred: 8-3 3-0 3-2 2-1 3-5 3-4 5-6 6-7 
+
+0:PR/ADP 1:NN/NOUN 2:PR/ADP 3:PN/NOUN 4:VV/VERB 5:AB/ADV 6:RO/NUM 7:NN/NOUN 8:PR/ADP 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 4-0 0-1 1-2 2-3 11-4 6-5 7-6 4-7 4-8 8-9 4-10 
+pred: 11-4 4-0 0-1 1-2 2-3 4-8 4-7 4-5 7-6 8-9 9-10 
+
+0:PO/PRON 1:AV/VERB 2:PO/PRON 3:AJ/ADJ 4:NN/NOUN 5:I?/. 6:#/# 
+gold: 1-0 6-1 4-2 4-3 1-4 1-5 
+pred: 6-1 1-0 1-5 1-4 4-2 4-3 
+
+0:NN/NOUN 1:TP/PRON 2:TP/VERB 3:PR/ADP 4:PO/PRON 5:AJ/ADJ 6:NN/NOUN 7:IQ/. 8:#/# 
+gold: 8-0 0-1 0-2 2-3 6-4 6-5 3-6 0-7 
+pred: 8-2 2-0 2-1 2-7 2-3 3-6 6-4 6-5 
+
+0:AB/ADV 1:PR/ADP 2:PN/NOUN 3:VV/VERB 4:NN/NOUN 5:I?/. 6:#/# 
+gold: 3-0 0-1 1-2 6-3 3-4 3-5 
+pred: 6-3 3-0 0-1 1-2 3-5 3-4 
+
+0:PO/PRON 1:AV/VERB 2:TP/PRON 3:PR/ADP 4:PO/PRON 5:++/CONJ 6:PO/PRON 7:PN/NOUN 8:NN/NOUN 9:IP/. 10:#/# 
+gold: 1-0 10-1 1-2 1-3 7-4 6-5 4-6 8-7 3-8 1-9 
+pred: 10-1 1-0 1-9 1-8 8-2 8-3 3-7 7-4 7-5 7-6 
+
+0:PO/PRON 1:AJ/ADJ 2:NN/NOUN 3:AV/VERB 4:NN/NOUN 5:PR/ADP 6:PN/X 7:IK/. 8:NN/NOUN 9:++/CONJ 10:NN/NOUN 11:IP/. 12:#/# 
+gold: 2-0 2-1 3-2 12-3 3-4 4-5 5-6 3-7 4-8 10-9 8-10 3-11 
+pred: 12-3 3-2 2-0 2-1 3-11 3-10 3-4 4-5 5-8 8-6 6-7 10-9 
+
+0:PR/ADP 1:PO/PRON 2:NN/NOUN 3:AV/VERB 4:NN/NOUN 5:I?/. 6:#/# 
+gold: 3-0 2-1 0-2 6-3 3-4 3-5 
+pred: 6-3 3-0 0-2 2-1 3-5 3-4 
+
+0:PO/PRON 1:PO/PRON 2:NN/NOUN 3:AV/VERB 4:PR/ADP 5:AJ/ADJ 6:NN/NOUN 7:IP/. 8:#/# 
+gold: 2-0 2-1 3-2 8-3 3-4 6-5 4-6 3-7 
+pred: 8-3 3-2 2-0 2-1 3-7 3-4 4-6 6-5 
+
+0:PO/PRON 1:AJ/ADJ 2:NN/NOUN 3:HV/VERB 4:EN/DET 5:AJ/ADJ 6:NN/NOUN 7:IP/. 8:#/# 
+gold: 2-0 2-1 3-2 8-3 6-4 6-5 3-6 3-7 
+pred: 8-3 3-2 2-0 2-1 3-7 3-6 6-4 6-5 
+
+0:PO/PRON 1:VN/NOUN 2:HV/VERB 3:NN/NOUN 4:PR/ADP 5:VN/NOUN 6:I?/. 7:#/# 
+gold: 1-0 2-1 7-2 2-3 2-4 4-5 2-6 
+pred: 7-2 2-1 1-0 2-6 2-3 3-4 4-5 
+
+0:PO/PRON 1:PO/PRON 2:VV/VERB 3:PR/ADP 4:NN/NOUN 5:IP/. 6:#/# 
+gold: 2-0 0-1 6-2 2-3 3-4 2-5 
+pred: 6-2 2-0 2-1 2-5 2-3 3-4 
+
+0:PO/PRON 1:AN/NOUN 2:HV/VERB 3:AJ/ADJ 4:NN/NOUN 5:PR/ADP 6:PN/NOUN 7:I?/. 8:#/# 
+gold: 1-0 2-1 8-2 4-3 2-4 2-5 5-6 2-7 
+pred: 8-2 2-1 1-0 2-7 2-5 2-4 4-3 5-6 
+
+0:PO/PRON 1:AJ/ADJ 2:NN/NOUN 3:AV/VERB 4:PR/ADP 5:AJ/ADJ 6:VN/NOUN 7:AJ/ADJ 8:PR/ADP 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 2-0 2-1 3-2 11-3 3-4 6-5 4-6 3-7 3-8 8-9 3-10 
+pred: 11-3 3-2 2-0 2-1 3-8 3-7 3-4 4-6 6-5 8-9 9-10 
+
+0:NN/NOUN 1:VV/VERB 2:NN/NOUN 3:UK/CONJ 4:NN/NOUN 5:IP/. 6:#/# 
+gold: 1-0 6-1 1-2 4-3 1-4 1-5 
+pred: 6-1 1-0 1-5 1-4 1-2 4-3 
+
+0:PN/NOUN 1:VV/VERB 2:PR/ADP 3:AB/ADV 4:RO/NUM 5:NN/NOUN 6:PR/ADP 7:NN/NOUN 8:IP/. 9:#/# 
+gold: 1-0 9-1 1-2 4-3 5-4 1-5 1-6 6-7 1-8 
+pred: 9-1 1-0 1-8 1-6 1-2 2-5 5-4 4-3 6-7 
+
+0:PO/PRON 1:VV/VERB 2:PR/ADP 3:IM/NOUN 4:FV/ADP 5:AJ/ADJ 6:NN/NOUN 7:I?/. 8:#/# 
+gold: 1-0 8-1 1-2 4-3 2-4 6-5 4-6 1-7 
+pred: 8-1 1-0 1-7 1-2 2-3 3-4 4-6 6-5 
+
+0:NN/NOUN 1:SV/VERB 2:QV/VERB 3:VV/ADP 4:PO/PRON 5:++/CONJ 6:PO/PRON 7:NN/NOUN 8:IP/. 9:#/# 
+gold: 1-0 9-1 3-2 1-3 3-4 7-5 7-6 4-7 1-8 
+pred: 9-1 1-0 1-2 2-8 2-3 3-7 7-4 7-5 7-6 
+
+0:PO/PRON 1:SV/VERB 2:VV/ADP 3:NN/NOUN 4:PR/ADP 5:UK/CONJ 6:PO/PRON 7:QV/VERB 8:NN/NOUN 9:#/# 
+gold: 1-0 9-1 1-2 2-3 3-4 7-5 7-6 4-7 7-8 
+pred: 9-1 1-0 1-2 2-3 3-4 4-8 8-5 8-6 8-7 
+
+0:PO/PRON 1:AJ/ADJ 2:AN/NOUN 3:AV/VERB 4:PO/PRON 5:AB/ADV 6:PO/PRON 7:VV/VERB 8:PR/ADP 9:NN/NOUN 10:I?/. 11:#/# 
+gold: 2-0 2-1 3-2 11-3 3-4 3-5 7-6 2-7 7-8 8-9 3-10 
+pred: 11-3 3-2 2-0 2-1 3-10 3-7 7-4 7-5 7-6 7-8 8-9 
+
+0:PR/ADP 1:NN/NOUN 2:VV/VERB 3:VN/NOUN 4:IP/. 5:#/# 
+gold: 2-0 0-1 5-2 2-3 2-4 
+pred: 5-2 2-0 0-1 2-4 2-3 
+
+0:PO/PRON 1:VV/VERB 2:AB/ADV 3:VN/NOUN 4:PR/ADP 5:NN/NOUN 6:IP/. 7:#/# 
+gold: 1-0 7-1 1-2 1-3 3-4 4-5 1-6 
+pred: 7-1 1-0 1-6 1-3 1-2 3-4 4-5 
+
+0:EN/DET 1:AJ/ADJ 2:VN/NOUN 3:PR/ADP 4:NN/NOUN 5:NN/NOUN 6:IK/. 7:VN/NOUN 8:IK/. 9:VV/VERB 10:NN/NOUN 11:RO/NUM 12:IP/. 13:#/# 
+gold: 2-0 2-1 9-2 2-3 5-4 3-5 2-6 2-7 2-8 13-9 11-10 9-11 9-12 
+pred: 13-9 9-2 9-5 9-7 7-8 5-6 2-0 2-1 2-3 3-4 9-12 12-10 12-11 
+
+0:PO/PRON 1:NN/NOUN 2:BV/VERB 3:VV/VERB 4:PR/ADP 5:AJ/ADJ 6:NN/NOUN 7:IP/. 8:#/# 
+gold: 1-0 2-1 8-2 2-3 3-4 6-5 4-6 2-7 
+pred: 8-2 2-1 1-0 2-3 3-7 3-4 4-6 6-5 
+
+0:AB/ADV 1:VV/VERB 2:PO/PRON 3:NN/NOUN 4:I?/. 5:#/# 
+gold: 1-0 5-1 1-2 1-3 1-4 
+pred: 5-1 1-0 1-4 1-3 3-2 
+
+0:NN/NOUN 1:RO/NUM 2:IQ/. 3:#/# 
+gold: 1-0 3-1 1-2 
+pred: 3-2 2-0 2-1 
+
+0:NN/NOUN 1:RO/NUM 2:IQ/. 3:#/# 
+gold: 1-0 3-1 1-2 
+pred: 3-2 2-0 2-1 
+
+0:PO/PRON 1:QV/VERB 2:AB/ADV 3:ID/X 4:VV/VERB 5:PO/PRON 6:PR/ADP 7:EN/DET 8:TP/PRON 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 1-0 11-1 1-2 2-3 1-4 4-5 4-6 9-7 9-8 6-9 1-10 
+pred: 11-1 1-0 1-10 1-4 1-2 4-3 4-6 4-5 6-9 9-7 9-8 
+
+0:NN/NOUN 1:PR/ADP 2:NN/NOUN 3:#/# 
+gold: 1-0 3-1 1-2 
+pred: 3-0 0-1 1-2 
+
+0:PR/ADP 1:VN/NOUN 2:++/ADP 3:PO/PRON 4:NN/NOUN 5:VV/VERB 6:PO/PRON 7:EN/DET 8:NN/NOUN 9:IP/. 10:#/# 
+gold: 5-0 0-1 4-2 4-3 1-4 10-5 5-6 8-7 5-8 5-9 
+pred: 10-5 5-0 0-1 1-2 2-4 4-3 5-9 5-8 8-6 8-7 
+
+0:NN/NOUN 1:++/ADP 2:NN/NOUN 3:#/# 
+gold: 3-0 2-1 0-2 
+pred: 3-0 0-1 1-2 
+
+0:VN/NOUN 1:PR/ADP 2:NN/NOUN 3:PR/ADP 4:NN/NOUN 5:AB/ADV 6:ID/VERB 7:#/# 
+gold: 7-0 0-1 1-2 0-3 3-4 4-5 5-6 
+pred: 7-6 6-0 6-5 0-1 1-2 2-3 3-4 
+
+0:AB/ADV 1:NN/NOUN 2:++/CONJ 3:NN/NOUN 4:VV/VERB 5:AB/ADV 6:++/CONJ 7:VV/VERB 8:AB/ADV 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 1-0 4-1 3-2 1-3 11-4 4-5 7-6 4-7 7-8 4-9 4-10 
+pred: 11-4 4-1 4-3 3-2 1-0 4-6 4-5 6-10 6-7 7-9 7-8 
+
+0:PO/PRON 1:VV/VERB 2:AJ/ADJ 3:NN/NOUN 4:IM/NOUN 5:VV/ADP 6:NN/NOUN 7:PR/ADP 8:NN/NOUN 9:IP/. 10:#/# 
+gold: 1-0 10-1 3-2 1-3 5-4 3-5 5-6 5-7 7-8 1-9 
+pred: 10-1 1-0 1-9 1-4 1-3 3-2 4-5 5-6 6-7 7-8 
+
+0:PO/PRON 1:VV/VERB 2:AB/ADV 3:AB/ADV 4:AB/ADV 5:AJ/ADJ 6:UK/CONJ 7:NN/NOUN 8:IP/. 9:#/# 
+gold: 1-0 9-1 1-2 1-3 5-4 1-5 7-6 1-7 1-8 
+pred: 9-1 1-0 1-8 1-7 7-5 7-6 5-2 5-3 5-4 
+
+0:NN/NOUN 1:AN/NOUN 2:QV/VERB 3:PO/PRON 4:AB/ADV 5:FV/VERB 6:UK/CONJ 7:PO/PRON 8:VV/VERB 9:VN/NOUN 10:IP/. 11:#/# 
+gold: 1-0 2-1 11-2 2-3 2-4 2-5 8-6 8-7 5-8 8-9 2-10 
+pred: 11-2 2-0 2-1 2-5 5-3 5-4 5-6 6-10 6-8 8-7 8-9 
+
+0:NN/NOUN 1:AV/VERB 2:AJ/ADJ 3:PR/ADP 4:NN/NOUN 5:IP/. 6:#/# 
+gold: 1-0 6-1 1-2 1-3 3-4 1-5 
+pred: 6-1 1-0 1-5 1-3 1-2 3-4 
+
+0:VN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:PO/PRON 1:AJ/ADJ 2:VN/NOUN 3:VV/VERB 4:PR/ADP 5:NN/NOUN 6:++/CONJ 7:NN/NOUN 8:IP/. 9:#/# 
+gold: 2-0 2-1 3-2 9-3 3-4 4-5 7-6 5-7 3-8 
+pred: 9-3 3-2 2-0 2-1 3-8 3-7 3-4 4-5 7-6 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:VN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:VN/NOUN 1:VV/VERB 2:AB/ADV 3:PR/ADP 4:NN/NOUN 5:++/CONJ 6:NN/NOUN 7:IP/. 8:#/# 
+gold: 1-0 8-1 1-2 1-3 3-4 6-5 4-6 1-7 
+pred: 8-1 1-0 1-7 1-3 1-2 3-6 3-4 6-5 
+
+0:VN/NOUN 1:QV/VERB 2:VV/VERB 3:PR/ADP 4:NN/NOUN 5:TP/PRON 6:PR/ADP 7:AB/ADV 8:RO/NUM 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 1-0 11-1 1-2 2-3 3-4 4-5 5-6 8-7 9-8 6-9 1-10 
+pred: 11-1 1-0 1-10 1-2 2-6 2-5 2-3 3-4 6-9 9-8 8-7 
+
+0:VN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:NN/NOUN 1:++/CONJ 2:NN/NOUN 3:SV/VERB 4:AV/VERB 5:TP/PRON 6:PR/ADP 7:IC/. 8:MN/NUM 9:IC/. 10:PR/ADP 11:VN/NOUN 12:IP/. 13:#/# 
+gold: 3-0 2-1 0-2 13-3 3-4 4-5 4-6 8-7 6-8 8-9 4-10 10-11 3-12 
+pred: 13-3 3-0 3-2 2-1 3-12 3-4 4-10 4-9 4-6 4-5 6-8 8-7 10-11 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:EN/DET 1:NN/NOUN 2:VV/VERB 3:PR/ADP 4:NN/NOUN 5:PR/ADP 6:AJ/ADJ 7:AJ/ADJ 8:NN/NOUN 9:IP/. 10:#/# 
+gold: 1-0 2-1 10-2 2-3 3-4 2-5 8-6 8-7 5-8 2-9 
+pred: 10-2 2-1 1-0 2-9 2-3 3-4 4-5 5-8 8-6 8-7 
+
+0:NN/NOUN 1:VV/VERB 2:AB/ADV 3:PR/ADP 4:NN/NOUN 5:PR/ADP 6:PO/PRON 7:NN/NOUN 8:PR/ADP 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 1-0 11-1 1-2 1-3 3-4 1-5 7-6 5-7 7-8 8-9 1-10 
+pred: 11-1 1-0 1-8 1-3 1-2 3-4 4-5 5-7 7-6 8-9 9-10 
+
+0:VN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:NN/NOUN 1:#/# 
+gold: 1-0 
+pred: 1-0 
+
+0:VN/NOUN 1:QV/VERB 2:VV/VERB 3:PR/ADP 4:NN/NOUN 5:TP/PRON 6:PR/ADP 7:AB/ADV 8:RO/NUM 9:NN/NOUN 10:IP/. 11:#/# 
+gold: 1-0 11-1 1-2 2-3 3-4 4-5 5-6 8-7 9-8 6-9 1-10 
+pred: 11-1 1-0 1-10 1-2 2-6 2-5 2-3 3-4 6-9 9-8 8-7 
+
+0:NN/NOUN 1:VV/VERB 2:#/# 
+gold: 1-0 2-1 
+pred: 2-1 1-0 
+
+0:AB/ADV 1:VV/VERB 2:AN/NOUN 3:I?/. 4:#/# 
+gold: 1-0 4-1 1-2 1-3 
+pred: 4-1 1-0 1-3 1-2 
+
+0:NN/NOUN 1:VV/VERB 2:PO/PRON 3:VN/NOUN 4:IP/. 5:#/# 
+gold: 1-0 5-1 3-2 1-3 1-4 
+pred: 5-1 1-0 1-4 1-3 3-2 
+
+0:AB/ADV 1:NN/NOUN 2:I?/. 3:#/# 
+gold: 3-0 0-1 0-2 
+pred: 3-1 1-0 1-2 
+
+0:PO/PRON 1:NN/NOUN 2:VV/VERB 3:PR/ADP 4:AJ/ADJ 5:NN/NOUN 6:AB/ADV 7:PR/ADP 8:AN/NOUN 9:IP/. 10:#/# 
+gold: 1-0 2-1 10-2 2-3 5-4 3-5 7-6 2-7 7-8 2-9 
+pred: 10-2 2-1 1-0 2-7 2-6 2-3 3-5 5-4 7-8 8-9 
+
+0:PR/ADP 1:IM/NOUN 2:VV/ADP 3:PO/PRON 4:NN/NOUN 5:PR/ADP 6:NN/NOUN 7:QV/VERB 8:AN/NOUN 9:VV/VERB 10:IP/. 11:#/# 
+gold: 7-0 2-1 0-2 4-3 2-4 2-5 5-6 11-7 7-8 7-9 7-10 
+pred: 11-9 9-0 9-8 8-7 0-1 1-5 1-2 2-4 4-3 5-6 9-10 
+
+0:AB/ADV 1:AJ/VERB 2:I?/. 3:#/# 
+gold: 1-0 3-1 1-2 
+pred: 3-1 1-0 1-2 
+
+0:PR/ADP 1:PO/PRON 2:NN/NOUN 3:AV/VERB 4:NN/NOUN 5:PR/ADP 6:EN/DET 7:VN/NOUN 8:AJ/ADJ 9:IP/. 10:#/# 
+gold: 3-0 2-1 0-2 10-3 3-4 4-5 7-6 5-7 3-8 3-9 
+pred: 10-3 3-0 0-2 2-1 3-9 3-8 3-4 4-5 5-7 7-6 
+
+0:AB/ADV 1:AJ/VERB 2:I?/. 3:#/# 
+gold: 1-0 3-1 1-2 
+pred: 3-1 1-0 1-2 
+

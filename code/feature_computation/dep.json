@@ -1,0 +1,278 @@
+{
+### harvesting tools
+   # hand wood
+   "stone":{
+	"num":1,
+	"wood-pickaxe":-1
+   },
+   "ironore":{
+	"num":1,
+	"wood-pickaxe":-1
+   },
+   "coal":{
+	"num":1,
+	"wood-pickaxe":-1
+   },
+   "seeds":{
+	"num":2,
+	"bonemeal":1,
+	"shears":-1
+   },
+   "wheat":{
+	"num":1,
+	"shears":-1,
+	"seeds":1,
+	"wood-hoe":-1
+   },
+   "sand":{
+	"num":1,
+	"wood-shovel":-1
+   },
+   "clay":{
+	"num":1,
+	"wood-shovel":-1
+   },
+   "cut-sugarcane":{
+       "num":1,
+       "wood-axe":-1
+   },
+   # hand bone
+   # brown-mushroom hand
+   # red-mushroom hand
+   "string":{
+       "num":2,
+       "shears":-1
+   },
+   # egg hand
+   "fish":{
+       "num":1,
+       "fishingrod":-1
+   },
+   "wool":{
+       "num":4,
+       "shears":-1
+   },
+   "milk":{
+       "num":1,
+       "bucket":-1
+   },
+
+#### crafting
+    "plank": {
+    	 "num":4,
+         "wood":1
+    },
+    "stick": {
+    	 "num":4,
+         "plank":1
+    },
+    "torch": {
+    	 "num":4,
+         "stick":1,
+         "coal":1
+    },
+    "furnace": {
+    	 "num":1,
+         "stone":8
+    },
+    "wood-pickaxe": {
+    	 "num":1,
+         "stick":2,
+         "plank":3
+    },
+#    "stone-pickaxe": {
+#    	 "num":1,
+#         "stick":2,
+#         "stone":3
+#    },
+#    "iron-pickaxe": {
+#    	 "num":1,
+#         "stick":2,
+#         "iron":3
+#    },
+    "wood-axe": {
+    	 "num":1,
+         "stick":2,
+         "plank":3
+    },
+#    "stone-axe": {
+#    	 "num":1,
+#         "stick":2,
+#         "stone":3
+#    },
+#    "iron-axe": {
+#    	 "num":1,
+#         "stick":2,
+#         "iron":3
+#    },
+    "wood-shovel": {
+    	 "num":1,
+         "stick":2,
+         "plank":1
+    },
+#    "stone-shovel": {
+#    	 "num":1,
+#         "stick":2,
+#         "stone":1
+#    },
+#    "iron-shovel": {
+#    	 "num":1,
+#         "stick":2,
+#         "iron":1
+#    },
+    "wood-hoe": {
+    	 "num":1,
+         "stick":2,
+         "plank":2
+    },
+#    "stone-hoe": {
+#    	 "num":1,
+#         "stick":2,
+#         "stone":2
+#    },
+#    "iron-hoe": {
+#    	 "num":1,
+#         "stick":2,
+#         "iron":2
+#    },
+    # NK: this is a valid way to do it, but the map doesn't allow it
+    # so we have to harvest it instead (as below)
+    # "sandstone": {
+    # 	 "num":1,
+    #      "sand":4
+    # },
+    "sandstone": {
+    	 "num":1,
+         "wood-pickaxe":1
+    },
+    "clayblock": {
+    	 "num":1,
+         "clay":4
+    },
+    "brick": {
+    	 "num":1,
+         "claybrick":4
+    },
+    "sugar": {
+    	 "num":1,
+         "cut-sugarcane":1
+    },
+    "paper": {
+    	 "num":1,
+         "cut-sugarcane":3
+    },
+    "bed": {
+    	 "num":1,
+         "wool":3,
+         "plank":3
+    },
+    "chest": {
+    	 "num":1,
+         "plank":8
+    },
+    "wood-door": {
+    	 "num":1,
+         "plank":8
+    },
+    "iron-door": {
+    	 "num":1,
+         "iron":6
+    },
+    "ladder": {
+    	 "num":2,
+         "stick":7
+    },
+    "fence": {
+    	 "num":2,
+         "stick":6
+    },
+    "stonebrick": {
+    	 "num":4,
+         "stone":4
+    },
+    "ironbar": {
+    	 "num":16,
+         "iron":6
+    },
+    "glasspane": {
+    	 "num":16,
+         "glass":6
+    },
+    "bread": {
+    	 "num":2,
+         "wheat":3
+    },
+    "shears": {
+    	 "num":2,
+         "iron":2
+    },
+    "bowl": {
+    	 "num":2,
+         "plank":3
+    },
+    "bucket": {
+    	 "num":2,
+         "iron":3
+    },
+    "fishingrod": {
+    	 "num":2,
+         "stick":3,
+	 "string":2
+    },
+    "bonemeal": {
+    	 "num":1,
+         "bone":1
+    },
+    "wood-stairs": {
+    	 "num":4,
+         "plank":6
+    },
+    "stone-stairs": {
+    	 "num":4,
+         "stone":6
+    },
+#    "brick-stairs": {
+#    	 "num":4,
+#         "brick":6
+#    },
+#    "stonebrick-stairs": {
+#    	 "num":4,
+#         "stonebrick":6
+#    },
+    "mushroomstew": {
+    	 "num":4,
+         "red-mushroom":1,
+         "brown-mushroom":1,
+         "bowl":1
+    },
+ #######smelting
+#    "furnace-fuel": {
+#    	 "num":16,
+#         "furnace":-1,
+#         "coal":1
+#    },
+    "cookedfish": {
+    	 "num":1,
+         "furnace":-1,
+         #"furnace-fuel":1,
+         "fish":1
+    },
+    "claybrick": {
+    	 "num":1,
+         "furnace":-1,
+         #"furnace-fuel":2,
+         "clay":1
+    },
+    "iron": {
+    	 "num":1,
+         "furnace":-1,
+         #"furnace-fuel":2,
+         "ironore":1
+    },
+    "glass": {
+    	 "num":1,
+         "furnace":-1,
+         #"furnace-fuel":2,
+         "sand":1
+    }
+}	 

@@ -1,0 +1,31 @@
+\documentclass[landscape,letterpaper]{article}
+\usepackage[left=5pt,top=5pt,right=20pt]{geometry}
+\usepackage{tikz}
+\begin{document}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+\draw(0,0) node {water};
+\draw(0,-0.5) node {};
+\draw(1,0) node {flowing};
+\draw(1,-0.5) node {};
+\draw(2,0) node {over};
+\draw(2,-0.5) node {};
+\draw(3,0) node {sugar};
+\draw(3,-0.5) node {};
+\draw(4,0) node {cane};
+\draw(4,-0.5) node {};
+\draw(5,0) node {.};
+\draw(5,-0.5) node {};
+\draw(6,0) node {*};
+\draw(6,-0.5) node {*};
+\draw[thick,red,->] (1,0.2) arc(50:130:0.78);
+\draw[thick,red,->] (3,0.2) arc(130:50:0.78);
+\draw[thick,red,->] (4,0.2) arc(50:130:2.34);
+\draw[thick,blue,->] (1,-0.7) arc(130:50:-0.78);
+\draw[thick,blue,->] (3,-0.7) arc(50:130:-0.78);
+\draw[thick,blue,->] (4,-0.7) arc(130:50:-2.34);
+\end{tikzpicture}
+\end{center}
+
+\end{document}

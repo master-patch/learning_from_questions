@@ -1,0 +1,174 @@
+-----------------------------------------------------------------
+  Planner Components.
+-----------------------------------------------------------------
+
+This text-guided high-level planner is composed of the following five components:
+
+- Feature computation
+	(code/feature_computation/)
+    The feature computation component extracts all potential preconditions
+	from the text, and computes their feature representations.
+	The text-guided high-level planner operates on top of this
+	representation.
+
+- Text guided high-level planner
+    (code/model)
+	(bin/text_guided_planner)
+	This component is the actual model described in the paper
+	"Learning High-Level Planning from Text", S.R.K. Branavan,
+	Nate Kushman, Tao Lei, Regina Barzilay.  ACL 2012.
+
+- Base planner
+    (code/ff/Metric-FF)
+	(bin/metric-ff)
+	This is the low-level base-planner used by our text-guided
+	high-level planner.  I.e., Metric-FF from the following URL:
+	http://fai.cs.uni-saarland.de/hoffmann/metric-ff.html
+
+- Base planner client
+    (bin/client.py)
+	This is simply an interface program between the high-level
+	planner and the low-level planner.  This script receives
+	the low-level planning requests from the high-level planner,
+	executes the low-level planner on the corresponding problems,
+	and returns the low-level planner's result to the high-level
+	planner.  This script also handles the limiting of the run-time
+	for the low-level planner.
+
+	Note the you can run as many clients as you want against a
+	single cache.  One of the purposes of the cache is to allow
+	distribution of clients across multiple servers.  During our
+	experiments, the client count has gone as high as 200.
+
+- Base plan cache
+	(code/cache)
+	(bin/ff-plan-cache)
+	This is a transparent multiplexing cache for the low-level
+	planner.  Durnig learning, the high-level planner often
+	attempts the same low-level planning problem multiple times.
+	Since the response of the low-level planner for a given 
+	planning problem is unique, the low-level planner's response
+	can be cached after the first attempt.  This caching massively
+	reduces learning time of the high-level planner since the 
+	low-level planner never needs to be run twice on a given
+	problem.  This component also allows the high-level planner
+	to transparently connect to multiple low-level planners 
+	running on multiple servers.  This also significantly 
+	reduces learning time.
+
+
+-----------------------------------------------------------------
+  Running the Text-Guided High-Level Planner.
+-----------------------------------------------------------------
+
+This archive contains shell scripts configured to run each of the
+above components.  The feature-computation component has already 
+been run, and the candidate-precondictions have been saved to the
+data/ directory in this archive.  Thus feature-computation does not
+need to be re-run unless the features need to be changed.
+
+Typically the remaining three components need to started in the
+following sequence:
+
+1. Base planner cache
+	run_cache.sh
+
+2. Base planner client
+	run_client.sh
+
+3. Text-guided high-level planner
+	run_learner.sh
+
+The shell scripts listed above, list the actual command line
+used to run the components, along with a description of 
+the command line options.
+
+-----------------------------------------------------------------
+  Feature file format
+-----------------------------------------------------------------
+
+The feature computation component generates two files that are
+required for the high-level planner:
+
+1. The predicate dictionary.
+   (data/valid_predicates.dictionary)
+
+   This file individually lists each candidate predicate that
+   the high-level planner is to operate on.  Note that these
+   predicates are dependent on the domain definition, and not
+   on the input natural language text.
+
+   The candidate predicates are listed one per line, in the 
+   following format:
+      <prediate id>|<predicate value>|<predicate string>
+
+   e.g.:
+      7|2|thing-available seeds
+
+   In the above example, 7 is the predicate id, 2 is the predicate
+   value, and 'thing-available seeds' is the predicate string. 
+   Written out in the typical format, the corresponding predicate
+   would be:
+      (thing-available seeds 2)
+
+
+2. Feature file
+   (data/valid_predicates.text_features)
+
+   This file lists one feature for a predicate pair per line in 
+   the following format:
+      <feature name>|<feature value>|<predicate id from>|<predicate id to>|<sentence id> 
+
+   e.g.:
+      PathDepXWord::dobj::use::0::0::Forw::::|1|258|96|46
+
+   In this example, the feature name is 'PathDepXWord::dobj::use::0::0::Forw::::'
+   the feature value is 1, the id of the precondition predicate
+   (predicate id from) is 258, the id of the effect predicate 
+   (predicate id to) is 96, and this feature was computed
+   based on sentence 46 of the natural language text.
+
+
+-----------------------------------------------------------------
+  Planner Output.
+-----------------------------------------------------------------
+
+The high level planner writes out the following files into
+the target directory (e.g., output/t1) as final output:
+
+1. run.log 
+   This file logs the general progress of the algorithm. 
+   More importantly, the end of this file will contain a
+   list of the planning problems indicating whether they
+   were solved or not.  If they were solved, the solution
+   is also listed.  e.g.:
+
+		fence.9.pddl  (> (thing-available wood) 3) (> (thing-available plank) 5) (> (thing-available stick) 4)
+		wood-shovel.11.pddl  [SUBGOALS NOT NEEDED]
+		cookedfish.13.pddl  [NOT SOLVED]
+
+
+2. connection_prediction.log
+   This file is written only by the planner only when run
+   in the text-guided configuration.  This file contains
+   a table of values, with the first line functioning as
+   the column headers of the table:
+
+      0:78 0:79 0:80 0:81 0:82 0:83 0:102 0:103 ...
+      1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 1 0 0 0 ...
+	  0 1 0 0 1 1 0 0 0 0 0 0 1 1 0 0 1 0 1 0 0 ...
+
+   Each pair of numbers in the first line indicates a
+   precondition as a pair of predicates:
+      <from predicate id>:<to predicate id>
+   e.g., 0:78 indicates the case where predicate 0 is 
+      a precondition for predicate 78.
+
+   Each of the following lines in the file lists the
+   text-based predictions made by our model about the
+   validity of the corresponding precondition - 1 for
+   a valid precondition, and 0 otherwise.  These
+   predictions can be evaluated against a gold standard
+   to test the text-based precondition prediction 
+   performance of our model.
+

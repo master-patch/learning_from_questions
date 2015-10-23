@@ -1,0 +1,3 @@
+0:mushroom 1:stew 2:can 3:also 4:be 5:collected 6:by 7:using 8:a 9:bowl 10:on 11:a 12:mooshroom 13:. 14:#/#
+gold: 0-1 1-5 2-5 3-5 4-5 7-5 8-9 9-7 11-12 12-7
+pred: 0-1 1-5 2-5 3-5 4-5 7-5 8-9 9-7 11-12 12-7
