@@ -1,6 +1,8 @@
 #include "nlp_distr.h"
 #include <algorithm>
 #include <time.h>
+#include <sys/types.h>
+#include <unistd.h>
 using namespace std;
 
 gsl_rng*	Random::p_GslRng;
