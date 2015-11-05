@@ -1,8 +1,8 @@
 #ifndef __NLP_SAMPLE_DISTRIBUTION__
 #define __NLP_SAMPLE_DISTRIBUTION__
 
-#include <gsl/gsl_rng.h>
-#include <gsl/gsl_randist.h>
+#include <gsl_rng.h>
+#include <gsl_randist.h>
 #include <nlp_vector.h>
 #include <deque>
 using namespace std;
