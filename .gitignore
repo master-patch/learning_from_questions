@@ -1,5 +1,5 @@
 # Compiled Object files
-*.slo
+  xo*.slo
 *.lo
 *.o
 *.obj

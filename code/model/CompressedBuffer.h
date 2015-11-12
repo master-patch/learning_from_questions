@@ -38,9 +38,9 @@ namespace __gnu_cxx
 		size_t operator()(const CompressedBuffer& b) const
 		{
 			unsigned long __h = 0;
-			for (unsigned long i = 0;i < b.Length (); ++i)
+			for (unsigned long i = 0;i < b.Length (); ++i) {
 				__h ^= (( __h << 5) + (__h >> 2) + (int) b[i]);
-
+      }
 			return size_t(__h);
 		}
 	};
