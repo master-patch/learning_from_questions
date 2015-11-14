@@ -4,7 +4,7 @@ ENV LD_LIBRARY_PATH /learning_interactive_planning/lib
 
 RUN apt-get update
 RUN apt-get install git make apt-utils libgsl0-dev libc6-dev-i386 zlib1g-dev libncurses5-dev g++ bzip2 python-pip nano emacs vim -y
-RUN git clone https://github.com/yala/learning_interactive_planning
+COPY . /learning_interactive_planning
 
 WORKDIR /learning_interactive_planning
 
