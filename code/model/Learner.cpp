@@ -706,8 +706,6 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 
 			String sProblemPddl;
 			pSequence->GetSubtask (1, &sProblemPddl);
-			cout << sProblemPddl << endl;
-			cout << sProblemPddl << endl;
 
 			sProblemPddl.Strip ();
 			if ("" == sProblemPddl)
