@@ -29,7 +29,7 @@ CXXFLAGS = $(INC_PATH) \
 CUSTOM_FLAGS = $(OPTIMIZE) \
 			   -m64 \
 			   -Wno-deprecated \
-			   #-ggdb #-pg
+			   -ggdb #-pg
 
 # use this for debug:
 #CUSTOM_FLAGS = -Wno-deprecated \
