@@ -13,4 +13,3 @@ RUN cd bin && chmod +x ff-plan-cache text_guided_planner
 
 EXPOSE 5002 5001 46941 46942 46943 41551
 
-ENTRYPOINT  bash
