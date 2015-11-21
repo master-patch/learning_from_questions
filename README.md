@@ -3,18 +3,14 @@ This extending the work by Branavan at MIT described in:
 http://people.csail.mit.edu/regina/my_papers/planning12.pdf
 
 Our work will be on creative an active learning variant of this project that asks questions
-as part of its planning processs. 
+as part of its planning process. 
 
-## Build & run
+## Run
 
-- To build:
-```bash
-$ docker build -t questionbot .
+This assumes you have `docker` installed on your machine.
+
 ```
-
-- To run:
-```bash
-$ docker run -i -t questionbot
+$ sh ./start.sh
 ```
 
 ## Credits
