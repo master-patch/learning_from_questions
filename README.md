@@ -1,9 +1,6 @@
-# learning_interactive_planning
-This extending the work by Branavan at MIT described in:
-http://people.csail.mit.edu/regina/my_papers/planning12.pdf
+# Learning a plan by asking questions
 
-Our work will be on creative an active learning variant of this project that asks questions
-as part of its planning process. 
+The aim of this research effort is to extend the work by [Branavan et al. (2012)](http://people.csail.mit.edu/regina/my_papers/planning12.pdf). Our work will introduce the actions of asking questions as part of the agent planning process.
 
 ## Run
 
