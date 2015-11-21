@@ -13,4 +13,18 @@ $ sh ./start.sh
 ## Credits
 This work is being actively research by Adam Yala, Nicola Greco, and Sebastien Boyer
 
+---
 
+### Changelog / Updates
+
+#### Week 2
+- Finalizing where to add questions and planning how to do so
+- Finally getting Branavan's code running
+- Setting up the machine given for computation by Regina/Karthik
+- Write `Dockerfile` that would compile the code & prepare the environment to run the agent
+- Setting up `GDB` to simplify C++ debugging
+
+#### Week 1
+- Understanding the paper and the problem
+- Trying to get Branavan's code to work
+- Researching on where to add questions
