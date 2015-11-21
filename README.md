@@ -10,9 +10,6 @@ This assumes you have `docker` installed on your machine.
 $ sh ./start.sh
 ```
 
-## Credits
-This work is being actively research by Adam Yala, Nicola Greco, and Sebastien Boyer
-
 ---
 
 ### Changelog / Updates
@@ -28,3 +25,9 @@ This work is being actively research by Adam Yala, Nicola Greco, and Sebastien B
 - Understanding the paper and the problem
 - Trying to get Branavan's code to work
 - Researching on where to add questions
+
+---
+
+
+## Credits
+This work is being actively research by Adam Yala, Nicola Greco, and Sebastien Boyer
