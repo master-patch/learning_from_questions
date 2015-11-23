@@ -14,6 +14,25 @@ $ sh ./start.sh
 
 ### Changelog / Updates
 
+#### Week 3
+
+- (code) Discover how to augment the policy with information goals
+- (theory) Investigating the policy for predicting the next subgoal
+- (code) After deciding that a subgoal is a question, we need to execute the question, update C before continuing to sample
+  - (code/theory) For a trivial retrieval system, we can load all the answers in memory
+- 42 million new actions are now down to 517 thanks to Nicola's hardcoding of questions and Adam's hate for thresholds.
+- We found three type of questions:
+  1. Objects (T)
+  2. Subgoal (P*T)
+  3. Comparing two subgoals in the sampled sequence
+  4. Actions (A)
+
+```
+T=50
+A=72
+P=7
+```
+
 #### Week 2
 - Finalizing where to add questions and planning how to do so
 - Finally getting Branavan's code running
