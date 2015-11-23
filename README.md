@@ -16,12 +16,13 @@ $ sh ./start.sh
 
 #### Week 3
 
+- (issue) There is no space left on the physical machine given by Karthik
 - (code) Discover how to augment the policy with information goals
 - (theory) Investigating the policy for predicting the next subgoal
 - (code) After deciding that a subgoal is a question, we need to execute the question, update C before continuing to sample
   - (code/theory) For a trivial retrieval system, we can load all the answers in memory
-- 42 million new actions are now down to 517 thanks to Nicola's hardcoding of questions and Adam's hate for thresholds.
-- We found three type of questions:
+- (success) 42 million new actions are now down to 517 thanks to Nicola's hardcoding of questions and Adam's hate for thresholds.
+- (success) We found three type of questions:
   1. Objects (T)
   2. Subgoal (P*T)
   3. Comparing two subgoals in the sampled sequence
