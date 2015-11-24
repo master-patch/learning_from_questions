@@ -1673,7 +1673,7 @@ void SubgoalPolicy::SampleConnections (bool _bTestMode)
 }
 
 
-//													
+// TODO: Modify to sample questions, and answer them as need be
 void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 										   bool _bTestMode,
 										   SubgoalSequence* _pSequence)
