@@ -14,9 +14,22 @@ $ cd ../
 $ sh ./start.sh
 ```
 
+## How to develop
+
+```
+$ sh ./start.sh # run the entire system
+$ sh ./start_test.sh # run 2 iterations
+$ sh ./start_gdb.sh # start with gdb
+```
+
 ---
 
 ### Changelog / Updates
+
+#### Week 4
+- Dividing the tasks
+- Running Branavan's code (and understanding why it did not stop working after running 1 h)
+- Built a suite for testing
 
 #### Week 3
 
