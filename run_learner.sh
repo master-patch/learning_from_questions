@@ -42,7 +42,7 @@
 #                                                                  #
 # ---------------------------------------------------------------- #
 
-bin/text_guided_planner cfg/text.cfg run=t1
+bin/text_guided_planner cfg/text.cfg run=t1 > output/t1/learner_all.log
 # bin/text_guided_planner cfg/svm_text.cfg run=s1
 # bin/text_guided_planner cfg/all_text.cfg run=a1
 # bin/text_guided_planner cfg/manual_text.cfg run=m1
