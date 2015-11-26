@@ -1,3 +1,4 @@
 #!/bin/sh
 docker build -t questionbot .
-docker run -d questionbot sh ./run_test.sh
+docker run -i -t questionbot sh ./run_test.sh
+bash
