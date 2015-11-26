@@ -13,4 +13,4 @@
 #  distribution of clients across multiple servers.  During our    #
 #  experiments, the client count has gone as high as 200.          #
 # ---------------------------------------------------------------- #
-python bin/client.py 16 bin/metric-ff localhost 5001 > output/t1/clients_all.log
+python bin/client.py 16 bin/metric-ff localhost 5001 2>&1 | tee output/t1/clients_all.log
