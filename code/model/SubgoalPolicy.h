@@ -90,6 +90,8 @@ class Subgoal
 		bool			b_IsLastSubgoalToTarget;
 		bool			b_ForcedSequenceEnd;
 
+    bool b_isQuestion;
+
 		Subgoal (void);
 		~Subgoal (void);
 };
@@ -108,7 +110,6 @@ class SubgoalSequence
 		bool			b_UseSimpleConnectionFeatures;
 		bool			b_UseTextConnectionFeatures;
 		bool			b_UseComplexNonConnectionFeatures;
-
 
 		SubgoalSequence (void);
 		~SubgoalSequence (void);
@@ -140,6 +141,7 @@ class SubgoalSequence
 						 PddlProblem* _pPddlProblem);
 
 		String ToLogString (void);
+    String s_answerQuestion(String s_question);
 };
 
 
