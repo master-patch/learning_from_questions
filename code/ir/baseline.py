@@ -140,10 +140,14 @@ P = ['player-at',
 
 
 def question_t(question):
+    t = question
     return []
 
 
 def question_pt(question):
+    question.split(" ")
+    p = question[0]
+    t = question[1]
     return []
 
 
