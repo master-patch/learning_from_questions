@@ -151,11 +151,22 @@ def question_pt(question):
     return []
 
 
+def question_pairs(question):
+    question.split(" ")
+    p1 = question[0]
+    t1 = question[1]
+    p1 = question[0]
+    t1 = question[1]
+    return []
+
+
 def question_rpc(question_type, question):
     if question_type == 1:
         return question_t(question)
     elif question_type == 2:
         return question_pt(question)
+    elif question_type == 3:
+        return question_pairs(question)
 
 if __name__ == '__main__':
     sSentenceFile = '../../data/minecraft_text.raw'
