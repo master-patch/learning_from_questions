@@ -7,6 +7,10 @@ The aim of this research effort is to extend the work by [Branavan et al. (2012)
 This assumes you have `docker` installed on your machine.
 
 ```
+$ mkdir tmp && cd tmp
+$ wget http://groups.csail.mit.edu/rbg/code/planning/data/env.cache.bz2
+$ bzip2 -d env.cache.bz2
+$ cd ../
 $ sh ./start.sh
 ```
 
