@@ -26,3 +26,7 @@
 *.exe
 *.out
 *.app
+
+*.swp
+
+dev_notes.txt
