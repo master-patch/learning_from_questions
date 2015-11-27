@@ -848,7 +848,8 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 {
 	String sPddlDictFile = (config)"pddl_dict_file";
 	cout << "   loading dict: " << sPddlDictFile << endl;
-	// read in the dict file
+  // TODO Delete tester question from valid_predicates.dictionary. It's at the bottom
+	
 	String_dq_t dqLines;
 	if (false == File::ReadLines (sPddlDictFile, dqLines))
 	{
