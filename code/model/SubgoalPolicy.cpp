@@ -1758,9 +1758,14 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
     if (0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
       pSubgoal->b_isQuestion = true;
       String_dq_t dq_QuestionArgs;
-      pSubgoal->p_PddlSubgoalPredicate->GetPddlString().Split(dq_QuestionArgs,' ');
+      String s_PredicateString = pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
+      size_t i_Start = s_PredicateString.rfind("(");
+      size_t i_End = s_PredicateString.find(")");
+      String s_QuestionString = s_PredicateString.substr(i_Start, i_End);
+      s_QuestionString->Split(dq_QuestionArgs,' ');
       String s_QuetionType = dq_QuestionArgs[1];
-      String s_QuetionQuery = dq_QuestionArgs[2];
+      size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
+      String s_QuetionQuery = s_QuestionString.substr(i_QueryIndex);
       cout << "pSubgoal is a QUESTION" << endl;
       cout<< pSubgoal->p_PddlSubgoalPredicate->GetPddlString() << endl;
       //TODO: ASK QUESTION using s_QuestionType, s_QuestionQuery, and some conf on answerType
