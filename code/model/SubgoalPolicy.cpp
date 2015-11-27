@@ -1752,6 +1752,13 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 			= SampleDecision (pSubgoal->lprb_Subgoal, o_SubgoalExploration, _bTestMode);
 		pSubgoal->p_PddlSubgoalPredicate
 			= vec_CandidatePredicates [pSubgoal->i_SubgoalSelection];
+    if (pSubgoal->p_PddlSubgoalPredicate->getPddlString().find("Question")) {
+      pSubgoal->b_isQuestion = true;
+      cout << "pSubgoal is a QUESTION" << endl;
+      cout<< pSubgoal->p_PddlSubgoalPredicate->GetPddlString() << endl;
+      //TODO: ASK QUESTION
+      //TODO: Recompute Candidate set
+    }
 
 		_pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
 
