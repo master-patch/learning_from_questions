@@ -1762,7 +1762,7 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
       size_t i_Start = s_PredicateString.rfind("(");
       size_t i_End = s_PredicateString.find(")");
       String s_QuestionString = s_PredicateString.substr(i_Start, i_End);
-      s_QuestionString->Split(dq_QuestionArgs,' ');
+      s_QuestionString.Split(dq_QuestionArgs, ' ');
       String s_QuetionType = dq_QuestionArgs[1];
       size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
       String s_QuetionQuery = s_QuestionString.substr(i_QueryIndex);
