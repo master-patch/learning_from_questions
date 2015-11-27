@@ -40,6 +40,7 @@ typedef hash_map<String,int>				FeatureToIndex_hmp_t;
 typedef vector <PddlPredicate*>				PddlPredicate_vec_t;
 typedef vector <SentenceConnection*>		SentenceConnection_vec_t;
 typedef map <String, FeatureToValue_map_t*> ConnectionHashToFeatures_map_t;
+typedef hash_map<String, String> String_String_map_t;
 
 
 
@@ -141,7 +142,7 @@ class SubgoalSequence
 						 PddlProblem* _pPddlProblem);
 
 		String ToLogString (void);
-    String s_answerQuestion(String s_question);
+    
 };
 
 
@@ -229,7 +230,7 @@ class SubgoalPolicy
 		PddlStringToPredicate_map_t	map_PddlStringToCandidatePredicate;
 		PddlPredicate_vec_t			vec_CandidatePredicates;
 		char_vec_t					vec_CanReachCandidatePredicate;
-
+    String_String_map_t map_QuestionAnswerPairs;
 		Matrix <char,2>	mtx_PredicateConnectionsFromTo;
 		Matrix <char,2>	mtx_PredicateConnectionsToFrom;
 		Matrix <int_dq_t*,2>	mtx_SentencesPositiveFromTo;
@@ -287,6 +288,8 @@ class SubgoalPolicy
 		bool			b_UseSuccessFailureCountsInFeedback;
 		int				i_UpdatesPerIteration;
 
+    
+    
 
 		float DistanceScore (float _fDistance)
 		{
@@ -306,7 +309,7 @@ class SubgoalPolicy
 		void ComputeSequenceEndFeatures (int _iIndex,
 										 const Problem& _rProblem,
 										 SubgoalSequence* _pSequence);
-		
+
 		bool LoadSimpleConnectionFile (void);
 		bool LoadFeatureConnectionFile (void);
 		bool LoadPredDictFile (void);
@@ -345,6 +348,8 @@ class SubgoalPolicy
 				_pFV->Set (_iOffset + _rvecFI [i], _fValue, _bCheckDuplicates);
 		}
 
+    void AskQuestion(String s_QuestionType, String s_QuestionQuery);
+
 	public:
 		SubgoalPolicy (void);
 		~SubgoalPolicy (void);
@@ -375,7 +380,7 @@ class SubgoalPolicy
 		double WeightVectorNorm (void);
 		String GetFeatureString (int _iIndex) const;
 		void WriteConnectionFeedback (void);
-		void WriteConnectionPredictionHeader (void);
+    void WriteConnectionPredictionHeader (void);
 		void WriteConnectionPredictions (void);
 		String ConnectionPredictionRatio (void);
 };
