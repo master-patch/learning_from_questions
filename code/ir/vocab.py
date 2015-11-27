@@ -70,7 +70,7 @@ A = {
 }
 
 
-T = {
+O = {
     'ironbar',
     'seeds',
     'brown-mushroom',

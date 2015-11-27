@@ -1,5 +1,5 @@
 from collections import defaultdict
-from vocab import P, T, A
+from vocab import P, O, A
 
 
 def build_inverted_index(vocab, data):
@@ -40,7 +40,7 @@ class BagOfWords(AbstractIR):
 
         # using cache is the equivalent of looking up files
         self.use_cache = use_cache
-        self.vocab = P | T | A
+        self.vocab = P | O | A
         self.index = build_inverted_index(
             self.vocab,
             self.sentences)
@@ -52,19 +52,19 @@ class BagOfWords(AbstractIR):
             t = parsed
             indexes = self.index[t]
         elif type == 2:
-            p, t = parsed
+            p, o = parsed
             indexes = set.intersect(
                 self.index[p],
-                self.index[t])
+                self.index[o])
         elif type == 3:
-            p1, t1, p2, t2 = parsed
+            p1, o1, p2, o2 = parsed
             p_matching = set.intersect(
                 self.index[p1],
                 self.index[p2])
-            t_matching = set.intersect(
-                self.index[t1],
-                self.index[t2])
-            indexes = p_matching | t_matching
+            o_matching = set.intersect(
+                self.index[o1],
+                self.index[o2])
+            indexes = p_matching | o_matching
 
         return [self.sentence_to_features(i) for i in indexes]
 
