@@ -18,6 +18,7 @@ Subgoal::Subgoal (void)
 	p_PddlSubgoalPredicate = NULL;
 	b_IsLastSubgoalToTarget = false;
 	b_ForcedSequenceEnd = false;
+  b_isQuestion = false;
 	p_SelectedPredicateFeatures = NULL;
 }
 
