@@ -1764,9 +1764,9 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
       String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
       s_QuestionString.Split(dq_QuestionArgs, ' ');
       //Parse Question type and query from question
-      String s_QuetionType = dq_QuestionArgs[1];
+      String s_QuestionType = dq_QuestionArgs[1];
       size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
-      String s_QuetionQuery = s_QuestionString.substr(i_QueryIndex);
+      String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
       //TODO: ASK QUESTION using s_QuestionType, s_QuestionQuery, and some conf on answerType
 
       //TODO: Recompute Candidate set
