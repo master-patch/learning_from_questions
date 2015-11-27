@@ -866,7 +866,7 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 		String_dq_t dqSplit;
 		iterLine->Split (dqSplit, '|');
 		assert (dqSplit.size () == 3);
-
+    //TODO SET BREAKPOINT HERE
 		int iIndex = dqSplit [0];
 		int iValue = (int)dqSplit [1];
 		bool bIsFunction = (iValue > 0);
