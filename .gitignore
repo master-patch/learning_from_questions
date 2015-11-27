@@ -34,3 +34,4 @@ tmp
 *.swp
 
 dev_notes.txt
+**/*.pyc
