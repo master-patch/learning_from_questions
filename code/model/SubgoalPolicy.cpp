@@ -1759,9 +1759,9 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
       pSubgoal->b_isQuestion = true;
       String_dq_t dq_QuestionArgs;
       String s_PredicateString = pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
-      size_t i_Start = s_PredicateString.rfind("(");
+      size_t i_Start = s_PredicateString.rfind("(") + 1;
       size_t i_End = s_PredicateString.find(")");
-      String s_QuestionString = s_PredicateString.substr(i_Start, i_End);
+      String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
       s_QuestionString.Split(dq_QuestionArgs, ' ');
       String s_QuetionType = dq_QuestionArgs[1];
       size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
