@@ -48,9 +48,12 @@ class BagOfWords(AbstractIR):
     def question(self, type, question):
         parsed = self.parse_question(question)
 
+        if type == 0:
+            a = parsed
+            indexes = self.index[a]
         if type == 1:
-            t = parsed
-            indexes = self.index[t]
+            o = parsed
+            indexes = self.index[o]
         elif type == 2:
             p, o = parsed
             indexes = set.intersect(
