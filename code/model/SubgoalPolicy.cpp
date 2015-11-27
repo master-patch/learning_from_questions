@@ -866,7 +866,6 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 		String_dq_t dqSplit;
 		iterLine->Split (dqSplit, '|');
 		assert (dqSplit.size () == 3);
-    //TODO SET BREAKPOINT HERE
 		int iIndex = dqSplit [0];
 		int iValue = (int)dqSplit [1];
 		bool bIsFunction = (iValue > 0);
@@ -1676,7 +1675,6 @@ void SubgoalPolicy::SampleConnections (bool _bTestMode)
 }
 
 
-// TODO: Modify to sample questions, and answer them as need be
 void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 										   bool _bTestMode,
 										   SubgoalSequence* _pSequence)
@@ -1752,22 +1750,24 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 		// sample	
 		pSubgoal->i_SubgoalSelection
 			= SampleDecision (pSubgoal->lprb_Subgoal, o_SubgoalExploration, _bTestMode);
-    pSubgoal->i_SubgoalSelection = 336; //TODO DELETE, this is only to test question functionality
 		pSubgoal->p_PddlSubgoalPredicate
 			= vec_CandidatePredicates [pSubgoal->i_SubgoalSelection];
+
+    //TODO: Add Config Check to make sure this is valid. Else if question found and
+    // config, throw an error
     if (0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
       pSubgoal->b_isQuestion = true;
       String_dq_t dq_QuestionArgs;
+      //Parse Question from PddlString
       String s_PredicateString = pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
       size_t i_Start = s_PredicateString.rfind("(") + 1;
       size_t i_End = s_PredicateString.find(")");
       String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
       s_QuestionString.Split(dq_QuestionArgs, ' ');
+      //Parse Question type and query from question
       String s_QuetionType = dq_QuestionArgs[1];
       size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
       String s_QuetionQuery = s_QuestionString.substr(i_QueryIndex);
-      cout << "pSubgoal is a QUESTION" << endl;
-      cout<< pSubgoal->p_PddlSubgoalPredicate->GetPddlString() << endl;
       //TODO: ASK QUESTION using s_QuestionType, s_QuestionQuery, and some conf on answerType
 
       //TODO: Recompute Candidate set
