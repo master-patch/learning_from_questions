@@ -51,7 +51,7 @@ class BagOfWords(AbstractIR):
         if type == 0:
             a = parsed
             indexes = self.index[a]
-        if type == 1:
+        elif type == 1:
             o = parsed
             indexes = self.index[o]
         elif type == 2:
