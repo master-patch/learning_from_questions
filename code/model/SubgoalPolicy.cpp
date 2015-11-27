@@ -830,7 +830,8 @@ void SubgoalPolicy::LoadGoldLengthFile(void)
 	ITERATE (String_dq_t, dqLines, iterLine)
 	{
 		// Problem | length
-		String_dq_t dqSplit;
+    String_dq_t dqSplit;
+    
 		iterLine->Split (dqSplit, '|');
 		assert (dqSplit.size () == 2);
 		String sProblem = dqSplit[0];
@@ -1751,13 +1752,19 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 		// sample	
 		pSubgoal->i_SubgoalSelection
 			= SampleDecision (pSubgoal->lprb_Subgoal, o_SubgoalExploration, _bTestMode);
+    pSubgoal->i_SubgoalSelection = 336; //TODO DELETE, this is only to test question functionality
 		pSubgoal->p_PddlSubgoalPredicate
 			= vec_CandidatePredicates [pSubgoal->i_SubgoalSelection];
     if (0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
       pSubgoal->b_isQuestion = true;
+      String_dq_t dq_QuestionArgs;
+      pSubgoal->p_PddlSubgoalPredicate->GetPddlString().Split(dq_QuestionArgs,' ');
+      String s_QuetionType = dq_QuestionArgs[1];
+      String s_QuetionQuery = dq_QuestionArgs[2];
       cout << "pSubgoal is a QUESTION" << endl;
       cout<< pSubgoal->p_PddlSubgoalPredicate->GetPddlString() << endl;
-      //TODO: ASK QUESTION
+      //TODO: ASK QUESTION using s_QuestionType, s_QuestionQuery, and some conf on answerType
+
       //TODO: Recompute Candidate set
     }
 
