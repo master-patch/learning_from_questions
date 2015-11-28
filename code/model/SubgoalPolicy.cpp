@@ -18,7 +18,7 @@ Subgoal::Subgoal (void)
 	p_PddlSubgoalPredicate = NULL;
 	b_IsLastSubgoalToTarget = false;
 	b_ForcedSequenceEnd = false;
-  b_isQuestion = false;
+	b_isQuestion = false;
 	p_SelectedPredicateFeatures = NULL;
 }
 
@@ -1752,21 +1752,21 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 		pSubgoal->p_PddlSubgoalPredicate
 			= vec_CandidatePredicates [pSubgoal->i_SubgoalSelection];
 
-    //TODO: Add Config Check to make sure this is valid. Else if question found and
-    // config, throw an error
-    if (0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
-      pSubgoal->b_isQuestion = true;
-      String_dq_t dq_QuestionArgs;
-      //Parse Question from PddlString
-      String s_PredicateString = pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
-      size_t i_Start = s_PredicateString.rfind("(") + 1;
-      size_t i_End = s_PredicateString.find(")");
-      String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
-      s_QuestionString.Split(dq_QuestionArgs, ' ');
-      //Parse Question type and query from question
-      String s_QuestionType = dq_QuestionArgs[1];
-      size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
-      String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
+    	//TODO: Add Config Check to make sure this is valid. Else if question found and
+    	// config, throw an error
+    	if (0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
+		pSubgoal->b_isQuestion = true;
+      		String_dq_t dq_QuestionArgs;
+      		//Parse Question from PddlString
+      		String s_PredicateString = pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
+      		size_t i_Start = s_PredicateString.rfind("(") + 1;
+      		size_t i_End = s_PredicateString.find(")");
+      		String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
+      		s_QuestionString.Split(dq_QuestionArgs, ' ');
+      		//Parse Question type and query from question
+      		String s_QuestionType = dq_QuestionArgs[1];
+      		size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
+      		String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
       //TODO: ASK QUESTION using s_QuestionType, s_QuestionQuery, and some conf on answerType
       AskQuestion(s_QuestionType, s_QuestionQuery);
       //TODO: Recompute Candidate set
