@@ -20,7 +20,29 @@ def start_ir(host, port, ir, max_connections=1):
         type, question = message.split(" ", 1)
         answers = ir.question(type, question)
 
-        # format question
+        # formatting the answer
+        '''
+        12
+        This is an example of a sentence all in one line .
+        PathDep::nsubj::0::0::Forw::::|1|84|270|12
+        PathDep::nsubj::0::0::Forw::::|1|84|271|12
+        PathDep::nsubj::0::0::Forw::::|1|84|272|12
+        PathDep::nsubj::0::0::Forw::::|1|84|273|12
+        PathDep::nsubj::0::0::Forw::::|1|84|274|12
+        PathDep::nsubj::0::0::Forw::::|1|84|275|12
+        PathDep::nsubj::0::0::Forw::::|1|85|270|12
+        PathDep::nsubj::0::0::Forw::::|1|85|271|12
+        PathDep::nsubj::0::0::Forw::::|1|85|272|12
+        ---
+        13
+        This is an example of a sentence all in one line .
+        PathDep::nsubj::0::0::Forw::::|1|84|270|13
+        ---
+        14
+        This is an example of a sentence all in one line .
+
+        ---EOM
+        '''
         formatted_answers = "\n---\n".join(
             ["\n".join([str(a[0]), a[1], a[2]])
                 for a in answers]) + "\n---EOM"
