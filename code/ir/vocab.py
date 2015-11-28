@@ -1,3 +1,4 @@
+# Actions
 A = {
     'place-on-map',
     'move',
@@ -69,7 +70,7 @@ A = {
     'furnace-make-glass'
 }
 
-
+# Objects
 O = {
     'ironbar',
     'seeds',
@@ -129,6 +130,7 @@ O = {
     'clayblock'
 }
 
+# Predicates
 P = {
     'player-at',
     'thing-at-map',
