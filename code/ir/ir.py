@@ -23,10 +23,14 @@ class AbstractIR:
         }
         self.name = name
 
+    # Subclasses will implement this
     def question(self, type, question):
-        # this is just empty
         pass
 
+    # Parsing a question is just about separating the words
+    # TODO here some more intelligent hack will make sure
+    # we can map `make-sugar` to `make sugar` or similar to
+    # increase recall
     def parse_question(self, question):
         question.split(" ")
         return question
@@ -49,7 +53,6 @@ class BagOfWords(AbstractIR):
             sentences,
             ids)
 
-        # using cache is the equivalent of looking up files
         self.vocab = P | O | A
         self.index = build_inverted_index(
             self.vocab,
@@ -60,9 +63,11 @@ class BagOfWords(AbstractIR):
         # build up a cache
         self.cache = dict()
         if use_cache:
-            self.build_cache()
+            self._build_cache()
 
-    def build_cache(self):
+    # build a cache by reading the already generated feature file
+    # the last number in each line of the file has the ID of the sentence
+    def _build_cache(self):
         with open('../../data/valid_predicates.text_features') as f:
             lines = f.readlines()
             for l in lines:
@@ -74,6 +79,7 @@ class BagOfWords(AbstractIR):
                 self.cache[sent_id].append(l)
             # # print sorted(self.cache.keys()), len(self.cache.keys())
 
+    # ask question to the IR engine
     def question(self, type, question):
         parsed = self.parse_question(question)
 
@@ -102,6 +108,9 @@ class BagOfWords(AbstractIR):
 
         return [self.sentence_to_features(i) for i in indexes]
 
+    # convert a sentence to its features
+    # it returns ((int)sent_id, (string)sentence, (string)features)
+    # features are listed line by line, hence separated by \n
     def sentence_to_features(self, sent_id):
         sentence = " ".join(self.sentences[sent_id])
 
@@ -110,6 +119,8 @@ class BagOfWords(AbstractIR):
             features = self.cache[sent_id]
             return sent_id, sentence, "\n".join(features)
 
+        # otherwise use the default option:
+        # generate features on runtime and store in cache
         return AbstractIR.sentence_to_features(
             self,
             sent_id)
