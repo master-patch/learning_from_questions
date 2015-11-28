@@ -23,7 +23,7 @@ def start_ir(host, port, ir, max_connections=1):
         # format question
         formatted_answers = "\n---\n".join(
             ["\n".join([str(a[0]), a[1], a[2]])
-                for a in answers])
+                for a in answers]) + "\n---EOM"
         conn.send(formatted_answers)
 
 
