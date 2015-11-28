@@ -2,18 +2,25 @@ from collections import defaultdict
 from vocab import P, O, A
 
 
-def build_inverted_index(vocab, data):
+# Build the inverted index {word: [sent_id1, sentid_2]}
+def build_inverted_index(vocab, sentences):
     index = defaultdict(list)
-    for i, tokens in enumerate(data):
+    for i, tokens in sentences.iteritems():
         for token in tokens:
             if token in vocab:
                 index[token].append(i)
     return index
 
 
+# Abstract implementation of the IR system
 class AbstractIR:
-    def __init__(self, name, sentences):
-        self.sentences = sentences
+    def __init__(self, name, sentences, ids=None):
+        if ids is None:
+            ids = range(0, len(sentences))
+        self.sentences = {
+            ids[i]: sentences[i]
+            for i in range(len(sentences))
+        }
         self.name = name
 
     def question(self, type, question):
@@ -24,26 +31,48 @@ class AbstractIR:
         question.split(" ")
         return question
 
-    def sentence_to_features(self, sentence_id):
+    def sentence_to_features(self, sent_id):
         # TODO parse the sentence
         # TODO extract the features
-        pass
+        sentence = " ".join(self.sentences[sent_id])
+        return sent_id, sentence, ''
 
 
+# Bag of Words IR
+# It matches all the sentences with a specific set of words
 class BagOfWords(AbstractIR):
 
-    def __init__(self, sentences, use_cache=True):
+    def __init__(self, sentences, ids=None, use_cache=True):
         AbstractIR.__init__(
             self,
             "BagOfWords",
-            sentences)
+            sentences,
+            ids)
 
         # using cache is the equivalent of looking up files
-        self.use_cache = use_cache
         self.vocab = P | O | A
         self.index = build_inverted_index(
             self.vocab,
             self.sentences)
+
+        # # print ids
+
+        # build up a cache
+        self.cache = dict()
+        if use_cache:
+            self.build_cache()
+
+    def build_cache(self):
+        with open('../../data/valid_predicates.text_features') as f:
+            lines = f.readlines()
+            for l in lines:
+                split = l.split("|")
+                sent_id = int(split[len(split) - 1])
+                if sent_id not in self.cache:
+                    self.cache[sent_id] = []
+                    # # print sent_id, l
+                self.cache[sent_id].append(l)
+            # # print sorted(self.cache.keys()), len(self.cache.keys())
 
     def question(self, type, question):
         parsed = self.parse_question(question)
@@ -73,11 +102,14 @@ class BagOfWords(AbstractIR):
 
         return [self.sentence_to_features(i) for i in indexes]
 
-    def sentence_to_features(self, sentence_id):
-        sentence = " ".join(self.sentences[sentence_id])
-        if not self.use_cache:
-            features = super(BagOfWords, self).sentence_to_features(sentence_id)
-            return sentence, features
-        return sentence, ""
+    def sentence_to_features(self, sent_id):
+        sentence = " ".join(self.sentences[sent_id])
 
-        # TODO read feature of the sentence from the cache
+        # check if features are in cache
+        if sent_id in self.cache:
+            features = self.cache[sent_id]
+            return sent_id, sentence, "\n".join(features)
+
+        return AbstractIR.sentence_to_features(
+            self,
+            sent_id)
