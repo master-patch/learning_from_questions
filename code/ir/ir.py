@@ -24,7 +24,7 @@ class AbstractIR:
         question.split(" ")
         return question
 
-    def sentence_to_features(self, sentece_id):
+    def sentence_to_features(self, sentence_id):
         # TODO parse the sentence
         # TODO extract the features
         pass
@@ -74,7 +74,10 @@ class BagOfWords(AbstractIR):
         return [self.sentence_to_features(i) for i in indexes]
 
     def sentence_to_features(self, sentence_id):
+        sentence = " ".join(self.sentences[sentence_id])
         if not self.use_cache:
-            return super(BagOfWords, self).sentence_to_features(sentence_id)
+            features = super(BagOfWords, self).sentence_to_features(sentence_id)
+            return sentence, features
+        return sentence, ""
 
         # TODO read feature of the sentence from the cache
