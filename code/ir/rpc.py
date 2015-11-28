@@ -3,7 +3,7 @@ import socket
 EOM = '---EOM'
 
 
-def start_ir(host, port, ir, max_connections=1):
+def start_ir(host, port, ir, max_connections=1, recv_length=8192):
     # Setup socket
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((host, port))
@@ -16,7 +16,7 @@ def start_ir(host, port, ir, max_connections=1):
         newsock, address = s.accept()
 
         # receive questions from new connection
-        message = recv_end(newsock)
+        message = recv_end(newsock, recv_length)
         type, question = message.split(" ", 1)
         answers = ir.question(type, question)
 
@@ -51,11 +51,11 @@ def start_ir(host, port, ir, max_connections=1):
 
 # this makes sure that we receive a question in the following form:
 #    any message here as long as it ends with---EOM
-def recv_end(the_socket):
+def recv_end(the_socket, recv_length):
     total_data = []
     data = ''
     while True:
-        data = the_socket.recv(8192)
+        data = the_socket.recv(recv_length)
         if EOM in data:
             total_data.append(data[:data.find(EOM)])
             break
