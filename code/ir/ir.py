@@ -48,18 +48,18 @@ class BagOfWords(AbstractIR):
     def question(self, type, question):
         parsed = self.parse_question(question)
 
-        if type == 0:
+        if type == "action":
             a = parsed
             indexes = self.index[a]
-        elif type == 1:
+        elif type == "object":
             o = parsed
             indexes = self.index[o]
-        elif type == 2:
+        elif type == "subgoal":
             p, o = parsed
             indexes = set.intersect(
                 self.index[p],
                 self.index[o])
-        elif type == 3:
+        elif type == "subgoal_pair":
             p1, o1, p2, o2 = parsed
             p_matching = set.intersect(
                 self.index[p1],
@@ -68,6 +68,8 @@ class BagOfWords(AbstractIR):
                 self.index[o1],
                 self.index[o2])
             indexes = p_matching | o_matching
+        else:
+            indexes = []
 
         return [self.sentence_to_features(i) for i in indexes]
 

@@ -11,4 +11,4 @@ if __name__ == '__main__':
     sentences = [sentence.lWords for sentence in lSentences]
 
     bags = BagOfWords(sentences)
-    print bags.question(1, "wood")
+    print bags.question("action", "wood")
