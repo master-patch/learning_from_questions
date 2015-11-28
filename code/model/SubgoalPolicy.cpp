@@ -830,7 +830,7 @@ void SubgoalPolicy::LoadGoldLengthFile(void)
 	ITERATE (String_dq_t, dqLines, iterLine)
 	{
 		// Problem | length
-    String_dq_t dqSplit;
+    String_dq_	t dqSplit;
     
 		iterLine->Split (dqSplit, '|');
 		assert (dqSplit.size () == 2);
