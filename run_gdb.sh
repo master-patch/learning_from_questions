@@ -1,4 +1,5 @@
 #!/bin/sh
 ./run_cache.sh &
 ./run_client.sh &
-gdb bin/text_guided_planner
+./run_ir.sh &
+cgdb bin/text_guided_planner

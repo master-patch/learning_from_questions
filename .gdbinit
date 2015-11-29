@@ -103,4 +103,4 @@ end
 
 br main
 br SubgoalLearner::Iterate
-r cfg/test_text.cfg run=t1
+r cfg/question_model.cfg run=t1

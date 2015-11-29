@@ -1,5 +1,6 @@
 from collections import defaultdict
 from vocab import P, O, A
+import sys
 
 
 # Build the inverted index {word: [sent_id1, sentid_2]}
@@ -68,7 +69,7 @@ class BagOfWords(AbstractIR):
     # build a cache by reading the already generated feature file
     # the last number in each line of the file has the ID of the sentence
     def _build_cache(self):
-        with open('../../data/valid_predicates.text_features') as f:
+        with open(sys.path[0] + '/../../data/valid_predicates.text_features') as f:
             lines = f.readlines()
             for l in lines:
                 split = l.split("|")

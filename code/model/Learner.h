@@ -90,7 +90,7 @@ class SubgoalLearner : public FFCallback, public IRCallback
 
 
 		void OnFFResponse (int _iIndex, FFResponse& _rResponse);
-		void OnIRResponse (int _iIndex, FFResponse& _rResponse);
+		void OnIRAnswer (int _iIndex, IRAnswer& _aAnswer);
 		double ComputeReward (SubgoalSequenceState& _rState);
 		void LogPredictions (int _iIteration);
 		void TrimPlanSubgoalSequences (PlanSubgoalSequences_dq_t& _rdqPlanSubgoals);

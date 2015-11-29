@@ -1,3 +1,8 @@
+import sys
+sys.path.append(sys.path[0] + '/../')
+
+from ir import BagOfWords
+from feature_computation.Sentence import ReadSentencesFromTextFileSimple
 import socket
 
 EOM = '---EOM'
@@ -7,6 +12,7 @@ def start_ir(host, port, ir, max_connections=1, recv_length=8192):
     # Setup socket
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((host, port))
+    print "IR: ({}) started {}:{}".format(ir.name, host, port)
     s.listen(max_connections)
     conn, addr = s.accept()
 
@@ -19,6 +25,8 @@ def start_ir(host, port, ir, max_connections=1, recv_length=8192):
         message = recv_end(newsock, recv_length)
         type, question = message.split(" ", 1)
         answers = ir.question(type, question)
+        print "IR: question is ({}, {})".format(type, question)
+        print "IR found {} question/s".format(len(answers))
 
         # formatting the answer
         '''
@@ -70,3 +78,13 @@ def recv_end(the_socket, recv_length):
                 break
 
     return ''.join(total_data)
+
+# Crete an IR instance using wiki
+print "IR: Starting IR.."
+sSentenceFile = sys.path[0] + '/../../data/minecraft_text.raw'
+lSentences = ReadSentencesFromTextFileSimple(sSentenceFile)
+
+sentences = [sentence.lWords for sentence in lSentences]
+ids = [sentence.iIndex for sentence in lSentences]
+ir = BagOfWords(sentences, ids)
+start_ir(sys.argv[1], int(sys.argv[2]), ir)

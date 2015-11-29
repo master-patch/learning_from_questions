@@ -115,6 +115,15 @@ bool SubgoalLearner::Init (void)
 	return (-1 != i_DomainPddlId);
 }
 
+//										
+void SubgoalLearner::OnIRAnswer (int _iIndex, IRAnswer& _aAnswer)
+{
+	// pthread_mutex_lock (&mtx_WaitForSequences);
+	// TODO: do something when IRAnswer is received
+	// pthread_mutex_unlock (&mtx_WaitForSequences);
+}
+
+
 
 //										
 void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
