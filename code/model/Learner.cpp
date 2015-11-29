@@ -97,6 +97,12 @@ bool SubgoalLearner::Init (void)
 	if (false == o_FFInterface.Connect ())
 		return false;
 
+	// Setting up IR connection
+	// TODO: check if callback should be set to this
+	o_IR.SetCallback (this);
+	if (false == o_IR.Connect ())
+		return false;
+
 	String_dq_t dqLines;
 	if (false == File::ReadLines ((config)"domain_pddl_file", dqLines))
 		return false;

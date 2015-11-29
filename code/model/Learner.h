@@ -4,6 +4,7 @@
 #include "SubgoalPolicy.h"
 #include "Problems.h"
 #include "FFInterface.h"
+#include "IR.h"
 #include <set>
 using namespace std;
 
@@ -43,11 +44,12 @@ ostream& operator<< (ostream& _rStream, const SubgoalSequence& _rSequence);
 
 
 //										
-class SubgoalLearner : public FFCallback
+class SubgoalLearner : public FFCallback, public IRCallback
 {
 	private:
 		SubgoalPolicy	o_SubgoalPolicy;
 		FFInterface		o_FFInterface;
+		IR		o_IR;
 		double			d_PlanFailureReward;
 		double			d_TaskCompletionReward;
 		double			d_SuccessfulStepRewardBase;
@@ -88,6 +90,7 @@ class SubgoalLearner : public FFCallback
 
 
 		void OnFFResponse (int _iIndex, FFResponse& _rResponse);
+		void OnIRResponse (int _iIndex, FFResponse& _rResponse);
 		double ComputeReward (SubgoalSequenceState& _rState);
 		void LogPredictions (int _iIteration);
 		void TrimPlanSubgoalSequences (PlanSubgoalSequences_dq_t& _rdqPlanSubgoals);
