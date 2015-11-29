@@ -32,9 +32,11 @@ class IRCallback
 class IR : public ClientSocket
 {
 	private:
+		static bool			b_Active;
 		static IR*			p_IR;
 
 		Buffer						o_Data;
+		pthread_t					thr_SocketLoop;
 		pthread_mutex_t				mtx_QuestionList;
 		IRCallback*					p_Callback;
 
@@ -55,7 +57,7 @@ class IR : public ClientSocket
 		void OnReceive (const void* _zData, long _lBytes);
 		void OnDisconnect (void);
 		void ClearConnection (void);
-
+		static void* RunThread (void* _pArg);
 };
 
 

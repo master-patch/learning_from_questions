@@ -8,6 +8,7 @@
 #define RECEIVE_BUFFER	2048
 
 // Book-keeping
+bool IR::b_Active = false;
 IR* IR::p_IR = NULL;
 										
 IR::IR (void)
@@ -24,6 +25,7 @@ IR::~IR (void)
 
 void IR::Disconnect (void)
 {
+	b_Active = false;
 	sleep (1);
 	Socket::Close ();
 }
@@ -48,6 +50,10 @@ bool IR::Connect (void)
 		return false;
 	}
 	ClearConnection ();
+
+	b_Active = true;
+	pthread_create (&thr_SocketLoop, NULL, RunThread, this);
+	pthread_detach (thr_SocketLoop);
 
 	return true;
 }
@@ -95,6 +101,26 @@ bool IR::SendMessage (const Buffer& _rMessage)
 
 	assert (iLength == bufMsg.Length ());
 	return ClientSocket::SendNonBlocking (bufMsg.GetData (), bufMsg.Length ());
+}
+
+void* IR::RunThread (void* _pArg)
+{
+	if (NULL != p_IR)
+	{
+		while (true == b_Active)
+		{
+			usleep (100);
+			// p_IR->RunLocalHeuristicEvaluator ();
+		}
+	}
+	else
+	{
+		while (true == b_Active)
+			AllSockets::ProcessEvents (1000);
+	}
+
+	pthread_exit (&((IR*)_pArg)->thr_SocketLoop);
+	return NULL;
 }
 										
 bool IR::SendQuestion (size_t _iType,
@@ -149,7 +175,7 @@ void IR::OnReceive (const void* _zData, long _lBytes)
 		cout << "OnReceive " << iMessageSize  << " " << cType << endl;
 
 		// TODO: here we should process the data, the comment below can be useful
-		// Otherwise have a look at FFInterface.cpp
+		// Otherwise have a look at IR.cpp
 
 		// if ('u' == cType)
 		// {
