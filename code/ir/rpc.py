@@ -1,4 +1,5 @@
 import sys
+import struct
 sys.path.append(sys.path[0] + '/../')
 
 from ir import BagOfWords
@@ -22,7 +23,7 @@ def start_ir(host, port, ir, max_connections=1, recv_length=8192):
         newsock, address = s.accept()
 
         # receive questions from new connection
-        message = recv_end(newsock, recv_length)
+        message = recv_size(newsock, recv_length)
         type, question = message.split(" ", 1)
         answers = ir.question(type, question)
         print "IR: question is ({}, {})".format(type, question)
@@ -34,13 +35,6 @@ def start_ir(host, port, ir, max_connections=1, recv_length=8192):
         This is an example of a sentence all in one line .
         PathDep::nsubj::0::0::Forw::::|1|84|270|12
         PathDep::nsubj::0::0::Forw::::|1|84|271|12
-        PathDep::nsubj::0::0::Forw::::|1|84|272|12
-        PathDep::nsubj::0::0::Forw::::|1|84|273|12
-        PathDep::nsubj::0::0::Forw::::|1|84|274|12
-        PathDep::nsubj::0::0::Forw::::|1|84|275|12
-        PathDep::nsubj::0::0::Forw::::|1|85|270|12
-        PathDep::nsubj::0::0::Forw::::|1|85|271|12
-        PathDep::nsubj::0::0::Forw::::|1|85|272|12
         ---
         13
         This is an example of a sentence all in one line .
@@ -49,35 +43,39 @@ def start_ir(host, port, ir, max_connections=1, recv_length=8192):
         14
         This is an example of a sentence all in one line .
 
-        ---EOM
+        ---
         '''
         formatted_answers = "\n---\n".join(
             ["\n".join([str(a[0]), a[1], a[2]])
-                for a in answers]) + "\n---EOM"
-        conn.send(formatted_answers)
+                for a in answers]) + "\n"
+        length = struct.pack('>i', len(formatted_answers))
+        conn.send(length + formatted_answers)
 
 
-# this makes sure that we receive a question in the following form:
-#    any message here as long as it ends with---EOM
-def recv_end(the_socket, recv_length):
+def recv_size(the_socket, recv_length=8192):
+    # data length is packed into 4 bytes
+    total_len = 0
     total_data = []
-    data = ''
-    while True:
-        data = the_socket.recv(recv_length)
-        if EOM in data:
-            total_data.append(data[:data.find(EOM)])
-            break
-        total_data.append(data)
-        if len(total_data) > 1:
-
-            # check if end_of_data was split
-            last_pair = total_data[-2] + total_data[-1]
-            if EOM in last_pair:
-                total_data[-2] = last_pair[:last_pair.find(EOM)]
-                total_data.pop()
-                break
-
+    size = sys.maxint
+    size_data = sock_data = ''
+    recv_size = recv_length
+    while total_len < size:
+        sock_data = the_socket.recv(recv_size)
+        if not total_data:
+            if len(sock_data) > 4:
+                size_data += sock_data
+                size = struct.unpack('>i', size_data[:4])[0]
+                recv_size = size
+                if recv_size > 524288:
+                    recv_size = 524288
+                total_data.append(size_data[4:])
+            else:
+                size_data += sock_data
+        else:
+            total_data.append(sock_data)
+        total_len = sum([len(i) for i in total_data])
     return ''.join(total_data)
+
 
 # Crete an IR instance using wiki
 print "IR: Starting IR.."

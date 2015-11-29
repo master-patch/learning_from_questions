@@ -134,7 +134,7 @@ bool IR::SendQuestion (size_t _iType,
 
 	// TODO: check if we really need to lock the thread
 	pthread_mutex_lock (&mtx_QuestionList);
-	IRAnswer* pResponse = new IRAnswer;
+	IRAnswer* aAnswer = new IRAnswer;
 	pthread_mutex_unlock (&mtx_QuestionList);
 
 	CompressedBuffer bufProblem (_sQuestion);
@@ -201,8 +201,8 @@ void IR::OnReceive (const void* _zData, long _lBytes)
 		// 	}
 
 		// 	// update Question attributes ...		
-		// 	IRAnswer* pResponse = iteQuestion->second;
-		// 	pResponse->e_PlanningOutcome = po_outside_known_world;
+		// 	IRAnswer* aAnswer = iteQuestion->second;
+		// 	aAnswer->e_PlanningOutcome = po_outside_known_world;
 		// 	if (false == b_KnownWorldOnly)
 		// 	{
 		// 		cerr << "   [WW] 'Outside-known-world' respose received from "
@@ -215,8 +215,8 @@ void IR::OnReceive (const void* _zData, long _lBytes)
 		// 	pthread_mutex_unlock (&mtx_QuestionList);
 
 		// 	// callback with received response...
-		// 	p_Callback->OnIRAnswer (iQuestionId, *pResponse);
-		// 	delete pResponse;
+		// 	p_Callback->OnIRAnswer (iQuestionId, *aAnswer);
+		// 	delete aAnswer;
 		// }
 
 		// else 
