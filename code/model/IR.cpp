@@ -79,6 +79,7 @@ void IR::ClearConnection (void)
 										
 bool IR::SendMessage (const String& _rMessage)
 {
+	// TODO: what is the +1 for?
 	size_t iLength = _rMessage.length () + sizeof (size_t) + 1;
 
 	// TODO: make sure that instead of sending the length, we send EOM
@@ -88,19 +89,6 @@ bool IR::SendMessage (const String& _rMessage)
 
 	assert (iLength == bufMsg.Length ());
 	return ClientSocket::SendBlocking (bufMsg.GetData (), bufMsg.Length ());
-}
-									
-bool IR::SendMessage (const Buffer& _rMessage)
-{
-	size_t iLength = _rMessage.Length () + sizeof (size_t);
-
-	// TODO: make sure that instead of sending the length, we send EOM
-	Buffer bufMsg;
-	bufMsg.Append (&iLength, sizeof (size_t));
-	bufMsg.Append (_rMessage);
-
-	assert (iLength == bufMsg.Length ());
-	return ClientSocket::SendNonBlocking (bufMsg.GetData (), bufMsg.Length ());
 }
 
 void* IR::RunThread (void* _pArg)
@@ -134,24 +122,12 @@ bool IR::SendQuestion (String _sType,
 	}
 
 	// TODO: check if we really need to lock the thread
-	pthread_mutex_lock (&mtx_QuestionList);
-	IRAnswer* aAnswer = new IRAnswer;
-	pthread_mutex_unlock (&mtx_QuestionList);
+	// pthread_mutex_lock (&mtx_QuestionList);
+	// pthread_mutex_unlock (&mtx_QuestionList);
 
-	CompressedBuffer bufProblem (_sQuestion);
-	size_t iCompressedSize = bufProblem.CompressedSize ();
-	size_t iUncompressedSize = bufProblem.UncompressedSize ();
-
-	Buffer bufRequest;
-	// TODO: why appending ?
-	bufRequest.Append ("?", 1);
-	bufRequest.Append (&_sType, sizeof (size_t));
-	// TODO: do we have to append the size ?
-	bufRequest.Append (&iCompressedSize, sizeof (size_t));
-	bufRequest.Append (&iUncompressedSize, sizeof (size_t));
-	bufRequest.Append (bufProblem);
-
-	if (false == SendMessage (bufRequest))
+	String question;
+	question << _sType << " " << _sQuestion;
+	if (false == SendMessage (question))
 		return false;
 
 	return true;
