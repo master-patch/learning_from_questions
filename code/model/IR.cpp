@@ -175,6 +175,7 @@ void IR::OnReceive (const void* _zData, long _lBytes)
 
 		cout << "OnReceive " << iMessageSize  << " " << cType << endl;
 
+		IRAnswer* aAnswer;
 		// TODO: here we should process the data, the comment below can be useful
 		// Otherwise have a look at IR.cpp
 		p_Callback->OnIRAnswer (*aAnswer);

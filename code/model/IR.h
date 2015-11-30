@@ -24,7 +24,7 @@ class IRAnswer
 class IRCallback
 {
 	public:
-		virtual void OnIRAnswer (int _iIndex, IRAnswer& _rResponse) = 0;
+		virtual void OnIRAnswer (IRAnswer& _aAnswer) = 0;
 };
 
 

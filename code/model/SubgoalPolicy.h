@@ -353,6 +353,7 @@ class SubgoalPolicy: public IRCallback
 		IR		o_IR;
     bool AskQuestion(String s_QuestionType, String s_QuestionQuery);
     void OnIRAnswer (IRAnswer& _aAnswer);
+    void TestQA();
 
 	public:
 		SubgoalPolicy (void);

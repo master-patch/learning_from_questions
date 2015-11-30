@@ -329,7 +329,7 @@ bool SubgoalPolicy::Init (void)
 		return false;
 
 	// Launch the test
-	SubgoalPolicy::TestQA()
+	TestQA();
 
 	o_SequenceEndModel.Init ("end");
 	o_SubgoalSelectionModel.Init ("subgoal");
@@ -1829,9 +1829,10 @@ bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
   String answer;
   if (map_QuestionAnswerPairs[key]) {
     answer = map_QuestionAnswerPairs[key];
+    return true;
   } else {
     //TODO: Do RPC to Nicolas code
-    o_IR.sendQuestion(s_QuestionType, s_QuestionQuery)
+    return o_IR.SendQuestion(s_QuestionType, s_QuestionQuery);
   }
 }
 //													
@@ -2558,17 +2559,17 @@ void SubgoalPolicy::TestQA ()
 {
 	String type;
 	String query;
-	type << "action"
-	query << "wood"
+	type << "action";
+	query << "wood";
 	if (AskQuestion(type, query)) {
-		cout << "QA: success" << endl
+		cout << "QA: success" << endl;
 	}
-	cout << "QA: Done questioning" << endl
+	cout << "QA: Done questioning" << endl;
 }
 
 void SubgoalPolicy::OnIRAnswer (IRAnswer& _aAnswer)
 {
-	cout << "QA: Received an answer!"
+	cout << "QA: Received an answer!";
 	// pthread_mutex_lock (&mtx_WaitForSequences);
 	// TODO: do something when IRAnswer is received
 	// pthread_mutex_unlock (&mtx_WaitForSequences);
