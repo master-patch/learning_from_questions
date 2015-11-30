@@ -124,7 +124,7 @@ void* IR::RunThread (void* _pArg)
 	return NULL;
 }
 										
-bool IR::SendQuestion (size_t _iType,
+bool IR::SendQuestion (String _sType,
 							String& _sQuestion)
 {
 	if (NULL == p_Callback)
@@ -145,7 +145,7 @@ bool IR::SendQuestion (size_t _iType,
 	Buffer bufRequest;
 	// TODO: why appending ?
 	bufRequest.Append ("?", 1);
-	bufRequest.Append (&_iType, sizeof (size_t));
+	bufRequest.Append (&_sType, sizeof (size_t));
 	// TODO: do we have to append the size ?
 	bufRequest.Append (&iCompressedSize, sizeof (size_t));
 	bufRequest.Append (&iUncompressedSize, sizeof (size_t));
@@ -177,6 +177,8 @@ void IR::OnReceive (const void* _zData, long _lBytes)
 
 		// TODO: here we should process the data, the comment below can be useful
 		// Otherwise have a look at IR.cpp
+		p_Callback->OnIRAnswer (*aAnswer);
+		delete aAnswer;
 
 		// if ('u' == cType)
 		// {

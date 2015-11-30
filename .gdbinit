@@ -103,4 +103,5 @@ end
 
 br main
 br SubgoalLearner::Iterate
+br SubgoalPolicy::Init
 r cfg/question_model.cfg run=t1

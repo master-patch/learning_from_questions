@@ -97,12 +97,6 @@ bool SubgoalLearner::Init (void)
 	if (false == o_FFInterface.Connect ())
 		return false;
 
-	// Setting up IR connection
-	// TODO: check if callback should be set to this
-	o_IR.SetCallback (this);
-	if (false == o_IR.Connect ())
-		return false;
-
 	String_dq_t dqLines;
 	if (false == File::ReadLines ((config)"domain_pddl_file", dqLines))
 		return false;
@@ -114,15 +108,6 @@ bool SubgoalLearner::Init (void)
 	i_DomainPddlId = o_FFInterface.RegisterDomain (sDomainPddl);
 	return (-1 != i_DomainPddlId);
 }
-
-//										
-void SubgoalLearner::OnIRAnswer (int _iIndex, IRAnswer& _aAnswer)
-{
-	// pthread_mutex_lock (&mtx_WaitForSequences);
-	// TODO: do something when IRAnswer is received
-	// pthread_mutex_unlock (&mtx_WaitForSequences);
-}
-
 
 
 //										

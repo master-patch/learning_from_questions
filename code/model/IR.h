@@ -52,7 +52,7 @@ class IR : public ClientSocket
 		void SetCallback (IRCallback* _pCallback)
 		{ p_Callback = _pCallback; };
 
-		bool SendQuestion (size_t _iType,
+		bool SendQuestion (String _sType,
 							String& _sQuestion);
 		void OnReceive (const void* _zData, long _lBytes);
 		void OnDisconnect (void);

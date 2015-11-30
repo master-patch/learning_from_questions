@@ -321,6 +321,16 @@ const char* ExplorationParameters::ToString (ExplorationType_e _eType)
 //													
 bool SubgoalPolicy::Init (void)
 {
+
+	// Setting up IR connection
+	// TODO: check if callback should be set to this
+	o_IR.SetCallback (this);
+	if (false == o_IR.Connect ())
+		return false;
+
+	// Launch the test
+	SubgoalPolicy::TestQA()
+
 	o_SequenceEndModel.Init ("end");
 	o_SubgoalSelectionModel.Init ("subgoal");
 	o_TextConnectionModel.Init ("connection");
@@ -1814,13 +1824,14 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 
 //Query IR system with question and update Connection set as a result.
 //TODO: Add Answer Type param
-void SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
+bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
   String key = s_QuestionType + s_QuestionQuery;
   String answer;
   if (map_QuestionAnswerPairs[key]) {
     answer = map_QuestionAnswerPairs[key];
   } else {
     //TODO: Do RPC to Nicolas code
+    o_IR.sendQuestion(s_QuestionType, s_QuestionQuery)
   }
 }
 //													
@@ -2541,8 +2552,24 @@ void SubgoalPolicy::WriteConnectionFeedback (void)
 	*/
 }
 
+// Question Answering	
 
+void SubgoalPolicy::TestQA ()
+{
+	String type;
+	String query;
+	type << "action"
+	query << "wood"
+	if (AskQuestion(type, query)) {
+		cout << "QA: success" << endl
+	}
+	cout << "QA: Done questioning" << endl
+}
 
-
-
-
+void SubgoalPolicy::OnIRAnswer (IRAnswer& _aAnswer)
+{
+	cout << "QA: Received an answer!"
+	// pthread_mutex_lock (&mtx_WaitForSequences);
+	// TODO: do something when IRAnswer is received
+	// pthread_mutex_unlock (&mtx_WaitForSequences);
+}

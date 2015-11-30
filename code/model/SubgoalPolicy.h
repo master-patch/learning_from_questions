@@ -8,6 +8,7 @@
 #include <nlp_filesystem.h>
 #include <nlp_matrix.h>
 #include <deque>
+#include "IR.h"
 using namespace std;
 
 #define	SEQUENCE_END	(int)1
@@ -198,7 +199,7 @@ enum ConnectionRewardType_e
 
 
 //										
-class SubgoalPolicy
+class SubgoalPolicy: public IRCallback
 {
 	friend class SubgoalLearner;
 
@@ -348,7 +349,10 @@ class SubgoalPolicy
 				_pFV->Set (_iOffset + _rvecFI [i], _fValue, _bCheckDuplicates);
 		}
 
-    void AskQuestion(String s_QuestionType, String s_QuestionQuery);
+		// Asking questions
+		IR		o_IR;
+    bool AskQuestion(String s_QuestionType, String s_QuestionQuery);
+    void OnIRAnswer (IRAnswer& _aAnswer);
 
 	public:
 		SubgoalPolicy (void);
