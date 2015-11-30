@@ -110,6 +110,7 @@ void* IR::RunThread (void* _pArg)
 		while (true == b_Active)
 		{
 			usleep (100);
+			// TODO: not exactly sure what but something should happen here and when done, return a value
 			// p_IR->RunLocalHeuristicEvaluator ();
 		}
 	}
