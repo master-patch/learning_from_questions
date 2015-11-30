@@ -334,9 +334,9 @@ double SubgoalLearner::ComputeReward (SubgoalSequenceState& _rState)
 	ITERATE (Subgoal_dq_t, _rState.p_Sequence->dq_Subgoals, ite)
 	{
 		Subgoal& rSubgoal = *ite;
-        if (rSubgoal.b_isQuestion)
-            continue;
-        if (SEQUENCE_END == rSubgoal.i_SequenceEnd)
+		if (rSubgoal.b_isQuestion)
+            		continue;
+        	if (SEQUENCE_END == rSubgoal.i_SequenceEnd)
 			continue;
 
 		if (po_ff_code_change_required == rSubgoal.e_PlanningOutcome)
@@ -758,7 +758,7 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 	pthread_mutex_unlock (&mtx_WaitForSequences);
 
 
-    // TODO: Test threading and semaphores still work as expected
+        // TODO: Test threading and semaphores still work as expected
 	// condition wait for sequences to complete...
 	pthread_mutex_lock (&mtx_WaitForSequences);
 	pthread_cond_wait (&cv_WaitForSequences, &mtx_WaitForSequences);
