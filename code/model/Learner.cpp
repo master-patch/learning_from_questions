@@ -7,7 +7,7 @@
 using namespace std;
 
 
-//										
+//
 ostream& operator<< (ostream& _rStream, const SubgoalSequence& _rSequence)
 {
 	bool bFirst = true;
@@ -51,7 +51,7 @@ ostream& operator<< (ostream& _rStream, const SubgoalSequence& _rSequence)
 }
 
 
-//										
+//
 SubgoalLearner::SubgoalLearner (void)
 {
 	pthread_mutex_init (&mtx_WaitForSequences, NULL);
@@ -67,7 +67,7 @@ SubgoalLearner::~SubgoalLearner (void)
 }
 
 
-//										
+//
 bool SubgoalLearner::Init (void)
 {
 	d_TaskCompletionReward = (config)"task_completion_reward";
@@ -110,14 +110,14 @@ bool SubgoalLearner::Init (void)
 }
 
 
-//										
+//
 void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 {
 	pthread_mutex_lock (&mtx_WaitForSequences);
 	if (true == b_DisplayFFProgress)
 		cout << "\x08 \x08" << flush;
 
-	// keep count of the types of responses...				
+	// keep count of the types of responses...
 	switch (_rResponse.e_PlanningOutcome)
 	{
 		case po_plan_found:
@@ -146,7 +146,7 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 	}
 
 
-	// find the sequence for this response...				
+	// find the sequence for this response...
 	IndexToSubgoalSequenceState_hmp_t::iterator	ite;
 	ite = hmp_IndexToSequenceState.find (_iIndex);
 	if (hmp_IndexToSequenceState.end () == ite)
@@ -160,7 +160,7 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 	pLastSubgoal->e_PlanningOutcome = _rResponse.e_PlanningOutcome;
 
 
-	// check for syntax error responses ...					
+	// check for syntax error responses ...
 	if (po_syntax_error == _rResponse.e_PlanningOutcome)
 	{
 		Subgoal* pSubgoal = rState.p_Sequence->GetSubgoal (rState.i_CurrentStep);
@@ -173,7 +173,7 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 	}
 
 
-	// stop this sequence we couldn't find a plan ...		
+	// stop this sequence we couldn't find a plan ...
 	if ((po_plan_found != _rResponse.e_PlanningOutcome) &&
 		(po_goal_already_satisfied != _rResponse.e_PlanningOutcome))
 	{
@@ -188,8 +188,8 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 		return;
 	}
 
-	// Compute the end state of the plan for this subgoal.	
-	// We need this to test the next subgoal...				
+	// Compute the end state of the plan for this subgoal.
+	// We need this to test the next subgoal...
 	{
 		if (true == b_UseLocalHeuristicEvaluator)
 		{
@@ -198,11 +198,11 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 			PddlPredicate_dq_t& rdqPredicatesToSet
 				= pLastSubgoal->p_PddlProblem->o_PartialGoalState.dq_Predicates;
 
-			// most of our subgoal predicates are of the form	
+			// most of our subgoal predicates are of the form
 			// (> (thing-available x) n).  In this case, l_Value
-			// is actually n, and we need to increment it to	
-			// n+1 to make sure the end-state computation is	
-			// correct...										
+			// is actually n, and we need to increment it to
+			// n+1 to make sure the end-state computation is
+			// correct...
 			ITERATE (PddlPredicate_dq_t, rdqPredicatesToSet, ite)
 			{
 				PddlPredicate* pToSet = *ite;
@@ -264,7 +264,7 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 	rState.p_Sequence->SetSubtaskFFResponse (rState.i_CurrentStep, _rResponse);
 
 
-	// check for task completion ...						
+	// check for task completion ...
 	if (true == pLastSubgoal->b_IsLastSubgoalToTarget)
 	{
 		// this sequence is gets us to the target goal !!
@@ -285,13 +285,13 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 	}
 
 
-	// Get the next subtask....								
+	// Get the next subtask....
 	String sProblemPddl;
 	if (false == rState.p_Sequence->GetSubtask (++ rState.i_CurrentStep,
 											    &sProblemPddl))
 	{
-		// we have already checked for task completion,	
-		// so we should never get to this code point...	
+		// we have already checked for task completion,
+		// so we should never get to this code point...
 		assert (false);
 	}
 
@@ -305,7 +305,7 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 	}
 
 
-	// send out the subtask to FF...						
+	// send out the subtask to FF...
 	PddlProblem* pPddlProblem = PddlInterface::ParseProblemPddl (sProblemPddl);
 	rState.p_Sequence->SetSubtask (rState.i_CurrentStep,
 								   sProblemPddl,
@@ -323,7 +323,7 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 }
 
 
-//										
+//
 double SubgoalLearner::ComputeReward (SubgoalSequenceState& _rState)
 {
 	assert (false == _rState.p_Sequence->dq_Subgoals.empty ());
@@ -334,13 +334,15 @@ double SubgoalLearner::ComputeReward (SubgoalSequenceState& _rState)
 	ITERATE (Subgoal_dq_t, _rState.p_Sequence->dq_Subgoals, ite)
 	{
 		Subgoal& rSubgoal = *ite;
-		if (SEQUENCE_END == rSubgoal.i_SequenceEnd)
+        if (rSubgoal.b_isQuestion)
+            continue;
+        if (SEQUENCE_END == rSubgoal.i_SequenceEnd)
 			continue;
 
 		if (po_ff_code_change_required == rSubgoal.e_PlanningOutcome)
 		{
-			// if FF asked for a code change, we don't know 	
-			// the correct outcome, so don't learn on this...	
+			// if FF asked for a code change, we don't know
+			// the correct outcome, so don't learn on this...
 			_rState.d_Reward = 0;
 			return 0;
 		}
@@ -370,7 +372,7 @@ double SubgoalLearner::ComputeReward (SubgoalSequenceState& _rState)
 }
 
 
-//										
+//
 void SubgoalLearner::TrimPlanSubgoalSequences (PlanSubgoalSequences_dq_t& _rdqPlanSubgoals)
 {
 	ITERATE (PlanSubgoalSequences_dq_t, _rdqPlanSubgoals, iteSequence)
@@ -389,8 +391,8 @@ void SubgoalLearner::TrimPlanSubgoalSequences (PlanSubgoalSequences_dq_t& _rdqPl
 				(true == pPred->b_IsFunction) &&
 				(true == pLastPred->b_IsFunction))
 			{
-				// check if the current predicate is the		
-				// same as the last one (with different value)	
+				// check if the current predicate is the
+				// same as the last one (with different value)
 				if (*pPred == *pLastPred)
 					bSkipThisPredicate = true;
 			}
@@ -409,7 +411,7 @@ void SubgoalLearner::TrimPlanSubgoalSequences (PlanSubgoalSequences_dq_t& _rdqPl
 }
 
 
-//										
+//
 void SubgoalLearner::ProposeAlternateSequences (SubgoalSequenceState& _rState,
 										SubgoalSequence_dq_t& _rdqAlternateSequences)
 {
@@ -432,13 +434,13 @@ void SubgoalLearner::ProposeAlternateSequences (SubgoalSequenceState& _rState,
 	assert (false == (bPlanFound ^ _rState.b_TaskComplete));
 	#endif
 
-	// SEQUENCE_END subgoal...	
+	// SEQUENCE_END subgoal...
 	{
 		Subgoal* pSubgoal = pNewSequence->AddSubgoalToBack ();
 		pSubgoal->i_SequenceEnd = SEQUENCE_END;
 	}
 
-	// subgoals ...				
+	// subgoals ...
 	Subgoal* pSubgoal = NULL;
 	{
 		ITERATE (PlanSubgoalSequences_dq_t, _rState.dq_PlanSubgoalSequences, ite)
@@ -461,7 +463,7 @@ void SubgoalLearner::ProposeAlternateSequences (SubgoalSequenceState& _rState,
 		}
 	}
 
-	// target subgoal...		
+	// target subgoal...
 	if ((po_plan_found == rObservedLastSubgoal.e_PlanningOutcome) ||
 		(po_goal_already_satisfied == rObservedLastSubgoal.e_PlanningOutcome))
 	{
@@ -487,7 +489,7 @@ void SubgoalLearner::ProposeAlternateSequences (SubgoalSequenceState& _rState,
 }
 
 
-//										
+//
 void SubgoalLearner::TryPlanningOnFullTasks (void)
 {
 	vec_TargetGoalCompletions.Memset (0);
@@ -503,9 +505,9 @@ void SubgoalLearner::TryPlanningOnFullTasks (void)
 
 	i_CurrentFFTimelimit = i_TrainingTimeFFTimelimit;
 
-	// These flags are supposed to be randomly	
-	// sampled. But on the first iteration we	
-	// set them to true to force some learning.	
+	// These flags are supposed to be randomly
+	// sampled. But on the first iteration we
+	// set them to true to force some learning.
 	o_SubgoalPolicy.ForceConnectionUseFlags ();
 
 	o_SubgoalPolicy.SampleConnections (false);
@@ -518,10 +520,10 @@ void SubgoalLearner::TryPlanningOnFullTasks (void)
 		pSequence->p_TargetProblem = pProblem;
 		o_SubgoalPolicy.SampleZeroSubgoalSequence (*pProblem, pSequence);
 
-		// The PddlProblem we pass into SetSubtask is deleted	
-		// when the pSequence is deleted at the end of this		
+		// The PddlProblem we pass into SetSubtask is deleted
+		// when the pSequence is deleted at the end of this
 		// learning iteration.  So we need to make a copy of the
-		// PddlProblem here...									
+		// PddlProblem here...
 		PddlProblem* pPddlProblem = new PddlProblem (pProblem->GetPddlProblem ());
 		pSequence->SetSubtask (1, pProblem->s_Problem, pPddlProblem);
 
@@ -530,7 +532,7 @@ void SubgoalLearner::TryPlanningOnFullTasks (void)
 
 		pthread_mutex_lock (&mtx_WaitForSequences);
 		pair <IndexToSubgoalSequenceState_hmp_t::iterator, bool> pairInsert;
-		pairInsert = hmp_IndexToSequenceState.insert (make_pair (iIndex, 
+		pairInsert = hmp_IndexToSequenceState.insert (make_pair (iIndex,
 										 SubgoalSequenceState (pSequence, 1, d)));
 		SubgoalSequenceState& rState = pairInsert.first->second;
 		rState.b_FullTask = true;
@@ -547,12 +549,12 @@ void SubgoalLearner::TryPlanningOnFullTasks (void)
 			cout << '.' << flush;
 	}
 
-	// condition wait for sequences to complete...	
+	// condition wait for sequences to complete...
 	pthread_mutex_lock (&mtx_WaitForSequences);
 	pthread_cond_wait (&cv_WaitForSequences, &mtx_WaitForSequences);
 	pthread_mutex_unlock (&mtx_WaitForSequences);
 
-	// update parameters ...	
+	// update parameters ...
 	double dTotalReward = 0;
 	long lTotalLength = 0;
 	int iCount = 0;
@@ -615,7 +617,7 @@ void SubgoalLearner::TryPlanningOnFullTasks (void)
 			delete rState.p_Sequence;
 
 
-		// cleanup...				
+		// cleanup...
 		ITERATE (PlanSubgoalSequences_dq_t, rState.dq_PlanSubgoalSequences, ite)
 		{
 			PddlPredicate_dq_t* pdqPredicates = *ite;
@@ -652,7 +654,7 @@ void SubgoalLearner::TryPlanningOnFullTasks (void)
 }
 
 
-//										
+//
 void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 {
 	vec_TargetGoalCompletions.Memset (0);
@@ -674,7 +676,7 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 	o_SubgoalPolicy.SampleExplorationParameters ();
 	o_SubgoalPolicy.SampleConnections (_bTestMode);
 
-	// generate subgoal sequences ...	
+	// generate subgoal sequences ...
 	int iSequencesPerIteration = (_iIteration <= 1)?
 									i_SequencesOnFirstIteration :
 									i_SequencesPerIteration;
@@ -726,9 +728,9 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 
 			int iIndex = 1000 * i + d;
 
-			//										
+			//
 			pair <IndexToSubgoalSequenceState_hmp_t::iterator, bool> pairInsert;
-			pairInsert = hmp_IndexToSequenceState.insert (make_pair (iIndex, 
+			pairInsert = hmp_IndexToSequenceState.insert (make_pair (iIndex,
 											 SubgoalSequenceState (pSequence, 1, d)));
 			SubgoalSequenceState& rState = pairInsert.first->second;
 			rState.b_FullTask = false;
@@ -744,19 +746,20 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 		int iIndex = ite->first;
 		SubgoalSequenceState& rState = ite->second;
 		Subgoal* pSubgoal = rState.p_Sequence->GetSubgoal (1);
-
-		o_FFInterface.SendTask (iIndex,
-								i_DomainPddlId,
-								pSubgoal->s_ProblemPddl,
-								i_CurrentFFTimelimit);
+        if (! pSubgoal->b_isQuestion) {
+            o_FFInterface.SendTask (iIndex,
+                                    i_DomainPddlId,
+                                    pSubgoal->s_ProblemPddl,
+                                    i_CurrentFFTimelimit);
+        }
 		if (true == b_DisplayFFProgress)
 			cout << '.' << flush;
 	}
 	pthread_mutex_unlock (&mtx_WaitForSequences);
 
 
-
-	// condition wait for sequences to complete...	
+    // TODO: Test threading and semaphores still work as expected
+	// condition wait for sequences to complete...
 	pthread_mutex_lock (&mtx_WaitForSequences);
 	pthread_cond_wait (&cv_WaitForSequences, &mtx_WaitForSequences);
 	pthread_mutex_unlock (&mtx_WaitForSequences);
@@ -766,7 +769,7 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 		LogPredictions (_iIteration);
 
 
-	// update parameters ...	
+	// update parameters ...
 	double dTotalReward = 0;
 	long lTotalLength = 0;
 	int iCount = 0;
@@ -867,7 +870,7 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 			delete rState.p_Sequence;
 
 
-		// cleanup...				
+		// cleanup...
 		ITERATE (PlanSubgoalSequences_dq_t, rState.dq_PlanSubgoalSequences, ite)
 		{
 			PddlPredicate_dq_t* pdqPredicates = *ite;
@@ -879,7 +882,7 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 	}
 	o_SubgoalPolicy.CompleteUpdate ();
 
-	// add solved subgoals to policy for feature computation...	
+	// add solved subgoals to policy for feature computation...
 	o_SubgoalPolicy.AddReachableSubgoals (setSolvedSubgoals);
 
 
@@ -910,7 +913,7 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 }
 
 
-//										
+//
 void SubgoalLearner::LogPredictions (int _iIteration)
 {
 	String sLogFile;
