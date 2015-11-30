@@ -8,7 +8,7 @@ COPY . /learning_interactive_planning
 
 WORKDIR /learning_interactive_planning
 
-RUN cd code && make clean && make
+RUN cd code/model && make clean && make
 RUN cd bin && chmod +x ff-plan-cache text_guided_planner
 
 EXPOSE 5002 5001 46941 46942 46943 41551
