@@ -69,7 +69,9 @@ class BagOfWords(AbstractIR):
     # build a cache by reading the already generated feature file
     # the last number in each line of the file has the ID of the sentence
     def _build_cache(self):
-        with open(sys.path[0] + '/../../data/valid_predicates.text_features') as f:
+        valid_predicates = sys.path[0]
+        valid_predicates += '/../../data/valid_predicates.text_features'
+        with open(valid_predicates) as f:
             lines = f.readlines()
             for l in lines:
                 split = l.split("|")
@@ -118,7 +120,7 @@ class BagOfWords(AbstractIR):
         # check if features are in cache
         if sent_id in self.cache:
             features = self.cache[sent_id]
-            return sent_id, sentence, "\n".join(features)
+            return sent_id, sentence, "".join(features)
 
         # otherwise use the default option:
         # generate features on runtime and store in cache
