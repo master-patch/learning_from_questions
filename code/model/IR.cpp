@@ -87,7 +87,7 @@ bool IR::SendMessage (const String& _rMessage)
 	bufMsg.Append (&iLength, sizeof (size_t));
 	bufMsg.Append ((const char*)_rMessage, _rMessage.length () + 1);
 
-	assert (iLength == bufMsg.Length ());
+	// assert (iLength == bufMsg.Length ());
 	return ClientSocket::SendBlocking (bufMsg.GetData (), bufMsg.Length ());
 }
 

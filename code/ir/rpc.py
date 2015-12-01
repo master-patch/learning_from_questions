@@ -88,11 +88,14 @@ def recv_size(the_socket, recv_length=8192):
                 size_data += sock_data
                 size = struct.unpack('>i', size_data[:4])[0]
                 recv_size = size
+                print "IR: size is ", size
                 if recv_size > 524288:
                     recv_size = 524288
+                print "IR: partial data is ", size_data[4:]
                 total_data.append(size_data[4:])
             else:
                 size_data += sock_data
+                print "IR: data is", size_data
         else:
             total_data.append(sock_data)
         total_len = sum([len(i) for i in total_data])

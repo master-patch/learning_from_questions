@@ -105,5 +105,6 @@ br main
 br SubgoalLearner::Iterate
 br SubgoalPolicy::Init
 br SubgoalPolicy::OnIRAnswer
+br IR::SendMessage
 br IR::OnReceive
 r cfg/question_model.cfg run=t1
