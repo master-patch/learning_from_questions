@@ -1,6 +1,7 @@
 import sys
 import struct
 sys.path.append(sys.path[0] + '/../')
+from pdb import set_trace as bp
 
 from ir import BagOfWords
 from feature_computation.Sentence import ReadSentencesFromTextFileSimple
@@ -11,7 +12,9 @@ EOM = '---EOM'
 
 def start_ir(
         host, port, ir, max_connections=1, recv_length=8192, write_file=False):
+    bp()
     # Setup socket
+
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((host, port))
     print "IR: ({}) started {}:{}".format(ir.name, host, port)
