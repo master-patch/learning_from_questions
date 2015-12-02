@@ -12,7 +12,6 @@ EOM = '---EOM'
 
 def start_ir(
         host, port, ir, max_connections=1, recv_length=8192, write_file=False):
-    bp()
     # Setup socket
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -20,12 +19,13 @@ def start_ir(
     print "IR: ({}) started {}:{}".format(ir.name, host, port)
     s.listen(max_connections)
 
+    newsock, address = s.accept()
+    bp()
+    print "IR: new connection", newsock, address
     # Keep on listening
     while True:
         # accept new message
         print "IR: waiting for new connections"
-        newsock, address = s.accept()
-        print "IR: new connection", newsock, address
 
         # receive questions from new connection
         message = recv_size(newsock, recv_length)
@@ -55,7 +55,7 @@ def start_ir(
         formatted_answers = "\n---\n".join(
             ["\n".join([str(a[0]), a[1], a[2]])
                 for a in answers])
-        length = struct.pack('>i', len(formatted_answers))
+        length = struct.pack('i', len(formatted_answers))
         print "IR: Answering with a message of length", length
 
         # This is written to the file
@@ -85,11 +85,12 @@ def recv_size(the_socket, recv_length=8192):
     while total_len < size:
         print total_len, size
         sock_data = the_socket.recv(recv_size)
+        bp()
         print "IR: partial message", sock_data
         if not total_data:
             if len(sock_data) > 4:
                 size_data += sock_data
-                size = struct.unpack('>i', size_data[:4])[0]
+                size = struct.unpack('i', size_data[:4])[0]
                 recv_size = size
                 print "IR: size is ", size
                 if recv_size > 524288:

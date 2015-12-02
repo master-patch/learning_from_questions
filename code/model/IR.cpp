@@ -49,7 +49,7 @@ bool IR::Connect (void)
 			 << sServer << ':' << sPort << endl;
 		return false;
 	}
-	ClearConnection ();
+	// ClearConnection ();
 
 	b_Active = true;
 	pthread_create (&thr_SocketLoop, NULL, RunThread, this);
@@ -80,12 +80,12 @@ void IR::ClearConnection (void)
 bool IR::SendMessage (const String& _rMessage)
 {
 	// TODO: what is the +1 for?
-	size_t iLength = _rMessage.length () + sizeof (size_t) + 1;
+	int iLength = _rMessage.length ();
 
 	// TODO: make sure that instead of sending the length, we send EOM
 	Buffer bufMsg;
-	bufMsg.Append (&iLength, sizeof (size_t));
-	bufMsg.Append ((const char*)_rMessage, _rMessage.length () + 1);
+	bufMsg.Append (&iLength, sizeof (int));
+	bufMsg.Append ((const char*)_rMessage, _rMessage.length ());
 
 	// assert (iLength == bufMsg.Length ());
 	return ClientSocket::SendBlocking (bufMsg.GetData (), bufMsg.Length ());
