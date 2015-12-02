@@ -851,25 +851,22 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 	// Read the config to find which question-predicates to include
 	if(subgoal:object-questions == 1 && subgoal:action-questions == 1)
 	{
-	   String sPddlDictFile = (config)"pddl_dict_question_objectsActions_file";
-		cout << "   loading dict: " << sPddlDictFile << endl;
+		String sPddlDictFile = (config)"pddl_dict_question_objectsActions_file";
 	}
 	else if (subgoal:object-questions == 1 && subgoal:action-questions != 1)
 	{
-	  String sPddlDictFile = (config)"pddl_dict_question_objects_file";
-		cout << "   loading dict: " << sPddlDictFile << endl;
+	 	String sPddlDictFile = (config)"pddl_dict_question_objects_file";
 	}
 	else if (subgoal:object-questions != 1 && subgoal:action-questions == 1)
 	{
 		String sPddlDictFile = (config)"pddl_dict_question_actions_file";
-		cout << "   loading dict: " << sPddlDictFile << endl;
 	}
 	else
 	{
 		String sPddlDictFile = (config)"pddl_dict_file";
-		cout << "   loading dict: " << sPddlDictFile << endl;
 	}
 
+	cout << "   loading dict: " << sPddlDictFile << endl;
 
 
 
