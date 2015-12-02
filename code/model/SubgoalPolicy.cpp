@@ -557,6 +557,8 @@ bool SubgoalPolicy::Init (void)
         if (true == b_PrintTextConnectionFeatures)
           LoadFeaturesToDebugPrintFile((config)"features:debug_features_to_print_file");
       }
+  } else {
+    LoadConnections();
   }
 
 	if (true == b_LogConnectionPredictions)
@@ -861,15 +863,15 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 {
 
 	// Read the config to find which question-predicates to include
-	if(subgoal:object-questions == 1 && subgoal:action-questions == 1)
+	if((config)"subgoal:object-questions" == 1 && (config) "subgoal:action-questions" == 1)
 	{
 		String sPddlDictFile = (config)"pddl_dict_question_objectsActions_file";
 	}
-	else if (subgoal:object-questions == 1 && subgoal:action-questions != 1)
+	else if ((config)"subgoal:object-questions" == 1 && (config)"subgoal:action-questions" != 1)
 	{
 	 	String sPddlDictFile = (config)"pddl_dict_question_objects_file";
 	}
-	else if (subgoal:object-questions != 1 && subgoal:action-questions == 1)
+	else if ( (config)"subgoal:object-questions" != 1 && (config) "subgoal:action-questions" == 1)
 	{
 		String sPddlDictFile = (config)"pddl_dict_question_actions_file";
 	}
