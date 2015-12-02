@@ -324,7 +324,7 @@ bool SubgoalPolicy::Init (void)
 
 	// Setting up IR connection
 	// TODO: check if callback should be set to this
-	o_IR.SetCallback (this);
+	// o_IR.SetCallback (this);
 	if (false == o_IR.Connect ())
 		return false;
 
@@ -1831,8 +1831,14 @@ bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
     answer = map_QuestionAnswerPairs[key];
     return true;
   } else {
-    //TODO: Do RPC to Nicolas code
-    return o_IR.SendQuestion(s_QuestionType, s_QuestionQuery);
+    // TODO: Do RPC to Nicolas code
+    if (false == o_IR.SendQuestion(s_QuestionType, s_QuestionQuery)) {
+    	return false;
+    }
+    char sResponse[256];
+    o_IR.ReceiveMessage(sResponse, 255);
+    // TODO: we are done, you can now load the files
+    return true;
   }
 }
 //													
@@ -2563,14 +2569,16 @@ void SubgoalPolicy::TestQA ()
 	query << "wood";
 	if (AskQuestion(type, query)) {
 		cout << "QA: success" << endl;
+	} else {
+		cout << "QA: fail" << endl;
 	}
 	cout << "QA: Done questioning" << endl;
 }
 
-void SubgoalPolicy::OnIRAnswer (IRAnswer& _aAnswer)
-{
-	cout << "QA: Received an answer!";
-	// pthread_mutex_lock (&mtx_WaitForSequences);
-	// TODO: do something when IRAnswer is received
-	// pthread_mutex_unlock (&mtx_WaitForSequences);
-}
+// void SubgoalPolicy::OnIRAnswer (IRAnswer& _aAnswer)
+// {
+// 	cout << "QA: Received an answer!";
+// 	// pthread_mutex_lock (&mtx_WaitForSequences);
+// 	// TODO: do something when IRAnswer is received
+// 	// pthread_mutex_unlock (&mtx_WaitForSequences);
+// }

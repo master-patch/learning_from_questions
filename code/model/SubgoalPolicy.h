@@ -199,7 +199,7 @@ enum ConnectionRewardType_e
 
 
 //										
-class SubgoalPolicy: public IRCallback
+class SubgoalPolicy
 {
 	friend class SubgoalLearner;
 

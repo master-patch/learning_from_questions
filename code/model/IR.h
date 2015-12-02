@@ -54,10 +54,11 @@ class IR : public ClientSocket
 
 		bool SendQuestion (String _sType,
 							String& _sQuestion);
-		void OnReceive (const void* _zData, long _lBytes);
+		// void OnReceive (const void* _zData, long _lBytes);
 		void OnDisconnect (void);
 		void ClearConnection (void);
 		static void* RunThread (void* _pArg);
+		bool ReceiveMessage (const void* _zData, long _lBytes);
 };
 
 

@@ -1,7 +1,7 @@
 import sys
 import struct
 sys.path.append(sys.path[0] + '/../')
-from pdb import set_trace as bp
+# from pdb import set_trace as bp
 
 from ir import BagOfWords
 from feature_computation.Sentence import ReadSentencesFromTextFileSimple
@@ -20,7 +20,7 @@ def start_ir(
     s.listen(max_connections)
 
     newsock, address = s.accept()
-    bp()
+    # bp()
     print "IR: new connection", newsock, address
     # Keep on listening
     while True:
@@ -55,6 +55,8 @@ def start_ir(
         formatted_answers = "\n---\n".join(
             ["\n".join([str(a[0]), a[1], a[2]])
                 for a in answers])
+
+        formatted_answers = "1"
         length = struct.pack('i', len(formatted_answers))
         print "IR: Answering with a message of length", length
 
@@ -85,7 +87,7 @@ def recv_size(the_socket, recv_length=8192):
     while total_len < size:
         print total_len, size
         sock_data = the_socket.recv(recv_size)
-        bp()
+        # bp()
         print "IR: partial message", sock_data
         if not total_data:
             if len(sock_data) > 4:
