@@ -1,15 +1,26 @@
 from collections import defaultdict
 from vocab import P, O, A
 import sys
+import random
+
+# Random is not really random anymore
+random.seed(1)
 
 
 # Build the inverted index {word: [sent_id1, sentid_2]}
-def build_inverted_index(vocab, sentences):
+def build_inverted_index(vocab, sentences, k=0, shuffle=False):
     index = defaultdict(list)
-    for i, tokens in sentences.iteritems():
-        for token in tokens:
-            if token in vocab:
-                index[token].append(i)
+    sent_ids = sentences.keys()
+
+    if shuffle:
+        sent_id = random.shuffle(sent_ids)
+
+    for sent_id in sent_ids:
+        sentence = sentences[sent_id]
+        for word in sentence:
+            if word in vocab:
+                if k == 0 or len(index[word]) < k:
+                    index[word].append(sent_id)
     return index
 
 
@@ -47,17 +58,23 @@ class AbstractIR:
 # It matches all the sentences with a specific set of words
 class BagOfWords(AbstractIR):
 
-    def __init__(self, sentences, ids=None, use_cache=True):
+    def __init__(
+        self, sentences,
+        ids=None, use_cache=True, k=0, shuffle=False
+    ):
+
         AbstractIR.__init__(
             self,
-            "BagOfWords",
+            str(k) + "-Matches",
             sentences,
             ids)
 
         self.vocab = P | O | A
         self.index = build_inverted_index(
             self.vocab,
-            self.sentences)
+            self.sentences,
+            k,
+            shuffle)
 
         # # print ids
 
