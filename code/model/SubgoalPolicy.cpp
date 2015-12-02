@@ -847,20 +847,29 @@ void SubgoalPolicy::LoadGoldLengthFile(void)
 //													
 bool SubgoalPolicy::LoadPredDictFile (void)
 {
-	String sPddlDictFile = (config)"pddl_dict_file";
+
+	// Read the config to find which question-predicates to include
+	if(subgoal:object-questions == 1 && subgoal:action-questions == 1)
+	{
+		String sPddlDictFile = (config)"pddl_dict_question_objectsActions_file";
+	}
+	else if (subgoal:object-questions == 1 && subgoal:action-questions != 1)
+	{
+	 	String sPddlDictFile = (config)"pddl_dict_question_objects_file";
+	}
+	else if (subgoal:object-questions != 1 && subgoal:action-questions == 1)
+	{
+		String sPddlDictFile = (config)"pddl_dict_question_actions_file";
+	}
+	else
+	{
+		String sPddlDictFile = (config)"pddl_dict_file";
+	}
+
 	cout << "   loading dict: " << sPddlDictFile << endl;
 
-	// String sPddlDictFile_init = (config)"pddl_dict_file";
-	// cout << "   loading dict: " << sPddlDictFile_init << endl;
-	// String sPddlDictFile_actions = (config)"pddl_dict_question_actions_file";
-	// cout << "   loading dict: " << sPddlDictFile_actions << endl;
-	// String sPddlDictFile_objects = (config)"pddl_dict_question_objects_file";
-	// cout << "   loading dict: " << sPddlDictFile_objects << endl;
-	// String sPddlDictFile_predicates = (config)"pddl_dict_question_predicates_file";
-	// cout << "   loading dict: " << sPddlDictFile_predicates << endl;
 
-	// Merging desired predicates types into sPddlDictFile
-	// 
+
 	
 	String_dq_t dqLines;
 	if (false == File::ReadLines (sPddlDictFile, dqLines))
