@@ -2,6 +2,7 @@ from collections import defaultdict
 from vocab import P, O, A
 import sys
 import random
+import copy
 
 # Random is not really random anymore
 random.seed(1)
@@ -15,10 +16,17 @@ def build_inverted_index(vocab, sentences, k=0, shuffle=False):
     if shuffle:
         sent_id = random.shuffle(sent_ids)
 
+    # Include in vocab all sub words of complex words
+    new_vocab=copy.copy(vocab)
+    for w in vocab:
+        if len(w.split("-"))>1:
+            for sub_w in w.split("-"):
+                new_vocab.add(sub_w)
+
     for sent_id in sent_ids:
         sentence = sentences[sent_id]
         for word in sentence:
-            if word in vocab:
+            if word in new_vocab:
                 if k == 0 or len(index[word]) < k:
                     index[word].append(sent_id)
     return index
@@ -44,7 +52,7 @@ class AbstractIR:
     # we can map `make-sugar` to `make sugar` or similar to
     # increase recall
     def parse_question(self, question):
-        question.split(" ")
+        question=question.split(" ")
         return question
 
     def sentence_to_features(self, sent_id):
@@ -87,7 +95,7 @@ class BagOfWords(AbstractIR):
     # the last number in each line of the file has the ID of the sentence
     def _build_cache(self):
         valid_predicates = sys.path[0]
-        valid_predicates += '/../../data/valid_predicates.text_features'
+        valid_predicates += '../../data/valid_predicates.text_features'
         with open(valid_predicates) as f:
             lines = f.readlines()
             for l in lines:
@@ -102,29 +110,50 @@ class BagOfWords(AbstractIR):
     # ask question to the IR engine
     def question(self, type, question):
         parsed = self.parse_question(question)
+        parsed=parsed.split("-")
 
-        if type == "action":
-            a = parsed
-            indexes = self.index[a]
-        elif type == "object":
-            o = parsed
-            indexes = self.index[o]
-        elif type == "subgoal":
-            p, o = parsed
-            indexes = set.intersect(
-                self.index[p],
-                self.index[o])
-        elif type == "subgoal_pair":
-            p1, o1, p2, o2 = parsed
-            p_matching = set.intersect(
-                self.index[p1],
-                self.index[p2])
-            o_matching = set.intersect(
-                self.index[o1],
-                self.index[o2])
-            indexes = p_matching | o_matching
-        else:
-            indexes = []
+        print "parsed=",parsed
+
+        # Remove common words we don't want to account for
+        words_to_omit=['get']
+        for w in words_to_omit:
+            if w in parsed and parsed!=[w]:
+                parsed.remove(w)
+
+        # With the question contains more than 1 word, output the intersection
+        # of the sentences
+        if len(parsed)>1:
+            sentences=[]
+            for w in parsed:
+                sentences.append(set(self.index[w]))
+                print w,set(self.index[w])
+            indexes = set.intersection(*sentences)
+
+        # Otherwise just output the corresponding sentences
+        else: 
+            parsed=parsed[0]
+            if type == "action":
+                a = parsed
+                indexes = self.index[a]
+            elif type == "object":
+                o = parsed
+                indexes = self.index[o]
+            elif type == "subgoal":
+                p, o = parsed
+                indexes = set.intersect(
+                    self.index[p],
+                    self.index[o])
+            elif type == "subgoal_pair":
+                p1, o1, p2, o2 = parsed
+                p_matching = set.intersect(
+                    self.index[p1],
+                    self.index[p2])
+                o_matching = set.intersect(
+                    self.index[o1],
+                    self.index[o2])
+                indexes = p_matching | o_matching
+            else:
+                indexes = []
 
         return [self.sentence_to_features(i) for i in indexes]
 
