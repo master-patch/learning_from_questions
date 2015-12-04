@@ -2608,11 +2608,3 @@ void SubgoalPolicy::TestQA ()
 	}
 	cout << "QA: Done questioning" << endl;
 }
-
-// void SubgoalPolicy::OnIRAnswer (IRAnswer& _aAnswer)
-// {
-// 	cout << "QA: Received an answer!";
-// 	// pthread_mutex_lock (&mtx_WaitForSequences);
-// 	// TODO: do something when IRAnswer is received
-// 	// pthread_mutex_unlock (&mtx_WaitForSequences);
-// }

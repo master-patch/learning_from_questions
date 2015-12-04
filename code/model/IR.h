@@ -6,27 +6,6 @@
 #include <nlp_socket.h>
 #include <hash_map>
 using namespace std;
-												
-class IRAnswer
-{
-	public:
-		size_t				i_Id;
-		String				s_Sentence;
-		String				s_Features;
-
-		IRAnswer (void)
-		{
-			i_Id = -1;
-		};
-};
-
-	
-class IRCallback
-{
-	public:
-		virtual void OnIRAnswer (IRAnswer& _aAnswer) = 0;
-};
-
 
 //														
 class IR : public ClientSocket
@@ -36,12 +15,8 @@ class IR : public ClientSocket
 		static IR*			p_IR;
 
 		Buffer						o_Data;
-		pthread_t					thr_SocketLoop;
 		pthread_mutex_t				mtx_QuestionList;
-		IRCallback*					p_Callback;
-
 		bool SendMessage (const String& _rMessage);
-		bool SendMessage (const Buffer& _rMessage);
 
 	public:
 		IR (void);
@@ -49,17 +24,10 @@ class IR : public ClientSocket
 
 		bool Connect (void);
 		void Disconnect (void);
-		void SetCallback (IRCallback* _pCallback)
-		{ p_Callback = _pCallback; };
 
-		bool SendQuestion (String _sType,
-							String& _sQuestion);
-		// void OnReceive (const void* _zData, long _lBytes);
+		bool SendQuestion (String _sType, String& _sQuestion);
 		void OnDisconnect (void);
-		void ClearConnection (void);
-		static void* RunThread (void* _pArg);
 		bool ReceiveMessage (const void* _zData, long _lBytes);
 };
-
 
 #endif
