@@ -20,9 +20,3 @@
 - **rpc.py**: long running process that will run an IR system and listen to a socket for changes
 - **ir.py**: implementation of the IR systems
 - **vocab.py**: vocabulary of the Learner when asking questions
-
-## Communication between Python and C++
-There are several ways of achieving this, I attempted the following:
-
-- Python has a daemon listening for TCP connections on HOST, PORT
-- C++ send a question, python receives it and gets the answer and responds to the request

@@ -321,19 +321,9 @@ const char* ExplorationParameters::ToString (ExplorationType_e _eType)
 //													
 bool SubgoalPolicy::Init (void)
 {
-
-	// Setting up IR connection
-	// TODO: check if callback should be set to this
-	// o_IR.SetCallback (this);
-	if (false == o_IR.Connect ())
-		return false;
-
-	// Launch the test
-	TestQA();
-
 	o_SequenceEndModel.Init ("end");
 	o_SubgoalSelectionModel.Init ("subgoal");
-	o_TextConnectionModel.Init ("connection"); //TODO: Maybe rerun on text connection restart
+	o_TextConnectionModel.Init ("connection");
 
 	o_SequenceEndExploration.SetParamsFromConfig ("end");
 	o_SubgoalExploration.SetParamsFromConfig ("subgoal");
@@ -543,23 +533,19 @@ bool SubgoalPolicy::Init (void)
 			 << endl;
 		return false;
 	}
-  if((config)"ir" == 0) //TODO Base this off config
-  {
-    if (f_UseSimpleConnectionFeatures > 0)
-      {
-        if (false == LoadSimpleConnectionFile((config)"pddl_connection_file"))
-          return false;
-      }
-    else if (f_UseTextConnectionFeatures > 0)
-      {
-        if (false == LoadFeatureConnectionFile ((config)"text_connection_file"))
-          return false;
-        if (true == b_PrintTextConnectionFeatures)
-          LoadFeaturesToDebugPrintFile((config)"features:debug_features_to_print_file");
-      }
-  } else {
-    LoadConnections();
-  }
+
+	if (f_UseSimpleConnectionFeatures > 0)
+	{
+		if (false == LoadSimpleConnectionFile ())
+			return false;
+	}
+	else if (f_UseTextConnectionFeatures > 0)
+	{
+		if (false == LoadFeatureConnectionFile ())
+			return false;
+		if (true == b_PrintTextConnectionFeatures)
+			LoadFeaturesToDebugPrintFile();
+	}
 
 	if (true == b_LogConnectionPredictions)
 		WriteConnectionPredictionHeader ();
@@ -573,10 +559,10 @@ bool SubgoalPolicy::Init (void)
 }
 
 
-//
-void SubgoalPolicy::LoadFeaturesToDebugPrintFile(String filepath)
+//													
+void SubgoalPolicy::LoadFeaturesToDebugPrintFile(void)
 {
-	String sGoldLengthFile = filepath;
+	String sGoldLengthFile = (config)"features:debug_features_to_print_file";
 	// read in the dict file
 	String_dq_t dqLines;
 	File::ReadLines (sGoldLengthFile, dqLines);
@@ -844,8 +830,8 @@ void SubgoalPolicy::LoadGoldLengthFile(void)
 	ITERATE (String_dq_t, dqLines, iterLine)
 	{
 		// Problem | length
-    String_dq_t dqSplit;
-    // read in the dict file
+    		String_dq_t dqSplit;
+    		// read in the dict file
 		iterLine->Split (dqSplit, '|');
 		assert (dqSplit.size () == 2);
 		String sProblem = dqSplit[0];
@@ -863,15 +849,15 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 {
 
 	// Read the config to find which question-predicates to include
-	if((config)"subgoal:object-questions" == 1 && (config) "subgoal:action-questions" == 1)
+	if(subgoal:object-questions == 1 && subgoal:action-questions == 1)
 	{
 		String sPddlDictFile = (config)"pddl_dict_question_objectsActions_file";
 	}
-	else if ((config)"subgoal:object-questions" == 1 && (config)"subgoal:action-questions" != 1)
+	else if (subgoal:object-questions == 1 && subgoal:action-questions != 1)
 	{
 	 	String sPddlDictFile = (config)"pddl_dict_question_objects_file";
 	}
-	else if ( (config)"subgoal:object-questions" != 1 && (config) "subgoal:action-questions" == 1)
+	else if (subgoal:object-questions != 1 && subgoal:action-questions == 1)
 	{
 		String sPddlDictFile = (config)"pddl_dict_question_actions_file";
 	}
@@ -882,6 +868,9 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 
 	cout << "   loading dict: " << sPddlDictFile << endl;
 
+
+
+	
 	String_dq_t dqLines;
 	if (false == File::ReadLines (sPddlDictFile, dqLines))
 	{
@@ -1033,38 +1022,16 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 	return true;
 }
 
-bool SubgoalPolicy::LoadConnections(void)
-{
-  String filepath = (config)"use_text_connection_features";
-  f_UseSimpleConnectionFeatures = (config)"use_pddl_connection_features";
-	f_UseTextConnectionFeatures = (config)"use_text_connection_features";
-  b_PrintTextConnectionFeatures
-		= (1 == (int)(config)"features:print_text_connection_features");
 
-  if (f_UseSimpleConnectionFeatures > 0)
-    {
-      if (false == LoadSimpleConnectionFile (filepath))
-        return false;
-    }
-	else if (f_UseTextConnectionFeatures > 0)
-    {
-      if (false == LoadFeatureConnectionFile(filepath))
-        return false;
-      if (true == b_PrintTextConnectionFeatures)
-        LoadFeaturesToDebugPrintFile(filepath);
-	}
-  return true;
-}
-
-//TODO make sure this works when repeated
-bool SubgoalPolicy::LoadSimpleConnectionFile (String filepath)
+//													
+bool SubgoalPolicy::LoadSimpleConnectionFile (void)
 {
 	i_MaxConnectionDepth = 0;
 	cout << "   loading simple connection file: "
-       << filepath << endl;
+		 << (config)"pddl_connection_file" << endl;
 
 	String_dq_t dqLines;
-	if (false == File::ReadLines (filepath, dqLines))
+	if (false == File::ReadLines ((config)"pddl_connection_file", dqLines))
 	{
 		cerr << "[ERROR] Failed to open connection file." << endl;
 		return false;
@@ -1092,18 +1059,18 @@ bool SubgoalPolicy::LoadSimpleConnectionFile (String filepath)
 }
 
 
-//TODO: make sure this works when repeated
-bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
+//													
+bool SubgoalPolicy::LoadFeatureConnectionFile (void)
 {
 	i_MaxConnectionDepth = 0;
 	cout << "   loading feature connection file : "
-       << filepath << endl;
+		 << (config)"text_connection_file" << endl;
 
 	ConnectionHashToFeatures_map_t	mapConnectionHashToFeatures;
 
 	//													
 	File file;
-	if (false == file.Open (filepath))
+	if (false == file.Open ((config)"text_connection_file"))
 	{
 		cerr << "[ERROR] Failed open connection file." << endl;
 		return false;
@@ -1803,14 +1770,13 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 		// sample	
 		pSubgoal->i_SubgoalSelection
 			= SampleDecision (pSubgoal->lprb_Subgoal, o_SubgoalExploration, _bTestMode);
-    pSubgoal->i_SubgoalSelection = 378;
 		pSubgoal->p_PddlSubgoalPredicate
 			= vec_CandidatePredicates [pSubgoal->i_SubgoalSelection];
 
     	//TODO: Add Config Check to make sure this is valid. Else if question found and
     	// config, throw an error
     	if (0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
-          pSubgoal->b_isQuestion = true;
+		pSubgoal->b_isQuestion = true;
       		String_dq_t dq_QuestionArgs;
       		//Parse Question from PddlString
       		String s_PredicateString = pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
@@ -1822,8 +1788,9 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
       		String s_QuestionType = dq_QuestionArgs[1];
       		size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
       		String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
-          AskQuestion(s_QuestionType, s_QuestionQuery);
-          LoadConnections();
+      //TODO: ASK QUESTION using s_QuestionType, s_QuestionQuery, and some conf on answerType
+
+      //TODO: Recompute Candidate set
     }
 
 		_pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
@@ -1854,26 +1821,8 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 		AddForcedSequenceEnd (_rProblem, _pSequence);
 }
 
-//Query IR system with question and update Connection set as a result.
-//TODO: Add Answer Type param
-bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
-  String key = s_QuestionType + s_QuestionQuery;
-  String answer;
-  if (map_QuestionAnswerPairs[key]) {
-    answer = map_QuestionAnswerPairs[key];
-    return true;
-  } else {
-    // TODO: Do RPC to Nicolas code
-    if (false == o_IR.SendQuestion(s_QuestionType, s_QuestionQuery)) {
-    	return false;
-    }
-    char sResponse[256];
-    o_IR.ReceiveMessage(sResponse, 255);
-    return true;
-  }
-  return true;
-}
-//
+
+//													
 void SubgoalPolicy::AddLastSubgoal (const Problem& _rProblem,
 									SubgoalSequence* _pSequence)
 {
@@ -2591,26 +2540,8 @@ void SubgoalPolicy::WriteConnectionFeedback (void)
 	*/
 }
 
-// Question Answering	
 
-void SubgoalPolicy::TestQA ()
-{
-	String type;
-	String query;
-	type << "action";
-	query << "wood";
-	if (AskQuestion(type, query)) {
-		cout << "QA: success" << endl;
-	} else {
-		cout << "QA: fail" << endl;
-	}
-	cout << "QA: Done questioning" << endl;
-}
 
-// void SubgoalPolicy::OnIRAnswer (IRAnswer& _aAnswer)
-// {
-// 	cout << "QA: Received an answer!";
-// 	// pthread_mutex_lock (&mtx_WaitForSequences);
-// 	// TODO: do something when IRAnswer is received
-// 	// pthread_mutex_unlock (&mtx_WaitForSequences);
-// }
+
+
+
