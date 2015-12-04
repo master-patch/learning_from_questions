@@ -2568,9 +2568,14 @@ void SubgoalPolicy::TestQA ()
 	type << "action";
 	query << "wood";
 	if (AskQuestion(type, query)) {
-		cout << "QA: success" << endl;
+		cout << "QA1: success" << endl;
 	} else {
-		cout << "QA: fail" << endl;
+		cout << "QA1: fail" << endl;
+	}
+	if (AskQuestion(type, query)) {
+		cout << "QA2: success" << endl;
+	} else {
+		cout << "QA2: fail" << endl;
 	}
 	cout << "QA: Done questioning" << endl;
 }
