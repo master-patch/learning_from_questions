@@ -1822,7 +1822,9 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
       		String s_QuestionType = dq_QuestionArgs[1];
       		size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
       		String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
-          AskQuestion(s_QuestionType, s_QuestionQuery);
+          if(false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
+            //TODO cout error, throw error type behavior
+          }
           LoadConnections();
     }
 
@@ -1869,10 +1871,10 @@ bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
     }
     char sResponse[256];
     o_IR.ReceiveMessage(sResponse, 255);
-    return true;
   }
   return true;
 }
+
 //
 void SubgoalPolicy::AddLastSubgoal (const Problem& _rProblem,
 									SubgoalSequence* _pSequence)
@@ -2600,9 +2602,14 @@ void SubgoalPolicy::TestQA ()
 	type << "action";
 	query << "wood";
 	if (AskQuestion(type, query)) {
-		cout << "QA: success" << endl;
+		cout << "QA1: success" << endl;
 	} else {
-		cout << "QA: fail" << endl;
+		cout << "QA1: fail" << endl;
+	}
+	if (AskQuestion(type, query)) {
+		cout << "QA2: success" << endl;
+	} else {
+		cout << "QA2: fail" << endl;
 	}
 	cout << "QA: Done questioning" << endl;
 }
