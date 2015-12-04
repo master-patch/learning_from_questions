@@ -326,7 +326,7 @@ bool SubgoalPolicy::Init (void)
 	// TODO: check if callback should be set to this
 	// o_IR.SetCallback (this);
 
-	String IR_host = (config)"ir_host"
+	String IR_host = (config)"ir_host";
 
 	if (IR_host != -1) {
 		if (false == o_IR.Connect ())
