@@ -100,10 +100,3 @@ end
 define hook-quit
     shell rm -f /tmp/coloutPipe
 end
-
-br main
-br SubgoalLearner::Iterate
-br SubgoalPolicy::LoadPredDictFile
-br SubgoalPolicy.cpp:1770
-br SubgoalPolicy.cpp:715
-r cfg/question_model.cfg run=t1
