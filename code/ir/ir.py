@@ -1,6 +1,5 @@
 from collections import defaultdict
 from vocab import P, O, A
-import sys
 import random
 
 # Random is not really random anymore
@@ -86,9 +85,7 @@ class BagOfWords(AbstractIR):
     # build a cache by reading the already generated feature file
     # the last number in each line of the file has the ID of the sentence
     def _build_cache(self):
-        valid_predicates = sys.path[0]
-        valid_predicates += '/../../data/valid_predicates.text_features'
-        with open(valid_predicates) as f:
+        with open('../../data/valid_predicates.text_features') as f:
             lines = f.readlines()
             for l in lines:
                 split = l.split("|")
@@ -141,7 +138,7 @@ class BagOfWords(AbstractIR):
         # check if features are in cache
         if sent_id in self.cache:
             features = self.cache[sent_id]
-            return sent_id, sentence, "".join(features)
+            return sent_id, sentence, "\n".join(features)
 
         # otherwise use the default option:
         # generate features on runtime and store in cache
