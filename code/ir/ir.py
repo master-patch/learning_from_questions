@@ -105,9 +105,13 @@ class BagOfWords(AbstractIR):
 
         if type == "action":
             a = parsed
+            print "IR: 'Tell me more about how to {}'".format(
+                a.replace('-', ' '))
+
             indexes = self.index[a]
         elif type == "object":
             o = parsed
+            print "IR: 'Tell me more about the object {}'".format(o)
             indexes = self.index[o]
         elif type == "subgoal":
             p, o = parsed

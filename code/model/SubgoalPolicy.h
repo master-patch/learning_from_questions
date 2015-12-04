@@ -311,11 +311,13 @@ class SubgoalPolicy
 										 const Problem& _rProblem,
 										 SubgoalSequence* _pSequence);
 
-		bool LoadSimpleConnectionFile (void);
-		bool LoadFeatureConnectionFile (void);
-		bool LoadPredDictFile (void);
+
+		bool LoadSimpleConnectionFile (String filepath);
+		bool LoadFeatureConnectionFile (String filepath);
+    void LoadFeaturesToDebugPrintFile(String filepath);
+    bool LoadConnections(void);
+    bool LoadPredDictFile (void);
 		void LoadGoldLengthFile (void);
-		void LoadFeaturesToDebugPrintFile(void);
 		void LogDebugFeatureWeights(File *file);
 
 		PddlPredicate* FindEquivalentPredicateCandidate (PddlPredicate& _rPredicate);
