@@ -311,6 +311,7 @@ class SubgoalPolicy
 										 const Problem& _rProblem,
 										 SubgoalSequence* _pSequence);
 
+
 		bool LoadSimpleConnectionFile (String filepath);
 		bool LoadFeatureConnectionFile (String filepath);
     void LoadFeaturesToDebugPrintFile(String filepath);
