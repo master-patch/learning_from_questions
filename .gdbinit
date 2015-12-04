@@ -103,4 +103,7 @@ end
 
 br main
 br SubgoalLearner::Iterate
-r cfg/test_text.cfg run=t1
+br SubgoalPolicy::LoadPredDictFile
+br SubgoalPolicy.cpp:1770
+br SubgoalPolicy.cpp:715
+r cfg/question_model.cfg run=t1

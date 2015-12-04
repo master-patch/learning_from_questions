@@ -847,30 +847,31 @@ void SubgoalPolicy::LoadGoldLengthFile(void)
 //													
 bool SubgoalPolicy::LoadPredDictFile (void)
 {
+  String sPddlDictFile;
+  int object_questions = (config) "ir:object-questions";
+  int action_questions = (config) "ir:action-questions";
 
-	// Read the config to find which question-predicates to include
-	if(subgoal:object-questions == 1 && subgoal:action-questions == 1)
+  // Read the config to find which question-predicates to include
+	if(object_questions == 1 && action_questions == 1)
 	{
-		String sPddlDictFile = (config)"pddl_dict_question_objectsActions_file";
+		sPddlDictFile = (config)"pddl_dict_question_objectsActions_file";
 	}
-	else if (subgoal:object-questions == 1 && subgoal:action-questions != 1)
+	else if (object_questions == 1 && action_questions != 1)
 	{
-	 	String sPddlDictFile = (config)"pddl_dict_question_objects_file";
+	 	sPddlDictFile = (config)"pddl_dict_question_objects_file";
 	}
-	else if (subgoal:object-questions != 1 && subgoal:action-questions == 1)
+	else if (object_questions != 1 && action_questions == 1)
 	{
-		String sPddlDictFile = (config)"pddl_dict_question_actions_file";
+		sPddlDictFile = (config)"pddl_dict_question_actions_file";
 	}
 	else
 	{
-		String sPddlDictFile = (config)"pddl_dict_file";
+		sPddlDictFile = (config)"pddl_dict_file";
 	}
 
 	cout << "   loading dict: " << sPddlDictFile << endl;
 
 
-
-	
 	String_dq_t dqLines;
 	if (false == File::ReadLines (sPddlDictFile, dqLines))
 	{
