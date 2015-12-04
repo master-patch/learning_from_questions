@@ -100,3 +100,7 @@ end
 define hook-quit
     shell rm -f /tmp/coloutPipe
 end
+
+br main
+br SubgoalLearner::Iterate
+r cfg/test_text.cfg run=t1
