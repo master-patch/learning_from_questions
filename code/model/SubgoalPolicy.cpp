@@ -1868,7 +1868,6 @@ bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
   }
   char sResponse[256];
   o_IR.ReceiveMessage(sResponse, 255);
-  }
   return true;
 }
 

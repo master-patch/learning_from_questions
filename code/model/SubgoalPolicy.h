@@ -374,7 +374,6 @@ class SubgoalPolicy
 		void SampleZeroSubgoalSequence (const Problem& _rProblem,
 										SubgoalSequence* _pSequence);
 
-    bool AskQuestion(String s_QuestionType, String s_QuestionQuery);
 		void InitUpdate (void);
 		void UpdateParameters (SubgoalSequence& _rSequence,
 							   double _dReward,
