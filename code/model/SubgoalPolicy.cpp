@@ -325,11 +325,16 @@ bool SubgoalPolicy::Init (void)
 	// Setting up IR connection
 	// TODO: check if callback should be set to this
 	// o_IR.SetCallback (this);
-	if (false == o_IR.Connect ())
-		return false;
 
-	// Launch the test
-	TestQA();
+	String IR_host = (config)"ir_host"
+
+	if (IR_host != -1) {
+		if (false == o_IR.Connect ())
+			return false;
+
+		// Launch the test
+		TestQA();
+	}
 
 	o_SequenceEndModel.Init ("end");
 	o_SubgoalSelectionModel.Init ("subgoal");
@@ -1777,7 +1782,7 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
     	//TODO: Add Config Check to make sure this is valid. Else if question found and
     	// config, throw an error
     	if (0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
-		pSubgoal->b_isQuestion = true;
+					pSubgoal->b_isQuestion = true;
       		String_dq_t dq_QuestionArgs;
       		//Parse Question from PddlString
       		String s_PredicateString = pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
@@ -1789,9 +1794,9 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
       		String s_QuestionType = dq_QuestionArgs[1];
       		size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
       		String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
-      //TODO: ASK QUESTION using s_QuestionType, s_QuestionQuery, and some conf on answerType
-      AskQuestion(s_QuestionType, s_QuestionQuery);
-      //TODO: Recompute Candidate set
+					//TODO: ASK QUESTION using s_QuestionType, s_QuestionQuery, and some conf on answerType
+					AskQuestion(s_QuestionType, s_QuestionQuery);
+					//TODO: Recompute Candidate set
     }
 
 		_pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
