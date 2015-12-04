@@ -1,0 +1,5 @@
+br main
+br SubgoalLearner::Iterate
+br SubgoalPolicy::Init
+br IR::SendMessage
+r cfg/question_model.cfg run=t1
