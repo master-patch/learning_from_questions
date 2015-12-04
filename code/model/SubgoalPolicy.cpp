@@ -1042,7 +1042,7 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 
 bool SubgoalPolicy::LoadConnections (void) {
 
-  String path = "qa.text_features";
+  String path = (config) "text_connection_file"; 
  	if (f_UseSimpleConnectionFeatures > 0)
     {
       if (false == LoadSimpleConnectionFile (path))
