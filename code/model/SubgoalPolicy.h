@@ -309,8 +309,8 @@ class SubgoalPolicy
 
 		bool LoadSimpleConnectionFile (String filepath);
 		bool LoadFeatureConnectionFile (String filepath);
-    void LoadFeaturesToDebugPrintFile(String filepath);
     bool LoadConnections(void);
+
     bool LoadPredDictFile (void);
 
 		void LoadGoldLengthFile (void);
@@ -365,6 +365,7 @@ class SubgoalPolicy
 		void SampleZeroSubgoalSequence (const Problem& _rProblem,
 										SubgoalSequence* _pSequence);
 
+    bool AskQuestion(String s_QuestionType, String s_QuestionQuery);
 		void InitUpdate (void);
 		void UpdateParameters (SubgoalSequence& _rSequence,
 							   double _dReward,
