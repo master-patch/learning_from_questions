@@ -409,7 +409,7 @@ bool SubgoalPolicy::Init (void)
 	if (false == LoadPredDictFile ())
 		return false;
 	AssignIndicesToTargetProblemPredicates ();
-
+  
 	i_PredicateNames = hmp_PredicateNameToIndex.size ();
 	i_ParameterValues = hmp_ParameterValueToIndex.size ();
 	i_PredicateIdentities = hmp_PredicateIdToIndex.size ();
@@ -449,7 +449,7 @@ bool SubgoalPolicy::Init (void)
 		map_FeatureIndexToFeatureString [3 + i_OffsetToConnectionFeatures] = "ConnInit+Reachable";
 		map_FeatureIndexToFeatureString [4 + i_OffsetToConnectionFeatures] = "NoConnInit";
 
-		for (int d = 1; d < 5; ++ d)
+ 		for (int d = 1; d < 5; ++ d)
 		{
 			map_FeatureIndexToFeatureString [5 + 2*(d-1) + i_OffsetToConnectionFeatures]
 									= "ConnFuture";
@@ -1863,12 +1863,17 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 //Query IR system with question and update Connection set as a result.											
 // TODO: Add Answer Type param
 bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
+  if (1 == this->map_QuestionAnswerPairs[s_QuestionType + s_QuestionQuery]) {
+    return true;
+  }
   if (false == o_IR.SendQuestion(s_QuestionType, s_QuestionQuery)) {
     return false;
   }
   char sResponse[256];
   o_IR.ReceiveMessage(sResponse, 255);
+  this->map_QuestionAnswerPairs[s_QuestionType + s_QuestionQuery] = 1;
   return true;
+
 }
 
 //
