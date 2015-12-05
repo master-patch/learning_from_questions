@@ -1808,7 +1808,8 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 		// sample	
 		pSubgoal->i_SubgoalSelection
 			= SampleDecision (pSubgoal->lprb_Subgoal, o_SubgoalExploration, _bTestMode);
-		pSubgoal->p_PddlSubgoalPredicate
+
+    pSubgoal->p_PddlSubgoalPredicate
 			= vec_CandidatePredicates [pSubgoal->i_SubgoalSelection];
 
     	//TODO: Add Config Check to make sure this is valid. Else if question found and

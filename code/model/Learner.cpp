@@ -746,11 +746,14 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 		int iIndex = ite->first;
 		SubgoalSequenceState& rState = ite->second;
 		Subgoal* pSubgoal = rState.p_Sequence->GetSubgoal (1);
-
-		o_FFInterface.SendTask (iIndex,
-								i_DomainPddlId,
-								pSubgoal->s_ProblemPddl,
-								i_CurrentFFTimelimit);
+    if (false == pSubgoal->b_isQuestion) {
+      o_FFInterface.SendTask (iIndex,
+                              i_DomainPddlId,
+                              pSubgoal->s_ProblemPddl,
+                              i_CurrentFFTimelimit);
+    } else {
+      pthread_cond_signal (&cv_WaitForSequences)
+    }
 		if (true == b_DisplayFFProgress)
 			cout << '.' << flush;
 	}
