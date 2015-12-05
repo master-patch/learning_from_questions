@@ -1829,7 +1829,7 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
           if(false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
             //TODO cout error, throw error type behavior
           }
-          LoadConnections();
+          //LoadConnections(); TODO: See board for hard task
     }
 
 		_pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
