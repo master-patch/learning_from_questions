@@ -1100,6 +1100,10 @@ bool SubgoalPolicy::LoadSimpleConnectionFile (String filepath)
 //													
 bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 {
+	// TODO:
+	// 1.	The idea so far is to reset vec_SentenceConnections
+	//    at the beginning of this function, this avoid having duplicates
+	// 2. Put a wrapper around the last mutex, so they are only run once 
 	i_MaxConnectionDepth = 0;
 	cout << "   loading feature connection file : "
 		 << filepath  << endl;
@@ -1114,6 +1118,8 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 		return false;
 	}
 
+	// README: this part reads line by line the file
+	// and according to the format it stores it into mapConnectionHashToFeatures
 	size_t iLines = 0;
 	String sLine;
 	while (true == file.ReadLine (sLine))
@@ -1140,7 +1146,10 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 		{
 			SentenceConnection* pConnection = new SentenceConnection;
 
-			// TODO: glob
+			// TODO: glob - unsafe (comment: maybe need to be reset)
+			// TODO check that push_back doesn't impact the other globals
+			// README: If the sentece is completed, we add the connections to the vector
+			// TODO it could be that resetting this vector in first principle it would be ok
 			vec_SentenceConnections.push_back (pConnection);
 			pConnection->i_Sentence = iSentenceId;
 			pConnection->i_From = iFrom;
@@ -1159,8 +1168,12 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 
 		// String sPositiveFeature;
 		// sPositiveFeature << "pos\x01" << sFeature;
-		// TODO: glob
+		// README: this gets the index of the feature called sFeature
+		// 				 this o_TextConnectionFeatureSpace may not contain that on reset
+		//         how does this know the index? are the features listed?
+		// TODO: glob - safe (comment: read-only, check if it is not affected by push_back)
 		int iFeature = o_TextConnectionFeatureSpace.GetFeatureIndex (sFeature);
+		// README: finally insert this feature in the list of features with positive val
 		pmapFeatureToValuePos->insert (make_pair (iFeature, fFeatureValue));
 
 		// String sNegativeFeature;
@@ -1171,30 +1184,33 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 
 
 	//													
-	// TODO: glob
+	// TODO: glob - safe (comment: this runs on one thread only, and this acts like a counter)
+	// README: we create, without stating, a mutex that looks for candidatePredicateNumbersMerged
+	//         same for the negative ones. These mutex are reset
 	mtx_SentencesPositiveFromTo.Create (
-		// TODO: glob
+		// TODO: glob - safe (comment: see above)
 		i_CandidatePredicateNumbersMerged,
-		// TODO: glob
+		// TODO: glob - safe (comment: see above)
 		i_CandidatePredicateNumbersMerged);
-	// TODO: glob
+	// TODO: glob - safe (comment: see above)
 	mtx_SentencesPositiveFromTo.Memset (0);
-	// TODO: glob
+	// TODO: glob - safe (comment: see above)
 	mtx_SentencesNegativeFromTo.Create (
-		// TODO: glob
+		// TODO: glob - safe (comment: see above)
 		i_CandidatePredicateNumbersMerged,
-		// TODO: glob
+		// TODO: glob - safe (comment: see above)
 		i_CandidatePredicateNumbersMerged);
-	// TODO: glob
+	// TODO: glob - safe (comment: see above)
 	mtx_SentencesNegativeFromTo.Memset (0);
 
+	// README: Iterate through all the vectors of the sentences in the file
+
 	ITERATE (SentenceConnection_vec_t,
-		// TODO: glob
+		// TODO: glob - safe (comment: here is read-only)
 		vec_SentenceConnections,
-		// TODO: glob
+		// TODO: glob - safe (comment: this is jus a iterator)
 		iteConn)
 	{
-		// TODO: glob
 		SentenceConnection* pConnection = *iteConn;
 		pConnection->p_PositiveFeatures = new Features;
 		pConnection->p_NegativeFeatures = new Features;
@@ -1212,7 +1228,7 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 		pConnection->p_PositiveFeatures->SetSize (pmapFeatureToValuePos->size ());
 		pConnection->p_NegativeFeatures->SetSize (pmapFeatureToValuePos->size ());
 		ITERATE (FeatureToValue_map_t, (*pmapFeatureToValuePos),
-			// TODO: glob
+			// TODO: glob - safe (comment: it is just an iterator)
 			ite)
 		{
 			pConnection->p_PositiveFeatures->Set (ite->first, ite->second);
@@ -1227,10 +1243,14 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 		delete pmapFeatureToValuePos;
 		// delete pmapFeatureToValueNeg;
 
-		// TODO: glob
+		// README: This gets the Pddl of the candidate `from` the connection
+    // 		     as well as the `to`.
+    //         For each of those set up a mutex (maybe increment, decrement a counter)
+    //         Making sure we are done
+		// TODO: glob - safe (comment: read-only, check if order is affected)
 		PddlPredicate* pFrom = vec_CandidatePredicates [pConnection->i_From];
 		int iFrom = pFrom->i_PredicateCandidateWithoutNumber;
-		// TODO: glob
+		// TODO: glob - safe (comment: read-only, check if order is affected)
 		PddlPredicate* pTo = vec_CandidatePredicates [pConnection->i_To];
 		int iTo = pTo->i_PredicateCandidateWithoutNumber;
 
@@ -1241,20 +1261,23 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 	}
 	mapConnectionHashToFeatures.clear ();
 
-	// TODO: glob
+	// TODO: now this part gets trickier, we are setting up mutex
+	//       and resetting them, meaning that they could be used later on
+	//       in the code, this needs further inspection
+	// TODO: glob - unsafe
 	lprb_SentenceConnection.Create (2);
-	// TODO: glob
+	// TODO: glob - unsafe
 	mtx_FeedbackOnSentenceConnections.Create (
-		// TODO: glob
+		// TODO: glob - unsafe
 		i_CandidatePredicateNumbersMerged,
-		// TODO: glob
+		// TODO: glob - unsafe
 		i_CandidatePredicateNumbersMerged,
 											  3);
-	// TODO: glob
+	// TODO: glob - unsafe
 	mtx_FeedbackOnSentenceConnections.Memset (0);
 
 
-	// TODO: glob
+	// TODO: glob - safe (comment: read-only)
 	cout << "   loaded " << vec_SentenceConnections.size ()
 		 << " text relationships, and " << iLines
 		 << " features for an average feature size of "
