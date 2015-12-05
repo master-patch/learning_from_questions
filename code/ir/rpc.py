@@ -1,6 +1,8 @@
 import sys
 import struct
 sys.path.append(sys.path[0] + '/../')
+import feature_computation.config as config
+
 # from pdb import set_trace as bp
 
 from ir import BagOfWords
@@ -110,6 +112,8 @@ def recv_size(the_socket, recv_length=8192):
 
 # Crete an IR instance using wiki
 print "IR: Starting IR.."
+
+
 sSentenceFile = sys.path[0] + '/../../data/minecraft_text.raw'
 lSentences = ReadSentencesFromTextFileSimple(sSentenceFile)
 
@@ -117,8 +121,19 @@ sentences = [sentence.lWords for sentence in lSentences]
 ids = [sentence.iIndex for sentence in lSentences]
 ir = BagOfWords(sentences, ids)
 
+config.load_config(sys.argv)
+host = config.get_string("ir_host")
+
+if (not host):
+    print "IR: not starting"
+    exit(0)
+
+text_connection = sys.path[0]
+text_connection += '/../../'
+text_connection += config.get_string("text_connection_file")
+print "IR: using ", text_connection
 start_ir(
-    sys.argv[1],
-    int(sys.argv[2]),
+    config.get_string("ir_host"),
+    config.get_int("ir_service"),
     ir,
-    write_file=sys.path[0] + '/../../data/qa.text_features')
+    write_file=text_connection)
