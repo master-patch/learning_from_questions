@@ -4,6 +4,7 @@
 #include <nlp_macros.h>
 #include <assert.h>
 #include "Problems.h"
+#include <fstream>
 
 
 //													
@@ -2612,4 +2613,30 @@ void SubgoalPolicy::TestQA ()
 		cout << "QA2: fail" << endl;
 	}
 	cout << "QA: Done questioning" << endl;
+
+	clearAnswers();
+
+	fstream in((config)"text_connection_file");
+	if(in.is_open())
+	{
+		in.seekp(0, ios::end);
+		size_t size = in.tellg();
+		if( size == 0)
+		{
+			cout << "QA cache: SUCCESS\n";
+		} else {
+			cout << "QA cache: FAIL\n";
+		}
+	}
+}
+
+
+void SubgoalPolicy::clearAnswers ()
+{
+	// Clear QA cache
+	this->map_QuestionAnswerPairs.clear();
+	// format the file text_connection
+	std::ofstream ofs ((config)"text_connection_file", std::ofstream::out);
+  	ofs << "";
+  	ofs.close();
 }
