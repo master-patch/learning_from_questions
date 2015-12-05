@@ -750,7 +750,7 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
                               pSubgoal->s_ProblemPddl,
                               i_CurrentFFTimelimit);
     } else {
-      pthread_cond_signal (&cv_WaitForSequences)
+      pthread_cond_signal (&cv_WaitForSequences);
     }
 		if (true == b_DisplayFFProgress)
 			cout << '.' << flush;
