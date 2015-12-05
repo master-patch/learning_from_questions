@@ -655,6 +655,8 @@ void SubgoalLearner::TryPlanningOnFullTasks (void)
 //										
 void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 {
+	o_SubgoalPolicy.clearAnswers();
+
 	vec_TargetGoalCompletions.Memset (0);
 	i_TotalPlanJobs = 0;
 	i_OutcomePlansFound = 0;
