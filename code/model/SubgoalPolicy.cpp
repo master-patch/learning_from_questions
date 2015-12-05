@@ -274,6 +274,10 @@ SubgoalPolicy::SubgoalPolicy (void)
 	b_UseComplexNonConnectionFeatures = false;
 }
 
+// TODO: glob - useful
+//       this function deletes all the mutex and delete all the connections,
+//       this could be useful to reset everything every time we load the connections
+//       this would avoid memory leaks
 SubgoalPolicy::~SubgoalPolicy (void)
 {
 	Random::Destroy ();
@@ -1159,7 +1163,6 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 			SentenceConnection* pConnection = new SentenceConnection;
 
 			// TODO: glob - unsafe (comment: maybe need to be reset)
-			// TODO check that push_back doesn't impact the other globals
 			// README: If the sentece is completed, we add the connections to the vector
 			// TODO it could be that resetting this vector in first principle it would be ok
 			vec_SentenceConnections.push_back (pConnection);
@@ -1183,7 +1186,7 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 		// README: this gets the index of the feature called sFeature
 		// 				 this o_TextConnectionFeatureSpace may not contain that on reset
 		//         how does this know the index? are the features listed?
-		// TODO: glob - safe (comment: read-only, check if it is not affected by push_back)
+		// TODO: glob - safe (comment: read-only)
 		int iFeature = o_TextConnectionFeatureSpace.GetFeatureIndex (sFeature);
 		// README: finally insert this feature in the list of features with positive val
 		pmapFeatureToValuePos->insert (make_pair (iFeature, fFeatureValue));
@@ -1276,7 +1279,9 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 	// TODO: now this part gets trickier, we are setting up mutex
 	//       and resetting them, meaning that they could be used later on
 	//       in the code, this needs further inspection
-	// TODO: glob - unsafe
+	// TODO: glob - unsafe (comment: this is created, we can check that if this is
+	//       already created, we are resetting this - or even reusing it)
+	// TODO: check if we should reuse lprb_SentenceConnection
 	lprb_SentenceConnection.Create (2);
 	// TODO: glob - unsafe
 	mtx_FeedbackOnSentenceConnections.Create (
