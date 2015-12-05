@@ -18,41 +18,23 @@ def start_ir(
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((host, port))
-    print "IR: ({}) started {}:{}".format(ir.name, host, port)
+    print "IR:\t({}) started {}:{}".format(ir.name, host, port)
     s.listen(max_connections)
-
     newsock, address = s.accept()
-    # bp()
     print "IR: new connection", newsock, address
     # Keep on listening
     while True:
         # accept new message
-        print "IR: waiting for new connections"
+        print "IR: waiting for new questions"
 
         # receive questions from new connection
         message = recv_size(newsock, recv_length)
-        print "IR: message received", message
+        if not message:
+            exit(0)
         type, question = message.split(" ", 1)
         answers = ir.question(type, question)
         print "IR: question is ({}, {})".format(type, question)
-        print "IR found {} question/s".format(len(answers))
-
-        # formatting the answer
-        '''
-        12
-        This is an example of a sentence all in one line .
-        PathDep::nsubj::0::0::Forw::::|1|84|270|12
-        PathDep::nsubj::0::0::Forw::::|1|84|271|12
-        ---
-        13
-        This is an example of a sentence all in one line .
-        PathDep::nsubj::0::0::Forw::::|1|84|270|13
-        ---
-        14
-        This is an example of a sentence all in one line .
-
-        ---
-        '''
+        print "IR found {} answer/s".format(len(answers))
         # This is sent via RPC
         formatted_answers = "\n---\n".join(
             ["\n".join([str(a[0]), a[1], a[2]])
@@ -69,7 +51,7 @@ def start_ir(
             with open(write_file, 'a') as f:
                 f.write(s_features)
                 f.close()
-                print "IR: Successfully written to file"
+                print "IR: Successfully written answers to file"
 
         try:
             newsock.sendall(length + formatted_answers)
@@ -79,7 +61,6 @@ def start_ir(
 
 
 def recv_size(the_socket, recv_length=8192):
-    print "IR: receiving a message"
     # data length is packed into 4 bytes
     total_len = 0
     total_data = []
@@ -89,8 +70,12 @@ def recv_size(the_socket, recv_length=8192):
     while total_len < size:
         print total_len, size
         sock_data = the_socket.recv(recv_size)
+        if len(sock_data) == 0:
+            print "IR: 0 data received, now disconnect"
+            the_socket.close()
+            return None
         # bp()
-        print "IR: partial message", sock_data
+        print "IR: received something", sock_data
         if not total_data:
             if len(sock_data) > 4:
                 size_data += sock_data
@@ -110,10 +95,6 @@ def recv_size(the_socket, recv_length=8192):
     return ''.join(total_data)
 
 
-# Crete an IR instance using wiki
-print "IR: Starting IR.."
-
-
 sSentenceFile = sys.path[0] + '/../../data/minecraft_text.raw'
 lSentences = ReadSentencesFromTextFileSimple(sSentenceFile)
 
@@ -131,7 +112,8 @@ if (not host):
 text_connection = sys.path[0]
 text_connection += '/../../'
 text_connection += config.get_string("text_connection_file")
-print "IR: using ", text_connection
+
+print "IR: Starting IR..", config.get_string("text_connection_file")
 start_ir(
     config.get_string("ir_host"),
     config.get_int("ir_service"),
