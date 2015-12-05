@@ -43,6 +43,7 @@ OBJS = Probability.o \
 	   Zlib.o \
 	   CompressedBuffer.o \
 	   FFInterface.o \
+	   IR.o \
 	   Pddl.o \
 	   PddlParser.o \
 	   PddlLexer.o \
