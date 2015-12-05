@@ -6,4 +6,5 @@ br SubgoalPolicy.cpp:1739
 br SubgoalLearner::TryLinkingSubgoals
 br SubgoalLearner::OnFFResponse
 br Learner.cpp:551
+br SubgoalPolicy::LoadFeatureConnectionFile
 r cfg/question_model.cfg run=t1

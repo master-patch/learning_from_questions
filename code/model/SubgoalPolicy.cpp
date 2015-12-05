@@ -1189,8 +1189,8 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 
 	//													
 	// TODO: glob - safe (comment: this runs on one thread only, and this acts like a counter)
-	// README: we create, without stating, a mutex that looks for candidatePredicateNumbersMerged
-	//         same for the negative ones. These mutex are reset
+	// README: we create, without stating, a matrix of candidatePredicateNumbersMerged
+	//         same for the negative ones. These matrices are reset to 0
 	mtx_SentencesPositiveFromTo.Create (
 		// TODO: glob - safe (comment: see above)
 		i_CandidatePredicateNumbersMerged,
@@ -1249,8 +1249,7 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 
 		// README: This gets the Pddl of the candidate `from` the connection
     // 		     as well as the `to`.
-    //         For each of those set up a mutex (maybe increment, decrement a counter)
-    //         Making sure we are done
+		// 				 creates a new integer value in the matrix
 		// TODO: glob - safe (comment: read-only, check if order is affected)
 		PddlPredicate* pFrom = vec_CandidatePredicates [pConnection->i_From];
 		int iFrom = pFrom->i_PredicateCandidateWithoutNumber;
@@ -1265,7 +1264,7 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 	}
 	mapConnectionHashToFeatures.clear ();
 
-	// TODO: now this part gets trickier, we are setting up mutex
+	// TODO: now this part gets trickier, we are setting up matrices
 	//       and resetting them, meaning that they could be used later on
 	//       in the code, this needs further inspection
 	// TODO: glob - unsafe (comment: this is created, we can check that if this is
