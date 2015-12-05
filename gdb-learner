@@ -1,5 +1,6 @@
-br main
 br SubgoalLearner::Iterate
-br SubgoalPolicy::Init
-br IR::SendMessage
+br SubgoalPolicy.cpp:1995
+br SubgoalPolicy.cpp:1811
+br Learner.cpp:749
+br SubgoalPolicy.cpp:1739
 r cfg/question_model.cfg run=t1
