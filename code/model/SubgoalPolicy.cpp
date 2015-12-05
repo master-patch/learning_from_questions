@@ -2637,6 +2637,6 @@ void SubgoalPolicy::clearAnswers ()
 	this->map_QuestionAnswerPairs.clear();
 	// format the file text_connection
 	std::ofstream ofs ((config)"text_connection_file", std::ofstream::out);
-  ofs << "";
-  ofs.close();
+  	ofs << "";
+  	ofs.close();
 }
