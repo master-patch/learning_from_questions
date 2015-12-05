@@ -1771,12 +1771,12 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 													 _rProblem,
 													 pSubgoal->lprb_SequenceEnd,
 													 _bTestMode);
+		
 		if (SEQUENCE_END == pSubgoal->i_SequenceEnd)
 		{
 			bAlreadyAddedSequenceEnd = true;
 			break;
 		}
-
 
 		assert (true == pSubgoal->vec_SubgoalFeatureVectors.empty ());
 		ComputeSubgoalFeatures (0, _rProblem, _pSequence);
@@ -1809,7 +1809,7 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 		pSubgoal->i_SubgoalSelection
 			= SampleDecision (pSubgoal->lprb_Subgoal, o_SubgoalExploration, _bTestMode);
 
-    pSubgoal->p_PddlSubgoalPredicate
+		pSubgoal->p_PddlSubgoalPredicate
 			= vec_CandidatePredicates [pSubgoal->i_SubgoalSelection];
 
     	//TODO: Add Config Check to make sure this is valid. Else if question found and
@@ -1953,7 +1953,7 @@ void SubgoalPolicy::AddForcedSequenceEnd (const Problem& _rProblem,
 
 //													
 void SubgoalPolicy::InitUpdate (void)
-{
+{ 
 	o_SequenceEndModel.InitializeFeatureExpectationVector (vec_SequenceEndFE,
 										o_SequenceEndFeatureSpace.MaxIndex () + 1);
 
@@ -1992,10 +1992,30 @@ void SubgoalPolicy::UpdateParameters (SubgoalSequence& _rSequence,
 	{
 		int_set_t setPreviousSubgoals;
 		size_t iSequenceLength = _rSequence.dq_Subgoals.size ();
-		for (size_t f = 0; f < iSequenceLength; ++ f)
+
+	/** Do a quick pass first storing only the non-question subgoals. 
+		** Then do the normal pass but on the pruned sequence to attribute
+		** reward to cosecutive subgoals. 
+		**/
+		vector<size_t> subgoals;
+		for (size_t i = 0; i < iSequenceLength; ++ i)
 		{
+			if (_rSequence.GetSubgoal(i)->b_isQuestion)
+				continue;
+			else
+				subgoals.push_back(i);
+		}
+
+
+		for (size_t j = 0; j < subgoals.size(); ++ j)
+		{
+			size_t f = subgoals[j];
+
 			Subgoal* pFrom = _rSequence.GetSubgoal (f);
-			if (true == pFrom->b_ForcedSequenceEnd)
+
+			assert(pFrom->b_isQuestion == false);
+
+			if (true == pFrom->b_ForcedSequenceEnd) 
 				continue;
 			if (SEQUENCE_END == pFrom->i_SequenceEnd)
 				continue;
@@ -2006,10 +2026,12 @@ void SubgoalPolicy::UpdateParameters (SubgoalSequence& _rSequence,
 			int iFrom = pFrom->p_PddlSubgoalPredicate->i_PredicateCandidateWithoutNumber;
 			setPreviousSubgoals.insert (iFrom);
 
-			size_t t = f + 1;
+			size_t t = subgoals[j + 1];
 			if (t >= iSequenceLength)
 				break;
 			Subgoal* pTo = _rSequence.GetSubgoal (t);
+			assert(pFrom->b_isQuestion == false);
+
 			if (true == pTo->b_ForcedSequenceEnd)
 				continue;
 			if (SEQUENCE_END == pTo->i_SequenceEnd)
