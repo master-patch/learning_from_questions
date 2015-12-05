@@ -2007,7 +2007,7 @@ void SubgoalPolicy::UpdateParameters (SubgoalSequence& _rSequence,
 		}
 
 
-		for (size_t j = 0; j < subgoals.size(); ++ j)
+		for (size_t j = 0; j < subgoals.size() - 1; ++ j)
 		{
 			size_t f = subgoals[j];
 
