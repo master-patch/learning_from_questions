@@ -1,6 +1,2 @@
-br SubgoalLearner::Iterate
-br SubgoalPolicy.cpp:1995
-br SubgoalPolicy.cpp:1811
-br Learner.cpp:749
-br SubgoalPolicy.cpp:1739
+br SubgoalPolicy::LoadFeatureConnectionFile
 r cfg/question_model.cfg run=t1
