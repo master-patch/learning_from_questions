@@ -1136,9 +1136,12 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 		// FeatureToValue_map_t* pmapFeatureToValueNeg;
 		ConnectionHashToFeatures_map_t::iterator	iteFeatures;
 		iteFeatures = mapConnectionHashToFeatures.find (sHash);
+
 		if (mapConnectionHashToFeatures.end () == iteFeatures)
 		{
 			SentenceConnection* pConnection = new SentenceConnection;
+
+			// TODO: glob
 			vec_SentenceConnections.push_back (pConnection);
 			pConnection->i_Sentence = iSentenceId;
 			pConnection->i_From = iFrom;
@@ -1157,6 +1160,7 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 
 		// String sPositiveFeature;
 		// sPositiveFeature << "pos\x01" << sFeature;
+		// TODO: glob
 		int iFeature = o_TextConnectionFeatureSpace.GetFeatureIndex (sFeature);
 		pmapFeatureToValuePos->insert (make_pair (iFeature, fFeatureValue));
 
@@ -1168,13 +1172,30 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 
 
 	//													
-	mtx_SentencesPositiveFromTo.Create (i_CandidatePredicateNumbersMerged, i_CandidatePredicateNumbersMerged);
+	// TODO: glob
+	mtx_SentencesPositiveFromTo.Create (
+		// TODO: glob
+		i_CandidatePredicateNumbersMerged,
+		// TODO: glob
+		i_CandidatePredicateNumbersMerged);
+	// TODO: glob
 	mtx_SentencesPositiveFromTo.Memset (0);
-	mtx_SentencesNegativeFromTo.Create (i_CandidatePredicateNumbersMerged, i_CandidatePredicateNumbersMerged);
+	// TODO: glob
+	mtx_SentencesNegativeFromTo.Create (
+		// TODO: glob
+		i_CandidatePredicateNumbersMerged,
+		// TODO: glob
+		i_CandidatePredicateNumbersMerged);
+	// TODO: glob
 	mtx_SentencesNegativeFromTo.Memset (0);
 
-	ITERATE (SentenceConnection_vec_t, vec_SentenceConnections, iteConn)
+	ITERATE (SentenceConnection_vec_t,
+		// TODO: glob
+		vec_SentenceConnections,
+		// TODO: glob
+		iteConn)
 	{
+		// TODO: glob
 		SentenceConnection* pConnection = *iteConn;
 		pConnection->p_PositiveFeatures = new Features;
 		pConnection->p_NegativeFeatures = new Features;
@@ -1191,7 +1212,9 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 		FeatureToValue_map_t* pmapFeatureToValuePos = iteFeatures->second;
 		pConnection->p_PositiveFeatures->SetSize (pmapFeatureToValuePos->size ());
 		pConnection->p_NegativeFeatures->SetSize (pmapFeatureToValuePos->size ());
-		ITERATE (FeatureToValue_map_t, (*pmapFeatureToValuePos), ite)
+		ITERATE (FeatureToValue_map_t, (*pmapFeatureToValuePos),
+			// TODO: glob
+			ite)
 		{
 			pConnection->p_PositiveFeatures->Set (ite->first, ite->second);
 			pConnection->p_NegativeFeatures->Set (ite->first, - ite->second);
@@ -1205,8 +1228,10 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 		delete pmapFeatureToValuePos;
 		// delete pmapFeatureToValueNeg;
 
+		// TODO: glob
 		PddlPredicate* pFrom = vec_CandidatePredicates [pConnection->i_From];
 		int iFrom = pFrom->i_PredicateCandidateWithoutNumber;
+		// TODO: glob
 		PddlPredicate* pTo = vec_CandidatePredicates [pConnection->i_To];
 		int iTo = pTo->i_PredicateCandidateWithoutNumber;
 
@@ -1217,13 +1242,20 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 	}
 	mapConnectionHashToFeatures.clear ();
 
+	// TODO: glob
 	lprb_SentenceConnection.Create (2);
-	mtx_FeedbackOnSentenceConnections.Create (i_CandidatePredicateNumbersMerged,
-											  i_CandidatePredicateNumbersMerged,
+	// TODO: glob
+	mtx_FeedbackOnSentenceConnections.Create (
+		// TODO: glob
+		i_CandidatePredicateNumbersMerged,
+		// TODO: glob
+		i_CandidatePredicateNumbersMerged,
 											  3);
+	// TODO: glob
 	mtx_FeedbackOnSentenceConnections.Memset (0);
 
 
+	// TODO: glob
 	cout << "   loaded " << vec_SentenceConnections.size ()
 		 << " text relationships, and " << iLines
 		 << " features for an average feature size of "
@@ -1910,7 +1942,8 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
           if(false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
             //TODO cout error, throw error type behavior
           }
-          //LoadConnections(); TODO: See board for hard task
+          LoadConnections();// TODO: See board for hard task
+          SampleConnections(false);
     }
 
 		_pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
