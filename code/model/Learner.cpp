@@ -287,7 +287,9 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 
 	// Get the next subtask....								
 	String sProblemPddl;
-	if (false == rState.p_Sequence->GetSubtask (++ rState.i_CurrentStep,
+  //Use function to determine next subgoal to ensure we get a real subtask
+  // TODO
+  if (false == rState.p_Sequence->GetSubtask (rState.nextSubgoal(),
 											    &sProblemPddl))
 	{
 		// we have already checked for task completion,	
@@ -486,7 +488,113 @@ void SubgoalLearner::ProposeAlternateSequences (SubgoalSequenceState& _rState,
 	}
 }
 
+void SubgoalLearner::TryLinkingSubgoals(void) {
+	o_SubgoalPolicy.clearAnswers();
+  vec_TargetGoalCompletions.Memset (0);
+	i_TotalPlanJobs = 0;
+	i_OutcomePlansFound = 0;
+	i_OutcomeGoalsAlreadySatisfied = 0;
+	i_OutcomeUnsolvable = 0;
+	i_OutcomeSyntaxError = 0;
+	i_OutcomeTimeouts = 0;
+	i_OutcomeOutsideKnownWorld = 0;
+	i_OutcomeUnknown = 0;
+	f_TotalPlanDepthReached = 0;
 
+	i_CurrentFFTimelimit = i_TrainingTimeFFTimelimit;
+
+	// These flags are supposed to be randomly	
+	// sampled. But on the first iteration we	
+	// set them to true to force some learning.	
+	o_SubgoalPolicy.ForceConnectionUseFlags ();
+
+  o_SubgoalPolicy.SampleConnections (false);
+  int d = 0; // d is the index of the problem
+
+  Problem* pProblem = Problem::GetProblem (d);
+  SubgoalSequence* pSequence = new SubgoalSequence;
+  pSequence->s_ProblemPddlPreamble = pProblem->s_PddlPreamble;
+
+  pSequence->p_TargetProblem = pProblem;
+  o_SubgoalPolicy.SampleSubgoalTestSequence (*pProblem,  pSequence);
+
+  // The PddlProblem we pass into SetSubtask is deleted	
+  // when the pSequence is deleted at the end of this		
+  // learning iteration.  So we need to make a copy of the
+  // PddlProblem here...									
+  PddlProblem* pPddlProblem = new PddlProblem (pProblem->GetPddlProblem ());
+  pSequence->SetSubtask (1, pProblem->s_Problem, pPddlProblem);
+
+  ++ i_TotalPlanJobs;
+  int iIndex = d;
+
+  pthread_mutex_lock (&mtx_WaitForSequences);
+  pair <IndexToSubgoalSequenceState_hmp_t::iterator, bool> pairInsert;
+  pairInsert = hmp_IndexToSequenceState.insert (make_pair (iIndex, 
+                                                           SubgoalSequenceState (pSequence, 1, d)));
+  SubgoalSequenceState& rState = pairInsert.first->second;
+  rState.b_FullTask = true;
+  rState.p_TargetProblem = pProblem;
+  set_PendingSequences.insert (iIndex);
+  pthread_mutex_unlock (&mtx_WaitForSequences);
+
+
+  o_FFInterface.SendTask (iIndex,
+                          i_DomainPddlId,
+                          pProblem->s_Problem,
+                          i_CurrentFFTimelimit);
+  if (true == b_DisplayFFProgress)
+    cout << '.' << flush;
+
+	// condition wait for sequences to complete...	
+	pthread_mutex_lock (&mtx_WaitForSequences);
+	pthread_cond_wait (&cv_WaitForSequences, &mtx_WaitForSequences);
+	pthread_mutex_unlock (&mtx_WaitForSequences);
+
+	// update parameters ...	
+	double dTotalReward = 0;
+	long lTotalLength = 0;
+	int iCount = 0;
+	
+	o_SubgoalPolicy.InitUpdate ();
+	ITERATE (IndexToSubgoalSequenceState_hmp_t, hmp_IndexToSequenceState, ite)
+	{
+		SubgoalSequenceState& rState = ite->second;
+		double dReward = ComputeReward (rState);
+		dTotalReward += dReward;
+		++ iCount;
+
+		lTotalLength += rState.p_Sequence->dq_Subgoals.size () - 1;
+		if ((true == b_LearnOnSubgoalFreeProblems) ||
+			(false == rState.p_TargetProblem->b_SubgoalsNotNeeded))
+		{
+			o_SubgoalPolicy.UpdateParameters (*rState.p_Sequence,
+											  dReward,
+											  rState.b_TaskComplete,
+											  true);
+
+		}
+
+    delete rState.p_Sequence;
+
+  }
+		// cleanup...				
+		ITERATE (PlanSubgoalSequences_dq_t, rState.dq_PlanSubgoalSequences, ite)
+		{
+			PddlPredicate_dq_t* pdqPredicates = *ite;
+			ITERATE (PddlPredicate_dq_t, (*pdqPredicates), itePred)
+				delete *itePred;
+			delete pdqPredicates;
+		}
+		rState.dq_PlanSubgoalSequences.clear ();
+
+	o_SubgoalPolicy.CompleteUpdate ();
+
+	cout << "Done running through sequence link!"
+		 << endl;
+	hmp_IndexToSequenceState.clear ();
+
+}
 //										
 void SubgoalLearner::TryPlanningOnFullTasks (void)
 {
@@ -651,6 +759,12 @@ void SubgoalLearner::TryPlanningOnFullTasks (void)
 	hmp_IndexToSequenceState.clear ();
 }
 
+int SubgoalSequenceState::nextSubgoal(){
+
+  return 0;
+}
+
+
 
 //										
 void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
@@ -745,16 +859,20 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 	{
 		int iIndex = ite->first;
 		SubgoalSequenceState& rState = ite->second;
-		Subgoal* pSubgoal = rState.p_Sequence->GetSubgoal (1);
-    if (false == pSubgoal->b_isQuestion) {
-      o_FFInterface.SendTask (iIndex,
-                              i_DomainPddlId,
-                              pSubgoal->s_ProblemPddl,
-                              i_CurrentFFTimelimit);
-    } else {
-      // Do not send the question
-      set_PendingSequences.erase (iIndex);
+
+    unsigned int subgoalIndex = 1;
+
+    //Ensure first subgoal we send to MetricFF is a subgoal
+		Subgoal* pSubgoal = rState.p_Sequence->GetSubgoal (subgoalIndex);
+    while(true == pSubgoal->b_isQuestion) {
+      pSubgoal = rState.p_Sequence->GetSubgoal (++ subgoalIndex);
     }
+
+    o_FFInterface.SendTask (iIndex,
+                            i_DomainPddlId,
+                            pSubgoal->s_ProblemPddl,
+                            i_CurrentFFTimelimit);
+
 		if (true == b_DisplayFFProgress)
 			cout << '.' << flush;
 	}
