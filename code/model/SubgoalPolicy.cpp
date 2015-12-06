@@ -263,17 +263,8 @@ SubgoalPolicy::SubgoalPolicy (void)
 	b_UseComplexNonConnectionFeatures = false;
 }
 
-// TODO: glob - useful
-//       this function deletes all the mutex and delete all the connections,
-//       this could be useful to reset everything every time we load the connections
-//       this would avoid memory leaks
-SubgoalPolicy::~SubgoalPolicy (void)
+void SubgoalPolicy::ResetSentenceConnections ()
 {
-	Random::Destroy ();
-
-	ITERATE (PddlPredicate_vec_t, vec_CandidatePredicates, ite)
-		delete *ite;
-	vec_CandidatePredicates.clear ();
 
 	ITERATE (SentenceConnection_vec_t, vec_SentenceConnections, iteConn)
 	{
@@ -283,6 +274,18 @@ SubgoalPolicy::~SubgoalPolicy (void)
 		delete pConnection;
 	}
 	vec_SentenceConnections.clear ();
+
+}
+
+SubgoalPolicy::~SubgoalPolicy (void)
+{
+	Random::Destroy ();
+
+	ITERATE (PddlPredicate_vec_t, vec_CandidatePredicates, ite)
+		delete *ite;
+	vec_CandidatePredicates.clear ();
+
+	ResetSentenceConnections();
 
 	if (true == mtx_SentencesPositiveFromTo.IsInitialized ())
 	{
@@ -554,7 +557,7 @@ bool SubgoalPolicy::Init (void)
     }
 	else if (f_UseTextConnectionFeatures > 0)
     {
-      if (false == LoadFeatureConnectionFile ((config) "text_connection_file"))
+      if (false == LoadFeatureConnectionFile ((config) "text_connection_file", false))
         return false;
       if (true == b_PrintTextConnectionFeatures)
         LoadFeaturesToDebugPrintFile();
@@ -1047,9 +1050,9 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 	return true;
 }
 
-bool SubgoalPolicy::LoadConnections (void) {
+bool SubgoalPolicy::LoadAnswers (void) {
 
-  String path = (config) "text_connection_file"; 
+  String path = (config) "ir:text_connection_file"; 
  	if (f_UseSimpleConnectionFeatures > 0)
     {
       if (false == LoadSimpleConnectionFile (path))
@@ -1057,7 +1060,7 @@ bool SubgoalPolicy::LoadConnections (void) {
     }
 	else if (f_UseTextConnectionFeatures > 0)
     {
-      if (false == LoadFeatureConnectionFile (path))
+      if (false == LoadFeatureConnectionFile (path, true))
         return false;
       if (true == b_PrintTextConnectionFeatures) {
         LoadFeaturesToDebugPrintFile();
@@ -1104,12 +1107,13 @@ bool SubgoalPolicy::LoadSimpleConnectionFile (String filepath)
 
 
 //													
-bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
+bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath, bool update)
 {
-	// TODO:
-	// 1.	The idea so far is to reset vec_SentenceConnections
-	//    at the beginning of this function, this avoid having duplicates
-	// 2. Put a wrapper around the last mutex, so they are only run once 
+	// TODO check if needed
+	if (update == true) {
+		ResetSentenceConnections();
+	}
+
 	i_MaxConnectionDepth = 0;
 	cout << "   loading feature connection file : "
 		 << filepath  << endl;
@@ -1152,9 +1156,8 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 		{
 			SentenceConnection* pConnection = new SentenceConnection;
 
-			// TODO: glob - unsafe (comment: maybe need to be reset)
+			// FIXED TODO: glob - unsafe (comment: maybe need to be reset)
 			// README: If the sentece is completed, we add the connections to the vector
-			// TODO it could be that resetting this vector in first principle it would be ok
 			vec_SentenceConnections.push_back (pConnection);
 			pConnection->i_Sentence = iSentenceId;
 			pConnection->i_From = iFrom;
@@ -1173,10 +1176,8 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 
 		// String sPositiveFeature;
 		// sPositiveFeature << "pos\x01" << sFeature;
-		// README: this gets the index of the feature called sFeature
-		// 				 this o_TextConnectionFeatureSpace may not contain that on reset
-		//         how does this know the index? are the features listed?
-		// TODO: glob - unsafe (comment: read-only)
+		// README: this looks for a hash and creates a feature with that hash if unexistent
+		// FIXED TODO: glob - unsafe (comment: read-only)
 		//       solution: this should be
 		//         `int iFeature = o_TextConnectionFeatureSpace.GetFeatureIndex (sFeature, true);`
 		//       since this won't add a new feature in the feature space
@@ -1193,39 +1194,31 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 
 
 	//													
-	// TODO: glob - unsafe (comment: this runs on one thread only, and this acts like a counter)
+	// FIXED TODO: glob - unsafe (comment: this runs on one thread only, and this acts like a counter)
 	// README: we create, without stating, a matrix of candidatePredicateNumbersMerged
 	//         same for the negative ones. These matrices are reset to 0
-
-	// TODO: solution:
-	//         Do not create if already initialized
-	//         `true == mtx_SentencesPositiveFromTo.IsInitialized ()`
-	mtx_SentencesPositiveFromTo.Create (
-		// TODO: glob - safe (comment: see above)
-		i_CandidatePredicateNumbersMerged,
-		// TODO: glob - safe (comment: see above)
-		i_CandidatePredicateNumbersMerged);
-	// TODO: glob - safe (comment: see above)
-
+	if (false == mtx_SentencesPositiveFromTo.IsInitialized ()) {
+		mtx_SentencesPositiveFromTo.Create (
+			i_CandidatePredicateNumbersMerged,
+			i_CandidatePredicateNumbersMerged);
+	}
+	// FIXED TODO: glob - safe (comment: see above)
 	// TODO: should we reset?
 	mtx_SentencesPositiveFromTo.Memset (0);
-	// TODO: glob - safe (comment: see above)
 
-	mtx_SentencesNegativeFromTo.Create (
-		// TODO: glob - safe (comment: see above)
-		i_CandidatePredicateNumbersMerged,
-		// TODO: glob - safe (comment: see above)
-		i_CandidatePredicateNumbersMerged);
-
+	// FIXED TODO: glob - safe (comment: see above)
+	if (false == mtx_SentencesNegativeFromTo.IsInitialized ()) {
+		mtx_SentencesNegativeFromTo.Create (
+			i_CandidatePredicateNumbersMerged,
+			i_CandidatePredicateNumbersMerged);
+	}
 	// TODO: glob - safe (comment: see above)
 	mtx_SentencesNegativeFromTo.Memset (0);
 
 	// README: Iterate through all the vectors of the sentences in the file
-
 	ITERATE (SentenceConnection_vec_t,
-		// TODO: glob - safe (comment: here is read-only)
+		// FIXED TODO: glob - safe (comment: here is read-only)
 		vec_SentenceConnections,
-		// TODO: glob - safe (comment: this is jus a iterator)
 		iteConn)
 	{
 		SentenceConnection* pConnection = *iteConn;
@@ -1283,23 +1276,28 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 	// TODO: glob - unsafe (comment: this is created, we can check that if this is
 	//       already created, we are resetting this - or even reusing it)
 	// TODO: check if we should reuse lprb_SentenceConnection
-	lprb_SentenceConnection.Create (2);
-	// TODO: glob - unsafe
-	mtx_FeedbackOnSentenceConnections.Create (
-		// TODO: glob - unsafe
-		i_CandidatePredicateNumbersMerged,
-		// TODO: glob - unsafe
-		i_CandidatePredicateNumbersMerged,
-											  3);
-	// TODO: glob - unsafe
-	mtx_FeedbackOnSentenceConnections.Memset (0);
+
+	if (false == update) {
+		lprb_SentenceConnection.Create (2);
+	}
+
+	if (false == mtx_FeedbackOnSentenceConnections.IsInitialized()) {
+	// FIXED TODO: glob - unsafe
+		mtx_FeedbackOnSentenceConnections.Create (
+			// TODO: glob - unsafe
+			i_CandidatePredicateNumbersMerged,
+			// TODO: glob - unsafe
+			i_CandidatePredicateNumbersMerged,
+												  3);
+		// FIXED TODO: glob - unsafe
+		mtx_FeedbackOnSentenceConnections.Memset (0);
+	}
 
 
-	// TODO: glob - safe (comment: read-only)
+	// FIXED TODO: glob - safe (comment: read-only)
 	cout << "   loaded " << vec_SentenceConnections.size ()
 		 << " text relationships, and " << iLines
-		 << " features for an average feature size of "
-		 << iLines / (float)vec_SentenceConnections.size () << endl;
+		 << endl;
 
 	return true;
 }
@@ -1982,7 +1980,7 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
           if(false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
             //TODO cout error, throw error type behavior
           }
-          LoadConnections();// TODO: See board for hard task
+          LoadAnswers();// TODO: See board for hard task
           SampleConnections(false);
     }
 
@@ -2806,9 +2804,9 @@ void SubgoalPolicy::TestQA ()
 		cout << "QA5: FAIL in asking a question after cleaning the file" << endl;
 	}
 
-	cout << "QA6: starting the second LoadConnections" << endl;
-	LoadConnections();
-	cout << "QA6: SUCCESS starting the second LoadConnections with different file" << endl;
+	cout << "QA6: starting the second LoadAnswers" << endl;
+	LoadAnswers();
+	cout << "QA6: SUCCESS starting the second LoadAnswers with different file" << endl;
 
 	clearAnswers();
 
