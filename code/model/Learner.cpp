@@ -344,15 +344,16 @@ double SubgoalLearner::ComputeReward (SubgoalSequenceState& _rState)
 			_rState.d_Reward = 0;
 			return 0;
 		}
-
+    
 		if ((po_plan_found != rSubgoal.e_PlanningOutcome) &&
 			(po_goal_already_satisfied != rSubgoal.e_PlanningOutcome))
 		{
 			bTaskComplete = false;
 			break;
 		}
-
-		if (po_goal_already_satisfied  == rSubgoal.e_PlanningOutcome)
+    if (rSubgoal.b_isQuestion)
+      dReward += double((config) "ir:reward");
+		else if (po_goal_already_satisfied  == rSubgoal.e_PlanningOutcome)
 			dReward -= d_UnnecessarySubgoalPenalty;
 		else if (po_plan_found == rSubgoal.e_PlanningOutcome)
 			dReward += d_SuccessfulStepRewardBase;
