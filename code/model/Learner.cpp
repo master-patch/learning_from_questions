@@ -747,15 +747,17 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 		int iIndex = ite->first;
 		SubgoalSequenceState& rState = ite->second;
 		Subgoal* pSubgoal = rState.p_Sequence->GetSubgoal (1);
-    if (false == pSubgoal->b_isQuestion) {
-      o_FFInterface.SendTask (iIndex,
-                              i_DomainPddlId,
-                              pSubgoal->s_ProblemPddl,
-                              i_CurrentFFTimelimit);
-    } else {
-      // Do not send the question
-      set_PendingSequences.erase (iIndex);
-    }
+
+		if (false == pSubgoal->b_isQuestion) {
+			o_FFInterface.SendTask (iIndex,
+				i_DomainPddlId,
+				pSubgoal->s_ProblemPddl,
+				i_CurrentFFTimelimit);
+		} else {
+			// Do not send the question
+			set_PendingSequences.erase (iIndex);
+		}
+
 		if (true == b_DisplayFFProgress)
 			cout << '.' << flush;
 	}
