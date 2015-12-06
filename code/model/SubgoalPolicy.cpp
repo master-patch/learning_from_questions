@@ -333,14 +333,6 @@ bool SubgoalPolicy::Init (void)
 
 	String IR_host = (config)"ir_host";
 
-	if (IR_host != -1) {
-		if (false == o_IR.Connect ())
-			return false;
-
-		// Launch the test
-		TestQA();
-	}
-
 	o_SequenceEndModel.Init ("end");
 	o_SubgoalSelectionModel.Init ("subgoal");
 	o_TextConnectionModel.Init ("connection");
@@ -574,6 +566,15 @@ bool SubgoalPolicy::Init (void)
 	b_UseGoldLength = (1 == (int)(config)"use_gold_length");
 	if (true == b_UseGoldLength)
 		LoadGoldLengthFile();
+
+	// RUN TESTS
+	if (IR_host != -1) {
+		if (false == o_IR.Connect ())
+			return false;
+
+		// Launch the test
+		TestQA();
+	}
 
 	return true;
 }
@@ -1174,7 +1175,11 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 		// README: this gets the index of the feature called sFeature
 		// 				 this o_TextConnectionFeatureSpace may not contain that on reset
 		//         how does this know the index? are the features listed?
-		// TODO: glob - safe (comment: read-only)
+		// TODO: glob - unsafe (comment: read-only)
+		//       solution: this should be
+		//         `int iFeature = o_TextConnectionFeatureSpace.GetFeatureIndex (sFeature, true);`
+		//       since this won't add a new feature in the feature space
+		//       this should only be at the second run (the updateConnections)
 		int iFeature = o_TextConnectionFeatureSpace.GetFeatureIndex (sFeature);
 		// README: finally insert this feature in the list of features with positive val
 		pmapFeatureToValuePos->insert (make_pair (iFeature, fFeatureValue));
@@ -1187,22 +1192,30 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 
 
 	//													
-	// TODO: glob - safe (comment: this runs on one thread only, and this acts like a counter)
+	// TODO: glob - unsafe (comment: this runs on one thread only, and this acts like a counter)
 	// README: we create, without stating, a matrix of candidatePredicateNumbersMerged
 	//         same for the negative ones. These matrices are reset to 0
+
+	// TODO: solution:
+	//         Do not create if already initialized
+	//         `true == mtx_SentencesPositiveFromTo.IsInitialized ()`
 	mtx_SentencesPositiveFromTo.Create (
 		// TODO: glob - safe (comment: see above)
 		i_CandidatePredicateNumbersMerged,
 		// TODO: glob - safe (comment: see above)
 		i_CandidatePredicateNumbersMerged);
 	// TODO: glob - safe (comment: see above)
+
+	// TODO: should we reset?
 	mtx_SentencesPositiveFromTo.Memset (0);
 	// TODO: glob - safe (comment: see above)
+
 	mtx_SentencesNegativeFromTo.Create (
 		// TODO: glob - safe (comment: see above)
 		i_CandidatePredicateNumbersMerged,
 		// TODO: glob - safe (comment: see above)
 		i_CandidatePredicateNumbersMerged);
+
 	// TODO: glob - safe (comment: see above)
 	mtx_SentencesNegativeFromTo.Memset (0);
 
@@ -2681,24 +2694,35 @@ void SubgoalPolicy::WriteConnectionFeedback (void)
 // Question Answering	
 void SubgoalPolicy::TestQA ()
 {
+	cout << "QA: Running tests.." << endl;
+
+	// Test 1
 	String type;
 	String query;
 	type << "action";
 	query << "wood";
 	if (AskQuestion(type, query)) {
-		cout << "QA1: success" << endl;
+		cout << "QA1: SUCCESS asking a question" << endl;
 	} else {
-		cout << "QA1: fail" << endl;
+		cout << "QA1: FAIL in asking a question" << endl;
 	}
+
+	// Test 2
 	if (AskQuestion(type, query)) {
-		cout << "QA2: success" << endl;
+		cout << "QA2: SUCCESS asking the question again" << endl;
 	} else {
-		cout << "QA2: fail" << endl;
+		cout << "QA2: FAIL in asking the question again" << endl;
 	}
-	cout << "QA: Done questioning" << endl;
 
+	// Test 3
+	if (AskQuestion(type, "ironbar")) {
+		cout << "QA3: SUCCESS asking a second question" << endl;
+	} else {
+		cout << "QA3: FAIL in asking a second question" << endl;
+	}
+
+	// Test 4
 	clearAnswers();
-
 	fstream in((config)"text_connection_file");
 	if(in.is_open())
 	{
@@ -2706,11 +2730,25 @@ void SubgoalPolicy::TestQA ()
 		size_t size = in.tellg();
 		if( size == 0)
 		{
-			cout << "QA cache: SUCCESS\n";
+			cout << "QA4: SUCCESS clearing the answer file\n";
 		} else {
-			cout << "QA cache: FAIL\n";
+			cout << "QA4: FAIL in clearing the answer file\n";
 		}
 	}
+
+	if (AskQuestion(type, "wood")) {
+		cout << "QA5: SUCCESS asking a question after cleaning the file" << endl;
+	} else {
+		cout << "QA5: FAIL in asking a question after cleaning the file" << endl;
+	}
+
+	cout << "QA6: starting the second LoadConnections" << endl;
+	LoadConnections();
+	cout << "QA6: SUCCESS starting the second LoadConnections with different file" << endl;
+
+	clearAnswers();
+
+	cout << "QA: Done questioning" << endl;
 }
 
 
