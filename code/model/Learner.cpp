@@ -288,7 +288,6 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 	// Get the next subtask....								
 	String sProblemPddl;
   //Use function to determine next subgoal to ensure we get a real subtask
-  // TODO
   if (false == rState.p_Sequence->GetSubtask (rState.nextSubgoal(),
 											    &sProblemPddl))
 	{
@@ -296,8 +295,8 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 		// so we should never get to this code point...	
 		assert (false);
 	}
-
-
+  //Note, i_CurrentState is now updated
+  
 	sProblemPddl.Strip ();
 	if ("" == sProblemPddl)
 	{
@@ -759,9 +758,20 @@ void SubgoalLearner::TryPlanningOnFullTasks (void)
 	hmp_IndexToSequenceState.clear ();
 }
 
+//Given the i_CurrentStep, sets the step to the next non-question subgoal
+//Todo Check if this is possible to overrun
 int SubgoalSequenceState::nextSubgoal(){
+  unsigned int currentStep = this->i_CurrentStep;
+  size_t max_step =  this->p_Sequence->dq_Subgoals.size();
 
-  return 0;
+  assert(currentStep < max_step);
+  ++ (this->i_CurrentStep);
+  while(true == this->p_Sequence->GetSubgoal(currentStep)->b_isQuestion) {
+    assert(currentStep < max_step);
+    ++(currentStep);
+  }
+  this->i_CurrentStep = currentStep;
+  return this->i_CurrentStep;
 }
 
 
