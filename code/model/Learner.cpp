@@ -749,9 +749,9 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 
 		if (false == pSubgoal->b_isQuestion) {
 			o_FFInterface.SendTask (iIndex,
-															i_DomainPddlId,
-															pSubgoal->s_ProblemPddl,
-															i_CurrentFFTimelimit);
+				i_DomainPddlId,
+				pSubgoal->s_ProblemPddl,
+				i_CurrentFFTimelimit);
 		} else {
 			// Do not send the question
 			set_PendingSequences.erase (iIndex);
