@@ -1736,7 +1736,7 @@ void SubgoalPolicy::SampleConnections (bool _bTestMode)
 void SubgoalPolicy::SampleSubgoalTestSequence(const Problem& _rProblem,
                                                  SubgoalSequence* _pSequence)
 {
-  long i_TestSequenceLength = 4; 
+  long i_TestSequenceLength = 6; 
  	// Sample sequence length...	
 	assert (0 != i_CandidatePredicates);
 	_pSequence->vec_PredicatesInSequence.resize (i_CandidatePredicates, 0);
@@ -1766,6 +1766,10 @@ void SubgoalPolicy::SampleSubgoalTestSequence(const Problem& _rProblem,
 		pSubgoal->i_SubgoalSelection = i;
     if ( i == 2) {
       pSubgoal->i_SubgoalSelection = 409;
+    }
+
+    if ( i == 4) {
+      pSubgoal->i_SubgoalSelection = 404;
     }
 
 		pSubgoal->p_PddlSubgoalPredicate

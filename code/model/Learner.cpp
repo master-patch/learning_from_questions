@@ -540,6 +540,9 @@ void SubgoalLearner::TryLinkingSubgoals(void) {
   set_PendingSequences.insert (iIndex);
   pthread_mutex_unlock (&mtx_WaitForSequences);
 
+  if (rState.p_Sequence->GetSubgoal( rState.i_CurrentStep)->b_isQuestion) {
+    rState.nextSubgoal();
+  }
 
   o_FFInterface.SendTask (iIndex,
                           i_DomainPddlId,
@@ -761,8 +764,11 @@ void SubgoalLearner::TryPlanningOnFullTasks (void)
 	hmp_IndexToSequenceState.clear ();
 }
 
-//Given the i_CurrentStep, sets the step to the next non-question subgoal
-//Todo Check if this is possible to overrun, maybe write tester
+/**
+ **Given the i_CurrentStep, sets the step to the next non-question subgoal
+ **Note this cannot overflow in regular use as last subgoal is
+ ** ensured to be a real subgoal
+**/
 int SubgoalSequenceState::nextSubgoal(){
   unsigned int currentStep = this->i_CurrentStep;
   size_t max_step =  this->p_Sequence->dq_Subgoals.size();
