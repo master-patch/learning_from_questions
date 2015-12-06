@@ -888,10 +888,11 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
       pSubgoal = rState.p_Sequence->GetSubgoal (++ subgoalIndex);
     }
 
-    o_FFInterface.SendTask (iIndex,
-                            i_DomainPddlId,
-                            pSubgoal->s_ProblemPddl,
-                            i_CurrentFFTimelimit);
+
+		o_FFInterface.SendTask (iIndex,
+			i_DomainPddlId,
+			pSubgoal->s_ProblemPddl,
+			i_CurrentFFTimelimit);
 
 		if (true == b_DisplayFFProgress)
 			cout << '.' << flush;
