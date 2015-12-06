@@ -56,6 +56,7 @@ void SubgoalSequence::SetSubtaskFFResponse (unsigned int _iIndex,
 {
 	// current subgoal ...	
 	#ifndef NDEBUG
+  //TODO
 	if (_iIndex > dq_Subgoals.size ())
 	{
 		cerr << "[ERROR] subgoal index in SetSubtaskFFResponse ["
@@ -91,7 +92,7 @@ void SubgoalSequence::SetSubtaskFFResponse (unsigned int _iIndex,
 		assert (false);
 	}
 	#endif
-
+  //TODO Understnad what this is doing and apply function
 	Subgoal& rNextSubgoal = dq_Subgoals [iSubgoalIndex];
 	assert ("" == rNextSubgoal.s_StartStatePredicates);
 	rNextSubgoal.s_StartStatePredicates = _rResponse.s_EndStatePredicates;
@@ -1232,7 +1233,7 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 }
 
 
-//													
+// TODO Look into if this should be modified 
 void SubgoalPolicy::ComputeSequenceEndFeatures (int _iIndex,
 												const Problem& _rProblem,
 												SubgoalSequence* _pSequence)
@@ -1732,7 +1733,85 @@ void SubgoalPolicy::SampleConnections (bool _bTestMode)
 		WriteConnectionPredictions ();
 }
 
+void SubgoalPolicy::SampleSubgoalTestSequence(const Problem& _rProblem,
+                                                 SubgoalSequence* _pSequence)
+{
+  long i_TestSequenceLength = 6; 
+ 	// Sample sequence length...	
+	assert (0 != i_CandidatePredicates);
+	_pSequence->vec_PredicatesInSequence.resize (i_CandidatePredicates, 0);
 
+	_pSequence->b_UseSimpleConnectionFeatures = b_UseSimpleConnectionFeatures;
+	_pSequence->b_UseTextConnectionFeatures = b_UseTextConnectionFeatures;
+	_pSequence->b_UseComplexNonConnectionFeatures = b_UseComplexNonConnectionFeatures;
+
+
+	// we first need the last subgoal to reach the actual target goal...
+	AddLastSubgoal (_rProblem, _pSequence);
+
+	// Sample subgoals...			
+
+	for (int i = 0; i < i_TestSequenceLength; ++ i)
+	{
+		Subgoal* pSubgoal = _pSequence->AddSubgoalToFront ();
+
+
+		assert (true == pSubgoal->vec_SequenceEndFeatureVectors.empty ());
+
+		pSubgoal->vec_SequenceEndFeatureVectors.clear ();
+		pSubgoal->i_SequenceEnd = 0;
+		assert (true == pSubgoal->vec_SubgoalFeatureVectors.empty ());
+
+		// sample	
+		pSubgoal->i_SubgoalSelection = i;
+    if ( i == 2) {
+      pSubgoal->i_SubgoalSelection = 409;
+    }
+
+    if ( i == 4) {
+      pSubgoal->i_SubgoalSelection = 404;
+    }
+
+		pSubgoal->p_PddlSubgoalPredicate
+			= vec_CandidatePredicates [pSubgoal->i_SubgoalSelection];
+
+    	if (0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
+					pSubgoal->b_isQuestion = true;
+      		String_dq_t dq_QuestionArgs;
+      		//Parse Question from PddlString
+      		String s_PredicateString = pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
+      		size_t i_Start = s_PredicateString.rfind("(") + 1;
+      		size_t i_End = s_PredicateString.find(")");
+      		String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
+      		s_QuestionString.Split(dq_QuestionArgs, ' ');
+      		//Parse Question type and query from question
+      		String s_QuestionType = dq_QuestionArgs[1];
+      		size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
+      		String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
+
+          if(false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
+          }
+          //LoadConnections(); TODO: See board for hard task
+      }
+
+      _pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
+  }
+}
+
+//Query IR system with question and update Connection set as a result.											
+// TODO: Add Answer Type param
+bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
+  if (1 == this->map_QuestionAnswerPairs[s_QuestionType + s_QuestionQuery]) {
+    return true;
+  }
+  if (false == o_IR.SendQuestion(s_QuestionType, s_QuestionQuery)) {
+    return false;
+  }
+  char sResponse[256];
+  o_IR.ReceiveMessage(sResponse, 255);
+  this->map_QuestionAnswerPairs[s_QuestionType + s_QuestionQuery] = 1;
+  return true;
+}
 void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 										   bool _bTestMode,
 										   SubgoalSequence* _pSequence)
@@ -1862,21 +1941,6 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 		AddForcedSequenceEnd (_rProblem, _pSequence);
 }
 
-//Query IR system with question and update Connection set as a result.											
-// TODO: Add Answer Type param
-bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
-  if (1 == this->map_QuestionAnswerPairs[s_QuestionType + s_QuestionQuery]) {
-    return true;
-  }
-  if (false == o_IR.SendQuestion(s_QuestionType, s_QuestionQuery)) {
-    return false;
-  }
-  char sResponse[256];
-  o_IR.ReceiveMessage(sResponse, 255);
-  this->map_QuestionAnswerPairs[s_QuestionType + s_QuestionQuery] = 1;
-  return true;
-
-}
 
 //
 void SubgoalPolicy::AddLastSubgoal (const Problem& _rProblem,

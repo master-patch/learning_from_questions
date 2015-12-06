@@ -370,6 +370,8 @@ class SubgoalPolicy
 		void SampleSubgoalSequence (const Problem& _rProblem,
 									bool _bTestMode,
 									SubgoalSequence* _pSequence);
+    void SampleSubgoalTestSequence(const Problem & _rProblem,
+                                   SubgoalSequence* _pSequence);
 		void SampleZeroSubgoalSequence (const Problem& _rProblem,
 										SubgoalSequence* _pSequence);
 
