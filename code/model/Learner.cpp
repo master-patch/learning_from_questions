@@ -352,7 +352,7 @@ double SubgoalLearner::ComputeReward (SubgoalSequenceState& _rState)
 			break;
 		}
     if (rSubgoal.b_isQuestion)
-      dReward += stod((config) "ir:reward");
+      dReward += double((config) "ir:reward");
 		else if (po_goal_already_satisfied  == rSubgoal.e_PlanningOutcome)
 			dReward -= d_UnnecessarySubgoalPenalty;
 		else if (po_plan_found == rSubgoal.e_PlanningOutcome)
