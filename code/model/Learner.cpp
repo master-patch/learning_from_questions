@@ -157,7 +157,10 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 	}
 	SubgoalSequenceState& rState = ite->second;
 	Subgoal* pLastSubgoal = rState.p_Sequence->GetSubgoal (rState.i_CurrentStep);
-	pLastSubgoal->e_PlanningOutcome = _rResponse.e_PlanningOutcome;
+
+  assert(false == pLastSubgoal->b_isQuestion);
+
+  pLastSubgoal->e_PlanningOutcome = _rResponse.e_PlanningOutcome;
 
 
 	// check for syntax error responses ...					
@@ -759,7 +762,7 @@ void SubgoalLearner::TryPlanningOnFullTasks (void)
 }
 
 //Given the i_CurrentStep, sets the step to the next non-question subgoal
-//Todo Check if this is possible to overrun
+//Todo Check if this is possible to overrun, maybe write tester
 int SubgoalSequenceState::nextSubgoal(){
   unsigned int currentStep = this->i_CurrentStep;
   size_t max_step =  this->p_Sequence->dq_Subgoals.size();
