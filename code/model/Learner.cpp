@@ -789,7 +789,8 @@ int SubgoalSequenceState::nextSubgoal(){
 //										
 void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 {
-	o_SubgoalPolicy.clearAnswers();
+
+  o_SubgoalPolicy.clearAnswers();
 
 	vec_TargetGoalCompletions.Memset (0);
 	i_TotalPlanJobs = 0;
@@ -817,7 +818,7 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 	iSequencesPerIteration = (true == _bTestMode)? 1 : iSequencesPerIteration;
 	for (int i = 0; i < iSequencesPerIteration; ++ i)
 	{
-		for (int d = 0; d < Problem::GetProblemCount (); ++ d)
+    for (int d = 0; d < Problem::GetProblemCount (); ++ d)
 		{
 			o_SubgoalPolicy.SampleConnectionUseFlags ();
 
@@ -881,10 +882,10 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 		SubgoalSequenceState& rState = ite->second;
 
     unsigned int subgoalIndex = 1;
-
+    assert(1 == rState.i_CurrentStep);
     //Ensure first subgoal we send to MetricFF is a subgoal
 		Subgoal* pSubgoal = rState.p_Sequence->GetSubgoal (subgoalIndex);
-    while(true == pSubgoal->b_isQuestion) {
+    if (true == pSubgoal->b_isQuestion) {
       subgoalIndex =  rState.nextSubgoal();
     }
 
