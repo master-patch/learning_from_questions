@@ -857,11 +857,12 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
       if (true == pSubgoal->b_isQuestion) {
         subgoalIndex =  rState.nextSubgoal(); 
       }
-      assert(false == pSubgoal->b_isQuestion);
+      pSubgoal = pSequence->GetSubgoal (subgoalIndex);
 
+      assert(false == pSubgoal->b_isQuestion);
       assert(subgoalIndex == rState.i_CurrentStep);
 
-      pSubgoal = pSequence->GetSubgoal (subgoalIndex);
+
       //update correct subgoal
 
 			pSubgoal->s_StartStatePredicates
