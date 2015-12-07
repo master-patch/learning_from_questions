@@ -220,6 +220,7 @@ class SubgoalPolicy
 
 		FeatureToIndex_hmp_t	hmp_ParameterValueToIndex;
 		FeatureToIndex_hmp_t	hmp_PredicateNameToIndex;
+    FeatureToIndex_hmp_t hmp_SuffixToIndex;
 		FeatureToIndex_hmp_t	hmp_PredicateWithoutNumberToIndex;
 		FeatureToIndex_hmp_t	hmp_PredicateIdToIndex;
 		String_int_map_t        map_ProblemToGoldLength;

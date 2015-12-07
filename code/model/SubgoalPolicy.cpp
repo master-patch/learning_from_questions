@@ -425,15 +425,17 @@ bool SubgoalPolicy::Init (void)
 	i_PredicateNames = hmp_PredicateNameToIndex.size ();
 	i_ParameterValues = hmp_ParameterValueToIndex.size ();
 	i_PredicateIdentities = hmp_PredicateIdToIndex.size ();
-
+  i_SuffixObjects = hmp_SuffixToIndex.size(); //todo Pupulate
 
 	o_SequenceEndFeatureSpace.SetBagOfWordsOffset (2 * pow (i_PredicateIdentities, 2));
 
 	size_t iFeatureSet = i_MaxPredicateValue + 1 + 6
 						 + 2 * pow (i_PredicateNames, 2)
 						 + 2 * pow (i_ParameterValues, 2)
-						 + 2 * pow (i_PredicateIdentities, 2);
-	o_SubgoalFeatureSpace.SetBagOfWordsOffset (iFeatureSet);
+						 + 2 * pow (i_PredicateIdentities, 2)
+             + 2 * pow(i_SuffixObjects, 2); //todo check this is correct
+
+  o_SubgoalFeatureSpace.SetBagOfWordsOffset (iFeatureSet);
 
 	i_OffsetToConnectionFeatures = i_MaxPredicateValue + 1;
 	i_OffsetToPredicateNameFeatures = 14 + i_OffsetToConnectionFeatures;
@@ -441,6 +443,7 @@ bool SubgoalPolicy::Init (void)
 										+ 2 * pow (i_PredicateNames, 2);
 	i_OffsetToPredicateIdentityFeatures = i_OffsetToParameterValueFeatures
 										+ 2 * pow (i_ParameterValues, 2);
+  i_OffsetToSuffixObjectFeatures = i_OffsetToPredicateIdentityFeatures + 2 * pow(i_PredicateIdentities); //verify indexing is correct
 
 	b_PrintTextConnectionFeatures
 		= (1 == (int)(config)"features:print_text_connection_features");
@@ -471,7 +474,7 @@ bool SubgoalPolicy::Init (void)
 		map_FeatureIndexToFeatureString [13 + i_OffsetToConnectionFeatures] = "NoConnFuture";
 
 
-		// populate Feature Strings -- names
+		// populate Feature Strings -- names //TODO modify
 		ITERATE(FeatureToIndex_hmp_t, hmp_PredicateNameToIndex, itrFrom)
 		{
 			ITERATE(FeatureToIndex_hmp_t, hmp_PredicateNameToIndex, itrTo)
@@ -490,7 +493,7 @@ bool SubgoalPolicy::Init (void)
 			}
 		}
 
-		// populate Feature Strings -- values
+		// populate Feature Strings -- values //TODO modify
 		ITERATE(FeatureToIndex_hmp_t, hmp_ParameterValueToIndex, itrFrom)
 		{
 			ITERATE(FeatureToIndex_hmp_t, hmp_ParameterValueToIndex, itrTo)
@@ -657,7 +660,7 @@ String SubgoalPolicy::GetFeatureString(int _iIndex) const
 
 
 
-//													
+//TODO Write index getter for suffix fe													
 int SubgoalPolicy::GetPredicateIdentityFeatureIndex (const String& _rPredicate)
 {
 	FeatureToIndex_hmp_t::iterator	ite;
@@ -730,7 +733,7 @@ int SubgoalPolicy::GetParameterValueFeatureIndex (const String& _rValue)
 }
 
 
-//													
+//TODO Add suffix features													
 void SubgoalPolicy::AssignIndicesToTargetProblemPredicates (void)
 {
 	cout << "Assigning indices to problem predicates." << endl;
@@ -950,14 +953,15 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 			if (i_MaxPredicateValue < pPred->l_Value)
 				i_MaxPredicateValue = pPred->l_Value;
 		}
-    //Add anotehr index to i_PredicateIdentityFeatureIndexi
+    // TODO
+    //Add anotehr index like i_PredicateIdentityFeatureIndexi
     //hack this line to it pPred->i_PredicateIdentityFeatureIndex
     // = GetPredicateIdentityFeatureIndex (pPred->GetPddlString ());
     //when feature is computed, set index to 1.
 
     //Offset being computed, make one for question features
 
-		int_set_t setValueFI;
+		int_set_t setValueFI; // todoinvesitage
 		for (unsigned int i = 1; i < dqPred.size (); i++)
 		{
 			pPred->dq_Parameters.push_back (PddlParameter());
@@ -987,7 +991,7 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 			= GetPredicateNameFeatureIndex (pPred->s_Name);
 		pPred->i_PredicateCandidateWithoutNumber
 			= GetPredicateWithoutNumberIndex (*pPred);
-
+    //todo add suffix object feature
 
 		if (true == pPred->b_IsFunction)
 		{
