@@ -311,8 +311,8 @@ class SubgoalPolicy
 										 SubgoalSequence* _pSequence);
 
 		bool LoadSimpleConnectionFile (String filepath);
-		bool LoadFeatureConnectionFile (String filepath);
-    bool LoadConnections(void);
+		bool LoadFeatureConnectionFile (String filepath, bool update);
+    bool LoadAnswers(void);
     bool LoadPredDictFile (void);
 
 		void LoadGoldLengthFile (void);
@@ -355,6 +355,7 @@ class SubgoalPolicy
     bool AskQuestion(String s_QuestionType, String s_QuestionQuery);
     void TestQA();
     void clearAnswers();
+    void ResetSentenceConnections ();
 
 	public:
 		SubgoalPolicy (void);

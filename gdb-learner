@@ -1,5 +1,4 @@
 set p pretty on
 br SubgoalLearner::Iterate
-br SubgoalLearner::TryLinkingSubgoals
-br SubgoalLearner::OnFFResponse
 r cfg/question_model.cfg run=t1
+

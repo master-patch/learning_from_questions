@@ -274,13 +274,8 @@ SubgoalPolicy::SubgoalPolicy (void)
 	b_UseComplexNonConnectionFeatures = false;
 }
 
-SubgoalPolicy::~SubgoalPolicy (void)
+void SubgoalPolicy::ResetSentenceConnections ()
 {
-	Random::Destroy ();
-
-	ITERATE (PddlPredicate_vec_t, vec_CandidatePredicates, ite)
-		delete *ite;
-	vec_CandidatePredicates.clear ();
 
 	ITERATE (SentenceConnection_vec_t, vec_SentenceConnections, iteConn)
 	{
@@ -290,6 +285,18 @@ SubgoalPolicy::~SubgoalPolicy (void)
 		delete pConnection;
 	}
 	vec_SentenceConnections.clear ();
+
+}
+
+SubgoalPolicy::~SubgoalPolicy (void)
+{
+	Random::Destroy ();
+
+	ITERATE (PddlPredicate_vec_t, vec_CandidatePredicates, ite)
+		delete *ite;
+	vec_CandidatePredicates.clear ();
+
+	ResetSentenceConnections();
 
 	if (true == mtx_SentencesPositiveFromTo.IsInitialized ())
 	{
@@ -340,14 +347,6 @@ bool SubgoalPolicy::Init (void)
 	// o_IR.SetCallback (this);
 
 	String IR_host = (config)"ir_host";
-
-	if (IR_host != -1) {
-		if (false == o_IR.Connect ())
-			return false;
-
-		// Launch the test
-		TestQA();
-	}
 
 	o_SequenceEndModel.Init ("end");
 	o_SubgoalSelectionModel.Init ("subgoal");
@@ -569,7 +568,7 @@ bool SubgoalPolicy::Init (void)
     }
 	else if (f_UseTextConnectionFeatures > 0)
     {
-      if (false == LoadFeatureConnectionFile ((config) "text_connection_file"))
+      if (false == LoadFeatureConnectionFile ((config) "text_connection_file", false))
         return false;
       if (true == b_PrintTextConnectionFeatures)
         LoadFeaturesToDebugPrintFile();
@@ -582,6 +581,15 @@ bool SubgoalPolicy::Init (void)
 	b_UseGoldLength = (1 == (int)(config)"use_gold_length");
 	if (true == b_UseGoldLength)
 		LoadGoldLengthFile();
+
+	// RUN TESTS
+	if (IR_host != -1) {
+		if (false == o_IR.Connect ())
+			return false;
+
+		// Launch the test
+		TestQA();
+	}
 
 	return true;
 }
@@ -1053,9 +1061,9 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 	return true;
 }
 
-bool SubgoalPolicy::LoadConnections (void) {
+bool SubgoalPolicy::LoadAnswers (void) {
 
-  String path = (config) "text_connection_file"; 
+  String path = (config) "ir:text_connection_file"; 
  	if (f_UseSimpleConnectionFeatures > 0)
     {
       if (false == LoadSimpleConnectionFile (path))
@@ -1063,7 +1071,7 @@ bool SubgoalPolicy::LoadConnections (void) {
     }
 	else if (f_UseTextConnectionFeatures > 0)
     {
-      if (false == LoadFeatureConnectionFile (path))
+      if (false == LoadFeatureConnectionFile (path, true))
         return false;
       if (true == b_PrintTextConnectionFeatures) {
         LoadFeaturesToDebugPrintFile();
@@ -1110,8 +1118,13 @@ bool SubgoalPolicy::LoadSimpleConnectionFile (String filepath)
 
 
 //													
-bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
+bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath, bool update)
 {
+	// TODO check if needed
+	if (update == true) {
+		ResetSentenceConnections();
+	}
+
 	i_MaxConnectionDepth = 0;
 	cout << "   loading feature connection file : "
 		 << filepath  << endl;
@@ -1126,6 +1139,8 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 		return false;
 	}
 
+	// README: this part reads line by line the file
+	// and according to the format it stores it into mapConnectionHashToFeatures
 	size_t iLines = 0;
 	String sLine;
 	while (true == file.ReadLine (sLine))
@@ -1147,9 +1162,13 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 		// FeatureToValue_map_t* pmapFeatureToValueNeg;
 		ConnectionHashToFeatures_map_t::iterator	iteFeatures;
 		iteFeatures = mapConnectionHashToFeatures.find (sHash);
+
 		if (mapConnectionHashToFeatures.end () == iteFeatures)
 		{
 			SentenceConnection* pConnection = new SentenceConnection;
+
+			// FIXED TODO: glob - unsafe (comment: maybe need to be reset)
+			// README: If the sentece is completed, we add the connections to the vector
 			vec_SentenceConnections.push_back (pConnection);
 			pConnection->i_Sentence = iSentenceId;
 			pConnection->i_From = iFrom;
@@ -1168,7 +1187,14 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 
 		// String sPositiveFeature;
 		// sPositiveFeature << "pos\x01" << sFeature;
+		// README: this looks for a hash and creates a feature with that hash if unexistent
+		// FIXED TODO: glob - unsafe (comment: read-only)
+		//       solution: this should be
+		//         `int iFeature = o_TextConnectionFeatureSpace.GetFeatureIndex (sFeature, true);`
+		//       since this won't add a new feature in the feature space
+		//       this should only be at the second run (the updateConnections)
 		int iFeature = o_TextConnectionFeatureSpace.GetFeatureIndex (sFeature);
+		// README: finally insert this feature in the list of features with positive val
 		pmapFeatureToValuePos->insert (make_pair (iFeature, fFeatureValue));
 
 		// String sNegativeFeature;
@@ -1179,12 +1205,32 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 
 
 	//													
-	mtx_SentencesPositiveFromTo.Create (i_CandidatePredicateNumbersMerged, i_CandidatePredicateNumbersMerged);
+	// FIXED TODO: glob - unsafe (comment: this runs on one thread only, and this acts like a counter)
+	// README: we create, without stating, a matrix of candidatePredicateNumbersMerged
+	//         same for the negative ones. These matrices are reset to 0
+	if (false == mtx_SentencesPositiveFromTo.IsInitialized ()) {
+		mtx_SentencesPositiveFromTo.Create (
+			i_CandidatePredicateNumbersMerged,
+			i_CandidatePredicateNumbersMerged);
+	}
+	// FIXED TODO: glob - safe (comment: see above)
+	// TODO: should we reset?
 	mtx_SentencesPositiveFromTo.Memset (0);
-	mtx_SentencesNegativeFromTo.Create (i_CandidatePredicateNumbersMerged, i_CandidatePredicateNumbersMerged);
+
+	// FIXED TODO: glob - safe (comment: see above)
+	if (false == mtx_SentencesNegativeFromTo.IsInitialized ()) {
+		mtx_SentencesNegativeFromTo.Create (
+			i_CandidatePredicateNumbersMerged,
+			i_CandidatePredicateNumbersMerged);
+	}
+	// TODO: glob - safe (comment: see above)
 	mtx_SentencesNegativeFromTo.Memset (0);
 
-	ITERATE (SentenceConnection_vec_t, vec_SentenceConnections, iteConn)
+	// README: Iterate through all the vectors of the sentences in the file
+	ITERATE (SentenceConnection_vec_t,
+		// FIXED TODO: glob - safe (comment: here is read-only)
+		vec_SentenceConnections,
+		iteConn)
 	{
 		SentenceConnection* pConnection = *iteConn;
 		pConnection->p_PositiveFeatures = new Features;
@@ -1202,7 +1248,9 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 		FeatureToValue_map_t* pmapFeatureToValuePos = iteFeatures->second;
 		pConnection->p_PositiveFeatures->SetSize (pmapFeatureToValuePos->size ());
 		pConnection->p_NegativeFeatures->SetSize (pmapFeatureToValuePos->size ());
-		ITERATE (FeatureToValue_map_t, (*pmapFeatureToValuePos), ite)
+		ITERATE (FeatureToValue_map_t, (*pmapFeatureToValuePos),
+			// TODO: glob - safe (comment: it is just an iterator)
+			ite)
 		{
 			pConnection->p_PositiveFeatures->Set (ite->first, ite->second);
 			pConnection->p_NegativeFeatures->Set (ite->first, - ite->second);
@@ -1216,8 +1264,13 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 		delete pmapFeatureToValuePos;
 		// delete pmapFeatureToValueNeg;
 
+		// README: This gets the Pddl of the candidate `from` the connection
+    // 		     as well as the `to`.
+		// 				 creates a new integer value in the matrix
+		// TODO: glob - safe (comment: read-only, check if order is affected)
 		PddlPredicate* pFrom = vec_CandidatePredicates [pConnection->i_From];
 		int iFrom = pFrom->i_PredicateCandidateWithoutNumber;
+		// TODO: glob - safe (comment: read-only, check if order is affected)
 		PddlPredicate* pTo = vec_CandidatePredicates [pConnection->i_To];
 		int iTo = pTo->i_PredicateCandidateWithoutNumber;
 
@@ -1228,17 +1281,34 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath)
 	}
 	mapConnectionHashToFeatures.clear ();
 
-	lprb_SentenceConnection.Create (2);
-	mtx_FeedbackOnSentenceConnections.Create (i_CandidatePredicateNumbersMerged,
-											  i_CandidatePredicateNumbersMerged,
-											  3);
-	mtx_FeedbackOnSentenceConnections.Memset (0);
+	// TODO: now this part gets trickier, we are setting up matrices
+	//       and resetting them, meaning that they could be used later on
+	//       in the code, this needs further inspection
+	// TODO: glob - unsafe (comment: this is created, we can check that if this is
+	//       already created, we are resetting this - or even reusing it)
+	// TODO: check if we should reuse lprb_SentenceConnection
+
+	if (false == update) {
+		lprb_SentenceConnection.Create (2);
+	}
+
+	if (false == mtx_FeedbackOnSentenceConnections.IsInitialized()) {
+	// FIXED TODO: glob - unsafe
+		mtx_FeedbackOnSentenceConnections.Create (
+			// TODO: glob - unsafe
+			i_CandidatePredicateNumbersMerged,
+			// TODO: glob - unsafe
+			i_CandidatePredicateNumbersMerged,
+												  3);
+		// FIXED TODO: glob - unsafe
+		mtx_FeedbackOnSentenceConnections.Memset (0);
+	}
 
 
+	// FIXED TODO: glob - safe (comment: read-only)
 	cout << "   loaded " << vec_SentenceConnections.size ()
 		 << " text relationships, and " << iLines
-		 << " features for an average feature size of "
-		 << iLines / (float)vec_SentenceConnections.size () << endl;
+		 << endl;
 
 	return true;
 }
@@ -1921,7 +1991,8 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
           if(false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
             //TODO cout error, throw error type behavior
           }
-          //LoadConnections(); TODO: See board for hard task
+          LoadAnswers();// TODO: See board for hard task
+          SampleConnections(false);
     }
 
 		_pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
@@ -2696,24 +2767,35 @@ void SubgoalPolicy::WriteConnectionFeedback (void)
 // Question Answering	
 void SubgoalPolicy::TestQA ()
 {
+	cout << "QA: Running tests.." << endl;
+
+	// Test 1
 	String type;
 	String query;
 	type << "action";
 	query << "wood";
 	if (AskQuestion(type, query)) {
-		cout << "QA1: success" << endl;
+		cout << "QA1: SUCCESS asking a question" << endl;
 	} else {
-		cout << "QA1: fail" << endl;
+		cout << "QA1: FAIL in asking a question" << endl;
 	}
+
+	// Test 2
 	if (AskQuestion(type, query)) {
-		cout << "QA2: success" << endl;
+		cout << "QA2: SUCCESS asking the question again" << endl;
 	} else {
-		cout << "QA2: fail" << endl;
+		cout << "QA2: FAIL in asking the question again" << endl;
 	}
-	cout << "QA: Done questioning" << endl;
 
+	// Test 3
+	if (AskQuestion(type, "ironbar")) {
+		cout << "QA3: SUCCESS asking a second question" << endl;
+	} else {
+		cout << "QA3: FAIL in asking a second question" << endl;
+	}
+
+	// Test 4
 	clearAnswers();
-
 	fstream in((config)"text_connection_file");
 	if(in.is_open())
 	{
@@ -2721,11 +2803,25 @@ void SubgoalPolicy::TestQA ()
 		size_t size = in.tellg();
 		if( size == 0)
 		{
-			cout << "QA cache: SUCCESS\n";
+			cout << "QA4: SUCCESS clearing the answer file\n";
 		} else {
-			cout << "QA cache: FAIL\n";
+			cout << "QA4: FAIL in clearing the answer file\n";
 		}
 	}
+
+	if (AskQuestion(type, "wood")) {
+		cout << "QA5: SUCCESS asking a question after cleaning the file" << endl;
+	} else {
+		cout << "QA5: FAIL in asking a question after cleaning the file" << endl;
+	}
+
+	cout << "QA6: starting the second LoadAnswers" << endl;
+	LoadAnswers();
+	cout << "QA6: SUCCESS starting the second LoadAnswers with different file" << endl;
+
+	clearAnswers();
+
+	cout << "QA: Done questioning" << endl;
 }
 
 
