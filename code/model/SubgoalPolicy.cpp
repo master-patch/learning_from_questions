@@ -1884,15 +1884,11 @@ void SubgoalPolicy::SampleSubgoalTestSequence(const Problem& _rProblem,
 //Query IR system with question and update Connection set as a result.											
 // TODO: Add Answer Type param
 bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
-  if (1 == this->map_QuestionAnswerPairs[s_QuestionType + s_QuestionQuery]) {
-    return true;
-  }
   if (false == o_IR.SendQuestion(s_QuestionType, s_QuestionQuery)) {
     return false;
   }
   char sResponse[256];
   o_IR.ReceiveMessage(sResponse, 255);
-  this->map_QuestionAnswerPairs[s_QuestionType + s_QuestionQuery] = 1;
   return true;
 }
 void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
