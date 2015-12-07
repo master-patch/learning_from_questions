@@ -2809,15 +2809,51 @@ void SubgoalPolicy::TestQA ()
 		}
 	}
 
+	// Test 5
 	if (AskQuestion(type, "wood")) {
 		cout << "QA5: SUCCESS asking a question after cleaning the file" << endl;
 	} else {
 		cout << "QA5: FAIL in asking a question after cleaning the file" << endl;
 	}
 
+	// Test 6
 	cout << "QA6: starting the second LoadAnswers" << endl;
 	LoadAnswers();
 	cout << "QA6: SUCCESS starting the second LoadAnswers with different file" << endl;
+
+	clearAnswers();
+
+
+	// Test 7
+	bool q1 = AskQuestion(type, "wood");
+
+	if (q1 == false) {
+		cout << "QA7: FAIL in loading the second answers" << endl;
+	}
+
+	LoadAnswers();
+
+	SentenceConnection_vec_t cached_SentenceConnections(vec_SentenceConnections);
+
+	bool q2 = AskQuestion(type, "wood");
+
+	if (q2 == false) {
+		cout << "QA7: FAIL in loading the second answers" << endl;
+	}
+
+	LoadAnswers();
+
+
+	if (q1 == true &&
+		  q2 == true &&
+		  cached_SentenceConnections == vec_SentenceConnections &&
+		  &cached_SentenceConnections != &vec_SentenceConnections
+		  ) {
+		cout << "QA7: SUCCESS loadAnswers is idempotent" << endl;
+	} else {
+		cout << "QA7: FAIL loadAnswers is not idempotent" << endl;
+	}
+
 
 	clearAnswers();
 
