@@ -885,18 +885,13 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
     //Ensure first subgoal we send to MetricFF is a subgoal
 		Subgoal* pSubgoal = rState.p_Sequence->GetSubgoal (subgoalIndex);
     while(true == pSubgoal->b_isQuestion) {
-      pSubgoal = rState.p_Sequence->GetSubgoal (++ subgoalIndex);
+      pSubgoal = rState.p_Sequence.nextSubgoal();
     }
 
-		if (false == pSubgoal->b_isQuestion) {
-			o_FFInterface.SendTask (iIndex,
-				i_DomainPddlId,
-				pSubgoal->s_ProblemPddl,
-				i_CurrentFFTimelimit);
-		} else {
-			// Do not send the question
-			set_PendingSequences.erase (iIndex);
-		}
+    o_FFInterface.SendTask (iIndex,
+                            i_DomainPddlId,
+                            pSubgoal->s_ProblemPddl,
+                            i_CurrentFFTimelimit);
 
 		if (true == b_DisplayFFProgress)
 			cout << '.' << flush;
