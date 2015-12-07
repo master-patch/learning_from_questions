@@ -572,6 +572,7 @@ bool SubgoalPolicy::Init (void)
         return false;
       if (true == b_PrintTextConnectionFeatures)
         LoadFeaturesToDebugPrintFile();
+
     }
 
 	if (true == b_LogConnectionPredictions)
@@ -949,6 +950,12 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 			if (i_MaxPredicateValue < pPred->l_Value)
 				i_MaxPredicateValue = pPred->l_Value;
 		}
+    //Add anotehr index to i_PredicateIdentityFeatureIndexi
+    //hack this line to it pPred->i_PredicateIdentityFeatureIndex
+    // = GetPredicateIdentityFeatureIndex (pPred->GetPddlString ());
+    //when feature is computed, set index to 1.
+
+    //Offset being computed, make one for question features
 
 		int_set_t setValueFI;
 		for (unsigned int i = 1; i < dqPred.size (); i++)
@@ -1401,8 +1408,8 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 		{
 			iFeatureCount += _rProblem.vec_InitPredicateNameFI.Size ()
 							 + _rProblem.vec_TargetPredicateNameFI.Size ()
-							 + _rProblem.vec_InitPredicateIdentityFI.Size ()
-							 + _rProblem.vec_TargetPredicateIdentityFI.Size ()
+        + _rProblem.vec_InitPredicateIdentityFI.Size () // Add last token as a feature
+        + _rProblem.vec_TargetPredicateIdentityFI.Size () // 
 							 + iCandidatePredicateParameters
 								* (_rProblem.vec_InitParameterValueFI.Size ()
 									+ _rProblem.vec_TargetParameterValueFI.Size ());

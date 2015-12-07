@@ -1,6 +1,6 @@
 set p pretty on
 br SubgoalLearner::TryLinkingSubgoals
-br SubgoalLearner::Iterate
-br Learner.cpp::176
+br SubgoalPolicy::SampleSubgoalTestSequence
 r cfg/question_model.cfg run=t1
+
 
