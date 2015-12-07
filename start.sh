@@ -1,3 +1,3 @@
 #!/bin/sh
 docker build -t questionbot .
-docker run -d questionbot sh ./run_everything.sh -v tmp:/tmp
+docker run -ti questionbot sh ./run_everything.sh -v tmp:/tmp
