@@ -230,7 +230,6 @@ class SubgoalPolicy
 		PddlStringToPredicate_map_t	map_PddlStringToCandidatePredicate;
 		PddlPredicate_vec_t			vec_CandidatePredicates;
 		char_vec_t					vec_CanReachCandidatePredicate;
-    String_int_map_t map_QuestionAnswerPairs;
 		Matrix <char,2>	mtx_PredicateConnectionsFromTo;
 		Matrix <char,2>	mtx_PredicateConnectionsToFrom;
 		Matrix <int_dq_t*,2>	mtx_SentencesPositiveFromTo;
