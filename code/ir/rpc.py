@@ -100,7 +100,6 @@ lSentences = ReadSentencesFromTextFileSimple(sSentenceFile)
 
 sentences = [sentence.lWords for sentence in lSentences]
 ids = [sentence.iIndex for sentence in lSentences]
-ir = BagOfWords(sentences, ids)
 
 config.load_config(sys.argv)
 host = config.get_string("ir_host")
@@ -112,6 +111,8 @@ if (not host):
 text_connection = sys.path[0]
 text_connection += '/../../'
 text_connection += config.get_string("text_connection_file")
+
+ir = BagOfWords(sentences, ids, k=config.get_int("ir:num_answers"), shuffle=config.get_int("ir:random"))
 
 print "IR: Starting IR..", config.get_string("text_connection_file")
 start_ir(

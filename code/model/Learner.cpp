@@ -885,8 +885,9 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
     //Ensure first subgoal we send to MetricFF is a subgoal
 		Subgoal* pSubgoal = rState.p_Sequence->GetSubgoal (subgoalIndex);
     while(true == pSubgoal->b_isQuestion) {
-      pSubgoal = rState.p_Sequence.nextSubgoal();
+      subgoalIndex =  rState.nextSubgoal();
     }
+
 
     o_FFInterface.SendTask (iIndex,
                             i_DomainPddlId,
