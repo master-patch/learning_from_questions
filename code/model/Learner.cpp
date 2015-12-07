@@ -775,10 +775,10 @@ int SubgoalSequenceState::nextSubgoal(){
   size_t max_step =  this->p_Sequence->dq_Subgoals.size();
 
   assert(currentStep < max_step);
-  ++ (this->i_CurrentStep);
+  ++ currentStep;
   while(true == this->p_Sequence->GetSubgoal(currentStep)->b_isQuestion) {
     assert(currentStep < max_step);
-    ++(currentStep);
+    ++ currentStep;
   }
   this->i_CurrentStep = currentStep;
   return this->i_CurrentStep;
