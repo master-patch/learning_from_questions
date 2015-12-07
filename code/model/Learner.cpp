@@ -173,6 +173,8 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 			 << pSubgoal->s_ProblemPddl << '\n'
 			 << "----------------------------------------------------\n"
 			 << endl;
+
+   
 	}
 
 
@@ -526,7 +528,7 @@ void SubgoalLearner::TryLinkingSubgoals(void) {
   // learning iteration.  So we need to make a copy of the
   // PddlProblem here...									
   PddlProblem* pPddlProblem = new PddlProblem (pProblem->GetPddlProblem ());
-  pSequence->SetSubtask (1, pProblem->s_Problem, pPddlProblem);
+
 
   ++ i_TotalPlanJobs;
   int iIndex = d;
@@ -538,12 +540,16 @@ void SubgoalLearner::TryLinkingSubgoals(void) {
   SubgoalSequenceState& rState = pairInsert.first->second;
   rState.b_FullTask = true;
   rState.p_TargetProblem = pProblem;
-  set_PendingSequences.insert (iIndex);
-  pthread_mutex_unlock (&mtx_WaitForSequences);
 
   if (rState.p_Sequence->GetSubgoal( rState.i_CurrentStep)->b_isQuestion) {
     rState.nextSubgoal();
   }
+
+  pSequence->SetSubtask (rState.i_CurrentStep, pProblem->s_Problem, pPddlProblem);
+
+  set_PendingSequences.insert (iIndex);
+  pthread_mutex_unlock (&mtx_WaitForSequences);
+
 
   o_FFInterface.SendTask (iIndex,
                           i_DomainPddlId,
@@ -781,6 +787,7 @@ int SubgoalSequenceState::nextSubgoal(){
     ++ currentStep;
   }
   this->i_CurrentStep = currentStep;
+
   return this->i_CurrentStep;
 }
 
@@ -836,13 +843,35 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 													   pSequence);
 
 
-			Subgoal* pSubgoal = pSequence->GetSubgoal (1);
+			int iIndex = 1000 * i + d; 
+      int subgoalIndex = 1;
+
+      pair <IndexToSubgoalSequenceState_hmp_t::iterator, bool> pairInsert;
+			pairInsert = hmp_IndexToSequenceState.insert (make_pair (iIndex, 
+                                                               SubgoalSequenceState (pSequence, subgoalIndex, d)));
+			SubgoalSequenceState& rState = pairInsert.first->second;
+
+
+      Subgoal* pSubgoal = pSequence->GetSubgoal (subgoalIndex);
+
+      if (true == pSubgoal->b_isQuestion) {
+        subgoalIndex =  rState.nextSubgoal(); 
+      }
+      pSubgoal = pSequence->GetSubgoal (subgoalIndex);
+
+      assert(false == pSubgoal->b_isQuestion);
+      assert(subgoalIndex == rState.i_CurrentStep);
+
+
+      //update correct subgoal
+
 			pSubgoal->s_StartStatePredicates
 				= pProblem->p_PddlProblem->o_StartState.GetPredicatePddlString ();
 
 
 			String sProblemPddl;
-			pSequence->GetSubtask (1, &sProblemPddl);
+
+			pSequence->GetSubtask (subgoalIndex, &sProblemPddl);
 
 			sProblemPddl.Strip ();
 			if ("" == sProblemPddl)
@@ -857,17 +886,14 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 			}
 
 			PddlProblem* pPddlProblem = PddlInterface::ParseProblemPddl (sProblemPddl);
-			pSequence->SetSubtask (1, sProblemPddl, pPddlProblem);
+			pSequence->SetSubtask (subgoalIndex, sProblemPddl, pPddlProblem);
 
 			++ i_TotalPlanJobs;
 
-			int iIndex = 1000 * i + d;
+
 
 			//										
-			pair <IndexToSubgoalSequenceState_hmp_t::iterator, bool> pairInsert;
-			pairInsert = hmp_IndexToSequenceState.insert (make_pair (iIndex, 
-											 SubgoalSequenceState (pSequence, 1, d)));
-			SubgoalSequenceState& rState = pairInsert.first->second;
+		
 			rState.b_FullTask = false;
 			rState.p_TargetProblem = pProblem;
 			set_PendingSequences.insert (iIndex);
@@ -881,18 +907,20 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 		int iIndex = ite->first;
 		SubgoalSequenceState& rState = ite->second;
 
-    unsigned int subgoalIndex = 1;
-    assert(1 == rState.i_CurrentStep);
+    unsigned int subgoalIndex = rState.i_CurrentStep;
     //Ensure first subgoal we send to MetricFF is a subgoal
 		Subgoal* pSubgoal = rState.p_Sequence->GetSubgoal (subgoalIndex);
-    if (true == pSubgoal->b_isQuestion) {
-      subgoalIndex =  rState.nextSubgoal();
-    }
 
+    assert(false == pSubgoal->b_isQuestion);
+
+    // if (true == pSubgoal->b_isQuestion) {
+    //   subgoalIndex =  rState.nextSubgoal();
+    // }
+    pSubgoal = rState.p_Sequence->GetSubgoal (subgoalIndex);
 
     o_FFInterface.SendTask (iIndex,
                             i_DomainPddlId,
-                            pSubgoal->s_ProblemPddl,
+                            pSubgoal->s_ProblemPddl, //TODO INVESTIGATE
                             i_CurrentFFTimelimit);
 
 		if (true == b_DisplayFFProgress)

@@ -1849,7 +1849,7 @@ void SubgoalPolicy::SampleSubgoalTestSequence(const Problem& _rProblem,
       pSubgoal->i_SubgoalSelection = 409;
     }
 
-    if ( i == 4) {
+    if ( i == 5) {
       pSubgoal->i_SubgoalSelection = 404;
     }
 
