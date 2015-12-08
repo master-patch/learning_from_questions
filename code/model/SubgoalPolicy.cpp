@@ -371,6 +371,7 @@ bool SubgoalPolicy::Init (void)
 	b_UseOnlyPreviousSubgoal = (1 == (int)(config)"features:use_only_previous_subgoal");
 	b_IncludeInit = (0 != (int)(config)"features:include_init");
 	f_PredicateIdentityPairFeatureWeight = (config)"predicate_identity_pair_feature_weight";
+  f_PredicateSuffixPairFeatureWeight = (config) "predicate_suffix_pair_feature_weight";
 	String sConnectionRewardType ((config)"connection:reward_type");
 	if ("linear" == sConnectionRewardType)
 		e_ConnectionRewardType = crt_linear;
@@ -425,7 +426,7 @@ bool SubgoalPolicy::Init (void)
 	i_PredicateNames = hmp_PredicateNameToIndex.size ();
 	i_ParameterValues = hmp_ParameterValueToIndex.size ();
 	i_PredicateIdentities = hmp_PredicateIdToIndex.size ();
-  i_SuffixObjects = hmp_SuffixToIndex.size(); //todo Pupulate
+  i_SuffixObjects = hmp_SuffixToIndex.size(); // todo Solved Pupulate
 
 	o_SequenceEndFeatureSpace.SetBagOfWordsOffset (2 * pow (i_PredicateIdentities, 2));
 
@@ -443,7 +444,7 @@ bool SubgoalPolicy::Init (void)
 										+ 2 * pow (i_PredicateNames, 2);
 	i_OffsetToPredicateIdentityFeatures = i_OffsetToParameterValueFeatures
 										+ 2 * pow (i_ParameterValues, 2);
-  i_OffsetToSuffixObjectFeatures = i_OffsetToPredicateIdentityFeatures + 2 * pow(i_PredicateIdentities); //verify indexing is correct
+  i_OffsetToSuffixObjectFeatures = i_OffsetToPredicateIdentityFeatures + 2 * pow(i_PredicateIdentities, 2);
 
 	b_PrintTextConnectionFeatures
 		= (1 == (int)(config)"features:print_text_connection_features");
@@ -514,22 +515,42 @@ bool SubgoalPolicy::Init (void)
 
 		// populate Feature Strings -- identity
 		ITERATE(FeatureToIndex_hmp_t, hmp_PredicateIdToIndex, itrFrom)
-		{
-			ITERATE(FeatureToIndex_hmp_t, hmp_PredicateIdToIndex, itrTo)
-			{
-				int iIndexInit = i_OffsetToPredicateIdentityFeatures 
-								 + (2 * i_PredicateIdentities*itrFrom->second
-										+ itrTo->second);
-				int iIndexFuture = i_OffsetToPredicateIdentityFeatures
-								   + (2 * i_PredicateIdentities * itrFrom->second
-										  + itrTo->second
-										  + i_PredicateIdentities);
-				map_FeatureIndexToFeatureString [iIndexInit]
-					= "PredIdInit::" + itrFrom->first + "::" + itrTo->first;
-				map_FeatureIndexToFeatureString [iIndexFuture]
-					= "PredIdFuture::" + itrFrom->first + "::" + itrTo->first;
-			}
-		}
+      {
+        ITERATE(FeatureToIndex_hmp_t, hmp_PredicateIdToIndex, itrTo)
+          {
+            int iIndexInit = i_OffsetToPredicateIdentityFeatures 
+              + (2 * i_PredicateIdentities*itrFrom->second
+                 + itrTo->second);
+            int iIndexFuture = i_OffsetToPredicateIdentityFeatures
+              + (2 * i_PredicateIdentities * itrFrom->second
+                 + itrTo->second
+                 + i_PredicateIdentities);
+            map_FeatureIndexToFeatureString [iIndexInit]
+              = "PredIdInit::" + itrFrom->first + "::" + itrTo->first;
+            map_FeatureIndexToFeatureString [iIndexFuture]
+              = "PredIdFuture::" + itrFrom->first + "::" + itrTo->first;
+          }
+      }
+
+    // populate Feature Strings -- suffix
+		ITERATE(FeatureToIndex_hmp_t, hmp_SuffixToIndex, itrFrom)
+      {
+        ITERATE(FeatureToIndex_hmp_t, hmp_SuffixToIndex, itrTo)
+          {
+            int iIndexInit = i_OffsetToSuffixObjectFeatures 
+              + (2 * i_SuffixObjects*itrFrom->second
+                 + itrTo->second);
+            int iIndexFuture = i_OffsetToSuffixObjectFeatures
+              + (2 * i_SuffixObjects * itrFrom->second
+                 + itrTo->second
+                 + i_SuffixObjects);
+            map_FeatureIndexToFeatureString [iIndexInit]
+              = "SuffixInit::" + itrFrom->first + "::" + itrTo->first;
+            map_FeatureIndexToFeatureString [iIndexFuture]
+              = "SuffixFuture::" + itrFrom->first + "::" + itrTo->first;
+          }
+      }
+
 
 		#ifndef NDEBUG
 		// make sure all the values are there
@@ -674,6 +695,20 @@ int SubgoalPolicy::GetPredicateIdentityFeatureIndex (const String& _rPredicate)
 	return ite->second;
 }
 
+//TODO VERIFY. 													
+int SubgoalPolicy::GetSuffixObjectFeatureIndex (const String& _rSuffix)
+{
+	FeatureToIndex_hmp_t::iterator	ite;
+	ite = hmp_SuffixToIndex.find (_rSuffix);
+	if (hmp_SuffixToIndex.end() == ite)
+    {
+      int iIndex = hmp_SuffixToIndex.size ();
+      hmp_SuffixToIndex.insert (make_pair (_rSuffix, iIndex));
+      return iIndex;
+    }
+	return ite->second;
+}
+
 
 //													
 int SubgoalPolicy::GetPredicateNameFeatureIndex (const String& _rName)
@@ -681,11 +716,11 @@ int SubgoalPolicy::GetPredicateNameFeatureIndex (const String& _rName)
 	FeatureToIndex_hmp_t::iterator	ite;
 	ite = hmp_PredicateNameToIndex.find (_rName);
 	if (hmp_PredicateNameToIndex.end () == ite)
-	{
-		int iIndex = hmp_PredicateNameToIndex.size ();
-		hmp_PredicateNameToIndex.insert (make_pair (_rName, iIndex));
-		return iIndex;
-	}
+    {
+      int iIndex = hmp_PredicateNameToIndex.size ();
+      hmp_PredicateNameToIndex.insert (make_pair (_rName, iIndex));
+      return iIndex;
+    }
 	return ite->second;
 }
 
@@ -747,6 +782,7 @@ void SubgoalPolicy::AssignIndicesToTargetProblemPredicates (void)
 		int_set_t	setPredicateIdentityFI;
 		int_set_t	setPredicateNameFI;
 		int_set_t	setParameterValueFI;
+    int_set_t setSuffixObjectFI;
 
 		// init state ...		
 		ITERATE (PddlPredicate_dq_t, rPddlProblem.o_StartState.dq_Predicates, ite)
@@ -765,6 +801,8 @@ void SubgoalPolicy::AssignIndicesToTargetProblemPredicates (void)
 				= GetPredicateNameFeatureIndex (pPredicate->s_Name);
 			pPredicate->i_PredicateCandidateWithoutNumber
 				= GetPredicateWithoutNumberIndex (*pPredicate);
+      pPredicate->i_SuffixObjectFeatureIndex
+        = GetSuffixObjectFeatureIndex(pPredicate->s_Suffix);
 
 			int_set_t setValueFI;
 			CONST_ITERATE (PddlParameter_dq_t, pPredicate->dq_Parameters, iteParam)
@@ -779,6 +817,7 @@ void SubgoalPolicy::AssignIndicesToTargetProblemPredicates (void)
 			setPredicateIdentityFI.insert (pPredicate->i_PredicateIdentityFeatureIndex);
 			setPredicateNameFI.insert (pPredicate->i_PredicateNameFeatureIndex);
 			setParameterValueFI.insert (setValueFI.begin (), setValueFI.end ());
+      setSuffixObjectFI.insert(pPredicate->i_SuffixObjectFeatureIndex);
 		}
 
 		// assign init feature indices to problem	
@@ -797,12 +836,17 @@ void SubgoalPolicy::AssignIndicesToTargetProblemPredicates (void)
 		ITERATE (int_set_t, setParameterValueFI, ite)
 			pProblem->vec_InitParameterValueFI [x++] = *ite;
 
+    x = 0;
+		ITERATE (int_set_t, setSuffixObjectFI, ite)
+			pProblem->vec_InitSuffixObjectFI [x++] = *ite;
+
 
 		// goal state ...		
 		setPredicateIdentityFI.clear ();
 		setPredicateNameFI.clear ();
 		setParameterValueFI.clear ();
-		
+    setSuffixObjectFI.clear();
+
 		ITERATE (PddlPredicate_dq_t, rPddlProblem.o_PartialGoalState.dq_Predicates, ite)
 		{
 			PddlPredicate* pPredicate = *ite;
@@ -819,6 +863,8 @@ void SubgoalPolicy::AssignIndicesToTargetProblemPredicates (void)
 				= GetPredicateNameFeatureIndex (pPredicate->s_Name);
 			pPredicate->i_PredicateCandidateWithoutNumber
 				= GetPredicateWithoutNumberIndex (*pPredicate);
+      pPredicate->i_SuffixObjectFeatureIndex
+        = GetSuffixObjectFeatureIndex(pPredicate->s_Suffix);
 
 			int_set_t setValueFI;
 			CONST_ITERATE (PddlParameter_dq_t, pPredicate->dq_Parameters, iteParam)
@@ -833,6 +879,7 @@ void SubgoalPolicy::AssignIndicesToTargetProblemPredicates (void)
 			setPredicateIdentityFI.insert (pPredicate->i_PredicateIdentityFeatureIndex);
 			setPredicateNameFI.insert (pPredicate->i_PredicateNameFeatureIndex);
 			setParameterValueFI.insert (setValueFI.begin (), setValueFI.end ());
+      setSuffixObjectFI.insert(pPredicate->i_SuffixObjectFeatureIndex);
 		}
 
 		// assign target feature indices to problem	
@@ -850,6 +897,11 @@ void SubgoalPolicy::AssignIndicesToTargetProblemPredicates (void)
 		x = 0;
 		ITERATE (int_set_t, setParameterValueFI, ite)
 			pProblem->vec_TargetParameterValueFI [x++] = *ite;
+
+    x = 0;
+		ITERATE (int_set_t, setSuffixObjectFI, ite)
+			pProblem->vec_TragetSuffixObjectFI [x++] = *ite;
+
 	}
 
 	cout << "   " << setMissingInitPredicates.size ()
@@ -935,8 +987,11 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 		String_dq_t dqPred;
 		sPredicate.Split (dqPred, ' ');
 
-		PddlPredicate* pPred;
-		if (true == bIsFunction)
+    String suffix = dqPred[dqPred.size() - 1];
+
+    PddlPredicate* pPred;
+
+    if (true == bIsFunction)
 			pPred = new PddlFunctionValuePredicate;
 		else
 			pPred = new PddlPredicate;
@@ -945,6 +1000,7 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 		pPred->s_Name = dqPred [0];
 		pPred->b_IsFunction = bIsFunction;
 		pPred->l_Value = iValue;
+    pPred->s_Suffix = suffix;
 
 		if (true == bIsFunction)
 		{
@@ -961,7 +1017,7 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 
     //Offset being computed, make one for question features
 
-		int_set_t setValueFI; // todoinvesitage
+		int_set_t setValueFI; // todo invesitage
 		for (unsigned int i = 1; i < dqPred.size (); i++)
 		{
 			pPred->dq_Parameters.push_back (PddlParameter());
@@ -991,7 +1047,8 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 			= GetPredicateNameFeatureIndex (pPred->s_Name);
 		pPred->i_PredicateCandidateWithoutNumber
 			= GetPredicateWithoutNumberIndex (*pPred);
-    //todo add suffix object feature
+    pPred->i_SuffixObjectFeatureIndex
+      = GetSuffixObjectFeatureIndex(pPred->s_Suffix); //todo add suffix object feature
 
 		if (true == pPred->b_IsFunction)
 		{
@@ -1413,7 +1470,9 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 			iFeatureCount += _rProblem.vec_InitPredicateNameFI.Size ()
 							 + _rProblem.vec_TargetPredicateNameFI.Size ()
         + _rProblem.vec_InitPredicateIdentityFI.Size () // Add last token as a feature
-        + _rProblem.vec_TargetPredicateIdentityFI.Size () // 
+        + _rProblem.vec_TargetPredicateIdentityFI.Size () //
+        + _rProblem.vec_InitSuffixObjectFI.Size()
+        + _rProblem.vec_TargetSuffixObjectFI.Size()
 							 + iCandidatePredicateParameters
 								* (_rProblem.vec_InitParameterValueFI.Size ()
 									+ _rProblem.vec_TargetParameterValueFI.Size ());
@@ -1427,10 +1486,9 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 		}
 
 
-		//									
+		//
 		iFeatureCount += 4;
 		pFeatures->SetSize (iFeatureCount);
-
 
 
 		// predicate numerics feature...
@@ -1461,32 +1519,32 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 			if (true == bIncludeTarget)
 			{
 				SetFeatures (_rProblem.vec_TargetPredicateNameFI,
-							 iOffset + i_PredicateNames,
-							 pFeatures,
-							 fDistanceFactorToTarget * f_NonConnectionFeatureImportance);
+                     iOffset + i_PredicateNames,
+                     pFeatures,
+                     fDistanceFactorToTarget * f_NonConnectionFeatureImportance);
 			}
 
 			// predicate identity...
 			iOffset = i_OffsetToPredicateIdentityFeatures
-					  + pCandidatePredicate->i_PredicateIdentityFeatureIndex
-					  * 2 * i_PredicateIdentities;
+        + pCandidatePredicate->i_PredicateIdentityFeatureIndex
+        * 2 * i_PredicateIdentities;
 			if(true == b_IncludeInit)
-			{
-				SetFeatures (_rProblem.vec_InitPredicateIdentityFI,
-							 iOffset,
-							 pFeatures,
-							 f_PredicateIdentityPairFeatureWeight
-							 * f_NonConnectionFeatureImportance);
-			}
+        {
+          SetFeatures (_rProblem.vec_InitPredicateIdentityFI,
+                       iOffset,
+                       pFeatures,
+                       f_PredicateIdentityPairFeatureWeight
+                       * f_NonConnectionFeatureImportance);
+        }
 			if (true == bIncludeTarget)
-			{
-				SetFeatures (_rProblem.vec_TargetPredicateIdentityFI,
-							 iOffset + i_PredicateIdentities,
-							 pFeatures,
-							 f_PredicateIdentityPairFeatureWeight
-							 	 * fDistanceFactorToTarget
-							 	 * f_NonConnectionFeatureImportance);
-			}
+        {
+          SetFeatures (_rProblem.vec_TargetPredicateIdentityFI,
+                       iOffset + i_PredicateIdentities,
+                       pFeatures,
+                       f_PredicateIdentityPairFeatureWeight
+                       * fDistanceFactorToTarget
+                       * f_NonConnectionFeatureImportance);
+        }
 
 			// parameter values...	
 			for (int v = 0; v < iCandidatePredicateParameters; ++ v)
@@ -1509,8 +1567,30 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 								 pFeatures,
 								 fDistanceFactorToTarget * f_NonConnectionFeatureImportance);
 				}
-			}
 
+        // suffix objects... TODO verify
+        iOffset = i_OffsetToSuffixObjectFeatures
+          + pCandidatePredicate->i_SuffixObjectFeatureIndex
+          * 2 * i_SuffixObjects;
+        if(true == b_IncludeInit)
+          {
+            SetFeatures (_rProblem.vec_InitSuffixObjectFI,
+                         iOffset,
+                         pFeatures,
+                         f_PredicateSuffixPairFeatureWeight //TODO add weight for these features
+                         * f_NonConnectionFeatureImportance);
+          }
+        if (true == bIncludeTarget)
+          {
+            SetFeatures (_rProblem.vec_TargetSuffixObjectFI,
+                         iOffset + i_SuffixObjects,
+                         pFeatures,
+                         f_PredicateSuffixPairFeatureWeight
+                         * fDistanceFactorToTarget
+                         * f_NonConnectionFeatureImportance);
+          }
+
+			}
 
 			// features to other subgoals ...	
 			for (size_t i = _iIndex + 1; i < iEndSubgoal; ++ i)
@@ -1529,11 +1609,20 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 
 				// predicate identity...
 				iOffset = i_OffsetToPredicateIdentityFeatures
-						  + pCandidatePredicate->i_PredicateIdentityFeatureIndex
-						  * 2 * i_PredicateIdentities + i_PredicateIdentities;
+          + pCandidatePredicate->i_PredicateIdentityFeatureIndex
+          * 2 * i_PredicateIdentities + i_PredicateIdentities;
 				pFeatures->Set (iOffset + pSubgoalPredicate->i_PredicateIdentityFeatureIndex,
-								f_PredicateIdentityPairFeatureWeight * fDistanceFactor,
-								false);
+                        f_PredicateIdentityPairFeatureWeight * fDistanceFactor,
+                        false);
+
+        // predicate suffix...
+				iOffset = i_OffsetToSuffixObjectFeatures
+          + pCandidatePredicate->i_SuffixObjectFeatureIndex
+          * 2 * i_SuffixObjectFeatureIndex + i_SuffixObjects;
+				pFeatures->Set (iOffset + pSubgoalPredicate->i_SuffixObjectFeatureIndex,
+                        f_PredicateSuffixPairFeatureWeight * fDistanceFactor,
+                        false);
+
 
 				// parameter values...	
 				for (int v = 0; v < iCandidatePredicateParameters; ++ v)
