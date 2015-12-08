@@ -25,7 +25,7 @@ def start_ir(
     # Keep on listening
     while True:
         # accept new message
-        print "IR: waiting for new questions"
+        # # print "IR: waiting for new questions"
 
         # receive questions from new connection
         message = recv_size(newsock, recv_length)
@@ -33,7 +33,7 @@ def start_ir(
             exit(0)
         type, question = message.split(" ", 1)
         answers = ir.question(type, question)
-        print "IR: question is ({}, {})".format(type, question)
+        # # print "IR: question is ({}, {})".format(type, question)
         print "IR found {} answer/s".format(len(answers))
         # This is sent via RPC
         formatted_answers = "\n---\n".join(
@@ -42,7 +42,7 @@ def start_ir(
 
         formatted_answers = "1"
         length = struct.pack('i', len(formatted_answers))
-        print "IR: Answering with a message of length", length
+        # # print "IR: Answering with a message of length", length
 
         # This is written to the file
         # TODO: if this works, then we can have a long opened file
@@ -51,7 +51,7 @@ def start_ir(
             with open(write_file, 'a') as f:
                 f.write(s_features)
                 f.close()
-                print "IR: Successfully written answers to file"
+                # # print "IR: Successfully written answers to file"
 
         try:
             newsock.sendall(length + formatted_answers)
@@ -112,7 +112,11 @@ text_connection = sys.path[0]
 text_connection += '/../../'
 text_connection += config.get_string("text_connection_file")
 
-ir = BagOfWords(sentences, ids, k=config.get_int("ir:num_answers"), shuffle=config.get_int("ir:random"))
+ir = BagOfWords(
+    sentences,
+    ids,
+    k=config.get_int("ir:num_answers"),
+    shuffle=config.get_int("ir:random"))
 
 print "IR: Starting IR..", config.get_string("text_connection_file")
 start_ir(

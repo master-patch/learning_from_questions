@@ -16,4 +16,11 @@ if __name__ == '__main__':
     bags = BagOfWords(sentences, ids)
 
     # Random tests
-    print bags.question("object", "bed")[0]
+    print len(bags.vocab.items())
+    notmatching = 0
+    for key, val in bags.vocab.iteritems():
+        matches = [ans[0] for ans in bags.question("object", key)]
+        if len(matches) == 0:
+            print "no matches", key
+            notmatching = notmatching + 1
+    print notmatching
