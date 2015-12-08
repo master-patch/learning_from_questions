@@ -9,6 +9,25 @@ random.seed(1)
 stemmer = PorterStemmer()
 
 
+def clean_word(word):
+    word = unicode(word, 'utf-8')
+    word = stemmer.stem(word)
+
+    if word == 'collect' or word == 'obtain':
+        word = 'harvest'
+
+    if word in {'make', 'craft', 'made', 'build', 'built'}:
+        word = 'craft-make'
+
+    if word in {'wooden'}:
+        word = 'wood'
+
+    if word in {'fornace'}:
+        word = 'furnace'
+
+    return word
+
+
 # Build the inverted index {word: [sent_id1, sentid_2]}
 # wordpair = ("make-wood", ['make wood'])
 def build_inverted_index(vocab_annotated, sentences, k=0, shuffle=False):
@@ -16,8 +35,7 @@ def build_inverted_index(vocab_annotated, sentences, k=0, shuffle=False):
     for pddl, alternatives in vocab_annotated.iteritems():
         for alternative in alternatives:
             for word in alternative.split(' '):
-                word = unicode(word, 'utf-8')
-                word = stemmer.stem(word)
+                word = clean_word(word)
                 vocab.add(word)
 
     index = defaultdict(set)
@@ -29,8 +47,7 @@ def build_inverted_index(vocab_annotated, sentences, k=0, shuffle=False):
     for sent_id in sent_ids:
         sentence = sentences[sent_id]
         for word in sentence:
-            word = unicode(word, 'utf-8')
-            word = stemmer.stem(word)
+            word = clean_word(word)
             if word in vocab:
                 if k == 0 or len(index[word]) < k:
                     index[word].add(sent_id)
@@ -44,7 +61,7 @@ def search_inverted_index(vocab_annotated, index, pddl):
     sentences = set()
     for alternative in alternatives:
         intersection = set.intersection(
-            *[index[stemmer.stem(w)] for w in alternative.split(' ')]
+            *[index[clean_word(w)] for w in alternative.split(' ')]
         )
 
         for sent_id in intersection:
