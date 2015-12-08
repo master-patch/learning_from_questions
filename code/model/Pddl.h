@@ -53,6 +53,7 @@ class PddlPredicate
 		String				s_Name;
 		String				s_BoundIdentityHash;
 		long             	l_Value;
+    String        s_Suffix;
 
 		// index of predicate in subgoal candidate list	
 		int					i_PredicateCandidateIndex;
@@ -60,6 +61,7 @@ class PddlPredicate
 		int					i_PredicateIdentityFeatureIndex;
 		int					i_PredicateNameFeatureIndex;
 		int					i_PredicateCandidateWithoutNumber;
+    int         i_SuffixObjectFeatureIndex;
 
 		bool				b_IsFunction;
 
