@@ -110,7 +110,7 @@ if (not host):
 
 text_connection = sys.path[0]
 text_connection += '/../../'
-text_connection += config.get_string("text_connection_file")
+text_connection += config.get_string("ir:text_connection_file")
 
 ir = BagOfWords(
     sentences,
@@ -118,7 +118,7 @@ ir = BagOfWords(
     k=config.get_int("ir:num_answers"),
     shuffle=config.get_int("ir:random"))
 
-print "IR: Starting IR..", config.get_string("text_connection_file")
+print "IR: Starting IR..", config.get_string("ir:text_connection_file")
 start_ir(
     config.get_string("ir_host"),
     config.get_int("ir_service"),

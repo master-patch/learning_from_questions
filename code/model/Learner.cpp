@@ -797,7 +797,9 @@ int SubgoalSequenceState::nextSubgoal(){
 void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 {
 
-  o_SubgoalPolicy.clearAnswers();
+	if ((config)"ir_host" != -1) {
+		o_SubgoalPolicy.clearAnswers();
+	}
 
 	vec_TargetGoalCompletions.Memset (0);
 	i_TotalPlanJobs = 0;
