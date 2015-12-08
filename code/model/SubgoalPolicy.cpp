@@ -81,7 +81,7 @@ void SubgoalSequence::SetSubtaskFFResponse (unsigned int _iIndex,
       assert (true == dq_Subgoals [_iIndex].b_IsLastSubgoalToTarget);
       // This is the last subgoal, so no need to 	
       // the init state of next subgoal.			
-      return;
+            return;
     }
 
   Subgoal* rNextSubgoal = &dq_Subgoals[iSubgoalIndex];
@@ -92,7 +92,7 @@ void SubgoalSequence::SetSubtaskFFResponse (unsigned int _iIndex,
   }
 
   if (rNextSubgoal->b_isQuestion
-      || iSubgoalIndex == dq_Subgoals.size())
+      || iSubgoalIndex == dq_Subgoals.size() + 1)
     return;
 
   assert (false == rNextSubgoal->b_isQuestion);
