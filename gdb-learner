@@ -1,4 +1,5 @@
 set p pretty on
+br SubgoalPolicy::ComputeSubgoalFeatures
 br SubgoalLearner::TryLinkingSubgoals
 br SubgoalPolicy::SampleSubgoalTestSequence
 r cfg/question_model.cfg run=t1

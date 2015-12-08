@@ -794,7 +794,9 @@ void SubgoalPolicy::AssignIndicesToTargetProblemPredicates (void)
 			if (-1 == pPredicate->i_PredicateCandidateIndex)
 				setMissingInitPredicates.insert (pPredicate->GetPddlString ());
 
-			// assign feature indices to predicate	
+      assert(pPredicate->s_Suffix.size() != 0);
+
+      // assign feature indices to predicate	
 			pPredicate->i_PredicateIdentityFeatureIndex
 				= GetPredicateIdentityFeatureIndex (pPredicate->GetPddlString ());
 			pPredicate->i_PredicateNameFeatureIndex
@@ -836,6 +838,7 @@ void SubgoalPolicy::AssignIndicesToTargetProblemPredicates (void)
 		ITERATE (int_set_t, setParameterValueFI, ite)
 			pProblem->vec_InitParameterValueFI [x++] = *ite;
 
+    pProblem->vec_InitSuffixObjectFI.Create (setSuffixObjectFI.size ());
     x = 0;
 		ITERATE (int_set_t, setSuffixObjectFI, ite)
 			pProblem->vec_InitSuffixObjectFI [x++] = *ite;
@@ -898,9 +901,10 @@ void SubgoalPolicy::AssignIndicesToTargetProblemPredicates (void)
 		ITERATE (int_set_t, setParameterValueFI, ite)
 			pProblem->vec_TargetParameterValueFI [x++] = *ite;
 
+    pProblem->vec_TargetSuffixObjectFI.Create (setSuffixObjectFI.size ());
     x = 0;
 		ITERATE (int_set_t, setSuffixObjectFI, ite)
-			pProblem->vec_TragetSuffixObjectFI [x++] = *ite;
+			pProblem->vec_TargetSuffixObjectFI [x++] = *ite;
 
 	}
 
@@ -988,6 +992,9 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 		sPredicate.Split (dqPred, ' ');
 
     String suffix = dqPred[dqPred.size() - 1];
+
+    assert (suffix.size() != 0);
+
 
     PddlPredicate* pPred;
 
@@ -1618,7 +1625,8 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
         // predicate suffix...
 				iOffset = i_OffsetToSuffixObjectFeatures
           + pCandidatePredicate->i_SuffixObjectFeatureIndex
-          * 2 * i_SuffixObjectFeatureIndex + i_SuffixObjects;
+          * 2 * pSubgoalPredicate->i_SuffixObjectFeatureIndex
+          + i_SuffixObjects;
 				pFeatures->Set (iOffset + pSubgoalPredicate->i_SuffixObjectFeatureIndex,
                         f_PredicateSuffixPairFeatureWeight * fDistanceFactor,
                         false);
