@@ -583,7 +583,7 @@ bool SubgoalPolicy::Init (void)
 		LoadGoldLengthFile();
 
 	// RUN TESTS
-	if (IR_host != -1) {
+	if ((config)"ir_host" != -1) {
 		if (false == o_IR.Connect ())
 			return false;
 
@@ -1871,8 +1871,10 @@ void SubgoalPolicy::SampleSubgoalTestSequence(const Problem& _rProblem,
       		String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
 
           if(false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
+            //TODO cout error, throw error type behavior
           }
-          //LoadConnections(); TODO: See board for hard task
+          LoadAnswers();// TODO: See board for hard task
+          SampleConnections(false);
       }
 
       _pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
@@ -2794,20 +2796,42 @@ void SubgoalPolicy::TestQA ()
 		cout << "QA3: FAIL in asking a second question" << endl;
 	}
 
-	// Test 4
+	// Test 4.1
 	clearAnswers();
-	fstream in((config)"text_connection_file");
+	fstream in((config)"ir:text_connection_file");
 	if(in.is_open())
 	{
 		in.seekp(0, ios::end);
 		size_t size = in.tellg();
 		if( size == 0)
 		{
-			cout << "QA4: SUCCESS clearing the answer file\n";
+			cout << "QA4.1: SUCCESS clearing the answer file\n";
 		} else {
-			cout << "QA4: FAIL in clearing the answer file\n";
+			cout << "QA4.1: FAIL in clearing the answer file\n";
 		}
 	}
+
+	// Test 4.2
+	if (AskQuestion(type, "wood")) {
+		cout << "QA4.2: SUCCESS asking the question again" << endl;
+	} else {
+		cout << "QA4.2: FAIL in asking the question again" << endl;
+	}
+
+	fstream in2((config)"ir:text_connection_file");
+	if(in2.is_open())
+	{
+		in2.seekp(0, ios::end);
+		size_t size = in2.tellg();
+		if( size == 0)
+		{
+			cout << "QA4.2: FAIL saving the answer file\n";
+		} else {
+			cout << "QA4.2: SUCCESS in saving the answer file\n";
+		}
+	}
+
+	clearAnswers();
 
 	// Test 5
 	if (AskQuestion(type, "wood")) {
@@ -2866,7 +2890,7 @@ void SubgoalPolicy::clearAnswers ()
 	// Clear QA cache
 	this->map_QuestionAnswerPairs.clear();
 	// format the file text_connection
-	std::ofstream ofs ((config)"text_connection_file", std::ofstream::out);
+	std::ofstream ofs ((config)"ir:text_connection_file", std::ofstream::out);
   	ofs << "";
   	ofs.close();
 }
