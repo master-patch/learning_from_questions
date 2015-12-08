@@ -220,6 +220,7 @@ class SubgoalPolicy
 
 		FeatureToIndex_hmp_t	hmp_ParameterValueToIndex;
 		FeatureToIndex_hmp_t	hmp_PredicateNameToIndex;
+    FeatureToIndex_hmp_t hmp_SuffixToIndex;
 		FeatureToIndex_hmp_t	hmp_PredicateWithoutNumberToIndex;
 		FeatureToIndex_hmp_t	hmp_PredicateIdToIndex;
 		String_int_map_t        map_ProblemToGoldLength;
@@ -244,7 +245,9 @@ class SubgoalPolicy
 		size_t			i_OffsetToPredicateNameFeatures;
 		size_t			i_OffsetToParameterValueFeatures;
 		size_t			i_OffsetToPredicateIdentityFeatures;
+    size_t      i_OffsetToSuffixObjectFeatures;
 		size_t			i_PredicateNames;
+    size_t      i_SuffixObjects;
 		size_t			i_ParameterValues;
 		size_t			i_PredicateIdentities;
 		int				i_MaxConnectionDepth;
@@ -275,6 +278,7 @@ class SubgoalPolicy
 		bool			b_UseReachableSubgoalFeature;
 		bool			b_UseReachabilityEquivalents;
 		float			f_PredicateIdentityPairFeatureWeight;
+    float     f_PredicateSuffixPairFeatureWeight;
 		float			f_ConnectionSuccessReward;
 		float			f_ConnectionFailurePenalty;
 
@@ -302,6 +306,7 @@ class SubgoalPolicy
 		int GetPredicateNameFeatureIndex (const String& _rName);
 		int GetPredicateWithoutNumberIndex (const PddlPredicate& _rPredicate);
 		int GetParameterValueFeatureIndex (const String& _rValue);
+    int GetSuffixObjectFeatureIndex(const String& _rSuffix);
 
 		void ComputeSubgoalFeatures (int _iIndex,
 									 const Problem& _rProblem,

@@ -32,9 +32,11 @@ class Problem
 		int_Vec_t			vec_InitPredicateIdentityFI;
 		int_Vec_t			vec_InitPredicateNameFI;
 		int_Vec_t			vec_InitParameterValueFI;
+    int_Vec_t     vec_InitSuffixObjectFI;
 		int_Vec_t			vec_TargetPredicateIdentityFI;
 		int_Vec_t			vec_TargetPredicateNameFI;
 		int_Vec_t			vec_TargetParameterValueFI;
+    int_Vec_t     vec_TargetSuffixObjectFI;
 
 		//									
 		Problem (String& _rProblem, String& _rFileName);
