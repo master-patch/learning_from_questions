@@ -84,18 +84,18 @@ void SubgoalSequence::SetSubtaskFFResponse (unsigned int _iIndex,
       return;
     }
 
-  Subgoal& rNextSubgoal = dq_Subgoals[iSubgoalIndex];
+  Subgoal* rNextSubgoal = &dq_Subgoals[iSubgoalIndex];
 
   while( iSubgoalIndex < dq_Subgoals.size()
-         && true == rNextSubgoal.b_isQuestion) {
-    rNextSubgoal = dq_Subgoals[iSubgoalIndex ++];
+         && true == rNextSubgoal->b_isQuestion) {
+    rNextSubgoal = &(dq_Subgoals[iSubgoalIndex ++]);
   }
 
-  if (rNextSubgoal.b_isQuestion
+  if (rNextSubgoal->b_isQuestion
       || iSubgoalIndex == dq_Subgoals.size())
     return;
 
-  assert (false == rNextSubgoal.b_isQuestion);
+  assert (false == rNextSubgoal->b_isQuestion);
 	#ifndef NDEBUG
 	if (iSubgoalIndex > dq_Subgoals.size ())
 	{
@@ -105,8 +105,8 @@ void SubgoalSequence::SetSubtaskFFResponse (unsigned int _iIndex,
 		assert (false);
 	}
 	#endif
-	assert ("" == rNextSubgoal.s_StartStatePredicates);
-	rNextSubgoal.s_StartStatePredicates = _rResponse.s_EndStatePredicates;
+	assert ("" == rNextSubgoal->s_StartStatePredicates);
+	rNextSubgoal->s_StartStatePredicates = _rResponse.s_EndStatePredicates;
 }
 
 
