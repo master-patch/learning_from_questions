@@ -81,21 +81,21 @@ void SubgoalSequence::SetSubtaskFFResponse (unsigned int _iIndex,
       assert (true == dq_Subgoals [_iIndex].b_IsLastSubgoalToTarget);
       // This is the last subgoal, so no need to 	
       // the init state of next subgoal.			
-      return;
+            return;
     }
 
-  Subgoal& rNextSubgoal = dq_Subgoals[iSubgoalIndex];
+  Subgoal* rNextSubgoal = &dq_Subgoals[iSubgoalIndex];
 
   while( iSubgoalIndex < dq_Subgoals.size()
-         && true == rNextSubgoal.b_isQuestion) {
-    rNextSubgoal = dq_Subgoals[iSubgoalIndex ++];
+         && true == rNextSubgoal->b_isQuestion) {
+    rNextSubgoal = &(dq_Subgoals[iSubgoalIndex ++]);
   }
 
-  if (rNextSubgoal.b_isQuestion
-      || iSubgoalIndex == dq_Subgoals.size())
+  if (rNextSubgoal->b_isQuestion
+      || iSubgoalIndex == dq_Subgoals.size() + 1)
     return;
 
-  assert (false == rNextSubgoal.b_isQuestion);
+  assert (false == rNextSubgoal->b_isQuestion);
 	#ifndef NDEBUG
 	if (iSubgoalIndex > dq_Subgoals.size ())
 	{
@@ -105,8 +105,8 @@ void SubgoalSequence::SetSubtaskFFResponse (unsigned int _iIndex,
 		assert (false);
 	}
 	#endif
-	assert ("" == rNextSubgoal.s_StartStatePredicates);
-	rNextSubgoal.s_StartStatePredicates = _rResponse.s_EndStatePredicates;
+	assert ("" == rNextSubgoal->s_StartStatePredicates);
+	rNextSubgoal->s_StartStatePredicates = _rResponse.s_EndStatePredicates;
 }
 
 
