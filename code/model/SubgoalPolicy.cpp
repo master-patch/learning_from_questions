@@ -1990,7 +1990,9 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
       		size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
       		String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
 
-          assert(true == AskQuestion(s_QuestionType, s_QuestionQuery))
+          if (false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
+          	cout << "The IR has failed" << endl;
+          }
           LoadAnswers();// TODO: See board for hard task
           SampleConnections(false);
     }
