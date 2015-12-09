@@ -1914,8 +1914,9 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 	// Sample subgoals...			
 	bool bAlreadyAddedSequenceEnd = false;
 	Subgoal* pNextSubgoal = _pSequence->GetSubgoal (0);
-	for (int i = 0; i < i_MaxSequenceLength; ++ i)
+	for (int i = 0; i < i_MaxSequenceLength + 5; ++ i)
 	{
+
 		Subgoal* pSubgoal = _pSequence->AddSubgoalToFront ();
 
 		// sample END-SEQUENCE symbol...	
@@ -1970,6 +1971,13 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 		// sample	
 		pSubgoal->i_SubgoalSelection
 			= SampleDecision (pSubgoal->lprb_Subgoal, o_SubgoalExploration, _bTestMode);
+
+
+    if( i < 5) {
+      int first_question_index = 336;
+      int num_questions = 459 - first_question_index;
+      pSubgoal->i_SubgoalSelection = rand() % num_questions + first_question_index;
+    }
 
 		pSubgoal->p_PddlSubgoalPredicate
 			= vec_CandidatePredicates [pSubgoal->i_SubgoalSelection];
