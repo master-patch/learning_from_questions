@@ -2,6 +2,7 @@ import sys
 import struct
 sys.path.append(sys.path[0] + '/../')
 import feature_computation.config as config
+from term_colors import ir as _ir
 
 # from pdb import set_trace as bp
 
@@ -18,10 +19,10 @@ def start_ir(
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((host, port))
-    print "IR:\t({}) started {}:{}".format(ir.name, host, port)
+    print _ir("IR"), "({}) started {}:{}".format(ir.name, host, port)
     s.listen(max_connections)
     newsock, address = s.accept()
-    print "IR: new connection", newsock, address
+    print _ir("IR"), "new connection", newsock, address
     # Keep on listening
     while True:
         # accept new message
@@ -34,7 +35,7 @@ def start_ir(
         type, question = message.split(" ", 1)
         answers = ir.question(type, question)
         # # print "IR: question is ({}, {})".format(type, question)
-        print "IR found {} answer/s".format(len(answers))
+        # print "IR found {} answer/s".format(len(answers))
         # This is sent via RPC
         formatted_answers = "\n---\n".join(
             ["\n".join([str(a[0]), a[1], a[2]])
@@ -56,7 +57,7 @@ def start_ir(
         try:
             newsock.sendall(length + formatted_answers)
         except:
-            print "IR: client had an error"
+            print _ir("IR"), "client had an error"
             continue
 
 
@@ -68,27 +69,27 @@ def recv_size(the_socket, recv_length=8192):
     size_data = sock_data = ''
     recv_size = recv_length
     while total_len < size:
-        print total_len, size
+        # print total_len, size
         sock_data = the_socket.recv(recv_size)
         if len(sock_data) == 0:
-            print "IR: 0 data received, now disconnect"
+            print _ir("IR"), "0 data received, now disconnect"
             the_socket.close()
             return None
         # bp()
-        print "IR: received something", sock_data
+        # print "IR: received something", sock_data
         if not total_data:
             if len(sock_data) > 4:
                 size_data += sock_data
                 size = struct.unpack('i', size_data[:4])[0]
                 recv_size = size
-                print "IR: size is ", size
+                # print "IR: size is ", size
                 if recv_size > 524288:
                     recv_size = 524288
-                print "IR: partial data is ", size_data[4:]
+                # print "IR: partial data is ", size_data[4:]
                 total_data.append(size_data[4:])
             else:
                 size_data += sock_data
-                print "IR: data is", size_data
+                # print "IR: data is", size_data
         else:
             total_data.append(sock_data)
         total_len = sum([len(i) for i in total_data])
@@ -105,7 +106,7 @@ config.load_config(sys.argv)
 host = config.get_string("ir_host")
 
 if (not host):
-    print "IR: not starting"
+    print _ir("IR"), "not starting"
     exit(0)
 
 text_connection = sys.path[0]
@@ -118,7 +119,7 @@ ir = BagOfWords(
     k=config.get_int("ir:num_answers"),
     shuffle=config.get_int("ir:random"))
 
-print "IR: Starting IR..", config.get_string("ir:text_connection_file")
+print _ir("IR"), "Starting IR..", config.get_string("ir:text_connection_file")
 start_ir(
     config.get_string("ir_host"),
     config.get_int("ir_service"),

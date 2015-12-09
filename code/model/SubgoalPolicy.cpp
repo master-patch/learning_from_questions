@@ -1990,9 +1990,7 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
       		size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
       		String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
 
-          if(false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
-            //TODO cout error, throw error type behavior
-          }
+          assert(true == AskQuestion(s_QuestionType, s_QuestionQuery))
           LoadAnswers();// TODO: See board for hard task
           SampleConnections(false);
     }
@@ -2769,7 +2767,8 @@ void SubgoalPolicy::WriteConnectionFeedback (void)
 // Question Answering	
 void SubgoalPolicy::TestQA ()
 {
-	cout << "QA: Running tests.." << endl;
+	int size;
+	cout << "\033[94mSTART\033[0m: QA Running tests.." << endl;
 
 	// Test 1
 	String type;
@@ -2777,23 +2776,23 @@ void SubgoalPolicy::TestQA ()
 	type << "action";
 	query << "wood";
 	if (AskQuestion(type, query)) {
-		cout << "QA1: SUCCESS asking a question" << endl;
+		cout << "\033[92mPASS\033[0m: QA1 asking a question" << endl;
 	} else {
-		cout << "QA1: FAIL in asking a question" << endl;
+		cout << "\033[91mFAIL\033[0m: QA1 in asking a question" << endl;
 	}
 
 	// Test 2
 	if (AskQuestion(type, query)) {
-		cout << "QA2: SUCCESS asking the question again" << endl;
+		cout << "\033[92mPASS\033[0m: QA2 asking the question again" << endl;
 	} else {
-		cout << "QA2: FAIL in asking the question again" << endl;
+		cout << "\033[91mFAIL\033[0m: QA2 in asking the question again" << endl;
 	}
 
 	// Test 3
 	if (AskQuestion(type, "ironbar")) {
-		cout << "QA3: SUCCESS asking a second question" << endl;
+		cout << "\033[92mPASS\033[0m: QA3 asking a second question" << endl;
 	} else {
-		cout << "QA3: FAIL in asking a second question" << endl;
+		cout << "\033[91mFAIL\033[0m: QA3 in asking a second question" << endl;
 	}
 
 	// Test 4.1
@@ -2805,17 +2804,17 @@ void SubgoalPolicy::TestQA ()
 		size_t size = in.tellg();
 		if( size == 0)
 		{
-			cout << "QA4.1: SUCCESS clearing the answer file\n";
+			cout << "\033[92mPASS\033[0m: QA4.1 clearing the answer file\n";
 		} else {
-			cout << "QA4.1: FAIL in clearing the answer file\n";
+			cout << "\033[91mFAIL\033[0m: QA4.1 in clearing the answer file\n";
 		}
 	}
 
 	// Test 4.2
 	if (AskQuestion(type, "wood")) {
-		cout << "QA4.2: SUCCESS asking the question again" << endl;
+		cout << "\033[92mPASS\033[0m: QA4.2 asking the question again" << endl;
 	} else {
-		cout << "QA4.2: FAIL in asking the question again" << endl;
+		cout << "\033[91mFAIL\033[0m: QA4.2 in asking the question again" << endl;
 	}
 
 	fstream in2((config)"ir:text_connection_file");
@@ -2825,9 +2824,9 @@ void SubgoalPolicy::TestQA ()
 		size_t size = in2.tellg();
 		if( size == 0)
 		{
-			cout << "QA4.2: FAIL saving the answer file\n";
+			cout << "\033[91mFAIL\033[0m: QA4.2 saving the answer file\n";
 		} else {
-			cout << "QA4.2: SUCCESS in saving the answer file\n";
+			cout << "\033[92mPASS\033[0m: QA4.2 in saving the answer file\n";
 		}
 	}
 
@@ -2835,15 +2834,15 @@ void SubgoalPolicy::TestQA ()
 
 	// Test 5
 	if (AskQuestion(type, "wood")) {
-		cout << "QA5: SUCCESS asking a question after cleaning the file" << endl;
+		cout << "\033[92mPASS\033[0m: QA5 asking a question after cleaning the file" << endl;
 	} else {
-		cout << "QA5: FAIL in asking a question after cleaning the file" << endl;
+		cout << "\033[91mFAIL\033[0m: QA5 in asking a question after cleaning the file" << endl;
 	}
 
 	// Test 6
-	cout << "QA6: starting the second LoadAnswers" << endl;
+	cout << "\033[94mINFO\033[0m: QA6 starting the second LoadAnswers" << endl;
 	LoadAnswers();
-	cout << "QA6: SUCCESS starting the second LoadAnswers with different file" << endl;
+	cout << "\033[92mPASS\033[0m: QA6 starting the second LoadAnswers with different file" << endl;
 
 	clearAnswers();
 
@@ -2852,7 +2851,7 @@ void SubgoalPolicy::TestQA ()
 	bool q1 = AskQuestion(type, "wood");
 
 	if (q1 == false) {
-		cout << "QA7: FAIL in loading the second answers" << endl;
+		cout << "\033[91mFAIL\033[0m: QA7 in loading the second answers" << endl;
 	}
 
 	LoadAnswers();
@@ -2862,7 +2861,7 @@ void SubgoalPolicy::TestQA ()
 	bool q2 = AskQuestion(type, "wood");
 
 	if (q2 == false) {
-		cout << "QA7: FAIL in loading the second answers" << endl;
+		cout << "\033[91mFAIL\033[0m: QA7 in loading the second answers" << endl;
 	}
 
 	LoadAnswers();
@@ -2873,15 +2872,87 @@ void SubgoalPolicy::TestQA ()
 		  cached_SentenceConnections == vec_SentenceConnections &&
 		  &cached_SentenceConnections != &vec_SentenceConnections
 		  ) {
-		cout << "QA7: SUCCESS loadAnswers is idempotent" << endl;
+		cout << "\033[92mPASS\033[0m: QA7 loadAnswers is idempotent" << endl;
 	} else {
-		cout << "QA7: FAIL loadAnswers is not idempotent" << endl;
+		cout << "\033[91mFAIL\033[0m: QA7 loadAnswers is not idempotent" << endl;
 	}
 
 
+	// Test 8 - check sentence connection is empty
+
+	// This should clean the file
+	clearAnswers();
+	// This should reload an empty file - hence no features
+	LoadAnswers();
+
+	size = vec_SentenceConnections.size();
+	if (size == 0) {
+		cout << "\033[92mPASS\033[0m: QA8 SentenceConnection is empty" << endl;
+	} else {
+		cout << "\033[91mFAIL\033[0m: QA8 SentenceConnection has already " << size << " connections" << endl;
+	}
+
+
+	// Test 9 - check sentence connection is 720
+
+	AskQuestion(type, "wood");
+	LoadAnswers();
+
+	size = vec_SentenceConnections.size();
+	if (size == 720) {
+		cout << "\033[92mPASS\033[0m: QA9 SentenceConnection is 720" << endl;
+	} else {
+		cout << "\033[91mFAIL\033[0m: QA9 SentenceConnection has " << size << " connections" << endl;
+	}
+
+	// Test 10 - check sentence connection is still 720
+	AskQuestion(type, "wood");
+	LoadAnswers();
+
+	size = vec_SentenceConnections.size();
+	if (size == 720) {
+		cout << "\033[92mPASS\033[0m: QA10 SentenceConnection still is 720 after same question" << endl;
+	} else {
+		cout << "\033[91mFAIL\033[0m: QA10 SentenceConnection has not the same size, but " << size << " connections" << endl;
+	}
+
+	// Test 11
+
+	cout << "\033[94mINFO\033[0m: QA8 1st time - Sampling connections.." << endl;
+	SampleConnections(false);
+
+	// Test 12 - check sentence is bigger than 720
+	AskQuestion(type, "milk");
+	LoadAnswers();
+
+	size = vec_SentenceConnections.size();
+	if (size > 720) {
+		cout << "\033[92mPASS\033[0m: QA12 SentenceConnection is bigger than 720" << endl;
+	} else {
+		cout << "\033[91mFAIL\033[0m: QA12 SentenceConnection missing connections, " << size << " connections" << endl;
+	}
+
+	// Test 13
+
+	cout << "\033[94mINFO\033[0m: QA8 2nd time - Sampling connections.." << endl;
+	SampleConnections(false);
+
+	cout << "\033[94mINFO\033[0m: QA8 Clearing" << endl;
 	clearAnswers();
 
-	cout << "QA: Done questioning" << endl;
+	// Test 14
+
+	cout << "\033[94mINFO\033[0m: QA8 3rd time - Asking  question.." << endl;
+	AskQuestion(type, "wood");
+	cout << "\033[94mINFO\033[0m: QA8 3rd time - Loading answers.." << endl;
+	LoadAnswers();
+	cout << "\033[94mINFO\033[0m: QA8 3rd time - Sampling connections.." << endl;
+	SampleConnections(false);
+
+	clearAnswers();
+
+	cout << "\033[94mDONE\033[0m: QA Done questioning" << endl;
+
 }
 
 
