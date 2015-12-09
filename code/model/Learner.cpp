@@ -799,6 +799,7 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 
 	if ((config)"ir_host" != -1) {
 		o_SubgoalPolicy.clearAnswers();
+		o_SubgoalPolicy.LoadAnswers();
 	}
 
 	vec_TargetGoalCompletions.Memset (0);
