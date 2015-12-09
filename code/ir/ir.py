@@ -1,8 +1,9 @@
 from nltk.stem.porter import PorterStemmer
 from collections import defaultdict
-from vocab import P, O, A
+from vocab import O, A
 import random
 import sys
+from term_colors import q, ir, c
 
 # Random is not really random anymore
 random.seed(1)
@@ -52,7 +53,6 @@ def build_inverted_index(vocab_annotated, sentences, k=0, shuffle=False):
                 if k == 0 or len(index[word]) < k:
                     index[word].add(sent_id)
 
-    print index
     return index
 
 
@@ -118,6 +118,7 @@ class BagOfWords(AbstractIR):
         vocab_all = O.copy()
         vocab_all.update(A)
         self.vocab = vocab_all
+        self.counter = 0
 
         self.index = build_inverted_index(
             self.vocab,
@@ -150,16 +151,18 @@ class BagOfWords(AbstractIR):
 
     def question(self, type, question):
         parsed = self.parse_question(question)
-
+        self.counter = self.counter + 1
+        msg = ""
         if type == "action":
             a = parsed
-            # print "IR: 'Tell me more about how to {}'".format(
-            #     a.replace('-', ' '))
+            msg_q = q("{}".format(a.replace('-', ' '))) + "': "
+            msg = ir("IR") + c(self.counter) + " 'Tell me more about how to " + msg_q
 
             indexes = self.search_index(a)
         elif type == "object":
             o = parsed
-            # print "IR: 'Tell me more about the object {}'".format(o)
+            msg_q = q("{}".format(o.replace('-', ' '))) + "': "
+            msg = ir("IR") + c(self.counter) + " 'Tell me more about the object " + msg_q
             indexes = self.search_index(o)
         elif type == "subgoal":
             p, o = parsed
@@ -178,7 +181,9 @@ class BagOfWords(AbstractIR):
         else:
             indexes = []
 
-        return [self.sentence_to_features(i) for i in indexes]
+        answers = [self.sentence_to_features(i) for i in indexes]
+        print msg, "{} response/s".format(len(answers))
+        return answers
 
     # convert a sentence to its features
     # it returns ((int)sent_id, (string)sentence, (string)features)
