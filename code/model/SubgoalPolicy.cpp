@@ -2823,8 +2823,6 @@ void SubgoalPolicy::TestQA ()
 
 void SubgoalPolicy::clearAnswers ()
 {
-	// Clear QA cache
-	this->map_QuestionAnswerPairs.clear();
 	// format the file text_connection
 	std::ofstream ofs ((config)"text_connection_file", std::ofstream::out);
   	ofs << "";
