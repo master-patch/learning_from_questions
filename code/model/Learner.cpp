@@ -837,6 +837,27 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 			pSequence->s_ProblemPddlPreamble = pProblem->s_PddlPreamble;
 
 			pSequence->p_TargetProblem = pProblem;
+
+			// Forcing 5 questions at the beginning
+			for (int _i = 0; _i < 5; _i++) {
+				int first_question_index = 336;
+				int num_questions = 459 - first_question_index;
+				int predicate = rand() % num_questions + first_question_index;
+				String_dq_t dq_QuestionArgs;
+				String s_PredicateString = o_SubgoalPolicy .vec_CandidatePredicates [predicate]->GetPddlString () ;
+				size_t i_Start = s_PredicateString.rfind("(") + 1;
+				size_t i_End = s_PredicateString.find(")");
+				String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
+				s_QuestionString.Split(dq_QuestionArgs, ' ');
+				//Parse Question type and query from question
+				String s_QuestionType = dq_QuestionArgs[1];
+				size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
+				String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
+				o_SubgoalPolicy.AskQuestion(s_QuestionType, s_QuestionQuery);
+			}
+			o_SubgoalPolicy.LoadAnswers();
+			o_SubgoalPolicy.SampleConnections(false);
+
 			if (true == pProblem->b_SubgoalsNotNeeded)
 				o_SubgoalPolicy.SampleZeroSubgoalSequence (*pProblem, pSequence);
 
