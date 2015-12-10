@@ -183,7 +183,7 @@ class BagOfWords(AbstractIR):
             indexes = []
 
         answers = [self.sentence_to_features(i) for i in indexes]
-        if self.key == -1:
+        if self.k == -1:
             answers = []
         print msg, "{} response/s".format(len(answers))
         return answers
