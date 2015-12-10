@@ -843,7 +843,17 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 				int first_question_index = 336;
 				int num_questions = 459 - first_question_index;
 				int predicate = rand() % num_questions + first_question_index;
-				o_SubgoalPolicy.AskQuestion("object", o_SubgoalPolicy .vec_CandidatePredicates [predicate]->GetPddlString ());
+				String_dq_t dq_QuestionArgs;
+				String s_PredicateString = o_SubgoalPolicy .vec_CandidatePredicates [predicate]->GetPddlString () ;
+				size_t i_Start = s_PredicateString.rfind("(") + 1;
+				size_t i_End = s_PredicateString.find(")");
+				String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
+				s_QuestionString.Split(dq_QuestionArgs, ' ');
+				//Parse Question type and query from question
+				String s_QuestionType = dq_QuestionArgs[1];
+				size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
+				String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
+				o_SubgoalPolicy.AskQuestion(s_QuestionType, s_QuestionQuery);
 			}
 			o_SubgoalPolicy.LoadAnswers();
 			o_SubgoalPolicy.SampleConnections(false);
