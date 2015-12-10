@@ -119,6 +119,7 @@ class BagOfWords(AbstractIR):
         vocab_all.update(A)
         self.vocab = vocab_all
         self.counter = 0
+        self.k = k
 
         self.index = build_inverted_index(
             self.vocab,
@@ -182,6 +183,8 @@ class BagOfWords(AbstractIR):
             indexes = []
 
         answers = [self.sentence_to_features(i) for i in indexes]
+        if self.k == -1:
+            answers = []
         print msg, "{} response/s".format(len(answers))
         return answers
 
