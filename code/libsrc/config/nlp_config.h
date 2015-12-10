@@ -34,6 +34,7 @@ class Config
 };
 
 
+// QP TODO: possible idea is to edit this function to get different type of configs
 class config : public String
 {
 	public:

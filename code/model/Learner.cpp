@@ -91,8 +91,13 @@ bool SubgoalLearner::Init (void)
 	assert (Problem::GetProblemCount () > 0);
 	vec_TargetGoalCompletions.Create (Problem::GetProblemCount ());
 
-	if (false == o_SubgoalPolicy.Init ())
+	// QP
+	if ((config)"qp" != -1 && false == o_QuestionPolicy.Init (true))
 		return false;
+
+	if (false == o_SubgoalPolicy.Init (false))
+		return false;
+
 	o_FFInterface.SetCallback (this);
 	if (false == o_FFInterface.Connect ())
 		return false;
@@ -800,6 +805,10 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 	if ((config)"ir_host" != -1) {
 		o_SubgoalPolicy.clearAnswers();
 		o_SubgoalPolicy.LoadAnswers();
+
+		// QP
+		o_QuestionPolicy.clearAnswers();
+		o_QuestionPolicy.LoadAnswers();
 	}
 
 	vec_TargetGoalCompletions.Memset (0);
@@ -821,6 +830,12 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 	o_SubgoalPolicy.SampleExplorationParameters ();
 	o_SubgoalPolicy.SampleConnections (_bTestMode);
 
+	// QP: same as above
+	if ((config)"qp" != -1) {
+		o_QuestionPolicy.SampleExplorationParameters ();
+		o_QuestionPolicy.SampleConnections (_bTestMode);
+	}
+
 	// generate subgoal sequences ...	
 	int iSequencesPerIteration = (_iIteration <= 1)?
 									i_SequencesOnFirstIteration :
@@ -830,6 +845,10 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 	{
     for (int d = 0; d < Problem::GetProblemCount (); ++ d)
 		{
+			// QP 
+			if ((config)"qp" != -1) {
+				o_QuestionPolicy.SampleConnectionUseFlags ();
+			}
 			o_SubgoalPolicy.SampleConnectionUseFlags ();
 
 			Problem* pProblem = Problem::GetProblem (d);
@@ -837,13 +856,29 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 			pSequence->s_ProblemPddlPreamble = pProblem->s_PddlPreamble;
 
 			pSequence->p_TargetProblem = pProblem;
-			if (true == pProblem->b_SubgoalsNotNeeded)
-				o_SubgoalPolicy.SampleZeroSubgoalSequence (*pProblem, pSequence);
+			if (true == pProblem->b_SubgoalsNotNeeded) {
 
-			else
+				// QP
+				if ((config)"qp" != -1) {
+					// QP this time sample questions not subgoals
+					o_QuestionPolicy.SampleZeroQuestionSequence (*pProblem, pSequence);
+				}
+				o_SubgoalPolicy.SampleZeroSubgoalSequence (*pProblem, pSequence);
+			}
+
+			else {
+				if ((config)"qp" != -1) {
+					// QP this time sample questions not subgoals
+					o_SubgoalPolicy.SampleQuestionSequence (*pProblem,
+													   _bTestMode,
+													   pSequence);
+				}
+
+				// QP TODO: here we may want to share C
 				o_SubgoalPolicy.SampleSubgoalSequence (*pProblem,
 													   _bTestMode,
 													   pSequence);
+			}
 
 
 			int iIndex = 1000 * i + d; 
@@ -951,6 +986,10 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 	int iAlternateCount = 0;
 	int_set_t setSolvedSubgoals;
 
+	// QP
+	if ((config)"qp" != -1) {
+		o_QuestionPolicy.InitUpdate ();
+	}
 	o_SubgoalPolicy.InitUpdate ();
 	ITERATE (IndexToSubgoalSequenceState_hmp_t, hmp_IndexToSequenceState, ite)
 	{
@@ -979,6 +1018,13 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 			if ((true == b_LearnOnSubgoalFreeProblems) ||
 				(false == pTargetProblem->b_SubgoalsNotNeeded))
 			{
+				// QP
+				if ((config)"qp" != -1) {
+					o_QuestionPolicy.UpdateParameters (*rState.p_Sequence,
+													  dReward,
+													  rState.b_TaskComplete,
+													  true);
+				}
 				o_SubgoalPolicy.UpdateParameters (*rState.p_Sequence,
 												  dReward,
 												  rState.b_TaskComplete,
@@ -995,6 +1041,12 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 					if ((NULL != pBestObserved) && (_iIteration != iBestIteration))
 					{
 						double dBestReward = pTargetProblem->GetCurrentSolutionReward ();
+						if ((config)"qp" != -1) {
+							o_SubgoalPolicy.UpdateParameters (*pBestObserved,
+															  dBestReward,
+															  rState.b_TaskComplete,
+															  true);
+						}
 						o_SubgoalPolicy.UpdateParameters (*pBestObserved,
 														  dBestReward,
 														  rState.b_TaskComplete,
@@ -1017,6 +1069,14 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 						// cout << "      " << pAlternate->ToLogString () << endl;
 						lTotalAltenateLength += pAlternate->dq_Subgoals.size ();
 						++ iAlternateCount;
+
+						// QP
+						if ((config)"qp" != -1) {
+							o_QuestionPolicy.UpdateParameters (*pAlternate,
+															  dReward,
+															  rState.b_TaskComplete,
+															  true);
+						}
 						o_SubgoalPolicy.UpdateParameters (*pAlternate,
 														  dReward,
 														  rState.b_TaskComplete,
@@ -1054,9 +1114,19 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 		}
 		rState.dq_PlanSubgoalSequences.clear ();
 	}
+
+	// QP
+	if ((config)"qp" != -1) {
+		o_QuestionPolicy.CompleteUpdate ();
+	}
 	o_SubgoalPolicy.CompleteUpdate ();
 
 	// add solved subgoals to policy for feature computation...	
+
+	// QP
+	if ((config)"qp" != -1) {
+		o_QuestionPolicy.AddReachableSubgoals (setSolvedSubgoals);
+	}
 	o_SubgoalPolicy.AddReachableSubgoals (setSolvedSubgoals);
 
 

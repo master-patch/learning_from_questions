@@ -203,6 +203,8 @@ class SubgoalPolicy
 	friend class SubgoalLearner;
 
 	private:
+		// QP: Make sure we know we are a question policy
+		bool b_isQuestionPolicy;
 		LogLinearModel	o_SequenceEndModel;
 		LogLinearModel	o_SubgoalSelectionModel;
 		LogLinearModel	o_TextConnectionModel;
@@ -360,7 +362,8 @@ class SubgoalPolicy
 		SubgoalPolicy (void);
 		~SubgoalPolicy (void);
 
-		bool Init (void);
+		// QP: add correct signature with question
+		bool Init (bool question);
 
 		void SampleExplorationParameters (void);
 		void ForceConnectionUseFlags (void);
@@ -374,6 +377,14 @@ class SubgoalPolicy
                                    SubgoalSequence* _pSequence);
 		void SampleZeroSubgoalSequence (const Problem& _rProblem,
 										SubgoalSequence* _pSequence);
+
+		// QP
+		void SampleQuestionSequence (const Problem& _rProblem,
+									bool _bTestMode,
+									SubgoalSequence* _pSequence);
+		void SampleZeroQuestionSequence (const Problem& _rProblem,
+										SubgoalSequence* _pSequence);
+
 
 		void InitUpdate (void);
 		void UpdateParameters (SubgoalSequence& _rSequence,

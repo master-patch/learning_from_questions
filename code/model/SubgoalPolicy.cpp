@@ -339,12 +339,16 @@ const char* ExplorationParameters::ToString (ExplorationType_e _eType)
 
 
 //													
-bool SubgoalPolicy::Init (void)
+// QP: make sure it knows it is a QuestionPolicy
+bool SubgoalPolicy::Init (bool question)
 {
 
 	// Setting up IR connection
 	// TODO: check if callback should be set to this
 	// o_IR.SetCallback (this);
+
+	// QP
+	b_isQuestionPolicy = question;
 
 	String IR_host = (config)"ir_host";
 
@@ -1729,6 +1733,12 @@ size_t SubgoalPolicy::SampleSequenceEnd (int _iSubgoalIndex,
 	return SampleDecision (_rLogProb, o_SequenceEndExploration, _bTestMode);
 }
 
+// QP
+void SubgoalPolicy::SampleZeroQuestionSequence (const Problem& _rProblem,
+											   SubgoalSequence* _pSequence)
+{
+	SampleZeroSubgoalSequence (_rProblem, _pSequence);
+}
 
 //													
 void SubgoalPolicy::SampleZeroSubgoalSequence (const Problem& _rProblem,
@@ -1891,6 +1901,14 @@ bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
   o_IR.ReceiveMessage(sResponse, 255);
   return true;
 }
+
+// QP
+void SubgoalPolicy::SampleQuestionSequence (const Problem& _rProblem,
+										   bool _bTestMode,
+										   SubgoalSequence* _pSequence) {
+	return SampleSubgoalSequence (_rProblem, _bTestMode, _pSequence);
+}
+
 void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 										   bool _bTestMode,
 										   SubgoalSequence* _pSequence)
