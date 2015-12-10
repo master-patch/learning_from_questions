@@ -47,6 +47,8 @@ ostream& operator<< (ostream& _rStream, const SubgoalSequence& _rSequence);
 class SubgoalLearner : public FFCallback
 {
 	private:
+		// QP
+		SubgoalPolicy	o_QuestionPolicy;
 		SubgoalPolicy	o_SubgoalPolicy;
 		FFInterface		o_FFInterface;
 		double			d_PlanFailureReward;
