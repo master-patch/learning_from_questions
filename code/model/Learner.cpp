@@ -837,6 +837,17 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 			pSequence->s_ProblemPddlPreamble = pProblem->s_PddlPreamble;
 
 			pSequence->p_TargetProblem = pProblem;
+
+			// Forcing 5 questions at the beginning
+			for (int _i = 0; _i < 5; _i++) {
+				int first_question_index = 336;
+				int num_questions = 459 - first_question_index;
+				int predicate = rand() % num_questions + first_question_index;
+				o_SubgoalPolicy.AskQuestion("object", o_SubgoalPolicy .vec_CandidatePredicates [predicate]->GetPddlString ());
+			}
+			o_SubgoalPolicy.LoadAnswers();
+			o_SubgoalPolicy.SampleConnections(false);
+
 			if (true == pProblem->b_SubgoalsNotNeeded)
 				o_SubgoalPolicy.SampleZeroSubgoalSequence (*pProblem, pSequence);
 
