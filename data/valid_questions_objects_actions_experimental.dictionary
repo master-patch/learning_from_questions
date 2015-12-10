@@ -1,0 +1,460 @@
+0|1|thing-available ironbar
+1|2|thing-available ironbar
+2|3|thing-available ironbar
+3|4|thing-available ironbar
+4|5|thing-available ironbar
+5|6|thing-available ironbar
+6|1|thing-available seeds
+7|2|thing-available seeds
+8|3|thing-available seeds
+9|4|thing-available seeds
+10|5|thing-available seeds
+11|6|thing-available seeds
+12|1|thing-available brown-mushroom
+13|2|thing-available brown-mushroom
+14|3|thing-available brown-mushroom
+15|4|thing-available brown-mushroom
+16|5|thing-available brown-mushroom
+17|6|thing-available brown-mushroom
+18|1|thing-available sand
+19|2|thing-available sand
+20|3|thing-available sand
+21|4|thing-available sand
+22|5|thing-available sand
+23|6|thing-available sand
+24|1|thing-available bone
+25|2|thing-available bone
+26|3|thing-available bone
+27|4|thing-available bone
+28|5|thing-available bone
+29|6|thing-available bone
+30|1|thing-available fish
+31|2|thing-available fish
+32|3|thing-available fish
+33|4|thing-available fish
+34|5|thing-available fish
+35|6|thing-available fish
+36|1|thing-available bucket
+37|2|thing-available bucket
+38|3|thing-available bucket
+39|4|thing-available bucket
+40|5|thing-available bucket
+41|6|thing-available bucket
+42|1|thing-available wood-pickaxe
+43|2|thing-available wood-pickaxe
+44|3|thing-available wood-pickaxe
+45|4|thing-available wood-pickaxe
+46|5|thing-available wood-pickaxe
+47|6|thing-available wood-pickaxe
+48|1|thing-available sugar
+49|2|thing-available sugar
+50|3|thing-available sugar
+51|4|thing-available sugar
+52|5|thing-available sugar
+53|6|thing-available sugar
+54|1|thing-available string
+55|2|thing-available string
+56|3|thing-available string
+57|4|thing-available string
+58|5|thing-available string
+59|6|thing-available string
+60|1|thing-available egg
+61|2|thing-available egg
+62|3|thing-available egg
+63|4|thing-available egg
+64|5|thing-available egg
+65|6|thing-available egg
+66|1|thing-available plank
+67|2|thing-available plank
+68|3|thing-available plank
+69|4|thing-available plank
+70|5|thing-available plank
+71|6|thing-available plank
+72|1|thing-available clay
+73|2|thing-available clay
+74|3|thing-available clay
+75|4|thing-available clay
+76|5|thing-available clay
+77|6|thing-available clay
+78|1|thing-available iron
+79|2|thing-available iron
+80|3|thing-available iron
+81|4|thing-available iron
+82|5|thing-available iron
+83|6|thing-available iron
+84|1|thing-available wood-axe
+85|2|thing-available wood-axe
+86|3|thing-available wood-axe
+87|4|thing-available wood-axe
+88|5|thing-available wood-axe
+89|6|thing-available wood-axe
+90|1|thing-available coal
+91|2|thing-available coal
+92|3|thing-available coal
+93|4|thing-available coal
+94|5|thing-available coal
+95|6|thing-available coal
+96|1|thing-available bed
+97|2|thing-available bed
+98|3|thing-available bed
+99|4|thing-available bed
+100|5|thing-available bed
+101|6|thing-available bed
+102|1|thing-available glasspane
+103|2|thing-available glasspane
+104|3|thing-available glasspane
+105|4|thing-available glasspane
+106|5|thing-available glasspane
+107|6|thing-available glasspane
+108|1|thing-available brick
+109|2|thing-available brick
+110|3|thing-available brick
+111|4|thing-available brick
+112|5|thing-available brick
+113|6|thing-available brick
+114|1|thing-available wood-stairs
+115|2|thing-available wood-stairs
+116|3|thing-available wood-stairs
+117|4|thing-available wood-stairs
+118|5|thing-available wood-stairs
+119|6|thing-available wood-stairs
+120|1|thing-available iron-door
+121|2|thing-available iron-door
+122|3|thing-available iron-door
+123|4|thing-available iron-door
+124|5|thing-available iron-door
+125|6|thing-available iron-door
+126|1|thing-available shears
+127|2|thing-available shears
+128|3|thing-available shears
+129|4|thing-available shears
+130|5|thing-available shears
+131|6|thing-available shears
+132|1|thing-available bread
+133|2|thing-available bread
+134|3|thing-available bread
+135|4|thing-available bread
+136|5|thing-available bread
+137|6|thing-available bread
+138|1|thing-available paper
+139|2|thing-available paper
+140|3|thing-available paper
+141|4|thing-available paper
+142|5|thing-available paper
+143|6|thing-available paper
+144|1|thing-available ladder
+145|2|thing-available ladder
+146|3|thing-available ladder
+147|4|thing-available ladder
+148|5|thing-available ladder
+149|6|thing-available ladder
+150|1|thing-available wood-shovel
+151|2|thing-available wood-shovel
+152|3|thing-available wood-shovel
+153|4|thing-available wood-shovel
+154|5|thing-available wood-shovel
+155|6|thing-available wood-shovel
+156|1|thing-available cookedfish
+157|2|thing-available cookedfish
+158|3|thing-available cookedfish
+159|4|thing-available cookedfish
+160|5|thing-available cookedfish
+161|6|thing-available cookedfish
+162|1|thing-available wood-door
+163|2|thing-available wood-door
+164|3|thing-available wood-door
+165|4|thing-available wood-door
+166|5|thing-available wood-door
+167|6|thing-available wood-door
+168|1|thing-available glass
+169|2|thing-available glass
+170|3|thing-available glass
+171|4|thing-available glass
+172|5|thing-available glass
+173|6|thing-available glass
+174|1|thing-available stick
+175|2|thing-available stick
+176|3|thing-available stick
+177|4|thing-available stick
+178|5|thing-available stick
+179|6|thing-available stick
+180|1|thing-available claybrick
+181|2|thing-available claybrick
+182|3|thing-available claybrick
+183|4|thing-available claybrick
+184|5|thing-available claybrick
+185|6|thing-available claybrick
+186|1|thing-available cut-sugarcane
+187|2|thing-available cut-sugarcane
+188|3|thing-available cut-sugarcane
+189|4|thing-available cut-sugarcane
+190|5|thing-available cut-sugarcane
+191|6|thing-available cut-sugarcane
+192|1|thing-available sandstone
+193|2|thing-available sandstone
+194|3|thing-available sandstone
+195|4|thing-available sandstone
+196|5|thing-available sandstone
+197|6|thing-available sandstone
+198|1|thing-available chest
+199|2|thing-available chest
+200|3|thing-available chest
+201|4|thing-available chest
+202|5|thing-available chest
+203|6|thing-available chest
+204|1|thing-available stonebrick-stairs
+205|2|thing-available stonebrick-stairs
+206|3|thing-available stonebrick-stairs
+207|4|thing-available stonebrick-stairs
+208|5|thing-available stonebrick-stairs
+209|6|thing-available stonebrick-stairs
+210|1|thing-available fishingrod
+211|2|thing-available fishingrod
+212|3|thing-available fishingrod
+213|4|thing-available fishingrod
+214|5|thing-available fishingrod
+215|6|thing-available fishingrod
+216|1|thing-available stonebrick
+217|2|thing-available stonebrick
+218|3|thing-available stonebrick
+219|4|thing-available stonebrick
+220|5|thing-available stonebrick
+221|6|thing-available stonebrick
+222|1|furnace-fuel
+223|2|furnace-fuel
+224|3|furnace-fuel
+225|4|furnace-fuel
+226|5|furnace-fuel
+227|6|furnace-fuel
+228|1|thing-available red-mushroom
+229|2|thing-available red-mushroom
+230|3|thing-available red-mushroom
+231|4|thing-available red-mushroom
+232|5|thing-available red-mushroom
+233|6|thing-available red-mushroom
+234|1|thing-available furnace
+235|2|thing-available furnace
+236|3|thing-available furnace
+237|4|thing-available furnace
+238|5|thing-available furnace
+239|6|thing-available furnace
+240|1|thing-available wheat
+241|2|thing-available wheat
+242|3|thing-available wheat
+243|4|thing-available wheat
+244|5|thing-available wheat
+245|6|thing-available wheat
+246|1|thing-available ironore
+247|2|thing-available ironore
+248|3|thing-available ironore
+249|4|thing-available ironore
+250|5|thing-available ironore
+251|6|thing-available ironore
+252|1|thing-available stone-stairs
+253|2|thing-available stone-stairs
+254|3|thing-available stone-stairs
+255|4|thing-available stone-stairs
+256|5|thing-available stone-stairs
+257|6|thing-available stone-stairs
+258|1|thing-available wool
+259|2|thing-available wool
+260|3|thing-available wool
+261|4|thing-available wool
+262|5|thing-available wool
+263|6|thing-available wool
+264|1|thing-available hand
+265|2|thing-available hand
+266|3|thing-available hand
+267|4|thing-available hand
+268|5|thing-available hand
+269|6|thing-available hand
+270|1|thing-available wood
+271|2|thing-available wood
+272|3|thing-available wood
+273|4|thing-available wood
+274|5|thing-available wood
+275|6|thing-available wood
+276|1|thing-available bowl
+277|2|thing-available bowl
+278|3|thing-available bowl
+279|4|thing-available bowl
+280|5|thing-available bowl
+281|6|thing-available bowl
+282|1|thing-available milk
+283|2|thing-available milk
+284|3|thing-available milk
+285|4|thing-available milk
+286|5|thing-available milk
+287|6|thing-available milk
+288|1|thing-available brick-stairs
+289|2|thing-available brick-stairs
+290|3|thing-available brick-stairs
+291|4|thing-available brick-stairs
+292|5|thing-available brick-stairs
+293|6|thing-available brick-stairs
+294|1|thing-available torch
+295|2|thing-available torch
+296|3|thing-available torch
+297|4|thing-available torch
+298|5|thing-available torch
+299|6|thing-available torch
+300|1|thing-available mushroomstew
+301|2|thing-available mushroomstew
+302|3|thing-available mushroomstew
+303|4|thing-available mushroomstew
+304|5|thing-available mushroomstew
+305|6|thing-available mushroomstew
+306|1|thing-available stone
+307|2|thing-available stone
+308|3|thing-available stone
+309|4|thing-available stone
+310|5|thing-available stone
+311|6|thing-available stone
+312|1|thing-available bonemeal
+313|2|thing-available bonemeal
+314|3|thing-available bonemeal
+315|4|thing-available bonemeal
+316|5|thing-available bonemeal
+317|6|thing-available bonemeal
+318|1|thing-available fence
+319|2|thing-available fence
+320|3|thing-available fence
+321|4|thing-available fence
+322|5|thing-available fence
+323|6|thing-available fence
+324|1|thing-available wood-hoe
+325|2|thing-available wood-hoe
+326|3|thing-available wood-hoe
+327|4|thing-available wood-hoe
+328|5|thing-available wood-hoe
+329|6|thing-available wood-hoe
+330|1|thing-available clayblock
+331|2|thing-available clayblock
+332|3|thing-available clayblock
+333|4|thing-available clayblock
+334|5|thing-available clayblock
+335|6|thing-available clayblock
+336|1|action grow-wheatgrass
+337|1|action get-harvest-egg
+338|1|action craft-fence
+339|1|action change-harvest-loc
+340|1|action get-harvest-seeds
+341|1|action craft-bucket
+342|1|action move
+343|1|action make-bread
+344|1|action craft-ironbar
+345|1|action get-harvest-brown-mushroom
+346|1|action craft-chest
+347|1|action get-harvest-sandstone
+348|1|action craft-wood-axe
+349|1|action craft-ladder
+350|1|action make-wool
+351|1|action craft-bonemeal
+352|1|action craft-stone-brick
+353|1|action craft-fishingrod
+354|1|action craft-wood-shovel
+355|1|action harvest
+356|1|action craft-wood-door
+357|1|action craft-wood-stick
+358|1|action craft-wood-pickaxe
+359|1|action craft-wood-hoe
+360|1|action furnace-smelt-iron
+361|1|action harvest-loose-tool
+362|1|action craft-clayblock
+363|1|action grow-tallgrass
+364|1|action furnace-fire-brick
+365|1|action get-harvest-wheat
+366|1|action get-harvest-wool
+367|1|action get-harvest-bone
+368|1|action get-harvest-milk
+369|1|action get-harvest-wood
+370|1|action craft-stonebrick-stairs
+371|1|action get-harvest-coal
+372|1|action furnace-make-charcoal
+373|1|action get-harvest-clay
+374|1|action get-harvest-ironore
+375|1|action craft-stone-stairs
+376|1|action craft-bed
+377|1|action craft-shears
+378|1|action get-harvest-string
+379|1|action craft-brick-stairs
+380|1|action make-paper
+381|1|action craft-wood-plank
+382|1|action change-harvest-tool
+383|1|action make-mushroomstew-1
+384|1|action craft-furnace
+385|1|action make-farmland
+386|1|action furnace-cook-fish
+387|1|action craft-torch
+388|1|action get-harvest-red-mushroom
+389|1|action get-harvest-sugarcane
+390|1|action craft-iron-door
+391|1|action craft-brick
+392|1|action place-on-map
+393|1|action craft-glasspane
+394|1|action furnace-make-glass
+395|1|action place
+396|1|action get-harvest-stone
+397|1|action make-mushroomstew-2
+398|1|action craft-sandstone
+399|1|action get-harvest-fish
+400|1|action craft-bowl
+401|1|action make-sugar
+402|1|action craft-wood-stairs
+403|1|action get-harvest-sand
+404|1|thing-available shears question
+405|1|thing-available bowl question
+406|1|thing-available paper question
+407|1|thing-available milk question
+408|1|thing-available brick-stairs question
+409|1|thing-available red-mushroom question
+410|1|thing-available stone-stairs question
+411|1|thing-available sugar question
+412|1|thing-available wood question
+413|1|thing-available stonebrick question
+414|1|thing-available brick question
+415|1|thing-available wool question
+416|1|thing-available bonemeal question
+417|1|thing-available string question
+418|1|thing-available fishingrod question
+419|1|thing-available wood-hoe question
+420|1|thing-available glass question
+421|1|thing-available stick question
+422|1|thing-available wood-shovel question
+423|1|thing-available wood-stairs question
+424|1|thing-available bread question
+425|1|thing-available iron-door question
+426|1|thing-available claybrick question
+427|1|thing-available bucket question
+428|1|thing-available bed question
+429|1|thing-available sand question
+430|1|thing-available iron question
+431|1|thing-available clay question
+432|1|thing-available bone question
+433|1|thing-available fence question
+434|1|thing-available fish question
+435|1|thing-available torch question
+436|1|thing-available glasspane question
+437|1|thing-available clayblock question
+438|1|thing-available wood-axe question
+439|1|thing-available brown-mushroom question
+440|1|thing-available sandstone question
+441|1|thing-available chest question
+442|1|thing-available mushroomstew question
+443|1|thing-available fornace-fuel question
+444|1|thing-available furnace question
+445|1|thing-available wood-door question
+446|1|thing-available ironbar question
+447|1|thing-available wheat question
+448|1|thing-available ladder question
+449|1|thing-available hand question
+450|1|thing-available wood-pickaxe question
+451|1|thing-available cut-sugarcane question
+452|1|thing-available cookedfish question
+453|1|thing-available plank question
+454|1|thing-available stone question
+455|1|thing-available ironore question
+456|1|thing-available coal question
+457|1|thing-available seeds question
+458|1|thing-available stonebrick-stairs question
+459|1|thing-available egg question
