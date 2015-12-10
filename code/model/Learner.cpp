@@ -422,6 +422,7 @@ void SubgoalLearner::TrimPlanSubgoalSequences (PlanSubgoalSequences_dq_t& _rdqPl
 
 
 //										
+// QP TODO understand if we have to go through proposing an alternative sequence
 void SubgoalLearner::ProposeAlternateSequences (SubgoalSequenceState& _rState,
 										SubgoalSequence_dq_t& _rdqAlternateSequences)
 {
@@ -807,8 +808,11 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 		o_SubgoalPolicy.LoadAnswers();
 
 		// QP
-		o_QuestionPolicy.clearAnswers();
-		o_QuestionPolicy.LoadAnswers();
+		// QP TODO no need if they share C
+		if ((config)"qp" != -1) {
+			o_QuestionPolicy.clearAnswers();
+			o_QuestionPolicy.LoadAnswers();
+		}
 	}
 
 	vec_TargetGoalCompletions.Memset (0);
@@ -854,14 +858,20 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 			Problem* pProblem = Problem::GetProblem (d);
 			SubgoalSequence* pSequence = new SubgoalSequence;
 			pSequence->s_ProblemPddlPreamble = pProblem->s_PddlPreamble;
-
 			pSequence->p_TargetProblem = pProblem;
+
+			SubgoalSequence* pQuestionSequence = new SubgoalSequence;
+			pQuestionSequence->s_ProblemPddlPreamble = pProblem->s_PddlPreamble;
+			pQuestionSequence->p_TargetProblem = pProblem;
+
+			// QP TODO: Here we can iterate till convergence
+			// QP TODO: here we may want to share C
 			if (true == pProblem->b_SubgoalsNotNeeded) {
 
 				// QP
 				if ((config)"qp" != -1) {
 					// QP this time sample questions not subgoals
-					o_QuestionPolicy.SampleZeroQuestionSequence (*pProblem, pSequence);
+					o_QuestionPolicy.SampleZeroQuestionSequence (*pProblem, pQuestionSequence);
 				}
 				o_SubgoalPolicy.SampleZeroSubgoalSequence (*pProblem, pSequence);
 			}
@@ -869,12 +879,10 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 			else {
 				if ((config)"qp" != -1) {
 					// QP this time sample questions not subgoals
-					o_SubgoalPolicy.SampleQuestionSequence (*pProblem,
+					o_QuestionPolicy.SampleQuestionSequence (*pProblem,
 													   _bTestMode,
-													   pSequence);
+													   pQuestionSequence);
 				}
-
-				// QP TODO: here we may want to share C
 				o_SubgoalPolicy.SampleSubgoalSequence (*pProblem,
 													   _bTestMode,
 													   pSequence);
