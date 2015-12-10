@@ -888,6 +888,9 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 													   pSequence);
 			}
 
+			// QP Here we don't do further operations on pQuestionSequence
+			//    Since we are never going to use it anyway, questions
+			//    have already been asked
 
 			int iIndex = 1000 * i + d; 
       int subgoalIndex = 1;
@@ -1050,7 +1053,7 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 					{
 						double dBestReward = pTargetProblem->GetCurrentSolutionReward ();
 						if ((config)"qp" != -1) {
-							o_SubgoalPolicy.UpdateParameters (*pBestObserved,
+							o_QuestionPolicy.UpdateParameters (*pBestObserved,
 															  dBestReward,
 															  rState.b_TaskComplete,
 															  true);
