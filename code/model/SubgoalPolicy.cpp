@@ -1970,28 +1970,66 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 		pSubgoal->p_PddlSubgoalPredicate
 			= vec_CandidatePredicates [pSubgoal->i_SubgoalSelection];
 
-    	//TODO: Add Config Check to make sure this is valid. Else if question found and
-    	// config, throw an error
-    	if (0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
-					pSubgoal->b_isQuestion = true;
-      		String_dq_t dq_QuestionArgs;
-      		//Parse Question from PddlString
-      		String s_PredicateString = pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
-      		size_t i_Start = s_PredicateString.rfind("(") + 1;
-      		size_t i_End = s_PredicateString.find(")");
-      		String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
-      		s_QuestionString.Split(dq_QuestionArgs, ' ');
-      		//Parse Question type and query from question
-      		String s_QuestionType = dq_QuestionArgs[1];
-      		size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
-      		String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
+    // Parse Predicate String to see if it is a questions
+    // Questions are of two forms:
+    // Actions:  "(action NAME)"
+    // Objects:  "(thing-available NAME question)"
+    String_dq_t dq_QuestionArgs;
+    String s_QuestionQuery = "";
+    String s_QuestionType  = "";
 
-          if (false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
-          	cout << "The IR has failed" << endl;
-          }
-          LoadAnswers();// TODO: See board for hard task
-          SampleConnections(false);
+    String s_PredicateString = pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
+    size_t i_Start = s_PredicateString.rfind("(") + 1;
+    size_t i_End = s_PredicateString.find(")");
+    String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
+    s_QuestionString.Split(dq_QuestionArgs, ' ');
+    //Parse Question type and query from question
+    String s_QuestionToken = dq_QuestionArgs[ dq_QuestionArgs.size() - 1];
+  
+    bool b_isActionQuestion = 0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("action");
+    bool b_isObjectQuestion = 0 == s_QuestionToken.compare("question");
+
+    if (b_isActionQuestion) {
+      s_QuestionType = "action";
+      s_QuestionQuery =  dq_QuestionArgs[ dq_QuestionArgs.size() - 1];
     }
+
+    if (b_isObjectQuestion) {
+      s_QuestionType = "object";
+      s_QuestionQuery = dq_QuestionArgs[ dq_QuestionArgs.size() - 2];;
+    }
+
+    if (b_isActionQuestion || b_isObjectQuestion) {
+      pSubgoal->b_isQuestion = true;
+      if(false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
+        //TODO cout error, throw error type behavior
+      }
+      LoadAnswers();// TODO: See board for hard task
+      SampleConnections(false);
+    }
+
+    // 	//TODO: Add Config Check to make sure this is valid. Else if question found and
+    // 	// config, throw an error
+    // 	if (0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
+		// 			pSubgoal->b_isQuestion = true;
+    //   		String_dq_t dq_QuestionArgs;
+    //   		//Parse Question from PddlString
+    //   		String s_PredicateString = pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
+    //   		size_t i_Start = s_PredicateString.rfind("(") + 1;
+    //   		size_t i_End = s_PredicateString.find(")");
+    //   		String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
+    //   		s_QuestionString.Split(dq_QuestionArgs, ' ');
+    //   		//Parse Question type and query from question
+    //   		String s_QuestionType = dq_QuestionArgs[1];
+    //   		size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
+    //   		String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
+
+    //       if (false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
+    //       	cout << "The IR has failed" << endl;
+    //       }
+    //       LoadAnswers();// TODO: See board for hard task
+    //       SampleConnections(false);
+    // }
 
 		_pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
 
