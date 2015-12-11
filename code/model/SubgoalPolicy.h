@@ -324,6 +324,7 @@ class SubgoalPolicy
 		int FindPredicateCandidateIndex (PddlPredicate& _rPredicate);
 		int FindInitPredicateCandidateIndex (PddlPredicate& _rPredicate);
 		void AssignIndicesToTargetProblemPredicates (void);
+		void AssignIndicesToTargetProblemPredicatesQuestion (void);
 
 		void AddLastSubgoal (const Problem& _rProblem,
 							 SubgoalSequence* _pSequence);
@@ -352,18 +353,19 @@ class SubgoalPolicy
 		}
 
 		// Asking questions
-		IR		o_IR;
+		IR*		p_IR;
     bool AskQuestion(String s_QuestionType, String s_QuestionQuery);
     void TestQA();
     void clearAnswers();
     void ResetSentenceConnections ();
-
+		double_Vec_t getConnectionWeights();
+		void loadConnectionWeights(double_Vec_t	vec_subgoalPolicy_Weights);
 	public:
 		SubgoalPolicy (void);
 		~SubgoalPolicy (void);
 
 		// QP: add correct signature with question
-		bool Init (bool question);
+		bool Init (bool question, IR* p_IR);
 
 		void SampleExplorationParameters (void);
 		void ForceConnectionUseFlags (void);
@@ -391,6 +393,12 @@ class SubgoalPolicy
 							   double _dReward,
 							   bool _bTaskComplete,
 							   bool _bWithConnections);
+		// QP
+		void UpdateQuestionParameters (SubgoalSequence& _rSequence,
+									  double _dReward,
+									  bool _bTaskComplete,
+									  bool _bWithConnections);
+
 		void CompleteUpdate (void);
 
 		void AddReachableSubgoals (const int_set_t& _rsetReachableSubgoals);

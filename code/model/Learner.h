@@ -18,6 +18,8 @@ class SubgoalSequenceState
 {
 	public:
 		SubgoalSequence*			p_Sequence;
+		// QP
+		SubgoalSequence*			p_QuestionSequence;
 		Problem*					p_TargetProblem;
 		PlanSubgoalSequences_dq_t	dq_PlanSubgoalSequences;
 		double						d_Reward;
@@ -30,6 +32,7 @@ class SubgoalSequenceState
 		SubgoalSequenceState (SubgoalSequence* _pSequence, int _iStep, int _iId)
 		{
 			p_Sequence = _pSequence;
+			p_QuestionSequence = NULL;
 			p_TargetProblem = NULL;
 			i_CurrentStep = _iStep;
 			i_ProblemId = _iId;
@@ -51,6 +54,7 @@ class SubgoalLearner : public FFCallback
 		SubgoalPolicy	o_QuestionPolicy;
 		SubgoalPolicy	o_SubgoalPolicy;
 		FFInterface		o_FFInterface;
+		IR		o_IR;
 		double			d_PlanFailureReward;
 		double			d_TaskCompletionReward;
 		double			d_SuccessfulStepRewardBase;

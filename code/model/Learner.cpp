@@ -92,10 +92,14 @@ bool SubgoalLearner::Init (void)
 	vec_TargetGoalCompletions.Create (Problem::GetProblemCount ());
 
 	// QP
-	if ((config)"qp" != -1 && false == o_QuestionPolicy.Init (true))
+	if ((config)"ir_host" != -1) {
+		if (false == o_IR.Connect ())
+			return false;
+	}
+	if ((config)"qp" != -1 && false == o_QuestionPolicy.Init (true, &o_IR))
 		return false;
 
-	if (false == o_SubgoalPolicy.Init (false))
+	if (false == o_SubgoalPolicy.Init (false, &o_IR))
 		return false;
 
 	o_FFInterface.SetCallback (this);
@@ -382,7 +386,7 @@ double SubgoalLearner::ComputeReward (SubgoalSequenceState& _rState)
 }
 
 
-//										
+// QP TODO pass policy as variable
 void SubgoalLearner::TrimPlanSubgoalSequences (PlanSubgoalSequences_dq_t& _rdqPlanSubgoals)
 {
 	ITERATE (PlanSubgoalSequences_dq_t, _rdqPlanSubgoals, iteSequence)
@@ -808,9 +812,8 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 		o_SubgoalPolicy.LoadAnswers();
 
 		// QP
-		// QP TODO no need if they share C
 		if ((config)"qp" != -1) {
-			o_QuestionPolicy.clearAnswers();
+			o_QuestionPolicy.loadConnectionWeights(o_SubgoalPolicy.getConnectionWeights());
 			o_QuestionPolicy.LoadAnswers();
 		}
 	}
@@ -899,6 +902,9 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 			pairInsert = hmp_IndexToSequenceState.insert (make_pair (iIndex, 
                                                                SubgoalSequenceState (pSequence, subgoalIndex, d)));
 			SubgoalSequenceState& rState = pairInsert.first->second;
+			// QP
+			// QP TODO is this assignment valid?
+			rState.p_QuestionSequence = pQuestionSequence;
 
 
       Subgoal* pSubgoal = pSequence->GetSubgoal (subgoalIndex);
@@ -977,7 +983,7 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 	}
 	pthread_mutex_unlock (&mtx_WaitForSequences);
 
-
+	assert(o_SubgoalPolicy.getConnectionWeights() == o_QuestionPolicy.getConnectionWeights());
 
 	// condition wait for sequences to complete...	
 	pthread_mutex_lock (&mtx_WaitForSequences);
@@ -1031,7 +1037,8 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 			{
 				// QP
 				if ((config)"qp" != -1) {
-					o_QuestionPolicy.UpdateParameters (*rState.p_Sequence,
+					// QP TODO
+					o_QuestionPolicy.UpdateQuestionParameters (*rState.p_QuestionSequence,
 													  dReward,
 													  rState.b_TaskComplete,
 													  true);
@@ -1052,12 +1059,13 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 					if ((NULL != pBestObserved) && (_iIteration != iBestIteration))
 					{
 						double dBestReward = pTargetProblem->GetCurrentSolutionReward ();
-						if ((config)"qp" != -1) {
-							o_QuestionPolicy.UpdateParameters (*pBestObserved,
-															  dBestReward,
-															  rState.b_TaskComplete,
-															  true);
-						}
+						// QP
+						// if ((config)"qp" != -1) {
+						// 	o_QuestionPolicy.UpdateParameters (*pBestObserved,
+						// 									  dBestReward,
+						// 									  rState.b_TaskComplete,
+						// 									  true);
+						// }
 						o_SubgoalPolicy.UpdateParameters (*pBestObserved,
 														  dBestReward,
 														  rState.b_TaskComplete,
@@ -1081,13 +1089,13 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 						lTotalAltenateLength += pAlternate->dq_Subgoals.size ();
 						++ iAlternateCount;
 
-						// QP
-						if ((config)"qp" != -1) {
-							o_QuestionPolicy.UpdateParameters (*pAlternate,
-															  dReward,
-															  rState.b_TaskComplete,
-															  true);
-						}
+						// QP TODO low priority
+						// if ((config)"qp" != -1) {
+						// 	o_QuestionPolicy.UpdateParameters (*pAlternate,
+						// 									  dReward,
+						// 									  rState.b_TaskComplete,
+						// 									  true);
+						// }
 						o_SubgoalPolicy.UpdateParameters (*pAlternate,
 														  dReward,
 														  rState.b_TaskComplete,
