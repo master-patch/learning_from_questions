@@ -96,10 +96,11 @@ bool SubgoalLearner::Init (void)
 		if (false == o_IR.Connect ())
 			return false;
 	}
-	if ((config)"qp" != -1 && false == o_QuestionPolicy.Init (true, &o_IR))
-		return false;
 
 	if (false == o_SubgoalPolicy.Init (false, &o_IR))
+		return false;
+
+	if ((config)"qp" != -1 && false == o_QuestionPolicy.Init (true, &o_IR))
 		return false;
 
 	o_FFInterface.SetCallback (this);
@@ -813,8 +814,9 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 
 		// QP
 		if ((config)"qp" != -1) {
-			o_QuestionPolicy.loadConnectionWeights(o_SubgoalPolicy.getConnectionWeights());
-			o_QuestionPolicy.LoadAnswers();
+			// o_QuestionPolicy.loadConnectionWeights(o_SubgoalPolicy.getConnectionWeights());
+			o_QuestionPolicy.vec_SentenceConnections = o_SubgoalPolicy.vec_SentenceConnections;
+			// o_QuestionPolicy.LoadAnswers();
 		}
 	}
 

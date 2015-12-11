@@ -584,31 +584,33 @@ bool SubgoalPolicy::Init (bool question, IR* _pIR)
 		return false;
 	}
 
-	if (f_UseSimpleConnectionFeatures > 0)
-    {
-      if (false == LoadSimpleConnectionFile ((config) "pddl_connection_file"))
-        return false;
-    }
-	else if (f_UseTextConnectionFeatures > 0)
-    {
-      if (false == LoadFeatureConnectionFile ((config) "text_connection_file", false))
-        return false;
-      if (true == b_PrintTextConnectionFeatures)
-        LoadFeaturesToDebugPrintFile();
-    }
+	if (false == b_isQuestionPolicy) {
+		if (f_UseSimpleConnectionFeatures > 0)
+	    {
+	      if (false == LoadSimpleConnectionFile ((config) "pddl_connection_file"))
+	        return false;
+	    }
+		else if (f_UseTextConnectionFeatures > 0)
+	    {
+	      if (false == LoadFeatureConnectionFile ((config) "text_connection_file", false))
+	        return false;
+	      if (true == b_PrintTextConnectionFeatures)
+	        LoadFeaturesToDebugPrintFile();
+	    }
 
-	if (true == b_LogConnectionPredictions)
-		WriteConnectionPredictionHeader ();
+		if (true == b_LogConnectionPredictions)
+			WriteConnectionPredictionHeader ();
 
-	//NK: my debug stuff
-	b_UseGoldLength = (1 == (int)(config)"use_gold_length");
-	if (true == b_UseGoldLength)
-		LoadGoldLengthFile();
+		//NK: my debug stuff
+		b_UseGoldLength = (1 == (int)(config)"use_gold_length");
+		if (true == b_UseGoldLength)
+			LoadGoldLengthFile();
 
-	// RUN TESTS
-	if ((config)"ir_host" != -1) {
-		// Launch the test
-		// TestQA();
+		// RUN TESTS
+		if ((config)"ir_host" != -1) {
+			// Launch the test
+			// TestQA();
+		}
 	}
 
 	return true;
@@ -1028,7 +1030,7 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 {
   String sPddlDictFile;
 
-  if (true == b_isQuestionPolicy) {
+  if (false == b_isQuestionPolicy) {
   	int object_questions = (config) "ir:object-questions";
   	int action_questions = (config) "ir:action-questions";
 	  // Read the config to find which question-predicates to include
@@ -2076,8 +2078,10 @@ void SubgoalPolicy::SampleSubgoalTestSequence(const Problem& _rProblem,
           if(false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
             //TODO cout error, throw error type behavior
           }
-          LoadAnswers();// TODO: See board for hard task
-          SampleConnections(false);
+          if (false == b_isQuestionPolicy) {
+	          LoadAnswers();// TODO: See board for hard task
+	          SampleConnections(false);
+	        }
       }
 
       _pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
@@ -2118,6 +2122,7 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 
 	// we first need the last subgoal to reach the actual target goal...
 	AddLastSubgoal (_rProblem, _pSequence);
+	
 
 	// Sample subgoals...			
 	bool bAlreadyAddedSequenceEnd = false;
@@ -2201,8 +2206,10 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
           if (false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
           	cout << "The IR has failed" << endl;
           }
-          LoadAnswers();// TODO: See board for hard task
-          SampleConnections(false);
+          if (false == b_isQuestionPolicy) {
+	          LoadAnswers();// TODO: See board for hard task
+	          SampleConnections(false);
+	        }
     }
 
 		_pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
