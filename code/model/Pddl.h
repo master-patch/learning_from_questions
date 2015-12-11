@@ -49,6 +49,7 @@ class PddlPredicate
 {
 	public:
 		int_Vec_t			vec_ParameterValueFeatureIndex;
+		int_Vec_t			vec_QuestionParameterValueFeatureIndex;
 		PddlParameter_dq_t	dq_Parameters;
 		String				s_Name;
 		String				s_BoundIdentityHash;

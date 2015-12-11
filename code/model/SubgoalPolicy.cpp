@@ -339,17 +339,29 @@ const char* ExplorationParameters::ToString (ExplorationType_e _eType)
 
 
 //													
-bool SubgoalPolicy::Init (void)
+// QP: make sure it knows it is a QuestionPolicy
+bool SubgoalPolicy::Init (bool question, IR* _pIR)
 {
 
 	// Setting up IR connection
 	// TODO: check if callback should be set to this
 	// o_IR.SetCallback (this);
 
-	String IR_host = (config)"ir_host";
+	// QP
+	b_isQuestionPolicy = question;
+
+
+	String IR_host;
+	if ((config)"ir_host" != -1) {
+		IR_host = (config)"ir_host";
+	}
+
+	p_IR = _pIR;
 
 	o_SequenceEndModel.Init ("end");
 	o_SubgoalSelectionModel.Init ("subgoal");
+
+	// TODO QP maybe we shoudlnt initialize this
 	o_TextConnectionModel.Init ("connection");
 
 	o_SequenceEndExploration.SetParamsFromConfig ("end");
@@ -357,6 +369,10 @@ bool SubgoalPolicy::Init (void)
 	o_ConnectionExploration.SetParamsFromConfig ("connection");
 
 	i_MaxSequenceLength = (config)"max_subgoal_sequence_length";
+	if (question) {
+		i_MaxSequenceLength = i_MaxSequenceLength / 2;
+	}
+
 	b_DisallowNeighboringDuplicateSubgoals = (1 == (int)(config)"disallow_neighboring_duplicate_subgoals");
 	b_DisallowAnyDuplicateSubgoals = (1 == (int)(config)"disallow_any_duplicate_subgoals");
 	b_UseLogarithmicDistanceScore = (1 == (int)(config)"use_logarithmic_distance_score");
@@ -420,7 +436,14 @@ bool SubgoalPolicy::Init (void)
 
 	if (false == LoadPredDictFile ())
 		return false;
-	AssignIndicesToTargetProblemPredicates ();
+	
+	// QP
+	if(true == b_isQuestionPolicy) {
+		AssignIndicesToTargetProblemPredicatesQuestion();
+	} else {
+		AssignIndicesToTargetProblemPredicates ();
+	}
+	
   
 	i_PredicateNames = hmp_PredicateNameToIndex.size ();
 	i_ParameterValues = hmp_ParameterValueToIndex.size ();
@@ -561,34 +584,33 @@ bool SubgoalPolicy::Init (void)
 		return false;
 	}
 
-	if (f_UseSimpleConnectionFeatures > 0)
-    {
-      if (false == LoadSimpleConnectionFile ((config) "pddl_connection_file"))
-        return false;
-    }
-	else if (f_UseTextConnectionFeatures > 0)
-    {
-      if (false == LoadFeatureConnectionFile ((config) "text_connection_file", false))
-        return false;
-      if (true == b_PrintTextConnectionFeatures)
-        LoadFeaturesToDebugPrintFile();
-    }
+	if (false == b_isQuestionPolicy) {
+		if (f_UseSimpleConnectionFeatures > 0)
+	    {
+	      if (false == LoadSimpleConnectionFile ((config) "pddl_connection_file"))
+	        return false;
+	    }
+		else if (f_UseTextConnectionFeatures > 0)
+	    {
+	      if (false == LoadFeatureConnectionFile ((config) "text_connection_file", false))
+	        return false;
+	      if (true == b_PrintTextConnectionFeatures)
+	        LoadFeaturesToDebugPrintFile();
+	    }
 
-	if (true == b_LogConnectionPredictions)
-		WriteConnectionPredictionHeader ();
+		if (true == b_LogConnectionPredictions)
+			WriteConnectionPredictionHeader ();
 
-	//NK: my debug stuff
-	b_UseGoldLength = (1 == (int)(config)"use_gold_length");
-	if (true == b_UseGoldLength)
-		LoadGoldLengthFile();
+		//NK: my debug stuff
+		b_UseGoldLength = (1 == (int)(config)"use_gold_length");
+		if (true == b_UseGoldLength)
+			LoadGoldLengthFile();
 
-	// RUN TESTS
-	if ((config)"ir_host" != -1) {
-		if (false == o_IR.Connect ())
-			return false;
-
-		// Launch the test
-		TestQA();
+		// RUN TESTS
+		if ((config)"ir_host" != -1) {
+			// Launch the test
+			// TestQA();
+		}
 	}
 
 	return true;
@@ -854,6 +876,129 @@ void SubgoalPolicy::AssignIndicesToTargetProblemPredicates (void)
 		 << " target predicates not present in candidate list." << endl;
 }
 
+void SubgoalPolicy::AssignIndicesToTargetProblemPredicatesQuestion (void)
+{
+  cout << "Assigning indices to problem predicates." << endl;
+  String_set_t setMissingInitPredicates;
+  String_set_t setMissingTargetPredicates;
+  for (long i = 0; i < Problem::GetProblemCount (); ++ i)
+  {
+    Problem* pProblem = Problem::GetProblem (i);
+    PddlProblem& rPddlProblem = pProblem->GetPddlProblem ();
+
+    int_set_t setPredicateIdentityFI;
+    int_set_t setPredicateNameFI;
+    int_set_t setParameterValueFI;
+
+    // init state ...   
+    ITERATE (PddlPredicate_dq_t, rPddlProblem.o_StartState.dq_Predicates, ite)
+    {
+      PddlPredicate* pPredicate = *ite;
+
+      // assign predicate candidate index ... 
+      pPredicate->i_PredicateCandidateIndex = FindInitPredicateCandidateIndex (*pPredicate);
+      if (-1 == pPredicate->i_PredicateCandidateIndex)
+        setMissingInitPredicates.insert (pPredicate->GetPddlString ());
+
+      // assign feature indices to predicate  
+      pPredicate->i_PredicateIdentityFeatureIndex
+        = GetPredicateIdentityFeatureIndex (pPredicate->GetPddlString ());
+      pPredicate->i_PredicateNameFeatureIndex
+        = GetPredicateNameFeatureIndex (pPredicate->s_Name);
+      pPredicate->i_PredicateCandidateWithoutNumber
+        = GetPredicateWithoutNumberIndex (*pPredicate);
+
+      int_set_t setValueFI;
+      CONST_ITERATE (PddlParameter_dq_t, pPredicate->dq_Parameters, iteParam)
+        setValueFI.insert (GetParameterValueFeatureIndex (*iteParam->p_ResolvedValue));
+
+      pPredicate->vec_QuestionParameterValueFeatureIndex.Create (setValueFI.size ());
+      int x = 0;
+      ITERATE (int_set_t, setValueFI, iteFI)
+        pPredicate->vec_QuestionParameterValueFeatureIndex [x++] = *iteFI;
+
+      // collect feature indicies for problem 
+      setPredicateIdentityFI.insert (pPredicate->i_PredicateIdentityFeatureIndex);
+      setPredicateNameFI.insert (pPredicate->i_PredicateNameFeatureIndex);
+      setParameterValueFI.insert (setValueFI.begin (), setValueFI.end ());
+    }
+
+    // assign init feature indices to problem 
+    pProblem->vec_QuestionInitPredicateIdentityFI.Create (setPredicateIdentityFI.size ());
+    int x = 0;
+    ITERATE (int_set_t, setPredicateIdentityFI, ite)
+      pProblem->vec_QuestionInitPredicateIdentityFI [x++] = *ite;
+
+    pProblem->vec_QuestionInitPredicateNameFI.Create (setPredicateNameFI.size ());
+    x = 0;
+    ITERATE (int_set_t, setPredicateNameFI, ite)
+      pProblem->vec_QuestionInitPredicateNameFI [x++] = *ite;
+
+    pProblem->vec_QuestionInitParameterValueFI.Create (setParameterValueFI.size ());
+    x = 0;
+    ITERATE (int_set_t, setParameterValueFI, ite)
+      pProblem->vec_QuestionInitParameterValueFI [x++] = *ite;
+
+
+    // goal state ...   
+    setPredicateIdentityFI.clear ();
+    setPredicateNameFI.clear ();
+    setParameterValueFI.clear ();
+    
+    ITERATE (PddlPredicate_dq_t, rPddlProblem.o_PartialGoalState.dq_Predicates, ite)
+    {
+      PddlPredicate* pPredicate = *ite;
+
+      // assign predicate candidate index ... 
+      pPredicate->i_PredicateCandidateIndex = FindPredicateCandidateIndex (*pPredicate);
+      if (-1 == pPredicate->i_PredicateCandidateIndex)
+        setMissingTargetPredicates.insert (pPredicate->GetPddlString ());
+
+      // assign feature indices to predicate  
+      pPredicate->i_PredicateIdentityFeatureIndex
+        = GetPredicateIdentityFeatureIndex (pPredicate->GetPddlString ());
+      pPredicate->i_PredicateNameFeatureIndex
+        = GetPredicateNameFeatureIndex (pPredicate->s_Name);
+      pPredicate->i_PredicateCandidateWithoutNumber
+        = GetPredicateWithoutNumberIndex (*pPredicate);
+
+      int_set_t setValueFI;
+      CONST_ITERATE (PddlParameter_dq_t, pPredicate->dq_Parameters, iteParam)
+        setValueFI.insert (GetParameterValueFeatureIndex (*iteParam->p_ResolvedValue));
+
+      pPredicate->vec_QuestionParameterValueFeatureIndex.Create (setValueFI.size ());
+      int x = 0;
+      ITERATE (int_set_t, setValueFI, iteFI)
+        pPredicate->vec_QuestionParameterValueFeatureIndex [x++] = *iteFI;
+
+      // collect feature indicies for problem 
+      setPredicateIdentityFI.insert (pPredicate->i_PredicateIdentityFeatureIndex);
+      setPredicateNameFI.insert (pPredicate->i_PredicateNameFeatureIndex);
+      setParameterValueFI.insert (setValueFI.begin (), setValueFI.end ());
+    }
+
+    // assign target feature indices to problem 
+    pProblem->vec_QuestionTargetPredicateIdentityFI.Create (setPredicateIdentityFI.size ());
+    x = 0;
+    ITERATE (int_set_t, setPredicateIdentityFI, ite)
+      pProblem->vec_QuestionTargetPredicateIdentityFI [x++] = *ite;
+
+    pProblem->vec_QuestionTargetPredicateNameFI.Create (setPredicateNameFI.size ());
+    x = 0;
+    ITERATE (int_set_t, setPredicateNameFI, ite)
+      pProblem->vec_QuestionTargetPredicateNameFI [x++] = *ite;
+
+    pProblem->vec_QuestionTargetParameterValueFI.Create (setParameterValueFI.size ());
+    x = 0;
+    ITERATE (int_set_t, setParameterValueFI, ite)
+      pProblem->vec_QuestionTargetParameterValueFI [x++] = *ite;
+  }
+
+  cout << "   " << setMissingInitPredicates.size ()
+     << " init predicates not present in candidate list." << endl;
+  cout << "   " << setMissingTargetPredicates.size ()
+     << " target predicates not present in candidate list." << endl;
+}
 
 //													
 void SubgoalPolicy::LoadGoldLengthFile(void)
@@ -884,25 +1029,29 @@ void SubgoalPolicy::LoadGoldLengthFile(void)
 bool SubgoalPolicy::LoadPredDictFile (void)
 {
   String sPddlDictFile;
-  int object_questions = (config) "ir:object-questions";
-  int action_questions = (config) "ir:action-questions";
 
-  // Read the config to find which question-predicates to include
-	if(object_questions == 1 && action_questions == 1)
-	{
-		sPddlDictFile = (config)"pddl_dict_question_objectsActions_file";
-	}
-	else if (object_questions == 1 && action_questions != 1)
-	{
-	 	sPddlDictFile = (config)"pddl_dict_question_objects_file";
-	}
-	else if (object_questions != 1 && action_questions == 1)
-	{
-		sPddlDictFile = (config)"pddl_dict_question_actions_file";
-	}
-	else
-	{
-		sPddlDictFile = (config)"pddl_dict_file";
+  if (false == b_isQuestionPolicy) {
+  	int object_questions = (config) "ir:object-questions";
+  	int action_questions = (config) "ir:action-questions";
+	  // Read the config to find which question-predicates to include
+		if(object_questions == 1 && action_questions == 1)
+		{
+			sPddlDictFile = (config)"pddl_dict_question_objectsActions_file";
+		}
+		else if (object_questions == 1 && action_questions != 1)
+		{
+		 	sPddlDictFile = (config)"pddl_dict_question_objects_file";
+		}
+		else if (object_questions != 1 && action_questions == 1)
+		{
+			sPddlDictFile = (config)"pddl_dict_question_actions_file";
+		}
+		else
+		{
+			sPddlDictFile = (config)"pddl_dict_file";
+		}
+	} else {
+		sPddlDictFile = (config)"qp_ir:pddl_dict_file";
 	}
 
   cout << "    loading dict: " << sPddlDictFile << endl;
@@ -957,6 +1106,7 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 			pPred->dq_Parameters [i-1].SetValue (dqPred [i]);
 			setValueFI.insert (GetParameterValueFeatureIndex (dqPred [i]));
 		}
+		// QP TODO maybe vec_Question
 		pPred->vec_ParameterValueFeatureIndex.Create (setValueFI.size ());
 		int x = 0;
 		ITERATE (int_set_t, setValueFI, iteFI)
@@ -978,8 +1128,12 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 			= GetPredicateIdentityFeatureIndex (pPred->GetPddlString ());
 		pPred->i_PredicateNameFeatureIndex
 			= GetPredicateNameFeatureIndex (pPred->s_Name);
-		pPred->i_PredicateCandidateWithoutNumber
-			= GetPredicateWithoutNumberIndex (*pPred);
+
+
+    if (false == IsQuestion(pPred)) {
+      pPred->i_PredicateCandidateWithoutNumber
+        = GetPredicateWithoutNumberIndex (*pPred);
+    }
 
 
 		if (true == pPred->b_IsFunction)
@@ -1061,8 +1215,15 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 	return true;
 }
 
+
+bool SubgoalPolicy::IsQuestion(PddlPredicate* p_candidate) {
+  return 0 == p_candidate->s_Name.compare("question");
+}
+
+
 bool SubgoalPolicy::LoadAnswers (void) {
 
+	// QP TODO should we only use one file?
   String path = (config) "ir:text_connection_file"; 
  	if (f_UseSimpleConnectionFeatures > 0)
     {
@@ -1337,7 +1498,12 @@ void SubgoalPolicy::ComputeSequenceEndFeatures (int _iIndex,
 		Features* pFeatures = new Features;
 		pSubgoal->vec_SequenceEndFeatureVectors [e] = pFeatures;
 
-		size_t iFeatureCount = _rProblem.vec_InitPredicateIdentityFI.Size ();
+		size_t iFeatureCount;
+		if (true == b_isQuestionPolicy) {
+			iFeatureCount = _rProblem.vec_QuestionInitPredicateIdentityFI.Size ();
+		} else {
+			iFeatureCount = _rProblem.vec_InitPredicateIdentityFI.Size ();
+		}
 		pFeatures->SetSize (iFeatureCount);
 		// pFeatures->SetSize (1);
 
@@ -1345,9 +1511,17 @@ void SubgoalPolicy::ComputeSequenceEndFeatures (int _iIndex,
 		size_t iOffset = pNextSubgoal->p_PddlSubgoalPredicate->i_PredicateIdentityFeatureIndex
 						 * 2 * i_PredicateIdentities
 						 + e * i_PredicateIdentities;
-		SetFeatures (_rProblem.vec_InitPredicateIdentityFI,
+
+		// QP
+		if (true == b_isQuestionPolicy) {
+			SetFeatures (_rProblem.vec_QuestionInitPredicateIdentityFI,
 					 iOffset,
 					 pFeatures);
+		} else {
+			SetFeatures (_rProblem.vec_InitPredicateIdentityFI,
+					 iOffset,
+					 pFeatures);
+		}
 		/*
 		size_t iOffset = pNextSubgoal->p_PddlSubgoalPredicate->i_PredicateIdentityFeatureIndex
 						 + e * i_PredicateIdentities;
@@ -1370,6 +1544,32 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 											const Problem& _rProblem,
 											SubgoalSequence* _pSequence)
 {
+
+		const int_Vec_t* pVec_InitPredicateIdentityFI;
+		const int_Vec_t* pVec_InitPredicateNameFI;
+		const int_Vec_t* pVec_InitParameterValueFI;
+		const int_Vec_t* pVec_TargetPredicateIdentityFI;
+		const int_Vec_t* pVec_TargetPredicateNameFI;
+		const int_Vec_t* pVec_TargetParameterValueFI;
+
+		if (true == b_isQuestionPolicy) {
+			pVec_InitPredicateIdentityFI = & _rProblem.vec_QuestionInitPredicateIdentityFI;
+			pVec_InitPredicateNameFI = & _rProblem.vec_QuestionInitPredicateNameFI;
+			pVec_InitParameterValueFI = & _rProblem.vec_QuestionInitParameterValueFI;
+			pVec_TargetPredicateIdentityFI = & _rProblem.vec_QuestionTargetPredicateIdentityFI;
+			pVec_TargetPredicateNameFI = & _rProblem.vec_QuestionTargetPredicateNameFI;
+			pVec_TargetParameterValueFI = & _rProblem.vec_QuestionTargetParameterValueFI;
+		} else {
+			pVec_InitPredicateIdentityFI = & _rProblem.vec_InitPredicateIdentityFI;
+			pVec_InitPredicateNameFI = & _rProblem.vec_InitPredicateNameFI;
+			pVec_InitParameterValueFI = & _rProblem.vec_InitParameterValueFI;
+			pVec_TargetPredicateIdentityFI = & _rProblem.vec_TargetPredicateIdentityFI;
+			pVec_TargetPredicateNameFI = & _rProblem.vec_TargetPredicateNameFI;
+			pVec_TargetParameterValueFI = & _rProblem.vec_TargetParameterValueFI;
+		}
+
+
+
 	PddlProblem& rPddlProblem = ((Problem&)_rProblem).GetPddlProblem ();
 	Subgoal* pSubgoal = _pSequence->GetSubgoal (_iIndex);
 	pSubgoal->vec_SubgoalFeatureVectors.resize (i_CandidatePredicates);
@@ -1394,18 +1594,17 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 		int iCandidatePredicateParameters
 			= pCandidatePredicate->vec_ParameterValueFeatureIndex.Size ();
 
-
 		// set feature vector size ...		
 		size_t iFeatureCount = 2;
 		if (0 != f_NonConnectionFeatureImportance)
 		{
-			iFeatureCount += _rProblem.vec_InitPredicateNameFI.Size ()
-							 + _rProblem.vec_TargetPredicateNameFI.Size ()
-							 + _rProblem.vec_InitPredicateIdentityFI.Size ()
-							 + _rProblem.vec_TargetPredicateIdentityFI.Size ()
+			iFeatureCount += pVec_InitPredicateNameFI->Size ()
+							 + pVec_TargetPredicateNameFI->Size ()
+							 + pVec_InitPredicateIdentityFI->Size ()
+							 + pVec_TargetPredicateIdentityFI->Size ()
 							 + iCandidatePredicateParameters
-								* (_rProblem.vec_InitParameterValueFI.Size ()
-									+ _rProblem.vec_TargetParameterValueFI.Size ());
+								* (pVec_InitParameterValueFI->Size ()
+									+ pVec_TargetParameterValueFI->Size ());
 
 			for (size_t i = _iIndex + 1; i < _pSequence->dq_Subgoals.size (); ++ i)
 			{
@@ -1442,14 +1641,14 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 							 * 2 * i_PredicateNames;
 			if(true == b_IncludeInit)
 			{
-				SetFeatures (_rProblem.vec_InitPredicateNameFI,
+				SetFeatures (*pVec_InitPredicateNameFI,
 							 iOffset,
 							 pFeatures,
 							 f_NonConnectionFeatureImportance);
 			}
 			if (true == bIncludeTarget)
 			{
-				SetFeatures (_rProblem.vec_TargetPredicateNameFI,
+				SetFeatures (*pVec_TargetPredicateNameFI,
 							 iOffset + i_PredicateNames,
 							 pFeatures,
 							 fDistanceFactorToTarget * f_NonConnectionFeatureImportance);
@@ -1461,7 +1660,7 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 					  * 2 * i_PredicateIdentities;
 			if(true == b_IncludeInit)
 			{
-				SetFeatures (_rProblem.vec_InitPredicateIdentityFI,
+				SetFeatures (*pVec_InitPredicateIdentityFI,
 							 iOffset,
 							 pFeatures,
 							 f_PredicateIdentityPairFeatureWeight
@@ -1469,7 +1668,7 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 			}
 			if (true == bIncludeTarget)
 			{
-				SetFeatures (_rProblem.vec_TargetPredicateIdentityFI,
+				SetFeatures (*pVec_TargetPredicateIdentityFI,
 							 iOffset + i_PredicateIdentities,
 							 pFeatures,
 							 f_PredicateIdentityPairFeatureWeight
@@ -1485,7 +1684,7 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 						  * 2 * i_ParameterValues;
 				if(true == b_IncludeInit)
 				{
-					SetFeatures (_rProblem.vec_InitParameterValueFI,
+					SetFeatures (*pVec_InitParameterValueFI,
 								 iOffset,
 								 pFeatures,
 								 f_NonConnectionFeatureImportance);
@@ -1493,7 +1692,7 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 
 				if (true == bIncludeTarget)
 				{
-					SetFeatures (_rProblem.vec_TargetParameterValueFI,
+					SetFeatures (*pVec_TargetParameterValueFI,
 								 iOffset + i_ParameterValues,
 								 pFeatures,
 								 fDistanceFactorToTarget * f_NonConnectionFeatureImportance);
@@ -1729,6 +1928,12 @@ size_t SubgoalPolicy::SampleSequenceEnd (int _iSubgoalIndex,
 	return SampleDecision (_rLogProb, o_SequenceEndExploration, _bTestMode);
 }
 
+// QP
+void SubgoalPolicy::SampleZeroQuestionSequence (const Problem& _rProblem,
+											   SubgoalSequence* _pSequence)
+{
+	SampleZeroSubgoalSequence (_rProblem, _pSequence);
+}
 
 //													
 void SubgoalPolicy::SampleZeroSubgoalSequence (const Problem& _rProblem,
@@ -1873,8 +2078,10 @@ void SubgoalPolicy::SampleSubgoalTestSequence(const Problem& _rProblem,
           if(false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
             //TODO cout error, throw error type behavior
           }
-          LoadAnswers();// TODO: See board for hard task
-          SampleConnections(false);
+          if (false == b_isQuestionPolicy) {
+	          LoadAnswers();// TODO: See board for hard task
+	          SampleConnections(false);
+	        }
       }
 
       _pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
@@ -1884,13 +2091,22 @@ void SubgoalPolicy::SampleSubgoalTestSequence(const Problem& _rProblem,
 //Query IR system with question and update Connection set as a result.											
 // TODO: Add Answer Type param
 bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
-  if (false == o_IR.SendQuestion(s_QuestionType, s_QuestionQuery)) {
+  if (false == p_IR->SendQuestion(s_QuestionType, s_QuestionQuery)) {
     return false;
   }
   char sResponse[256];
-  o_IR.ReceiveMessage(sResponse, 255);
+  p_IR->ReceiveMessage(sResponse, 255);
   return true;
 }
+
+// QP
+// QP TODO maybe remove sequence end model!!
+void SubgoalPolicy::SampleQuestionSequence (const Problem& _rProblem,
+										   bool _bTestMode,
+										   SubgoalSequence* _pSequence) {
+	return SampleSubgoalSequence (_rProblem, _bTestMode, _pSequence);
+}
+
 void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 										   bool _bTestMode,
 										   SubgoalSequence* _pSequence)
@@ -1906,6 +2122,7 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 
 	// we first need the last subgoal to reach the actual target goal...
 	AddLastSubgoal (_rProblem, _pSequence);
+	
 
 	// Sample subgoals...			
 	bool bAlreadyAddedSequenceEnd = false;
@@ -1989,8 +2206,10 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
           if (false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
           	cout << "The IR has failed" << endl;
           }
-          LoadAnswers();// TODO: See board for hard task
-          SampleConnections(false);
+          if (false == b_isQuestionPolicy) {
+	          LoadAnswers();// TODO: See board for hard task
+	          SampleConnections(false);
+	        }
     }
 
 		_pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
@@ -2105,6 +2324,13 @@ void SubgoalPolicy::InitUpdate (void)
 										o_SubgoalFeatureSpace.MaxIndex () + 1);
 }
 
+// QP
+void SubgoalPolicy::UpdateQuestionParameters (SubgoalSequence& _rSequence,
+									  double _dReward,
+									  bool _bTaskComplete,
+									  bool _bWithConnections) {
+	return UpdateParameters (_rSequence, _dReward, _bTaskComplete, _bWithConnections);
+}
 
 //													
 void SubgoalPolicy::UpdateParameters (SubgoalSequence& _rSequence,
@@ -2132,7 +2358,8 @@ void SubgoalPolicy::UpdateParameters (SubgoalSequence& _rSequence,
 
 
 	// connection prediction model...	
-	if ((f_UseTextConnectionFeatures > 0) && (true == _bWithConnections))
+	if ((f_UseTextConnectionFeatures > 0) && (true == _bWithConnections) 
+		&& false == b_isQuestionPolicy)
 	{
 		int_set_t setPreviousSubgoals;
 		size_t iSequenceLength = _rSequence.dq_Subgoals.size ();
@@ -2960,4 +3187,13 @@ void SubgoalPolicy::clearAnswers ()
 	std::ofstream ofs ((config)"ir:text_connection_file", std::ofstream::out);
   	ofs << "";
   	ofs.close();
+}
+
+void SubgoalPolicy::loadConnectionWeights(double_Vec_t	vec_subgoalPolicy_Weights)
+{
+	o_TextConnectionModel.vec_Weights = vec_subgoalPolicy_Weights;
+}
+
+double_Vec_t SubgoalPolicy::getConnectionWeights() {
+	return o_TextConnectionModel.vec_Weights;
 }
