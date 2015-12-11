@@ -1,0 +1,124 @@
+0|1|action grow-wheatgrass
+1|1|action get-harvest-egg
+2|1|action craft-fence
+3|1|action change-harvest-loc
+4|1|action get-harvest-seeds
+5|1|action craft-bucket
+6|1|action move
+7|1|action make-bread
+8|1|action craft-ironbar
+9|1|action get-harvest-brown-mushroom
+10|1|action craft-chest
+11|1|action get-harvest-sandstone
+12|1|action craft-wood-axe
+13|1|action craft-ladder
+14|1|action make-wool
+15|1|action craft-bonemeal
+16|1|action craft-stone-brick
+17|1|action craft-fishingrod
+18|1|action craft-wood-shovel
+19|1|action harvest
+20|1|action craft-wood-door
+21|1|action craft-wood-stick
+22|1|action craft-wood-pickaxe
+23|1|action craft-wood-hoe
+24|1|action furnace-smelt-iron
+25|1|action harvest-loose-tool
+26|1|action craft-clayblock
+27|1|action grow-tallgrass
+28|1|action furnace-fire-brick
+29|1|action get-harvest-wheat
+30|1|action get-harvest-wool
+31|1|action get-harvest-bone
+32|1|action get-harvest-milk
+33|1|action get-harvest-wood
+34|1|action craft-stonebrick-stairs
+35|1|action get-harvest-coal
+36|1|action furnace-make-charcoal
+37|1|action get-harvest-clay
+38|1|action get-harvest-ironore
+39|1|action craft-stone-stairs
+40|1|action craft-bed
+41|1|action craft-shears
+42|1|action get-harvest-string
+43|1|action craft-brick-stairs
+44|1|action make-paper
+45|1|action craft-wood-plank
+46|1|action change-harvest-tool
+47|1|action make-mushroomstew-1
+48|1|action craft-furnace
+49|1|action make-farmland
+50|1|action furnace-cook-fish
+51|1|action craft-torch
+52|1|action get-harvest-red-mushroom
+53|1|action get-harvest-sugarcane
+54|1|action craft-iron-door
+55|1|action craft-brick
+56|1|action place-on-map
+57|1|action craft-glasspane
+58|1|action furnace-make-glass
+59|1|action place
+60|1|action get-harvest-stone
+61|1|action make-mushroomstew-2
+62|1|action craft-sandstone
+63|1|action get-harvest-fish
+64|1|action craft-bowl
+65|1|action make-sugar
+66|1|action craft-wood-stairs
+67|1|action get-harvest-sand
+68|1|thing-available shears question
+69|1|thing-available bowl question
+70|1|thing-available paper question
+71|1|thing-available milk question
+72|1|thing-available brick-stairs question
+73|1|thing-available red-mushroom question
+74|1|thing-available stone-stairs question
+75|1|thing-available sugar question
+76|1|thing-available wood question
+77|1|thing-available stonebrick question
+78|1|thing-available brick question
+79|1|thing-available wool question
+80|1|thing-available bonemeal question
+81|1|thing-available string question
+82|1|thing-available fishingrod question
+83|1|thing-available wood-hoe question
+84|1|thing-available glass question
+85|1|thing-available stick question
+86|1|thing-available wood-shovel question
+87|1|thing-available wood-stairs question
+88|1|thing-available bread question
+89|1|thing-available iron-door question
+90|1|thing-available claybrick question
+91|1|thing-available bucket question
+92|1|thing-available bed question
+93|1|thing-available sand question
+94|1|thing-available iron question
+95|1|thing-available clay question
+96|1|thing-available bone question
+97|1|thing-available fence question
+98|1|thing-available fish question
+99|1|thing-available torch question
+100|1|thing-available glasspane question
+101|1|thing-available clayblock question
+102|1|thing-available wood-axe question
+103|1|thing-available brown-mushroom question
+104|1|thing-available sandstone question
+105|1|thing-available chest question
+106|1|thing-available mushroomstew question
+107|1|thing-available fornace-fuel question
+108|1|thing-available furnace question
+109|1|thing-available wood-door question
+110|1|thing-available ironbar question
+111|1|thing-available wheat question
+112|1|thing-available ladder question
+113|1|thing-available hand question
+114|1|thing-available wood-pickaxe question
+115|1|thing-available cut-sugarcane question
+116|1|thing-available cookedfish question
+117|1|thing-available plank question
+118|1|thing-available stone question
+119|1|thing-available ironore question
+120|1|thing-available coal question
+121|1|thing-available seeds question
+122|1|thing-available stonebrick-stairs question
+123|1|thing-available egg question
