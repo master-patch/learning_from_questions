@@ -315,6 +315,7 @@ class SubgoalPolicy
 		bool LoadFeatureConnectionFile (String filepath, bool update);
     bool LoadAnswers(void);
     bool LoadPredDictFile (void);
+    bool IsQuestion(PddlPredicate* p_candidate);
 
 		void LoadGoldLengthFile (void);
 		void LoadFeaturesToDebugPrintFile(void);

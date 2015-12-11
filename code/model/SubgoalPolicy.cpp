@@ -1126,8 +1126,12 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 			= GetPredicateIdentityFeatureIndex (pPred->GetPddlString ());
 		pPred->i_PredicateNameFeatureIndex
 			= GetPredicateNameFeatureIndex (pPred->s_Name);
-		pPred->i_PredicateCandidateWithoutNumber
-			= GetPredicateWithoutNumberIndex (*pPred);
+
+
+    if (false == IsQuestion(pPred)) {
+      pPred->i_PredicateCandidateWithoutNumber
+        = GetPredicateWithoutNumberIndex (*pPred);
+    }
 
 
 		if (true == pPred->b_IsFunction)
@@ -1208,6 +1212,12 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 
 	return true;
 }
+
+
+bool SubgoalPolicy::IsQuestion(PddlPredicate* p_candidate) {
+  return 0 == p_candidate->s_Name.compare("question");
+}
+
 
 bool SubgoalPolicy::LoadAnswers (void) {
 
