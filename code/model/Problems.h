@@ -36,6 +36,13 @@ class Problem
 		int_Vec_t			vec_TargetPredicateNameFI;
 		int_Vec_t			vec_TargetParameterValueFI;
 
+		int_Vec_t			vec_QuestionInitPredicateIdentityFI;
+		int_Vec_t			vec_QuestionInitPredicateNameFI;
+		int_Vec_t			vec_QuestionInitParameterValueFI;
+		int_Vec_t			vec_QuestionTargetPredicateIdentityFI;
+		int_Vec_t			vec_QuestionTargetPredicateNameFI;
+		int_Vec_t			vec_QuestionTargetParameterValueFI;
+
 		//									
 		Problem (String& _rProblem, String& _rFileName);
 		~Problem (void);

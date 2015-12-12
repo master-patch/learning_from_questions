@@ -17,7 +17,6 @@ typedef vector<Features*>	Features_vec_t;
 class LogLinearModel
 {
 	private:
-		double_Vec_t		vec_Weights;
 		int					i_Features;
 		double				d_LearningRate;
 		double				d_RegularizationFactor;
@@ -26,6 +25,7 @@ class LogLinearModel
 		void CheckForNan (const char* _zId);
 
 	public:
+		double_Vec_t		vec_Weights;
 		LogLinearModel (void);
 		~LogLinearModel (void);
 
