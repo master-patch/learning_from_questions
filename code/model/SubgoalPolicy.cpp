@@ -1545,49 +1545,51 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 											SubgoalSequence* _pSequence)
 {
 
-		const int_Vec_t* pVec_InitPredicateIdentityFI;
-		const int_Vec_t* pVec_InitPredicateNameFI;
-		const int_Vec_t* pVec_InitParameterValueFI;
-		const int_Vec_t* pVec_TargetPredicateIdentityFI;
-		const int_Vec_t* pVec_TargetPredicateNameFI;
-		const int_Vec_t* pVec_TargetParameterValueFI;
+	const int_Vec_t* pVec_InitPredicateIdentityFI;
+	const int_Vec_t* pVec_InitPredicateNameFI;
+	const int_Vec_t* pVec_InitParameterValueFI;
+	const int_Vec_t* pVec_TargetPredicateIdentityFI;
+	const int_Vec_t* pVec_TargetPredicateNameFI;
+	const int_Vec_t* pVec_TargetParameterValueFI;
 
-		if (true == b_isQuestionPolicy) {
-			pVec_InitPredicateIdentityFI = & _rProblem.vec_QuestionInitPredicateIdentityFI;
-			pVec_InitPredicateNameFI = & _rProblem.vec_QuestionInitPredicateNameFI;
-			pVec_InitParameterValueFI = & _rProblem.vec_QuestionInitParameterValueFI;
-			pVec_TargetPredicateIdentityFI = & _rProblem.vec_QuestionTargetPredicateIdentityFI;
-			pVec_TargetPredicateNameFI = & _rProblem.vec_QuestionTargetPredicateNameFI;
-			pVec_TargetParameterValueFI = & _rProblem.vec_QuestionTargetParameterValueFI;
-		} else {
-			pVec_InitPredicateIdentityFI = & _rProblem.vec_InitPredicateIdentityFI;
-			pVec_InitPredicateNameFI = & _rProblem.vec_InitPredicateNameFI;
-			pVec_InitParameterValueFI = & _rProblem.vec_InitParameterValueFI;
-			pVec_TargetPredicateIdentityFI = & _rProblem.vec_TargetPredicateIdentityFI;
-			pVec_TargetPredicateNameFI = & _rProblem.vec_TargetPredicateNameFI;
-			pVec_TargetParameterValueFI = & _rProblem.vec_TargetParameterValueFI;
-		}
-
+	pVec_InitPredicateIdentityFI = & _rProblem.vec_InitPredicateIdentityFI;
+	pVec_InitPredicateNameFI = & _rProblem.vec_InitPredicateNameFI;
+	pVec_InitParameterValueFI = & _rProblem.vec_InitParameterValueFI;
+	pVec_TargetPredicateIdentityFI = & _rProblem.vec_TargetPredicateIdentityFI;
+	pVec_TargetPredicateNameFI = & _rProblem.vec_TargetPredicateNameFI;
+	pVec_TargetParameterValueFI = & _rProblem.vec_TargetParameterValueFI;
 
 
 	PddlProblem& rPddlProblem = ((Problem&)_rProblem).GetPddlProblem ();
+	// QP-1 TODO conditional on how we implement question sample seq
 	Subgoal* pSubgoal = _pSequence->GetSubgoal (_iIndex);
 	pSubgoal->vec_SubgoalFeatureVectors.resize (i_CandidatePredicates);
 
-	int iSubgoals = (int)_pSequence->dq_Subgoals.size ();
-	// include the target 
-	bool bIncludeTarget = (!b_UseOnlyPreviousSubgoal || (_iIndex == iSubgoals-1));
-	size_t iEndSubgoal = b_UseOnlyPreviousSubgoal ? min(iSubgoals,_iIndex+2) : iSubgoals;
+	int iSubgoals;
+	bool bIncludeTarget;
+	size_t iEndSubgoal;
+	float fDistanceFactorToTarget;
+	if (true == b_isQuestionPolicy) {
+		iSubgoals = 1;
+		bIncludeTarget = true;
+		fDistanceFactorToTarget = 1;
+	} else {
+		iSubgoals = (int)_pSequence->dq_Subgoals.size ();
+		bIncludeTarget = (!b_UseOnlyPreviousSubgoal || (_iIndex == iSubgoals-1));
+		iEndSubgoal = b_UseOnlyPreviousSubgoal ? min(iSubgoals,_iIndex+2) : iSubgoals;
+		fDistanceFactorToTarget = DistanceScore (_pSequence->Length () - _iIndex)
+	}	
 
-
-	float fDistanceFactorToTarget = DistanceScore (_pSequence->Length () - _iIndex);
 	for (int c = 0; c < i_CandidatePredicates; ++ c)
 	{
 		const PddlPredicate* pCandidatePredicate = vec_CandidatePredicates [c];
+
 		int iReachableSubgoal = 0;
-		if ((true == b_UseReachableSubgoalFeature) &&
-			(true == b_UseComplexNonConnectionFeatures))
-			iReachableSubgoal = (int) vec_CanReachCandidatePredicate [c];
+		if (false == b_isQuestionPolicy) {
+			if ((true == b_UseReachableSubgoalFeature) &&
+				(true == b_UseComplexNonConnectionFeatures))
+					iReachableSubgoal = (int) vec_CanReachCandidatePredicate [c];
+		}
 		Features* pFeatures = new Features;
 		pSubgoal->vec_SubgoalFeatureVectors [c] = pFeatures;
 
@@ -1639,6 +1641,7 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 			size_t iOffset = i_OffsetToPredicateNameFeatures
 							 + pCandidatePredicate->i_PredicateNameFeatureIndex
 							 * 2 * i_PredicateNames;
+
 			if(true == b_IncludeInit)
 			{
 				SetFeatures (*pVec_InitPredicateNameFI,
@@ -1700,41 +1703,44 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 			}
 
 
+			// QP
 			// features to other subgoals ...	
-			for (size_t i = _iIndex + 1; i < iEndSubgoal; ++ i)
-			{
-				Subgoal& rSubgoal = _pSequence->dq_Subgoals [i];
-				PddlPredicate* pSubgoalPredicate = rSubgoal.p_PddlSubgoalPredicate;
-				float fDistanceFactor = f_NonConnectionFeatureImportance * DistanceScore (i - _iIndex);
-
-				// predicate name...	
-				iOffset = i_OffsetToPredicateNameFeatures
-						  + pCandidatePredicate->i_PredicateNameFeatureIndex
-						  * 2 * i_PredicateNames + i_PredicateNames;
-				pFeatures->Set (iOffset + pSubgoalPredicate->i_PredicateNameFeatureIndex, 
-								fDistanceFactor,
-								false);
-
-				// predicate identity...
-				iOffset = i_OffsetToPredicateIdentityFeatures
-						  + pCandidatePredicate->i_PredicateIdentityFeatureIndex
-						  * 2 * i_PredicateIdentities + i_PredicateIdentities;
-				pFeatures->Set (iOffset + pSubgoalPredicate->i_PredicateIdentityFeatureIndex,
-								f_PredicateIdentityPairFeatureWeight * fDistanceFactor,
-								false);
-
-				// parameter values...	
-				for (int v = 0; v < iCandidatePredicateParameters; ++ v)
+			if (false == b_isQuestionPolicy) {
+				for (size_t i = _iIndex + 1; i < iEndSubgoal; ++ i)
 				{
-					iOffset = i_OffsetToParameterValueFeatures
-							  + pCandidatePredicate->vec_ParameterValueFeatureIndex [v]
-							  * 2 * i_ParameterValues + i_ParameterValues;
+					Subgoal& rSubgoal = _pSequence->dq_Subgoals [i];
+					PddlPredicate* pSubgoalPredicate = rSubgoal.p_PddlSubgoalPredicate;
+					float fDistanceFactor = f_NonConnectionFeatureImportance * DistanceScore (i - _iIndex);
 
-					SetFeatures (pSubgoalPredicate->vec_ParameterValueFeatureIndex,
-								 iOffset,
-								 pFeatures,
-								 fDistanceFactor,
-								 false);
+					// predicate name...	
+					iOffset = i_OffsetToPredicateNameFeatures
+							  + pCandidatePredicate->i_PredicateNameFeatureIndex
+							  * 2 * i_PredicateNames + i_PredicateNames;
+					pFeatures->Set (iOffset + pSubgoalPredicate->i_PredicateNameFeatureIndex, 
+									fDistanceFactor,
+									false);
+
+					// predicate identity...
+					iOffset = i_OffsetToPredicateIdentityFeatures
+							  + pCandidatePredicate->i_PredicateIdentityFeatureIndex
+							  * 2 * i_PredicateIdentities + i_PredicateIdentities;
+					pFeatures->Set (iOffset + pSubgoalPredicate->i_PredicateIdentityFeatureIndex,
+									f_PredicateIdentityPairFeatureWeight * fDistanceFactor,
+									false);
+
+					// parameter values...	
+					for (int v = 0; v < iCandidatePredicateParameters; ++ v)
+					{
+						iOffset = i_OffsetToParameterValueFeatures
+								  + pCandidatePredicate->vec_ParameterValueFeatureIndex [v]
+								  * 2 * i_ParameterValues + i_ParameterValues;
+
+						SetFeatures (pSubgoalPredicate->vec_ParameterValueFeatureIndex,
+									 iOffset,
+									 pFeatures,
+									 fDistanceFactor,
+									 false);
+					}
 				}
 			}
 		}
@@ -1748,6 +1754,8 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 				bool bHaveConnToInit = false;
 				// connection distance to init state.
 				Matrix <char,1> mtxSliceFrom;
+
+				// QP-1 TODO connection features ?
 				mtxSliceFrom.GetSlice (mtx_PredicateConnectionsToFrom,
 									   pCandidatePredicate->i_PredicateCandidateIndex);
 
@@ -1799,22 +1807,25 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 			}
 
 
+			// QP
 			// connection distance to future subgoals.
 			bool bHaveConnToFuture = false;
-			for (size_t s = _iIndex + 1; s < iEndSubgoal; ++ s)
-			{
-				Subgoal* pNextSubgoal = _pSequence->GetSubgoal (s);
-				int iNextPredicate = pNextSubgoal->p_PddlSubgoalPredicate->i_PredicateCandidateIndex;
-				if (0 == mtxSliceTo (iNextPredicate))
-					continue;
-				int iDistance = s - _iIndex;
-				if (iDistance > 2)
-					break;
+			if (b_isQuestionPolicy) {
+				for (size_t s = _iIndex + 1; s < iEndSubgoal; ++ s)
+				{
+					Subgoal* pNextSubgoal = _pSequence->GetSubgoal (s);
+					int iNextPredicate = pNextSubgoal->p_PddlSubgoalPredicate->i_PredicateCandidateIndex;
+					if (0 == mtxSliceTo (iNextPredicate))
+						continue;
+					int iDistance = s - _iIndex;
+					if (iDistance > 2)
+						break;
 
-				size_t iOffset = 2 * (iDistance - 1) + i_OffsetToConnectionFeatures;
-				pFeatures->Set (5 + iOffset, 1, false);
-				pFeatures->Set (6 + iOffset, iReachableSubgoal, false);
-				bHaveConnToFuture = true;
+					size_t iOffset = 2 * (iDistance - 1) + i_OffsetToConnectionFeatures;
+					pFeatures->Set (5 + iOffset, 1, false);
+					pFeatures->Set (6 + iOffset, iReachableSubgoal, false);
+					bHaveConnToFuture = true;
+				}
 			}
 
 			if (false == bHaveConnToFuture)
