@@ -230,7 +230,6 @@ class SubgoalPolicy
 		PddlStringToPredicate_map_t	map_PddlStringToCandidatePredicate;
 		PddlPredicate_vec_t			vec_CandidatePredicates;
 		char_vec_t					vec_CanReachCandidatePredicate;
-    String_int_map_t map_QuestionAnswerPairs;
 		Matrix <char,2>	mtx_PredicateConnectionsFromTo;
 		Matrix <char,2>	mtx_PredicateConnectionsToFrom;
 		Matrix <int_dq_t*,2>	mtx_SentencesPositiveFromTo;
@@ -314,6 +313,7 @@ class SubgoalPolicy
 		bool LoadFeatureConnectionFile (String filepath, bool update);
     bool LoadAnswers(void);
     bool LoadPredDictFile (void);
+    bool IsQuestion(PddlPredicate* p_candidate);
 
 		void LoadGoldLengthFile (void);
 		void LoadFeaturesToDebugPrintFile(void);

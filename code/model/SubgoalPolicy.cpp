@@ -978,8 +978,12 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 			= GetPredicateIdentityFeatureIndex (pPred->GetPddlString ());
 		pPred->i_PredicateNameFeatureIndex
 			= GetPredicateNameFeatureIndex (pPred->s_Name);
-		pPred->i_PredicateCandidateWithoutNumber
-			= GetPredicateWithoutNumberIndex (*pPred);
+
+
+    if (false == IsQuestion(pPred)) {
+      pPred->i_PredicateCandidateWithoutNumber
+        = GetPredicateWithoutNumberIndex (*pPred);
+    }
 
 
 		if (true == pPred->b_IsFunction)
@@ -1060,6 +1064,12 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 
 	return true;
 }
+
+
+bool SubgoalPolicy::IsQuestion(PddlPredicate* p_candidate) {
+  return 0 == p_candidate->s_Name.compare("question");
+}
+
 
 bool SubgoalPolicy::LoadAnswers (void) {
 
@@ -1884,15 +1894,11 @@ void SubgoalPolicy::SampleSubgoalTestSequence(const Problem& _rProblem,
 //Query IR system with question and update Connection set as a result.											
 // TODO: Add Answer Type param
 bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
-  if (1 == this->map_QuestionAnswerPairs[s_QuestionType + s_QuestionQuery]) {
-    return true;
-  }
   if (false == o_IR.SendQuestion(s_QuestionType, s_QuestionQuery)) {
     return false;
   }
   char sResponse[256];
   o_IR.ReceiveMessage(sResponse, 255);
-  this->map_QuestionAnswerPairs[s_QuestionType + s_QuestionQuery] = 1;
   return true;
 }
 void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
@@ -2960,8 +2966,6 @@ void SubgoalPolicy::TestQA ()
 
 void SubgoalPolicy::clearAnswers ()
 {
-	// Clear QA cache
-	this->map_QuestionAnswerPairs.clear();
 	// format the file text_connection
 	std::ofstream ofs ((config)"ir:text_connection_file", std::ofstream::out);
   	ofs << "";
