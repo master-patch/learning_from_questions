@@ -100,8 +100,15 @@ bool SubgoalLearner::Init (void)
 	if (false == o_SubgoalPolicy.Init (false, &o_IR))
 		return false;
 
-	if ((config)"qp" != -1 && false == o_QuestionPolicy.Init (true, &o_IR))
-		return false;
+	if ((config)"qp" != -1 ){
+    if (true == o_QuestionPolicy.Init (true, &o_IR)) {
+      o_QuestionPolicy.SetSubgoalPolicy( &o_SubgoalPolicy);
+    } else {
+      return false;
+    }
+  }
+  //Passing Question Policy subgoal predicates so it can condition on subgoals
+
 
 	o_FFInterface.SetCallback (this);
 	if (false == o_FFInterface.Connect ())
@@ -884,13 +891,27 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 			else {
 				if ((config)"qp" != -1) {
 					// QP this time sample questions not subgoals
-					o_QuestionPolicy.SampleQuestionSequence (*pProblem,
-													   _bTestMode,
-													   pQuestionSequence);
-				}
-				o_SubgoalPolicy.SampleSubgoalSequence (*pProblem,
+
+        o_SubgoalPolicy.SampleSubgoalSequence (*pProblem,
 													   _bTestMode,
 													   pSequence);
+
+        //Set feature size of for [Init Problem Target (S S S S  + padding)]
+        //Maybe wrong place to this 
+        o_SubgoalPolicy.ComputeAllSubgoalFeatures(*pProblem, pSequence);
+        //Somehow extract the size of this and pass use the actual features in question model
+
+        size_t featureSize = 0;
+        //Clean up pFV
+
+        o_QuestionPolicy.SetSubgoalsFeaturesSize(featureSize);
+
+        //Now computing subgoal features should be [all subgoal features] + q feature
+        o_QuestionPolicy.SampleQuestionSequence (*pProblem,
+                                                 _bTestMode,
+                                                 pQuestionSequence);
+				}
+			
 			}
 
 			// QP Here we don't do further operations on pQuestionSequence

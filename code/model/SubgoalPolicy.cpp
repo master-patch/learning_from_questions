@@ -616,6 +616,18 @@ bool SubgoalPolicy::Init (bool question, IR* _pIR)
 	return true;
 }
 
+// QA 
+void SubgoalPolicy::SetSubgoalPolicy( SubgoalPolicy*  _pSubgoalPolicy) {
+  p_SubgoalPolicy = _pSubgoalPolicy;
+}
+
+// QA
+
+void SubgoalPolicy::SetSubgoalsFeaturesSize( size_t size) {
+  // TODO Set feature size of question_model
+  // This is max_subgoals * num subgoals + features for 1 question
+}
+
 
 //													
 void SubgoalPolicy::LoadFeaturesToDebugPrintFile(void)
@@ -1538,12 +1550,56 @@ void SubgoalPolicy::ComputeSequenceEndFeatures (int _iIndex,
 	}
 }
 
+// QA
+void SubgoalPolicy::ComputeQuestionFeatures(int _iIndex,
+                                            const Problem& _rProblem,
+                                            SubgoalSequence* _pQuestionSequence) {
+  // TODO Get array of all subgoal features
+  // (S S S S S) <- pad this with 0s till reaches Max_Plan_length
+
+  // This can be done by calling from learner or trying to access SubgoalPolicy directly
+  //Function is ComputeAllSubgoalFeatures
+
+  // TODO Get Question features from produces HMPs
+  // See how this is done in ComputeSubgoalFeatures
+
+
+  //Construct Features with calls to Set Feature
+  //Might have to write a new helper to take an existing array
+
+  // set *pFV for the question predicate
+
+}
+
+// QA Return pFV of all subgoal features. aka (S S S S S)
+void SubgoalPolicy::ComputeAllSubgoalFeatures(const Problem& _rProblem,
+                                              SubgoalSequence* _pSequence) {
+  // implementation notes. Basically run ComputeSubgoalFeatures but instead of adding 1 subgoal feature,
+  //add it for all subgoals in pSequence
+  //There are features about subgoal to subgoal interaction I think we shouldnt include
+  //Only  because i have no idea wtf they mean.
+  //Can implement this by adding a bool flag to computeSubgoalFeatures to say (all or not all)
+  //And just on the part it does a single subgoal stuff, do the for loop
+
+  //This should probably return the array directly
+  //We can then use this things size to init the size of the feature space
+  //for the other QuestionPolicy
+}
 
 //													
 void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
-											const Problem& _rProblem,
-											SubgoalSequence* _pSequence)
+                                            const Problem& _rProblem,
+                                            SubgoalSequence* _pSequence)
 {
+  // (S) (S) (S) S S
+  // Modifying FeatureSpace Size to account for features of actual question
+
+  // (S S S S S S)
+  // Then you can't call this function without really modifying it.
+  // That's what i was saying
+  // We need fixed size vectors to a learn a theta
+  // Size = size of all subgoal features + question features
+  // Size = (S S S S S S) Q
 
 		const int_Vec_t* pVec_InitPredicateIdentityFI;
 		const int_Vec_t* pVec_InitPredicateNameFI;
@@ -1552,21 +1608,13 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 		const int_Vec_t* pVec_TargetPredicateNameFI;
 		const int_Vec_t* pVec_TargetParameterValueFI;
 
-		if (true == b_isQuestionPolicy) {
-			pVec_InitPredicateIdentityFI = & _rProblem.vec_QuestionInitPredicateIdentityFI;
-			pVec_InitPredicateNameFI = & _rProblem.vec_QuestionInitPredicateNameFI;
-			pVec_InitParameterValueFI = & _rProblem.vec_QuestionInitParameterValueFI;
-			pVec_TargetPredicateIdentityFI = & _rProblem.vec_QuestionTargetPredicateIdentityFI;
-			pVec_TargetPredicateNameFI = & _rProblem.vec_QuestionTargetPredicateNameFI;
-			pVec_TargetParameterValueFI = & _rProblem.vec_QuestionTargetParameterValueFI;
-		} else {
-			pVec_InitPredicateIdentityFI = & _rProblem.vec_InitPredicateIdentityFI;
-			pVec_InitPredicateNameFI = & _rProblem.vec_InitPredicateNameFI;
-			pVec_InitParameterValueFI = & _rProblem.vec_InitParameterValueFI;
-			pVec_TargetPredicateIdentityFI = & _rProblem.vec_TargetPredicateIdentityFI;
-			pVec_TargetPredicateNameFI = & _rProblem.vec_TargetPredicateNameFI;
-			pVec_TargetParameterValueFI = & _rProblem.vec_TargetParameterValueFI;
-		}
+
+    pVec_InitPredicateIdentityFI = & _rProblem.vec_InitPredicateIdentityFI;
+    pVec_InitPredicateNameFI = & _rProblem.vec_InitPredicateNameFI;
+    pVec_InitParameterValueFI = & _rProblem.vec_InitParameterValueFI;
+    pVec_TargetPredicateIdentityFI = & _rProblem.vec_TargetPredicateIdentityFI;
+    pVec_TargetPredicateNameFI = & _rProblem.vec_TargetPredicateNameFI;
+    pVec_TargetParameterValueFI = & _rProblem.vec_TargetParameterValueFI;
 
 
 
@@ -1610,6 +1658,7 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 			{
 				Subgoal& rSubgoal = _pSequence->dq_Subgoals [i];
 				PddlPredicate* pSubgoalPredicate = rSubgoal.p_PddlSubgoalPredicate;
+        // QP Use vec_ParameterValueFeatreuIndex for each subgoal
 				iFeatureCount += 2 + pSubgoalPredicate->vec_ParameterValueFeatureIndex.Size ();
 			}
 		}
@@ -2104,7 +2153,9 @@ bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
 void SubgoalPolicy::SampleQuestionSequence (const Problem& _rProblem,
 										   bool _bTestMode,
 										   SubgoalSequence* _pSequence) {
-	return SampleSubgoalSequence (_rProblem, _bTestMode, _pSequence);
+  //Just do a for loop while less than max length
+  //replicate second half of functionality for sample subgoal sequence
+  SampleSubgoalSequence (_rProblem, _bTestMode, _pSequence);
 }
 
 void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,

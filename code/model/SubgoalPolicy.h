@@ -230,7 +230,8 @@ class SubgoalPolicy
 
 
 		PddlStringToPredicate_map_t	map_PddlStringToCandidatePredicate;
-		PddlPredicate_vec_t			vec_CandidatePredicates;
+    PddlPredicate_vec_t     vec_CandidatePredicates;
+    SubgoalPolicy*       p_SubgoalPolicy;
 		char_vec_t					vec_CanReachCandidatePredicate;
 		Matrix <char,2>	mtx_PredicateConnectionsFromTo;
 		Matrix <char,2>	mtx_PredicateConnectionsToFrom;
@@ -305,9 +306,17 @@ class SubgoalPolicy
 		int GetParameterValueFeatureIndex (const String& _rValue);
 
 		void ComputeSubgoalFeatures (int _iIndex,
-									 const Problem& _rProblem,
-									 SubgoalSequence* _pSequence);
-		void ComputeSequenceEndFeatures (int _iIndex,
+                                 const Problem& _rProblem,
+                                 SubgoalSequence* _pSequence);
+
+    void ComputeAllSubgoalFeatures(const Problem& _rProblem,
+                                 SubgoalSequence* _pSequence);
+
+		void ComputeQuestionFeatures (int _iIndex,
+                                  const Problem& _rProblem,
+                                  SubgoalSequence* _pSequence);
+
+    void ComputeSequenceEndFeatures (int _iIndex,
 										 const Problem& _rProblem,
 										 SubgoalSequence* _pSequence);
 
@@ -331,6 +340,8 @@ class SubgoalPolicy
 							 SubgoalSequence* _pSequence);
 		void AddForcedSequenceEnd (const Problem& _rProblem,
 								   SubgoalSequence* _pSequence);
+    void SetSubgoalPolicy (SubgoalPolicy* p_SubgoalPolicy);
+    void SetSubgoalsFeaturesSize(size_t size);
 		inline size_t SampleDecision (LogProbability& _rLogProb,
 									  ExplorationParameters& _rExploration,
 									  bool _bTestMode);
