@@ -1918,7 +1918,13 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
     //Parse Question type and query from question
     String s_QuestionType = "object";
     size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
-    String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
+    String s_QuestionQuery;
+
+    if(0 == s_QuestionString.compare("furnace-fuel")) {
+      s_QuestionQuery = "furnace";
+    } else {
+      s_QuestionQuery = dq_QuestionArgs[1];
+    }
 
     if (false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
       cout << "The IR has failed" << endl;
