@@ -1917,7 +1917,6 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
     s_QuestionString.Split(dq_QuestionArgs, ' ');
     //Parse Question type and query from question
     String s_QuestionType = "object";
-    size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
     String s_QuestionQuery;
 
     if(0 == s_QuestionString.compare("furnace-fuel")) {
