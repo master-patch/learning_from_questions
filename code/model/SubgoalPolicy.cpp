@@ -1906,7 +1906,26 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 
 	// we first need the last subgoal to reach the actual target goal...
 	AddLastSubgoal (_rProblem, _pSequence);
+  if (1 == (int)((config) "question-heuristic")) {
+    String s_PredicateString = _pSequence->GetSubgoal(0)->p_PddlSubgoalPredicate->GetPddlString();
+    // Parse subgoal predicate to get object (if it exists) and ask about it
+    String_dq_t dq_QuestionArgs;
+    //Parse Question from PddlString
+    size_t i_Start = s_PredicateString.rfind("(") + 1;
+    size_t i_End = s_PredicateString.find(")");
+    String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
+    s_QuestionString.Split(dq_QuestionArgs, ' ');
+    //Parse Question type and query from question
+    String s_QuestionType = "object";
+    size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
+    String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
 
+    if (false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
+      cout << "The IR has failed" << endl;
+    }
+    LoadAnswers();// TODO: See board for hard task
+    SampleConnections(false);
+  }
 	// Sample subgoals...			
 	bool bAlreadyAddedSequenceEnd = false;
 	Subgoal* pNextSubgoal = _pSequence->GetSubgoal (0);
