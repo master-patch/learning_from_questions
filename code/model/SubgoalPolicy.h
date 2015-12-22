@@ -385,6 +385,8 @@ class SubgoalPolicy
 		void SampleQuestionSequence (const Problem& _rProblem,
 									bool _bTestMode,
 									SubgoalSequence* _pSequence);
+
+    bool ParseAndAskQuestion(Subgoal* _pSubgoal);
 		void SampleZeroQuestionSequence (const Problem& _rProblem,
 										SubgoalSequence* _pSequence);
 

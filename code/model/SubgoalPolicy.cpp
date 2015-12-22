@@ -1577,7 +1577,7 @@ void SubgoalPolicy::ComputeSubgoalFeatures (int _iIndex,
 		iSubgoals = (int)_pSequence->dq_Subgoals.size ();
 		bIncludeTarget = (!b_UseOnlyPreviousSubgoal || (_iIndex == iSubgoals-1));
 		iEndSubgoal = b_UseOnlyPreviousSubgoal ? min(iSubgoals,_iIndex+2) : iSubgoals;
-		fDistanceFactorToTarget = DistanceScore (_pSequence->Length () - _iIndex)
+		fDistanceFactorToTarget = DistanceScore (_pSequence->Length () - _iIndex);
 	}	
 
 	for (int c = 0; c < i_CandidatePredicates; ++ c)
@@ -1939,7 +1939,7 @@ size_t SubgoalPolicy::SampleSequenceEnd (int _iSubgoalIndex,
 	return SampleDecision (_rLogProb, o_SequenceEndExploration, _bTestMode);
 }
 
-// QP
+// QP Remove
 void SubgoalPolicy::SampleZeroQuestionSequence (const Problem& _rProblem,
 											   SubgoalSequence* _pSequence)
 {
@@ -2099,6 +2099,35 @@ void SubgoalPolicy::SampleSubgoalTestSequence(const Problem& _rProblem,
   }
 }
 
+
+//QP Process Question String and Ask question.
+//Once question response recieved, reload answers and sample connections.
+bool SubgoalPolicy::ParseAndAskQuestion(Subgoal* _pSubgoal) {
+  if (0 == _pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
+    _pSubgoal->b_isQuestion = true;
+    String_dq_t dq_QuestionArgs;
+    //Parse Question from PddlString
+    String s_PredicateString = _pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
+    size_t i_Start = s_PredicateString.rfind("(") + 1;
+    size_t i_End = s_PredicateString.find(")");
+    String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
+    s_QuestionString.Split(dq_QuestionArgs, ' ');
+    //Parse Question type and query from question
+    String s_QuestionType = dq_QuestionArgs[1];
+    size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
+    String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
+
+    if (false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
+      cout << "The IR has failed" << endl;
+      return false;
+    }
+    LoadAnswers();
+    SampleConnections(false);
+    return true;
+    }
+  return false;
+}
+
 //Query IR system with question and update Connection set as a result.											
 // TODO: Add Answer Type param
 bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
@@ -2115,7 +2144,7 @@ bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
 void SubgoalPolicy::SampleQuestionSequence (const Problem& _rProblem,
 										   bool _bTestMode,
 										   SubgoalSequence* _pSequence) {
-	return SampleSubgoalSequence (_rProblem, _bTestMode, _pSequence);
+  SampleSubgoalSequence(_rProblem, _bTestMode, _pSequence);
 }
 
 void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
@@ -2200,28 +2229,12 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 
     	//TODO: Add Config Check to make sure this is valid. Else if question found and
     	// config, throw an error
-    	if (0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
-					pSubgoal->b_isQuestion = true;
-      		String_dq_t dq_QuestionArgs;
-      		//Parse Question from PddlString
-      		String s_PredicateString = pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
-      		size_t i_Start = s_PredicateString.rfind("(") + 1;
-      		size_t i_End = s_PredicateString.find(")");
-      		String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
-      		s_QuestionString.Split(dq_QuestionArgs, ' ');
-      		//Parse Question type and query from question
-      		String s_QuestionType = dq_QuestionArgs[1];
-      		size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
-      		String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
 
-          if (false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
-          	cout << "The IR has failed" << endl;
+    	if (0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
+        if(false == ParseAndAskQuestion(pSubgoal)) {
+            cout << "ERROR in parsing and asking question" << endl;
           }
-          if (false == b_isQuestionPolicy) {
-	          LoadAnswers();// TODO: See board for hard task
-	          SampleConnections(false);
-	        }
-    }
+      }
 
 		_pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
 
