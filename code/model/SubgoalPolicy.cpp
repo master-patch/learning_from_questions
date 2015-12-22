@@ -358,20 +358,20 @@ bool SubgoalPolicy::Init (bool question, IR* _pIR)
 
 	p_IR = _pIR;
 
-	o_SequenceEndModel.Init ("end");
-	o_SubgoalSelectionModel.Init ("subgoal");
+  if(false ==  b_isQuestionPolicy) {
+    o_SequenceEndModel.Init ("end");
+    o_TextConnectionModel.Init ("connection");
+    o_SequenceEndExploration.SetParamsFromConfig ("end");
+    o_SubgoalExploration.SetParamsFromConfig ("subgoal");
+    o_ConnectionExploration.SetParamsFromConfig ("connection");
+    i_MaxSequenceLength = (config)"max_subgoal_sequence_length";
+  } else {
+    i_MaxSequenceLength = (config)"max_question_sequence_length";
+  }
+  //QP Init only model we are going to use
+  o_SubgoalSelectionModel.Init ("subgoal");
+  o_SubgoalExploration.SetParamsFromConfig ("subgoal");
 
-	// TODO QP maybe we shoudlnt initialize this
-	o_TextConnectionModel.Init ("connection");
-
-	o_SequenceEndExploration.SetParamsFromConfig ("end");
-	o_SubgoalExploration.SetParamsFromConfig ("subgoal");
-	o_ConnectionExploration.SetParamsFromConfig ("connection");
-
-	i_MaxSequenceLength = (config)"max_subgoal_sequence_length";
-	if (question) {
-		i_MaxSequenceLength = i_MaxSequenceLength / 2;
-	}
 
 	b_DisallowNeighboringDuplicateSubgoals = (1 == (int)(config)"disallow_neighboring_duplicate_subgoals");
 	b_DisallowAnyDuplicateSubgoals = (1 == (int)(config)"disallow_any_duplicate_subgoals");
@@ -427,13 +427,15 @@ bool SubgoalPolicy::Init (bool question, IR* _pIR)
 	cout << "   predicate identity pair feature weight : "
 		 << f_PredicateIdentityPairFeatureWeight << endl;
 
-	o_SequenceEndExploration.PrintConfiguration ("Seq end");
+  if( false = b_isQuestionPolicy) {
+    o_SequenceEndExploration.PrintConfiguration ("Seq end");
+    o_ConnectionExploration.PrintConfiguration ("Connect");
+  }
 	o_SubgoalExploration.PrintConfiguration ("Subgoal");
-	o_ConnectionExploration.PrintConfiguration ("Connect");
-
 
 	f_NonConnectionFeatureImportance = (double)(config)"non_connection_feature_importance";
 
+  // MARK
 	if (false == LoadPredDictFile ())
 		return false;
 	
@@ -2144,7 +2146,93 @@ bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
 void SubgoalPolicy::SampleQuestionSequence (const Problem& _rProblem,
 										   bool _bTestMode,
 										   SubgoalSequence* _pSequence) {
-  SampleSubgoalSequence(_rProblem, _bTestMode, _pSequence);
+  // Sample sequence length...	
+	assert (0 != i_CandidatePredicates);
+  assert (true == b_isQuestionPolicy);
+
+	_pSequence->vec_PredicatesInSequence.resize (i_CandidatePredicates, 0);
+
+	_pSequence->b_UseSimpleConnectionFeatures = b_UseSimpleConnectionFeatures;
+	_pSequence->b_UseTextConnectionFeatures = b_UseTextConnectionFeatures;
+	_pSequence->b_UseComplexNonConnectionFeatures = b_UseComplexNonConnectionFeatures;
+
+
+	// QP TODO we can't add last subgoal as part of the model because it isn't a question
+  // WE CAN ADD THE HEURISTIC THOUGH!!
+  // TODO Talk to Nicola and Seb about that idea
+
+  //Requirement Choose first question. Ths can via policy or heuristic.
+
+	// Sample subgoals...			
+
+  // This approach is conditioned on using an exisiting subgoal
+	Subgoal* pNextSubgoal = _pSequence->GetSubgoal (0);
+	for (int i = 0; i < i_MaxSequenceLength; ++ i)
+	{
+		Subgoal* pSubgoal = _pSequence->AddSubgoalToFront ();
+
+		assert (true == pSubgoal->vec_SubgoalFeatureVectors.empty ());
+		ComputeSubgoalFeatures (0, _rProblem, _pSequence);
+
+		// compute log probs	
+		pSubgoal->lprb_Subgoal.Create (i_CandidatePredicates);
+		for (long g = 0; g < i_CandidatePredicates; ++ g)
+		{
+			Features* pFV = pSubgoal->vec_SubgoalFeatureVectors [g];
+
+			// check if this is identical to the next subgoal...
+			if ((NULL != pNextSubgoal) &&
+				(g == pNextSubgoal->i_SubgoalSelection))
+				pSubgoal->lprb_Subgoal [g] = -1000;
+
+			// check if this is identical to any future subgoal	
+			else if ((true == b_DisallowAnyDuplicateSubgoals) &&
+					 (1 == _pSequence->vec_PredicatesInSequence [g]))
+				pSubgoal->lprb_Subgoal [g] = -1000;
+
+			else
+				pSubgoal->lprb_Subgoal [g] = o_SubgoalSelectionModel.ComputeLogProb (*pFV);
+
+			if (false == b_PrintTextConnectionFeatures)
+				delete pFV;
+		}
+
+
+		// sample	
+		pSubgoal->i_SubgoalSelection
+			= SampleDecision (pSubgoal->lprb_Subgoal, o_SubgoalExploration, _bTestMode);
+
+		pSubgoal->p_PddlSubgoalPredicate
+			= vec_CandidatePredicates [pSubgoal->i_SubgoalSelection];
+
+    if(false == ParseAndAskQuestion(pSubgoal)) {
+      cout << "ERROR in parsing and asking question" << endl;
+    }
+    
+		_pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
+
+		// delete the old one
+		if (true == b_PrintTextConnectionFeatures)
+		{
+			if (pSubgoal->p_SelectedPredicateFeatures != NULL)
+				delete pSubgoal->p_SelectedPredicateFeatures;
+
+			for (long g = 0; g < i_CandidatePredicates; ++ g)
+			{
+				Features* pFV = pSubgoal->vec_SubgoalFeatureVectors [g];
+				if(g == pSubgoal->i_SubgoalSelection)
+					pSubgoal->p_SelectedPredicateFeatures = pFV;
+				else 
+					delete pFV;
+			}
+		}
+
+		pSubgoal->vec_SubgoalFeatureVectors.clear ();
+
+		if (true == b_DisallowNeighboringDuplicateSubgoals)
+			pNextSubgoal = pSubgoal;
+	}
+
 }
 
 void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
@@ -2264,6 +2352,7 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 		AddForcedSequenceEnd (_rProblem, _pSequence);
 }
 
+// QP Add last question in sequence. can be 
 
 //
 void SubgoalPolicy::AddLastSubgoal (const Problem& _rProblem,

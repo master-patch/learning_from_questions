@@ -872,12 +872,6 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 			// QP TODO: Here we can iterate till convergence
 			// QP TODO: here we may want to share C
 			if (true == pProblem->b_SubgoalsNotNeeded) {
-
-				// QP
-				if ((config)"qp" != -1) {
-					// QP this time sample questions not subgoals
-					o_QuestionPolicy.SampleZeroQuestionSequence (*pProblem, pQuestionSequence);
-				}
 				o_SubgoalPolicy.SampleZeroSubgoalSequence (*pProblem, pSequence);
 			}
 

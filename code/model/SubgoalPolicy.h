@@ -329,6 +329,8 @@ class SubgoalPolicy
 
 		void AddLastSubgoal (const Problem& _rProblem,
 							 SubgoalSequence* _pSequence);
+    void AddLastQuestion(const Problem& _rProblem,
+                         SubgoalSequence* _pSequence);
 		void AddForcedSequenceEnd (const Problem& _rProblem,
 								   SubgoalSequence* _pSequence);
 		inline size_t SampleDecision (LogProbability& _rLogProb,
