@@ -1906,7 +1906,7 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 
 	// we first need the last subgoal to reach the actual target goal...
 	AddLastSubgoal (_rProblem, _pSequence);
-  if (1 == (int)((config) "question-heuristic")) {
+  if (1 == (int)((config) "target-question-heuristic")) {
     String s_PredicateString = _pSequence->GetSubgoal(0)->p_PddlSubgoalPredicate->GetPddlString();
     // Parse subgoal predicate to get object (if it exists) and ask about it
     String_dq_t dq_QuestionArgs;
