@@ -1130,7 +1130,9 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 			= GetPredicateIdentityFeatureIndex (pPred->GetPddlString ());
 		pPred->i_PredicateNameFeatureIndex
 			= GetPredicateNameFeatureIndex (pPred->s_Name);
-
+    // QP Add suffix index here
+    // Add GetPredicateObjectFeatureIndex
+    
 
     if (false == IsQuestion(pPred)) {
       pPred->i_PredicateCandidateWithoutNumber

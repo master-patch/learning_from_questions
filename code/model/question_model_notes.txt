@@ -1,0 +1,124 @@
+Features of Subgoal Model:
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+   name of starting and target predicates
+
+   pddl string of starting and target predicates
+
+   parameter values of the starting and target predicates
+
+   name, pddl string (identity) and value of other subgoals already in the predicted sequence
+
+   distance to subgoals already predicted in the sequence based on the predicate matrix predicted via text
+
+
+Proposed Features of Question Model:
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+    object of starting and target predicates
+
+
+
+    DECISION POINT
+    ***********************
+        object of other questions already asked (sequence local)
+        OR
+        object of other questions already asked (globally)
+
+        GLOBAL PROS:
+               Asking questions persisits info for this scope.
+               it makes not to ask same question twice on a session basis
+        SEQUENCE PROS:
+               Potentially easier to code?
+               Easy to assure fixed feature vector size
+               May be easier to represent
+
+   DECISION POINT
+   ***********************
+        Include sampled subgoal features
+                If so. Add object of each sampled subgoal
+                Order independent
+
+        INCLUDE PROS:
+          Impicitly encodes features of other model, and current sequence prediction
+        INCLUDE CONS:
+          More engineering work and piping
+
+
+
+Proposed Full Changes:
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+Init:
+********************************
+Init only Subgoal Model
+(use Connections from subgoal policy as need be)
+
+     Load Pred Dict
+     *****************************
+     Don't init subgoal features
+     Only init question features
+
+     AssignProblemIndices
+     *****************************
+     Dont init subgoal features
+     Only init question features
+
+Sample Question Sequence
+********************************
+Sample question
+       ComputeQuestionFeatures
+          See decision points
+       ComputeLogProbs
+       ParseAndAskQuestion
+       CleanUpMemory
+
+Attribute reward to questions for problem success
+          as currently done for subgoal model
+
+
+ENGINEERING ESTIMATE
+--------------------------------------------------------
+--------------------------------------------------------
+2-3 days develop
+2 days debug
+2 days run
+----------------
+1 WEEK
+
+GOAL AND BIG PICTURE
+--------------------------------------------------------
+--------------------------------------------------------
+1. Discover how far we can push the model in perfomance using questions
+2. Better chance to ask the right questions
+3. Fully understand model we are building
+
+Possibly easier experiments:
+Heuristics: Establish a baseline for asking at least 1 relevant question
+            Current Best     :    74.2%
+            Branvan baseline :    80.2%
+
+Maybe extend heuristics experiemnt to ask about each subgoal and resample
+      Hypothesis: This will perform better as it asks more definitely relevant subgoals
+      Even though questions may be redundant
+           -> add cache to resolve redundancy
+
+      If this performs well 76+ percent:
+         Gives a rough high bound for asking for too much information
+         Goal would be creating a model that performs as well with less questions
+              Learn what's relevant instead
+      If this performs poorly:
+         Even predicted subgoals are noisy in terms of relevance
+         Very difficult to progress.
+
+      Eng Estimate
+          4 hours to build, debug and run
+          2 days to run
+          
+         
+
+
+
+          
