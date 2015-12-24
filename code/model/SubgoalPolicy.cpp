@@ -588,7 +588,7 @@ bool SubgoalPolicy::Init (void)
 			return false;
 
 		// Launch the test
-		TestQA();
+    // TestQA();
 	}
 
 	return true;
@@ -1881,6 +1881,35 @@ void SubgoalPolicy::SampleSubgoalTestSequence(const Problem& _rProblem,
   }
 }
 
+// Ask question about subgoal passed. Used for various heuristic experiments
+bool SubgoalPolicy::AskQuestionFromSubgoal(Subgoal* _pSubgoal) {
+  String s_PredicateString = _pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
+  // Parse subgoal predicate to get object (if it exists) and ask about it
+  String_dq_t dq_QuestionArgs;
+  //Parse Question from PddlString
+  size_t i_Start = s_PredicateString.rfind("(") + 1;
+  size_t i_End = s_PredicateString.find(")");
+  String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
+  s_QuestionString.Split(dq_QuestionArgs, ' ');
+  //Parse Question type and query from question
+  String s_QuestionType = "object";
+  String s_QuestionQuery;
+
+  if(0 == s_QuestionString.compare("furnace-fuel")) {
+    s_QuestionQuery = "furnace";
+  } else {
+    s_QuestionQuery = dq_QuestionArgs[1];
+  }
+
+  if (false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
+    cout << "The IR has failed" << endl;
+    return false;
+  }
+  LoadAnswers();// TODO: See board for hard task
+  SampleConnections(false);
+  return true;
+}
+
 //Query IR system with question and update Connection set as a result.											
 // TODO: Add Answer Type param
 bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
@@ -1907,29 +1936,7 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 	// we first need the last subgoal to reach the actual target goal...
 	AddLastSubgoal (_rProblem, _pSequence);
   if (1 == (int)((config) "target-question-heuristic")) {
-    String s_PredicateString = _pSequence->GetSubgoal(0)->p_PddlSubgoalPredicate->GetPddlString();
-    // Parse subgoal predicate to get object (if it exists) and ask about it
-    String_dq_t dq_QuestionArgs;
-    //Parse Question from PddlString
-    size_t i_Start = s_PredicateString.rfind("(") + 1;
-    size_t i_End = s_PredicateString.find(")");
-    String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
-    s_QuestionString.Split(dq_QuestionArgs, ' ');
-    //Parse Question type and query from question
-    String s_QuestionType = "object";
-    String s_QuestionQuery;
-
-    if(0 == s_QuestionString.compare("furnace-fuel")) {
-      s_QuestionQuery = "furnace";
-    } else {
-      s_QuestionQuery = dq_QuestionArgs[1];
-    }
-
-    if (false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
-      cout << "The IR has failed" << endl;
-    }
-    LoadAnswers();// TODO: See board for hard task
-    SampleConnections(false);
+    AskQuestionFromSubgoal(_pSequence->GetSubgoal(0));
   }
 	// Sample subgoals...			
 	bool bAlreadyAddedSequenceEnd = false;
@@ -1938,7 +1945,7 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 	{
 		Subgoal* pSubgoal = _pSequence->AddSubgoalToFront ();
 
-		// sample END-SEQUENCE symbol...	
+		// sample END-SEQUENCE symbol	
 		assert (true == pSubgoal->vec_SequenceEndFeatureVectors.empty ());
 		ComputeSequenceEndFeatures (0, _rProblem, _pSequence);
 		pSubgoal->lprb_SequenceEnd.Create (2);

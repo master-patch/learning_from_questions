@@ -835,15 +835,29 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 			Problem* pProblem = Problem::GetProblem (d);
 			SubgoalSequence* pSequence = new SubgoalSequence;
 			pSequence->s_ProblemPddlPreamble = pProblem->s_PddlPreamble;
-
 			pSequence->p_TargetProblem = pProblem;
+
 			if (true == pProblem->b_SubgoalsNotNeeded)
 				o_SubgoalPolicy.SampleZeroSubgoalSequence (*pProblem, pSequence);
 
-			else
+			else {
 				o_SubgoalPolicy.SampleSubgoalSequence (*pProblem,
-													   _bTestMode,
-													   pSequence);
+                                               _bTestMode,
+                                               pSequence);
+        if( 1 == (int)(config)"all-subgoals-question-heuristic") {
+          for (int i = 1; i < pSequence->Length(); ++i) {
+            o_SubgoalPolicy.AskQuestionFromSubgoal( pSequence->GetSubgoal(i));
+          }
+          delete pSequence;
+          SubgoalSequence* pSequence = new SubgoalSequence;
+          pSequence->s_ProblemPddlPreamble = pProblem->s_PddlPreamble;
+          pSequence->p_TargetProblem = pProblem;
+
+          o_SubgoalPolicy.SampleSubgoalSequence (*pProblem,
+                                                 _bTestMode,
+                                                 pSequence);
+        }
+      }
 
 
 			int iIndex = 1000 * i + d; 
