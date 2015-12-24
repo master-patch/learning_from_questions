@@ -849,7 +849,7 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
             o_SubgoalPolicy.AskQuestionFromSubgoal( pSequence->GetSubgoal(i));
           }
           delete pSequence;
-          SubgoalSequence* pSequence = new SubgoalSequence;
+          pSequence = new SubgoalSequence;
           pSequence->s_ProblemPddlPreamble = pProblem->s_PddlPreamble;
           pSequence->p_TargetProblem = pProblem;
 
