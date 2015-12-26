@@ -1,4 +1,5 @@
 set p pretty on
-br Learner.cpp:843
+br SubgoalPolicy::TestQA()
+br SubgoalLearner::Iterate
 r cfg/question_model.cfg run=t1
 
