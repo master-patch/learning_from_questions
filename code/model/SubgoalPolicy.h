@@ -351,6 +351,7 @@ class SubgoalPolicy
 
 		// Asking questions
 		IR		o_IR;
+    bool AskQuestionFromSubgoal(Subgoal* _pSubgoal);
     bool AskQuestion(String s_QuestionType, String s_QuestionQuery);
     void TestQA();
     void clearAnswers();
