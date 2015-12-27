@@ -208,9 +208,11 @@ class SubgoalPolicy
 		LogLinearModel	o_SequenceEndModel;
 		LogLinearModel	o_SubgoalSelectionModel;
 		LogLinearModel	o_TextConnectionModel;
+    LogLinearModel  o_QuestionSelectionModel;
 
 		FeatureSpace	o_SequenceEndFeatureSpace;
 		FeatureSpace	o_SubgoalFeatureSpace;
+    FeatureSpace  o_QuestionFeatureSpace;
 		FeatureSpace	o_TextConnectionFeatureSpace;
 		Sample			o_Sample;
 
@@ -224,6 +226,7 @@ class SubgoalPolicy
 		FeatureToIndex_hmp_t	hmp_PredicateNameToIndex;
 		FeatureToIndex_hmp_t	hmp_PredicateWithoutNumberToIndex;
 		FeatureToIndex_hmp_t	hmp_PredicateIdToIndex;
+    FeatureToIndex_hmp_t	hmp_SuffixToIndex;
 		String_int_map_t        map_ProblemToGoldLength;
 		int_String_map_t        map_FeatureIndexToFeatureString;
 		int_dq_t                dq_FeaturesToDebugPrint;
@@ -231,6 +234,7 @@ class SubgoalPolicy
 
 		PddlStringToPredicate_map_t	map_PddlStringToCandidatePredicate;
 		PddlPredicate_vec_t			vec_CandidatePredicates;
+    PddlPredicate_vec_t     vec_CandidateQuestions;
 		char_vec_t					vec_CanReachCandidatePredicate;
 		Matrix <char,2>	mtx_PredicateConnectionsFromTo;
 		Matrix <char,2>	mtx_PredicateConnectionsToFrom;
@@ -248,17 +252,21 @@ class SubgoalPolicy
 		size_t			i_PredicateNames;
 		size_t			i_ParameterValues;
 		size_t			i_PredicateIdentities;
+    size_t			i_PredicateSuffixes;
 		int				i_MaxConnectionDepth;
 		int				i_MaxPredicateValue;
 		int				i_MaxSequenceLength;
+    int       i_MaxQuestionSequenceLength;
 
 		ExplorationParameters	o_SequenceEndExploration;
 		ExplorationParameters	o_SubgoalExploration;
+    ExplorationParameters o_QuestionExploration;
 		ExplorationParameters	o_ConnectionExploration;
 		ConnectionRewardType_e	e_ConnectionRewardType;
 
 		long			i_CandidatePredicates;
 		long			i_CandidatePredicateNumbersMerged;
+    long			i_CandidateQuestions;
 		float			f_UseSimpleConnectionFeatures;
 		bool			b_UseSimpleConnectionFeatures;
 		float			f_UseTextConnectionFeatures;
@@ -303,6 +311,7 @@ class SubgoalPolicy
 		int GetPredicateNameFeatureIndex (const String& _rName);
 		int GetPredicateWithoutNumberIndex (const PddlPredicate& _rPredicate);
 		int GetParameterValueFeatureIndex (const String& _rValue);
+    int GetPredicateSuffixFeatureIndex(const String& _rSuffix);
 
 		void ComputeSubgoalFeatures (int _iIndex,
 									 const Problem& _rProblem,
@@ -315,6 +324,7 @@ class SubgoalPolicy
 		bool LoadFeatureConnectionFile (String filepath, bool update);
     bool LoadAnswers(void);
     bool LoadPredDictFile (void);
+    bool LoadPredDictFileQuestion (void);
     bool IsQuestion(PddlPredicate* p_candidate);
 
 		void LoadGoldLengthFile (void);

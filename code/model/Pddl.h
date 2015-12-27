@@ -52,6 +52,7 @@ class PddlPredicate
 		int_Vec_t			vec_QuestionParameterValueFeatureIndex;
 		PddlParameter_dq_t	dq_Parameters;
 		String				s_Name;
+    String        s_Suffix;
 		String				s_BoundIdentityHash;
 		long             	l_Value;
 
@@ -61,6 +62,7 @@ class PddlPredicate
 		int					i_PredicateIdentityFeatureIndex;
 		int					i_PredicateNameFeatureIndex;
 		int					i_PredicateCandidateWithoutNumber;
+    int         i_PredicateSuffixFeatureIndex;
 
 		bool				b_IsFunction;
 

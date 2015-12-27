@@ -117,6 +117,24 @@ Maybe extend heuristics experiemnt to ask about each subgoal and resample
           4 hours to build, debug and run
           2 days to run
           
+ 
+Change Log:
+ * Created a seperate function to loadPredicates for Questons
+ * Using vec_CandidateQuestions instead of vec_CanddidatePredicates
+         Force to find all reference to CandidatePredicates otherwise breaking
+ * Adding Suffix, and Suffic feature index to pPred
+ * Adding suffix feaure hmp and GetPredicateSuffixFeatureIndex function
+ * Removed question predicate from i_CandidatewithoutNumber
+
+***** Directon Note **********
+Learnnig towards one instance that initializes and loads both questions and predicates
+         Why: Simplifying piping
+* Removed VecReachability notion
+***** Risks ***************
+      Will having shared HMP for predicate identity result in conflicts?
+      ********** CHECK THIS*************
+* Remove name and non-merged featues from assign prob index
+* add predicate_suffix_feature_index to Predicate
          
 
 
