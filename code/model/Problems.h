@@ -36,6 +36,10 @@ class Problem
 		int_Vec_t			vec_TargetPredicateNameFI;
 		int_Vec_t			vec_TargetParameterValueFI;
 
+    // QP
+		int_Vec_t			vec_InitPredicateSuffixFI;
+    int_Vec_t			vec_TargetPredicateSuffixFI;
+
 		//									
 		Problem (String& _rProblem, String& _rFileName);
 		~Problem (void);

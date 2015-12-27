@@ -203,12 +203,16 @@ class SubgoalPolicy
 	friend class SubgoalLearner;
 
 	private:
+		// QP: Make sure we know we are a question policy
+		bool b_isQuestionPolicy;
 		LogLinearModel	o_SequenceEndModel;
 		LogLinearModel	o_SubgoalSelectionModel;
 		LogLinearModel	o_TextConnectionModel;
+    LogLinearModel  o_QuestionSelectionModel;
 
 		FeatureSpace	o_SequenceEndFeatureSpace;
 		FeatureSpace	o_SubgoalFeatureSpace;
+    FeatureSpace  o_QuestionFeatureSpace;
 		FeatureSpace	o_TextConnectionFeatureSpace;
 		Sample			o_Sample;
 
@@ -222,6 +226,7 @@ class SubgoalPolicy
 		FeatureToIndex_hmp_t	hmp_PredicateNameToIndex;
 		FeatureToIndex_hmp_t	hmp_PredicateWithoutNumberToIndex;
 		FeatureToIndex_hmp_t	hmp_PredicateIdToIndex;
+    FeatureToIndex_hmp_t	hmp_SuffixToIndex;
 		String_int_map_t        map_ProblemToGoldLength;
 		int_String_map_t        map_FeatureIndexToFeatureString;
 		int_dq_t                dq_FeaturesToDebugPrint;
@@ -229,6 +234,7 @@ class SubgoalPolicy
 
 		PddlStringToPredicate_map_t	map_PddlStringToCandidatePredicate;
 		PddlPredicate_vec_t			vec_CandidatePredicates;
+    PddlPredicate_vec_t     vec_CandidateQuestions;
 		char_vec_t					vec_CanReachCandidatePredicate;
 		Matrix <char,2>	mtx_PredicateConnectionsFromTo;
 		Matrix <char,2>	mtx_PredicateConnectionsToFrom;
@@ -246,17 +252,21 @@ class SubgoalPolicy
 		size_t			i_PredicateNames;
 		size_t			i_ParameterValues;
 		size_t			i_PredicateIdentities;
+    size_t			i_PredicateSuffixes;
 		int				i_MaxConnectionDepth;
 		int				i_MaxPredicateValue;
 		int				i_MaxSequenceLength;
+    int       i_MaxQuestionSequenceLength;
 
 		ExplorationParameters	o_SequenceEndExploration;
 		ExplorationParameters	o_SubgoalExploration;
+    ExplorationParameters o_QuestionExploration;
 		ExplorationParameters	o_ConnectionExploration;
 		ConnectionRewardType_e	e_ConnectionRewardType;
 
 		long			i_CandidatePredicates;
 		long			i_CandidatePredicateNumbersMerged;
+    long			i_CandidateQuestions;
 		float			f_UseSimpleConnectionFeatures;
 		bool			b_UseSimpleConnectionFeatures;
 		float			f_UseTextConnectionFeatures;
@@ -301,6 +311,7 @@ class SubgoalPolicy
 		int GetPredicateNameFeatureIndex (const String& _rName);
 		int GetPredicateWithoutNumberIndex (const PddlPredicate& _rPredicate);
 		int GetParameterValueFeatureIndex (const String& _rValue);
+    int GetPredicateSuffixFeatureIndex(const String& _rSuffix);
 
 		void ComputeSubgoalFeatures (int _iIndex,
 									 const Problem& _rProblem,
@@ -313,6 +324,8 @@ class SubgoalPolicy
 		bool LoadFeatureConnectionFile (String filepath, bool update);
     bool LoadAnswers(void);
     bool LoadPredDictFile (void);
+    bool LoadPredDictFileQuestion (void);
+    bool IsQuestion(PddlPredicate* p_candidate);
 
 		void LoadGoldLengthFile (void);
 		void LoadFeaturesToDebugPrintFile(void);
@@ -322,9 +335,12 @@ class SubgoalPolicy
 		int FindPredicateCandidateIndex (PddlPredicate& _rPredicate);
 		int FindInitPredicateCandidateIndex (PddlPredicate& _rPredicate);
 		void AssignIndicesToTargetProblemPredicates (void);
+		void AssignIndicesToTargetProblemPredicatesQuestion (void);
 
 		void AddLastSubgoal (const Problem& _rProblem,
 							 SubgoalSequence* _pSequence);
+    void AddLastQuestion(const Problem& _rProblem,
+                         SubgoalSequence* _pSequence);
 		void AddForcedSequenceEnd (const Problem& _rProblem,
 								   SubgoalSequence* _pSequence);
 		inline size_t SampleDecision (LogProbability& _rLogProb,
@@ -350,17 +366,19 @@ class SubgoalPolicy
 		}
 
 		// Asking questions
-		IR		o_IR;
+		IR*		p_IR;
     bool AskQuestion(String s_QuestionType, String s_QuestionQuery);
     void TestQA();
     void clearAnswers();
     void ResetSentenceConnections ();
-
+		double_Vec_t getConnectionWeights();
+		void loadConnectionWeights(double_Vec_t	vec_subgoalPolicy_Weights);
 	public:
 		SubgoalPolicy (void);
 		~SubgoalPolicy (void);
 
-		bool Init (void);
+		// QP: add correct signature with question
+		bool Init (bool question, IR* p_IR);
 
 		void SampleExplorationParameters (void);
 		void ForceConnectionUseFlags (void);
@@ -375,11 +393,27 @@ class SubgoalPolicy
 		void SampleZeroSubgoalSequence (const Problem& _rProblem,
 										SubgoalSequence* _pSequence);
 
+		// QP
+		void SampleQuestionSequence (const Problem& _rProblem,
+									bool _bTestMode,
+									SubgoalSequence* _pSequence);
+
+    bool ParseAndAskQuestion(Subgoal* _pSubgoal);
+		void SampleZeroQuestionSequence (const Problem& _rProblem,
+										SubgoalSequence* _pSequence);
+
+
 		void InitUpdate (void);
 		void UpdateParameters (SubgoalSequence& _rSequence,
 							   double _dReward,
 							   bool _bTaskComplete,
 							   bool _bWithConnections);
+		// QP
+		void UpdateQuestionParameters (SubgoalSequence& _rSequence,
+									  double _dReward,
+									  bool _bTaskComplete,
+									  bool _bWithConnections);
+
 		void CompleteUpdate (void);
 
 		void AddReachableSubgoals (const int_set_t& _rsetReachableSubgoals);
