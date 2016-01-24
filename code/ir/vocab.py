@@ -72,7 +72,7 @@ A = {
 
 # Objects
 O = {
-    'ironbar': ['iron bar', 'ironbar'],
+    'ironbar': ['iron bar', 'ironbar', 'iron bars'],
     'seeds': ['seeds'],
     'brown-mushroom': ['brown mushroom'],
     'sand': ['sand'],
@@ -83,14 +83,13 @@ O = {
     'sugar': ['sugar'],
     'string': ['string'],
     'egg': ['egg'],
-    'plank': ['plank'],
+    'plank': ['plank', 'planks'],
     'clay': ['clay'],
     'iron': ['iron'],
     'wood-axe': ['wood axe'],
     'coal': ['coal'],
-    'bed': ['bed'],
     'glasspane': ['glass pane'],
-    'brick': ['brick'],
+    'brick': ['brick', 'bricks'],
     'wood-stairs': ['wood stairs'],
     'iron-door': ['iron door'],
     'shears': ['shears'],
@@ -101,11 +100,11 @@ O = {
     'cookedfish': ['cooked fish'],
     'wood-door': ['wood door'],
     'glass': ['glass'],
-    'stick': ['stick'],
+    'stick': ['stick', 'sticks'],
     'claybrick': ['clay brick'],
     'cut-sugarcane': ['cut sugar cane', 'cut sugarcane'],
     'sandstone': ['sandstone', 'sand stone'],
-    'chest': ['chest'],
+    'chest': ['chest', 'chests'],
     'stonebrick-stairs': ['stone brick stairs'],
     'fishingrod': ['fishing rod'],
     'stonebrick': ['stone brick'],
@@ -121,13 +120,19 @@ O = {
     'bowl': ['bowl'],
     'milk': ['milk'],
     'brick-stairs': ['brick stairs'],
-    'torch': ['torch'],
+    'torch': ['torch', 'torches'],
     'mushroomstew': ['mushroom stew'],
     'stone': ['stone'],
     'bonemeal': ['bone meal'],
-    'fence': ['fence'],
-    'wood-hoe': ['wood hoe'],
-    'clayblock': ['clay block']
+    'fence': ['fence', 'fences'],
+    'wood-hoe': ['wood hoe', 'hoes'],
+    'clayblock': ['clay block'],
+    'beds': ['beds', 'bed'],
+    'ignots': ['ignot', 'ignots'],
+    'balls':  ['ball', 'balls'],
+    'cobblestone': ['cobblestone'],
+    'stairs': ['stairs'],
+    'rods': ['rods']
 }
 
 # Predicates
