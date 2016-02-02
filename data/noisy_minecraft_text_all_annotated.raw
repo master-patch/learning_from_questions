@@ -1,408 +1,532 @@
+No.1838
+Connections: sand:7|red:6 red:6|sand:7 
+Text: With the exception of sand , red sand , gravel , anvils , dragon eggs and , in Pocket Edition , Snow (cover) , all blocks ignore gravity .
+
+No.1852
+Connections: fuel:6|furnace:9 furnace:9|fuel:6 
+Text: Minerals are used for tools , fuel for a furnace , creating other blocks or items , trading , dyes , and work in redstone contraptions .
+
 No.1853
-Connections: pickaxe:16|ore:31 ore:31|pickaxe:16 
-Text: These are obtained by picking up the item that drops after mining an ore with a pickaxe of the right material, or taking the item that gets created after smelting an ore by dragging the finished product into your inventory.
+Connections: pickaxe:16|ore:32 ore:32|pickaxe:16 
+Text: These are obtained by picking up the item that drops after mining an ore with a pickaxe of the right material , or taking the item that gets created after smelting an ore by dragging the finished product into your inventory .
+
+No.1854
+Connections: sugarcane:9|sand:25 sand:25|sugarcane:9 sugarcane:9|seeds:6 seeds:6|sugarcane:9 sand:25|seeds:6 seeds:6|sand:25 
+Text: Plants (in non-block form , examples: seeds , and sugarcane (item version)) are used for creating block-type plants when placed on farmland , dirt , sand , and the side of logs , so that they can grow , and give themselves or other items in the game when fully grown and broken , and be manufactured or consumed .
+
+No.1861
+Connections: brick:41|paper:34 paper:34|brick:41 brick:41|sticks:32 sticks:32|brick:41 brick:41|clay:36 clay:36|brick:41 paper:34|sticks:32 sticks:32|paper:34 paper:34|clay:36 clay:36|paper:34 sticks:32|clay:36 clay:36|sticks:32 
+Text: Crafting Ingredients are ingredients that have no specific category and no other non-decoration purpose than to create other blocks or items by crafting or smelting , examples are flint , bowls , sticks , paper , clay , brick , nether brick , and nether quartz .
+
+No.1879
+Connections: cobblestone:7|wood:5 wood:5|cobblestone:7 cobblestone:7|iron:9 iron:9|cobblestone:7 wood:5|iron:9 iron:9|wood:5 
+Text: They can be crafted from wood , cobblestone , iron , gold and diamond .
+
+No.1881
+Connections: cobblestone:7|wood:5 wood:5|cobblestone:7 cobblestone:7|iron:9 iron:9|cobblestone:7 wood:5|iron:9 iron:9|wood:5 
+Text: They can be crafted from wood , cobblestone , iron , gold and diamond .
+
+No.1883
+Connections: cobblestone:7|wood:5 wood:5|cobblestone:7 cobblestone:7|iron:9 iron:9|cobblestone:7 wood:5|iron:9 iron:9|wood:5 
+Text: They can be crafted from wood , cobblestone , iron , gold and diamond .
+
+No.1885
+Connections: stone:7|wood:5 wood:5|stone:7 stone:7|iron:9 iron:9|stone:7 wood:5|iron:9 iron:9|wood:5 
+Text: They can be crafted from wood , stone , iron , gold and diamond .
+
+No.1887
+Connections: wool:8|string:17 string:17|wool:8 wool:8|red:12 red:12|wool:8 string:17|red:12 red:12|string:17 
+Text: Shears allow the player to make sheep drop wool , mooshrooms drop red mushrooms , cobwebs drop string , with a Silk Touch enchantment the actual cobweb itself , and make varieties of grass , leaves , vines and dead bushes drop themselves .
 
 No.1893
-Connections: rods:1|fishing:7 fishing:7|rods:1 
-Text: Fishing rods allow the player to go fishing to catch several types of fish, treasure, and trash, as well as pull mobs or players closer.
+Connections: rods:1|fishing:7 fishing:7|rods:1 rods:1|fish:13 fish:13|rods:1 fishing:7|fish:13 fish:13|fishing:7 
+Text: Fishing rods allow the player to go fishing to catch several types of fish , treasure , and trash , as well as pull mobs or players closer .
+
+No.1961
+Connections: wood:2|planks:3 planks:3|wood:2 wood:2|sticks:5 sticks:5|wood:2 planks:3|sticks:5 sticks:5|planks:3 
+Text: These include wood planks , sticks , crafting tables , and most shapeless recipes .
+
+No.1966
+Connections: fuel:27|furnace:4 furnace:4|fuel:27 
+Text: However , smelting utilizes furnace blocks , which have a unique interface: one "input" field for the object that will be heated , one field for the fuel , and one "output" field for the final smelted product .
 
 No.1968
-Connections: fuel:8|furnace:14 furnace:14|fuel:8 
-Text: To smelt something, an input material and a fuel must be loaded into the furnace.
+Connections: fuel:9|furnace:15 furnace:15|fuel:9 
+Text: To smelt something , an input material and a fuel must be loaded into the furnace .
 
 No.1970
-Connections: fuel:12|furnace:2 furnace:2|fuel:12 
-Text: When the furnace begins to smelt, it will consume one piece of fuel and the fire gauge will fill up.
+Connections: fuel:13|furnace:2 furnace:2|fuel:13 
+Text: When the furnace begins to smelt , it will consume one piece of fuel and the fire gauge will fill up .
 
 No.1972
-Connections: fuel:5|furnace:8 furnace:8|fuel:5 
-Text: If there is no more fuel left, the furnace will be interrupted and the item will be uncooked.
+Connections: fuel:5|furnace:9 furnace:9|fuel:5 
+Text: If there is no more fuel left , the furnace will be interrupted and the item will be uncooked .
 
 No.1977
 Connections: fuel:6|furnace:2 furnace:2|fuel:6 
-Text: If the furnace runs out of fuel before the arrow is filled up, then the input will not be smelted and the process will rewind at 2x speed.
+Text: If the furnace runs out of fuel before the arrow is filled up , then the input will not be smelted and the process will rewind at 2x speed .
 
 No.1981
-Connections: furnace:9|bed:22 bed:22|furnace:9 
-Text: If the player sleeps in a bed while a furnace is smelting, the furnace's progress will be the same as if the bed had not been used and no additional time had passed.
+Connections: furnace:9|bed:23 bed:23|furnace:9 
+Text: If the player sleeps in a bed while a furnace is smelting , the furnace's progress will be the same as if the bed had not been used and no additional time had passed .
 
 No.1991
-Connections: coal:36|bucket:6 bucket:6|coal:36 coal:36|block:34 block:34|coal:36 bucket:6|block:34 block:34|bucket:6 
-Text: For larger jobs, a single lava bucket or a block of coal can burn more items than will fit in the furnace—both input and output are limited to a stack of 64, but a block of coal burns 80, and lava can burn 100.
+Connections: coal:38|bucket:7 bucket:7|coal:38 coal:38|block:36 block:36|coal:38 bucket:7|block:36 block:36|bucket:7 
+Text: For larger jobs , a single lava bucket or a block of coal can burn more items than will fit in the furnace—both input and output are limited to a stack of 64 , but a block of coal burns 80 , and lava can burn 100 .
 
 No.2000
 Connections: fuel:20|wood:17 wood:17|fuel:20 fuel:20|planks:4 planks:4|fuel:20 wood:17|planks:4 planks:4|wood:17 
-Text: Burning wood with wood planks to make charcoal is over 5 times more efficient than using the wood itself as fuel.
+Text: Burning wood with wood planks to make charcoal is over 5 times more efficient than using the wood itself as fuel .
+
+No.2009
+Connections: fuel:12|furnace:8 furnace:8|fuel:12 
+Text: Currently , in Pocket Edition , when the furnace runs out of fuel , it will not rewind backwards at x2 speed , and will simply disappear instantly .
 
 No.2017
 Connections: pickaxe:11|ore:1 ore:1|pickaxe:11 pickaxe:11|iron:4 iron:4|pickaxe:11 ore:1|iron:4 iron:4|ore:1 
-Text: All ore blocks except iron and gold require a Silk Touch pickaxe to drop themselves.
+Text: All ore blocks except iron and gold require a Silk Touch pickaxe to drop themselves .
 
 No.2035
-Connections: stone:7|pickaxe:8 pickaxe:8|stone:7 
-Text: Create a stone axe, stone sword, and stone pickaxe.
+Connections: stone:9|pickaxe:10 pickaxe:10|stone:9 stone:9|axe:3 axe:3|stone:9 pickaxe:10|axe:3 axe:3|pickaxe:10 
+Text: Create a stone axe , stone sword , and stone pickaxe .
 
 No.2036
 Connections: furnace:3|iron:12 iron:12|furnace:3 
-Text: Now craft a furnace to cook meat for food and smelt any iron you find in your travels.
+Text: Now craft a furnace to cook meat for food and smelt any iron you find in your travels .
 
 No.2037
 Connections: coal:12|wood:5 wood:5|coal:12 
-Text: Save around five blocks of wood in case you haven't found any coal yet, and smelt them to create charcoal.
+Text: Save around five blocks of wood in case you haven't found any coal yet , and smelt them to create charcoal .
+
+No.2045
+Connections: stone:16|hand:3 hand:3|stone:16 
+Text: On the other hand , if you're seeking adventure you could always arm yourself with a stone sword and go beat some mobs , if you feel like it .
 
 No.2049
-Connections: torches:1|stick:15 stick:15|torches:1 
-Text: The torches are easy though, you just need to craft charcoal/coal on top of a stick.
+Connections: torches:1|stick:16 stick:16|torches:1 
+Text: The torches are easy though , you just need to craft charcoal/coal on top of a stick .
 
 No.2112
-Connections: cane:20|sugar:19 sugar:19|cane:20 
-Text: After marking your spawn point, head for high ground and look around for green grass and/or trees (cacti and sugar cane don't count.
+Connections: cane:21|sugar:20 sugar:20|cane:21 
+Text: After marking your spawn point , head for high ground and look around for green grass and/or trees (cacti and sugar cane don't count .
 
 No.2125
-Connections: stone:25|wood:23 wood:23|stone:25 stone:25|mushroom:4 mushroom:4|stone:25 wood:23|mushroom:4 mushroom:4|wood:23 
-Text: However, one thing the mushroom biome does not have, is wood—so before you go there, head for a grassy area to get some wood and stone first.
+Connections: stone:28|wood:26 wood:26|stone:28 stone:28|mushroom:5 mushroom:5|stone:28 wood:26|mushroom:5 mushroom:5|wood:26 
+Text: However , one thing the mushroom biome does not have , is wood—so before you go there , head for a grassy area to get some wood and stone first .
 
 No.2127
-Connections: stone:41|chest:48 chest:48|stone:41 
-Text: This is a good place to live in general, if you can make a bed: the farms will solve your food worries for now, you can trade with the villagers, and if there's a blacksmith (look for a house with a stone slab roof), it will contain a chest with bonus items.
+Connections: stone:44|chest:52 chest:52|stone:44 
+Text: This is a good place to live in general , if you can make a bed: the farms will solve your food worries for now , you can trade with the villagers , and if there's a blacksmith (look for a house with a stone slab roof) , it will contain a chest with bonus items .
 
 No.2131
-Connections: wool:20|block:16 block:16|wool:20 
-Text: If there are no sheep around, look for “lamp posts” in the village — the black block on top is wool (break it with your hand).
+Connections: wool:21|block:17 block:17|wool:21 
+Text: If there are no sheep around , look for “lamp posts” in the village — the black block on top is wool (break it with your hand) .
+
+No.2132
+Connections: wool:5|bed:8 bed:8|wool:5 
+Text: If you can't get enough wool for a bed , your best bets are (first choice) either get far away (150 blocks or so) from the village before nightfall , or (second best) to spend your first night(s) atop a really tall pillar , 40 blocks high or more (64 is even better) .
 
 No.2144
-Connections: coal:17|stone:22 stone:22|coal:17 
-Text: Look around for a few things in particular, in order of priority: trees, visible stone (and especially coal ore, which looks like stone with black spots on it), animals, and tall grass.
+Connections: coal:19|stone:25 stone:25|coal:19 coal:19|ore:20 ore:20|coal:19 stone:25|ore:20 ore:20|stone:25 
+Text: Look around for a few things in particular , in order of priority: trees , visible stone (and especially coal ore , which looks like stone with black spots on it) , animals , and tall grass .
 
 No.2147
-Connections: wood:18|block:21 block:21|wood:18 
-Text: Your first priority is to find a small tree, bash through the leaves if needed, and "punch" the wood until each block drops as an item.
+Connections: wood:20|block:23 block:23|wood:20 
+Text: Your first priority is to find a small tree , bash through the leaves if needed , and "punch" the wood until each block drops as an item .
 
 No.2157
 Connections: wood:11|planks:1 planks:1|wood:11 
-Text: The planks will be different colors depending on what sort of wood you have.
+Text: The planks will be different colors depending on what sort of wood you have .
 
 No.2160
-Connections: wood:8|sticks:2 sticks:2|wood:8 
-Text: In particular, sticks don't "remember" what sort of wood they came from.
+Connections: wood:9|sticks:3 sticks:3|wood:9 
+Text: In particular , sticks don't "remember" what sort of wood they came from .
 
 No.2165
-Connections: stone:4|pickaxe:15 pickaxe:15|stone:4 
-Text: n order to collect stone and coal, the next staple resources, you will need a pickaxe.
+Connections: coal:6|stone:4 stone:4|coal:6 coal:6|pickaxe:17 pickaxe:17|coal:6 stone:4|pickaxe:17 pickaxe:17|stone:4 
+Text: n order to collect stone and coal , the next staple resources , you will need a pickaxe .
 
 No.2166
-Connections: cobblestone:19|pickaxe:2 pickaxe:2|cobblestone:19 
-Text: Your first pickaxe will be made of wood, which isn't very durable or fast, but until you collect some cobblestone it's all you have.
+Connections: cobblestone:21|pickaxe:2 pickaxe:2|cobblestone:21 cobblestone:21|wood:7 wood:7|cobblestone:21 pickaxe:2|wood:7 wood:7|pickaxe:2 
+Text: Your first pickaxe will be made of wood , which isn't very durable or fast , but until you collect some cobblestone it's all you have .
+
+No.2167
+Connections: pickaxe:3|sticks:11 sticks:11|pickaxe:3 
+Text: To make a pickaxe , you will need to craft some sticks .
 
 No.2168
 Connections: planks:4|sticks:7 sticks:7|planks:4 
-Text: Now you'll use some planks and the sticks you just made to create the final product.
+Text: Now you'll use some planks and the sticks you just made to create the final product .
+
+No.2172
+Connections: cobblestone:10|pickaxe:4 pickaxe:4|cobblestone:10 
+Text: Once you've crafted a pickaxe , you can successfully acquire cobblestone to make better tools .
 
 No.2174
-Connections: cobblestone:25|stone:17 stone:17|cobblestone:25 
-Text: If you don't see any on the surface, dig down in a staircase fashion and mine the stone with your pickaxe; it will drop as cobblestone items.
+Connections: cobblestone:26|stone:18 stone:18|cobblestone:26 
+Text: If you don't see any on the surface , dig down in a staircase fashion and mine the stone with your pickaxe; it will drop as cobblestone items .
 
 No.2175
-Connections: cobblestone:22|pickaxe:6 pickaxe:6|cobblestone:22 cobblestone:22|furnace:17 furnace:17|cobblestone:22 cobblestone:22|stone:10 stone:10|cobblestone:22 pickaxe:6|furnace:17 furnace:17|pickaxe:6 pickaxe:6|stone:10 stone:10|pickaxe:6 furnace:17|stone:10 stone:10|furnace:17 
-Text: Gather enough cobblestone to upgrade your pickaxe and make a stone shovel, axe, and sword, and a furnace (the exact number of cobblestone required to make these is 17.
+Connections: stone:10|shovel:11 shovel:11|stone:10 stone:10|cobblestone:25 cobblestone:25|stone:10 stone:10|pickaxe:6 pickaxe:6|stone:10 stone:10|axe:13 axe:13|stone:10 stone:10|furnace:20 furnace:20|stone:10 shovel:11|cobblestone:25 cobblestone:25|shovel:11 shovel:11|pickaxe:6 pickaxe:6|shovel:11 shovel:11|axe:13 axe:13|shovel:11 shovel:11|furnace:20 furnace:20|shovel:11 cobblestone:25|pickaxe:6 pickaxe:6|cobblestone:25 cobblestone:25|axe:13 axe:13|cobblestone:25 cobblestone:25|furnace:20 furnace:20|cobblestone:25 pickaxe:6|axe:13 axe:13|pickaxe:6 pickaxe:6|furnace:20 furnace:20|pickaxe:6 axe:13|furnace:20 furnace:20|axe:13 
+Text: Gather enough cobblestone to upgrade your pickaxe and make a stone shovel , axe , and sword , and a furnace (the exact number of cobblestone required to make these is 17 .
 
 No.2176
 Connections: stone:6|hoe:7 hoe:7|stone:6 
-Text: ) You can also craft a stone hoe (or even a wooden one), but it won't be useful until you start farms (explained on day two).
+Text: ) You can also craft a stone hoe (or even a wooden one) , but it won't be useful until you start farms (explained on day two) .
 
 No.2178
-Connections: stone:1|pickaxe:21 pickaxe:21|stone:1 
-Text: A stone pickaxe is more durable and more efficient than a wooden pickaxe, and it can mine ores that a wooden pickaxe can't.
+Connections: stone:1|pickaxe:22 pickaxe:22|stone:1 
+Text: A stone pickaxe is more durable and more efficient than a wooden pickaxe , and it can mine ores that a wooden pickaxe can't .
+
+No.2179
+Connections: sand:10|hand:20 hand:20|sand:10 sand:10|clay:12 clay:12|sand:10 hand:20|clay:12 clay:12|hand:20 
+Text: Shovels are mainly used to break dirt , grass , sand , clay , and gravel blocks quicker than by hand .
 
 No.2182
-Connections: stone:9|axe:10 axe:10|stone:9 
-Text: Now, you should gather more wood, using your new stone axe.
+Connections: stone:11|wood:6 wood:6|stone:11 stone:11|axe:12 axe:12|stone:11 wood:6|axe:12 axe:12|wood:6 
+Text: Now , you should gather more wood , using your new stone axe .
 
 No.2190
-Connections: ore:6|iron:19 iron:19|ore:6 
-Text: If you happen across a coal-like ore with tan specks in place of the black, you have found some iron.
+Connections: ore:6|iron:20 iron:20|ore:6 
+Text: If you happen across a coal-like ore with tan specks in place of the black , you have found some iron .
 
 No.2208
-Connections: pickaxe:12|furnace:22 furnace:22|pickaxe:12 
-Text: As it is made with cobblestone, you will have to use your pickaxe to collect it if you wish to relocate your furnace.
+Connections: cobblestone:5|pickaxe:13 pickaxe:13|cobblestone:5 cobblestone:5|furnace:23 furnace:23|cobblestone:5 pickaxe:13|furnace:23 furnace:23|pickaxe:13 
+Text: As it is made with cobblestone , you will have to use your pickaxe to collect it if you wish to relocate your furnace .
 
 No.2296
-Connections: stone:7|pickaxe:8 pickaxe:8|stone:7 
-Text: Create a stone axe, stone sword, and stone pickaxe.
+Connections: stone:9|pickaxe:10 pickaxe:10|stone:9 stone:9|axe:3 axe:3|stone:9 pickaxe:10|axe:3 axe:3|pickaxe:10 
+Text: Create a stone axe , stone sword , and stone pickaxe .
 
 No.2297
 Connections: furnace:3|iron:12 iron:12|furnace:3 
-Text: Now craft a furnace to cook meat for food and smelt any iron you find in your travels.
+Text: Now craft a furnace to cook meat for food and smelt any iron you find in your travels .
 
 No.2298
 Connections: coal:12|wood:5 wood:5|coal:12 
-Text: Save around five blocks of wood in case you haven't found any coal yet, and smelt them to create charcoal.
+Text: Save around five blocks of wood in case you haven't found any coal yet , and smelt them to create charcoal .
+
+No.2309
+Connections: stone:16|hand:3 hand:3|stone:16 
+Text: On the other hand , if you're seeking adventure you could always arm yourself with a stone sword and go beat some mobs , if you feel like it .
 
 No.2313
-Connections: torches:1|stick:15 stick:15|torches:1 
-Text: The torches are easy though, you just need to craft charcoal/coal on top of a stick.
+Connections: torches:1|stick:16 stick:16|torches:1 
+Text: The torches are easy though , you just need to craft charcoal/coal on top of a stick .
 
 No.2382
-Connections: cane:20|sugar:19 sugar:19|cane:20 
-Text: After marking your spawn point, head for high ground and look around for green grass and/or trees (cacti and sugar cane don't count.
+Connections: cane:21|sugar:20 sugar:20|cane:21 
+Text: After marking your spawn point , head for high ground and look around for green grass and/or trees (cacti and sugar cane don't count .
 
 No.2395
-Connections: stone:25|wood:23 wood:23|stone:25 stone:25|mushroom:4 mushroom:4|stone:25 wood:23|mushroom:4 mushroom:4|wood:23 
-Text: However, one thing the mushroom biome does not have, is wood—so before you go there, head for a grassy area to get some wood and stone first.
+Connections: stone:28|wood:26 wood:26|stone:28 stone:28|mushroom:5 mushroom:5|stone:28 wood:26|mushroom:5 mushroom:5|wood:26 
+Text: However , one thing the mushroom biome does not have , is wood—so before you go there , head for a grassy area to get some wood and stone first .
 
 No.2397
-Connections: stone:41|chest:48 chest:48|stone:41 
-Text: This is a good place to live in general, if you can make a bed: the farms will solve your food worries for now, you can trade with the villagers, and if there's a blacksmith (look for a house with a stone slab roof), it will contain a chest with bonus items.
+Connections: stone:44|chest:52 chest:52|stone:44 
+Text: This is a good place to live in general , if you can make a bed: the farms will solve your food worries for now , you can trade with the villagers , and if there's a blacksmith (look for a house with a stone slab roof) , it will contain a chest with bonus items .
 
 No.2401
-Connections: wool:20|block:16 block:16|wool:20 
-Text: If there are no sheep around, look for “lamp posts” in the village — the black block on top is wool (break it with your hand).
+Connections: wool:21|block:17 block:17|wool:21 
+Text: If there are no sheep around , look for “lamp posts” in the village — the black block on top is wool (break it with your hand) .
+
+No.2402
+Connections: wool:5|bed:8 bed:8|wool:5 
+Text: If you can't get enough wool for a bed , your best bets are (first choice) either get far away (150 blocks or so) from the village before nightfall , or (second best) to spend your first night(s) atop a really tall pillar , 40 blocks high or more (64 is even better) .
 
 No.2414
-Connections: coal:17|stone:22 stone:22|coal:17 
-Text: Look around for a few things in particular, in order of priority: trees, visible stone (and especially coal ore, which looks like stone with black spots on it), animals, and tall grass.
+Connections: coal:19|stone:25 stone:25|coal:19 coal:19|ore:20 ore:20|coal:19 stone:25|ore:20 ore:20|stone:25 
+Text: Look around for a few things in particular , in order of priority: trees , visible stone (and especially coal ore , which looks like stone with black spots on it) , animals , and tall grass .
 
 No.2417
-Connections: wood:18|block:21 block:21|wood:18 
-Text: Your first priority is to find a small tree, bash through the leaves if needed, and "punch" the wood until each block drops as an item.
+Connections: wood:20|block:23 block:23|wood:20 
+Text: Your first priority is to find a small tree , bash through the leaves if needed , and "punch" the wood until each block drops as an item .
 
 No.2427
 Connections: wood:11|planks:1 planks:1|wood:11 
-Text: The planks will be different colors depending on what sort of wood you have.
+Text: The planks will be different colors depending on what sort of wood you have .
 
 No.2430
-Connections: wood:8|sticks:2 sticks:2|wood:8 
-Text: In particular, sticks don't "remember" what sort of wood they came from.
+Connections: wood:9|sticks:3 sticks:3|wood:9 
+Text: In particular , sticks don't "remember" what sort of wood they came from .
 
 No.2440
-Connections: stone:4|pickaxe:15 pickaxe:15|stone:4 
-Text: In order to collect stone and coal, the next staple resources, you will need a pickaxe.
+Connections: coal:6|stone:4 stone:4|coal:6 coal:6|pickaxe:17 pickaxe:17|coal:6 stone:4|pickaxe:17 pickaxe:17|stone:4 
+Text: In order to collect stone and coal , the next staple resources , you will need a pickaxe .
 
 No.2441
-Connections: cobblestone:19|pickaxe:2 pickaxe:2|cobblestone:19 
-Text: Your first pickaxe will be made of wood, which isn't very durable or fast, but until you collect some cobblestone it's all you have.
+Connections: cobblestone:21|pickaxe:2 pickaxe:2|cobblestone:21 cobblestone:21|wood:7 wood:7|cobblestone:21 pickaxe:2|wood:7 wood:7|pickaxe:2 
+Text: Your first pickaxe will be made of wood , which isn't very durable or fast , but until you collect some cobblestone it's all you have .
+
+No.2442
+Connections: pickaxe:3|sticks:11 sticks:11|pickaxe:3 
+Text: To make a pickaxe , you will need to craft some sticks .
 
 No.2445
 Connections: planks:4|sticks:7 sticks:7|planks:4 
-Text: Now you'll use some planks and the sticks you just made to create the final product.
+Text: Now you'll use some planks and the sticks you just made to create the final product .
+
+No.2453
+Connections: cobblestone:10|pickaxe:4 pickaxe:4|cobblestone:10 
+Text: Once you've crafted a pickaxe , you can successfully acquire cobblestone to make better tools .
 
 No.2455
-Connections: cobblestone:25|stone:17 stone:17|cobblestone:25 
-Text: If you don't see any on the surface, dig down in a staircase fashion and mine the stone with your pickaxe; it will drop as cobblestone items.
+Connections: cobblestone:26|stone:18 stone:18|cobblestone:26 
+Text: If you don't see any on the surface , dig down in a staircase fashion and mine the stone with your pickaxe; it will drop as cobblestone items .
 
 No.2456
-Connections: cobblestone:22|pickaxe:6 pickaxe:6|cobblestone:22 cobblestone:22|furnace:17 furnace:17|cobblestone:22 cobblestone:22|stone:10 stone:10|cobblestone:22 pickaxe:6|furnace:17 furnace:17|pickaxe:6 pickaxe:6|stone:10 stone:10|pickaxe:6 furnace:17|stone:10 stone:10|furnace:17 
-Text: Gather enough cobblestone to upgrade your pickaxe and make a stone shovel, axe, and sword, and a furnace (the exact number of cobblestone required to make these is 17.
+Connections: stone:10|shovel:11 shovel:11|stone:10 stone:10|cobblestone:25 cobblestone:25|stone:10 stone:10|pickaxe:6 pickaxe:6|stone:10 stone:10|axe:13 axe:13|stone:10 stone:10|furnace:20 furnace:20|stone:10 shovel:11|cobblestone:25 cobblestone:25|shovel:11 shovel:11|pickaxe:6 pickaxe:6|shovel:11 shovel:11|axe:13 axe:13|shovel:11 shovel:11|furnace:20 furnace:20|shovel:11 cobblestone:25|pickaxe:6 pickaxe:6|cobblestone:25 cobblestone:25|axe:13 axe:13|cobblestone:25 cobblestone:25|furnace:20 furnace:20|cobblestone:25 pickaxe:6|axe:13 axe:13|pickaxe:6 pickaxe:6|furnace:20 furnace:20|pickaxe:6 axe:13|furnace:20 furnace:20|axe:13 
+Text: Gather enough cobblestone to upgrade your pickaxe and make a stone shovel , axe , and sword , and a furnace (the exact number of cobblestone required to make these is 17 .
 
 No.2457
 Connections: stone:6|hoe:7 hoe:7|stone:6 
-Text: ) You can also craft a stone hoe (or even a wooden one), but it won't be useful until you start farms (explained on day two).
+Text: ) You can also craft a stone hoe (or even a wooden one) , but it won't be useful until you start farms (explained on day two) .
 
 No.2459
-Connections: stone:1|pickaxe:21 pickaxe:21|stone:1 
-Text: A stone pickaxe is more durable and more efficient than a wooden pickaxe, and it can mine ores that a wooden pickaxe can't.
+Connections: stone:1|pickaxe:22 pickaxe:22|stone:1 
+Text: A stone pickaxe is more durable and more efficient than a wooden pickaxe , and it can mine ores that a wooden pickaxe can't .
+
+No.2460
+Connections: sand:10|hand:20 hand:20|sand:10 sand:10|clay:12 clay:12|sand:10 hand:20|clay:12 clay:12|hand:20 
+Text: Shovels are mainly used to break dirt , grass , sand , clay , and gravel blocks quicker than by hand .
 
 No.2466
-Connections: stone:9|axe:10 axe:10|stone:9 
-Text: Now, you should gather more wood, using your new stone axe.
+Connections: stone:11|wood:6 wood:6|stone:11 stone:11|axe:12 axe:12|stone:11 wood:6|axe:12 axe:12|wood:6 
+Text: Now , you should gather more wood , using your new stone axe .
 
 No.2474
-Connections: ore:6|iron:19 iron:19|ore:6 
-Text: If you happen across a coal-like ore with tan specks in place of the black, you have found some iron.
+Connections: ore:6|iron:20 iron:20|ore:6 
+Text: If you happen across a coal-like ore with tan specks in place of the black , you have found some iron .
 
 No.2493
-Connections: pickaxe:12|furnace:22 furnace:22|pickaxe:12 
-Text: As it is made with cobblestone, you will have to use your pickaxe to collect it if you wish to relocate your furnace.
+Connections: cobblestone:5|pickaxe:13 pickaxe:13|cobblestone:5 cobblestone:5|furnace:23 furnace:23|cobblestone:5 pickaxe:13|furnace:23 furnace:23|pickaxe:13 
+Text: As it is made with cobblestone , you will have to use your pickaxe to collect it if you wish to relocate your furnace .
 
 No.2507
-Connections: fuel:25|wood:17 wood:17|fuel:25 
-Text: Ration out a piece of coal/charcoal for the food, and cook the food just like smelting the wood above: food in the upper input box, fuel (coal) in the lower one.
+Connections: fuel:27|wood:18 wood:18|fuel:27 
+Text: Ration out a piece of coal/charcoal for the food , and cook the food just like smelting the wood above: food in the upper input box , fuel (coal) in the lower one .
 
 No.2509
 Connections: coal:10|sticks:15 sticks:15|coal:10 coal:10|torches:19 torches:19|coal:10 sticks:15|torches:19 torches:19|sticks:15 
-Text: Use the rest (up to 8 for now) of the coal or charcoal with some sticks to craft into torches.
+Text: Use the rest (up to 8 for now) of the coal or charcoal with some sticks to craft into torches .
 
 No.2510
-Connections: coal:11|sticks:5 sticks:5|coal:11 coal:11|torches:16 torches:16|coal:11 sticks:5|torches:16 torches:16|sticks:5 
-Text: One log crafts into 8 sticks to match 8 pieces of coal or charcoal, producing 32 torches (half a stack.
+Connections: coal:11|sticks:5 sticks:5|coal:11 coal:11|torches:17 torches:17|coal:11 sticks:5|torches:17 torches:17|sticks:5 
+Text: One log crafts into 8 sticks to match 8 pieces of coal or charcoal , producing 32 torches (half a stack .
 
 No.2511
-Connections: torches:11|hand:24 hand:24|torches:11 torches:11|coal:20 coal:20|torches:11 hand:24|coal:20 coal:20|hand:24 
-Text: ) Throughout the game, you will be crafting more and more torches as you need them, so always keep some coal or charcoal at hand.
+Connections: torches:12|hand:26 hand:26|torches:12 torches:12|coal:22 coal:22|torches:12 hand:26|coal:22 coal:22|hand:26 
+Text: ) Throughout the game , you will be crafting more and more torches as you need them , so always keep some coal or charcoal at hand .
 
 No.2527
 Connections: stone:2|hand:5 hand:5|stone:2 
-Text: Keep your stone sword in hand and whack them as soon as they come into reach, before they get up to you - attacking them will knock them back down.
+Text: Keep your stone sword in hand and whack them as soon as they come into reach , before they get up to you - attacking them will knock them back down .
 
 No.2530
-Connections: wood:16|block:7 block:7|wood:16 
-Text: You can also simply build a three block high hut from any material, for example cobblestone, wood or dirt.
+Connections: cobblestone:16|wood:18 wood:18|cobblestone:16 cobblestone:16|block:7 block:7|cobblestone:16 wood:18|block:7 block:7|wood:18 
+Text: You can also simply build a three block high hut from any material , for example cobblestone , wood or dirt .
+
+No.2543
+Connections: door:6|fence:12 fence:12|door:6 
+Text: Some natural extensions include a back door , windows , a surrounding fence , and even traps for monsters .
 
 No.2547
-Connections: coal:18|ore:19 ore:19|coal:18 
-Text: Extreme Hills biomes will have caves inside mountains, but these are generally not what you want, because only coal ore will appear above sea level (Y=64).
+Connections: coal:20|ore:21 ore:21|coal:20 
+Text: Extreme Hills biomes will have caves inside mountains , but these are generally not what you want , because only coal ore will appear above sea level (Y=64) .
 
 No.2559
-Connections: stone:20|ore:4 ore:4|stone:20 
-Text: This is the only ore that appears above sea level (anywhere there is stone), and it is often visible in stone outcrops on the surface or even on mountains.
+Connections: stone:21|ore:4 ore:4|stone:21 
+Text: This is the only ore that appears above sea level (anywhere there is stone) , and it is often visible in stone outcrops on the surface or even on mountains .
 
 No.2562
-Connections: stone:11|pickaxe:12 pickaxe:12|stone:11 
-Text: Gather as much of it as possible, but it needs a stone pickaxe or better to mine it, so be careful not to use a wooden pick on it.
+Connections: stone:12|pickaxe:13 pickaxe:13|stone:12 
+Text: Gather as much of it as possible , but it needs a stone pickaxe or better to mine it , so be careful not to use a wooden pick on it .
 
 No.2563
-Connections: furnace:8|iron:13 iron:13|furnace:8 
-Text: Once you have some iron ore, make a furnace to smelt it into iron ingots, that you can then craft into other items.
+Connections: ore:5|furnace:9 furnace:9|ore:5 ore:5|iron:14 iron:14|ore:5 furnace:9|iron:14 iron:14|furnace:9 
+Text: Once you have some iron ore , make a furnace to smelt it into iron ingots , that you can then craft into other items .
 
 No.2564
-Connections: bucket:10|iron:17 iron:17|bucket:10 
-Text: First of all craft a pickaxe, a sword, and a bucket (fill it with water), then craft iron armor.
+Connections: pickaxe:5|bucket:12 bucket:12|pickaxe:5 pickaxe:5|iron:20 iron:20|pickaxe:5 bucket:12|iron:20 iron:20|bucket:12 
+Text: First of all craft a pickaxe , a sword , and a bucket (fill it with water) , then craft iron armor .
 
 No.2566
-Connections: shovel:24|bucket:10 bucket:10|shovel:24 shovel:24|iron:23 iron:23|shovel:24 bucket:10|iron:23 iron:23|bucket:10 
-Text: If you have extra, go on to make shears, another bucket (to hold a second water source or stray lava), and perhaps an iron shovel or other tools.
+Connections: bucket:12|shovel:27 shovel:27|bucket:12 bucket:12|shears:9 shears:9|bucket:12 bucket:12|iron:26 iron:26|bucket:12 shovel:27|shears:9 shears:9|shovel:27 shovel:27|iron:26 iron:26|shovel:27 shears:9|iron:26 iron:26|shears:9 
+Text: If you have extra , go on to make shears , another bucket (to hold a second water source or stray lava) , and perhaps an iron shovel or other tools .
 
 No.2571
 Connections: pickaxe:6|iron:5 iron:5|pickaxe:6 
-Text: Gold and redstone need an iron pickaxe to mine.
+Text: Gold and redstone need an iron pickaxe to mine .
 
 No.2572
 Connections: stone:6|pickaxe:7 pickaxe:7|stone:6 
-Text: (Lapis can be mined with a stone pickaxe.
+Text: (Lapis can be mined with a stone pickaxe .
+
+No.2575
+Connections: cane:5|sugar:4 sugar:4|cane:5 
+Text: Once you find some sugar cane , you can add a map (paper+compass) to keep track of your explorations and help avoid getting lost .
 
 No.2580
-Connections: pickaxe:23|ore:1 ore:1|pickaxe:23 pickaxe:23|iron:22 iron:22|pickaxe:23 ore:1|iron:22 iron:22|ore:1 
-Text: The ore can be found at the very bottom of the world, the bottom 15 layers of the map, and requires an iron pickaxe to mine.
+Connections: pickaxe:25|ore:1 ore:1|pickaxe:25 pickaxe:25|iron:24 iron:24|pickaxe:25 ore:1|iron:24 iron:24|ore:1 
+Text: The ore can be found at the very bottom of the world , the bottom 15 layers of the map , and requires an iron pickaxe to mine .
 
 No.2585
-Connections: pickaxe:16|ore:1 ore:1|pickaxe:16 pickaxe:16|iron:15 iron:15|pickaxe:16 ore:1|iron:15 iron:15|ore:1 
-Text: Emerald ore is found at the same depths as gold ore, and likewise requires an iron pickaxe.
+Connections: pickaxe:17|ore:10 ore:10|pickaxe:17 pickaxe:17|iron:16 iron:16|pickaxe:17 ore:10|iron:16 iron:16|ore:10 
+Text: Emerald ore is found at the same depths as gold ore , and likewise requires an iron pickaxe .
+
+No.2593
+Connections: coal:4|wood:2 wood:2|coal:4 coal:4|iron:7 iron:7|coal:4 wood:2|iron:7 iron:7|wood:2 
+Text: Collect more wood , coal , and iron for crafting .
+
+No.2597
+Connections: rods:7|fishing:6 fishing:6|rods:7 
+Text: You need this for bows , fishing rods , and leads .
 
 No.2598
-Connections: wool:14|string:7 string:7|wool:14 wool:14|bed:19 bed:19|wool:14 string:7|bed:19 bed:19|string:7 
-Text: If you still haven't found sheep, 12 string can be crafted into the 3 wool you need for a bed.
+Connections: wool:15|string:8 string:8|wool:15 wool:15|bed:20 bed:20|wool:15 string:8|bed:20 bed:20|string:8 
+Text: If you still haven't found sheep , 12 string can be crafted into the 3 wool you need for a bed .
 
 No.2604
 Connections: cane:2|iron:11 iron:11|cane:2 cane:2|sugar:1 sugar:1|cane:2 iron:11|sugar:1 sugar:1|iron:11 
-Text: Gather sugar cane for maps and books (you will also need iron and redstone for maps, and leather for books).
+Text: Gather sugar cane for maps and books (you will also need iron and redstone for maps , and leather for books) .
+
+No.2607
+Connections: seeds:23|wheat:7 wheat:7|seeds:23 
+Text: Cows , mooshrooms , and sheep eat wheat , pigs eat carrots (you probably won't have these at first) , and chickens eat seeds (you've probably picked some up already from breaking grass) .
 
 No.2614
-Connections: rods:37|fishing:36 fishing:36|rods:37 
-Text: Fishing will be about 20% faster when it's raining, and fishing will occasionally get you saddles and name tags (otherwise quite hard to find), along with extra bits of leather and string… not to mention enchanted fishing rods.
+Connections: rods:39|fishing:38 fishing:38|rods:39 
+Text: Fishing will be about 20% faster when it's raining , and fishing will occasionally get you saddles and name tags (otherwise quite hard to find) , along with extra bits of leather and string… not to mention enchanted fishing rods .
 
 No.2621
-Connections: fish:28|fences:4 fences:4|fish:28 
-Text: ) Add a few fences for safety, optionally a roof (lightning is unlikely to hit you, but it does happen), and you have a nice secure spot to fish from, even during thunderstorms and at night.
+Connections: fish:31|fences:4 fences:4|fish:31 
+Text: ) Add a few fences for safety , optionally a roof (lightning is unlikely to hit you , but it does happen) , and you have a nice secure spot to fish from , even during thunderstorms and at night .
 
 No.2629
-Connections: wheat:15|bread:17 bread:17|wheat:15 
-Text: Food is not required, but can help, and any of several foods will do, but wheat or bread is probably easiest.
+Connections: wheat:18|bread:20 bread:20|wheat:18 
+Text: Food is not required , but can help , and any of several foods will do , but wheat or bread is probably easiest .
+
+No.2632
+Connections: torches:22|pickaxe:31 pickaxe:31|torches:22 
+Text: f you read the Beginner's Guide and followed it you should have at least a hole in a hill with about 2 torches , a workbench , and a worn-down wooden pickaxe .
 
 No.2646
 Connections: stone:4|pickaxe:7 pickaxe:7|stone:4 
-Text: Begin by mining some stone with your pickaxe.
+Text: Begin by mining some stone with your pickaxe .
 
 No.2647
 Connections: stone:4|pickaxe:5 pickaxe:5|stone:4 
-Text: You should craft a stone pickaxe because it mines faster and has more durability.
+Text: You should craft a stone pickaxe because it mines faster and has more durability .
 
 No.2648
-Connections: cobblestone:13|stone:4 stone:4|cobblestone:13 cobblestone:13|block:11 block:11|cobblestone:13 stone:4|block:11 block:11|stone:4 
-Text: When you mine a stone block, it should drop a crumbly block called cobblestone.
+Connections: cobblestone:14|stone:4 stone:4|cobblestone:14 cobblestone:14|block:12 block:12|cobblestone:14 stone:4|block:12 block:12|stone:4 
+Text: When you mine a stone block , it should drop a crumbly block called cobblestone .
 
 No.2651
 Connections: cobblestone:4|stone:7 stone:7|cobblestone:4 
-Text: You can also use cobblestone to make stone weapons and tools.
+Text: You can also use cobblestone to make stone weapons and tools .
 
 No.2653
 Connections: cobblestone:12|stone:4 stone:4|cobblestone:12 cobblestone:12|pickaxe:16 pickaxe:16|cobblestone:12 cobblestone:12|planks:10 planks:10|cobblestone:12 stone:4|pickaxe:16 pickaxe:16|stone:4 stone:4|planks:10 planks:10|stone:4 pickaxe:16|planks:10 planks:10|pickaxe:16 
-Text: You can make a stone pickaxe by replacing the wooden planks with cobblestone when making a pickaxe.
+Text: You can make a stone pickaxe by replacing the wooden planks with cobblestone when making a pickaxe .
+
+No.2661
+Connections: coal:11|wood:9 wood:9|coal:11 coal:11|bucket:20 bucket:20|coal:11 coal:11|torches:13 torches:13|coal:11 wood:9|bucket:20 bucket:20|wood:9 wood:9|torches:13 torches:13|wood:9 bucket:20|torches:13 torches:13|bucket:20 
+Text: Most players find it helpful to bring food , wood , coal , torches , a sword and a water bucket .
 
 No.2663
-Connections: stone:11|iron:18 iron:18|stone:11 
-Text: Also, it's a good idea to bring iron pickaxes instead of stone pickaxes, if you can spare the iron.
+Connections: stone:12|iron:20 iron:20|stone:12 
+Text: Also , it's a good idea to bring iron pickaxes instead of stone pickaxes , if you can spare the iron .
 
 No.2665
-Connections: pickaxe:54|stone:35 stone:35|pickaxe:54 pickaxe:54|iron:53 iron:53|pickaxe:54 stone:35|iron:53 iron:53|stone:35 
-Text: With the vast amount of iron that is in the world, you are likely to find an iron pickaxe will more than make up for itself in terms of iron mined, if you use a stone pickaxe it goes by slowly, so in theory you are wasting iron if you don't use an iron pickaxe.
+Connections: pickaxe:57|stone:37 stone:37|pickaxe:57 pickaxe:57|iron:56 iron:56|pickaxe:57 stone:37|iron:56 iron:56|stone:37 
+Text: With the vast amount of iron that is in the world , you are likely to find an iron pickaxe will more than make up for itself in terms of iron mined , if you use a stone pickaxe it goes by slowly , so in theory you are wasting iron if you don't use an iron pickaxe .
 
 No.2667
-Connections: pickaxe:5|iron:18 iron:18|pickaxe:5 
-Text: When you obtain a diamond pickaxe you should use it till it breaks, its the same argument as iron.
+Connections: pickaxe:5|iron:19 iron:19|pickaxe:5 
+Text: When you obtain a diamond pickaxe you should use it till it breaks , its the same argument as iron .
+
+No.2668
+Connections: pickaxe:22|iron:8 iron:8|pickaxe:22 
+Text: Although , there is considerably less diamond than iron , diamond on average spawning less than once per chunk , a diamond pickaxe should more than make up for itself when you mine for strictly for diamond .
 
 No.2671
-Connections: torches:11|planks:21 planks:21|torches:11 
-Text: If you keep losing your way, try marking your path with torches or a unique entity, such as signs or birch planks.
+Connections: torches:12|planks:23 planks:23|torches:12 
+Text: If you keep losing your way , try marking your path with torches or a unique entity , such as signs or birch planks .
 
 No.2673
-Connections: chest:14|bed:11 bed:11|chest:14 
-Text: Carving out a safe room containing furnaces, a crafting table, a bed and a chest might be worth your time.
+Connections: chest:16|bed:13 bed:13|chest:16 
+Text: Carving out a safe room containing furnaces , a crafting table , a bed and a chest might be worth your time .
 
 No.2683
-Connections: stone:19|fences:16 fences:16|stone:19 
-Text: Be careful where you place rails, and you may want to protect some of them with fences or even stone.
+Connections: stone:20|fences:17 fences:17|stone:20 
+Text: Be careful where you place rails , and you may want to protect some of them with fences or even stone .
+
+No.2688
+Connections: coal:7|iron:9 iron:9|coal:7 
+Text: Even shallow caves will offer plenty of coal and iron , and later gold and other ores .
 
 No.2689
-Connections: stone:9|ore:18 ore:18|stone:9 
-Text: Caves offer the advantage that a great deal of stone has already been excavated for you, exposing many ore veins.
+Connections: stone:9|ore:19 ore:19|stone:9 
+Text: Caves offer the advantage that a great deal of stone has already been excavated for you , exposing many ore veins .
 
 No.2699
 Connections: coal:10|torches:23 torches:23|coal:10 
-Text: It is a good idea to mine everything out including coal as you never know when you might be lost and need more torches.
+Text: It is a good idea to mine everything out including coal as you never know when you might be lost and need more torches .
 
 No.2703
-Connections: shovel:21|pickaxe:19 pickaxe:19|shovel:21 shovel:21|ore:10 ore:10|shovel:21 pickaxe:19|ore:10 ore:10|pickaxe:19 
-Text: Cave mining has a high return on investment, yielding more ore per time spent and requiring fewer tools (less pickaxe and shovel durability is lost mining stone, dirt, and gravel) than other approaches.
+Connections: shovel:22|pickaxe:20 pickaxe:20|shovel:22 shovel:22|ore:11 ore:11|shovel:22 shovel:22|stone:27 stone:27|shovel:22 pickaxe:20|ore:11 ore:11|pickaxe:20 pickaxe:20|stone:27 stone:27|pickaxe:20 ore:11|stone:27 stone:27|ore:11 
+Text: Cave mining has a high return on investment , yielding more ore per time spent and requiring fewer tools (less pickaxe and shovel durability is lost mining stone , dirt , and gravel) than other approaches .
 
 No.2717
-Connections: bucket:1|block:30 block:30|bucket:1 
-Text: A bucket of water serves as both a fire extinguisher, if you fall in; and as a way to form obsidian surfaces over lava pools (pour water onto a solid block adjacent to a lava pool; do not stand between that spot and the lava).
+Connections: bucket:1|block:31 block:31|bucket:1 
+Text: A bucket of water serves as both a fire extinguisher , if you fall in; and as a way to form obsidian surfaces over lava pools (pour water onto a solid block adjacent to a lava pool; do not stand between that spot and the lava) .
 
 No.2726
-Connections: cobblestone:9|stone:13 stone:13|cobblestone:9 cobblestone:9|pickaxe:14 pickaxe:14|cobblestone:9 stone:13|pickaxe:14 pickaxe:14|stone:13 
-Text: If it is your first mining trip, mine some cobblestone and make a stone pickaxe.
+Connections: cobblestone:10|stone:14 stone:14|cobblestone:10 cobblestone:10|pickaxe:15 pickaxe:15|cobblestone:10 stone:14|pickaxe:15 pickaxe:15|stone:14 
+Text: If it is your first mining trip , mine some cobblestone and make a stone pickaxe .
 
 No.2727
-Connections: stone:23|iron:17 iron:17|stone:23 
-Text: If you are further along in the game, and expect to mine for a while, bring two iron pickaxes and at least 12 stone pickaxes.
+Connections: stone:25|iron:19 iron:19|stone:25 
+Text: If you are further along in the game , and expect to mine for a while , bring two iron pickaxes and at least 12 stone pickaxes .
 
 No.2730
-Connections: stone:14|pickaxe:18 pickaxe:18|stone:14 stone:14|iron:17 iron:17|stone:14 pickaxe:18|iron:17 iron:17|pickaxe:18 
-Text: If you prefer to save valuable materials, take a few stone pickaxes for mining stone and one iron pickaxe only for mining ores.
+Connections: stone:15|pickaxe:19 pickaxe:19|stone:15 stone:15|iron:18 iron:18|stone:15 pickaxe:19|iron:18 iron:18|pickaxe:19 
+Text: If you prefer to save valuable materials , take a few stone pickaxes for mining stone and one iron pickaxe only for mining ores .
 
 No.2732
 Connections: shovel:5|iron:4 iron:4|shovel:5 
-Text: Having at least one iron shovel can get through cumbersome patches of dirt and gravel quickly without using your hands.
+Text: Having at least one iron shovel can get through cumbersome patches of dirt and gravel quickly without using your hands .
 
 No.2733
 Connections: stone:4|iron:14 iron:14|stone:4 
-Text: Just one or two stone shovels also works if you want to use your iron for other things.
+Text: Just one or two stone shovels also works if you want to use your iron for other things .
 
 No.2739
-Connections: torches:24|sticks:15 sticks:15|torches:24 torches:24|coal:29 coal:29|torches:24 sticks:15|coal:29 coal:29|sticks:15 
-Text: If you run out of tools or torches, you can make a crafting table and sticks to replenish your supplies of pickaxes, shovels, and torches (you can get more coal for them from mining).
+Connections: torches:27|sticks:16 sticks:16|torches:27 torches:27|coal:32 coal:32|torches:27 sticks:16|coal:32 coal:32|sticks:16 
+Text: If you run out of tools or torches , you can make a crafting table and sticks to replenish your supplies of pickaxes , shovels , and torches (you can get more coal for them from mining) .
 
 No.2747
-Connections: fuel:11|bucket:2 bucket:2|fuel:11 fuel:11|block:16 block:16|fuel:11 bucket:2|block:16 block:16|bucket:2 
-Text: A spare bucket is useful for collecting lava to use as fuel in a furnace, to block or slaughter monsters (you'll lose most of their drops), or just to get the lava out of your way.
+Connections: fuel:11|furnace:14 furnace:14|fuel:11 fuel:11|bucket:2 bucket:2|fuel:11 fuel:11|block:17 block:17|fuel:11 furnace:14|bucket:2 bucket:2|furnace:14 furnace:14|block:17 block:17|furnace:14 bucket:2|block:17 block:17|bucket:2 
+Text: A spare bucket is useful for collecting lava to use as fuel in a furnace , to block or slaughter monsters (you'll lose most of their drops) , or just to get the lava out of your way .
 
 No.2755
-Connections: bowl:11|stew:15 stew:15|bowl:11 bowl:11|mushroom:14 mushroom:14|bowl:11 stew:15|mushroom:14 mushroom:14|stew:15 
-Text: If there are mushrooms present, you might carry or make a bowl to make mushroom stew.
+Connections: bowl:12|stew:16 stew:16|bowl:12 bowl:12|mushroom:15 mushroom:15|bowl:12 stew:16|mushroom:15 mushroom:15|stew:16 
+Text: If there are mushrooms present , you might carry or make a bowl to make mushroom stew .
 
 No.2761
-Connections: ore:14|iron:6 iron:6|ore:14 
-Text: In general, you want at least iron armor — if necessary, you can smelt ore and craft your armor in the caves.
+Connections: ore:16|iron:7 iron:7|ore:16 
+Text: In general , you want at least iron armor — if necessary , you can smelt ore and craft your armor in the caves .
 
 No.2762
-Connections: chest:43|iron:24 iron:24|chest:43 
-Text: Chests are invaluable when exploring lava caves since you can store your items in case you die; instead of losing a whole stack of iron and half a stack of gold along with all of your food and weapons, you can drop a chest and a crafting table nearby, and lose only your current tools and whatever you hadn't stashed yet.
+Connections: chest:44|iron:24 iron:24|chest:44 
+Text: Chests are invaluable when exploring lava caves since you can store your items in case you die; instead of losing a whole stack of iron and half a stack of gold along with all of your food and weapons , you can drop a chest and a crafting table nearby , and lose only your current tools and whatever you hadn't stashed yet .
 
 No.2780
-Connections: wood:12|wheat:21 wheat:21|wood:12 
-Text: You can create an underground tree farm to replenish your supply of wood and a small wheat farm to continuously grow wheat for bread, allowing you to stay underground for an infinite period of time.
+Connections: wood:12|wheat:21 wheat:21|wood:12 wood:12|bread:23 bread:23|wood:12 wheat:21|bread:23 bread:23|wheat:21 
+Text: You can create an underground tree farm to replenish your supply of wood and a small wheat farm to continuously grow wheat for bread , allowing you to stay underground for an infinite period of time .
 
 No.2784
-Connections: wood:18|door:15 door:15|wood:18 wood:18|planks:19 planks:19|wood:18 wood:18|block:29 block:29|wood:18 door:15|planks:19 planks:19|door:15 door:15|block:29 block:29|door:15 planks:19|block:29 block:29|planks:19 
-Text: The crafting recipe for wooden doors creates three doors from six wood planks, hence each door uses two wood planks - the same as what would be required to block a 2 x 1 hole but with the ability to pass through with ease, and return in a hurry if there are a large number of mobs on the other side.
+Connections: wood:19|door:16 door:16|wood:19 wood:19|planks:20 planks:20|wood:19 wood:19|block:30 block:30|wood:19 door:16|planks:20 planks:20|door:16 door:16|block:30 block:30|door:16 planks:20|block:30 block:30|planks:20 
+Text: The crafting recipe for wooden doors creates three doors from six wood planks , hence each door uses two wood planks - the same as what would be required to block a 2 x 1 hole but with the ability to pass through with ease , and return in a hurry if there are a large number of mobs on the other side .
 
