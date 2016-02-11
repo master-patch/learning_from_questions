@@ -1,114 +1,132 @@
-With the exception of sand , red sand , gravel , anvils , dragon eggs and , in Pocket Edition , Snow (cover) , all blocks ignore gravity .
+With the exception of sand , red sand , gravel , anvils , dragon eggs and , in Pocket Edition , Snow ( cover ), all blocks ignore gravity .
 Minerals are used for tools , fuel for a furnace , creating other blocks or items , trading , dyes , and work in redstone contraptions .
 These are obtained by picking up the item that drops after mining an ore with a pickaxe of the right material , or taking the item that gets created after smelting an ore by dragging the finished product into your inventory .
-Plants (in non-block form , examples: seeds , and sugarcane (item version)) are used for creating block-type plants when placed on farmland , dirt , sand , and the side of logs , so that they can grow , and give themselves or other items in the game when fully grown and broken , and be manufactured or consumed .
-Crafting Ingredients are ingredients that have no specific category and no other non-decoration purpose than to create other blocks or items by crafting or smelting , examples are flint , bowls , sticks , paper , clay , brick , nether brick , and nether quartz .
+Plants ( in non - block form , examples : seeds , and sugarcane ( item version )) are used for creating block - type plants when placed on farmland , dirt , sand , and the side of logs , so that they can grow , and give themselves or other items in the game when fully grown and broken , and be manufactured or consumed .
+These are obtained by picking up the item that drops after breaking a block - type version of the non - block plant in the world , or are found in reward chests .
+Crafting Ingredients are ingredients that have no specific category and no other non - decoration purpose than to create other blocks or items by crafting or smelting , examples are flint , bowls , sticks , paper , clay , brick , nether brick , and nether quartz .
+Axes allow the player to break wood - type blocks faster than mining by hand .
 They can be crafted from wood , cobblestone , iron , gold and diamond .
+Shovels allow the player to break sand - type blocks faster than mining by hand .
 They can be crafted from wood , cobblestone , iron , gold and diamond .
+Pickaxes allow the player to break stone - type blocks faster than mining by hand , and are required in different types of materials in order to make resources drop from specific stone - type blocks .
 They can be crafted from wood , cobblestone , iron , gold and diamond .
 They can be crafted from wood , stone , iron , gold and diamond .
 Shears allow the player to make sheep drop wool , mooshrooms drop red mushrooms , cobwebs drop string , with a Silk Touch enchantment the actual cobweb itself , and make varieties of grass , leaves , vines and dead bushes drop themselves .
 Fishing rods allow the player to go fishing to catch several types of fish , treasure , and trash , as well as pull mobs or players closer .
 These include wood planks , sticks , crafting tables , and most shapeless recipes .
-However , smelting utilizes furnace blocks , which have a unique interface: one "input" field for the object that will be heated , one field for the fuel , and one "output" field for the final smelted product .
+However , smelting utilizes furnace blocks , which have a unique interface : one " input " field for the object that will be heated , one field for the fuel , and one " output " field for the final smelted product .
+For example , two saplings ( fuel ) could be used to smelt one wood ( input ) into one charcoal ( output ) .
 To smelt something , an input material and a fuel must be loaded into the furnace .
 When the furnace begins to smelt , it will consume one piece of fuel and the fire gauge will fill up .
 If there is no more fuel left , the furnace will be interrupted and the item will be uncooked .
 If the furnace runs out of fuel before the arrow is filled up , then the input will not be smelted and the process will rewind at 2x speed .
-If the player sleeps in a bed while a furnace is smelting , the furnace's progress will be the same as if the bed had not been used and no additional time had passed .
-For larger jobs , a single lava bucket or a block of coal can burn more items than will fit in the furnace‚Äîboth input and output are limited to a stack of 64 , but a block of coal burns 80 , and lava can burn 100 .
+If the player sleeps in a bed while a furnace is smelting , the furnace ' s progress will be the same as if the bed had not been used and no additional time had passed .
+Accordingly , you will usually want to burn things in multiples of 8 ( lumps of coal or charcoal ), or occasionally 3 ( 2 wooden planks ) .
+For larger jobs , a single lava bucket or a block of coal can burn more items than will fit in the furnace‚ Äî both input and output are limited to a stack of 64 , but a block of coal burns 80 , and lava can burn 100 .
 Burning wood with wood planks to make charcoal is over 5 times more efficient than using the wood itself as fuel .
+When making charcoal , it ' s most efficient to convert 1‚ ÅÑ 7 of the logs into planks ( for fuel ) .
 Currently , in Pocket Edition , when the furnace runs out of fuel , it will not rewind backwards at x2 speed , and will simply disappear instantly .
 All ore blocks except iron and gold require a Silk Touch pickaxe to drop themselves .
 Create a stone axe , stone sword , and stone pickaxe .
 Now craft a furnace to cook meat for food and smelt any iron you find in your travels .
-Save around five blocks of wood in case you haven't found any coal yet , and smelt them to create charcoal .
-On the other hand , if you're seeking adventure you could always arm yourself with a stone sword and go beat some mobs , if you feel like it .
-The torches are easy though , you just need to craft charcoal/coal on top of a stick .
-After marking your spawn point , head for high ground and look around for green grass and/or trees (cacti and sugar cane don't count .
-However , one thing the mushroom biome does not have , is wood‚Äîso before you go there , head for a grassy area to get some wood and stone first .
-This is a good place to live in general , if you can make a bed: the farms will solve your food worries for now , you can trade with the villagers , and if there's a blacksmith (look for a house with a stone slab roof) , it will contain a chest with bonus items .
-If there are no sheep around , look for ‚Äúlamp posts‚Äù in the village ‚Äî the black block on top is wool (break it with your hand) .
-If you can't get enough wool for a bed , your best bets are (first choice) either get far away (150 blocks or so) from the village before nightfall , or (second best) to spend your first night(s) atop a really tall pillar , 40 blocks high or more (64 is even better) .
-Look around for a few things in particular , in order of priority: trees , visible stone (and especially coal ore , which looks like stone with black spots on it) , animals , and tall grass .
-Your first priority is to find a small tree , bash through the leaves if needed , and "punch" the wood until each block drops as an item .
+Save around five blocks of wood in case you haven ' t found any coal yet , and smelt them to create charcoal .
+On the other hand , if you ' re seeking adventure you could always arm yourself with a stone sword and go beat some mobs , if you feel like it .
+The torches are easy though , you just need to craft charcoal / coal on top of a stick .
+After marking your spawn point , head for high ground and look around for green grass and / or trees ( cacti and sugar cane don ' t count .
+However , one thing the mushroom biome does not have , is wood‚ Äî so before you go there , head for a grassy area to get some wood and stone first .
+This is a good place to live in general , if you can make a bed : the farms will solve your food worries for now , you can trade with the villagers , and if there ' s a blacksmith ( look for a house with a stone slab roof ), it will contain a chest with bonus items .
+You can also scavenge a fair bit of wood even without trashing the place ( try replacing logs with planks ) .
+If there are no sheep around , look for ‚ Äú lamp posts‚ Äù in the village ‚ Äî the black block on top is wool ( break it with your hand ) .
+If you can ' t get enough wool for a bed , your best bets are ( first choice ) either get far away ( 150 blocks or so ) from the village before nightfall , or ( second best ) to spend your first night ( s ) atop a really tall pillar , 40 blocks high or more ( 64 is even better ) .
+Look around for a few things in particular , in order of priority : trees , visible stone ( and especially coal ore , which looks like stone with black spots on it ), animals , and tall grass .
+Your first priority is to find a small tree , bash through the leaves if needed , and " punch " the wood until each block drops as an item .
 The planks will be different colors depending on what sort of wood you have .
-In particular , sticks don't "remember" what sort of wood they came from .
+In particular , sticks don ' t " remember " what sort of wood they came from .
 n order to collect stone and coal , the next staple resources , you will need a pickaxe .
-Your first pickaxe will be made of wood , which isn't very durable or fast , but until you collect some cobblestone it's all you have .
+Your first pickaxe will be made of wood , which isn ' t very durable or fast , but until you collect some cobblestone it ' s all you have .
 To make a pickaxe , you will need to craft some sticks .
-Now you'll use some planks and the sticks you just made to create the final product .
-Once you've crafted a pickaxe , you can successfully acquire cobblestone to make better tools .
-If you don't see any on the surface , dig down in a staircase fashion and mine the stone with your pickaxe; it will drop as cobblestone items .
-Gather enough cobblestone to upgrade your pickaxe and make a stone shovel , axe , and sword , and a furnace (the exact number of cobblestone required to make these is 17 .
-) You can also craft a stone hoe (or even a wooden one) , but it won't be useful until you start farms (explained on day two) .
-A stone pickaxe is more durable and more efficient than a wooden pickaxe , and it can mine ores that a wooden pickaxe can't .
+Now you ' ll use some planks and the sticks you just made to create the final product .
+Once you ' ve crafted a pickaxe , you can successfully acquire cobblestone to make better tools .
+If you don ' t see any on the surface , dig down in a staircase fashion and mine the stone with your pickaxe ; it will drop as cobblestone items .
+Gather enough cobblestone to upgrade your pickaxe and make a stone shovel , axe , and sword , and a furnace ( the exact number of cobblestone required to make these is 17 .
+) You can also craft a stone hoe ( or even a wooden one ), but it won ' t be useful until you start farms ( explained on day two ) .
+A stone pickaxe is more durable and more efficient than a wooden pickaxe , and it can mine ores that a wooden pickaxe can ' t .
 Shovels are mainly used to break dirt , grass , sand , clay , and gravel blocks quicker than by hand .
 Now , you should gather more wood , using your new stone axe .
-If you happen across a coal-like ore with tan specks in place of the black , you have found some iron .
+If you happen across a coal - like ore with tan specks in place of the black , you have found some iron .
+This material will be extremely useful for most of your Minecraft career , and if it ' s within easy reach , go ahead and gather it ( you will need to mine it with a stone pickaxe ) .
 As it is made with cobblestone , you will have to use your pickaxe to collect it if you wish to relocate your furnace .
+Burning your wooden pickaxe ( which is useless once you have stone ) will smelt exactly one item .
 Create a stone axe , stone sword , and stone pickaxe .
 Now craft a furnace to cook meat for food and smelt any iron you find in your travels .
-Save around five blocks of wood in case you haven't found any coal yet , and smelt them to create charcoal .
-On the other hand , if you're seeking adventure you could always arm yourself with a stone sword and go beat some mobs , if you feel like it .
-The torches are easy though , you just need to craft charcoal/coal on top of a stick .
-After marking your spawn point , head for high ground and look around for green grass and/or trees (cacti and sugar cane don't count .
-However , one thing the mushroom biome does not have , is wood‚Äîso before you go there , head for a grassy area to get some wood and stone first .
-This is a good place to live in general , if you can make a bed: the farms will solve your food worries for now , you can trade with the villagers , and if there's a blacksmith (look for a house with a stone slab roof) , it will contain a chest with bonus items .
-If there are no sheep around , look for ‚Äúlamp posts‚Äù in the village ‚Äî the black block on top is wool (break it with your hand) .
-If you can't get enough wool for a bed , your best bets are (first choice) either get far away (150 blocks or so) from the village before nightfall , or (second best) to spend your first night(s) atop a really tall pillar , 40 blocks high or more (64 is even better) .
-Look around for a few things in particular , in order of priority: trees , visible stone (and especially coal ore , which looks like stone with black spots on it) , animals , and tall grass .
-Your first priority is to find a small tree , bash through the leaves if needed , and "punch" the wood until each block drops as an item .
+Save around five blocks of wood in case you haven ' t found any coal yet , and smelt them to create charcoal .
+On the other hand , if you ' re seeking adventure you could always arm yourself with a stone sword and go beat some mobs , if you feel like it .
+The torches are easy though , you just need to craft charcoal / coal on top of a stick .
+After marking your spawn point , head for high ground and look around for green grass and / or trees ( cacti and sugar cane don ' t count .
+However , one thing the mushroom biome does not have , is wood‚ Äî so before you go there , head for a grassy area to get some wood and stone first .
+This is a good place to live in general , if you can make a bed : the farms will solve your food worries for now , you can trade with the villagers , and if there ' s a blacksmith ( look for a house with a stone slab roof ), it will contain a chest with bonus items .
+You can also scavenge a fair bit of wood even without trashing the place ( try replacing logs with planks ) .
+If there are no sheep around , look for ‚ Äú lamp posts‚ Äù in the village ‚ Äî the black block on top is wool ( break it with your hand ) .
+If you can ' t get enough wool for a bed , your best bets are ( first choice ) either get far away ( 150 blocks or so ) from the village before nightfall , or ( second best ) to spend your first night ( s ) atop a really tall pillar , 40 blocks high or more ( 64 is even better ) .
+Look around for a few things in particular , in order of priority : trees , visible stone ( and especially coal ore , which looks like stone with black spots on it ), animals , and tall grass .
+Your first priority is to find a small tree , bash through the leaves if needed , and " punch " the wood until each block drops as an item .
 The planks will be different colors depending on what sort of wood you have .
-In particular , sticks don't "remember" what sort of wood they came from .
+In particular , sticks don ' t " remember " what sort of wood they came from .
 In order to collect stone and coal , the next staple resources , you will need a pickaxe .
-Your first pickaxe will be made of wood , which isn't very durable or fast , but until you collect some cobblestone it's all you have .
+Your first pickaxe will be made of wood , which isn ' t very durable or fast , but until you collect some cobblestone it ' s all you have .
 To make a pickaxe , you will need to craft some sticks .
-Now you'll use some planks and the sticks you just made to create the final product .
-Once you've crafted a pickaxe , you can successfully acquire cobblestone to make better tools .
-If you don't see any on the surface , dig down in a staircase fashion and mine the stone with your pickaxe; it will drop as cobblestone items .
-Gather enough cobblestone to upgrade your pickaxe and make a stone shovel , axe , and sword , and a furnace (the exact number of cobblestone required to make these is 17 .
-) You can also craft a stone hoe (or even a wooden one) , but it won't be useful until you start farms (explained on day two) .
-A stone pickaxe is more durable and more efficient than a wooden pickaxe , and it can mine ores that a wooden pickaxe can't .
+Now you ' ll use some planks and the sticks you just made to create the final product .
+Once you ' ve crafted a pickaxe , you can successfully acquire cobblestone to make better tools .
+If you don ' t see any on the surface , dig down in a staircase fashion and mine the stone with your pickaxe ; it will drop as cobblestone items .
+Gather enough cobblestone to upgrade your pickaxe and make a stone shovel , axe , and sword , and a furnace ( the exact number of cobblestone required to make these is 17 .
+) You can also craft a stone hoe ( or even a wooden one ), but it won ' t be useful until you start farms ( explained on day two ) .
+A stone pickaxe is more durable and more efficient than a wooden pickaxe , and it can mine ores that a wooden pickaxe can ' t .
 Shovels are mainly used to break dirt , grass , sand , clay , and gravel blocks quicker than by hand .
 Now , you should gather more wood , using your new stone axe .
-If you happen across a coal-like ore with tan specks in place of the black , you have found some iron .
+If you happen across a coal - like ore with tan specks in place of the black , you have found some iron .
+This material will be extremely useful for most of your Minecraft career , and if it ' s within easy reach , go ahead and gather it ( you will need to mine it with a stone pickaxe ) .
 As it is made with cobblestone , you will have to use your pickaxe to collect it if you wish to relocate your furnace .
-Ration out a piece of coal/charcoal for the food , and cook the food just like smelting the wood above: food in the upper input box , fuel (coal) in the lower one .
-Use the rest (up to 8 for now) of the coal or charcoal with some sticks to craft into torches .
-One log crafts into 8 sticks to match 8 pieces of coal or charcoal , producing 32 torches (half a stack .
+Burning your wooden pickaxe ( which is useless once you have stone ) will smelt exactly one item .
+Each piece will smelt 8 items ( just like mined coal ), and you have other uses for planks .
+Ration out a piece of coal / charcoal for the food , and cook the food just like smelting the wood above : food in the upper input box , fuel ( coal ) in the lower one .
+Use the rest ( up to 8 for now ) of the coal or charcoal with some sticks to craft into torches .
+One log crafts into 8 sticks to match 8 pieces of coal or charcoal , producing 32 torches ( half a stack .
 ) Throughout the game , you will be crafting more and more torches as you need them , so always keep some coal or charcoal at hand .
+If you have wood to spare , you can craft a wooden door : .
 Keep your stone sword in hand and whack them as soon as they come into reach , before they get up to you - attacking them will knock them back down .
 You can also simply build a three block high hut from any material , for example cobblestone , wood or dirt .
+Dig three blocks down , and put a block above you that is not sand / gravel to make the fastest shelter in Minecraft possible .
 Some natural extensions include a back door , windows , a surrounding fence , and even traps for monsters .
-Extreme Hills biomes will have caves inside mountains , but these are generally not what you want , because only coal ore will appear above sea level (Y=64) .
-This is the only ore that appears above sea level (anywhere there is stone) , and it is often visible in stone outcrops on the surface or even on mountains .
+Extreme Hills biomes will have caves inside mountains , but these are generally not what you want , because only coal ore will appear above sea level ( Y = 64 ) .
+This is the only ore that appears above sea level ( anywhere there is stone ), and it is often visible in stone outcrops on the surface or even on mountains .
 Gather as much of it as possible , but it needs a stone pickaxe or better to mine it , so be careful not to use a wooden pick on it .
 Once you have some iron ore , make a furnace to smelt it into iron ingots , that you can then craft into other items .
-First of all craft a pickaxe , a sword , and a bucket (fill it with water) , then craft iron armor .
-If you have extra , go on to make shears , another bucket (to hold a second water source or stray lava) , and perhaps an iron shovel or other tools .
+First of all craft a pickaxe , a sword , and a bucket ( fill it with water ), then craft iron armor .
+If you have extra , go on to make shears , another bucket ( to hold a second water source or stray lava ), and perhaps an iron shovel or other tools .
 Gold and redstone need an iron pickaxe to mine .
-(Lapis can be mined with a stone pickaxe .
-Once you find some sugar cane , you can add a map (paper+compass) to keep track of your explorations and help avoid getting lost .
+( Lapis can be mined with a stone pickaxe .
+Once you find some sugar cane , you can add a map ( paper + compass ) to keep track of your explorations and help avoid getting lost .
 The ore can be found at the very bottom of the world , the bottom 15 layers of the map , and requires an iron pickaxe to mine .
 Emerald ore is found at the same depths as gold ore , and likewise requires an iron pickaxe .
 Collect more wood , coal , and iron for crafting .
 You need this for bows , fishing rods , and leads .
-If you still haven't found sheep , 12 string can be crafted into the 3 wool you need for a bed .
-Gather sugar cane for maps and books (you will also need iron and redstone for maps , and leather for books) .
-Cows , mooshrooms , and sheep eat wheat , pigs eat carrots (you probably won't have these at first) , and chickens eat seeds (you've probably picked some up already from breaking grass) .
-Fishing will be about 20% faster when it's raining , and fishing will occasionally get you saddles and name tags (otherwise quite hard to find) , along with extra bits of leather and string‚Ä¶ not to mention enchanted fishing rods .
-) Add a few fences for safety , optionally a roof (lightning is unlikely to hit you , but it does happen) , and you have a nice secure spot to fish from , even during thunderstorms and at night .
+If you still haven ' t found sheep , 12 string can be crafted into the 3 wool you need for a bed .
+Gather sugar cane for maps and books ( you will also need iron and redstone for maps , and leather for books ) .
+Cows , mooshrooms , and sheep eat wheat , pigs eat carrots ( you probably won ' t have these at first ), and chickens eat seeds ( you ' ve probably picked some up already from breaking grass ) .
+Fishing will be about 20 % faster when it ' s raining , and fishing will occasionally get you saddles and name tags ( otherwise quite hard to find ), along with extra bits of leather and string‚ Ä¶ not to mention enchanted fishing rods .
+You don ' t need a full building , you can do fine with a pillar ( stone or wood ) with a ladder leading up to a platform on top .
+) Add a few fences for safety , optionally a roof ( lightning is unlikely to hit you , but it does happen ), and you have a nice secure spot to fish from , even during thunderstorms and at night .
+A larger and more advanced home , with doors ( plural , a back door is really helpful ), windows ( glass or fencing ), storage rooms , and space for the enchanting table and bookshelves you ' ll eventually make .
 Food is not required , but can help , and any of several foods will do , but wheat or bread is probably easiest .
-f you read the Beginner's Guide and followed it you should have at least a hole in a hill with about 2 torches , a workbench , and a worn-down wooden pickaxe .
+f you read the Beginner ' s Guide and followed it you should have at least a hole in a hill with about 2 torches , a workbench , and a worn - down wooden pickaxe .
 Begin by mining some stone with your pickaxe .
 You should craft a stone pickaxe because it mines faster and has more durability .
 When you mine a stone block , it should drop a crumbly block called cobblestone .
 You can also use cobblestone to make stone weapons and tools .
 You can make a stone pickaxe by replacing the wooden planks with cobblestone when making a pickaxe .
 Most players find it helpful to bring food , wood , coal , torches , a sword and a water bucket .
-Also , it's a good idea to bring iron pickaxes instead of stone pickaxes , if you can spare the iron .
-With the vast amount of iron that is in the world , you are likely to find an iron pickaxe will more than make up for itself in terms of iron mined , if you use a stone pickaxe it goes by slowly , so in theory you are wasting iron if you don't use an iron pickaxe .
+Also , it ' s a good idea to bring iron pickaxes instead of stone pickaxes , if you can spare the iron .
+With the vast amount of iron that is in the world , you are likely to find an iron pickaxe will more than make up for itself in terms of iron mined , if you use a stone pickaxe it goes by slowly , so in theory you are wasting iron if you don ' t use an iron pickaxe .
 When you obtain a diamond pickaxe you should use it till it breaks , its the same argument as iron .
 Although , there is considerably less diamond than iron , diamond on average spawning less than once per chunk , a diamond pickaxe should more than make up for itself when you mine for strictly for diamond .
 If you keep losing your way , try marking your path with torches or a unique entity , such as signs or birch planks .
@@ -117,17 +135,17 @@ Be careful where you place rails , and you may want to protect some of them with
 Even shallow caves will offer plenty of coal and iron , and later gold and other ores .
 Caves offer the advantage that a great deal of stone has already been excavated for you , exposing many ore veins .
 It is a good idea to mine everything out including coal as you never know when you might be lost and need more torches .
-Cave mining has a high return on investment , yielding more ore per time spent and requiring fewer tools (less pickaxe and shovel durability is lost mining stone , dirt , and gravel) than other approaches .
-A bucket of water serves as both a fire extinguisher , if you fall in; and as a way to form obsidian surfaces over lava pools (pour water onto a solid block adjacent to a lava pool; do not stand between that spot and the lava) .
+Cave mining has a high return on investment , yielding more ore per time spent and requiring fewer tools ( less pickaxe and shovel durability is lost mining stone , dirt , and gravel ) than other approaches .
+A bucket of water serves as both a fire extinguisher , if you fall in ; and as a way to form obsidian surfaces over lava pools ( pour water onto a solid block adjacent to a lava pool ; do not stand between that spot and the lava ) .
 If it is your first mining trip , mine some cobblestone and make a stone pickaxe .
 If you are further along in the game , and expect to mine for a while , bring two iron pickaxes and at least 12 stone pickaxes .
 If you prefer to save valuable materials , take a few stone pickaxes for mining stone and one iron pickaxe only for mining ores .
 Having at least one iron shovel can get through cumbersome patches of dirt and gravel quickly without using your hands .
 Just one or two stone shovels also works if you want to use your iron for other things .
-If you run out of tools or torches , you can make a crafting table and sticks to replenish your supplies of pickaxes , shovels , and torches (you can get more coal for them from mining) .
-A spare bucket is useful for collecting lava to use as fuel in a furnace , to block or slaughter monsters (you'll lose most of their drops) , or just to get the lava out of your way .
+If you run out of tools or torches , you can make a crafting table and sticks to replenish your supplies of pickaxes , shovels , and torches ( you can get more coal for them from mining ) .
+A spare bucket is useful for collecting lava to use as fuel in a furnace , to block or slaughter monsters ( you ' ll lose most of their drops ), or just to get the lava out of your way .
 If there are mushrooms present , you might carry or make a bowl to make mushroom stew .
-In general , you want at least iron armor ‚Äî if necessary , you can smelt ore and craft your armor in the caves .
-Chests are invaluable when exploring lava caves since you can store your items in case you die; instead of losing a whole stack of iron and half a stack of gold along with all of your food and weapons , you can drop a chest and a crafting table nearby , and lose only your current tools and whatever you hadn't stashed yet .
+In general , you want at least iron armor ‚ Äî if necessary , you can smelt ore and craft your armor in the caves .
+Chests are invaluable when exploring lava caves since you can store your items in case you die ; instead of losing a whole stack of iron and half a stack of gold along with all of your food and weapons , you can drop a chest and a crafting table nearby , and lose only your current tools and whatever you hadn ' t stashed yet .
 You can create an underground tree farm to replenish your supply of wood and a small wheat farm to continuously grow wheat for bread , allowing you to stay underground for an infinite period of time .
 The crafting recipe for wooden doors creates three doors from six wood planks , hence each door uses two wood planks - the same as what would be required to block a 2 x 1 hole but with the ability to pass through with ease , and return in a hurry if there are a large number of mobs on the other side .
