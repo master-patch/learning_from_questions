@@ -1,0 +1,610 @@
+Minecraft is a sandbox construction game created by Mojang AB founder Markus Persson, and inspired by the Infiniminer, Dwarf Fortress and Dungeon Keeper games. Gameplay involves players interacting with the game world by placing and breaking various types of blocks in a three-dimensional environment. In this environment, players can build creative structures, creations, and artwork on multiplayer servers and singleplayer worlds across multiple game modes.
+
+Minecraft is available to all players for €19.95 (US$26.95, £17.32). When purchased, singleplayer and multiplayer game modes can be played using the downloadable stand-alone launcher. The official demo is free, but has a time limit. Minecraft development started around May 10, 2009, and pre-orders for the full game started being accepted on June 13, 2009. Minecraft's official release date was November 18, 2011. On September 20, 2014, Minecraft for the computer became the best-selling PC game of all time. On December 31, 2015, Minecraft for the computer reached 22 million sales.
+
+On August 16, 2011, Minecraft: Pocket Edition was released for the Sony Xperia Play gaming smartphone. After its exclusivity with Sony expired, it was released for Android devices on October 7, 2011, and iOS devices on November 17, 2011 for US$6.99. On April 2, 2014, Minecraft was released for the Amazon Fire TV. It contains all the same features as the Pocket Edition as well as support for the Fire TV's controller. On December 10, 2014, Minecraft: Pocket Edition was released for Windows Phone 8.1. On January 10, 2015, Minecraft: Pocket Edition reached 30 million sales.
+
+On May 9, 2012, Minecraft was released for the Xbox 360 on Xbox Live Arcade for US$20, where it subsequently broke every previous sales record.
+
+On February 11, 2013, Minecraft: Pi Edition was released for the Raspberry Pi. It is based on the Pocket Edition and is available for free at Mojang's dedicated blog. The Pi Edition is intended as an educational tool for novice programmers and users are encouraged to open and change the game's code using its API.
+
+On December 17, 2013, Minecraft was released for the PlayStation 3 on the PlayStation Store for US$19.99. The release was almost identical to the Xbox 360 Edition and was developed in tandem with the Xbox 360 Edition from then on.
+
+On June 26, 2014, the Xbox 360 & PlayStation 3 editions' sales passed the number of sales for the PC edition of Minecraft, leaving the Minecraft series having sold more than 72 million copies world-wide and become the third best-selling video game of all time.
+
+Minecraft was released for the PlayStation 4 on September 4, 2014, the Xbox One on September 5, 2014 and the PlayStation Vita on October 14, 2014.
+
+On September 15, 2014, Mojang AB and all of its assets (including Minecraft) were purchased by Microsoft for US$2.5 billion. On July 29, 2015, Minecraft was released for the universal Windows 10 platform as an adaptation of the Pocket Edition.
+
+On December 17, 2015, the Wii U Edition was released.
+
+The textures on the faces of blocks are 16×16 pixels. Most blocks are proportionately one cubic meter by default, but their shape can be changed using models. Most blocks also have static textures, though water, lava, portal, fire, sea lantern and prismarine blocks are animated. With the exception of sand, red sand, gravel, anvils, dragon eggs and, in Pocket Edition, Snow (cover), all blocks ignore gravity.
+
+Using resource packs, the player can change the textures of blocks, including whether their texture is animated. They can also change the shapes of blocks using models and the size of blocks to any size with equal width and height, though sizes that are a power of two tend to work better.
+
+Items are objects which only exist within the player's inventory and hands - which means, they cannot be placed in the game world. Some items simply place blocks or entities into the game world when used. They are thus an item when in the inventory and a block when placed. Some examples of objects which exhibit these properties are item frames, which turn into an entity when placed, and beds, which turn into a group of blocks when placed. When equipped, items (and blocks) briefly display their names above the HUD.
+
+Items use item IDs while blocks use block IDs.
+
+Are used for a lot of different purposes, mainly creating other blocks or items through crafting.
+
+Mob Drops are used for consuming, cooking, creating other blocks or items, teleporting, playing music, and as ammo, blocks, weapons, armor, and tools. These are obtained by picking up the item that drops after a mob dies. Some mobs will not drop (certain) items when not registered as killed by a player (spiders with spider eyes, and blaze with blaze rods). Adult chickens lay eggs every 5 to 10 minutes.
+
+Minerals are used for tools, fuel for a furnace, creating other blocks or items, trading, dyes, and work in redstone contraptions. These are obtained by picking up the item that drops after mining an ore with a pickaxe of the right material, or taking the item that gets created after smelting an ore by dragging the finished product into your inventory.
+
+Plants (in non-block form, examples: seeds, and sugarcane (item version)) are used for creating block-type plants when placed on farmland, dirt, sand, and the side of logs, so that they can grow, and give themselves or other items in the game when fully grown and broken, and be manufactured or consumed. These are obtained by picking up the item that drops after breaking a block-type version of the non-block plant in the world, or are found in reward chests.
+
+Dyes are used to color certain blocks, items, or sheep to get their respective color of wool when shearing them. They are also used to customize banners. Primary dyes are obtained similar to mob drops, minerals and plants. Examples of these are ink sacs, which are mob drops from squid, lapis lazuli, which is a mineral, and rose reds, which are the output of putting red flower-plants in a crafting grid. Secondary dyes, including lime, cyan, purple and gray are obtained by combining primary dyes together in a crafting grid.
+
+Crafting Ingredients are ingredients that have no specific category and no other non-decoration purpose than to create other blocks or items by crafting or smelting, examples are flint, bowls, sticks, paper, clay, brick, nether brick, and nether quartz. These are obtained by a lot of different causes.
+Brewing Ingredients are ingredients that are necessary to create potions, examples are blaze powder, ghast tears, glistering melons, and more. The main ingredients for potions are water bottles and nether wart, except for weakness potions, which you can create without nether wart. To make a splash potion, which you can throw instead of drink, you need to add gunpowder to a potion. To get better potion effects, you need to either add glowstone dust to make it a tier two, or redstone to extend its duration. These two cannot be legitimately combined together on one potion.
+
+Enchanting Ingredients are ingredients that are only used for enchanting related things, examples: enchanted books and bottle o' enchanting (experience bottles). These are obtained by enchanting, or trading with a villager.
+
+Food is used to be eaten by the player, to get hunger points, saturation,and for many things. It can be eaten by wolves (tamed or not) to give them health, or to make dogs and pigs breed. Some food items will give status effects to the player.
+
+Normal Food, such as apples, bread, melons, pumpkin pie, steak and more, will only give back hunger points and saturation, without any other effect.
+Good Food, such as golden apples can give the player (several) (good) status effects, such as Regeneration, Absorption, Fire Resistance and Resistance.
+Bad Food, such as raw chicken, rotten flesh, spider eyes, and pufferfish, can give the player (several) bad status effects, such as Hunger, Poison, and Nausea. If you are about to starve and only have this food, you can drink milk afterwards to clear all their status effects.
+
+
+Are used for a variety of purposes, mainly to help the player do things, and be coordinated.
+
+Axes allow the player to break wood-type blocks faster than mining by hand. They can be crafted from wood, cobblestone, iron, gold and diamond.
+Shovels allow the player to break sand-type blocks faster than mining by hand. They can be crafted from wood, cobblestone, iron, gold and diamond.
+Pickaxes allow the player to break stone-type blocks faster than mining by hand, and are required in different types of materials in order to make resources drop from specific stone-type blocks. They can be crafted from wood, cobblestone, iron, gold and diamond.
+Hoes allow the player to till dirt, allowing them to plant crops, examples are seeds, carrots, and pumpkin seeds. They can be crafted from wood, stone, iron, gold and diamond.
+Buckets allow the player to transport liquids such as water and lava, and get milk by right-clicking a cow or mooshroom.
+Shears allow the player to make sheep drop wool, mooshrooms drop red mushrooms, cobwebs drop string, with a Silk Touch enchantment the actual cobweb itself, and make varieties of grass, leaves, vines and dead bushes drop themselves. They can also be used to break and collect tripwire without activating connected redstone dust.
+Flint and steel allows the player to set most blocks on fire for varying periods of time. Flammable blocks will be burned (destroyed without an item dropping) by this process. They also allow the player to light nether portals on fire, so that nether portal blocks are formed inside. A fire charge has the same (and more) effects, but will be used up after one use, and is a ranged projectile opposed to a tool.
+Fishing rods allow the player to go fishing to catch several types of fish, treasure, and trash, as well as pull mobs or players closer.
+Carrot on a stick allows player to control saddled pigs.
+Informative Tools assist the player in coordinating in the world.
+Maps are, when looked at, making blocks render in itself that are shown as colored pixels, respective to their rendered block.
+Compasses are always pointing exactly with their red arrow at the player's original spawn point. (For players with Pre-release Alpha and Beta worlds, may have had this point "shift" as spawn points were coded in the region files, not derived from the seed.)
+Clocks are showing the player what time it is in the over-world. When located in the Nether, or the End they will rapidly spin.
+
+Weapons
+Are mostly used to kill mobs and players faster strategically.
+
+Swords are used to kill mobs and players faster, to block attacks, which reduces most types of damage by half, or to break blocks a little faster.
+Bows (with arrows) are used to kill mobs or players from a distance.
+Snowballs are used (in this context) to knock players or mobs back, giving you time to run. They only deal damage to Ender Dragons and blazes.
+Eggs are used (in this context) to knock players or mobs back, giving you time to run. They do not deal damage to any entities.
+Fishing rods are used (in this context) to knock players or mobs back, giving you time to run. They do not deal damage to any entities. They can also pull mobs and players towards you, giving people using ranged combat no advantage.
+Ender pearls are used (in this context) to teleport away from or into combat. When used, the player will take 5 (Heart.svgHeart.svgHalf Heart.svg) of fall damage, but Feather Falling and Protection enchantments will reduce this.
+Flint and steel, fire charges and lava buckets are used (in this context) to light players and mobs on fire.
+Buckets are used (in this context) to steal a player's lava or water, giving them a disadvantage.
+
+Eggs are used to spawn baby chickens when thrown.
+Spawn Eggs are re-textured eggs with dots, they are colored similar to their respective mob, and can be used to spawn most mobs in the game. These are obtainable only in Creative. Right-clicking the same type of spawn egg on a mob that can have babies will spawn a baby mob on that place (wolves and all passive mobs can have babies like this, except squid and bats). Some mobs such as Ender Dragons and giants do not have spawn eggs, so cheats must be used to summon them.
+
+Are used allow to move players, mobs or items over land or water with relative speed and ease.
+
+Minecarts are used to travel much faster across rails, they are also used to store and pick up items or work in and activate redstone circuitry. When placed down they are an entity.
+Boats are used to travel much faster across water (for example over oceans, rivers and lakes). When placed down they are an entity.
+Saddles and carrots on sticks are used, and needed, to travel on pigs and/or horses.
+Leads are used to right-click on most passive mobs, so they will follow you. Mobs will get pulled closer when they're too far away from the player, but, if they can't get to the player, and the distance is too far, the lead will break and drop on the place where the mob is.
+Wheat, carrots and varieties of seeds are used to make most passive mobs follow you when it's held. In Multiplayer when other players are too close by, they will not, or stop, following the player.
+
+
+Are brewed in brewing stands, and are drinkable or throwable items that confer specific effects. Producing them requires resources from the Nether, and sometimes from the overworld. The main ingredients are water bottles and nether wart, which are used to create every potion in the game, with the exception of a potion of weakness because it can be brewed from items other than nether wart, such as redstone.
+
+Gunpowder is used to make a splash potion, which you can throw at other mobs and players, instead of consuming it yourself.
+Glowstone dust is used to make a tier two potion.
+Redstone is used to extend the duration of a potion.
+Glowstone dust and redstone cannot be legitimately combined together on one potion.
+
+
+Crafting is the method by which many blocks, tools, and materials are made in Minecraft. In order to craft something, players must move items from their inventory to a crafting grid. A 2×2 crafting grid can be accessed from the player's inventory. A 3×3 grid can be accessed by using (default: right-clicking) a Crafting Table.
+
+For some items, the arrangement of their ingredients on the crafting grid is unimportant. These are commonly known as shapeless recipes. For example, a Fermented spider eye can have its ingredients placed anywhere within the grid.[note 1]
+
+On the other hand, many of the more important or useful game objects must have their ingredients placed in the correct relative positions on the crafting grid. Even then, provided the resources are arranged correctly, the item can be made in any way that fits in the grid. For example, a 3×1 recipe, such as bread, can be made using the top, middle, or bottom row of the 3×3 grid, but it cannot be made using the 2×2 grid because it needs to be three items wide. Ingredients in ‘shaped’ recipes can be ‘slid’ up, down, left, or right. They can also be flipped horizontally. For instance, players can make a bow with the strings placed on the right instead of on the left. There are recipes which may not be moved or mirrored in this way. These are commonly known as fixed recipes.[note 2]
+
+Players always have access to the 2×2 crafting grid from their Inventory screen, and this can be used whenever the screen is brought up. Crafting recipes that are at most 2×2 can always be made there. These include wood planks, sticks, crafting tables, and most shapeless recipes. To craft items using a 3×3 grid, create a crafting table, place it in any convenient spot, and right-click it. This brings up a pop-up screen with a 3×3 grid on which the player can assemble any crafting recipe in the game.
+
+Smelting is a method of producing refined goods in Minecraft, also known as melting, baking, cooking, burning, drying, or producing. It has the same idea as crafting; one must put in acceptable ingredients, and a corresponding output will be given. However, smelting utilizes furnace blocks, which have a unique interface: one "input" field for the object that will be heated, one field for the fuel, and one "output" field for the final smelted product. For example, two saplings (fuel) could be used to smelt one wood (input) into one charcoal (output).
+
+To smelt something, an input material and a fuel must be loaded into the furnace. It will begin to smelt on its own and will continue to work if the menu is closed and the player leaves. When the furnace begins to smelt, it will consume one piece of fuel and the fire gauge will fill up. As the input smelts, the fire gauge will slowly recede until it is gone, and then the next piece of fuel will be used. If there is no more fuel left, the furnace will be interrupted and the item will be uncooked. If fuel is burning and runs out of input, the fire gauge will continue to burn down, wasting the burn time left. Once the fire gauge is out, no more fuel will be used.
+
+As things smelt, an arrow icon represents the cooking process. Each smelting operation takes 10 seconds and the progress will be shown on the arrow. If the furnace runs out of fuel before the arrow is filled up, then the input will not be smelted and the process will rewind at 2x speed. When the arrow fills up completely, one input item will be put into the output field as an output item.
+
+If the player leaves a furnace while it is smelting and travels so far that the chunks unload, the smelting process will halt until the player returns. Smelting will also pause if one leaves the dimension the furnace is located in. If the player sleeps in a bed while a furnace is smelting, the furnace's progress will be the same as if the bed had not been used and no additional time had passed. This is because when a player sleeps in a bed, no time actually passes. Instead, the game sets the time of day to morning.
+
+Sleeping while smelting/cooking items will not speed up the process.
+
+Note that after a piece of fuel has started burning, you cannot stop it from burning, though you can remove any unburnt pieces of fuel. If there are fewer items that the fuel can burn, some of the fuel will be wasted. Accordingly, you will usually want to burn things in multiples of 8 (lumps of coal or charcoal), or occasionally 3 (2 wooden planks). For individual smelts, you can use saplings, 2 of which smelt 1 item.
+
+When starting a new world, burning your wooden tools (once you have stone) is a quick way to make your first lump or two of charcoal. They each still smelt a complete item even if almost used up.
+
+For larger jobs, a single lava bucket or a block of coal can burn more items than will fit in the furnace—both input and output are limited to a stack of 64, but a block of coal burns 80, and lava can burn 100. To use lava efficiently, keep the remaining load of 36 or 16 items handy, and put it in during the middle third of the burn (after it has done that many, but before it exhausts the original stack). Remember to both refill the un-smelted items, and remove the smelted product. A despawn timer on a note block may help.
+
+Alternately, you can use hoppers on top and bottom of the furnace. This will automatically feed and empty the furnace, but loses the experience gained by manually unloading the furnace. For larger smelting jobs, a third hopper can feed in fuel (empty buckets will go in the output hopper).
+
+
+It takes 10 minutes and 40 seconds to smelt a stack of 64 items in a single furnace, although this time can be reduced by splitting the load between multiple furnaces. This can be reduced even further by using redstone mechanics.
+Burning wood with wood planks to make charcoal is over 5 times more efficient than using the wood itself as fuel. It is just over 1¼ times more efficient than using planks.
+When making charcoal, it's most efficient to convert 1⁄7 of the logs into planks (for fuel)
+On Pocket Edition, you can use bows as fuel, its durability is same as a wooden tool.
+If you want to use wooden tools as fuel, the most efficient way is to use it until its durability reaches 0, then use it as a fuel afterwards.
+If you put an enchanted item in a furnace, it will lose its enchantments, even if it isn't burned. However, as of Pocket Edition 0.12.3 alpha, enchanted wooden items cannot be used as fuel.
+Currently, in Pocket Edition, when the furnace runs out of fuel, it will not rewind backwards at x2 speed, and will simply disappear instantly.
+
+Ores are rare stone blocks used to obtain resources.
+
+
+Ores are primarily collected for crafting purposes, such as for tools and armor. Redstone is obtained from redstone ore, which can be used to create redstone circuits. Ore can also be combined to create a block of the material's type.
+
+
+The following is the distribution of ores according to the altitude (layers are number of blocks above the lowest layer of bedrock). The highest layers that gold, redstone, diamond, and lapis lazuli can be found on are two layers lower.[1] The graph on the right shows the ore distribution.
+
+
+All ore blocks except iron and gold require a Silk Touch pickaxe to drop themselves. Coal, diamond, emerald, and nether quartz ores drop 1 unit their corresponding raw materials. Redstone ore drops 4-5 redstone dust, and lapis lazuli ore drops 4-8 lapis lazuli.
+
+All raw materials except Nether quartz can be crafted from their mineral blocks.
+
+If you have no idea where or how to begin your Minecraft journey, the Beginner's Guide is full of good ways to start! Here you will learn how to survive your first night in two different formats: in an overview with goals or in a step-by-step instruction. You can choose which one you want, but both will accomplish the same goal.
+
+If you have not done so already, take a look at the Controls page to learn how to move your character around. Once you have grasped movement, you will be ready to forge on!
+
+
+Minecraft is a sandbox game, so there's no proper way to play the game. In "Survival", food and shelter are essential, however everything else is optional. Even the bare essentials of food and shelter have countless solutions. This guide will show you some of the more common and straightforward solutions to surviving the first day.
+
+As your first day begins, you will need to collect wood. Collect at least four trees' worth of wood blocks (left click and hold while looking at the tree to break it). First use this to make a crafting table (place the crafting table to use it). Right click your crafting table to access it. The first tool you craft should be a wooden pickaxe. Dig down until you find stone. Mine it with a pickaxe. Mine at least 20 blocks of cobblestone. Create a stone axe, stone sword, and stone pickaxe. Now craft a furnace to cook meat for food and smelt any iron you find in your travels. Save around five blocks of wood in case you haven't found any coal yet, and smelt them to create charcoal.
+
+Shelter is something you might consider during your first night because you won't want to be killed. You can make a small hole to hide in or a small two by three house made out of wood and dirt. Place torches in your preferred shelter because in light level 7 or below zombies might spawn. Don't forget to build a bed to sleep until dawn (That is if you can build a bed otherwise you're gonna have to wait til dawn). If you do see a cave it could be a temporary home but remember to place torches—creepers don't really make good neighbors.
+
+For night time, the primary danger will be monsters/mobs. It is a good idea to stay in your lit shelter. On the other hand, if you're seeking adventure you could always arm yourself with a stone sword and go beat some mobs, if you feel like it. You will be able to get some materials for further crafting, not to mention a ton of experience, which can be used later on for enchanting tools.
+
+One way to avoid being attacked by monsters is to put torches, glowstone, or a jack-o-lantern by your house. You will learn how to make all these things later on, but just a heads up. The torches are easy though, you just need to craft charcoal/coal on top of a stick.
+
+If you are repeatedly getting killed, one desperate response is to go into "peaceful difficulty" (see "changing the rules", below). However, consider this: This being your first day, you aren't actually losing much until the deaths (at least not after what stuff you've gathered is lost), so you can just tough it out until dawn and start again.
+
+Death[edit | edit source]
+Normally in survival mode Minecraft, when you die, all items you were carrying or wearing in your inventory are scattered around your point of death while you respawn elsewhere (unless /gamerule keepInventory is on). Until you sleep in a bed, you will spawn somewhere within 10 blocks of the world spawn point. This includes the first time when you started the game, so you can respawn anywhere within 20 blocks of where you first entered the world.
+
+The traditional advice is to build your first shelter as close as possible to the spawn point, so if you die, you can easily find it again, or even spawn in a now-protected area. Even with the variation in where you'll come back, it's good to have a lit shelter nearby the spawn point. However, a problem with sheltering away from spawn is that if your death site is too far from where you respawn, your items may despawn while you're trying reach them. (See below for more details.)
+
+Like any dropped items in Minecraft, the items you drop when you die will despawn (disappear) after 5 minutes, unless you're more than 180 blocks or so away, that is outside of chunk update radius The problem is that if you died at night, you will find yourself stranded without your weapons and armor, so you are quite likely to get killed again, or at least find your stuff guarded by monsters. Meanwhile, some of the monsters can actually pick up your stuff and use it against you! And if you spawned near your death scene, that 5-minute timer can easily go by before you can actually get back to and keep your stuff.
+
+However, the above only applies until you have made and used a bed in a secure shelter. Once you've done that, you have a new option: If you get killed at night, you will respawn next to your bed, so you can just go back to sleep, and wake up the next morning — the items don't “expire” while you're asleep. It still may be worth keeping your bed out of chunk update range from where you're endangering yourself, but at least you won't be stranded outside at night.
+
+Food and hunger[edit | edit source]
+Once you have tools and shelter, your next priority will be food. Hunger will take a while to hit, so it shouldn't be a problem on your first day, but you'll try to pick up some food for when it does. However, after you've been moving around for a while, your food bar will begin rippling and start to decrease. If your food bar drops below 90%, you will not regenerate health, and if it gets to 30%, you can't sprint. If the hunger bar goes down to empty, you will begin losing health. Unless you're in Hard mode (and a beginning player shouldn't be), you can't actually starve to death, but you will go down to 1 health point (Half Heart.svg) in Normal mode or half your health (Heart.svgHeart.svgHeart.svgHeart.svgHeart.svg) in Easy mode, and that leaves you quite vulnerable. You don't lose hunger in Peaceful mode, so it's the least of your concern there.
+
+Walking, mining blocks, and even placing blocks all cost some hunger, but all of those are minimal compared to the items below. These are the things that cause the most hunger, in order of cost.
+
+Healing damage of any sort. Avoid taking falls of more than 3 blocks, drowning yourself, or otherwise taking damage, as healing damage costs a lot of hunger. Especially avoid…
+Fighting: Both attacking mobs and receiving damage cost hunger, even before you start trying to heal damage. (10 blows either way matches healing Half Heart.svg, one health point.) You will need to slaughter a few animals, but pick your fights carefully.
+Sprinting. If you double-tap the forward movement key (W by default), or press your sprint key (Left Ctrl by default), you will sprint. This moves somewhat faster, but it also uses a lot of food, especially if you go any distance. (30 meters matches healing Half Heart.svg.) however, if you happen to have a sufficentt amount of food with you you can always do it your way.
+Jumping. Obviously, you'll need to jump some just to get around, but don't bounce around randomly or unnecessarily. (15 jumps matches healing Half Heart.svg) Sprinting jumps are especially costly, 4 times as much as a regular jump, although they are the fastest mode of transportation early in the game.
+Note that if you're (staying) at full health, and not moving, fighting, mining or placing blocks, then you will use no food. Thus if your character has a secure place to stay, you can just stay put to conserve food while waiting out the night, a storm, or crop/animal growth.
+
+Consider making a basic crop farm immediately after you have settled in a place. Wheat is best, for
+
+(1) It is essential for crafting a lot of food items,
+
+(2) it is really easy to obtain early in the game.
+
+When you begin the game, you will be standing in a landscape somewhere. Take a moment to look around. This is the general area (within 20 blocks) where you will reappear if you get killed. It's a good idea to mark it immediately, by punching out an X of dirt and/or sand, then using the dirt or sand to build a pillar in the middle of that. If you're standing on rock, look around for some dirt or sand to use, remember where you are, and go get it to build your pillar. You can also use the Debug screen to save the coordinates of the spawnpoint for later use (see the page to learn how).
+A general note: Any time you're “looking around”, is a good time to turn your render distance to max, you can put it back afterward if it slows your game.
+If you are standing on and surrounded by sand, you are likely in a desert biome. After marking your spawn point, head for high ground and look around for green grass and/or trees (cacti and sugar cane don't count.) Head that way to gather your wood. If you can't see anything but desert, pick a random direction and head that way, occasionally going to high ground for a look around.
+If you are on an island, completely surrounded by water as far as you can see, you are in an ocean biome. This is perhaps the toughest start possible, and as such is highly discouraged for play by beginners -- given an ocean start, it's entirely reasonable to discard the world and make a new one. Assuming you don't do that: If your island has no trees, you will need to swim to another island or mainland to find wood. (Remember that if you die before sleeping in a bed, you will respawn on the island.) When you swim you may see squid. Squid are mobs but they are not hostile. Like cows, sheep, and chickens, they can't attack you (or even defend themselves), but killing them gives only ink sacs (and some XP).
+
+If, looking around, you see dull,purplish land, your game just got a lot easier: you are on a mushroom biome, where monsters will not spawn (if it's connected to the mainland, congratulations, you found one of the rarest landscapes in the game). Monsters can still come in from other biomes, but if you head toward the middle, you can spend the night in safety outdoors. Also, with a bowl, you can get free food from the mooshrooms which live there. However, one thing the mushroom biome does not have, is wood—so before you go there, head for a grassy area to get some wood and stone first.
+If, looking around, you see houses and/or farms, you are near an NPC village. This is a good place to live in general, if you can make a bed: the farms will solve your food worries for now, you can trade with the villagers, and if there's a blacksmith (look for a house with a stone slab roof), it will contain a chest with bonus items. You can also scavenge a fair bit of wood even without trashing the place (try replacing logs with planks). However, at first you'll want to avoid hanging out near there after dark, because zombies can spawn and kill the villagers. You can avoid this fate by making a bed (see below), and consistently sleeping through the night until you can properly fortify the town against monsters):
+If there are no sheep around, look for “lamp posts” in the village — the black block on top is wool (break it with your hand).
+If you can't get enough wool for a bed, your best bets are (first choice) either get far away (150 blocks or so) from the village before nightfall, or (second best) to spend your first night(s) atop a really tall pillar, 40 blocks high or more (64 is even better). By the second night you will hopefully have managed to find a bit of wool....
+If you find yourself surrounded by many very large trees, and leaf blocks on the ground, then you have found yourself in a jungle biome. The jungle biome is a good place to start because there are large trees everywhere, however, these can cause you to easily become lost. Also, the cramped quarters can make it difficult to build there. Jungle biomes are the only place to find ocelots (you'll need fish to tame them) and cocoa beans. The sheer amount of leaves here can cause trouble for particularly old computers, lagging or even crashing the game; if you have an old computer and you haven't already switched to fast graphics, a jungle is good reason to do so.
+If you find yourself surrounded by thick, short trees and dark grass, you are in a roofed forest biome. These biomes are especially dangerous because the canopy of leaves can sometimes become so thick that monsters will spawn, even during the day. However, this biome does provide ample supplies of wood and naturally spawning giant mushrooms which can be used for food and shelter for the night.
+There are many other biomes in Minecraft, and to see a more in depth look at all of them, check the Biomes page.
+
+Punching wood[edit | edit source]
+Look around for a few things in particular, in order of priority: trees, visible stone (and especially coal ore, which looks like stone with black spots on it), animals, and tall grass. As you move around, break any tall grass in your way, and collect any seeds that drop. For that matter, collect any loose item you see, as most of them will eventually be handy.
+
+Your first priority is to find a small tree, bash through the leaves if needed, and "punch" the wood until each block drops as an item. Don't rapidly click on the block, just hold left-click (or whatever you've set "attack" to) until the block breaks. Don't bother with huge trees at this point, but also don't be upset if you can't reach the top blocks of wood — you can always come back and collect them later. This first tree should give you at least 4 blocks of wood ("logs"). You'll punch more wood in a moment! Wood is essential for tools and useful items such as torches, doors, fences, and chests.
+
+Your first crafting[edit | edit source]
+As the game's name suggests, crafting is core to Minecraft. While there are a small number of items that can be crafted directly from the inventory, a crafting table is required to craft tools and most other items in the game. The crafting table will be your main asset throughout the game.
+
+To make your crafting table, first open the inventory and pick up the logs you collected. Place a log into the crafting area to obtain 4 wooden planks.
+
+The planks will be different colors depending on what sort of wood you have. Different types of wood don't stack together, but all work the same. With a couple of exceptions you can mix and match different planks when crafting. In particular, sticks don't "remember" what sort of wood they came from.
+
+As you convert your first logs to planks you may want to consider saving some logs for later. Usually, 3-4 logs' worth of planks will be enough to get started. In particular, you want to save logs to make charcoal later on.
+
+Then, take four of your newly crafted planks and arrange them like so to make a crafting table:
+
+n order to collect stone and coal, the next staple resources, you will need a pickaxe. Your first pickaxe will be made of wood, which isn't very durable or fast, but until you collect some cobblestone it's all you have.
+
+To make a pickaxe, you will need to craft some sticks. Now you'll use some planks and the sticks you just made to create the final product. You may have noticed that in order to craft a pickaxe, you more or less draw it with its components in your crafting square. Other items are crafted in a similar fashion. At this point, you can do one of two things: You can either make more wooden tools, or you can gather stone and use that to make better ones.
+
+
+Once you've crafted a pickaxe, you can successfully acquire cobblestone to make better tools. Start by finding stone in the world; it should be fairly easy, as it's extremely common. If you don't see any on the surface, dig down in a staircase fashion and mine the stone with your pickaxe; it will drop as cobblestone items. Gather enough cobblestone to upgrade your pickaxe and make a stone shovel, axe, and sword, and a furnace (the exact number of cobblestone required to make these is 17.) You can also craft a stone hoe (or even a wooden one), but it won't be useful until you start farms (explained on day two).
+
+Swords can be used to more effectively slay mobs (animals and monsters).
+
+A stone pickaxe is more durable and more efficient than a wooden pickaxe, and it can mine ores that a wooden pickaxe can't.
+
+Shovels are mainly used to break dirt, grass, sand, clay, and gravel blocks quicker than by hand. They also allow for the collection of snowballs when used on snow layers in snow biomes.
+
+Axes make gathering wood (and most other wooden blocks) much faster.
+
+Now, you should gather more wood, using your new stone axe. Although some trees may look different than others, all wood functions the same. However, different kinds of wood don't stack together. While you cut down trees, try to to gather the saplings that fall. If you are cutting down oak trees, apples will also drop (see the trees page for more info.)
+
+If the sun is still in the sky, explore around the immediate area (making sure you don't get lost), to try and find some coal. Coal has all the same properties as charcoal (and can also be crafted into coal blocks).
+
+If you happen across a coal-like ore with tan specks in place of the black, you have found some iron. This material will be extremely useful for most of your Minecraft career, and if it's within easy reach, go ahead and gather it (you will need to mine it with a stone pickaxe). However, If it's in a difficult-to-reach place, just note its location and save it for later.
+
+While you are cutting down trees, you may happen to come across wandering animals, such as chickens, pigs, cows, sheep, and rabbits. These animals are going to be your primary food source in the future. If you see a few, make sure there are more nearby before killing them. If you kill all of the animals in your area, starting animal farms in the future will be much more difficult. Be sure to save at least two of each animal type for farming on day two.
+
+All of the above-mentioned animals drop meat: raw chicken, raw porkchop, raw beef, raw mutton, and raw rabbit, respectively. These foods are among the best food sources in Minecraft, but only after they're cooked (see the next section). If you must eat immediately, avoid eating raw chicken, as it might give you food poisoning. The other meats can be eaten raw safely, but won't feed you nearly as well as cooked meat.
+
+If there are no nearby animals, be sure to be careful about hunger (as above, in order try to avoid getting hurt, fighting, jumping, sprinting, moving around too much.) You will have to wait to get food until you have a wheat farm, which doesn't come until day two.
+
+Heat before light[edit | edit source]
+Next, you need to cook your meat before you get hungry, and also make torches to light up your shelter at night. To do this, you will need to craft a furnace.
+
+Place it somewhere (generally next to your crafting table) so you can work with it. As it is made with cobblestone, you will have to use your pickaxe to collect it if you wish to relocate your furnace. If you haven't found coal, you will need to find an alternate heat source. Burning your wooden pickaxe (which is useless once you have stone) will smelt exactly one item. From this, you can make a piece of charcoal, which will then allow you to smelt eight more items.
+
+To make charcoal, you have to smelt blocks (logs) of wood. In furnaces, the top slot is the item to be smelted, and the bottom slot is the fuel. Place a wooden log in the top slot and your wood pick in the bottom to smelt the charcoal. Then you can put the charcoal (or other fuel) in the fuel slot to smelt more items. It is generally advised to smelt more charcoal if you do not have a supply of coal. If you don't have spare wooden tools or charcoal, you can use planks, two planks for three items as below.
+< Tutorials
+Contents  [hide] 
+1 Overview
+1.1 First day
+1.2 Shelter
+1.3 Night time
+1.4 Death
+1.5 Food and hunger
+2 Play-by-play
+2.1 Starting the game
+2.2 Tough and easy starts
+2.3 Punching wood
+2.4 Your first crafting
+2.5 Creating tools
+2.6 Stone age
+2.7 More resources
+2.8 Animals
+2.9 Heat before light
+2.10 Bed and shelter
+2.11 At Dusk
+2.12 Dawn
+3 After the first Day
+3.1 Home safety
+3.2 Mining
+3.2.1 Finding a cave
+3.2.2 Cave exploration
+3.2.3 Ores and minerals
+3.2.3.1 More advanced ores
+3.3 Things you'll need over time
+4 Tutorial videos
+This article may need cleanup to comply with the style guide.
+Please help improve this if you can. The talk page may contain suggestions.
+If you wish to help revise this and the other survival tutorials, please visit the BGR Project!
+If you have no idea where or how to begin your Minecraft journey, the Beginner's Guide is full of good ways to start! Here you will learn how to survive your first night in two different formats: in an overview with goals or in a step-by-step instruction. You can choose which one you want, but both will accomplish the same goal.
+
+If you have not done so already, take a look at the Controls page to learn how to move your character around. Once you have grasped movement, you will be ready to forge on!
+
+Overview[edit | edit source]
+Minecraft is a sandbox game, so there's no proper way to play the game. In "Survival", food and shelter are essential, however everything else is optional. Even the bare essentials of food and shelter have countless solutions. This guide will show you some of the more common and straightforward solutions to surviving the first day.
+
+First day[edit | edit source]
+As your first day begins, you will need to collect wood. Collect at least four trees' worth of wood blocks (left click and hold while looking at the tree to break it). First use this to make a crafting table (place the crafting table to use it). Right click your crafting table to access it. The first tool you craft should be a wooden pickaxe. Dig down until you find stone. Mine it with a pickaxe. Mine at least 20 blocks of cobblestone. Create a stone axe, stone sword, and stone pickaxe. Now craft a furnace to cook meat for food and smelt any iron you find in your travels. Save around five blocks of wood in case you haven't found any coal yet, and smelt them to create charcoal.
+
+Shelter[edit | edit source]
+Main Article:Shelter
+
+Shelter is something you might consider during your first night because you won't want to be killed. You can make a small hole to hide in or a small two by three house made out of wood and dirt. Place torches in your preferred shelter because in light level 7 or below zombies might spawn. Don't forget to build a bed to sleep until dawn (That is if you can build a bed otherwise you're gonna have to wait til dawn). If you do see a cave it could be a temporary home but remember to place torches—creepers don't really make good neighbors.
+
+Night time[edit | edit source]
+For night time, the primary danger will be monsters/mobs. It is a good idea to stay in your lit shelter. On the other hand, if you're seeking adventure you could always arm yourself with a stone sword and go beat some mobs, if you feel like it. You will be able to get some materials for further crafting, not to mention a ton of experience, which can be used later on for enchanting tools.
+
+One way to avoid being attacked by monsters is to put torches, glowstone, or a jack-o-lantern by your house. You will learn how to make all these things later on, but just a heads up. The torches are easy though, you just need to craft charcoal/coal on top of a stick.
+
+If you are repeatedly getting killed, one desperate response is to go into "peaceful difficulty" (see "changing the rules", below). However, consider this: This being your first day, you aren't actually losing much until the deaths (at least not after what stuff you've gathered is lost), so you can just tough it out until dawn and start again.
+
+Death[edit | edit source]
+Normally in survival mode Minecraft, when you die, all items you were carrying or wearing in your inventory are scattered around your point of death while you respawn elsewhere (unless /gamerule keepInventory is on). Until you sleep in a bed, you will spawn somewhere within 10 blocks of the world spawn point. This includes the first time when you started the game, so you can respawn anywhere within 20 blocks of where you first entered the world.
+
+The traditional advice is to build your first shelter as close as possible to the spawn point, so if you die, you can easily find it again, or even spawn in a now-protected area. Even with the variation in where you'll come back, it's good to have a lit shelter nearby the spawn point. However, a problem with sheltering away from spawn is that if your death site is too far from where you respawn, your items may despawn while you're trying reach them. (See below for more details.)
+
+Like any dropped items in Minecraft, the items you drop when you die will despawn (disappear) after 5 minutes, unless you're more than 180 blocks or so away, that is outside of chunk update radius The problem is that if you died at night, you will find yourself stranded without your weapons and armor, so you are quite likely to get killed again, or at least find your stuff guarded by monsters. Meanwhile, some of the monsters can actually pick up your stuff and use it against you! And if you spawned near your death scene, that 5-minute timer can easily go by before you can actually get back to and keep your stuff.
+
+However, the above only applies until you have made and used a bed in a secure shelter. Once you've done that, you have a new option: If you get killed at night, you will respawn next to your bed, so you can just go back to sleep, and wake up the next morning — the items don't “expire” while you're asleep. It still may be worth keeping your bed out of chunk update range from where you're endangering yourself, but at least you won't be stranded outside at night.
+
+Food and hunger[edit | edit source]
+Once you have tools and shelter, your next priority will be food. Hunger will take a while to hit, so it shouldn't be a problem on your first day, but you'll try to pick up some food for when it does. However, after you've been moving around for a while, your food bar will begin rippling and start to decrease. If your food bar drops below 90%, you will not regenerate health, and if it gets to 30%, you can't sprint. If the hunger bar goes down to empty, you will begin losing health. Unless you're in Hard mode (and a beginning player shouldn't be), you can't actually starve to death, but you will go down to 1 health point (Half Heart.svg) in Normal mode or half your health (Heart.svgHeart.svgHeart.svgHeart.svgHeart.svg) in Easy mode, and that leaves you quite vulnerable. You don't lose hunger in Peaceful mode, so it's the least of your concern there.
+
+Walking, mining blocks, and even placing blocks all cost some hunger, but all of those are minimal compared to the items below. These are the things that cause the most hunger, in order of cost.
+
+Healing damage of any sort. Avoid taking falls of more than 3 blocks, drowning yourself, or otherwise taking damage, as healing damage costs a lot of hunger. Especially avoid…
+Fighting: Both attacking mobs and receiving damage cost hunger, even before you start trying to heal damage. (10 blows either way matches healing Half Heart.svg, one health point.) You will need to slaughter a few animals, but pick your fights carefully.
+Sprinting. If you double-tap the forward movement key (W by default), or press your sprint key (Left Ctrl by default), you will sprint. This moves somewhat faster, but it also uses a lot of food, especially if you go any distance. (30 meters matches healing Half Heart.svg.) however, if you happen to have a sufficentt amount of food with you you can always do it your way.
+Jumping. Obviously, you'll need to jump some just to get around, but don't bounce around randomly or unnecessarily. (15 jumps matches healing Half Heart.svg) Sprinting jumps are especially costly, 4 times as much as a regular jump, although they are the fastest mode of transportation early in the game.
+Note that if you're (staying) at full health, and not moving, fighting, mining or placing blocks, then you will use no food. Thus if your character has a secure place to stay, you can just stay put to conserve food while waiting out the night, a storm, or crop/animal growth.
+
+Consider making a basic crop farm immediately after you have settled in a place. Wheat is best, for
+
+(1) It is essential for crafting a lot of food items,
+
+(2) it is really easy to obtain early in the game.
+
+Play-by-play[edit | edit source]
+1.8 Biomes MixedForest.png
+Starting the game[edit | edit source]
+When you begin the game, you will be standing in a landscape somewhere. Take a moment to look around. This is the general area (within 20 blocks) where you will reappear if you get killed. It's a good idea to mark it immediately, by punching out an X of dirt and/or sand, then using the dirt or sand to build a pillar in the middle of that. If you're standing on rock, look around for some dirt or sand to use, remember where you are, and go get it to build your pillar. You can also use the Debug screen to save the coordinates of the spawnpoint for later use (see the page to learn how).
+
+Tough and easy starts[edit | edit source]
+A general note: Any time you're “looking around”, is a good time to turn your render distance to max, you can put it back afterward if it slows your game.
+If you are standing on and surrounded by sand, you are likely in a desert biome. After marking your spawn point, head for high ground and look around for green grass and/or trees (cacti and sugar cane don't count.) Head that way to gather your wood. If you can't see anything but desert, pick a random direction and head that way, occasionally going to high ground for a look around.
+If you are on an island, completely surrounded by water as far as you can see, you are in an ocean biome. This is perhaps the toughest start possible, and as such is highly discouraged for play by beginners -- given an ocean start, it's entirely reasonable to discard the world and make a new one. Assuming you don't do that: If your island has no trees, you will need to swim to another island or mainland to find wood. (Remember that if you die before sleeping in a bed, you will respawn on the island.) When you swim you may see squid. Squid are mobs but they are not hostile. Like cows, sheep, and chickens, they can't attack you (or even defend themselves), but killing them gives only ink sacs (and some XP).
+
+If, looking around, you see dull,purplish land, your game just got a lot easier: you are on a mushroom biome, where monsters will not spawn (if it's connected to the mainland, congratulations, you found one of the rarest landscapes in the game). Monsters can still come in from other biomes, but if you head toward the middle, you can spend the night in safety outdoors. Also, with a bowl, you can get free food from the mooshrooms which live there. However, one thing the mushroom biome does not have, is wood—so before you go there, head for a grassy area to get some wood and stone first.
+If, looking around, you see houses and/or farms, you are near an NPC village. This is a good place to live in general, if you can make a bed: the farms will solve your food worries for now, you can trade with the villagers, and if there's a blacksmith (look for a house with a stone slab roof), it will contain a chest with bonus items. You can also scavenge a fair bit of wood even without trashing the place (try replacing logs with planks). However, at first you'll want to avoid hanging out near there after dark, because zombies can spawn and kill the villagers. You can avoid this fate by making a bed (see below), and consistently sleeping through the night until you can properly fortify the town against monsters):
+If there are no sheep around, look for “lamp posts” in the village — the black block on top is wool (break it with your hand).
+If you can't get enough wool for a bed, your best bets are (first choice) either get far away (150 blocks or so) from the village before nightfall, or (second best) to spend your first night(s) atop a really tall pillar, 40 blocks high or more (64 is even better). By the second night you will hopefully have managed to find a bit of wool....
+If you find yourself surrounded by many very large trees, and leaf blocks on the ground, then you have found yourself in a jungle biome. The jungle biome is a good place to start because there are large trees everywhere, however, these can cause you to easily become lost. Also, the cramped quarters can make it difficult to build there. Jungle biomes are the only place to find ocelots (you'll need fish to tame them) and cocoa beans. The sheer amount of leaves here can cause trouble for particularly old computers, lagging or even crashing the game; if you have an old computer and you haven't already switched to fast graphics, a jungle is good reason to do so.
+If you find yourself surrounded by thick, short trees and dark grass, you are in a roofed forest biome. These biomes are especially dangerous because the canopy of leaves can sometimes become so thick that monsters will spawn, even during the day. However, this biome does provide ample supplies of wood and naturally spawning giant mushrooms which can be used for food and shelter for the night.
+There are many other biomes in Minecraft, and to see a more in depth look at all of them, check the Biomes page.
+Punching wood[edit | edit source]
+Look around for a few things in particular, in order of priority: trees, visible stone (and especially coal ore, which looks like stone with black spots on it), animals, and tall grass. As you move around, break any tall grass in your way, and collect any seeds that drop. For that matter, collect any loose item you see, as most of them will eventually be handy.
+
+Your first priority is to find a small tree, bash through the leaves if needed, and "punch" the wood until each block drops as an item. Don't rapidly click on the block, just hold left-click (or whatever you've set "attack" to) until the block breaks. Don't bother with huge trees at this point, but also don't be upset if you can't reach the top blocks of wood — you can always come back and collect them later. This first tree should give you at least 4 blocks of wood ("logs"). You'll punch more wood in a moment! Wood is essential for tools and useful items such as torches, doors, fences, and chests.
+
+Your first crafting[edit | edit source]
+As the game's name suggests, crafting is core to Minecraft. While there are a small number of items that can be crafted directly from the inventory, a crafting table is required to craft tools and most other items in the game. The crafting table will be your main asset throughout the game.
+
+To make your crafting table, first open the inventory and pick up the logs you collected. Place a log into the crafting area to obtain 4 wooden planks.
+
+
+
+The planks will be different colors depending on what sort of wood you have. Different types of wood don't stack together, but all work the same. With a couple of exceptions you can mix and match different planks when crafting. In particular, sticks don't "remember" what sort of wood they came from.
+
+As you convert your first logs to planks you may want to consider saving some logs for later. Usually, 3-4 logs' worth of planks will be enough to get started. In particular, you want to save logs to make charcoal later on.
+
+Then, take four of your newly crafted planks and arrange them like so to make a crafting table:
+
+You should see this:
+
+
+
+
+
+
+
+Return to the world view and walk to a spot you think appropriate. Select your newly crafted crafting table and place it. Now you can get crafting some more complex blocks and items!
+
+Tip: Anything that you can craft in your inventory crafting space, you can also craft in the crafting table.
+Creating tools[edit | edit source]
+In order to collect stone and coal, the next staple resources, you will need a pickaxe. Your first pickaxe will be made of wood, which isn't very durable or fast, but until you collect some cobblestone it's all you have.
+
+To make a pickaxe, you will need to craft some sticks. Do so as shown below to craft 4 sticks:
+
+
+
+
+
+
+
+4
+Now you'll use some planks and the sticks you just made to create the final product. Arrange them like so:
+
+
+
+
+
+
+
+
+
+
+
+
+You may have noticed that in order to craft a pickaxe, you more or less draw it with its components in your crafting square. Other items are crafted in a similar fashion. At this point, you can do one of two things: You can either make more wooden tools, or you can gather stone and use that to make better ones.
+
+Stone age[edit | edit source]
+SurfaceStone.png
+Once you've crafted a pickaxe, you can successfully acquire cobblestone to make better tools. Start by finding stone in the world; it should be fairly easy, as it's extremely common. If you don't see any on the surface, dig down in a staircase fashion and mine the stone with your pickaxe; it will drop as cobblestone items. Gather enough cobblestone to upgrade your pickaxe and make a stone shovel, axe, and sword, and a furnace (the exact number of cobblestone required to make these is 17.) You can also craft a stone hoe (or even a wooden one), but it won't be useful until you start farms (explained on day two).
+
+
+
+
+
+
+
+
+
+
+
+
+Swords can be used to more effectively slay mobs (animals and monsters).
+
+
+
+
+
+
+
+
+
+
+
+
+A stone pickaxe is more durable and more efficient than a wooden pickaxe, and it can mine ores that a wooden pickaxe can't.
+
+
+
+
+
+
+
+
+
+
+
+
+Shovels are mainly used to break dirt, grass, sand, clay, and gravel blocks quicker than by hand. They also allow for the collection of snowballs when used on snow layers in snow biomes.
+
+
+
+
+
+
+
+
+
+
+
+
+Axes make gathering wood (and most other wooden blocks) much faster.
+
+More resources[edit | edit source]
+SurfaceCoal.png
+Now, you should gather more wood, using your new stone axe. Although some trees may look different than others, all wood functions the same. However, different kinds of wood don't stack together. While you cut down trees, try to to gather the saplings that fall. If you are cutting down oak trees, apples will also drop (see the trees page for more info.)
+
+If the sun is still in the sky, explore around the immediate area (making sure you don't get lost), to try and find some coal. Coal has all the same properties as charcoal (and can also be crafted into coal blocks).
+
+If you happen across a coal-like ore with tan specks in place of the black, you have found some iron. This material will be extremely useful for most of your Minecraft career, and if it's within easy reach, go ahead and gather it (you will need to mine it with a stone pickaxe). However, If it's in a difficult-to-reach place, just note its location and save it for later.
+
+Animals[edit | edit source]
+While you are cutting down trees, you may happen to come across wandering animals, such as chickens, pigs, cows, sheep, and rabbits. These animals are going to be your primary food source in the future. If you see a few, make sure there are more nearby before killing them. If you kill all of the animals in your area, starting animal farms in the future will be much more difficult. Be sure to save at least two of each animal type for farming on day two.
+
+All of the above-mentioned animals drop meat: raw chicken, raw porkchop, raw beef, raw mutton, and raw rabbit, respectively. These foods are among the best food sources in Minecraft, but only after they're cooked (see the next section). If you must eat immediately, avoid eating raw chicken, as it might give you food poisoning. The other meats can be eaten raw safely, but won't feed you nearly as well as cooked meat.
+
+If there are no nearby animals, be sure to be careful about hunger (as above, in order try to avoid getting hurt, fighting, jumping, sprinting, moving around too much.) You will have to wait to get food until you have a wheat farm, which doesn't come until day two.
+
+Heat before light[edit | edit source]
+Next, you need to cook your meat before you get hungry, and also make torches to light up your shelter at night. To do this, you will need to craft a furnace:
+
+
+
+
+
+
+
+
+
+
+
+
+Place it somewhere (generally next to your crafting table) so you can work with it. As it is made with cobblestone, you will have to use your pickaxe to collect it if you wish to relocate your furnace. If you haven't found coal, you will need to find an alternate heat source. Burning your wooden pickaxe (which is useless once you have stone) will smelt exactly one item. From this, you can make a piece of charcoal, which will then allow you to smelt eight more items.
+
+To make charcoal, you have to smelt blocks (logs) of wood. In furnaces, the top slot is the item to be smelted, and the bottom slot is the fuel. Place a wooden log in the top slot and your wood pick in the bottom to smelt the charcoal. Then you can put the charcoal (or other fuel) in the fuel slot to smelt more items. It is generally advised to smelt more charcoal if you do not have a supply of coal. If you don't have spare wooden tools or charcoal, you can use planks, two planks for three items as below.
+
+Once you have your first pieces of charcoal, use that as fuel any time you have 8 or more items to smelt. Each piece will smelt 8 items (just like mined coal), and you have other uses for planks. If you have both coal and charcoal, use up the charcoal first and save the coal.
+
+Now you can cook your food and make torches. Ration out a piece of coal/charcoal for the food, and cook the food just like smelting the wood above: food in the upper input box, fuel (coal) in the lower one. This being your first day, it's OK to “waste” some of a coal/charcoal lump if you have fewer than 8 pieces of meat.
+
+Use the rest (up to 8 for now) of the coal or charcoal with some sticks to craft into torches. One log crafts into 8 sticks to match 8 pieces of coal or charcoal, producing 32 torches (half a stack.) Throughout the game, you will be crafting more and more torches as you need them, so always keep some coal or charcoal at hand.
+
+If you have made a bed, nightfall is easy: As soon as sunset begins, place your bed, sleep in it, and continue with crafting and smelting the next day. However, if you have no bed, and you didn't have time to build something secure, you will probably have to spend your first night in an emergency shelter. You want to be able to make torches and cook food overnight, but if the shelter is underground you really want to have some torches handy before you close yourself into the darkness. If you have wood to spare, you can craft a wooden door:
+
+You can place this door across the entrance to your shelter to protect you from mobs, while still giving you access. It is generally recommended to place it from the outside (go outside your shelter and place it looking inside.)
+
+While you were gathering cobblestone, you most likely dug a small hole in the side of a surface cave, or staircased down through the dirt. In either case, you can use that hole as a shelter. Dig a few more blocks into the hill or cave wall, then you can dig a small room, about 5 by 5. Relocate your crafting table and furnace in here, and make sure to light it up! If you have no door, simply cover your entrance with dirt or cobblestone when night falls, periodically breaking it to check for day (watch out for mobs though!). A similar shelter can also be created in a small cave, just remember to close off both ends of the cave or monsters can come at you from below.
+If you don't want to live in a hole, there are a couple of other options: you can spend the night atop a pillar by building a tall 1×1 column under you by pillar jumping up. Pillar 20 or 30 blocks upwards to avoid getting shot off by a skeleton or having the bottom blown up by a creeper. You can also use crouching (holding ⇧ Shift) to add a ledge to your pillar. IF you do not have a ledge, watch out for climbing spiders. Keep your stone sword in hand and whack them as soon as they come into reach, before they get up to you - attacking them will knock them back down.
+If there is a large tree nearby, you can spend the night on top of the tree - just watch for skeletons and spiders as with the pillar. If you have a boat, you can spend the night in the middle of the sea as monsters do not spawn in water. You can also simply build a three block high hut from any material, for example cobblestone, wood or dirt. Add a roof to protect against endermen and spiders. Note that you can use the crafting table and/or furnace as part of the walls.
+Remember the golden rule we talked about before? Well, when you're desperate, you can break it a little. Dig three blocks down, and put a block above you that is not sand/gravel to make the fastest shelter in Minecraft possible. You may want to use a real-world clock to time the night (7 minutes, with up to 3 more to allow for dawn/dusk). You can dig out a couple of the blocks around you and place your crafting table and furnace. A torch will make your little hideyhole feel a little less like a tomb....
+Finally, if you're really desperate, you can press the Escape key to pause the game, go into the Options menu, and change the difficulty to "peaceful". Though many players consider it cheating, it's a sure-fire way to make sure mobs don't spawn. If you have cheats allowed, you can simply type in /gamemode 1 which will change your game mode to Creative, and mobs won't be able to attack you.
+
+By the end of the first day the shelter will likely be primitive and small. In the days afterwards, you will be able to build a better home, in any of various forms. Some natural extensions include a back door, windows, a surrounding fence, and even traps for monsters. Remember that any time you pick up your bed, your spawn point will revert to the default, until you not only place, but sleep in a bed again.
+
+You have no problems if you have just spent your night in a cave. If you haven't, the easiest way to do so is to roam the Overworld a little and look out for exposed cave entrances. Extreme Hills biomes will have caves inside mountains, but these are generally not what you want, because only coal ore will appear above sea level (Y=64). For iron and better ores, you'll want to find a cave opening into the ground (these are quite common) and head downwards. Sometimes such caves end immediately, but often they continue into big cave systems. If they seem to end right away sometimes there will be a continuation about 2-8 blocks farther back and below the cave's end; mining in these directions (8 blocks back and down, exploring somewhat to the sides) will reveal this if it is the case. Digging away gravel or dirt can also expose cave extensions, but you may go through a few shovels that way. If you can't find any all day, just sleep away the night, replenishing your resources like wood and food as you use them. If you hear suspicious, hostile noises, just try to listen and follow them.
+
+ Coal is an important material used to make torches and to smelt or cook items. You have to mine it in order not to run out of torches while exploring caves. One stack (64 lumps) will be an ample supply, but in practice, you can start with less and mine more as you go. Long-term, it's worth accumulating a few stacks, as once you get seriously into mining, you'll be using a lot. Coal is not strictly necessary since you can make charcoal from wood, but it is common, and you have plenty of other things to do with wood. This is the only ore that appears above sea level (anywhere there is stone), and it is often visible in stone outcrops on the surface or even on mountains.
+
+ Iron is probably the most important and versatile resource you can find underground. You can use it to craft good quality tools, armor and a plethora of other things. Gather as much of it as possible, but it needs a stone pickaxe or better to mine it, so be careful not to use a wooden pick on it. Once you have some iron ore, make a furnace to smelt it into iron ingots, that you can then craft into other items. First of all craft a pickaxe, a sword, and a bucket (fill it with water), then craft iron armor. This will take a total of 32 ingots, half a stack. If you have extra, go on to make shears, another bucket (to hold a second water source or stray lava), and perhaps an iron shovel or other tools. (If you have enough, save some for compasses and maps.) Crafting recipes can be found here. Note that two water buckets can be used to create an “infinite water source”; place them diagonally in a 2×2 hole.
+
+ Gold, lapis lazuli, and redstone are more specialized ores, only found in deeper parts of the caves. Gold and redstone need an iron pickaxe to mine. (Lapis can be mined with a stone pickaxe.) You don't really need them much at the beginning, but you will want small amounts. Once you do have a little gold and redstone, probably the first things you'll want to use them for are a compass (iron+redstone) and a clock (gold+redstone). Once you find some sugar cane, you can add a map (paper+compass) to keep track of your explorations and help avoid getting lost. Lapis lazuli is used for enchanting, a more advanced game mechanic. Later, gold and redstone will have more uses.
+
+ Diamond is a very rare mineral, probably the most-sought resource in Minecraft. It can be crafted into very durable and quick tools, and vastly superior armor. The ore can be found at the very bottom of the world, the bottom 15 layers of the map, and requires an iron pickaxe to mine. Once you hit bedrock (unbreakable dark gray blocks) climb back up about 10 levels and mine around for a while before slowly making your way down one level at a time. At levels 5 and below, you'll be working around bedrock, so it's better to keep above that; lava also spawns below layer 10, so it's safer to explore at level 11 or above to avoid it. A good way to check what level you are currently on is to press F3 to show the debug screen, and read the Y-axis value.
+
+ Emeralds are normally gained (and used) by trading with villagers, but scattered blocks of emerald ore can also be found beneath extreme hills biomes. Emerald ore is found at the same depths as gold ore, and likewise requires an iron pickaxe. It currently has no practical purpose besides trading.
+
+ Nether Quartz Ore is only found in the Nether, which is much more dangerous than the Overworld, and you should probably wait until you have diamond armor to attempt collecting this. It can be used to make comparators, daylight sensors, quartz blocks and a few more items. It is quite common in the Nether and can never be found in the Overworld. It can appear on any level of the Nether except at the very top. Cannot be used to make tools and/or armor but is still useful for other things.
+
+This is a quick list of some things you will need or want to do over the next few days or longer, not necessarily in this order:
+
+Collect more wood, coal, and iron for crafting.
+Over time, delve deeper for the more advanced ores, and eventually diamonds.
+Start hunting monsters for resources:
+Spiders for string. You need this for bows, fishing rods, and leads. If you still haven't found sheep, 12 string can be crafted into the 3 wool you need for a bed.
+Skeletons for bones and arrows.
+Zombies mostly drop Rotten Flesh (which is best used as dog food), but occasionally will drop a carrot or potato which you can start a farm with.
+Start setting up a wheat farm. Eventually you will add other crops—in particular, carrots and potatoes as you get them from zombies. Pumpkins are also useful, and can be found in any of several biomes.
+Gather sugar cane for maps and books (you will also need iron and redstone for maps, and leather for books). Don't gather all you find; instead, replant at least half your harvest as single blocks (that is, leave more canes growing than you harvested), so you'll have lots when it's time to make maps and books for enchanting.
+Start fencing animals into farm pens, using their food items to lure them and then breed them. Cows, mooshrooms, and sheep eat wheat, pigs eat carrots (you probably won't have these at first), and chickens eat seeds (you've probably picked some up already from breaking grass). Chickens can also be hatched from eggs, which they occasionally lay. Of these, chickens and cows are probably most important; Besides meat, chickens provide feathers for arrows, while cows or mooshrooms provide leather for books and other useful items.
+Collect saplings, and grow some trees of your own in some convenient spot. Saplings drop randomly when leaf blocks are destroyed or decay naturally (after you chop down their tree).
+Craft a boat for travelling the many waterways in your world.
+Take up fishing during rainstorms. Fishing will be about 20% faster when it's raining, and fishing will occasionally get you saddles and name tags (otherwise quite hard to find), along with extra bits of leather and string… not to mention enchanted fishing rods. (Don't eat the pufferfish!) Fishing in a small pool is possible but awkward, and properly fencing a large pool is difficult, but there are two options that are fairly easy for beginners:
+Take a boat out onto an ocean or large lake, well away from land in any direction. You want to be at least 20 blocks from land, and if you're within 30-odd blocks of land, you may have to deal with occasional swimming zombies.)
+Build a fishing tower with a platform on top near any large river, ocean, or lake. You don't need a full building, you can do fine with a pillar (stone or wood) with a ladder leading up to a platform on top. (You can also modify a tall tree to the purpose.) Add a few fences for safety, optionally a roof (lightning is unlikely to hit you, but it does happen), and you have a nice secure spot to fish from, even during thunderstorms and at night.
+A larger and more advanced home, with doors (plural, a back door is really helpful), windows (glass or fencing), storage rooms, and space for the enchanting table and bookshelves you'll eventually make.
+Tame some animals: Each type is found in specific biomes, and needs specific foods to tame them, bring a fair amount:
+For cats, you need to find a jungle and bring raw fish. These are mostly annoying, but have the unique ability to chase off creepers.
+For dogs you need to prowl forests or taigas with a batch of bones. These can help you fight monsters! (But not creepers.)
+Horses can be found in plains; you will need a saddle (try fishing for one). Food is not required, but can help, and any of several foods will do, but wheat or bread is probably easiest. Note that breeding horses is more difficult, and requires gold, as well as carrots or apples.
+Eventually, when you are ready (ideally, full iron armor and a diamond sword), visit the Nether to get Nether materials.
+
+f you read the Beginner's Guide and followed it you should have at least a hole in a hill with about 2 torches, a workbench, and a worn-down wooden pickaxe. This day will guide you in making a cobblestone house, instead of your hole in a hill.
+
+When you venture outside after surviving your first night, be on the lookout for hostile mobs. Later, you will be hunting them, but that's after you get both weapons, and a proper food supply. Also, keep track of where you are, using the debug screen if needed. If you do get killed at this point, you haven't lost much, and you're presumably still near spawn -- just head back to your death site to collect your few items.
+
+At this stage, creepers are deadly -- run away until they despawn or lose track of you. Skeletons and zombies may survive in shady spots; lead them into the sun and avoid them until they burn to death. Spiders will mostly be neutral, so just avoid them; if one has targeted you, lead it into the sun and run it around until it loses interest.
+
+Collect any loose items you see: bones, arrows, rotten flesh, eggs, and wool. Destroy any tall grass you see and collect the seeds. You might break and grab some mushrooms too -- if you can get both kinds of mushrooms, you can make mushroom soup. All these things will help you sooner or later.
+
+The foundation of everything is mining. Begin by mining some stone with your pickaxe. You should craft a stone pickaxe because it mines faster and has more durability. When you mine a stone block, it should drop a crumbly block called cobblestone. This is what you can use to make your house. It has an explosion resistance of 30, which isn't enough to stop a creeper's explosion but it will do for the second day. You can also use cobblestone to make stone weapons and tools. These last longer, with 132 uses. You can make a stone pickaxe by replacing the wooden planks with cobblestone when making a pickaxe. After crafting it, collect approximately 50-80 pieces of cobblestone. Make sure to light up your mine, otherwise you will be destroyed by the various mobs!
+
+To fix a tool, put two of the same tool in the crafting table next to each other. This will replace the two old items with a new item that is either unused, or has slightly more remaining uses than both the old items together. This applies to any tool that has durability, including swords and bows. Eventually you will have enchanted tools and/or weapons—then you can start using anvils. (Note! You can repair 2 consumed tools of the same type to make a new one. This can save materials because you will repair only 2 consumed tools and not a consumed tool and a new tool.)
+
+Most players find it helpful to bring food, wood, coal, torches, a sword and a water bucket. You may want to bring a bed if you are on a long mining expedition in multiplayer, so you do not have to go back to your house to sleep. Also, it's a good idea to bring iron pickaxes instead of stone pickaxes, if you can spare the iron. The reason being, if you use iron pickaxes, they mine faster and have a higher durability. With the vast amount of iron that is in the world, you are likely to find an iron pickaxe will more than make up for itself in terms of iron mined, if you use a stone pickaxe it goes by slowly, so in theory you are wasting iron if you don't use an iron pickaxe. If you are looking for obsidian, then you should also carry a diamond pickaxe. When you obtain a diamond pickaxe you should use it till it breaks, its the same argument as iron. Although, there is considerably less diamond than iron, diamond on average spawning less than once per chunk, a diamond pickaxe should more than make up for itself when you mine for strictly for diamond. And with the limited uses of diamond, making everything there is to do with diamond and stocking some up should set you up for the game and, if not, it should set you up for a long time.
+
+Getting lost in a cave without food or a sword can quickly turn into a death sentence.
+
+If you keep losing your way, try marking your path with torches or a unique entity, such as signs or birch planks. This will also help you to recover your items if you die while mining. Carving out a safe room containing furnaces, a crafting table, a bed and a chest might be worth your time. If you are an enthusiastic miner and spend long amounts of time in caves you may want to build an actual house under ground with basic survival necessities.
+
+Lava is dangerous, so remember to bring a water bucket when mining. This can also help getting to ores above lava. Just place the water next to the lava source, and voilà! You have an obsidian surface to walk on. On multiplayer PvP, try digging around ores, especially if they seem obvious. Another player may use the ore as bait.
+
+Lava kills players without any armor faster as compared to players wearing full set Armor, so equip yourself with Full Iron Armor set, to protect yourself from monsters, Hostile players and Lava.
+
+Building a rail system allows the player to quickly shuttle their goods toward the surface. This will require minecart with chests, and minecart with furnaces or powered rails, depending on your resources. Be careful though; lava can burn the tracks, creepers can blow them up. Be careful where you place rails, and you may want to protect some of them with fences or even stone. Of course you'll want the track properly lit as well. If you have access to ender chests, those can be a much simpler alternative for moderate amounts of material.
+
+
+There are three basic ways to start off your mine, though they can be combined:
+
+Find one of the many caves that opens to the surface, and start exploring that, generally working your way downwards. Even shallow caves will offer plenty of coal and iron, and later gold and other ores. Caves offer the advantage that a great deal of stone has already been excavated for you, exposing many ore veins. On the flip side, they usually have a lot of monsters in them, and both water and lava can be troublesome.
+If, rather than a proper cave entrance, you have a shaft or ravine, you can start with that. Use a water bucket to create a waterfall that you can swim down (and back up), then continue as above with the caves that open off the ravine. Watch out for monsters falling off high ledges! You may want to pillar jump to light those ledges and look for high tunnels.
+Alternatively, you can make your own entrance to the underworld: dig a vertical or diagonal mineshaft wherever is convenient (such as a back room in your base), and start digging horizontal shafts at suitable depths. This will take more tools (since you're digging everything out yourself), but with proper lighting you'll hardly ever see monsters. Your mineshaft may (indeed, probably will) also open into caves, which you can explore as above. There's a good deal of discussion about which methods are best for mining ores, but for the initial mineshaft, the safest method is probably a 1×3 shaft equipped with a ladder down the middle, and occasional ledges in case you fall off the ladder. Regardless of how you arrange things, you'll need to light your shafts properly to avoid monsters spawning. You can also turn to mineshafts when your cave is mined out. It is a good idea to mine everything out including coal as you never know when you might be lost and need more torches.
+
+Also known as cave hunting, caving, cherry picking, or spelunking, cave mining is simply the practice of exploring caves and extracting the ores found there. Ore veins are often found exposed along the walls, floors and ceilings of caves. Exploring a large cave system almost always results in finding large quantities of ore, though you probably will find bigger veins of ore unexposed, because cave generation sometimes cuts off the vein generation, so you may find only a few of a certain type of ore. Cave mining has a high return on investment, yielding more ore per time spent and requiring fewer tools (less pickaxe and shovel durability is lost mining stone, dirt, and gravel) than other approaches.
+
+On the other hand, cave mining is highly dangerous. Unexplored caves are dark and tend to contain many mobs; a sword, a bow and armor are practical necessities. The player should carry a large supply of torches to light up the cave and prevent extra hostile mob spawns. Large cave systems can become confusing and dangerous. Special attention must be paid to navigation, lest one quickly gets lost. Moving through a cave too quickly makes it easy to miss unlit passages above or beside you (where monsters can come out), and carries the danger of stepping into an open shaft. This becomes extremely dangerous when you are stuck in there and encounter mobs. You can also fall into a lava pool which will result not only in death but in all of your items being destroyed in the lava. Portions of caves at level 11 and below are generally filled with lava. Because of these factors, players usually carefully explore and light a cave first, then extract ores on the way back out, increasing the total time required and cutting down on mining efficiency.
+
+The cave article contains tips on dealing with large cave systems, while the Navigation tutorial has a section on caverns.
+
+It is a good idea to carry a bucket of water. Caves often contain random lava flows, and cave areas below level 10 are filled with large lava pools. A bucket of water serves as both a fire extinguisher, if you fall in; and as a way to form obsidian surfaces over lava pools (pour water onto a solid block adjacent to a lava pool; do not stand between that spot and the lava). If the monsters are too much trouble, you can also go to options and change the difficulty to "peaceful" to prevent mobs from spawning. However, you could still die from lava, so don't forget that water bucket!
+
+Caves often contain dead-end passages and shafts, or masses of gravel and dirt blocking your way. Many of these dead ends are actually thin barriers that, if removed, reveal continuing passages, sometimes into entire adjacent cave systems. 'Drifting' is a term for simply searching for adjacent caves by digging beyond apparent dead ends. Drifting can be effective in finding dungeons if there are mob sounds audible at a dead end. Once you can make pistons, those can also help spot nearby caves, even through rock: Set one up facing against a wall, and power it with a lever, redstone torch, or whatever. If there's an open space within 12 blocks ahead of the piston, it will push a hole into the wall.
+
+A pickaxe. If it is your first mining trip, mine some cobblestone and make a stone pickaxe. If you are further along in the game, and expect to mine for a while, bring two iron pickaxes and at least 12 stone pickaxes. Once you have reached diamonds, if you have an efficient style of mine at a depth where diamonds are found, you can use a diamond pickaxe, which lasts a long time and is capable of mining obsidian. Even a partial vein usually provides enough diamonds to replace your pick when it does break, or repair it when it's about to. If you prefer to save valuable materials, take a few stone pickaxes for mining stone and one iron pickaxe only for mining ores.
+A Shovel. Having at least one iron shovel can get through cumbersome patches of dirt and gravel quickly without using your hands. Just one or two stone shovels also works if you want to use your iron for other things. Later, a diamond shovel is a nice convenience.
+Torches. At least a full stack is recommended, and more is always better. Lighting the area around you can help you know which areas you have explored and not get lost, keep monster spawns down to a minimum, and find hidden ores in the shadows.
+Wood. If you run out of tools or torches, you can make a crafting table and sticks to replenish your supplies of pickaxes, shovels, and torches (you can get more coal for them from mining). You can take the crafting table with you when you're done, or leave it as the core of a mini-base.
+A water bucket. This will be useful in saving your life and your items, should you run afoul of lava. Also, if you come across a lava lake or pool you want to cross, you can flood it to turn the lava into obsidian. Water can also be placed to create a waterfall, to descend any shafts or ravines you come across. More experienced players may also substitute a water bucket for ladders.
+An empty bucket. A spare bucket is useful for collecting lava to use as fuel in a furnace, to block or slaughter monsters (you'll lose most of their drops), or just to get the lava out of your way. You can also use it to pick up more water from a spring, perhaps after placing a waterfall. A second bucket of water will also let you create a perpetual water pool from which you can then refill either or both buckets whenever you want. The easiest way to make an infinite water source is to make a 2×2 pit one level deep, then empty two water buckets into opposite corners. This will let you refill your bucket(s) from any of the pool blocks.
+Food. Prolonged visits in mines will wear away your hunger bar. Bringing food will allow you to spend more time in your cave system, and keeping your hunger bar full is important for healing. If there are mushrooms present, you might carry or make a bowl to make mushroom stew.
+Weapons: A sword (stone or better), a bow, and plenty of arrows. These will help you defend yourself against monsters. Upgrade to a diamond sword as soon as you can, as it will make fights noticeably shorter.
+Armor. It will protect you from the monsters you may encounter, and will even protect you from lava. In general, you want at least iron armor — if necessary, you can smelt ore and craft your armor in the caves.
+Chests are invaluable when exploring lava caves since you can store your items in case you die; instead of losing a whole stack of iron and half a stack of gold along with all of your food and weapons, you can drop a chest and a crafting table nearby, and lose only your current tools and whatever you hadn't stashed yet. It's worth writing down the coordinates of your stashes, just in case.
+Ladders. For when you've fallen down, and can't get up... Also useful for reaching high tunnels and blocking off flooding water.
+Signs. These are useful to mark your way in a cavern. Leave messages or ASCII arrows for yourself, such as "EXIT -->", "Base with Bed ^", "Zombie spawner this way", or "mind the holes!". Signs can be stacked, which makes carrying a supply much easier. Signs can also block water and lava.
+(Optional) Fences. Useful not only for blocking off unexplored passages, but for containing waterfalls and rivers when you can't bucket the source. As noted above, you can also harvest these in abandoned mine shafts.
+(Optional) Markers of various kinds. Aside from the above-mentioned signs, wool will be available early, and redstone will turn up when you get deep enough. If you have pumpkins available, jack o'lanterns provide both light and direction.
+(Optional) Dirt, cobblestone, gravel. You'll certainly be picking some of these up along the way, but starting off with some cheap blocks will let you plug holes, make quick staircases, block off lava and bridge your way across pits and ravines if staircases are too expensive or time-consuming.
+(Optional) Saplings and seeds. You can create an underground tree farm to replenish your supply of wood and a small wheat farm to continuously grow wheat for bread, allowing you to stay underground for an infinite period of time. These should both be built in a safe, well-lit area, to prevent spawning of hostile mobs and to encourage growth.
+(Optional) Doors. In conjunction with solid blocks, wooden doors can be used to temporarily block off unexplored caves and prevent hostile mobs entering a secured area. The crafting recipe for wooden doors creates three doors from six wood planks, hence each door uses two wood planks - the same as what would be required to block a 2 x 1 hole but with the ability to pass through with ease, and return in a hurry if there are a large number of mobs on the other side. Some Zombies can break through wooden doors on hard, and consideration should be given to this when playing on this difficulty level. After an area is neutralised the doors may be mined and placed deeper in the cave system, or left as a marker/decoration as well as giving protection against a surprise creeper explosion making a section of cave unsafe again.
+
+
+

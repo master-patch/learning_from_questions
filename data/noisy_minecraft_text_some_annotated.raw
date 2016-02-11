@@ -1,0 +1,4020 @@
+No.1801
+Connections: 
+Text: Minecraft is a sandbox construction game created by Mojang AB founder Markus Persson, and inspired by the Infiniminer, Dwarf Fortress and Dungeon Keeper games.
+
+No.1802
+Connections: 
+Text: Gameplay involves players interacting with the game world by placing and breaking various types of blocks in a three-dimensional environment.
+
+No.1803
+Connections: 
+Text: In this environment, players can build creative structures, creations, and artwork on multiplayer servers and singleplayer worlds across multiple game modes.
+
+No.1804
+Connections: 
+Text: Minecraft is available to all players for €19.
+
+No.1805
+Connections: 
+Text: 95 (US$26.
+
+No.1806
+Connections: 
+Text: 95, £17.
+
+No.1807
+Connections: 
+Text: 32).
+
+No.1808
+Connections: 
+Text: When purchased, singleplayer and multiplayer game modes can be played using the downloadable stand-alone launcher.
+
+No.1809
+Connections: 
+Text: The official demo is free, but has a time limit.
+
+No.1810
+Connections: 
+Text: Minecraft development started around May 10, 2009, and pre-orders for the full game started being accepted on June 13, 2009.
+
+No.1811
+Connections: 
+Text: Minecraft's official release date was November 18, 2011.
+
+No.1812
+Connections: 
+Text: On September 20, 2014, Minecraft for the computer became the best-selling PC game of all time.
+
+No.1813
+Connections: 
+Text: On December 31, 2015, Minecraft for the computer reached 22 million sales.
+
+No.1814
+Connections: 
+Text: On August 16, 2011, Minecraft: Pocket Edition was released for the Sony Xperia Play gaming smartphone.
+
+No.1815
+Connections: 
+Text: After its exclusivity with Sony expired, it was released for Android devices on October 7, 2011, and iOS devices on November 17, 2011 for US$6.
+
+No.1816
+Connections: 
+Text: 99.
+
+No.1817
+Connections: 
+Text: On April 2, 2014, Minecraft was released for the Amazon Fire TV.
+
+No.1818
+Connections: 
+Text: It contains all the same features as the Pocket Edition as well as support for the Fire TV's controller.
+
+No.1819
+Connections: 
+Text: On December 10, 2014, Minecraft: Pocket Edition was released for Windows Phone 8.
+
+No.1820
+Connections: 
+Text: 1.
+
+No.1821
+Connections: 
+Text: On January 10, 2015, Minecraft: Pocket Edition reached 30 million sales.
+
+No.1822
+Connections: 
+Text: On May 9, 2012, Minecraft was released for the Xbox 360 on Xbox Live Arcade for US$20, where it subsequently broke every previous sales record.
+
+No.1823
+Connections: 
+Text: On February 11, 2013, Minecraft: Pi Edition was released for the Raspberry Pi.
+
+No.1824
+Connections: 
+Text: It is based on the Pocket Edition and is available for free at Mojang's dedicated blog.
+
+No.1825
+Connections: 
+Text: The Pi Edition is intended as an educational tool for novice programmers and users are encouraged to open and change the game's code using its API.
+
+No.1826
+Connections: 
+Text: On December 17, 2013, Minecraft was released for the PlayStation 3 on the PlayStation Store for US$19.
+
+No.1827
+Connections: 
+Text: 99.
+
+No.1828
+Connections: 
+Text: The release was almost identical to the Xbox 360 Edition and was developed in tandem with the Xbox 360 Edition from then on.
+
+No.1829
+Connections: 
+Text: On June 26, 2014, the Xbox 360 & PlayStation 3 editions' sales passed the number of sales for the PC edition of Minecraft, leaving the Minecraft series having sold more than 72 million copies world-wide and become the third best-selling video game of all time.
+
+No.1830
+Connections: 
+Text: Minecraft was released for the PlayStation 4 on September 4, 2014, the Xbox One on September 5, 2014 and the PlayStation Vita on October 14, 2014.
+
+No.1831
+Connections: 
+Text: On September 15, 2014, Mojang AB and all of its assets (including Minecraft) were purchased by Microsoft for US$2.
+
+No.1832
+Connections: 
+Text: 5 billion.
+
+No.1833
+Connections: 
+Text: On July 29, 2015, Minecraft was released for the universal Windows 10 platform as an adaptation of the Pocket Edition.
+
+No.1834
+Connections: 
+Text: On December 17, 2015, the Wii U Edition was released.
+
+No.1835
+Connections: 
+Text: The textures on the faces of blocks are 16×16 pixels.
+
+No.1836
+Connections: 
+Text: Most blocks are proportionately one cubic meter by default, but their shape can be changed using models.
+
+No.1837
+Connections: 
+Text: Most blocks also have static textures, though water, lava, portal, fire, sea lantern and prismarine blocks are animated.
+
+No.1838
+Connections: 
+Text: With the exception of sand, red sand, gravel, anvils, dragon eggs and, in Pocket Edition, Snow (cover), all blocks ignore gravity.
+
+No.1839
+Connections: 
+Text: Using resource packs, the player can change the textures of blocks, including whether their texture is animated.
+
+No.1840
+Connections: 
+Text: They can also change the shapes of blocks using models and the size of blocks to any size with equal width and height, though sizes that are a power of two tend to work better.
+
+No.1841
+Connections: 
+Text: Items are objects which only exist within the player's inventory and hands - which means, they cannot be placed in the game world.
+
+No.1842
+Connections: 
+Text: Some items simply place blocks or entities into the game world when used.
+
+No.1843
+Connections: 
+Text: They are thus an item when in the inventory and a block when placed.
+
+No.1844
+Connections: 
+Text: Some examples of objects which exhibit these properties are item frames, which turn into an entity when placed, and beds, which turn into a group of blocks when placed.
+
+No.1845
+Connections: 
+Text: When equipped, items (and blocks) briefly display their names above the HUD.
+
+No.1846
+Connections: 
+Text: Items use item IDs while blocks use block IDs.
+
+No.1847
+Connections: 
+Text: Are used for a lot of different purposes, mainly creating other blocks or items through crafting.
+
+No.1848
+Connections: 
+Text: Mob Drops are used for consuming, cooking, creating other blocks or items, teleporting, playing music, and as ammo, blocks, weapons, armor, and tools.
+
+No.1849
+Connections: 
+Text: These are obtained by picking up the item that drops after a mob dies.
+
+No.1850
+Connections: 
+Text: Some mobs will not drop (certain) items when not registered as killed by a player (spiders with spider eyes, and blaze with blaze rods).
+
+No.1851
+Connections: 
+Text: Adult chickens lay eggs every 5 to 10 minutes.
+
+No.1852
+Connections: 
+Text: Minerals are used for tools, fuel for a furnace, creating other blocks or items, trading, dyes, and work in redstone contraptions.
+
+No.1853
+Connections: pickaxe:16|ore:31 ore:31|pickaxe:16 
+Text: These are obtained by picking up the item that drops after mining an ore with a pickaxe of the right material, or taking the item that gets created after smelting an ore by dragging the finished product into your inventory.
+
+No.1854
+Connections: 
+Text: Plants (in non-block form, examples: seeds, and sugarcane (item version)) are used for creating block-type plants when placed on farmland, dirt, sand, and the side of logs, so that they can grow, and give themselves or other items in the game when fully grown and broken, and be manufactured or consumed.
+
+No.1855
+Connections: 
+Text: These are obtained by picking up the item that drops after breaking a block-type version of the non-block plant in the world, or are found in reward chests.
+
+No.1856
+Connections: 
+Text: Dyes are used to color certain blocks, items, or sheep to get their respective color of wool when shearing them.
+
+No.1857
+Connections: 
+Text: They are also used to customize banners.
+
+No.1858
+Connections: 
+Text: Primary dyes are obtained similar to mob drops, minerals and plants.
+
+No.1859
+Connections: 
+Text: Examples of these are ink sacs, which are mob drops from squid, lapis lazuli, which is a mineral, and rose reds, which are the output of putting red flower-plants in a crafting grid.
+
+No.1860
+Connections: 
+Text: Secondary dyes, including lime, cyan, purple and gray are obtained by combining primary dyes together in a crafting grid.
+
+No.1861
+Connections: 
+Text: Crafting Ingredients are ingredients that have no specific category and no other non-decoration purpose than to create other blocks or items by crafting or smelting, examples are flint, bowls, sticks, paper, clay, brick, nether brick, and nether quartz.
+
+No.1862
+Connections: 
+Text: These are obtained by a lot of different causes.
+
+No.1863
+Connections: 
+Text: Brewing Ingredients are ingredients that are necessary to create potions, examples are blaze powder, ghast tears, glistering melons, and more.
+
+No.1864
+Connections: 
+Text: The main ingredients for potions are water bottles and nether wart, except for weakness potions, which you can create without nether wart.
+
+No.1865
+Connections: 
+Text: To make a splash potion, which you can throw instead of drink, you need to add gunpowder to a potion.
+
+No.1866
+Connections: 
+Text: To get better potion effects, you need to either add glowstone dust to make it a tier two, or redstone to extend its duration.
+
+No.1867
+Connections: 
+Text: These two cannot be legitimately combined together on one potion.
+
+No.1868
+Connections: 
+Text: Enchanting Ingredients are ingredients that are only used for enchanting related things, examples: enchanted books and bottle o' enchanting (experience bottles).
+
+No.1869
+Connections: 
+Text: These are obtained by enchanting, or trading with a villager.
+
+No.1870
+Connections: 
+Text: Food is used to be eaten by the player, to get hunger points, saturation,and for many things.
+
+No.1871
+Connections: 
+Text: It can be eaten by wolves (tamed or not) to give them health, or to make dogs and pigs breed.
+
+No.1872
+Connections: 
+Text: Some food items will give status effects to the player.
+
+No.1873
+Connections: 
+Text: Normal Food, such as apples, bread, melons, pumpkin pie, steak and more, will only give back hunger points and saturation, without any other effect.
+
+No.1874
+Connections: 
+Text: Good Food, such as golden apples can give the player (several) (good) status effects, such as Regeneration, Absorption, Fire Resistance and Resistance.
+
+No.1875
+Connections: 
+Text: Bad Food, such as raw chicken, rotten flesh, spider eyes, and pufferfish, can give the player (several) bad status effects, such as Hunger, Poison, and Nausea.
+
+No.1876
+Connections: 
+Text: If you are about to starve and only have this food, you can drink milk afterwards to clear all their status effects.
+
+No.1877
+Connections: 
+Text: Are used for a variety of purposes, mainly to help the player do things, and be coordinated.
+
+No.1878
+Connections: 
+Text: Axes allow the player to break wood-type blocks faster than mining by hand.
+
+No.1879
+Connections: 
+Text: They can be crafted from wood, cobblestone, iron, gold and diamond.
+
+No.1880
+Connections: 
+Text: Shovels allow the player to break sand-type blocks faster than mining by hand.
+
+No.1881
+Connections: 
+Text: They can be crafted from wood, cobblestone, iron, gold and diamond.
+
+No.1882
+Connections: 
+Text: Pickaxes allow the player to break stone-type blocks faster than mining by hand, and are required in different types of materials in order to make resources drop from specific stone-type blocks.
+
+No.1883
+Connections: 
+Text: They can be crafted from wood, cobblestone, iron, gold and diamond.
+
+No.1884
+Connections: 
+Text: Hoes allow the player to till dirt, allowing them to plant crops, examples are seeds, carrots, and pumpkin seeds.
+
+No.1885
+Connections: 
+Text: They can be crafted from wood, stone, iron, gold and diamond.
+
+No.1886
+Connections: 
+Text: Buckets allow the player to transport liquids such as water and lava, and get milk by right-clicking a cow or mooshroom.
+
+No.1887
+Connections: 
+Text: Shears allow the player to make sheep drop wool, mooshrooms drop red mushrooms, cobwebs drop string, with a Silk Touch enchantment the actual cobweb itself, and make varieties of grass, leaves, vines and dead bushes drop themselves.
+
+No.1888
+Connections: 
+Text: They can also be used to break and collect tripwire without activating connected redstone dust.
+
+No.1889
+Connections: 
+Text: Flint and steel allows the player to set most blocks on fire for varying periods of time.
+
+No.1890
+Connections: 
+Text: Flammable blocks will be burned (destroyed without an item dropping) by this process.
+
+No.1891
+Connections: 
+Text: They also allow the player to light nether portals on fire, so that nether portal blocks are formed inside.
+
+No.1892
+Connections: 
+Text: A fire charge has the same (and more) effects, but will be used up after one use, and is a ranged projectile opposed to a tool.
+
+No.1893
+Connections: rods:1|fishing:7 fishing:7|rods:1 
+Text: Fishing rods allow the player to go fishing to catch several types of fish, treasure, and trash, as well as pull mobs or players closer.
+
+No.1894
+Connections: 
+Text: Carrot on a stick allows player to control saddled pigs.
+
+No.1895
+Connections: 
+Text: Informative Tools assist the player in coordinating in the world.
+
+No.1896
+Connections: 
+Text: Maps are, when looked at, making blocks render in itself that are shown as colored pixels, respective to their rendered block.
+
+No.1897
+Connections: 
+Text: Compasses are always pointing exactly with their red arrow at the player's original spawn point.
+
+No.1898
+Connections: 
+Text: (For players with Pre-release Alpha and Beta worlds, may have had this point "shift" as spawn points were coded in the region files, not derived from the seed.
+
+No.1899
+Connections: 
+Text: ).
+
+No.1900
+Connections: 
+Text: Clocks are showing the player what time it is in the over-world.
+
+No.1901
+Connections: 
+Text: When located in the Nether, or the End they will rapidly spin.
+
+No.1902
+Connections: 
+Text: Weapons.
+
+No.1903
+Connections: 
+Text: Are mostly used to kill mobs and players faster strategically.
+
+No.1904
+Connections: 
+Text: Swords are used to kill mobs and players faster, to block attacks, which reduces most types of damage by half, or to break blocks a little faster.
+
+No.1905
+Connections: 
+Text: Bows (with arrows) are used to kill mobs or players from a distance.
+
+No.1906
+Connections: 
+Text: Snowballs are used (in this context) to knock players or mobs back, giving you time to run.
+
+No.1907
+Connections: 
+Text: They only deal damage to Ender Dragons and blazes.
+
+No.1908
+Connections: 
+Text: Eggs are used (in this context) to knock players or mobs back, giving you time to run.
+
+No.1909
+Connections: 
+Text: They do not deal damage to any entities.
+
+No.1910
+Connections: 
+Text: Fishing rods are used (in this context) to knock players or mobs back, giving you time to run.
+
+No.1911
+Connections: 
+Text: They do not deal damage to any entities.
+
+No.1912
+Connections: 
+Text: They can also pull mobs and players towards you, giving people using ranged combat no advantage.
+
+No.1913
+Connections: 
+Text: Ender pearls are used (in this context) to teleport away from or into combat.
+
+No.1914
+Connections: 
+Text: When used, the player will take 5 (Heart.
+
+No.1915
+Connections: 
+Text: svgHeart.
+
+No.1916
+Connections: 
+Text: svgHalf Heart.
+
+No.1917
+Connections: 
+Text: svg) of fall damage, but Feather Falling and Protection enchantments will reduce this.
+
+No.1918
+Connections: 
+Text: Flint and steel, fire charges and lava buckets are used (in this context) to light players and mobs on fire.
+
+No.1919
+Connections: 
+Text: Buckets are used (in this context) to steal a player's lava or water, giving them a disadvantage.
+
+No.1920
+Connections: 
+Text: Eggs are used to spawn baby chickens when thrown.
+
+No.1921
+Connections: 
+Text: Spawn Eggs are re-textured eggs with dots, they are colored similar to their respective mob, and can be used to spawn most mobs in the game.
+
+No.1922
+Connections: 
+Text: These are obtainable only in Creative.
+
+No.1923
+Connections: 
+Text: Right-clicking the same type of spawn egg on a mob that can have babies will spawn a baby mob on that place (wolves and all passive mobs can have babies like this, except squid and bats).
+
+No.1924
+Connections: 
+Text: Some mobs such as Ender Dragons and giants do not have spawn eggs, so cheats must be used to summon them.
+
+No.1925
+Connections: 
+Text: Are used allow to move players, mobs or items over land or water with relative speed and ease.
+
+No.1926
+Connections: 
+Text: Minecarts are used to travel much faster across rails, they are also used to store and pick up items or work in and activate redstone circuitry.
+
+No.1927
+Connections: 
+Text: When placed down they are an entity.
+
+No.1928
+Connections: 
+Text: Boats are used to travel much faster across water (for example over oceans, rivers and lakes).
+
+No.1929
+Connections: 
+Text: When placed down they are an entity.
+
+No.1930
+Connections: 
+Text: Saddles and carrots on sticks are used, and needed, to travel on pigs and/or horses.
+
+No.1931
+Connections: 
+Text: Leads are used to right-click on most passive mobs, so they will follow you.
+
+No.1932
+Connections: 
+Text: Mobs will get pulled closer when they're too far away from the player, but, if they can't get to the player, and the distance is too far, the lead will break and drop on the place where the mob is.
+
+No.1933
+Connections: 
+Text: Wheat, carrots and varieties of seeds are used to make most passive mobs follow you when it's held.
+
+No.1934
+Connections: 
+Text: In Multiplayer when other players are too close by, they will not, or stop, following the player.
+
+No.1935
+Connections: 
+Text: Are brewed in brewing stands, and are drinkable or throwable items that confer specific effects.
+
+No.1936
+Connections: 
+Text: Producing them requires resources from the Nether, and sometimes from the overworld.
+
+No.1937
+Connections: 
+Text: The main ingredients are water bottles and nether wart, which are used to create every potion in the game, with the exception of a potion of weakness because it can be brewed from items other than nether wart, such as redstone.
+
+No.1938
+Connections: 
+Text: Gunpowder is used to make a splash potion, which you can throw at other mobs and players, instead of consuming it yourself.
+
+No.1939
+Connections: 
+Text: Glowstone dust is used to make a tier two potion.
+
+No.1940
+Connections: 
+Text: Redstone is used to extend the duration of a potion.
+
+No.1941
+Connections: 
+Text: Glowstone dust and redstone cannot be legitimately combined together on one potion.
+
+No.1942
+Connections: 
+Text: Crafting is the method by which many blocks, tools, and materials are made in Minecraft.
+
+No.1943
+Connections: 
+Text: In order to craft something, players must move items from their inventory to a crafting grid.
+
+No.1944
+Connections: 
+Text: A 2×2 crafting grid can be accessed from the player's inventory.
+
+No.1945
+Connections: 
+Text: A 3×3 grid can be accessed by using (default: right-clicking) a Crafting Table.
+
+No.1946
+Connections: 
+Text: For some items, the arrangement of their ingredients on the crafting grid is unimportant.
+
+No.1947
+Connections: 
+Text: These are commonly known as shapeless recipes.
+
+No.1948
+Connections: 
+Text: For example, a Fermented spider eye can have its ingredients placed anywhere within the grid.
+
+No.1949
+Connections: 
+Text: [note 1].
+
+No.1950
+Connections: 
+Text: On the other hand, many of the more important or useful game objects must have their ingredients placed in the correct relative positions on the crafting grid.
+
+No.1951
+Connections: 
+Text: Even then, provided the resources are arranged correctly, the item can be made in any way that fits in the grid.
+
+No.1952
+Connections: 
+Text: For example, a 3×1 recipe, such as bread, can be made using the top, middle, or bottom row of the 3×3 grid, but it cannot be made using the 2×2 grid because it needs to be three items wide.
+
+No.1953
+Connections: 
+Text: Ingredients in ‘shaped’ recipes can be ‘slid’ up, down, left, or right.
+
+No.1954
+Connections: 
+Text: They can also be flipped horizontally.
+
+No.1955
+Connections: 
+Text: For instance, players can make a bow with the strings placed on the right instead of on the left.
+
+No.1956
+Connections: 
+Text: There are recipes which may not be moved or mirrored in this way.
+
+No.1957
+Connections: 
+Text: These are commonly known as fixed recipes.
+
+No.1958
+Connections: 
+Text: [note 2].
+
+No.1959
+Connections: 
+Text: Players always have access to the 2×2 crafting grid from their Inventory screen, and this can be used whenever the screen is brought up.
+
+No.1960
+Connections: 
+Text: Crafting recipes that are at most 2×2 can always be made there.
+
+No.1961
+Connections: 
+Text: These include wood planks, sticks, crafting tables, and most shapeless recipes.
+
+No.1962
+Connections: 
+Text: To craft items using a 3×3 grid, create a crafting table, place it in any convenient spot, and right-click it.
+
+No.1963
+Connections: 
+Text: This brings up a pop-up screen with a 3×3 grid on which the player can assemble any crafting recipe in the game.
+
+No.1964
+Connections: 
+Text: Smelting is a method of producing refined goods in Minecraft, also known as melting, baking, cooking, burning, drying, or producing.
+
+No.1965
+Connections: 
+Text: It has the same idea as crafting; one must put in acceptable ingredients, and a corresponding output will be given.
+
+No.1966
+Connections: 
+Text: However, smelting utilizes furnace blocks, which have a unique interface: one "input" field for the object that will be heated, one field for the fuel, and one "output" field for the final smelted product.
+
+No.1967
+Connections: 
+Text: For example, two saplings (fuel) could be used to smelt one wood (input) into one charcoal (output).
+
+No.1968
+Connections: fuel:8|furnace:14 furnace:14|fuel:8 
+Text: To smelt something, an input material and a fuel must be loaded into the furnace.
+
+No.1969
+Connections: 
+Text: It will begin to smelt on its own and will continue to work if the menu is closed and the player leaves.
+
+No.1970
+Connections: fuel:12|furnace:2 furnace:2|fuel:12 
+Text: When the furnace begins to smelt, it will consume one piece of fuel and the fire gauge will fill up.
+
+No.1971
+Connections: 
+Text: As the input smelts, the fire gauge will slowly recede until it is gone, and then the next piece of fuel will be used.
+
+No.1972
+Connections: fuel:5|furnace:8 furnace:8|fuel:5 
+Text: If there is no more fuel left, the furnace will be interrupted and the item will be uncooked.
+
+No.1973
+Connections: 
+Text: If fuel is burning and runs out of input, the fire gauge will continue to burn down, wasting the burn time left.
+
+No.1974
+Connections: 
+Text: Once the fire gauge is out, no more fuel will be used.
+
+No.1975
+Connections: 
+Text: As things smelt, an arrow icon represents the cooking process.
+
+No.1976
+Connections: 
+Text: Each smelting operation takes 10 seconds and the progress will be shown on the arrow.
+
+No.1977
+Connections: fuel:6|furnace:2 furnace:2|fuel:6 
+Text: If the furnace runs out of fuel before the arrow is filled up, then the input will not be smelted and the process will rewind at 2x speed.
+
+No.1978
+Connections: 
+Text: When the arrow fills up completely, one input item will be put into the output field as an output item.
+
+No.1979
+Connections: 
+Text: If the player leaves a furnace while it is smelting and travels so far that the chunks unload, the smelting process will halt until the player returns.
+
+No.1980
+Connections: 
+Text: Smelting will also pause if one leaves the dimension the furnace is located in.
+
+No.1981
+Connections: furnace:9|bed:22 bed:22|furnace:9 
+Text: If the player sleeps in a bed while a furnace is smelting, the furnace's progress will be the same as if the bed had not been used and no additional time had passed.
+
+No.1982
+Connections: 
+Text: This is because when a player sleeps in a bed, no time actually passes.
+
+No.1983
+Connections: 
+Text: Instead, the game sets the time of day to morning.
+
+No.1984
+Connections: 
+Text: Sleeping while smelting/cooking items will not speed up the process.
+
+No.1985
+Connections: 
+Text: Note that after a piece of fuel has started burning, you cannot stop it from burning, though you can remove any unburnt pieces of fuel.
+
+No.1986
+Connections: 
+Text: If there are fewer items that the fuel can burn, some of the fuel will be wasted.
+
+No.1987
+Connections: 
+Text: Accordingly, you will usually want to burn things in multiples of 8 (lumps of coal or charcoal), or occasionally 3 (2 wooden planks).
+
+No.1988
+Connections: 
+Text: For individual smelts, you can use saplings, 2 of which smelt 1 item.
+
+No.1989
+Connections: 
+Text: When starting a new world, burning your wooden tools (once you have stone) is a quick way to make your first lump or two of charcoal.
+
+No.1990
+Connections: 
+Text: They each still smelt a complete item even if almost used up.
+
+No.1991
+Connections: coal:36|bucket:6 bucket:6|coal:36 coal:36|block:34 block:34|coal:36 bucket:6|block:34 block:34|bucket:6 
+Text: For larger jobs, a single lava bucket or a block of coal can burn more items than will fit in the furnace—both input and output are limited to a stack of 64, but a block of coal burns 80, and lava can burn 100.
+
+No.1992
+Connections: 
+Text: To use lava efficiently, keep the remaining load of 36 or 16 items handy, and put it in during the middle third of the burn (after it has done that many, but before it exhausts the original stack).
+
+No.1993
+Connections: 
+Text: Remember to both refill the un-smelted items, and remove the smelted product.
+
+No.1994
+Connections: 
+Text: A despawn timer on a note block may help.
+
+No.1995
+Connections: 
+Text: Alternately, you can use hoppers on top and bottom of the furnace.
+
+No.1996
+Connections: 
+Text: This will automatically feed and empty the furnace, but loses the experience gained by manually unloading the furnace.
+
+No.1997
+Connections: 
+Text: For larger smelting jobs, a third hopper can feed in fuel (empty buckets will go in the output hopper).
+
+No.1998
+Connections: 
+Text: It takes 10 minutes and 40 seconds to smelt a stack of 64 items in a single furnace, although this time can be reduced by splitting the load between multiple furnaces.
+
+No.1999
+Connections: 
+Text: This can be reduced even further by using redstone mechanics.
+
+No.2000
+Connections: fuel:20|wood:17 wood:17|fuel:20 fuel:20|planks:4 planks:4|fuel:20 wood:17|planks:4 planks:4|wood:17 
+Text: Burning wood with wood planks to make charcoal is over 5 times more efficient than using the wood itself as fuel.
+
+No.2001
+Connections: 
+Text: It is just over 1¼ times more efficient than using planks.
+
+No.2002
+Connections: 
+Text: When making charcoal, it's most efficient to convert 1⁄7 of the logs into planks (for fuel).
+
+No.2003
+Connections: 
+Text: On Pocket Edition, you can use bows as fuel, its durability is same as a wooden tool.
+
+No.2004
+Connections: 
+Text: If you want to use wooden tools as fuel, the most efficient way is to use it until its durability reaches 0, then use it as a fuel afterwards.
+
+No.2005
+Connections: 
+Text: If you put an enchanted item in a furnace, it will lose its enchantments, even if it isn't burned.
+
+No.2006
+Connections: 
+Text: However, as of Pocket Edition 0.
+
+No.2007
+Connections: 
+Text: 12.
+
+No.2008
+Connections: 
+Text: 3 alpha, enchanted wooden items cannot be used as fuel.
+
+No.2009
+Connections: 
+Text: Currently, in Pocket Edition, when the furnace runs out of fuel, it will not rewind backwards at x2 speed, and will simply disappear instantly.
+
+No.2010
+Connections: 
+Text: Ores are rare stone blocks used to obtain resources.
+
+No.2011
+Connections: 
+Text: Ores are primarily collected for crafting purposes, such as for tools and armor.
+
+No.2012
+Connections: 
+Text: Redstone is obtained from redstone ore, which can be used to create redstone circuits.
+
+No.2013
+Connections: 
+Text: Ore can also be combined to create a block of the material's type.
+
+No.2014
+Connections: 
+Text: The following is the distribution of ores according to the altitude (layers are number of blocks above the lowest layer of bedrock).
+
+No.2015
+Connections: 
+Text: The highest layers that gold, redstone, diamond, and lapis lazuli can be found on are two layers lower.
+
+No.2016
+Connections: 
+Text: [1] The graph on the right shows the ore distribution.
+
+No.2017
+Connections: pickaxe:11|ore:1 ore:1|pickaxe:11 pickaxe:11|iron:4 iron:4|pickaxe:11 ore:1|iron:4 iron:4|ore:1 
+Text: All ore blocks except iron and gold require a Silk Touch pickaxe to drop themselves.
+
+No.2018
+Connections: 
+Text: Coal, diamond, emerald, and nether quartz ores drop 1 unit their corresponding raw materials.
+
+No.2019
+Connections: 
+Text: Redstone ore drops 4-5 redstone dust, and lapis lazuli ore drops 4-8 lapis lazuli.
+
+No.2020
+Connections: 
+Text: All raw materials except Nether quartz can be crafted from their mineral blocks.
+
+No.2021
+Connections: 
+Text: If you have no idea where or how to begin your Minecraft journey, the Beginner's Guide is full of good ways to start! Here you will learn how to survive your first night in two different formats: in an overview with goals or in a step-by-step instruction.
+
+No.2022
+Connections: 
+Text: You can choose which one you want, but both will accomplish the same goal.
+
+No.2023
+Connections: 
+Text: If you have not done so already, take a look at the Controls page to learn how to move your character around.
+
+No.2024
+Connections: 
+Text: Once you have grasped movement, you will be ready to forge on!.
+
+No.2025
+Connections: 
+Text: Minecraft is a sandbox game, so there's no proper way to play the game.
+
+No.2026
+Connections: 
+Text: In "Survival", food and shelter are essential, however everything else is optional.
+
+No.2027
+Connections: 
+Text: Even the bare essentials of food and shelter have countless solutions.
+
+No.2028
+Connections: 
+Text: This guide will show you some of the more common and straightforward solutions to surviving the first day.
+
+No.2029
+Connections: 
+Text: As your first day begins, you will need to collect wood.
+
+No.2030
+Connections: 
+Text: Collect at least four trees' worth of wood blocks (left click and hold while looking at the tree to break it).
+
+No.2031
+Connections: 
+Text: First use this to make a crafting table (place the crafting table to use it).
+
+No.2032
+Connections: 
+Text: Right click your crafting table to access it.
+
+No.2033
+Connections: 
+Text: The first tool you craft should be a wooden pickaxe.
+
+No.2034
+Connections: 
+Text: Dig down until you find stone.
+
+No.2035
+Connections: 
+Text: Mine it with a pickaxe.
+
+No.2036
+Connections: 
+Text: Mine at least 20 blocks of cobblestone.
+
+No.2037
+Connections: stone:7|pickaxe:8 pickaxe:8|stone:7 
+Text: Create a stone axe, stone sword, and stone pickaxe.
+
+No.2038
+Connections: furnace:3|iron:12 iron:12|furnace:3 
+Text: Now craft a furnace to cook meat for food and smelt any iron you find in your travels.
+
+No.2039
+Connections: coal:12|wood:5 wood:5|coal:12 
+Text: Save around five blocks of wood in case you haven't found any coal yet, and smelt them to create charcoal.
+
+No.2040
+Connections: 
+Text: Shelter is something you might consider during your first night because you won't want to be killed.
+
+No.2041
+Connections: 
+Text: You can make a small hole to hide in or a small two by three house made out of wood and dirt.
+
+No.2042
+Connections: 
+Text: Place torches in your preferred shelter because in light level 7 or below zombies might spawn.
+
+No.2043
+Connections: 
+Text: Don't forget to build a bed to sleep until dawn (That is if you can build a bed otherwise you're gonna have to wait til dawn).
+
+No.2044
+Connections: 
+Text: If you do see a cave it could be a temporary home but remember to place torches—creepers don't really make good neighbors.
+
+No.2045
+Connections: 
+Text: For night time, the primary danger will be monsters/mobs.
+
+No.2046
+Connections: 
+Text: It is a good idea to stay in your lit shelter.
+
+No.2047
+Connections: 
+Text: On the other hand, if you're seeking adventure you could always arm yourself with a stone sword and go beat some mobs, if you feel like it.
+
+No.2048
+Connections: 
+Text: You will be able to get some materials for further crafting, not to mention a ton of experience, which can be used later on for enchanting tools.
+
+No.2049
+Connections: 
+Text: One way to avoid being attacked by monsters is to put torches, glowstone, or a jack-o-lantern by your house.
+
+No.2050
+Connections: 
+Text: You will learn how to make all these things later on, but just a heads up.
+
+No.2051
+Connections: torches:1|stick:15 stick:15|torches:1 
+Text: The torches are easy though, you just need to craft charcoal/coal on top of a stick.
+
+No.2052
+Connections: 
+Text: If you are repeatedly getting killed, one desperate response is to go into "peaceful difficulty" (see "changing the rules", below).
+
+No.2053
+Connections: 
+Text: However, consider this: This being your first day, you aren't actually losing much until the deaths (at least not after what stuff you've gathered is lost), so you can just tough it out until dawn and start again.
+
+No.2054
+Connections: 
+Text: Death[edit | edit source].
+
+No.2055
+Connections: 
+Text: Normally in survival mode Minecraft, when you die, all items you were carrying or wearing in your inventory are scattered around your point of death while you respawn elsewhere (unless /gamerule keepInventory is on).
+
+No.2056
+Connections: 
+Text: Until you sleep in a bed, you will spawn somewhere within 10 blocks of the world spawn point.
+
+No.2057
+Connections: 
+Text: This includes the first time when you started the game, so you can respawn anywhere within 20 blocks of where you first entered the world.
+
+No.2058
+Connections: 
+Text: The traditional advice is to build your first shelter as close as possible to the spawn point, so if you die, you can easily find it again, or even spawn in a now-protected area.
+
+No.2059
+Connections: 
+Text: Even with the variation in where you'll come back, it's good to have a lit shelter nearby the spawn point.
+
+No.2060
+Connections: 
+Text: However, a problem with sheltering away from spawn is that if your death site is too far from where you respawn, your items may despawn while you're trying reach them.
+
+No.2061
+Connections: 
+Text: (See below for more details.
+
+No.2062
+Connections: 
+Text: ).
+
+No.2063
+Connections: 
+Text: Like any dropped items in Minecraft, the items you drop when you die will despawn (disappear) after 5 minutes, unless you're more than 180 blocks or so away, that is outside of chunk update radius The problem is that if you died at night, you will find yourself stranded without your weapons and armor, so you are quite likely to get killed again, or at least find your stuff guarded by monsters.
+
+No.2064
+Connections: 
+Text: Meanwhile, some of the monsters can actually pick up your stuff and use it against you! And if you spawned near your death scene, that 5-minute timer can easily go by before you can actually get back to and keep your stuff.
+
+No.2065
+Connections: 
+Text: However, the above only applies until you have made and used a bed in a secure shelter.
+
+No.2066
+Connections: 
+Text: Once you've done that, you have a new option: If you get killed at night, you will respawn next to your bed, so you can just go back to sleep, and wake up the next morning — the items don't “expire” while you're asleep.
+
+No.2067
+Connections: 
+Text: It still may be worth keeping your bed out of chunk update range from where you're endangering yourself, but at least you won't be stranded outside at night.
+
+No.2068
+Connections: 
+Text: Food and hunger[edit | edit source].
+
+No.2069
+Connections: 
+Text: Once you have tools and shelter, your next priority will be food.
+
+No.2070
+Connections: 
+Text: Hunger will take a while to hit, so it shouldn't be a problem on your first day, but you'll try to pick up some food for when it does.
+
+No.2071
+Connections: 
+Text: However, after you've been moving around for a while, your food bar will begin rippling and start to decrease.
+
+No.2072
+Connections: 
+Text: If your food bar drops below 90%, you will not regenerate health, and if it gets to 30%, you can't sprint.
+
+No.2073
+Connections: 
+Text: If the hunger bar goes down to empty, you will begin losing health.
+
+No.2074
+Connections: 
+Text: Unless you're in Hard mode (and a beginning player shouldn't be), you can't actually starve to death, but you will go down to 1 health point (Half Heart.
+
+No.2075
+Connections: 
+Text: svg) in Normal mode or half your health (Heart.
+
+No.2076
+Connections: 
+Text: svgHeart.
+
+No.2077
+Connections: 
+Text: svgHeart.
+
+No.2078
+Connections: 
+Text: svgHeart.
+
+No.2079
+Connections: 
+Text: svgHeart.
+
+No.2080
+Connections: 
+Text: svg) in Easy mode, and that leaves you quite vulnerable.
+
+No.2081
+Connections: 
+Text: You don't lose hunger in Peaceful mode, so it's the least of your concern there.
+
+No.2082
+Connections: 
+Text: Walking, mining blocks, and even placing blocks all cost some hunger, but all of those are minimal compared to the items below.
+
+No.2083
+Connections: 
+Text: These are the things that cause the most hunger, in order of cost.
+
+No.2084
+Connections: 
+Text: Healing damage of any sort.
+
+No.2085
+Connections: 
+Text: Avoid taking falls of more than 3 blocks, drowning yourself, or otherwise taking damage, as healing damage costs a lot of hunger.
+
+No.2086
+Connections: 
+Text: Especially avoid….
+
+No.2087
+Connections: 
+Text: Fighting: Both attacking mobs and receiving damage cost hunger, even before you start trying to heal damage.
+
+No.2088
+Connections: 
+Text: (10 blows either way matches healing Half Heart.
+
+No.2089
+Connections: 
+Text: svg, one health point.
+
+No.2090
+Connections: 
+Text: ) You will need to slaughter a few animals, but pick your fights carefully.
+
+No.2091
+Connections: 
+Text: Sprinting.
+
+No.2092
+Connections: 
+Text: If you double-tap the forward movement key (W by default), or press your sprint key (Left Ctrl by default), you will sprint.
+
+No.2093
+Connections: 
+Text: This moves somewhat faster, but it also uses a lot of food, especially if you go any distance.
+
+No.2094
+Connections: 
+Text: (30 meters matches healing Half Heart.
+
+No.2095
+Connections: 
+Text: svg.
+
+No.2096
+Connections: 
+Text: ) however, if you happen to have a sufficentt amount of food with you you can always do it your way.
+
+No.2097
+Connections: 
+Text: Jumping.
+
+No.2098
+Connections: 
+Text: Obviously, you'll need to jump some just to get around, but don't bounce around randomly or unnecessarily.
+
+No.2099
+Connections: 
+Text: (15 jumps matches healing Half Heart.
+
+No.2100
+Connections: 
+Text: svg) Sprinting jumps are especially costly, 4 times as much as a regular jump, although they are the fastest mode of transportation early in the game.
+
+No.2101
+Connections: 
+Text: Note that if you're (staying) at full health, and not moving, fighting, mining or placing blocks, then you will use no food.
+
+No.2102
+Connections: 
+Text: Thus if your character has a secure place to stay, you can just stay put to conserve food while waiting out the night, a storm, or crop/animal growth.
+
+No.2103
+Connections: 
+Text: Consider making a basic crop farm immediately after you have settled in a place.
+
+No.2104
+Connections: 
+Text: Wheat is best, for.
+
+No.2105
+Connections: 
+Text: (1) It is essential for crafting a lot of food items,.
+
+No.2106
+Connections: 
+Text: (2) it is really easy to obtain early in the game.
+
+No.2107
+Connections: 
+Text: When you begin the game, you will be standing in a landscape somewhere.
+
+No.2108
+Connections: 
+Text: Take a moment to look around.
+
+No.2109
+Connections: 
+Text: This is the general area (within 20 blocks) where you will reappear if you get killed.
+
+No.2110
+Connections: 
+Text: It's a good idea to mark it immediately, by punching out an X of dirt and/or sand, then using the dirt or sand to build a pillar in the middle of that.
+
+No.2111
+Connections: 
+Text: If you're standing on rock, look around for some dirt or sand to use, remember where you are, and go get it to build your pillar.
+
+No.2112
+Connections: 
+Text: You can also use the Debug screen to save the coordinates of the spawnpoint for later use (see the page to learn how).
+
+No.2113
+Connections: 
+Text: A general note: Any time you're “looking around”, is a good time to turn your render distance to max, you can put it back afterward if it slows your game.
+
+No.2114
+Connections: 
+Text: If you are standing on and surrounded by sand, you are likely in a desert biome.
+
+No.2115
+Connections: cane:20|sugar:19 sugar:19|cane:20 
+Text: After marking your spawn point, head for high ground and look around for green grass and/or trees (cacti and sugar cane don't count.
+
+No.2116
+Connections: 
+Text: ) Head that way to gather your wood.
+
+No.2117
+Connections: 
+Text: If you can't see anything but desert, pick a random direction and head that way, occasionally going to high ground for a look around.
+
+No.2118
+Connections: 
+Text: If you are on an island, completely surrounded by water as far as you can see, you are in an ocean biome.
+
+No.2119
+Connections: 
+Text: This is perhaps the toughest start possible, and as such is highly discouraged for play by beginners -- given an ocean start, it's entirely reasonable to discard the world and make a new one.
+
+No.2120
+Connections: 
+Text: Assuming you don't do that: If your island has no trees, you will need to swim to another island or mainland to find wood.
+
+No.2121
+Connections: 
+Text: (Remember that if you die before sleeping in a bed, you will respawn on the island.
+
+No.2122
+Connections: 
+Text: ) When you swim you may see squid.
+
+No.2123
+Connections: 
+Text: Squid are mobs but they are not hostile.
+
+No.2124
+Connections: 
+Text: Like cows, sheep, and chickens, they can't attack you (or even defend themselves), but killing them gives only ink sacs (and some XP).
+
+No.2125
+Connections: 
+Text: If, looking around, you see dull,purplish land, your game just got a lot easier: you are on a mushroom biome, where monsters will not spawn (if it's connected to the mainland, congratulations, you found one of the rarest landscapes in the game).
+
+No.2126
+Connections: 
+Text: Monsters can still come in from other biomes, but if you head toward the middle, you can spend the night in safety outdoors.
+
+No.2127
+Connections: 
+Text: Also, with a bowl, you can get free food from the mooshrooms which live there.
+
+No.2128
+Connections: stone:25|wood:23 wood:23|stone:25 stone:25|mushroom:4 mushroom:4|stone:25 wood:23|mushroom:4 mushroom:4|wood:23 
+Text: However, one thing the mushroom biome does not have, is wood—so before you go there, head for a grassy area to get some wood and stone first.
+
+No.2129
+Connections: 
+Text: If, looking around, you see houses and/or farms, you are near an NPC village.
+
+No.2130
+Connections: stone:41|chest:48 chest:48|stone:41 
+Text: This is a good place to live in general, if you can make a bed: the farms will solve your food worries for now, you can trade with the villagers, and if there's a blacksmith (look for a house with a stone slab roof), it will contain a chest with bonus items.
+
+No.2131
+Connections: 
+Text: You can also scavenge a fair bit of wood even without trashing the place (try replacing logs with planks).
+
+No.2132
+Connections: 
+Text: However, at first you'll want to avoid hanging out near there after dark, because zombies can spawn and kill the villagers.
+
+No.2133
+Connections: 
+Text: You can avoid this fate by making a bed (see below), and consistently sleeping through the night until you can properly fortify the town against monsters):.
+
+No.2134
+Connections: wool:20|block:16 block:16|wool:20 
+Text: If there are no sheep around, look for “lamp posts” in the village — the black block on top is wool (break it with your hand).
+
+No.2135
+Connections: 
+Text: If you can't get enough wool for a bed, your best bets are (first choice) either get far away (150 blocks or so) from the village before nightfall, or (second best) to spend your first night(s) atop a really tall pillar, 40 blocks high or more (64 is even better).
+
+No.2136
+Connections: 
+Text: By the second night you will hopefully have managed to find a bit of wool.
+
+No.2137
+Connections: 
+Text: If you find yourself surrounded by many very large trees, and leaf blocks on the ground, then you have found yourself in a jungle biome.
+
+No.2138
+Connections: 
+Text: The jungle biome is a good place to start because there are large trees everywhere, however, these can cause you to easily become lost.
+
+No.2139
+Connections: 
+Text: Also, the cramped quarters can make it difficult to build there.
+
+No.2140
+Connections: 
+Text: Jungle biomes are the only place to find ocelots (you'll need fish to tame them) and cocoa beans.
+
+No.2141
+Connections: 
+Text: The sheer amount of leaves here can cause trouble for particularly old computers, lagging or even crashing the game; if you have an old computer and you haven't already switched to fast graphics, a jungle is good reason to do so.
+
+No.2142
+Connections: 
+Text: If you find yourself surrounded by thick, short trees and dark grass, you are in a roofed forest biome.
+
+No.2143
+Connections: 
+Text: These biomes are especially dangerous because the canopy of leaves can sometimes become so thick that monsters will spawn, even during the day.
+
+No.2144
+Connections: 
+Text: However, this biome does provide ample supplies of wood and naturally spawning giant mushrooms which can be used for food and shelter for the night.
+
+No.2145
+Connections: 
+Text: There are many other biomes in Minecraft, and to see a more in depth look at all of them, check the Biomes page.
+
+No.2146
+Connections: 
+Text: Punching wood[edit | edit source].
+
+No.2147
+Connections: coal:17|stone:22 stone:22|coal:17 
+Text: Look around for a few things in particular, in order of priority: trees, visible stone (and especially coal ore, which looks like stone with black spots on it), animals, and tall grass.
+
+No.2148
+Connections: 
+Text: As you move around, break any tall grass in your way, and collect any seeds that drop.
+
+No.2149
+Connections: 
+Text: For that matter, collect any loose item you see, as most of them will eventually be handy.
+
+No.2150
+Connections: wood:18|block:21 block:21|wood:18 
+Text: Your first priority is to find a small tree, bash through the leaves if needed, and "punch" the wood until each block drops as an item.
+
+No.2151
+Connections: 
+Text: Don't rapidly click on the block, just hold left-click (or whatever you've set "attack" to) until the block breaks.
+
+No.2152
+Connections: 
+Text: Don't bother with huge trees at this point, but also don't be upset if you can't reach the top blocks of wood — you can always come back and collect them later.
+
+No.2153
+Connections: 
+Text: This first tree should give you at least 4 blocks of wood ("logs").
+
+No.2154
+Connections: chests:21|wood:3 wood:3|chests:21 
+Text: You'll punch more wood in a moment! Wood is essential for tools and useful items such as torches, doors, fences, and chests.
+
+No.2155
+Connections: 
+Text: Your first crafting[edit | edit source].
+
+No.2156
+Connections: 
+Text: As the game's name suggests, crafting is core to Minecraft.
+
+No.2157
+Connections: 
+Text: While there are a small number of items that can be crafted directly from the inventory, a crafting table is required to craft tools and most other items in the game.
+
+No.2158
+Connections: 
+Text: The crafting table will be your main asset throughout the game.
+
+No.2159
+Connections: 
+Text: To make your crafting table, first open the inventory and pick up the logs you collected.
+
+No.2160
+Connections: 
+Text: Place a log into the crafting area to obtain 4 wooden planks.
+
+No.2161
+Connections: wood:11|planks:1 planks:1|wood:11 
+Text: The planks will be different colors depending on what sort of wood you have.
+
+No.2162
+Connections: 
+Text: Different types of wood don't stack together, but all work the same.
+
+No.2163
+Connections: 
+Text: With a couple of exceptions you can mix and match different planks when crafting.
+
+No.2164
+Connections: wood:8|sticks:2 sticks:2|wood:8 
+Text: In particular, sticks don't "remember" what sort of wood they came from.
+
+No.2165
+Connections: 
+Text: As you convert your first logs to planks you may want to consider saving some logs for later.
+
+No.2166
+Connections: 
+Text: Usually, 3-4 logs' worth of planks will be enough to get started.
+
+No.2167
+Connections: 
+Text: In particular, you want to save logs to make charcoal later on.
+
+No.2168
+Connections: 
+Text: Then, take four of your newly crafted planks and arrange them like so to make a crafting table:.
+
+No.2169
+Connections: stone:4|pickaxe:15 pickaxe:15|stone:4 
+Text: n order to collect stone and coal, the next staple resources, you will need a pickaxe.
+
+No.2170
+Connections: cobblestone:19|pickaxe:2 pickaxe:2|cobblestone:19 
+Text: Your first pickaxe will be made of wood, which isn't very durable or fast, but until you collect some cobblestone it's all you have.
+
+No.2171
+Connections: 
+Text: To make a pickaxe, you will need to craft some sticks.
+
+No.2172
+Connections: planks:4|sticks:7 sticks:7|planks:4 
+Text: Now you'll use some planks and the sticks you just made to create the final product.
+
+No.2173
+Connections: 
+Text: You may have noticed that in order to craft a pickaxe, you more or less draw it with its components in your crafting square.
+
+No.2174
+Connections: 
+Text: Other items are crafted in a similar fashion.
+
+No.2175
+Connections: 
+Text: At this point, you can do one of two things: You can either make more wooden tools, or you can gather stone and use that to make better ones.
+
+No.2176
+Connections: 
+Text: Once you've crafted a pickaxe, you can successfully acquire cobblestone to make better tools.
+
+No.2177
+Connections: 
+Text: Start by finding stone in the world; it should be fairly easy, as it's extremely common.
+
+No.2178
+Connections: cobblestone:25|stone:17 stone:17|cobblestone:25 
+Text: If you don't see any on the surface, dig down in a staircase fashion and mine the stone with your pickaxe; it will drop as cobblestone items.
+
+No.2179
+Connections: cobblestone:22|pickaxe:6 pickaxe:6|cobblestone:22 cobblestone:22|furnace:17 furnace:17|cobblestone:22 cobblestone:22|stone:10 stone:10|cobblestone:22 pickaxe:6|furnace:17 furnace:17|pickaxe:6 pickaxe:6|stone:10 stone:10|pickaxe:6 furnace:17|stone:10 stone:10|furnace:17 
+Text: Gather enough cobblestone to upgrade your pickaxe and make a stone shovel, axe, and sword, and a furnace (the exact number of cobblestone required to make these is 17.
+
+No.2180
+Connections: stone:6|hoe:7 hoe:7|stone:6 
+Text: ) You can also craft a stone hoe (or even a wooden one), but it won't be useful until you start farms (explained on day two).
+
+No.2181
+Connections: 
+Text: Swords can be used to more effectively slay mobs (animals and monsters).
+
+No.2182
+Connections: stone:1|pickaxe:21 pickaxe:21|stone:1 
+Text: A stone pickaxe is more durable and more efficient than a wooden pickaxe, and it can mine ores that a wooden pickaxe can't.
+
+No.2183
+Connections: 
+Text: Shovels are mainly used to break dirt, grass, sand, clay, and gravel blocks quicker than by hand.
+
+No.2184
+Connections: 
+Text: They also allow for the collection of snowballs when used on snow layers in snow biomes.
+
+No.2185
+Connections: 
+Text: Axes make gathering wood (and most other wooden blocks) much faster.
+
+No.2186
+Connections: stone:9|axe:10 axe:10|stone:9 
+Text: Now, you should gather more wood, using your new stone axe.
+
+No.2187
+Connections: 
+Text: Although some trees may look different than others, all wood functions the same.
+
+No.2188
+Connections: 
+Text: However, different kinds of wood don't stack together.
+
+No.2189
+Connections: 
+Text: While you cut down trees, try to to gather the saplings that fall.
+
+No.2190
+Connections: 
+Text: If you are cutting down oak trees, apples will also drop (see the trees page for more info.
+
+No.2191
+Connections: 
+Text: ).
+
+No.2192
+Connections: 
+Text: If the sun is still in the sky, explore around the immediate area (making sure you don't get lost), to try and find some coal.
+
+No.2193
+Connections: 
+Text: Coal has all the same properties as charcoal (and can also be crafted into coal blocks).
+
+No.2194
+Connections: ore:6|iron:19 iron:19|ore:6 
+Text: If you happen across a coal-like ore with tan specks in place of the black, you have found some iron.
+
+No.2195
+Connections: 
+Text: This material will be extremely useful for most of your Minecraft career, and if it's within easy reach, go ahead and gather it (you will need to mine it with a stone pickaxe).
+
+No.2196
+Connections: 
+Text: However, If it's in a difficult-to-reach place, just note its location and save it for later.
+
+No.2197
+Connections: 
+Text: While you are cutting down trees, you may happen to come across wandering animals, such as chickens, pigs, cows, sheep, and rabbits.
+
+No.2198
+Connections: 
+Text: These animals are going to be your primary food source in the future.
+
+No.2199
+Connections: 
+Text: If you see a few, make sure there are more nearby before killing them.
+
+No.2200
+Connections: 
+Text: If you kill all of the animals in your area, starting animal farms in the future will be much more difficult.
+
+No.2201
+Connections: 
+Text: Be sure to save at least two of each animal type for farming on day two.
+
+No.2202
+Connections: 
+Text: All of the above-mentioned animals drop meat: raw chicken, raw porkchop, raw beef, raw mutton, and raw rabbit, respectively.
+
+No.2203
+Connections: 
+Text: These foods are among the best food sources in Minecraft, but only after they're cooked (see the next section).
+
+No.2204
+Connections: 
+Text: If you must eat immediately, avoid eating raw chicken, as it might give you food poisoning.
+
+No.2205
+Connections: 
+Text: The other meats can be eaten raw safely, but won't feed you nearly as well as cooked meat.
+
+No.2206
+Connections: 
+Text: If there are no nearby animals, be sure to be careful about hunger (as above, in order try to avoid getting hurt, fighting, jumping, sprinting, moving around too much.
+
+No.2207
+Connections: 
+Text: ) You will have to wait to get food until you have a wheat farm, which doesn't come until day two.
+
+No.2208
+Connections: 
+Text: Heat before light[edit | edit source].
+
+No.2209
+Connections: 
+Text: Next, you need to cook your meat before you get hungry, and also make torches to light up your shelter at night.
+
+No.2210
+Connections: 
+Text: To do this, you will need to craft a furnace.
+
+No.2211
+Connections: 
+Text: Place it somewhere (generally next to your crafting table) so you can work with it.
+
+No.2212
+Connections: pickaxe:12|furnace:22 furnace:22|pickaxe:12 
+Text: As it is made with cobblestone, you will have to use your pickaxe to collect it if you wish to relocate your furnace.
+
+No.2213
+Connections: 
+Text: If you haven't found coal, you will need to find an alternate heat source.
+
+No.2214
+Connections: 
+Text: Burning your wooden pickaxe (which is useless once you have stone) will smelt exactly one item.
+
+No.2215
+Connections: 
+Text: From this, you can make a piece of charcoal, which will then allow you to smelt eight more items.
+
+No.2216
+Connections: 
+Text: To make charcoal, you have to smelt blocks (logs) of wood.
+
+No.2217
+Connections: 
+Text: In furnaces, the top slot is the item to be smelted, and the bottom slot is the fuel.
+
+No.2218
+Connections: 
+Text: Place a wooden log in the top slot and your wood pick in the bottom to smelt the charcoal.
+
+No.2219
+Connections: 
+Text: Then you can put the charcoal (or other fuel) in the fuel slot to smelt more items.
+
+No.2220
+Connections: 
+Text: It is generally advised to smelt more charcoal if you do not have a supply of coal.
+
+No.2221
+Connections: 
+Text: If you don't have spare wooden tools or charcoal, you can use planks, two planks for three items as below.
+
+No.2222
+Connections: 
+Text: < Tutorials.
+
+No.2223
+Connections: 
+Text: Contents  [hide].
+
+No.2224
+Connections: 
+Text: 1 Overview.
+
+No.2225
+Connections: 
+Text: 1.
+
+No.2226
+Connections: 
+Text: 1 First day.
+
+No.2227
+Connections: 
+Text: 1.
+
+No.2228
+Connections: 
+Text: 2 Shelter.
+
+No.2229
+Connections: 
+Text: 1.
+
+No.2230
+Connections: 
+Text: 3 Night time.
+
+No.2231
+Connections: 
+Text: 1.
+
+No.2232
+Connections: 
+Text: 4 Death.
+
+No.2233
+Connections: 
+Text: 1.
+
+No.2234
+Connections: 
+Text: 5 Food and hunger.
+
+No.2235
+Connections: 
+Text: 2 Play-by-play.
+
+No.2236
+Connections: 
+Text: 2.
+
+No.2237
+Connections: 
+Text: 1 Starting the game.
+
+No.2238
+Connections: 
+Text: 2.
+
+No.2239
+Connections: 
+Text: 2 Tough and easy starts.
+
+No.2240
+Connections: 
+Text: 2.
+
+No.2241
+Connections: 
+Text: 3 Punching wood.
+
+No.2242
+Connections: 
+Text: 2.
+
+No.2243
+Connections: 
+Text: 4 Your first crafting.
+
+No.2244
+Connections: 
+Text: 2.
+
+No.2245
+Connections: 
+Text: 5 Creating tools.
+
+No.2246
+Connections: 
+Text: 2.
+
+No.2247
+Connections: 
+Text: 6 Stone age.
+
+No.2248
+Connections: 
+Text: 2.
+
+No.2249
+Connections: 
+Text: 7 More resources.
+
+No.2250
+Connections: 
+Text: 2.
+
+No.2251
+Connections: 
+Text: 8 Animals.
+
+No.2252
+Connections: 
+Text: 2.
+
+No.2253
+Connections: 
+Text: 9 Heat before light.
+
+No.2254
+Connections: 
+Text: 2.
+
+No.2255
+Connections: 
+Text: 10 Bed and shelter.
+
+No.2256
+Connections: 
+Text: 2.
+
+No.2257
+Connections: 
+Text: 11 At Dusk.
+
+No.2258
+Connections: 
+Text: 2.
+
+No.2259
+Connections: 
+Text: 12 Dawn.
+
+No.2260
+Connections: 
+Text: 3 After the first Day.
+
+No.2261
+Connections: 
+Text: 3.
+
+No.2262
+Connections: 
+Text: 1 Home safety.
+
+No.2263
+Connections: 
+Text: 3.
+
+No.2264
+Connections: 
+Text: 2 Mining.
+
+No.2265
+Connections: 
+Text: 3.
+
+No.2266
+Connections: 
+Text: 2.
+
+No.2267
+Connections: 
+Text: 1 Finding a cave.
+
+No.2268
+Connections: 
+Text: 3.
+
+No.2269
+Connections: 
+Text: 2.
+
+No.2270
+Connections: 
+Text: 2 Cave exploration.
+
+No.2271
+Connections: 
+Text: 3.
+
+No.2272
+Connections: 
+Text: 2.
+
+No.2273
+Connections: 
+Text: 3 Ores and minerals.
+
+No.2274
+Connections: 
+Text: 3.
+
+No.2275
+Connections: 
+Text: 2.
+
+No.2276
+Connections: 
+Text: 3.
+
+No.2277
+Connections: 
+Text: 1 More advanced ores.
+
+No.2278
+Connections: 
+Text: 3.
+
+No.2279
+Connections: 
+Text: 3 Things you'll need over time.
+
+No.2280
+Connections: 
+Text: 4 Tutorial videos.
+
+No.2281
+Connections: 
+Text: This article may need cleanup to comply with the style guide.
+
+No.2282
+Connections: 
+Text: Please help improve this if you can.
+
+No.2283
+Connections: 
+Text: The talk page may contain suggestions.
+
+No.2284
+Connections: 
+Text: If you wish to help revise this and the other survival tutorials, please visit the BGR Project!.
+
+No.2285
+Connections: 
+Text: If you have no idea where or how to begin your Minecraft journey, the Beginner's Guide is full of good ways to start! Here you will learn how to survive your first night in two different formats: in an overview with goals or in a step-by-step instruction.
+
+No.2286
+Connections: 
+Text: You can choose which one you want, but both will accomplish the same goal.
+
+No.2287
+Connections: 
+Text: If you have not done so already, take a look at the Controls page to learn how to move your character around.
+
+No.2288
+Connections: 
+Text: Once you have grasped movement, you will be ready to forge on!.
+
+No.2289
+Connections: 
+Text: Overview[edit | edit source].
+
+No.2290
+Connections: 
+Text: Minecraft is a sandbox game, so there's no proper way to play the game.
+
+No.2291
+Connections: 
+Text: In "Survival", food and shelter are essential, however everything else is optional.
+
+No.2292
+Connections: 
+Text: Even the bare essentials of food and shelter have countless solutions.
+
+No.2293
+Connections: 
+Text: This guide will show you some of the more common and straightforward solutions to surviving the first day.
+
+No.2294
+Connections: 
+Text: First day[edit | edit source].
+
+No.2295
+Connections: 
+Text: As your first day begins, you will need to collect wood.
+
+No.2296
+Connections: 
+Text: Collect at least four trees' worth of wood blocks (left click and hold while looking at the tree to break it).
+
+No.2297
+Connections: 
+Text: First use this to make a crafting table (place the crafting table to use it).
+
+No.2298
+Connections: 
+Text: Right click your crafting table to access it.
+
+No.2299
+Connections: 
+Text: The first tool you craft should be a wooden pickaxe.
+
+No.2300
+Connections: 
+Text: Dig down until you find stone.
+
+No.2301
+Connections: 
+Text: Mine it with a pickaxe.
+
+No.2302
+Connections: 
+Text: Mine at least 20 blocks of cobblestone.
+
+No.2303
+Connections: stone:7|pickaxe:8 pickaxe:8|stone:7 
+Text: Create a stone axe, stone sword, and stone pickaxe.
+
+No.2304
+Connections: furnace:3|iron:12 iron:12|furnace:3 
+Text: Now craft a furnace to cook meat for food and smelt any iron you find in your travels.
+
+No.2305
+Connections: coal:12|wood:5 wood:5|coal:12 
+Text: Save around five blocks of wood in case you haven't found any coal yet, and smelt them to create charcoal.
+
+No.2306
+Connections: 
+Text: Shelter[edit | edit source].
+
+No.2307
+Connections: 
+Text: Main Article:Shelter.
+
+No.2308
+Connections: 
+Text: Shelter is something you might consider during your first night because you won't want to be killed.
+
+No.2309
+Connections: 
+Text: You can make a small hole to hide in or a small two by three house made out of wood and dirt.
+
+No.2310
+Connections: 
+Text: Place torches in your preferred shelter because in light level 7 or below zombies might spawn.
+
+No.2311
+Connections: 
+Text: Don't forget to build a bed to sleep until dawn (That is if you can build a bed otherwise you're gonna have to wait til dawn).
+
+No.2312
+Connections: 
+Text: If you do see a cave it could be a temporary home but remember to place torches—creepers don't really make good neighbors.
+
+No.2313
+Connections: 
+Text: Night time[edit | edit source].
+
+No.2314
+Connections: 
+Text: For night time, the primary danger will be monsters/mobs.
+
+No.2315
+Connections: 
+Text: It is a good idea to stay in your lit shelter.
+
+No.2316
+Connections: 
+Text: On the other hand, if you're seeking adventure you could always arm yourself with a stone sword and go beat some mobs, if you feel like it.
+
+No.2317
+Connections: 
+Text: You will be able to get some materials for further crafting, not to mention a ton of experience, which can be used later on for enchanting tools.
+
+No.2318
+Connections: 
+Text: One way to avoid being attacked by monsters is to put torches, glowstone, or a jack-o-lantern by your house.
+
+No.2319
+Connections: 
+Text: You will learn how to make all these things later on, but just a heads up.
+
+No.2320
+Connections: torches:1|stick:15 stick:15|torches:1 
+Text: The torches are easy though, you just need to craft charcoal/coal on top of a stick.
+
+No.2321
+Connections: 
+Text: If you are repeatedly getting killed, one desperate response is to go into "peaceful difficulty" (see "changing the rules", below).
+
+No.2322
+Connections: 
+Text: However, consider this: This being your first day, you aren't actually losing much until the deaths (at least not after what stuff you've gathered is lost), so you can just tough it out until dawn and start again.
+
+No.2323
+Connections: 
+Text: Death[edit | edit source].
+
+No.2324
+Connections: 
+Text: Normally in survival mode Minecraft, when you die, all items you were carrying or wearing in your inventory are scattered around your point of death while you respawn elsewhere (unless /gamerule keepInventory is on).
+
+No.2325
+Connections: 
+Text: Until you sleep in a bed, you will spawn somewhere within 10 blocks of the world spawn point.
+
+No.2326
+Connections: 
+Text: This includes the first time when you started the game, so you can respawn anywhere within 20 blocks of where you first entered the world.
+
+No.2327
+Connections: 
+Text: The traditional advice is to build your first shelter as close as possible to the spawn point, so if you die, you can easily find it again, or even spawn in a now-protected area.
+
+No.2328
+Connections: 
+Text: Even with the variation in where you'll come back, it's good to have a lit shelter nearby the spawn point.
+
+No.2329
+Connections: 
+Text: However, a problem with sheltering away from spawn is that if your death site is too far from where you respawn, your items may despawn while you're trying reach them.
+
+No.2330
+Connections: 
+Text: (See below for more details.
+
+No.2331
+Connections: 
+Text: ).
+
+No.2332
+Connections: 
+Text: Like any dropped items in Minecraft, the items you drop when you die will despawn (disappear) after 5 minutes, unless you're more than 180 blocks or so away, that is outside of chunk update radius The problem is that if you died at night, you will find yourself stranded without your weapons and armor, so you are quite likely to get killed again, or at least find your stuff guarded by monsters.
+
+No.2333
+Connections: 
+Text: Meanwhile, some of the monsters can actually pick up your stuff and use it against you! And if you spawned near your death scene, that 5-minute timer can easily go by before you can actually get back to and keep your stuff.
+
+No.2334
+Connections: 
+Text: However, the above only applies until you have made and used a bed in a secure shelter.
+
+No.2335
+Connections: 
+Text: Once you've done that, you have a new option: If you get killed at night, you will respawn next to your bed, so you can just go back to sleep, and wake up the next morning — the items don't “expire” while you're asleep.
+
+No.2336
+Connections: 
+Text: It still may be worth keeping your bed out of chunk update range from where you're endangering yourself, but at least you won't be stranded outside at night.
+
+No.2337
+Connections: 
+Text: Food and hunger[edit | edit source].
+
+No.2338
+Connections: 
+Text: Once you have tools and shelter, your next priority will be food.
+
+No.2339
+Connections: 
+Text: Hunger will take a while to hit, so it shouldn't be a problem on your first day, but you'll try to pick up some food for when it does.
+
+No.2340
+Connections: 
+Text: However, after you've been moving around for a while, your food bar will begin rippling and start to decrease.
+
+No.2341
+Connections: 
+Text: If your food bar drops below 90%, you will not regenerate health, and if it gets to 30%, you can't sprint.
+
+No.2342
+Connections: 
+Text: If the hunger bar goes down to empty, you will begin losing health.
+
+No.2343
+Connections: 
+Text: Unless you're in Hard mode (and a beginning player shouldn't be), you can't actually starve to death, but you will go down to 1 health point (Half Heart.
+
+No.2344
+Connections: 
+Text: svg) in Normal mode or half your health (Heart.
+
+No.2345
+Connections: 
+Text: svgHeart.
+
+No.2346
+Connections: 
+Text: svgHeart.
+
+No.2347
+Connections: 
+Text: svgHeart.
+
+No.2348
+Connections: 
+Text: svgHeart.
+
+No.2349
+Connections: 
+Text: svg) in Easy mode, and that leaves you quite vulnerable.
+
+No.2350
+Connections: 
+Text: You don't lose hunger in Peaceful mode, so it's the least of your concern there.
+
+No.2351
+Connections: 
+Text: Walking, mining blocks, and even placing blocks all cost some hunger, but all of those are minimal compared to the items below.
+
+No.2352
+Connections: 
+Text: These are the things that cause the most hunger, in order of cost.
+
+No.2353
+Connections: 
+Text: Healing damage of any sort.
+
+No.2354
+Connections: 
+Text: Avoid taking falls of more than 3 blocks, drowning yourself, or otherwise taking damage, as healing damage costs a lot of hunger.
+
+No.2355
+Connections: 
+Text: Especially avoid….
+
+No.2356
+Connections: 
+Text: Fighting: Both attacking mobs and receiving damage cost hunger, even before you start trying to heal damage.
+
+No.2357
+Connections: 
+Text: (10 blows either way matches healing Half Heart.
+
+No.2358
+Connections: 
+Text: svg, one health point.
+
+No.2359
+Connections: 
+Text: ) You will need to slaughter a few animals, but pick your fights carefully.
+
+No.2360
+Connections: 
+Text: Sprinting.
+
+No.2361
+Connections: 
+Text: If you double-tap the forward movement key (W by default), or press your sprint key (Left Ctrl by default), you will sprint.
+
+No.2362
+Connections: 
+Text: This moves somewhat faster, but it also uses a lot of food, especially if you go any distance.
+
+No.2363
+Connections: 
+Text: (30 meters matches healing Half Heart.
+
+No.2364
+Connections: 
+Text: svg.
+
+No.2365
+Connections: 
+Text: ) however, if you happen to have a sufficentt amount of food with you you can always do it your way.
+
+No.2366
+Connections: 
+Text: Jumping.
+
+No.2367
+Connections: 
+Text: Obviously, you'll need to jump some just to get around, but don't bounce around randomly or unnecessarily.
+
+No.2368
+Connections: 
+Text: (15 jumps matches healing Half Heart.
+
+No.2369
+Connections: 
+Text: svg) Sprinting jumps are especially costly, 4 times as much as a regular jump, although they are the fastest mode of transportation early in the game.
+
+No.2370
+Connections: 
+Text: Note that if you're (staying) at full health, and not moving, fighting, mining or placing blocks, then you will use no food.
+
+No.2371
+Connections: 
+Text: Thus if your character has a secure place to stay, you can just stay put to conserve food while waiting out the night, a storm, or crop/animal growth.
+
+No.2372
+Connections: 
+Text: Consider making a basic crop farm immediately after you have settled in a place.
+
+No.2373
+Connections: 
+Text: Wheat is best, for.
+
+No.2374
+Connections: 
+Text: (1) It is essential for crafting a lot of food items,.
+
+No.2375
+Connections: 
+Text: (2) it is really easy to obtain early in the game.
+
+No.2376
+Connections: 
+Text: Play-by-play[edit | edit source].
+
+No.2377
+Connections: 
+Text: 1.
+
+No.2378
+Connections: 
+Text: 8 Biomes MixedForest.
+
+No.2379
+Connections: 
+Text: png.
+
+No.2380
+Connections: 
+Text: Starting the game[edit | edit source].
+
+No.2381
+Connections: 
+Text: When you begin the game, you will be standing in a landscape somewhere.
+
+No.2382
+Connections: 
+Text: Take a moment to look around.
+
+No.2383
+Connections: 
+Text: This is the general area (within 20 blocks) where you will reappear if you get killed.
+
+No.2384
+Connections: 
+Text: It's a good idea to mark it immediately, by punching out an X of dirt and/or sand, then using the dirt or sand to build a pillar in the middle of that.
+
+No.2385
+Connections: 
+Text: If you're standing on rock, look around for some dirt or sand to use, remember where you are, and go get it to build your pillar.
+
+No.2386
+Connections: 
+Text: You can also use the Debug screen to save the coordinates of the spawnpoint for later use (see the page to learn how).
+
+No.2387
+Connections: 
+Text: Tough and easy starts[edit | edit source].
+
+No.2388
+Connections: 
+Text: A general note: Any time you're “looking around”, is a good time to turn your render distance to max, you can put it back afterward if it slows your game.
+
+No.2389
+Connections: 
+Text: If you are standing on and surrounded by sand, you are likely in a desert biome.
+
+No.2390
+Connections: cane:20|sugar:19 sugar:19|cane:20 
+Text: After marking your spawn point, head for high ground and look around for green grass and/or trees (cacti and sugar cane don't count.
+
+No.2391
+Connections: 
+Text: ) Head that way to gather your wood.
+
+No.2392
+Connections: 
+Text: If you can't see anything but desert, pick a random direction and head that way, occasionally going to high ground for a look around.
+
+No.2393
+Connections: 
+Text: If you are on an island, completely surrounded by water as far as you can see, you are in an ocean biome.
+
+No.2394
+Connections: 
+Text: This is perhaps the toughest start possible, and as such is highly discouraged for play by beginners -- given an ocean start, it's entirely reasonable to discard the world and make a new one.
+
+No.2395
+Connections: 
+Text: Assuming you don't do that: If your island has no trees, you will need to swim to another island or mainland to find wood.
+
+No.2396
+Connections: 
+Text: (Remember that if you die before sleeping in a bed, you will respawn on the island.
+
+No.2397
+Connections: 
+Text: ) When you swim you may see squid.
+
+No.2398
+Connections: 
+Text: Squid are mobs but they are not hostile.
+
+No.2399
+Connections: 
+Text: Like cows, sheep, and chickens, they can't attack you (or even defend themselves), but killing them gives only ink sacs (and some XP).
+
+No.2400
+Connections: 
+Text: If, looking around, you see dull,purplish land, your game just got a lot easier: you are on a mushroom biome, where monsters will not spawn (if it's connected to the mainland, congratulations, you found one of the rarest landscapes in the game).
+
+No.2401
+Connections: 
+Text: Monsters can still come in from other biomes, but if you head toward the middle, you can spend the night in safety outdoors.
+
+No.2402
+Connections: 
+Text: Also, with a bowl, you can get free food from the mooshrooms which live there.
+
+No.2403
+Connections: stone:25|wood:23 wood:23|stone:25 stone:25|mushroom:4 mushroom:4|stone:25 wood:23|mushroom:4 mushroom:4|wood:23 
+Text: However, one thing the mushroom biome does not have, is wood—so before you go there, head for a grassy area to get some wood and stone first.
+
+No.2404
+Connections: 
+Text: If, looking around, you see houses and/or farms, you are near an NPC village.
+
+No.2405
+Connections: stone:41|chest:48 chest:48|stone:41 
+Text: This is a good place to live in general, if you can make a bed: the farms will solve your food worries for now, you can trade with the villagers, and if there's a blacksmith (look for a house with a stone slab roof), it will contain a chest with bonus items.
+
+No.2406
+Connections: 
+Text: You can also scavenge a fair bit of wood even without trashing the place (try replacing logs with planks).
+
+No.2407
+Connections: 
+Text: However, at first you'll want to avoid hanging out near there after dark, because zombies can spawn and kill the villagers.
+
+No.2408
+Connections: 
+Text: You can avoid this fate by making a bed (see below), and consistently sleeping through the night until you can properly fortify the town against monsters):.
+
+No.2409
+Connections: wool:20|block:16 block:16|wool:20 
+Text: If there are no sheep around, look for “lamp posts” in the village — the black block on top is wool (break it with your hand).
+
+No.2410
+Connections: 
+Text: If you can't get enough wool for a bed, your best bets are (first choice) either get far away (150 blocks or so) from the village before nightfall, or (second best) to spend your first night(s) atop a really tall pillar, 40 blocks high or more (64 is even better).
+
+No.2411
+Connections: 
+Text: By the second night you will hopefully have managed to find a bit of wool.
+
+No.2412
+Connections: 
+Text: If you find yourself surrounded by many very large trees, and leaf blocks on the ground, then you have found yourself in a jungle biome.
+
+No.2413
+Connections: 
+Text: The jungle biome is a good place to start because there are large trees everywhere, however, these can cause you to easily become lost.
+
+No.2414
+Connections: 
+Text: Also, the cramped quarters can make it difficult to build there.
+
+No.2415
+Connections: 
+Text: Jungle biomes are the only place to find ocelots (you'll need fish to tame them) and cocoa beans.
+
+No.2416
+Connections: 
+Text: The sheer amount of leaves here can cause trouble for particularly old computers, lagging or even crashing the game; if you have an old computer and you haven't already switched to fast graphics, a jungle is good reason to do so.
+
+No.2417
+Connections: 
+Text: If you find yourself surrounded by thick, short trees and dark grass, you are in a roofed forest biome.
+
+No.2418
+Connections: 
+Text: These biomes are especially dangerous because the canopy of leaves can sometimes become so thick that monsters will spawn, even during the day.
+
+No.2419
+Connections: 
+Text: However, this biome does provide ample supplies of wood and naturally spawning giant mushrooms which can be used for food and shelter for the night.
+
+No.2420
+Connections: 
+Text: There are many other biomes in Minecraft, and to see a more in depth look at all of them, check the Biomes page.
+
+No.2421
+Connections: 
+Text: Punching wood[edit | edit source].
+
+No.2422
+Connections: coal:17|stone:22 stone:22|coal:17 
+Text: Look around for a few things in particular, in order of priority: trees, visible stone (and especially coal ore, which looks like stone with black spots on it), animals, and tall grass.
+
+No.2423
+Connections: 
+Text: As you move around, break any tall grass in your way, and collect any seeds that drop.
+
+No.2424
+Connections: 
+Text: For that matter, collect any loose item you see, as most of them will eventually be handy.
+
+No.2425
+Connections: wood:18|block:21 block:21|wood:18 
+Text: Your first priority is to find a small tree, bash through the leaves if needed, and "punch" the wood until each block drops as an item.
+
+No.2426
+Connections: 
+Text: Don't rapidly click on the block, just hold left-click (or whatever you've set "attack" to) until the block breaks.
+
+No.2427
+Connections: 
+Text: Don't bother with huge trees at this point, but also don't be upset if you can't reach the top blocks of wood — you can always come back and collect them later.
+
+No.2428
+Connections: 
+Text: This first tree should give you at least 4 blocks of wood ("logs").
+
+No.2429
+Connections: chests:21|wood:3 wood:3|chests:21 
+Text: You'll punch more wood in a moment! Wood is essential for tools and useful items such as torches, doors, fences, and chests.
+
+No.2430
+Connections: 
+Text: Your first crafting[edit | edit source].
+
+No.2431
+Connections: 
+Text: As the game's name suggests, crafting is core to Minecraft.
+
+No.2432
+Connections: 
+Text: While there are a small number of items that can be crafted directly from the inventory, a crafting table is required to craft tools and most other items in the game.
+
+No.2433
+Connections: 
+Text: The crafting table will be your main asset throughout the game.
+
+No.2434
+Connections: 
+Text: To make your crafting table, first open the inventory and pick up the logs you collected.
+
+No.2435
+Connections: 
+Text: Place a log into the crafting area to obtain 4 wooden planks.
+
+No.2436
+Connections: wood:11|planks:1 planks:1|wood:11 
+Text: The planks will be different colors depending on what sort of wood you have.
+
+No.2437
+Connections: 
+Text: Different types of wood don't stack together, but all work the same.
+
+No.2438
+Connections: 
+Text: With a couple of exceptions you can mix and match different planks when crafting.
+
+No.2439
+Connections: wood:8|sticks:2 sticks:2|wood:8 
+Text: In particular, sticks don't "remember" what sort of wood they came from.
+
+No.2440
+Connections: 
+Text: As you convert your first logs to planks you may want to consider saving some logs for later.
+
+No.2441
+Connections: 
+Text: Usually, 3-4 logs' worth of planks will be enough to get started.
+
+No.2442
+Connections: 
+Text: In particular, you want to save logs to make charcoal later on.
+
+No.2443
+Connections: 
+Text: Then, take four of your newly crafted planks and arrange them like so to make a crafting table:.
+
+No.2444
+Connections: 
+Text: You should see this:.
+
+No.2445
+Connections: 
+Text: Return to the world view and walk to a spot you think appropriate.
+
+No.2446
+Connections: 
+Text: Select your newly crafted crafting table and place it.
+
+No.2447
+Connections: 
+Text: Now you can get crafting some more complex blocks and items!.
+
+No.2448
+Connections: 
+Text: Tip: Anything that you can craft in your inventory crafting space, you can also craft in the crafting table.
+
+No.2449
+Connections: 
+Text: Creating tools[edit | edit source].
+
+No.2450
+Connections: stone:4|pickaxe:15 pickaxe:15|stone:4 
+Text: In order to collect stone and coal, the next staple resources, you will need a pickaxe.
+
+No.2451
+Connections: cobblestone:19|pickaxe:2 pickaxe:2|cobblestone:19 
+Text: Your first pickaxe will be made of wood, which isn't very durable or fast, but until you collect some cobblestone it's all you have.
+
+No.2452
+Connections: 
+Text: To make a pickaxe, you will need to craft some sticks.
+
+No.2453
+Connections: 
+Text: Do so as shown below to craft 4 sticks:.
+
+No.2454
+Connections: 
+Text: 4.
+
+No.2455
+Connections: planks:4|sticks:7 sticks:7|planks:4 
+Text: Now you'll use some planks and the sticks you just made to create the final product.
+
+No.2456
+Connections: 
+Text: Arrange them like so:.
+
+No.2457
+Connections: 
+Text: You may have noticed that in order to craft a pickaxe, you more or less draw it with its components in your crafting square.
+
+No.2458
+Connections: 
+Text: Other items are crafted in a similar fashion.
+
+No.2459
+Connections: 
+Text: At this point, you can do one of two things: You can either make more wooden tools, or you can gather stone and use that to make better ones.
+
+No.2460
+Connections: 
+Text: Stone age[edit | edit source].
+
+No.2461
+Connections: 
+Text: SurfaceStone.
+
+No.2462
+Connections: 
+Text: png.
+
+No.2463
+Connections: 
+Text: Once you've crafted a pickaxe, you can successfully acquire cobblestone to make better tools.
+
+No.2464
+Connections: 
+Text: Start by finding stone in the world; it should be fairly easy, as it's extremely common.
+
+No.2465
+Connections: cobblestone:25|stone:17 stone:17|cobblestone:25 
+Text: If you don't see any on the surface, dig down in a staircase fashion and mine the stone with your pickaxe; it will drop as cobblestone items.
+
+No.2466
+Connections: cobblestone:22|pickaxe:6 pickaxe:6|cobblestone:22 cobblestone:22|furnace:17 furnace:17|cobblestone:22 cobblestone:22|stone:10 stone:10|cobblestone:22 pickaxe:6|furnace:17 furnace:17|pickaxe:6 pickaxe:6|stone:10 stone:10|pickaxe:6 furnace:17|stone:10 stone:10|furnace:17 
+Text: Gather enough cobblestone to upgrade your pickaxe and make a stone shovel, axe, and sword, and a furnace (the exact number of cobblestone required to make these is 17.
+
+No.2467
+Connections: stone:6|hoe:7 hoe:7|stone:6 
+Text: ) You can also craft a stone hoe (or even a wooden one), but it won't be useful until you start farms (explained on day two).
+
+No.2468
+Connections: 
+Text: Swords can be used to more effectively slay mobs (animals and monsters).
+
+No.2469
+Connections: stone:1|pickaxe:21 pickaxe:21|stone:1 
+Text: A stone pickaxe is more durable and more efficient than a wooden pickaxe, and it can mine ores that a wooden pickaxe can't.
+
+No.2470
+Connections: 
+Text: Shovels are mainly used to break dirt, grass, sand, clay, and gravel blocks quicker than by hand.
+
+No.2471
+Connections: 
+Text: They also allow for the collection of snowballs when used on snow layers in snow biomes.
+
+No.2472
+Connections: 
+Text: Axes make gathering wood (and most other wooden blocks) much faster.
+
+No.2473
+Connections: 
+Text: More resources[edit | edit source].
+
+No.2474
+Connections: 
+Text: SurfaceCoal.
+
+No.2475
+Connections: 
+Text: png.
+
+No.2476
+Connections: stone:9|axe:10 axe:10|stone:9 
+Text: Now, you should gather more wood, using your new stone axe.
+
+No.2477
+Connections: 
+Text: Although some trees may look different than others, all wood functions the same.
+
+No.2478
+Connections: 
+Text: However, different kinds of wood don't stack together.
+
+No.2479
+Connections: 
+Text: While you cut down trees, try to to gather the saplings that fall.
+
+No.2480
+Connections: 
+Text: If you are cutting down oak trees, apples will also drop (see the trees page for more info.
+
+No.2481
+Connections: 
+Text: ).
+
+No.2482
+Connections: 
+Text: If the sun is still in the sky, explore around the immediate area (making sure you don't get lost), to try and find some coal.
+
+No.2483
+Connections: 
+Text: Coal has all the same properties as charcoal (and can also be crafted into coal blocks).
+
+No.2484
+Connections: ore:6|iron:19 iron:19|ore:6 
+Text: If you happen across a coal-like ore with tan specks in place of the black, you have found some iron.
+
+No.2485
+Connections: 
+Text: This material will be extremely useful for most of your Minecraft career, and if it's within easy reach, go ahead and gather it (you will need to mine it with a stone pickaxe).
+
+No.2486
+Connections: 
+Text: However, If it's in a difficult-to-reach place, just note its location and save it for later.
+
+No.2487
+Connections: 
+Text: Animals[edit | edit source].
+
+No.2488
+Connections: 
+Text: While you are cutting down trees, you may happen to come across wandering animals, such as chickens, pigs, cows, sheep, and rabbits.
+
+No.2489
+Connections: 
+Text: These animals are going to be your primary food source in the future.
+
+No.2490
+Connections: 
+Text: If you see a few, make sure there are more nearby before killing them.
+
+No.2491
+Connections: 
+Text: If you kill all of the animals in your area, starting animal farms in the future will be much more difficult.
+
+No.2492
+Connections: 
+Text: Be sure to save at least two of each animal type for farming on day two.
+
+No.2493
+Connections: 
+Text: All of the above-mentioned animals drop meat: raw chicken, raw porkchop, raw beef, raw mutton, and raw rabbit, respectively.
+
+No.2494
+Connections: 
+Text: These foods are among the best food sources in Minecraft, but only after they're cooked (see the next section).
+
+No.2495
+Connections: 
+Text: If you must eat immediately, avoid eating raw chicken, as it might give you food poisoning.
+
+No.2496
+Connections: 
+Text: The other meats can be eaten raw safely, but won't feed you nearly as well as cooked meat.
+
+No.2497
+Connections: 
+Text: If there are no nearby animals, be sure to be careful about hunger (as above, in order try to avoid getting hurt, fighting, jumping, sprinting, moving around too much.
+
+No.2498
+Connections: 
+Text: ) You will have to wait to get food until you have a wheat farm, which doesn't come until day two.
+
+No.2499
+Connections: 
+Text: Heat before light[edit | edit source].
+
+No.2500
+Connections: 
+Text: Next, you need to cook your meat before you get hungry, and also make torches to light up your shelter at night.
+
+No.2501
+Connections: 
+Text: To do this, you will need to craft a furnace:.
+
+No.2502
+Connections: 
+Text: Place it somewhere (generally next to your crafting table) so you can work with it.
+
+No.2503
+Connections: pickaxe:12|furnace:22 furnace:22|pickaxe:12 
+Text: As it is made with cobblestone, you will have to use your pickaxe to collect it if you wish to relocate your furnace.
+
+No.2504
+Connections: 
+Text: If you haven't found coal, you will need to find an alternate heat source.
+
+No.2505
+Connections: 
+Text: Burning your wooden pickaxe (which is useless once you have stone) will smelt exactly one item.
+
+No.2506
+Connections: 
+Text: From this, you can make a piece of charcoal, which will then allow you to smelt eight more items.
+
+No.2507
+Connections: 
+Text: To make charcoal, you have to smelt blocks (logs) of wood.
+
+No.2508
+Connections: 
+Text: In furnaces, the top slot is the item to be smelted, and the bottom slot is the fuel.
+
+No.2509
+Connections: 
+Text: Place a wooden log in the top slot and your wood pick in the bottom to smelt the charcoal.
+
+No.2510
+Connections: 
+Text: Then you can put the charcoal (or other fuel) in the fuel slot to smelt more items.
+
+No.2511
+Connections: 
+Text: It is generally advised to smelt more charcoal if you do not have a supply of coal.
+
+No.2512
+Connections: 
+Text: If you don't have spare wooden tools or charcoal, you can use planks, two planks for three items as below.
+
+No.2513
+Connections: 
+Text: Once you have your first pieces of charcoal, use that as fuel any time you have 8 or more items to smelt.
+
+No.2514
+Connections: 
+Text: Each piece will smelt 8 items (just like mined coal), and you have other uses for planks.
+
+No.2515
+Connections: 
+Text: If you have both coal and charcoal, use up the charcoal first and save the coal.
+
+No.2516
+Connections: 
+Text: Now you can cook your food and make torches.
+
+No.2517
+Connections: fuel:25|wood:17 wood:17|fuel:25 
+Text: Ration out a piece of coal/charcoal for the food, and cook the food just like smelting the wood above: food in the upper input box, fuel (coal) in the lower one.
+
+No.2518
+Connections: 
+Text: This being your first day, it's OK to “waste” some of a coal/charcoal lump if you have fewer than 8 pieces of meat.
+
+No.2519
+Connections: coal:10|sticks:15 sticks:15|coal:10 coal:10|torches:19 torches:19|coal:10 sticks:15|torches:19 torches:19|sticks:15 
+Text: Use the rest (up to 8 for now) of the coal or charcoal with some sticks to craft into torches.
+
+No.2520
+Connections: coal:11|sticks:5 sticks:5|coal:11 coal:11|torches:16 torches:16|coal:11 sticks:5|torches:16 torches:16|sticks:5 
+Text: One log crafts into 8 sticks to match 8 pieces of coal or charcoal, producing 32 torches (half a stack.
+
+No.2521
+Connections: torches:11|hand:24 hand:24|torches:11 torches:11|coal:20 coal:20|torches:11 hand:24|coal:20 coal:20|hand:24 
+Text: ) Throughout the game, you will be crafting more and more torches as you need them, so always keep some coal or charcoal at hand.
+
+No.2522
+Connections: 
+Text: If you have made a bed, nightfall is easy: As soon as sunset begins, place your bed, sleep in it, and continue with crafting and smelting the next day.
+
+No.2523
+Connections: 
+Text: However, if you have no bed, and you didn't have time to build something secure, you will probably have to spend your first night in an emergency shelter.
+
+No.2524
+Connections: 
+Text: You want to be able to make torches and cook food overnight, but if the shelter is underground you really want to have some torches handy before you close yourself into the darkness.
+
+No.2525
+Connections: 
+Text: If you have wood to spare, you can craft a wooden door:.
+
+No.2526
+Connections: 
+Text: You can place this door across the entrance to your shelter to protect you from mobs, while still giving you access.
+
+No.2527
+Connections: 
+Text: It is generally recommended to place it from the outside (go outside your shelter and place it looking inside.
+
+No.2528
+Connections: 
+Text: ).
+
+No.2529
+Connections: 
+Text: While you were gathering cobblestone, you most likely dug a small hole in the side of a surface cave, or staircased down through the dirt.
+
+No.2530
+Connections: 
+Text: In either case, you can use that hole as a shelter.
+
+No.2531
+Connections: 
+Text: Dig a few more blocks into the hill or cave wall, then you can dig a small room, about 5 by 5.
+
+No.2532
+Connections: cobblestone:27|furnace:5 furnace:5|cobblestone:27 
+Text: Relocate your crafting table and furnace in here, and make sure to light it up! If you have no door, simply cover your entrance with dirt or cobblestone when night falls, periodically breaking it to check for day (watch out for mobs though!).
+
+No.2533
+Connections: 
+Text: A similar shelter can also be created in a small cave, just remember to close off both ends of the cave or monsters can come at you from below.
+
+No.2534
+Connections: 
+Text: If you don't want to live in a hole, there are a couple of other options: you can spend the night atop a pillar by building a tall 1×1 column under you by pillar jumping up.
+
+No.2535
+Connections: 
+Text: Pillar 20 or 30 blocks upwards to avoid getting shot off by a skeleton or having the bottom blown up by a creeper.
+
+No.2536
+Connections: 
+Text: You can also use crouching (holding ⇧ Shift) to add a ledge to your pillar.
+
+No.2537
+Connections: 
+Text: IF you do not have a ledge, watch out for climbing spiders.
+
+No.2538
+Connections: stone:2|hand:5 hand:5|stone:2 
+Text: Keep your stone sword in hand and whack them as soon as they come into reach, before they get up to you - attacking them will knock them back down.
+
+No.2539
+Connections: 
+Text: If there is a large tree nearby, you can spend the night on top of the tree - just watch for skeletons and spiders as with the pillar.
+
+No.2540
+Connections: 
+Text: If you have a boat, you can spend the night in the middle of the sea as monsters do not spawn in water.
+
+No.2541
+Connections: wood:16|block:7 block:7|wood:16 
+Text: You can also simply build a three block high hut from any material, for example cobblestone, wood or dirt.
+
+No.2542
+Connections: 
+Text: Add a roof to protect against endermen and spiders.
+
+No.2543
+Connections: 
+Text: Note that you can use the crafting table and/or furnace as part of the walls.
+
+No.2544
+Connections: 
+Text: Remember the golden rule we talked about before? Well, when you're desperate, you can break it a little.
+
+No.2545
+Connections: 
+Text: Dig three blocks down, and put a block above you that is not sand/gravel to make the fastest shelter in Minecraft possible.
+
+No.2546
+Connections: 
+Text: You may want to use a real-world clock to time the night (7 minutes, with up to 3 more to allow for dawn/dusk).
+
+No.2547
+Connections: 
+Text: You can dig out a couple of the blocks around you and place your crafting table and furnace.
+
+No.2548
+Connections: 
+Text: A torch will make your little hideyhole feel a little less like a tomb.
+
+No.2549
+Connections: 
+Text: Finally, if you're really desperate, you can press the Escape key to pause the game, go into the Options menu, and change the difficulty to "peaceful".
+
+No.2550
+Connections: 
+Text: Though many players consider it cheating, it's a sure-fire way to make sure mobs don't spawn.
+
+No.2551
+Connections: 
+Text: If you have cheats allowed, you can simply type in /gamemode 1 which will change your game mode to Creative, and mobs won't be able to attack you.
+
+No.2552
+Connections: 
+Text: By the end of the first day the shelter will likely be primitive and small.
+
+No.2553
+Connections: 
+Text: In the days afterwards, you will be able to build a better home, in any of various forms.
+
+No.2554
+Connections: 
+Text: Some natural extensions include a back door, windows, a surrounding fence, and even traps for monsters.
+
+No.2555
+Connections: 
+Text: Remember that any time you pick up your bed, your spawn point will revert to the default, until you not only place, but sleep in a bed again.
+
+No.2556
+Connections: 
+Text: You have no problems if you have just spent your night in a cave.
+
+No.2557
+Connections: 
+Text: If you haven't, the easiest way to do so is to roam the Overworld a little and look out for exposed cave entrances.
+
+No.2558
+Connections: coal:18|ore:19 ore:19|coal:18 
+Text: Extreme Hills biomes will have caves inside mountains, but these are generally not what you want, because only coal ore will appear above sea level (Y=64).
+
+No.2559
+Connections: 
+Text: For iron and better ores, you'll want to find a cave opening into the ground (these are quite common) and head downwards.
+
+No.2560
+Connections: 
+Text: Sometimes such caves end immediately, but often they continue into big cave systems.
+
+No.2561
+Connections: 
+Text: If they seem to end right away sometimes there will be a continuation about 2-8 blocks farther back and below the cave's end; mining in these directions (8 blocks back and down, exploring somewhat to the sides) will reveal this if it is the case.
+
+No.2562
+Connections: 
+Text: Digging away gravel or dirt can also expose cave extensions, but you may go through a few shovels that way.
+
+No.2563
+Connections: 
+Text: If you can't find any all day, just sleep away the night, replenishing your resources like wood and food as you use them.
+
+No.2564
+Connections: 
+Text: If you hear suspicious, hostile noises, just try to listen and follow them.
+
+No.2565
+Connections: 
+Text: Coal is an important material used to make torches and to smelt or cook items.
+
+No.2566
+Connections: 
+Text: You have to mine it in order not to run out of torches while exploring caves.
+
+No.2567
+Connections: 
+Text: One stack (64 lumps) will be an ample supply, but in practice, you can start with less and mine more as you go.
+
+No.2568
+Connections: 
+Text: Long-term, it's worth accumulating a few stacks, as once you get seriously into mining, you'll be using a lot.
+
+No.2569
+Connections: 
+Text: Coal is not strictly necessary since you can make charcoal from wood, but it is common, and you have plenty of other things to do with wood.
+
+No.2570
+Connections: stone:20|ore:4 ore:4|stone:20 
+Text: This is the only ore that appears above sea level (anywhere there is stone), and it is often visible in stone outcrops on the surface or even on mountains.
+
+No.2571
+Connections: 
+Text: Iron is probably the most important and versatile resource you can find underground.
+
+No.2572
+Connections: 
+Text: You can use it to craft good quality tools, armor and a plethora of other things.
+
+No.2573
+Connections: stone:11|pickaxe:12 pickaxe:12|stone:11 
+Text: Gather as much of it as possible, but it needs a stone pickaxe or better to mine it, so be careful not to use a wooden pick on it.
+
+No.2574
+Connections: furnace:8|iron:13 iron:13|furnace:8 
+Text: Once you have some iron ore, make a furnace to smelt it into iron ingots, that you can then craft into other items.
+
+No.2575
+Connections: bucket:10|iron:17 iron:17|bucket:10 
+Text: First of all craft a pickaxe, a sword, and a bucket (fill it with water), then craft iron armor.
+
+No.2576
+Connections: 
+Text: This will take a total of 32 ingots, half a stack.
+
+No.2577
+Connections: shovel:24|bucket:10 bucket:10|shovel:24 shovel:24|iron:23 iron:23|shovel:24 bucket:10|iron:23 iron:23|bucket:10 
+Text: If you have extra, go on to make shears, another bucket (to hold a second water source or stray lava), and perhaps an iron shovel or other tools.
+
+No.2578
+Connections: 
+Text: (If you have enough, save some for compasses and maps.
+
+No.2579
+Connections: 
+Text: ) Crafting recipes can be found here.
+
+No.2580
+Connections: 
+Text: Note that two water buckets can be used to create an “infinite water source”; place them diagonally in a 2×2 hole.
+
+No.2581
+Connections: 
+Text: Gold, lapis lazuli, and redstone are more specialized ores, only found in deeper parts of the caves.
+
+No.2582
+Connections: pickaxe:6|iron:5 iron:5|pickaxe:6 
+Text: Gold and redstone need an iron pickaxe to mine.
+
+No.2583
+Connections: stone:6|pickaxe:7 pickaxe:7|stone:6 
+Text: (Lapis can be mined with a stone pickaxe.
+
+No.2584
+Connections: 
+Text: ) You don't really need them much at the beginning, but you will want small amounts.
+
+No.2585
+Connections: 
+Text: Once you do have a little gold and redstone, probably the first things you'll want to use them for are a compass (iron+redstone) and a clock (gold+redstone).
+
+No.2586
+Connections: 
+Text: Once you find some sugar cane, you can add a map (paper+compass) to keep track of your explorations and help avoid getting lost.
+
+No.2587
+Connections: 
+Text: Lapis lazuli is used for enchanting, a more advanced game mechanic.
+
+No.2588
+Connections: 
+Text: Later, gold and redstone will have more uses.
+
+No.2589
+Connections: 
+Text: Diamond is a very rare mineral, probably the most-sought resource in Minecraft.
+
+No.2590
+Connections: 
+Text: It can be crafted into very durable and quick tools, and vastly superior armor.
+
+No.2591
+Connections: pickaxe:23|ore:1 ore:1|pickaxe:23 pickaxe:23|iron:22 iron:22|pickaxe:23 ore:1|iron:22 iron:22|ore:1 
+Text: The ore can be found at the very bottom of the world, the bottom 15 layers of the map, and requires an iron pickaxe to mine.
+
+No.2592
+Connections: 
+Text: Once you hit bedrock (unbreakable dark gray blocks) climb back up about 10 levels and mine around for a while before slowly making your way down one level at a time.
+
+No.2593
+Connections: 
+Text: At levels 5 and below, you'll be working around bedrock, so it's better to keep above that; lava also spawns below layer 10, so it's safer to explore at level 11 or above to avoid it.
+
+No.2594
+Connections: 
+Text: A good way to check what level you are currently on is to press F3 to show the debug screen, and read the Y-axis value.
+
+No.2595
+Connections: 
+Text: Emeralds are normally gained (and used) by trading with villagers, but scattered blocks of emerald ore can also be found beneath extreme hills biomes.
+
+No.2596
+Connections: pickaxe:16|ore:1 ore:1|pickaxe:16 pickaxe:16|iron:15 iron:15|pickaxe:16 ore:1|iron:15 iron:15|ore:1 
+Text: Emerald ore is found at the same depths as gold ore, and likewise requires an iron pickaxe.
+
+No.2597
+Connections: 
+Text: It currently has no practical purpose besides trading.
+
+No.2598
+Connections: 
+Text: Nether Quartz Ore is only found in the Nether, which is much more dangerous than the Overworld, and you should probably wait until you have diamond armor to attempt collecting this.
+
+No.2599
+Connections: 
+Text: It can be used to make comparators, daylight sensors, quartz blocks and a few more items.
+
+No.2600
+Connections: 
+Text: It is quite common in the Nether and can never be found in the Overworld.
+
+No.2601
+Connections: 
+Text: It can appear on any level of the Nether except at the very top.
+
+No.2602
+Connections: 
+Text: Cannot be used to make tools and/or armor but is still useful for other things.
+
+No.2603
+Connections: 
+Text: This is a quick list of some things you will need or want to do over the next few days or longer, not necessarily in this order:.
+
+No.2604
+Connections: 
+Text: Collect more wood, coal, and iron for crafting.
+
+No.2605
+Connections: 
+Text: Over time, delve deeper for the more advanced ores, and eventually diamonds.
+
+No.2606
+Connections: 
+Text: Start hunting monsters for resources:.
+
+No.2607
+Connections: 
+Text: Spiders for string.
+
+No.2608
+Connections: 
+Text: You need this for bows, fishing rods, and leads.
+
+No.2609
+Connections: wool:14|string:7 string:7|wool:14 wool:14|bed:19 bed:19|wool:14 string:7|bed:19 bed:19|string:7 
+Text: If you still haven't found sheep, 12 string can be crafted into the 3 wool you need for a bed.
+
+No.2610
+Connections: 
+Text: Skeletons for bones and arrows.
+
+No.2611
+Connections: 
+Text: Zombies mostly drop Rotten Flesh (which is best used as dog food), but occasionally will drop a carrot or potato which you can start a farm with.
+
+No.2612
+Connections: 
+Text: Start setting up a wheat farm.
+
+No.2613
+Connections: 
+Text: Eventually you will add other crops—in particular, carrots and potatoes as you get them from zombies.
+
+No.2614
+Connections: 
+Text: Pumpkins are also useful, and can be found in any of several biomes.
+
+No.2615
+Connections: cane:2|iron:11 iron:11|cane:2 cane:2|sugar:1 sugar:1|cane:2 iron:11|sugar:1 sugar:1|iron:11 
+Text: Gather sugar cane for maps and books (you will also need iron and redstone for maps, and leather for books).
+
+No.2616
+Connections: 
+Text: Don't gather all you find; instead, replant at least half your harvest as single blocks (that is, leave more canes growing than you harvested), so you'll have lots when it's time to make maps and books for enchanting.
+
+No.2617
+Connections: 
+Text: Start fencing animals into farm pens, using their food items to lure them and then breed them.
+
+No.2618
+Connections: 
+Text: Cows, mooshrooms, and sheep eat wheat, pigs eat carrots (you probably won't have these at first), and chickens eat seeds (you've probably picked some up already from breaking grass).
+
+No.2619
+Connections: 
+Text: Chickens can also be hatched from eggs, which they occasionally lay.
+
+No.2620
+Connections: 
+Text: Of these, chickens and cows are probably most important; Besides meat, chickens provide feathers for arrows, while cows or mooshrooms provide leather for books and other useful items.
+
+No.2621
+Connections: 
+Text: Collect saplings, and grow some trees of your own in some convenient spot.
+
+No.2622
+Connections: 
+Text: Saplings drop randomly when leaf blocks are destroyed or decay naturally (after you chop down their tree).
+
+No.2623
+Connections: 
+Text: Craft a boat for travelling the many waterways in your world.
+
+No.2624
+Connections: 
+Text: Take up fishing during rainstorms.
+
+No.2625
+Connections: rods:37|fishing:36 fishing:36|rods:37 
+Text: Fishing will be about 20% faster when it's raining, and fishing will occasionally get you saddles and name tags (otherwise quite hard to find), along with extra bits of leather and string… not to mention enchanted fishing rods.
+
+No.2626
+Connections: 
+Text: (Don't eat the pufferfish!) Fishing in a small pool is possible but awkward, and properly fencing a large pool is difficult, but there are two options that are fairly easy for beginners:.
+
+No.2627
+Connections: 
+Text: Take a boat out onto an ocean or large lake, well away from land in any direction.
+
+No.2628
+Connections: 
+Text: You want to be at least 20 blocks from land, and if you're within 30-odd blocks of land, you may have to deal with occasional swimming zombies.
+
+No.2629
+Connections: 
+Text: ).
+
+No.2630
+Connections: 
+Text: Build a fishing tower with a platform on top near any large river, ocean, or lake.
+
+No.2631
+Connections: 
+Text: You don't need a full building, you can do fine with a pillar (stone or wood) with a ladder leading up to a platform on top.
+
+No.2632
+Connections: 
+Text: (You can also modify a tall tree to the purpose.
+
+No.2633
+Connections: fish:28|fences:4 fences:4|fish:28 
+Text: ) Add a few fences for safety, optionally a roof (lightning is unlikely to hit you, but it does happen), and you have a nice secure spot to fish from, even during thunderstorms and at night.
+
+No.2634
+Connections: 
+Text: A larger and more advanced home, with doors (plural, a back door is really helpful), windows (glass or fencing), storage rooms, and space for the enchanting table and bookshelves you'll eventually make.
+
+No.2635
+Connections: 
+Text: Tame some animals: Each type is found in specific biomes, and needs specific foods to tame them, bring a fair amount:.
+
+No.2636
+Connections: 
+Text: For cats, you need to find a jungle and bring raw fish.
+
+No.2637
+Connections: 
+Text: These are mostly annoying, but have the unique ability to chase off creepers.
+
+No.2638
+Connections: 
+Text: For dogs you need to prowl forests or taigas with a batch of bones.
+
+No.2639
+Connections: 
+Text: These can help you fight monsters! (But not creepers.
+
+No.2640
+Connections: 
+Text: ).
+
+No.2641
+Connections: 
+Text: Horses can be found in plains; you will need a saddle (try fishing for one).
+
+No.2642
+Connections: wheat:15|bread:17 bread:17|wheat:15 
+Text: Food is not required, but can help, and any of several foods will do, but wheat or bread is probably easiest.
+
+No.2643
+Connections: 
+Text: Note that breeding horses is more difficult, and requires gold, as well as carrots or apples.
+
+No.2644
+Connections: 
+Text: Eventually, when you are ready (ideally, full iron armor and a diamond sword), visit the Nether to get Nether materials.
+
+No.2645
+Connections: 
+Text: f you read the Beginner's Guide and followed it you should have at least a hole in a hill with about 2 torches, a workbench, and a worn-down wooden pickaxe.
+
+No.2646
+Connections: 
+Text: This day will guide you in making a cobblestone house, instead of your hole in a hill.
+
+No.2647
+Connections: 
+Text: When you venture outside after surviving your first night, be on the lookout for hostile mobs.
+
+No.2648
+Connections: 
+Text: Later, you will be hunting them, but that's after you get both weapons, and a proper food supply.
+
+No.2649
+Connections: 
+Text: Also, keep track of where you are, using the debug screen if needed.
+
+No.2650
+Connections: 
+Text: If you do get killed at this point, you haven't lost much, and you're presumably still near spawn -- just head back to your death site to collect your few items.
+
+No.2651
+Connections: 
+Text: At this stage, creepers are deadly -- run away until they despawn or lose track of you.
+
+No.2652
+Connections: 
+Text: Skeletons and zombies may survive in shady spots; lead them into the sun and avoid them until they burn to death.
+
+No.2653
+Connections: 
+Text: Spiders will mostly be neutral, so just avoid them; if one has targeted you, lead it into the sun and run it around until it loses interest.
+
+No.2654
+Connections: 
+Text: Collect any loose items you see: bones, arrows, rotten flesh, eggs, and wool.
+
+No.2655
+Connections: 
+Text: Destroy any tall grass you see and collect the seeds.
+
+No.2656
+Connections: 
+Text: You might break and grab some mushrooms too -- if you can get both kinds of mushrooms, you can make mushroom soup.
+
+No.2657
+Connections: 
+Text: All these things will help you sooner or later.
+
+No.2658
+Connections: 
+Text: The foundation of everything is mining.
+
+No.2659
+Connections: stone:4|pickaxe:7 pickaxe:7|stone:4 
+Text: Begin by mining some stone with your pickaxe.
+
+No.2660
+Connections: stone:4|pickaxe:5 pickaxe:5|stone:4 
+Text: You should craft a stone pickaxe because it mines faster and has more durability.
+
+No.2661
+Connections: cobblestone:13|stone:4 stone:4|cobblestone:13 cobblestone:13|block:11 block:11|cobblestone:13 stone:4|block:11 block:11|stone:4 
+Text: When you mine a stone block, it should drop a crumbly block called cobblestone.
+
+No.2662
+Connections: 
+Text: This is what you can use to make your house.
+
+No.2663
+Connections: 
+Text: It has an explosion resistance of 30, which isn't enough to stop a creeper's explosion but it will do for the second day.
+
+No.2664
+Connections: cobblestone:4|stone:7 stone:7|cobblestone:4 
+Text: You can also use cobblestone to make stone weapons and tools.
+
+No.2665
+Connections: 
+Text: These last longer, with 132 uses.
+
+No.2666
+Connections: cobblestone:12|stone:4 stone:4|cobblestone:12 cobblestone:12|pickaxe:16 pickaxe:16|cobblestone:12 cobblestone:12|planks:10 planks:10|cobblestone:12 stone:4|pickaxe:16 pickaxe:16|stone:4 stone:4|planks:10 planks:10|stone:4 pickaxe:16|planks:10 planks:10|pickaxe:16 
+Text: You can make a stone pickaxe by replacing the wooden planks with cobblestone when making a pickaxe.
+
+No.2667
+Connections: 
+Text: After crafting it, collect approximately 50-80 pieces of cobblestone.
+
+No.2668
+Connections: 
+Text: Make sure to light up your mine, otherwise you will be destroyed by the various mobs!.
+
+No.2669
+Connections: 
+Text: To fix a tool, put two of the same tool in the crafting table next to each other.
+
+No.2670
+Connections: 
+Text: This will replace the two old items with a new item that is either unused, or has slightly more remaining uses than both the old items together.
+
+No.2671
+Connections: 
+Text: This applies to any tool that has durability, including swords and bows.
+
+No.2672
+Connections: 
+Text: Eventually you will have enchanted tools and/or weapons—then you can start using anvils.
+
+No.2673
+Connections: 
+Text: (Note! You can repair 2 consumed tools of the same type to make a new one.
+
+No.2674
+Connections: 
+Text: This can save materials because you will repair only 2 consumed tools and not a consumed tool and a new tool.
+
+No.2675
+Connections: 
+Text: ).
+
+No.2676
+Connections: 
+Text: Most players find it helpful to bring food, wood, coal, torches, a sword and a water bucket.
+
+No.2677
+Connections: 
+Text: You may want to bring a bed if you are on a long mining expedition in multiplayer, so you do not have to go back to your house to sleep.
+
+No.2678
+Connections: stone:11|iron:18 iron:18|stone:11 
+Text: Also, it's a good idea to bring iron pickaxes instead of stone pickaxes, if you can spare the iron.
+
+No.2679
+Connections: 
+Text: The reason being, if you use iron pickaxes, they mine faster and have a higher durability.
+
+No.2680
+Connections: pickaxe:54|stone:35 stone:35|pickaxe:54 pickaxe:54|iron:53 iron:53|pickaxe:54 stone:35|iron:53 iron:53|stone:35 
+Text: With the vast amount of iron that is in the world, you are likely to find an iron pickaxe will more than make up for itself in terms of iron mined, if you use a stone pickaxe it goes by slowly, so in theory you are wasting iron if you don't use an iron pickaxe.
+
+No.2681
+Connections: 
+Text: If you are looking for obsidian, then you should also carry a diamond pickaxe.
+
+No.2682
+Connections: pickaxe:5|iron:18 iron:18|pickaxe:5 
+Text: When you obtain a diamond pickaxe you should use it till it breaks, its the same argument as iron.
+
+No.2683
+Connections: 
+Text: Although, there is considerably less diamond than iron, diamond on average spawning less than once per chunk, a diamond pickaxe should more than make up for itself when you mine for strictly for diamond.
+
+No.2684
+Connections: 
+Text: And with the limited uses of diamond, making everything there is to do with diamond and stocking some up should set you up for the game and, if not, it should set you up for a long time.
+
+No.2685
+Connections: 
+Text: Getting lost in a cave without food or a sword can quickly turn into a death sentence.
+
+No.2686
+Connections: torches:11|planks:21 planks:21|torches:11 
+Text: If you keep losing your way, try marking your path with torches or a unique entity, such as signs or birch planks.
+
+No.2687
+Connections: 
+Text: This will also help you to recover your items if you die while mining.
+
+No.2688
+Connections: chest:14|bed:11 bed:11|chest:14 
+Text: Carving out a safe room containing furnaces, a crafting table, a bed and a chest might be worth your time.
+
+No.2689
+Connections: 
+Text: If you are an enthusiastic miner and spend long amounts of time in caves you may want to build an actual house under ground with basic survival necessities.
+
+No.2690
+Connections: 
+Text: Lava is dangerous, so remember to bring a water bucket when mining.
+
+No.2691
+Connections: 
+Text: This can also help getting to ores above lava.
+
+No.2692
+Connections: 
+Text: Just place the water next to the lava source, and voilà! You have an obsidian surface to walk on.
+
+No.2693
+Connections: 
+Text: On multiplayer PvP, try digging around ores, especially if they seem obvious.
+
+No.2694
+Connections: 
+Text: Another player may use the ore as bait.
+
+No.2695
+Connections: 
+Text: Lava kills players without any armor faster as compared to players wearing full set Armor, so equip yourself with Full Iron Armor set, to protect yourself from monsters, Hostile players and Lava.
+
+No.2696
+Connections: 
+Text: Building a rail system allows the player to quickly shuttle their goods toward the surface.
+
+No.2697
+Connections: 
+Text: This will require minecart with chests, and minecart with furnaces or powered rails, depending on your resources.
+
+No.2698
+Connections: 
+Text: Be careful though; lava can burn the tracks, creepers can blow them up.
+
+No.2699
+Connections: stone:19|fences:16 fences:16|stone:19 
+Text: Be careful where you place rails, and you may want to protect some of them with fences or even stone.
+
+No.2700
+Connections: 
+Text: Of course you'll want the track properly lit as well.
+
+No.2701
+Connections: 
+Text: If you have access to ender chests, those can be a much simpler alternative for moderate amounts of material.
+
+No.2702
+Connections: 
+Text: There are three basic ways to start off your mine, though they can be combined:.
+
+No.2703
+Connections: 
+Text: Find one of the many caves that opens to the surface, and start exploring that, generally working your way downwards.
+
+No.2704
+Connections: 
+Text: Even shallow caves will offer plenty of coal and iron, and later gold and other ores.
+
+No.2705
+Connections: stone:9|ore:18 ore:18|stone:9 
+Text: Caves offer the advantage that a great deal of stone has already been excavated for you, exposing many ore veins.
+
+No.2706
+Connections: 
+Text: On the flip side, they usually have a lot of monsters in them, and both water and lava can be troublesome.
+
+No.2707
+Connections: 
+Text: If, rather than a proper cave entrance, you have a shaft or ravine, you can start with that.
+
+No.2708
+Connections: 
+Text: Use a water bucket to create a waterfall that you can swim down (and back up), then continue as above with the caves that open off the ravine.
+
+No.2709
+Connections: 
+Text: Watch out for monsters falling off high ledges! You may want to pillar jump to light those ledges and look for high tunnels.
+
+No.2710
+Connections: 
+Text: Alternatively, you can make your own entrance to the underworld: dig a vertical or diagonal mineshaft wherever is convenient (such as a back room in your base), and start digging horizontal shafts at suitable depths.
+
+No.2711
+Connections: 
+Text: This will take more tools (since you're digging everything out yourself), but with proper lighting you'll hardly ever see monsters.
+
+No.2712
+Connections: 
+Text: Your mineshaft may (indeed, probably will) also open into caves, which you can explore as above.
+
+No.2713
+Connections: 
+Text: There's a good deal of discussion about which methods are best for mining ores, but for the initial mineshaft, the safest method is probably a 1×3 shaft equipped with a ladder down the middle, and occasional ledges in case you fall off the ladder.
+
+No.2714
+Connections: 
+Text: Regardless of how you arrange things, you'll need to light your shafts properly to avoid monsters spawning.
+
+No.2715
+Connections: 
+Text: You can also turn to mineshafts when your cave is mined out.
+
+No.2716
+Connections: coal:10|torches:23 torches:23|coal:10 
+Text: It is a good idea to mine everything out including coal as you never know when you might be lost and need more torches.
+
+No.2717
+Connections: 
+Text: Also known as cave hunting, caving, cherry picking, or spelunking, cave mining is simply the practice of exploring caves and extracting the ores found there.
+
+No.2718
+Connections: 
+Text: Ore veins are often found exposed along the walls, floors and ceilings of caves.
+
+No.2719
+Connections: 
+Text: Exploring a large cave system almost always results in finding large quantities of ore, though you probably will find bigger veins of ore unexposed, because cave generation sometimes cuts off the vein generation, so you may find only a few of a certain type of ore.
+
+No.2720
+Connections: shovel:21|pickaxe:19 pickaxe:19|shovel:21 shovel:21|ore:10 ore:10|shovel:21 pickaxe:19|ore:10 ore:10|pickaxe:19 
+Text: Cave mining has a high return on investment, yielding more ore per time spent and requiring fewer tools (less pickaxe and shovel durability is lost mining stone, dirt, and gravel) than other approaches.
+
+No.2721
+Connections: 
+Text: On the other hand, cave mining is highly dangerous.
+
+No.2722
+Connections: 
+Text: Unexplored caves are dark and tend to contain many mobs; a sword, a bow and armor are practical necessities.
+
+No.2723
+Connections: 
+Text: The player should carry a large supply of torches to light up the cave and prevent extra hostile mob spawns.
+
+No.2724
+Connections: 
+Text: Large cave systems can become confusing and dangerous.
+
+No.2725
+Connections: 
+Text: Special attention must be paid to navigation, lest one quickly gets lost.
+
+No.2726
+Connections: 
+Text: Moving through a cave too quickly makes it easy to miss unlit passages above or beside you (where monsters can come out), and carries the danger of stepping into an open shaft.
+
+No.2727
+Connections: 
+Text: This becomes extremely dangerous when you are stuck in there and encounter mobs.
+
+No.2728
+Connections: 
+Text: You can also fall into a lava pool which will result not only in death but in all of your items being destroyed in the lava.
+
+No.2729
+Connections: 
+Text: Portions of caves at level 11 and below are generally filled with lava.
+
+No.2730
+Connections: 
+Text: Because of these factors, players usually carefully explore and light a cave first, then extract ores on the way back out, increasing the total time required and cutting down on mining efficiency.
+
+No.2731
+Connections: 
+Text: The cave article contains tips on dealing with large cave systems, while the Navigation tutorial has a section on caverns.
+
+No.2732
+Connections: 
+Text: It is a good idea to carry a bucket of water.
+
+No.2733
+Connections: 
+Text: Caves often contain random lava flows, and cave areas below level 10 are filled with large lava pools.
+
+No.2734
+Connections: bucket:1|block:30 block:30|bucket:1 
+Text: A bucket of water serves as both a fire extinguisher, if you fall in; and as a way to form obsidian surfaces over lava pools (pour water onto a solid block adjacent to a lava pool; do not stand between that spot and the lava).
+
+No.2735
+Connections: 
+Text: If the monsters are too much trouble, you can also go to options and change the difficulty to "peaceful" to prevent mobs from spawning.
+
+No.2736
+Connections: 
+Text: However, you could still die from lava, so don't forget that water bucket!.
+
+No.2737
+Connections: 
+Text: Caves often contain dead-end passages and shafts, or masses of gravel and dirt blocking your way.
+
+No.2738
+Connections: 
+Text: Many of these dead ends are actually thin barriers that, if removed, reveal continuing passages, sometimes into entire adjacent cave systems.
+
+No.2739
+Connections: 
+Text: 'Drifting' is a term for simply searching for adjacent caves by digging beyond apparent dead ends.
+
+No.2740
+Connections: 
+Text: Drifting can be effective in finding dungeons if there are mob sounds audible at a dead end.
+
+No.2741
+Connections: 
+Text: Once you can make pistons, those can also help spot nearby caves, even through rock: Set one up facing against a wall, and power it with a lever, redstone torch, or whatever.
+
+No.2742
+Connections: 
+Text: If there's an open space within 12 blocks ahead of the piston, it will push a hole into the wall.
+
+No.2743
+Connections: 
+Text: A pickaxe.
+
+No.2744
+Connections: cobblestone:9|stone:13 stone:13|cobblestone:9 cobblestone:9|pickaxe:14 pickaxe:14|cobblestone:9 stone:13|pickaxe:14 pickaxe:14|stone:13 
+Text: If it is your first mining trip, mine some cobblestone and make a stone pickaxe.
+
+No.2745
+Connections: stone:23|iron:17 iron:17|stone:23 
+Text: If you are further along in the game, and expect to mine for a while, bring two iron pickaxes and at least 12 stone pickaxes.
+
+No.2746
+Connections: 
+Text: Once you have reached diamonds, if you have an efficient style of mine at a depth where diamonds are found, you can use a diamond pickaxe, which lasts a long time and is capable of mining obsidian.
+
+No.2747
+Connections: 
+Text: Even a partial vein usually provides enough diamonds to replace your pick when it does break, or repair it when it's about to.
+
+No.2748
+Connections: stone:14|pickaxe:18 pickaxe:18|stone:14 stone:14|iron:17 iron:17|stone:14 pickaxe:18|iron:17 iron:17|pickaxe:18 
+Text: If you prefer to save valuable materials, take a few stone pickaxes for mining stone and one iron pickaxe only for mining ores.
+
+No.2749
+Connections: 
+Text: A Shovel.
+
+No.2750
+Connections: shovel:5|iron:4 iron:4|shovel:5 
+Text: Having at least one iron shovel can get through cumbersome patches of dirt and gravel quickly without using your hands.
+
+No.2751
+Connections: stone:4|iron:14 iron:14|stone:4 
+Text: Just one or two stone shovels also works if you want to use your iron for other things.
+
+No.2752
+Connections: 
+Text: Later, a diamond shovel is a nice convenience.
+
+No.2753
+Connections: 
+Text: Torches.
+
+No.2754
+Connections: 
+Text: At least a full stack is recommended, and more is always better.
+
+No.2755
+Connections: 
+Text: Lighting the area around you can help you know which areas you have explored and not get lost, keep monster spawns down to a minimum, and find hidden ores in the shadows.
+
+No.2756
+Connections: 
+Text: Wood.
+
+No.2757
+Connections: torches:24|sticks:15 sticks:15|torches:24 torches:24|coal:29 coal:29|torches:24 sticks:15|coal:29 coal:29|sticks:15 
+Text: If you run out of tools or torches, you can make a crafting table and sticks to replenish your supplies of pickaxes, shovels, and torches (you can get more coal for them from mining).
+
+No.2758
+Connections: 
+Text: You can take the crafting table with you when you're done, or leave it as the core of a mini-base.
+
+No.2759
+Connections: 
+Text: A water bucket.
+
+No.2760
+Connections: 
+Text: This will be useful in saving your life and your items, should you run afoul of lava.
+
+No.2761
+Connections: 
+Text: Also, if you come across a lava lake or pool you want to cross, you can flood it to turn the lava into obsidian.
+
+No.2762
+Connections: 
+Text: Water can also be placed to create a waterfall, to descend any shafts or ravines you come across.
+
+No.2763
+Connections: 
+Text: More experienced players may also substitute a water bucket for ladders.
+
+No.2764
+Connections: 
+Text: An empty bucket.
+
+No.2765
+Connections: fuel:11|bucket:2 bucket:2|fuel:11 fuel:11|block:16 block:16|fuel:11 bucket:2|block:16 block:16|bucket:2 
+Text: A spare bucket is useful for collecting lava to use as fuel in a furnace, to block or slaughter monsters (you'll lose most of their drops), or just to get the lava out of your way.
+
+No.2766
+Connections: 
+Text: You can also use it to pick up more water from a spring, perhaps after placing a waterfall.
+
+No.2767
+Connections: 
+Text: A second bucket of water will also let you create a perpetual water pool from which you can then refill either or both buckets whenever you want.
+
+No.2768
+Connections: 
+Text: The easiest way to make an infinite water source is to make a 2×2 pit one level deep, then empty two water buckets into opposite corners.
+
+No.2769
+Connections: 
+Text: This will let you refill your bucket(s) from any of the pool blocks.
+
+No.2770
+Connections: 
+Text: Food.
+
+No.2771
+Connections: 
+Text: Prolonged visits in mines will wear away your hunger bar.
+
+No.2772
+Connections: 
+Text: Bringing food will allow you to spend more time in your cave system, and keeping your hunger bar full is important for healing.
+
+No.2773
+Connections: bowl:11|stew:15 stew:15|bowl:11 bowl:11|mushroom:14 mushroom:14|bowl:11 stew:15|mushroom:14 mushroom:14|stew:15 
+Text: If there are mushrooms present, you might carry or make a bowl to make mushroom stew.
+
+No.2774
+Connections: 
+Text: Weapons: A sword (stone or better), a bow, and plenty of arrows.
+
+No.2775
+Connections: 
+Text: These will help you defend yourself against monsters.
+
+No.2776
+Connections: 
+Text: Upgrade to a diamond sword as soon as you can, as it will make fights noticeably shorter.
+
+No.2777
+Connections: 
+Text: Armor.
+
+No.2778
+Connections: 
+Text: It will protect you from the monsters you may encounter, and will even protect you from lava.
+
+No.2779
+Connections: ore:14|iron:6 iron:6|ore:14 
+Text: In general, you want at least iron armor — if necessary, you can smelt ore and craft your armor in the caves.
+
+No.2780
+Connections: chest:43|iron:24 iron:24|chest:43 
+Text: Chests are invaluable when exploring lava caves since you can store your items in case you die; instead of losing a whole stack of iron and half a stack of gold along with all of your food and weapons, you can drop a chest and a crafting table nearby, and lose only your current tools and whatever you hadn't stashed yet.
+
+No.2781
+Connections: 
+Text: It's worth writing down the coordinates of your stashes, just in case.
+
+No.2782
+Connections: 
+Text: Ladders.
+
+No.2783
+Connections: 
+Text: For when you've fallen down, and can't get up.
+
+No.2784
+Connections: 
+Text: Also useful for reaching high tunnels and blocking off flooding water.
+
+No.2785
+Connections: 
+Text: Signs.
+
+No.2786
+Connections: 
+Text: These are useful to mark your way in a cavern.
+
+No.2787
+Connections: 
+Text: Leave messages or ASCII arrows for yourself, such as "EXIT -->", "Base with Bed ^", "Zombie spawner this way", or "mind the holes!".
+
+No.2788
+Connections: 
+Text: Signs can be stacked, which makes carrying a supply much easier.
+
+No.2789
+Connections: 
+Text: Signs can also block water and lava.
+
+No.2790
+Connections: 
+Text: (Optional) Fences.
+
+No.2791
+Connections: 
+Text: Useful not only for blocking off unexplored passages, but for containing waterfalls and rivers when you can't bucket the source.
+
+No.2792
+Connections: 
+Text: As noted above, you can also harvest these in abandoned mine shafts.
+
+No.2793
+Connections: 
+Text: (Optional) Markers of various kinds.
+
+No.2794
+Connections: 
+Text: Aside from the above-mentioned signs, wool will be available early, and redstone will turn up when you get deep enough.
+
+No.2795
+Connections: 
+Text: If you have pumpkins available, jack o'lanterns provide both light and direction.
+
+No.2796
+Connections: 
+Text: (Optional) Dirt, cobblestone, gravel.
+
+No.2797
+Connections: 
+Text: You'll certainly be picking some of these up along the way, but starting off with some cheap blocks will let you plug holes, make quick staircases, block off lava and bridge your way across pits and ravines if staircases are too expensive or time-consuming.
+
+No.2798
+Connections: 
+Text: (Optional) Saplings and seeds.
+
+No.2799
+Connections: wood:12|wheat:21 wheat:21|wood:12 
+Text: You can create an underground tree farm to replenish your supply of wood and a small wheat farm to continuously grow wheat for bread, allowing you to stay underground for an infinite period of time.
+
+No.2800
+Connections: 
+Text: These should both be built in a safe, well-lit area, to prevent spawning of hostile mobs and to encourage growth.
+
+No.2801
+Connections: 
+Text: (Optional) Doors.
+
+No.2802
+Connections: 
+Text: In conjunction with solid blocks, wooden doors can be used to temporarily block off unexplored caves and prevent hostile mobs entering a secured area.
+
+No.2803
+Connections: wood:18|door:15 door:15|wood:18 wood:18|planks:19 planks:19|wood:18 wood:18|block:29 block:29|wood:18 door:15|planks:19 planks:19|door:15 door:15|block:29 block:29|door:15 planks:19|block:29 block:29|planks:19 
+Text: The crafting recipe for wooden doors creates three doors from six wood planks, hence each door uses two wood planks - the same as what would be required to block a 2 x 1 hole but with the ability to pass through with ease, and return in a hurry if there are a large number of mobs on the other side.
+
+No.2804
+Connections: 
+Text: Some Zombies can break through wooden doors on hard, and consideration should be given to this when playing on this difficulty level.
+
+No.2805
+Connections: 
+Text: After an area is neutralised the doors may be mined and placed deeper in the cave system, or left as a marker/decoration as well as giving protection against a surprise creeper explosion making a section of cave unsafe again.
+
