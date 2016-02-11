@@ -8,7 +8,6 @@
 #include <nlp_filesystem.h>
 #include <nlp_matrix.h>
 #include <deque>
-#include "IR.h"
 using namespace std;
 
 #define	SEQUENCE_END	(int)1
@@ -91,8 +90,6 @@ class Subgoal
 		bool			b_IsLastSubgoalToTarget;
 		bool			b_ForcedSequenceEnd;
 
-    bool b_isQuestion;
-
 		Subgoal (void);
 		~Subgoal (void);
 };
@@ -111,6 +108,7 @@ class SubgoalSequence
 		bool			b_UseSimpleConnectionFeatures;
 		bool			b_UseTextConnectionFeatures;
 		bool			b_UseComplexNonConnectionFeatures;
+
 
 		SubgoalSequence (void);
 		~SubgoalSequence (void);
@@ -142,7 +140,6 @@ class SubgoalSequence
 						 PddlProblem* _pPddlProblem);
 
 		String ToLogString (void);
-    
 };
 
 
@@ -230,6 +227,7 @@ class SubgoalPolicy
 		PddlStringToPredicate_map_t	map_PddlStringToCandidatePredicate;
 		PddlPredicate_vec_t			vec_CandidatePredicates;
 		char_vec_t					vec_CanReachCandidatePredicate;
+
 		Matrix <char,2>	mtx_PredicateConnectionsFromTo;
 		Matrix <char,2>	mtx_PredicateConnectionsToFrom;
 		Matrix <int_dq_t*,2>	mtx_SentencesPositiveFromTo;
@@ -287,8 +285,6 @@ class SubgoalPolicy
 		bool			b_UseSuccessFailureCountsInFeedback;
 		int				i_UpdatesPerIteration;
 
-    
-    
 
 		float DistanceScore (float _fDistance)
 		{
@@ -308,12 +304,10 @@ class SubgoalPolicy
 		void ComputeSequenceEndFeatures (int _iIndex,
 										 const Problem& _rProblem,
 										 SubgoalSequence* _pSequence);
-
-		bool LoadSimpleConnectionFile (String filepath);
-		bool LoadFeatureConnectionFile (String filepath, bool update);
-    bool LoadAnswers(void);
-    bool LoadPredDictFile (void);
-
+		
+		bool LoadSimpleConnectionFile (void);
+		bool LoadFeatureConnectionFile (void);
+		bool LoadPredDictFile (void);
 		void LoadGoldLengthFile (void);
 		void LoadFeaturesToDebugPrintFile(void);
 		void LogDebugFeatureWeights(File *file);
@@ -349,13 +343,6 @@ class SubgoalPolicy
 				_pFV->Set (_iOffset + _rvecFI [i], _fValue, _bCheckDuplicates);
 		}
 
-		// Asking questions
-		IR		o_IR;
-    bool AskQuestion(String s_QuestionType, String s_QuestionQuery);
-    void TestQA();
-    void clearAnswers();
-    void ResetSentenceConnections ();
-
 	public:
 		SubgoalPolicy (void);
 		~SubgoalPolicy (void);
@@ -370,8 +357,6 @@ class SubgoalPolicy
 		void SampleSubgoalSequence (const Problem& _rProblem,
 									bool _bTestMode,
 									SubgoalSequence* _pSequence);
-    void SampleSubgoalTestSequence(const Problem & _rProblem,
-                                   SubgoalSequence* _pSequence);
 		void SampleZeroSubgoalSequence (const Problem& _rProblem,
 										SubgoalSequence* _pSequence);
 
@@ -388,7 +373,7 @@ class SubgoalPolicy
 		double WeightVectorNorm (void);
 		String GetFeatureString (int _iIndex) const;
 		void WriteConnectionFeedback (void);
-    void WriteConnectionPredictionHeader (void);
+		void WriteConnectionPredictionHeader (void);
 		void WriteConnectionPredictions (void);
 		String ConnectionPredictionRatio (void);
 };

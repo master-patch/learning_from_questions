@@ -25,7 +25,6 @@ class SubgoalSequenceState
 		int							i_ProblemId;
 		bool						b_TaskComplete;
 		bool						b_FullTask;
-    int             nextSubgoal();
 
 		SubgoalSequenceState (SubgoalSequence* _pSequence, int _iStep, int _iId)
 		{
@@ -101,7 +100,6 @@ class SubgoalLearner : public FFCallback
 
 		bool Init (void);
 
-    void TryLinkingSubgoals(void);
 		void TryPlanningOnFullTasks (void);
 		void Iterate (int _iIteration, bool _bTestMode);
 		void SaveWeights (int _iIteration)

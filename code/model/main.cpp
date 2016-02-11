@@ -138,8 +138,7 @@ int main (int argc, const char** argv)
 	cout << "Learner init..." << endl;
 	if (false == o_Learner.Init ())
 		return 1;
-  cout << "Trying to plan on a sequence with questions" << endl;
-  o_Learner.TryLinkingSubgoals ();
+
 	cout << "Trying planning on full tasks..." << endl;
 	o_Learner.TryPlanningOnFullTasks ();
     int iSolutionLogPeriod = (config)"solution_log_period";

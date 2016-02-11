@@ -37,11 +37,11 @@ namespace __gnu_cxx
 	{
 		size_t operator()(const CompressedBuffer& b) const
 		{
-			unsigned long __b = 0;
-			for (unsigned long i = 0;i < b.Length (); ++i) {
-				__b ^= (( __b << 5) + (__b >> 2) + (int) b[i]);
-      }
-			return size_t(__b);
+			unsigned long __h = 0;
+			for (unsigned long i = 0;i < b.Length (); ++i)
+				__h ^= (( __h << 5) + (__h >> 2) + (int) b[i]);
+
+			return size_t(__h);
 		}
 	};
 }

@@ -26,13 +26,13 @@ CXXFLAGS = $(INC_PATH) \
 
 
 # use this for performance
-# CUSTOM_FLAGS = $(OPTIMIZE) \
-# 			   -m64 \
-# 			   -Wno-deprecated \
-# 			   -ggdb #-pg
+CUSTOM_FLAGS = $(OPTIMIZE) \
+			   -m64 \
+			   -Wno-deprecated \
+			   #-ggdb #-pg
 
 # use this for debug:
-CUSTOM_FLAGS = -Wno-deprecated \
+#CUSTOM_FLAGS = -Wno-deprecated \
 			   -ggdb 
 
 TARGET = text_guided_planner
@@ -43,7 +43,6 @@ OBJS = Probability.o \
 	   Zlib.o \
 	   CompressedBuffer.o \
 	   FFInterface.o \
-	   IR.o \
 	   Pddl.o \
 	   PddlParser.o \
 	   PddlLexer.o \

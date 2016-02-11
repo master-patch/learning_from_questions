@@ -4,7 +4,6 @@
 #include <nlp_macros.h>
 #include <assert.h>
 #include "Problems.h"
-#include <fstream>
 
 
 //													
@@ -19,7 +18,6 @@ Subgoal::Subgoal (void)
 	p_PddlSubgoalPredicate = NULL;
 	b_IsLastSubgoalToTarget = false;
 	b_ForcedSequenceEnd = false;
-	b_isQuestion = false;
 	p_SelectedPredicateFeatures = NULL;
 }
 
@@ -56,7 +54,6 @@ void SubgoalSequence::SetSubtaskFFResponse (unsigned int _iIndex,
 {
 	// current subgoal ...	
 	#ifndef NDEBUG
-  //TODO
 	if (_iIndex > dq_Subgoals.size ())
 	{
 		cerr << "[ERROR] subgoal index in SetSubtaskFFResponse ["
@@ -75,27 +72,14 @@ void SubgoalSequence::SetSubtaskFFResponse (unsigned int _iIndex,
 	
 	// next subgoal ...		
 	unsigned int iSubgoalIndex = _iIndex + 1;
+	if (iSubgoalIndex == dq_Subgoals.size ())
+	{
+		assert (true == dq_Subgoals [_iIndex].b_IsLastSubgoalToTarget);
+		// This is the last subgoal, so no need to 	
+		// the init state of next subgoal.			
+		return;
+	}
 
-  if (iSubgoalIndex == dq_Subgoals.size ())
-    {
-      assert (true == dq_Subgoals [_iIndex].b_IsLastSubgoalToTarget);
-      // This is the last subgoal, so no need to 	
-      // the init state of next subgoal.			
-            return;
-    }
-
-  Subgoal* rNextSubgoal = &dq_Subgoals[iSubgoalIndex];
-
-  while( iSubgoalIndex < dq_Subgoals.size()
-         && true == rNextSubgoal->b_isQuestion) {
-    rNextSubgoal = &(dq_Subgoals[iSubgoalIndex ++]);
-  }
-
-  if (rNextSubgoal->b_isQuestion
-      || iSubgoalIndex == dq_Subgoals.size() + 1)
-    return;
-
-  assert (false == rNextSubgoal->b_isQuestion);
 	#ifndef NDEBUG
 	if (iSubgoalIndex > dq_Subgoals.size ())
 	{
@@ -105,8 +89,10 @@ void SubgoalSequence::SetSubtaskFFResponse (unsigned int _iIndex,
 		assert (false);
 	}
 	#endif
-	assert ("" == rNextSubgoal->s_StartStatePredicates);
-	rNextSubgoal->s_StartStatePredicates = _rResponse.s_EndStatePredicates;
+
+	Subgoal& rNextSubgoal = dq_Subgoals [iSubgoalIndex];
+	assert ("" == rNextSubgoal.s_StartStatePredicates);
+	rNextSubgoal.s_StartStatePredicates = _rResponse.s_EndStatePredicates;
 }
 
 
@@ -164,7 +150,7 @@ bool SubgoalSequence::GetSubtask (unsigned int _iIndex,
 				   << s_ProblemPddlPreamble << "\n\n"
 				   << "(:init \n"
 				   << rSubgoal.s_StartStatePredicates
-			   << ")\n"
+				   << ")\n"
 				   // << "(:goal\ (and \n"
 				   << "(:goal \n"
 				   << sGoal
@@ -274,8 +260,13 @@ SubgoalPolicy::SubgoalPolicy (void)
 	b_UseComplexNonConnectionFeatures = false;
 }
 
-void SubgoalPolicy::ResetSentenceConnections ()
+SubgoalPolicy::~SubgoalPolicy (void)
 {
+	Random::Destroy ();
+
+	ITERATE (PddlPredicate_vec_t, vec_CandidatePredicates, ite)
+		delete *ite;
+	vec_CandidatePredicates.clear ();
 
 	ITERATE (SentenceConnection_vec_t, vec_SentenceConnections, iteConn)
 	{
@@ -285,18 +276,6 @@ void SubgoalPolicy::ResetSentenceConnections ()
 		delete pConnection;
 	}
 	vec_SentenceConnections.clear ();
-
-}
-
-SubgoalPolicy::~SubgoalPolicy (void)
-{
-	Random::Destroy ();
-
-	ITERATE (PddlPredicate_vec_t, vec_CandidatePredicates, ite)
-		delete *ite;
-	vec_CandidatePredicates.clear ();
-
-	ResetSentenceConnections();
 
 	if (true == mtx_SentencesPositiveFromTo.IsInitialized ())
 	{
@@ -341,13 +320,6 @@ const char* ExplorationParameters::ToString (ExplorationType_e _eType)
 //													
 bool SubgoalPolicy::Init (void)
 {
-
-	// Setting up IR connection
-	// TODO: check if callback should be set to this
-	// o_IR.SetCallback (this);
-
-	String IR_host = (config)"ir_host";
-
 	o_SequenceEndModel.Init ("end");
 	o_SubgoalSelectionModel.Init ("subgoal");
 	o_TextConnectionModel.Init ("connection");
@@ -421,7 +393,7 @@ bool SubgoalPolicy::Init (void)
 	if (false == LoadPredDictFile ())
 		return false;
 	AssignIndicesToTargetProblemPredicates ();
-  
+
 	i_PredicateNames = hmp_PredicateNameToIndex.size ();
 	i_ParameterValues = hmp_ParameterValueToIndex.size ();
 	i_PredicateIdentities = hmp_PredicateIdToIndex.size ();
@@ -461,7 +433,7 @@ bool SubgoalPolicy::Init (void)
 		map_FeatureIndexToFeatureString [3 + i_OffsetToConnectionFeatures] = "ConnInit+Reachable";
 		map_FeatureIndexToFeatureString [4 + i_OffsetToConnectionFeatures] = "NoConnInit";
 
- 		for (int d = 1; d < 5; ++ d)
+		for (int d = 1; d < 5; ++ d)
 		{
 			map_FeatureIndexToFeatureString [5 + 2*(d-1) + i_OffsetToConnectionFeatures]
 									= "ConnFuture";
@@ -562,17 +534,17 @@ bool SubgoalPolicy::Init (void)
 	}
 
 	if (f_UseSimpleConnectionFeatures > 0)
-    {
-      if (false == LoadSimpleConnectionFile ((config) "pddl_connection_file"))
-        return false;
-    }
+	{
+		if (false == LoadSimpleConnectionFile ())
+			return false;
+	}
 	else if (f_UseTextConnectionFeatures > 0)
-    {
-      if (false == LoadFeatureConnectionFile ((config) "text_connection_file", false))
-        return false;
-      if (true == b_PrintTextConnectionFeatures)
-        LoadFeaturesToDebugPrintFile();
-    }
+	{
+		if (false == LoadFeatureConnectionFile ())
+			return false;
+		if (true == b_PrintTextConnectionFeatures)
+			LoadFeaturesToDebugPrintFile();
+	}
 
 	if (true == b_LogConnectionPredictions)
 		WriteConnectionPredictionHeader ();
@@ -581,15 +553,6 @@ bool SubgoalPolicy::Init (void)
 	b_UseGoldLength = (1 == (int)(config)"use_gold_length");
 	if (true == b_UseGoldLength)
 		LoadGoldLengthFile();
-
-	// RUN TESTS
-	if ((config)"ir_host" != -1) {
-		if (false == o_IR.Connect ())
-			return false;
-
-		// Launch the test
-		TestQA();
-	}
 
 	return true;
 }
@@ -866,8 +829,7 @@ void SubgoalPolicy::LoadGoldLengthFile(void)
 	ITERATE (String_dq_t, dqLines, iterLine)
 	{
 		// Problem | length
-    		String_dq_t dqSplit;
-    		// read in the dict file
+		String_dq_t dqSplit;
 		iterLine->Split (dqSplit, '|');
 		assert (dqSplit.size () == 2);
 		String sProblem = dqSplit[0];
@@ -883,30 +845,9 @@ void SubgoalPolicy::LoadGoldLengthFile(void)
 //													
 bool SubgoalPolicy::LoadPredDictFile (void)
 {
-  String sPddlDictFile;
-  int object_questions = (config) "ir:object-questions";
-  int action_questions = (config) "ir:action-questions";
-
-  // Read the config to find which question-predicates to include
-	if(object_questions == 1 && action_questions == 1)
-	{
-		sPddlDictFile = (config)"pddl_dict_question_objectsActions_file";
-	}
-	else if (object_questions == 1 && action_questions != 1)
-	{
-	 	sPddlDictFile = (config)"pddl_dict_question_objects_file";
-	}
-	else if (object_questions != 1 && action_questions == 1)
-	{
-		sPddlDictFile = (config)"pddl_dict_question_actions_file";
-	}
-	else
-	{
-		sPddlDictFile = (config)"pddl_dict_file";
-	}
-
-  cout << "    loading dict: " << sPddlDictFile << endl;
-
+	String sPddlDictFile = (config)"pddl_dict_file";
+	cout << "   loading dict: " << sPddlDictFile << endl;
+	// read in the dict file
 	String_dq_t dqLines;
 	if (false == File::ReadLines (sPddlDictFile, dqLines))
 	{
@@ -922,6 +863,7 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 		String_dq_t dqSplit;
 		iterLine->Split (dqSplit, '|');
 		assert (dqSplit.size () == 3);
+
 		int iIndex = dqSplit [0];
 		int iValue = (int)dqSplit [1];
 		bool bIsFunction = (iValue > 0);
@@ -1037,10 +979,7 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 	}
 
 	vec_ReachabilityPredicateEqulivalents.resize (i_CandidatePredicates);
-
-
-
-  for (int i = 0; i < i_CandidatePredicates; ++ i)
+	for (int i = 0; i < i_CandidatePredicates; ++ i)
 	{
 		ITERATE (int_set_t, vecReachabilityEquivalents [i], ite)
 			vec_ReachabilityPredicateEqulivalents [i].push_back (*ite);
@@ -1061,35 +1000,16 @@ bool SubgoalPolicy::LoadPredDictFile (void)
 	return true;
 }
 
-bool SubgoalPolicy::LoadAnswers (void) {
-
-  String path = (config) "ir:text_connection_file"; 
- 	if (f_UseSimpleConnectionFeatures > 0)
-    {
-      if (false == LoadSimpleConnectionFile (path))
-        return false;
-    }
-	else if (f_UseTextConnectionFeatures > 0)
-    {
-      if (false == LoadFeatureConnectionFile (path, true))
-        return false;
-      if (true == b_PrintTextConnectionFeatures) {
-        LoadFeaturesToDebugPrintFile();
-        return true;
-      }
-    }
-  return false;
-}
 
 //													
-bool SubgoalPolicy::LoadSimpleConnectionFile (String filepath)
+bool SubgoalPolicy::LoadSimpleConnectionFile (void)
 {
 	i_MaxConnectionDepth = 0;
 	cout << "   loading simple connection file: "
-		 << filepath  << endl;
+		 << (config)"pddl_connection_file" << endl;
 
 	String_dq_t dqLines;
-	if (false == File::ReadLines (filepath , dqLines))
+	if (false == File::ReadLines ((config)"pddl_connection_file", dqLines))
 	{
 		cerr << "[ERROR] Failed to open connection file." << endl;
 		return false;
@@ -1118,29 +1038,22 @@ bool SubgoalPolicy::LoadSimpleConnectionFile (String filepath)
 
 
 //													
-bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath, bool update)
+bool SubgoalPolicy::LoadFeatureConnectionFile (void)
 {
-	// TODO check if needed
-	if (update == true) {
-		ResetSentenceConnections();
-	}
-
 	i_MaxConnectionDepth = 0;
 	cout << "   loading feature connection file : "
-		 << filepath  << endl;
+		 << (config)"text_connection_file" << endl;
 
 	ConnectionHashToFeatures_map_t	mapConnectionHashToFeatures;
 
 	//													
 	File file;
-	if (false == file.Open (filepath))
+	if (false == file.Open ((config)"text_connection_file"))
 	{
 		cerr << "[ERROR] Failed open connection file." << endl;
 		return false;
 	}
 
-	// README: this part reads line by line the file
-	// and according to the format it stores it into mapConnectionHashToFeatures
 	size_t iLines = 0;
 	String sLine;
 	while (true == file.ReadLine (sLine))
@@ -1162,13 +1075,9 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath, bool update)
 		// FeatureToValue_map_t* pmapFeatureToValueNeg;
 		ConnectionHashToFeatures_map_t::iterator	iteFeatures;
 		iteFeatures = mapConnectionHashToFeatures.find (sHash);
-
 		if (mapConnectionHashToFeatures.end () == iteFeatures)
 		{
 			SentenceConnection* pConnection = new SentenceConnection;
-
-			// FIXED TODO: glob - unsafe (comment: maybe need to be reset)
-			// README: If the sentece is completed, we add the connections to the vector
 			vec_SentenceConnections.push_back (pConnection);
 			pConnection->i_Sentence = iSentenceId;
 			pConnection->i_From = iFrom;
@@ -1187,14 +1096,7 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath, bool update)
 
 		// String sPositiveFeature;
 		// sPositiveFeature << "pos\x01" << sFeature;
-		// README: this looks for a hash and creates a feature with that hash if unexistent
-		// FIXED TODO: glob - unsafe (comment: read-only)
-		//       solution: this should be
-		//         `int iFeature = o_TextConnectionFeatureSpace.GetFeatureIndex (sFeature, true);`
-		//       since this won't add a new feature in the feature space
-		//       this should only be at the second run (the updateConnections)
 		int iFeature = o_TextConnectionFeatureSpace.GetFeatureIndex (sFeature);
-		// README: finally insert this feature in the list of features with positive val
 		pmapFeatureToValuePos->insert (make_pair (iFeature, fFeatureValue));
 
 		// String sNegativeFeature;
@@ -1205,32 +1107,12 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath, bool update)
 
 
 	//													
-	// FIXED TODO: glob - unsafe (comment: this runs on one thread only, and this acts like a counter)
-	// README: we create, without stating, a matrix of candidatePredicateNumbersMerged
-	//         same for the negative ones. These matrices are reset to 0
-	if (false == mtx_SentencesPositiveFromTo.IsInitialized ()) {
-		mtx_SentencesPositiveFromTo.Create (
-			i_CandidatePredicateNumbersMerged,
-			i_CandidatePredicateNumbersMerged);
-	}
-	// FIXED TODO: glob - safe (comment: see above)
-	// TODO: should we reset?
+	mtx_SentencesPositiveFromTo.Create (i_CandidatePredicateNumbersMerged, i_CandidatePredicateNumbersMerged);
 	mtx_SentencesPositiveFromTo.Memset (0);
-
-	// FIXED TODO: glob - safe (comment: see above)
-	if (false == mtx_SentencesNegativeFromTo.IsInitialized ()) {
-		mtx_SentencesNegativeFromTo.Create (
-			i_CandidatePredicateNumbersMerged,
-			i_CandidatePredicateNumbersMerged);
-	}
-	// TODO: glob - safe (comment: see above)
+	mtx_SentencesNegativeFromTo.Create (i_CandidatePredicateNumbersMerged, i_CandidatePredicateNumbersMerged);
 	mtx_SentencesNegativeFromTo.Memset (0);
 
-	// README: Iterate through all the vectors of the sentences in the file
-	ITERATE (SentenceConnection_vec_t,
-		// FIXED TODO: glob - safe (comment: here is read-only)
-		vec_SentenceConnections,
-		iteConn)
+	ITERATE (SentenceConnection_vec_t, vec_SentenceConnections, iteConn)
 	{
 		SentenceConnection* pConnection = *iteConn;
 		pConnection->p_PositiveFeatures = new Features;
@@ -1248,9 +1130,7 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath, bool update)
 		FeatureToValue_map_t* pmapFeatureToValuePos = iteFeatures->second;
 		pConnection->p_PositiveFeatures->SetSize (pmapFeatureToValuePos->size ());
 		pConnection->p_NegativeFeatures->SetSize (pmapFeatureToValuePos->size ());
-		ITERATE (FeatureToValue_map_t, (*pmapFeatureToValuePos),
-			// TODO: glob - safe (comment: it is just an iterator)
-			ite)
+		ITERATE (FeatureToValue_map_t, (*pmapFeatureToValuePos), ite)
 		{
 			pConnection->p_PositiveFeatures->Set (ite->first, ite->second);
 			pConnection->p_NegativeFeatures->Set (ite->first, - ite->second);
@@ -1264,13 +1144,8 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath, bool update)
 		delete pmapFeatureToValuePos;
 		// delete pmapFeatureToValueNeg;
 
-		// README: This gets the Pddl of the candidate `from` the connection
-    // 		     as well as the `to`.
-		// 				 creates a new integer value in the matrix
-		// TODO: glob - safe (comment: read-only, check if order is affected)
 		PddlPredicate* pFrom = vec_CandidatePredicates [pConnection->i_From];
 		int iFrom = pFrom->i_PredicateCandidateWithoutNumber;
-		// TODO: glob - safe (comment: read-only, check if order is affected)
 		PddlPredicate* pTo = vec_CandidatePredicates [pConnection->i_To];
 		int iTo = pTo->i_PredicateCandidateWithoutNumber;
 
@@ -1281,40 +1156,23 @@ bool SubgoalPolicy::LoadFeatureConnectionFile (String filepath, bool update)
 	}
 	mapConnectionHashToFeatures.clear ();
 
-	// TODO: now this part gets trickier, we are setting up matrices
-	//       and resetting them, meaning that they could be used later on
-	//       in the code, this needs further inspection
-	// TODO: glob - unsafe (comment: this is created, we can check that if this is
-	//       already created, we are resetting this - or even reusing it)
-	// TODO: check if we should reuse lprb_SentenceConnection
-
-	if (false == update) {
-		lprb_SentenceConnection.Create (2);
-	}
-
-	if (false == mtx_FeedbackOnSentenceConnections.IsInitialized()) {
-	// FIXED TODO: glob - unsafe
-		mtx_FeedbackOnSentenceConnections.Create (
-			// TODO: glob - unsafe
-			i_CandidatePredicateNumbersMerged,
-			// TODO: glob - unsafe
-			i_CandidatePredicateNumbersMerged,
-												  3);
-		// FIXED TODO: glob - unsafe
-		mtx_FeedbackOnSentenceConnections.Memset (0);
-	}
+	lprb_SentenceConnection.Create (2);
+	mtx_FeedbackOnSentenceConnections.Create (i_CandidatePredicateNumbersMerged,
+											  i_CandidatePredicateNumbersMerged,
+											  3);
+	mtx_FeedbackOnSentenceConnections.Memset (0);
 
 
-	// FIXED TODO: glob - safe (comment: read-only)
 	cout << "   loaded " << vec_SentenceConnections.size ()
 		 << " text relationships, and " << iLines
-		 << endl;
+		 << " features for an average feature size of "
+		 << iLines / (float)vec_SentenceConnections.size () << endl;
 
 	return true;
 }
 
 
-// TODO Look into if this should be modified 
+//													
 void SubgoalPolicy::ComputeSequenceEndFeatures (int _iIndex,
 												const Problem& _rProblem,
 												SubgoalSequence* _pSequence)
@@ -1814,83 +1672,8 @@ void SubgoalPolicy::SampleConnections (bool _bTestMode)
 		WriteConnectionPredictions ();
 }
 
-void SubgoalPolicy::SampleSubgoalTestSequence(const Problem& _rProblem,
-                                                 SubgoalSequence* _pSequence)
-{
-  long i_TestSequenceLength = 6; 
- 	// Sample sequence length...	
-	assert (0 != i_CandidatePredicates);
-	_pSequence->vec_PredicatesInSequence.resize (i_CandidatePredicates, 0);
 
-	_pSequence->b_UseSimpleConnectionFeatures = b_UseSimpleConnectionFeatures;
-	_pSequence->b_UseTextConnectionFeatures = b_UseTextConnectionFeatures;
-	_pSequence->b_UseComplexNonConnectionFeatures = b_UseComplexNonConnectionFeatures;
-
-
-	// we first need the last subgoal to reach the actual target goal...
-	AddLastSubgoal (_rProblem, _pSequence);
-
-	// Sample subgoals...			
-
-	for (int i = 0; i < i_TestSequenceLength; ++ i)
-	{
-		Subgoal* pSubgoal = _pSequence->AddSubgoalToFront ();
-
-
-		assert (true == pSubgoal->vec_SequenceEndFeatureVectors.empty ());
-
-		pSubgoal->vec_SequenceEndFeatureVectors.clear ();
-		pSubgoal->i_SequenceEnd = 0;
-		assert (true == pSubgoal->vec_SubgoalFeatureVectors.empty ());
-
-		// sample	
-		pSubgoal->i_SubgoalSelection = i;
-    if ( i == 2) {
-      pSubgoal->i_SubgoalSelection = 409;
-    }
-
-    if ( i == 5) {
-      pSubgoal->i_SubgoalSelection = 404;
-    }
-
-		pSubgoal->p_PddlSubgoalPredicate
-			= vec_CandidatePredicates [pSubgoal->i_SubgoalSelection];
-
-    	if (0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
-					pSubgoal->b_isQuestion = true;
-      		String_dq_t dq_QuestionArgs;
-      		//Parse Question from PddlString
-      		String s_PredicateString = pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
-      		size_t i_Start = s_PredicateString.rfind("(") + 1;
-      		size_t i_End = s_PredicateString.find(")");
-      		String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
-      		s_QuestionString.Split(dq_QuestionArgs, ' ');
-      		//Parse Question type and query from question
-      		String s_QuestionType = dq_QuestionArgs[1];
-      		size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
-      		String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
-
-          if(false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
-            //TODO cout error, throw error type behavior
-          }
-          LoadAnswers();// TODO: See board for hard task
-          SampleConnections(false);
-      }
-
-      _pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
-  }
-}
-
-//Query IR system with question and update Connection set as a result.											
-// TODO: Add Answer Type param
-bool SubgoalPolicy::AskQuestion(String s_QuestionType, String s_QuestionQuery) {
-  if (false == o_IR.SendQuestion(s_QuestionType, s_QuestionQuery)) {
-    return false;
-  }
-  char sResponse[256];
-  o_IR.ReceiveMessage(sResponse, 255);
-  return true;
-}
+//													
 void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 										   bool _bTestMode,
 										   SubgoalSequence* _pSequence)
@@ -1929,12 +1712,12 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 													 _rProblem,
 													 pSubgoal->lprb_SequenceEnd,
 													 _bTestMode);
-		
 		if (SEQUENCE_END == pSubgoal->i_SequenceEnd)
 		{
 			bAlreadyAddedSequenceEnd = true;
 			break;
 		}
+
 
 		assert (true == pSubgoal->vec_SubgoalFeatureVectors.empty ());
 		ComputeSubgoalFeatures (0, _rProblem, _pSequence);
@@ -1966,32 +1749,8 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 		// sample	
 		pSubgoal->i_SubgoalSelection
 			= SampleDecision (pSubgoal->lprb_Subgoal, o_SubgoalExploration, _bTestMode);
-
 		pSubgoal->p_PddlSubgoalPredicate
 			= vec_CandidatePredicates [pSubgoal->i_SubgoalSelection];
-
-    	//TODO: Add Config Check to make sure this is valid. Else if question found and
-    	// config, throw an error
-    	if (0 == pSubgoal->p_PddlSubgoalPredicate->s_Name.compare("question")) {
-					pSubgoal->b_isQuestion = true;
-      		String_dq_t dq_QuestionArgs;
-      		//Parse Question from PddlString
-      		String s_PredicateString = pSubgoal->p_PddlSubgoalPredicate->GetPddlString();
-      		size_t i_Start = s_PredicateString.rfind("(") + 1;
-      		size_t i_End = s_PredicateString.find(")");
-      		String s_QuestionString = s_PredicateString.substr(i_Start, i_End - i_Start);
-      		s_QuestionString.Split(dq_QuestionArgs, ' ');
-      		//Parse Question type and query from question
-      		String s_QuestionType = dq_QuestionArgs[1];
-      		size_t i_QueryIndex = s_QuestionString.find(dq_QuestionArgs[2]);
-      		String s_QuestionQuery = s_QuestionString.substr(i_QueryIndex);
-
-          if (false == AskQuestion(s_QuestionType, s_QuestionQuery)) {
-          	cout << "The IR has failed" << endl;
-          }
-          LoadAnswers();// TODO: See board for hard task
-          SampleConnections(false);
-    }
 
 		_pSequence->vec_PredicatesInSequence [pSubgoal->i_SubgoalSelection] = 1;
 
@@ -2022,7 +1781,7 @@ void SubgoalPolicy::SampleSubgoalSequence (const Problem& _rProblem,
 }
 
 
-//
+//													
 void SubgoalPolicy::AddLastSubgoal (const Problem& _rProblem,
 									SubgoalSequence* _pSequence)
 {
@@ -2097,7 +1856,7 @@ void SubgoalPolicy::AddForcedSequenceEnd (const Problem& _rProblem,
 
 //													
 void SubgoalPolicy::InitUpdate (void)
-{ 
+{
 	o_SequenceEndModel.InitializeFeatureExpectationVector (vec_SequenceEndFE,
 										o_SequenceEndFeatureSpace.MaxIndex () + 1);
 
@@ -2136,30 +1895,10 @@ void SubgoalPolicy::UpdateParameters (SubgoalSequence& _rSequence,
 	{
 		int_set_t setPreviousSubgoals;
 		size_t iSequenceLength = _rSequence.dq_Subgoals.size ();
-
-	/** Do a quick pass first storing only the non-question subgoals. 
-		** Then do the normal pass but on the pruned sequence to attribute
-		** reward to cosecutive subgoals. 
-		**/
-		vector<size_t> subgoals;
-		for (size_t i = 0; i < iSequenceLength; ++ i)
+		for (size_t f = 0; f < iSequenceLength; ++ f)
 		{
-			if (_rSequence.GetSubgoal(i)->b_isQuestion)
-				continue;
-			else
-				subgoals.push_back(i);
-		}
-
-
-		for (size_t j = 0; j < subgoals.size() - 1; ++ j)
-		{
-			size_t f = subgoals[j];
-
 			Subgoal* pFrom = _rSequence.GetSubgoal (f);
-
-			assert(pFrom->b_isQuestion == false);
-
-			if (true == pFrom->b_ForcedSequenceEnd) 
+			if (true == pFrom->b_ForcedSequenceEnd)
 				continue;
 			if (SEQUENCE_END == pFrom->i_SequenceEnd)
 				continue;
@@ -2170,12 +1909,10 @@ void SubgoalPolicy::UpdateParameters (SubgoalSequence& _rSequence,
 			int iFrom = pFrom->p_PddlSubgoalPredicate->i_PredicateCandidateWithoutNumber;
 			setPreviousSubgoals.insert (iFrom);
 
-			size_t t = subgoals[j + 1];
+			size_t t = f + 1;
 			if (t >= iSequenceLength)
 				break;
 			Subgoal* pTo = _rSequence.GetSubgoal (t);
-			assert(pFrom->b_isQuestion == false);
-
 			if (true == pTo->b_ForcedSequenceEnd)
 				continue;
 			if (SEQUENCE_END == pTo->i_SequenceEnd)
@@ -2762,202 +2499,8 @@ void SubgoalPolicy::WriteConnectionFeedback (void)
 	*/
 }
 
-// Question Answering	
-void SubgoalPolicy::TestQA ()
-{
-	int size;
-	cout << "\033[94mSTART\033[0m: QA Running tests.." << endl;
-
-	// Test 1
-	String type;
-	String query;
-	type << "action";
-	query << "wood";
-	if (AskQuestion(type, query)) {
-		cout << "\033[92mPASS\033[0m: QA1 asking a question" << endl;
-	} else {
-		cout << "\033[91mFAIL\033[0m: QA1 in asking a question" << endl;
-	}
-
-	// Test 2
-	if (AskQuestion(type, query)) {
-		cout << "\033[92mPASS\033[0m: QA2 asking the question again" << endl;
-	} else {
-		cout << "\033[91mFAIL\033[0m: QA2 in asking the question again" << endl;
-	}
-
-	// Test 3
-	if (AskQuestion(type, "ironbar")) {
-		cout << "\033[92mPASS\033[0m: QA3 asking a second question" << endl;
-	} else {
-		cout << "\033[91mFAIL\033[0m: QA3 in asking a second question" << endl;
-	}
-
-	// Test 4.1
-	clearAnswers();
-	fstream in((config)"ir:text_connection_file");
-	if(in.is_open())
-	{
-		in.seekp(0, ios::end);
-		size_t size = in.tellg();
-		if( size == 0)
-		{
-			cout << "\033[92mPASS\033[0m: QA4.1 clearing the answer file\n";
-		} else {
-			cout << "\033[91mFAIL\033[0m: QA4.1 in clearing the answer file\n";
-		}
-	}
-
-	// Test 4.2
-	if (AskQuestion(type, "wood")) {
-		cout << "\033[92mPASS\033[0m: QA4.2 asking the question again" << endl;
-	} else {
-		cout << "\033[91mFAIL\033[0m: QA4.2 in asking the question again" << endl;
-	}
-
-	fstream in2((config)"ir:text_connection_file");
-	if(in2.is_open())
-	{
-		in2.seekp(0, ios::end);
-		size_t size = in2.tellg();
-		if( size == 0)
-		{
-			cout << "\033[91mFAIL\033[0m: QA4.2 saving the answer file\n";
-		} else {
-			cout << "\033[92mPASS\033[0m: QA4.2 in saving the answer file\n";
-		}
-	}
-
-	clearAnswers();
-
-	// Test 5
-	if (AskQuestion(type, "wood")) {
-		cout << "\033[92mPASS\033[0m: QA5 asking a question after cleaning the file" << endl;
-	} else {
-		cout << "\033[91mFAIL\033[0m: QA5 in asking a question after cleaning the file" << endl;
-	}
-
-	// Test 6
-	cout << "\033[94mINFO\033[0m: QA6 starting the second LoadAnswers" << endl;
-	LoadAnswers();
-	cout << "\033[92mPASS\033[0m: QA6 starting the second LoadAnswers with different file" << endl;
-
-	clearAnswers();
 
 
-	// Test 7
-	bool q1 = AskQuestion(type, "wood");
-
-	if (q1 == false) {
-		cout << "\033[91mFAIL\033[0m: QA7 in loading the second answers" << endl;
-	}
-
-	LoadAnswers();
-
-	SentenceConnection_vec_t cached_SentenceConnections(vec_SentenceConnections);
-
-	bool q2 = AskQuestion(type, "wood");
-
-	if (q2 == false) {
-		cout << "\033[91mFAIL\033[0m: QA7 in loading the second answers" << endl;
-	}
-
-	LoadAnswers();
 
 
-	if (q1 == true &&
-		  q2 == true &&
-		  cached_SentenceConnections == vec_SentenceConnections &&
-		  &cached_SentenceConnections != &vec_SentenceConnections
-		  ) {
-		cout << "\033[92mPASS\033[0m: QA7 loadAnswers is idempotent" << endl;
-	} else {
-		cout << "\033[91mFAIL\033[0m: QA7 loadAnswers is not idempotent" << endl;
-	}
 
-
-	// Test 8 - check sentence connection is empty
-
-	// This should clean the file
-	clearAnswers();
-	// This should reload an empty file - hence no features
-	LoadAnswers();
-
-	size = vec_SentenceConnections.size();
-	if (size == 0) {
-		cout << "\033[92mPASS\033[0m: QA8 SentenceConnection is empty" << endl;
-	} else {
-		cout << "\033[91mFAIL\033[0m: QA8 SentenceConnection has already " << size << " connections" << endl;
-	}
-
-
-	// Test 9 - check sentence connection is 720
-
-	AskQuestion(type, "wood");
-	LoadAnswers();
-
-	size = vec_SentenceConnections.size();
-	if (size == 720) {
-		cout << "\033[92mPASS\033[0m: QA9 SentenceConnection is 720" << endl;
-	} else {
-		cout << "\033[91mFAIL\033[0m: QA9 SentenceConnection has " << size << " connections" << endl;
-	}
-
-	// Test 10 - check sentence connection is still 720
-	AskQuestion(type, "wood");
-	LoadAnswers();
-
-	size = vec_SentenceConnections.size();
-	if (size == 720) {
-		cout << "\033[92mPASS\033[0m: QA10 SentenceConnection still is 720 after same question" << endl;
-	} else {
-		cout << "\033[91mFAIL\033[0m: QA10 SentenceConnection has not the same size, but " << size << " connections" << endl;
-	}
-
-	// Test 11
-
-	cout << "\033[94mINFO\033[0m: QA8 1st time - Sampling connections.." << endl;
-	SampleConnections(false);
-
-	// Test 12 - check sentence is bigger than 720
-	AskQuestion(type, "milk");
-	LoadAnswers();
-
-	size = vec_SentenceConnections.size();
-	if (size > 720) {
-		cout << "\033[92mPASS\033[0m: QA12 SentenceConnection is bigger than 720" << endl;
-	} else {
-		cout << "\033[91mFAIL\033[0m: QA12 SentenceConnection missing connections, " << size << " connections" << endl;
-	}
-
-	// Test 13
-
-	cout << "\033[94mINFO\033[0m: QA8 2nd time - Sampling connections.." << endl;
-	SampleConnections(false);
-
-	cout << "\033[94mINFO\033[0m: QA8 Clearing" << endl;
-	clearAnswers();
-
-	// Test 14
-
-	cout << "\033[94mINFO\033[0m: QA8 3rd time - Asking  question.." << endl;
-	AskQuestion(type, "wood");
-	cout << "\033[94mINFO\033[0m: QA8 3rd time - Loading answers.." << endl;
-	LoadAnswers();
-	cout << "\033[94mINFO\033[0m: QA8 3rd time - Sampling connections.." << endl;
-	SampleConnections(false);
-
-	clearAnswers();
-
-	cout << "\033[94mDONE\033[0m: QA Done questioning" << endl;
-
-}
-
-
-void SubgoalPolicy::clearAnswers ()
-{
-	// format the file text_connection
-	std::ofstream ofs ((config)"ir:text_connection_file", std::ofstream::out);
-  	ofs << "";
-  	ofs.close();
-}

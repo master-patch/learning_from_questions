@@ -157,10 +157,7 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 	}
 	SubgoalSequenceState& rState = ite->second;
 	Subgoal* pLastSubgoal = rState.p_Sequence->GetSubgoal (rState.i_CurrentStep);
-
-  assert(false == pLastSubgoal->b_isQuestion);
-
-  pLastSubgoal->e_PlanningOutcome = _rResponse.e_PlanningOutcome;
+	pLastSubgoal->e_PlanningOutcome = _rResponse.e_PlanningOutcome;
 
 
 	// check for syntax error responses ...					
@@ -173,8 +170,6 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 			 << pSubgoal->s_ProblemPddl << '\n'
 			 << "----------------------------------------------------\n"
 			 << endl;
-
-   
 	}
 
 
@@ -292,16 +287,15 @@ void SubgoalLearner::OnFFResponse (int _iIndex, FFResponse& _rResponse)
 
 	// Get the next subtask....								
 	String sProblemPddl;
-  //Use function to determine next subgoal to ensure we get a real subtask
-  if (false == rState.p_Sequence->GetSubtask (rState.nextSubgoal(),
+	if (false == rState.p_Sequence->GetSubtask (++ rState.i_CurrentStep,
 											    &sProblemPddl))
 	{
 		// we have already checked for task completion,	
 		// so we should never get to this code point...	
 		assert (false);
 	}
-  //Note, i_CurrentState is now updated
-  
+
+
 	sProblemPddl.Strip ();
 	if ("" == sProblemPddl)
 	{
@@ -350,16 +344,15 @@ double SubgoalLearner::ComputeReward (SubgoalSequenceState& _rState)
 			_rState.d_Reward = 0;
 			return 0;
 		}
-    
+
 		if ((po_plan_found != rSubgoal.e_PlanningOutcome) &&
 			(po_goal_already_satisfied != rSubgoal.e_PlanningOutcome))
 		{
 			bTaskComplete = false;
 			break;
 		}
-    if (rSubgoal.b_isQuestion)
-      dReward += double((config) "ir:reward");
-		else if (po_goal_already_satisfied  == rSubgoal.e_PlanningOutcome)
+
+		if (po_goal_already_satisfied  == rSubgoal.e_PlanningOutcome)
 			dReward -= d_UnnecessarySubgoalPenalty;
 		else if (po_plan_found == rSubgoal.e_PlanningOutcome)
 			dReward += d_SuccessfulStepRewardBase;
@@ -493,120 +486,7 @@ void SubgoalLearner::ProposeAlternateSequences (SubgoalSequenceState& _rState,
 	}
 }
 
-void SubgoalLearner::TryLinkingSubgoals(void) {
-	o_SubgoalPolicy.clearAnswers();
-  vec_TargetGoalCompletions.Memset (0);
-	i_TotalPlanJobs = 0;
-	i_OutcomePlansFound = 0;
-	i_OutcomeGoalsAlreadySatisfied = 0;
-	i_OutcomeUnsolvable = 0;
-	i_OutcomeSyntaxError = 0;
-	i_OutcomeTimeouts = 0;
-	i_OutcomeOutsideKnownWorld = 0;
-	i_OutcomeUnknown = 0;
-	f_TotalPlanDepthReached = 0;
 
-	i_CurrentFFTimelimit = i_TrainingTimeFFTimelimit;
-
-	// These flags are supposed to be randomly	
-	// sampled. But on the first iteration we	
-	// set them to true to force some learning.	
-	o_SubgoalPolicy.ForceConnectionUseFlags ();
-
-  o_SubgoalPolicy.SampleConnections (false);
-  int d = 0; // d is the index of the problem
-
-  Problem* pProblem = Problem::GetProblem (d);
-  SubgoalSequence* pSequence = new SubgoalSequence;
-  pSequence->s_ProblemPddlPreamble = pProblem->s_PddlPreamble;
-
-  pSequence->p_TargetProblem = pProblem;
-  o_SubgoalPolicy.SampleSubgoalTestSequence (*pProblem,  pSequence);
-
-  // The PddlProblem we pass into SetSubtask is deleted	
-  // when the pSequence is deleted at the end of this		
-  // learning iteration.  So we need to make a copy of the
-  // PddlProblem here...									
-  PddlProblem* pPddlProblem = new PddlProblem (pProblem->GetPddlProblem ());
-
-
-  ++ i_TotalPlanJobs;
-  int iIndex = d;
-
-  pthread_mutex_lock (&mtx_WaitForSequences);
-  pair <IndexToSubgoalSequenceState_hmp_t::iterator, bool> pairInsert;
-  pairInsert = hmp_IndexToSequenceState.insert (make_pair (iIndex, 
-                                                           SubgoalSequenceState (pSequence, 1, d)));
-  SubgoalSequenceState& rState = pairInsert.first->second;
-  rState.b_FullTask = true;
-  rState.p_TargetProblem = pProblem;
-
-  if (rState.p_Sequence->GetSubgoal( rState.i_CurrentStep)->b_isQuestion) {
-    rState.nextSubgoal();
-  }
-
-  pSequence->SetSubtask (rState.i_CurrentStep, pProblem->s_Problem, pPddlProblem);
-
-  set_PendingSequences.insert (iIndex);
-  pthread_mutex_unlock (&mtx_WaitForSequences);
-
-
-  o_FFInterface.SendTask (iIndex,
-                          i_DomainPddlId,
-                          pProblem->s_Problem,
-                          i_CurrentFFTimelimit);
-  if (true == b_DisplayFFProgress)
-    cout << '.' << flush;
-
-	// condition wait for sequences to complete...	
-	pthread_mutex_lock (&mtx_WaitForSequences);
-	pthread_cond_wait (&cv_WaitForSequences, &mtx_WaitForSequences);
-	pthread_mutex_unlock (&mtx_WaitForSequences);
-
-	// update parameters ...	
-	double dTotalReward = 0;
-	long lTotalLength = 0;
-	int iCount = 0;
-	
-	o_SubgoalPolicy.InitUpdate ();
-	ITERATE (IndexToSubgoalSequenceState_hmp_t, hmp_IndexToSequenceState, ite)
-	{
-		SubgoalSequenceState& rState = ite->second;
-		double dReward = ComputeReward (rState);
-		dTotalReward += dReward;
-		++ iCount;
-
-		lTotalLength += rState.p_Sequence->dq_Subgoals.size () - 1;
-		if ((true == b_LearnOnSubgoalFreeProblems) ||
-			(false == rState.p_TargetProblem->b_SubgoalsNotNeeded))
-		{
-			o_SubgoalPolicy.UpdateParameters (*rState.p_Sequence,
-											  dReward,
-											  rState.b_TaskComplete,
-											  true);
-
-		}
-
-    delete rState.p_Sequence;
-
-  }
-		// cleanup...				
-		ITERATE (PlanSubgoalSequences_dq_t, rState.dq_PlanSubgoalSequences, ite)
-		{
-			PddlPredicate_dq_t* pdqPredicates = *ite;
-			ITERATE (PddlPredicate_dq_t, (*pdqPredicates), itePred)
-				delete *itePred;
-			delete pdqPredicates;
-		}
-		rState.dq_PlanSubgoalSequences.clear ();
-
-	o_SubgoalPolicy.CompleteUpdate ();
-
-	cout << "Done running through sequence link!"
-		 << endl;
-	hmp_IndexToSequenceState.clear ();
-
-}
 //										
 void SubgoalLearner::TryPlanningOnFullTasks (void)
 {
@@ -771,37 +651,10 @@ void SubgoalLearner::TryPlanningOnFullTasks (void)
 	hmp_IndexToSequenceState.clear ();
 }
 
-/**
- **Given the i_CurrentStep, sets the step to the next non-question subgoal
- **Note this cannot overflow in regular use as last subgoal is
- ** ensured to be a real subgoal
-**/
-int SubgoalSequenceState::nextSubgoal(){
-  unsigned int currentStep = this->i_CurrentStep;
-  size_t max_step =  this->p_Sequence->dq_Subgoals.size();
-
-  assert(currentStep < max_step);
-  ++ currentStep;
-  while(true == this->p_Sequence->GetSubgoal(currentStep)->b_isQuestion) {
-    assert(currentStep < max_step);
-    ++ currentStep;
-  }
-  this->i_CurrentStep = currentStep;
-
-  return this->i_CurrentStep;
-}
-
-
 
 //										
 void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 {
-
-	if ((config)"ir_host" != -1) {
-		o_SubgoalPolicy.clearAnswers();
-		o_SubgoalPolicy.LoadAnswers();
-	}
-
 	vec_TargetGoalCompletions.Memset (0);
 	i_TotalPlanJobs = 0;
 	i_OutcomePlansFound = 0;
@@ -828,7 +681,7 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 	iSequencesPerIteration = (true == _bTestMode)? 1 : iSequencesPerIteration;
 	for (int i = 0; i < iSequencesPerIteration; ++ i)
 	{
-    for (int d = 0; d < Problem::GetProblemCount (); ++ d)
+		for (int d = 0; d < Problem::GetProblemCount (); ++ d)
 		{
 			o_SubgoalPolicy.SampleConnectionUseFlags ();
 
@@ -846,35 +699,13 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 													   pSequence);
 
 
-			int iIndex = 1000 * i + d; 
-      int subgoalIndex = 1;
-
-      pair <IndexToSubgoalSequenceState_hmp_t::iterator, bool> pairInsert;
-			pairInsert = hmp_IndexToSequenceState.insert (make_pair (iIndex, 
-                                                               SubgoalSequenceState (pSequence, subgoalIndex, d)));
-			SubgoalSequenceState& rState = pairInsert.first->second;
-
-
-      Subgoal* pSubgoal = pSequence->GetSubgoal (subgoalIndex);
-
-      if (true == pSubgoal->b_isQuestion) {
-        subgoalIndex =  rState.nextSubgoal(); 
-      }
-      pSubgoal = pSequence->GetSubgoal (subgoalIndex);
-
-      assert(false == pSubgoal->b_isQuestion);
-      assert(subgoalIndex == rState.i_CurrentStep);
-
-
-      //update correct subgoal
-
+			Subgoal* pSubgoal = pSequence->GetSubgoal (1);
 			pSubgoal->s_StartStatePredicates
 				= pProblem->p_PddlProblem->o_StartState.GetPredicatePddlString ();
 
 
 			String sProblemPddl;
-
-			pSequence->GetSubtask (subgoalIndex, &sProblemPddl);
+			pSequence->GetSubtask (1, &sProblemPddl);
 
 			sProblemPddl.Strip ();
 			if ("" == sProblemPddl)
@@ -889,14 +720,17 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 			}
 
 			PddlProblem* pPddlProblem = PddlInterface::ParseProblemPddl (sProblemPddl);
-			pSequence->SetSubtask (subgoalIndex, sProblemPddl, pPddlProblem);
+			pSequence->SetSubtask (1, sProblemPddl, pPddlProblem);
 
 			++ i_TotalPlanJobs;
 
-
+			int iIndex = 1000 * i + d;
 
 			//										
-		
+			pair <IndexToSubgoalSequenceState_hmp_t::iterator, bool> pairInsert;
+			pairInsert = hmp_IndexToSequenceState.insert (make_pair (iIndex, 
+											 SubgoalSequenceState (pSequence, 1, d)));
+			SubgoalSequenceState& rState = pairInsert.first->second;
 			rState.b_FullTask = false;
 			rState.p_TargetProblem = pProblem;
 			set_PendingSequences.insert (iIndex);
@@ -909,23 +743,12 @@ void SubgoalLearner::Iterate (int _iIteration, bool _bTestMode)
 	{
 		int iIndex = ite->first;
 		SubgoalSequenceState& rState = ite->second;
+		Subgoal* pSubgoal = rState.p_Sequence->GetSubgoal (1);
 
-    unsigned int subgoalIndex = rState.i_CurrentStep;
-    //Ensure first subgoal we send to MetricFF is a subgoal
-		Subgoal* pSubgoal = rState.p_Sequence->GetSubgoal (subgoalIndex);
-
-    assert(false == pSubgoal->b_isQuestion);
-
-    // if (true == pSubgoal->b_isQuestion) {
-    //   subgoalIndex =  rState.nextSubgoal();
-    // }
-    pSubgoal = rState.p_Sequence->GetSubgoal (subgoalIndex);
-
-    o_FFInterface.SendTask (iIndex,
-                            i_DomainPddlId,
-                            pSubgoal->s_ProblemPddl, //TODO INVESTIGATE
-                            i_CurrentFFTimelimit);
-
+		o_FFInterface.SendTask (iIndex,
+								i_DomainPddlId,
+								pSubgoal->s_ProblemPddl,
+								i_CurrentFFTimelimit);
 		if (true == b_DisplayFFProgress)
 			cout << '.' << flush;
 	}
